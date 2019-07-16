@@ -102,9 +102,10 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.nativetemplate"
+        applicationId "com.mendix.nativetemplate"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        missingDimensionStrategy "react-native-camera", "general"
         versionCode 1
         versionName "1.0"
     }
@@ -135,17 +136,70 @@ android {
             }
         }
     }
+    dataBinding {
+        enabled true
+    }
 }
 
+project.ext.vectoricons = [
+    iconFontNames: [ "MaterialIcons.ttf" ]
+]
+
 dependencies {
+    implementation project(":react-native-gesture-handler")
+    implementation project(":react-native-webview")
+    implementation project(":react-native-view-shot")
+    implementation project(":react-native-video")
+    implementation project(":react-native-vector-icons")
+    implementation project(":react-native-touch-id")
+    implementation project(":react-native-svg")
+    implementation project(":react-native-sqlite-storage")
+    implementation project(":react-native-sound")
+    implementation project(":react-native-maps")
+    implementation project(":react-native-inappbrowser-reborn")
+    implementation project(":react-native-image-picker")
+    implementation project(":react-native-geocoder")
+    implementation project(":react-native-firebase")
+    implementation project(":react-native-device-info")
+    implementation project(":react-native-camera")
+    implementation project(":react-native-calendar-events")
+    implementation project(":react-native-ble-plx")
+    implementation project(":@react-native-community_netinfo")
+    implementation project(":@react-native-community_async-storage")
+    implementation project(":mendixnative-release")
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    implementation "com.facebook.react:react-native:+"  // From node_modules
 }
 
 // Run this once to be able to run the application with BUCK
 // puts all compile dependencies into folder libs for BUCK to use
 task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
-    into 'libs'
+    into "libs"
 }
+
+// Ensure that all android support dependencies use the same version, including
+// other projects. Compilation might fail if this is not the case.
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == "com.android.support") {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion rootProject.supportLibVersion
+            }
+        }
+        if (requested.group == "com.google.android.gms") {
+            // If different projects require different versions of
+            // Google Play Services it causes a crash on run.
+            // Fix by overriding version for all projects.
+            details.useVersion("9.6.1")
+        }
+    }
+
+    resolutionStrategy {
+        force "com.facebook.react:react-native:0.59.9"
+        force "org.webkit:android-jsc:r245459"
+    }
+}
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"

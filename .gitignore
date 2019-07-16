@@ -57,6 +57,12 @@ buck-out/
 
 android/\.project
 
+android/app/\.project
+
+android/app/bin
+
 android/\.settings/org\.eclipse\.buildship\.core\.prefs
 
-package-lock\.json
+android/mendixnative-release/\.project
+
+android/mendixnative-release/\.settings/org\.eclipse\.buildship\.core\.prefs
