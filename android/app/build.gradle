@@ -142,7 +142,8 @@ android {
 }
 
 project.ext.vectoricons = [
-    iconFontNames: [ "MaterialIcons.ttf" ]
+    // Intentionally left blank
+    iconFontNames: []
 ]
 
 dependencies {
