@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
 		50E219F2C10F3245B5974EDA /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D636E05099DDFB1F7BD7B2E /* libPods-nativeTemplate.a */; };
 		EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
 		EBC808FE22DF2EF4007E5F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nativeTemplate/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = nativeTemplate/Info.plist; sourceTree = "<group>"; };
 		16D650A652844F27BB3C4223 /* libRNCNetInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCNetInfo.a; sourceTree = "<group>"; };
+		1A0B83DA22E09B2500EA1E51 /* Bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundle; sourceTree = "<group>"; };
 		2550263C1FE84A1A9A703A86 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		2AA6AF40F7CE4AD2A6C8091F /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		32B5455747694C88AA2DFD48 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		13B07FAE1A68108700A75B9A /* NativeTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				1A0B83DA22E09B2500EA1E51 /* Bundle */,
 				EBC80A5F22DF41DD007E5F3D /* Config */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -317,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */,
