@@ -1,0 +1,456 @@
+PODS:
+  - boost-for-react-native (1.63.0)
+  - DoubleConversion (1.1.6)
+  - Firebase/Core (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.4.0)
+  - Firebase/CoreOnly (5.15.0):
+    - FirebaseCore (= 5.1.10)
+  - Firebase/Messaging (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.2.2)
+  - Firebase/MLVision (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseMLVision (= 0.13.0)
+  - Firebase/MLVisionFaceModel (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseMLVisionFaceModel (= 0.13.0)
+  - Firebase/MLVisionTextModel (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseMLVisionTextModel (= 0.13.0)
+  - FirebaseAnalytics (5.4.0):
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.3)
+    - GoogleAppMeasurement (= 5.4.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - FirebaseAnalyticsInterop (1.2.0)
+  - FirebaseCore (5.1.10):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseInstanceID (3.3.0):
+    - FirebaseCore (~> 5.1)
+    - GoogleUtilities/Environment (~> 5.3)
+    - GoogleUtilities/UserDefaults (~> 5.3)
+  - FirebaseMessaging (3.2.2):
+    - FirebaseAnalyticsInterop (~> 1.1)
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/Reachability (~> 5.2)
+    - Protobuf (~> 3.1)
+  - FirebaseMLCommon (0.13.0):
+    - FirebaseCore (~> 5.1)
+  - FirebaseMLVision (0.13.0):
+    - FirebaseCore (~> 5.1)
+    - FirebaseMLCommon (~> 0.13)
+    - GoogleAPIClientForREST/Core (~> 1.3)
+    - GoogleAPIClientForREST/Vision (~> 1.3)
+    - GoogleMobileVision/Detector (~> 1.4)
+  - FirebaseMLVisionFaceModel (0.13.0):
+    - GoogleMobileVision/FaceDetector (~> 1.4)
+  - FirebaseMLVisionTextModel (0.13.0):
+    - GoogleMobileVision/TextDetector (~> 1.4)
+  - Folly (2018.10.22.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.5)
+  - Google-Maps-iOS-Utils (2.1.0):
+    - Google-Maps-iOS-Utils/Clustering (= 2.1.0)
+    - Google-Maps-iOS-Utils/Geometry (= 2.1.0)
+    - Google-Maps-iOS-Utils/Heatmap (= 2.1.0)
+    - Google-Maps-iOS-Utils/QuadTree (= 2.1.0)
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Clustering (2.1.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Geometry (2.1.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Heatmap (2.1.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/QuadTree (2.1.0):
+    - GoogleMaps
+  - GoogleAPIClientForREST/Core (1.3.9):
+    - GTMSessionFetcher (>= 1.1.7)
+  - GoogleAPIClientForREST/Vision (1.3.9):
+    - GoogleAPIClientForREST/Core
+    - GTMSessionFetcher (>= 1.1.7)
+  - GoogleAppMeasurement (5.4.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
+  - GoogleMobileVision/Detector (1.6.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.1)
+  - GoogleMobileVision/FaceDetector (1.6.0):
+    - GoogleMobileVision/Detector (~> 1.6)
+  - GoogleMobileVision/TextDetector (1.6.0):
+    - GoogleMobileVision/Detector (~> 1.6)
+  - GoogleToolboxForMac/Defines (2.2.1)
+  - GoogleToolboxForMac/Logger (2.2.1):
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (2.2.1)":
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - GoogleUtilities/AppDelegateSwizzler (5.8.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.8.0)
+  - GoogleUtilities/Logger (5.8.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.8.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.8.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.8.0)"
+  - GoogleUtilities/Reachability (5.8.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.8.0):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher (1.2.2):
+    - GTMSessionFetcher/Full (= 1.2.2)
+  - GTMSessionFetcher/Core (1.2.2)
+  - GTMSessionFetcher/Full (1.2.2):
+    - GTMSessionFetcher/Core (= 1.2.2)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
+  - Protobuf (3.9.0)
+  - React (0.59.9):
+    - React/Core (= 0.59.9)
+  - react-native-ble-plx-swift (1.0.3)
+  - react-native-calendar-events (1.7.3):
+    - React
+  - react-native-camera/FaceDetectorMLKit (2.11.1):
+    - Firebase/MLVision
+    - Firebase/MLVisionFaceModel
+    - React
+    - react-native-camera/RCT
+    - react-native-camera/RN
+  - react-native-camera/RCT (2.11.1):
+    - React
+  - react-native-camera/RN (2.11.1):
+    - React
+  - react-native-camera/TextDetector (2.11.1):
+    - Firebase/MLVision
+    - Firebase/MLVisionTextModel
+    - React
+    - react-native-camera/RCT
+    - react-native-camera/RN
+  - react-native-geocoder (0.5.0):
+    - React
+  - react-native-google-maps (0.24.2):
+    - Google-Maps-iOS-Utils (= 2.1.0)
+    - GoogleMaps (= 2.5.0)
+    - React
+  - react-native-image-picker (0.28.1):
+    - React
+  - react-native-maps (0.24.2):
+    - React
+  - react-native-netinfo (3.2.1):
+    - React
+  - react-native-sqlite-storage (3.3.11):
+    - React
+  - react-native-video (4.4.4):
+    - React
+    - react-native-video/Video (= 4.4.4)
+  - react-native-video/Video (4.4.4):
+    - React
+  - react-native-webview (5.12.1):
+    - React
+  - React/ART (0.59.9):
+    - React/Core
+  - React/Core (0.59.9):
+    - yoga (= 0.59.9.React)
+  - React/CxxBridge (0.59.9):
+    - Folly (= 2018.10.22.00)
+    - React/Core
+    - React/cxxreact
+    - React/jsiexecutor
+  - React/cxxreact (0.59.9):
+    - boost-for-react-native (= 1.63.0)
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+    - React/jsinspector
+  - React/DevSupport (0.59.9):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.59.9)
+  - React/jsi (0.59.9):
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+  - React/jsiexecutor (0.59.9):
+    - DoubleConversion
+    - Folly (= 2018.10.22.00)
+    - glog
+    - React/cxxreact
+    - React/jsi
+  - React/jsinspector (0.59.9)
+  - React/RCTActionSheet (0.59.9):
+    - React/Core
+  - React/RCTAnimation (0.59.9):
+    - React/Core
+  - React/RCTBlob (0.59.9):
+    - React/Core
+  - React/RCTCameraRoll (0.59.9):
+    - React/Core
+    - React/RCTImage
+  - React/RCTGeolocation (0.59.9):
+    - React/Core
+  - React/RCTImage (0.59.9):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.59.9):
+    - React/Core
+  - React/RCTNetwork (0.59.9):
+    - React/Core
+  - React/RCTSettings (0.59.9):
+    - React/Core
+  - React/RCTText (0.59.9):
+    - React/Core
+  - React/RCTVibration (0.59.9):
+    - React/Core
+  - React/RCTWebSocket (0.59.9):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - RNCAsyncStorage (1.5.1):
+    - React
+  - RNDeviceInfo (1.8.0):
+    - React
+  - RNFirebase (5.3.1):
+    - Firebase/Core
+    - React
+  - RNGestureHandler (1.3.0):
+    - React
+  - RNInAppBrowser (2.0.4):
+    - React
+  - RNSound (0.10.12):
+    - React/Core
+    - RNSound/Core (= 0.10.12)
+  - RNSound/Core (0.10.12):
+    - React/Core
+  - RNSVG (9.5.3):
+    - React
+  - RNVectorIcons (6.6.0):
+    - React
+  - RNViewShot (2.6.0):
+    - React
+  - TouchID (4.4.1):
+    - React
+  - yoga (0.59.9.React)
+
+DEPENDENCIES:
+  - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - Firebase/Core
+  - Firebase/Messaging (~> 5.15.0)
+  - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - Google-Maps-iOS-Utils
+  - GoogleMaps
+  - react-native-ble-plx-swift (from `../node_modules/react-native-ble-plx/react-native-ble-plx-swift.podspec`)
+  - react-native-calendar-events (from `../node_modules/react-native-calendar-events/react-native-calendar-events.podspec`)
+  - react-native-camera/FaceDetectorMLKit (from `../node_modules/react-native-camera`)
+  - react-native-camera/TextDetector (from `../node_modules/react-native-camera`)
+  - react-native-geocoder (from `../node_modules/react-native-geocoder`)
+  - react-native-google-maps (from `../node_modules/react-native-maps/react-native-google-maps.podspec`)
+  - react-native-image-picker (from `../node_modules/react-native-image-picker/react-native-image-picker.podspec`)
+  - react-native-maps (from `../node_modules/react-native-maps/react-native-maps.podspec`)
+  - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
+  - react-native-sqlite-storage (from `../node_modules/react-native-sqlite-storage`)
+  - react-native-video (from `../node_modules/react-native-video/react-native-video.podspec`)
+  - react-native-webview (from `../node_modules/react-native-webview`)
+  - React/ART (from `../node_modules/react-native`)
+  - React/Core (from `../node_modules/react-native`)
+  - React/CxxBridge (from `../node_modules/react-native`)
+  - React/DevSupport (from `../node_modules/react-native`)
+  - React/RCTActionSheet (from `../node_modules/react-native`)
+  - React/RCTAnimation (from `../node_modules/react-native`)
+  - React/RCTBlob (from `../node_modules/react-native`)
+  - React/RCTCameraRoll (from `../node_modules/react-native`)
+  - React/RCTGeolocation (from `../node_modules/react-native`)
+  - React/RCTImage (from `../node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../node_modules/react-native`)
+  - React/RCTNetwork (from `../node_modules/react-native`)
+  - React/RCTSettings (from `../node_modules/react-native`)
+  - React/RCTText (from `../node_modules/react-native`)
+  - React/RCTVibration (from `../node_modules/react-native`)
+  - React/RCTWebSocket (from `../node_modules/react-native`)
+  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
+  - RNFirebase (from `../node_modules/react-native-firebase/ios`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler/RNGestureHandler.podspec`)
+  - RNInAppBrowser (from `../node_modules/react-native-inappbrowser-reborn`)
+  - RNSound (from `../node_modules/react-native-sound/RNSound.podspec`)
+  - RNSVG (from `../node_modules/react-native-svg/RNSVG.podspec`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
+  - RNViewShot (from `../node_modules/react-native-view-shot`)
+  - TouchID (from `../node_modules/react-native-touch-id`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - boost-for-react-native
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
+    - FirebaseCore
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - FirebaseMLCommon
+    - FirebaseMLVision
+    - FirebaseMLVisionFaceModel
+    - FirebaseMLVisionTextModel
+    - Google-Maps-iOS-Utils
+    - GoogleAPIClientForREST
+    - GoogleAppMeasurement
+    - GoogleMaps
+    - GoogleMobileVision
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - nanopb
+    - Protobuf
+
+EXTERNAL SOURCES:
+  DoubleConversion:
+    :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  Folly:
+    :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
+  glog:
+    :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  React:
+    :path: "../node_modules/react-native"
+  react-native-ble-plx-swift:
+    :podspec: "../node_modules/react-native-ble-plx/react-native-ble-plx-swift.podspec"
+  react-native-calendar-events:
+    :podspec: "../node_modules/react-native-calendar-events/react-native-calendar-events.podspec"
+  react-native-camera:
+    :path: "../node_modules/react-native-camera"
+  react-native-geocoder:
+    :path: "../node_modules/react-native-geocoder"
+  react-native-google-maps:
+    :podspec: "../node_modules/react-native-maps/react-native-google-maps.podspec"
+  react-native-image-picker:
+    :podspec: "../node_modules/react-native-image-picker/react-native-image-picker.podspec"
+  react-native-maps:
+    :podspec: "../node_modules/react-native-maps/react-native-maps.podspec"
+  react-native-netinfo:
+    :path: "../node_modules/@react-native-community/netinfo"
+  react-native-sqlite-storage:
+    :path: "../node_modules/react-native-sqlite-storage"
+  react-native-video:
+    :podspec: "../node_modules/react-native-video/react-native-video.podspec"
+  react-native-webview:
+    :path: "../node_modules/react-native-webview"
+  RNCAsyncStorage:
+    :path: "../node_modules/@react-native-community/async-storage"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
+  RNFirebase:
+    :path: "../node_modules/react-native-firebase/ios"
+  RNGestureHandler:
+    :podspec: "../node_modules/react-native-gesture-handler/RNGestureHandler.podspec"
+  RNInAppBrowser:
+    :path: "../node_modules/react-native-inappbrowser-reborn"
+  RNSound:
+    :podspec: "../node_modules/react-native-sound/RNSound.podspec"
+  RNSVG:
+    :podspec: "../node_modules/react-native-svg/RNSVG.podspec"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
+  RNViewShot:
+    :path: "../node_modules/react-native-view-shot"
+  TouchID:
+    :path: "../node_modules/react-native-touch-id"
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
+CHECKOUT OPTIONS:
+  react-native-ble-plx-swift:
+    :commit: af92a39185b441f80489312d293182e0203afcfe
+    :git: https://github.com/Polidea/react-native-ble-plx.git
+  react-native-calendar-events:
+    :commit: 2179c84d68a980e1a6b27d98d7f19e4d91300733
+    :git: https://github.com/wmcmahan/react-native-calendar-events.git
+  react-native-google-maps:
+    :commit: f9fef92d9a87b686cb0bbfc2156bacc044d6f688
+    :git: https://github.com/react-native-community/react-native-maps.git
+  react-native-image-picker:
+    :commit: 4130cb2f70cc8e95b2f3cb9df6bbb1431984abef
+    :git: https://github.com/marcshilling/react-native-image-picker
+  react-native-maps:
+    :commit: f9fef92d9a87b686cb0bbfc2156bacc044d6f688
+    :git: https://github.com/react-native-community/react-native-maps.git
+
+SPEC CHECKSUMS:
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  DoubleConversion: bb338842f62ab1d708ceb63ec3d999f0f3d98ecd
+  Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
+  FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
+  FirebaseAnalyticsInterop: efbe45c8385ec626e29f9525e5ebd38520dfb6c1
+  FirebaseCore: 35747502d9e8c6ee217385ad04446c7c2aaf9c5c
+  FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
+  FirebaseMessaging: b412996f6a09337d232bb3a6676ce4d1f353d024
+  FirebaseMLCommon: 5e1bc4c4aa1d12c1f6bc38b40d2d60e8e63466bb
+  FirebaseMLVision: eba288c56228b25d9be498861ad0b9f305e8ce5c
+  FirebaseMLVisionFaceModel: 8656827cbf7c899a2da4567f8c42e31d243d3000
+  FirebaseMLVisionTextModel: abb5bc051ea1c286bfe04a0347ce25237d1df0aa
+  Folly: de497beb10f102453a1afa9edbf8cf8a251890de
+  glog: aefd1eb5dda2ab95ba0938556f34b98e2da3a60d
+  Google-Maps-iOS-Utils: c32891ff472eaaa1fca032beedafa1a013af7875
+  GoogleAPIClientForREST: 44c7b678cbab11d26a47eab7309d6179b1a61f0c
+  GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  GoogleMobileVision: 31cfb4319fd0c03d80105680abd9eae9da5e3b47
+  GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
+  GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
+  React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
+  react-native-ble-plx-swift: 730d62df0a68022e4ff81fb6d30d98a01fed3a57
+  react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
+  react-native-camera: 96a3c81f27da57b816fbb6808dde20dc96d1431e
+  react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
+  react-native-google-maps: 568cb03d0eae7fef93626f65d05be55642404ed4
+  react-native-image-picker: fd93361c666f397bdf72f9c6c23f13d2685b9173
+  react-native-maps: 0316ed017dbb64b33b227751fa810e2454fcfa39
+  react-native-netinfo: 27d908bc7ee7b9f29400c02938a0b2a27a1015be
+  react-native-sqlite-storage: 3cfa904d9750f7e846c9a14c47951583ee99dbf4
+  react-native-video: 25d5aebb3c9d7cdefe7a909306c7ab40be4a892c
+  react-native-webview: 21c396687cb983fadc6ccc0751cc74f554131f3f
+  RNCAsyncStorage: 2808c378f6a70f22f66eeb6c11a8d69f326dd795
+  RNDeviceInfo: 17bd6ed6c8c230f5da87d53f6275a520005f0914
+  RNFirebase: f20e5e4ceaa632aebb1a29a9a91022ae0469c633
+  RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
+  RNInAppBrowser: 425a9d10b4f3084df3d1b702a02274352ac7f193
+  RNSound: e157320f503bdd4f4ee6d8542e948d54f90c3c3a
+  RNSVG: 90c76b7cf235654d45e54655b6c189ea4041057c
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
+  RNViewShot: 05672e0b3c36cd70633466614b4451869a70c6c7
+  TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
+  yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
+
+PODFILE CHECKSUM: acb2e0bfd997af2a0103afd5c654fb04cd713796
+
+COCOAPODS: 1.7.4
