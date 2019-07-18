@@ -135,6 +135,9 @@ PODS:
   - Protobuf (3.9.0)
   - React (0.59.9):
     - React/Core (= 0.59.9)
+  - react-native-ble-plx (1.0.3):
+    - React
+    - react-native-ble-plx-swift
   - react-native-ble-plx-swift (1.0.3)
   - react-native-calendar-events (1.7.3):
     - React
@@ -267,6 +270,7 @@ DEPENDENCIES:
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - Google-Maps-iOS-Utils
   - GoogleMaps
+  - react-native-ble-plx (from `../node_modules/react-native-ble-plx`)
   - react-native-ble-plx-swift (from `../node_modules/react-native-ble-plx/react-native-ble-plx-swift.podspec`)
   - react-native-calendar-events (from `../node_modules/react-native-calendar-events/react-native-calendar-events.podspec`)
   - react-native-camera/FaceDetectorMLKit (from `../node_modules/react-native-camera`)
@@ -340,6 +344,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   React:
     :path: "../node_modules/react-native"
+  react-native-ble-plx:
+    :path: "../node_modules/react-native-ble-plx"
   react-native-ble-plx-swift:
     :podspec: "../node_modules/react-native-ble-plx/react-native-ble-plx-swift.podspec"
   react-native-calendar-events:
@@ -428,6 +434,7 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
+  react-native-ble-plx: 824d2221d5e2439560a8c1ffd5faf7e288d7c9e3
   react-native-ble-plx-swift: 730d62df0a68022e4ff81fb6d30d98a01fed3a57
   react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
   react-native-camera: 96a3c81f27da57b816fbb6808dde20dc96d1431e
@@ -451,6 +458,6 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: acb2e0bfd997af2a0103afd5c654fb04cd713796
+PODFILE CHECKSUM: 9e1910a082539b71ea5706933eeaf65f1850451e
 
 COCOAPODS: 1.7.4
