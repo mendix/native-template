@@ -56,7 +56,6 @@
 		C9C7EBAF09CC468887B9F1EC /* libTouchID.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libTouchID.a; sourceTree = "<group>"; };
 		D16DCD7467084A59BF77CD6E /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.ttf"; sourceTree = "<group>"; };
-		EBC8081722DF1844007E5F3D /* NativeTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBC809C322DF383C007E5F3D /* x86_64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftdoc; sourceTree = "<group>"; };
 		EBC809C422DF383C007E5F3D /* arm64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftmodule; sourceTree = "<group>"; };
@@ -129,7 +128,6 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				A1EBC69BD21646E490B9229B /* Resources */,
-				EBC8081722DF1844007E5F3D /* NativeTemplate-Bridging-Header.h */,
 				ADF0073EA1EDDA0933D2FFE1 /* Pods */,
 				EBC80CBA22DF6743007E5F3D /* Recovered References */,
 			);
@@ -500,7 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativetemplate;
 				PRODUCT_NAME = nativeTemplate;
 				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/react-native-ble-plx-swift\" ${SRCROOT}/MendixNative";
-				SWIFT_OBJC_BRIDGING_HEADER = "NativeTemplate-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -594,7 +592,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativetemplate;
 				PRODUCT_NAME = nativeTemplate;
 				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/react-native-ble-plx-swift\" ${PROJECT_DIR} ${SRCROOT}/MendixNative";
-				SWIFT_OBJC_BRIDGING_HEADER = "NativeTemplate-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
