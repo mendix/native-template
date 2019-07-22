@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
 		50E219F2C10F3245B5974EDA /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D636E05099DDFB1F7BD7B2E /* libPods-nativeTemplate.a */; };
 		EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
 		EBC808FE22DF2EF4007E5F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nativeTemplate/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = nativeTemplate/Info.plist; sourceTree = "<group>"; };
 		16D650A652844F27BB3C4223 /* libRNCNetInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCNetInfo.a; sourceTree = "<group>"; };
+		1A0B83DA22E09B2500EA1E51 /* Bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundle; sourceTree = "<group>"; };
 		2550263C1FE84A1A9A703A86 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		2AA6AF40F7CE4AD2A6C8091F /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		32B5455747694C88AA2DFD48 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
@@ -46,7 +48,6 @@
 		63624AF3E65E4F2BA4598445 /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
 		7EEDF4024CB6865C31DBA5BB /* Pods-nativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		8E27A7C36A9A43B79008299C /* libRNCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCamera.a; sourceTree = "<group>"; };
-		90C70974624947DFB9EDE61C /* libBleClient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBleClient.a; sourceTree = "<group>"; };
 		9866529E7DBF484A9C512543 /* libRCTVideo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTVideo.a; sourceTree = "<group>"; };
 		9D636E05099DDFB1F7BD7B2E /* libPods-nativeTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nativeTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04C39A7E08D4A7FBEB6CAEE /* libSQLite.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSQLite.a; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		C9C7EBAF09CC468887B9F1EC /* libTouchID.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libTouchID.a; sourceTree = "<group>"; };
 		D16DCD7467084A59BF77CD6E /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.ttf"; sourceTree = "<group>"; };
-		EBC8081722DF1844007E5F3D /* NativeTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBC809C322DF383C007E5F3D /* x86_64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftdoc; sourceTree = "<group>"; };
 		EBC809C422DF383C007E5F3D /* arm64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftmodule; sourceTree = "<group>"; };
@@ -68,7 +68,6 @@
 		EBC80A6122DF42DF007E5F3D /* config.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.release.xcconfig; sourceTree = "<group>"; };
 		EBC80D4022DF8445007E5F3D /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EEC8ECADFF304038BB260294 /* libRNCalendarEvents.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCalendarEvents.a; sourceTree = "<group>"; };
 		EF85FFE53A734C49A901ACDF /* libReactNativeNavigation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeNavigation.a; sourceTree = "<group>"; };
 		F0D08BECC5264B918CF67CB0 /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		13B07FAE1A68108700A75B9A /* NativeTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				1A0B83DA22E09B2500EA1E51 /* Bundle */,
 				EBC80A5F22DF41DD007E5F3D /* Config */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -106,7 +106,6 @@
 			children = (
 				EBC808E222DF20DD007E5F3D /* MendixNative */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				9D636E05099DDFB1F7BD7B2E /* libPods-nativeTemplate.a */,
 			);
 			name = Frameworks;
@@ -128,7 +127,6 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				A1EBC69BD21646E490B9229B /* Resources */,
-				EBC8081722DF1844007E5F3D /* NativeTemplate-Bridging-Header.h */,
 				ADF0073EA1EDDA0933D2FFE1 /* Pods */,
 				EBC80CBA22DF6743007E5F3D /* Recovered References */,
 			);
@@ -208,7 +206,6 @@
 			children = (
 				0CF3117F20C7433D9FEAF8A0 /* libRNCAsyncStorage.a */,
 				16D650A652844F27BB3C4223 /* libRNCNetInfo.a */,
-				90C70974624947DFB9EDE61C /* libBleClient.a */,
 				EEC8ECADFF304038BB260294 /* libRNCalendarEvents.a */,
 				8E27A7C36A9A43B79008299C /* libRNCamera.a */,
 				2550263C1FE84A1A9A703A86 /* libRNDeviceInfo.a */,
@@ -317,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */,
@@ -439,7 +437,6 @@
 					"${SRCROOT}/MendixNative",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/netinfo/ios",
-					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
@@ -497,8 +494,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativetemplate;
 				PRODUCT_NAME = nativeTemplate;
-				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/react-native-ble-plx-swift\" ${SRCROOT}/MendixNative";
-				SWIFT_OBJC_BRIDGING_HEADER = "NativeTemplate-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -533,7 +530,6 @@
 					"${SRCROOT}/MendixNative",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/netinfo/ios",
-					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
@@ -591,8 +587,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativetemplate;
 				PRODUCT_NAME = nativeTemplate;
-				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/react-native-ble-plx-swift\" ${PROJECT_DIR} ${SRCROOT}/MendixNative";
-				SWIFT_OBJC_BRIDGING_HEADER = "NativeTemplate-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "$(inherited) ${PROJECT_DIR} ${SRCROOT}/MendixNative";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '12.0'
+platform :ios, '10.0'
 
 target 'nativeTemplate' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -16,7 +16,7 @@ target 'nativeTemplate' do
     'RCTActionSheet',
     'RCTAnimation',
     'RCTBlob',
-    'RCTCameraRoll'
+    'RCTCameraRoll',
     'RCTGeolocation',
     'RCTImage',
     'RCTLinkingIOS',
@@ -24,7 +24,7 @@ target 'nativeTemplate' do
     'RCTSettings',
     'RCTText',
     'RCTVibration',
-    'RCTWebSocket',
+    'RCTWebSocket'
   ]
 
   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
@@ -65,6 +65,6 @@ target 'nativeTemplate' do
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging', '~> 5.15.0'
-  pod 'react-native-ble-plx', :path => '../node_modules/react-native-ble-plx'
+  pod 'react-native-ble-plx-swift', :podspec => '../node_modules/react-native-ble-plx/react-native-ble-plx-swift.podspec'
 
 end
