@@ -1,1 +1,1 @@
-npm i && pod install
+npm i && pod install --repo-update
