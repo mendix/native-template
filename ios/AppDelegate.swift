@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       fatalError("Could not load index.ios.bundle")
     }
 
-    ReactNative.instance.start(MendixApp(bundleUrl: bundleUrl, runtimeUrl: runTimeUrl))
+    ReactNative.instance.start(MendixApp(bundleUrl: bundleUrl, runtimeUrl: runTimeUrl, warningsFilter: WarningsFilter.none))
     return true
   }
 }
