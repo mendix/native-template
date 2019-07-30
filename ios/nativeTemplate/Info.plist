@@ -43,7 +43,7 @@
 	<string>$(RUNTIME_URL)</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>glyphicons-halflings-regular</string>
+		<string>glyphicons-halflings-regular.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
