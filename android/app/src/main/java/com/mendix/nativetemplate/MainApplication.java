@@ -31,6 +31,11 @@ import io.invertase.firebase.RNFirebasePackage;
 
 public class MainApplication extends MendixReactApplication {
   @Override
+  public boolean getUseDeveloperSupport() {
+    return false;
+  }
+
+  @Override
   public List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
