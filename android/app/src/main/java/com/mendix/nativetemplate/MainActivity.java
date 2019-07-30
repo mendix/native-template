@@ -1,7 +1,8 @@
 package com.mendix.nativetemplate;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+
 
 import com.mendix.mendixnative.activity.MendixReactActivity;
 import com.mendix.mendixnative.config.AppUrl;

@@ -139,6 +139,10 @@ android {
     dataBinding {
         enabled true
     }
+    packagingOptions {
+        pickFirst '**/libjsc.so'
+        pickFirst '**/libc++_shared.so'
+    }
 }
 
 project.ext.vectoricons = [
@@ -179,30 +183,6 @@ dependencies {
 task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into "libs"
-}
-
-// Ensure that all android support dependencies use the same version, including
-// other projects. Compilation might fail if this is not the case.
-configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-        def requested = details.requested
-        if (requested.group == "com.android.support") {
-            if (!requested.name.startsWith("multidex")) {
-                details.useVersion rootProject.supportLibVersion
-            }
-        }
-        if (requested.group == "com.google.android.gms") {
-            // If different projects require different versions of
-            // Google Play Services it causes a crash on run.
-            // Fix by overriding version for all projects.
-            details.useVersion("9.6.1")
-        }
-    }
-
-    resolutionStrategy {
-        force "com.facebook.react:react-native:0.59.9"
-        force "org.webkit:android-jsc:r245459"
-    }
 }
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
