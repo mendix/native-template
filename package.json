@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "postinstall": "npx jetify",
     "test": "jest"
   },
   "dependencies": {
@@ -36,6 +37,7 @@
     "@babel/runtime": "^7.5.4",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
+    "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "^0.55.0",
     "react-test-renderer": "16.8.3"
   },
