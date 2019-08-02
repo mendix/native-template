@@ -6,4 +6,7 @@ brew install node
 npm i && pod install --repo-update
 
 # Untar bundle resources
-tar xvzf ./Bundle/assets.tar.gz -C ./Bundle && sudo chmod u+rwx ./Bundle/img
+if [ -f "./Bundle/assets.tar.gz" ]; then
+    tar xvzf ./Bundle/assets.tar.gz -C ./Bundle && sudo find ./Bundle/. -type d -exec chmod u+rwx {} \;
+    exit 0;
+fi

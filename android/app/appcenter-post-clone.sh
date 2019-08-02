@@ -6,4 +6,7 @@ brew install node
 npm i
 
 # Untar bundle resources
-tar xvzf ../res.tar.gz -C ./src/main/res && sudo find ./src/main/res/. -type d -exec chmod u+rwx {} \;
+if [ -f "../res.tar.gz" ]; then 
+    tar xvzf ../res.tar.gz -C ./src/main/res && sudo find ./src/main/res/. -type d -exec chmod u+rwx {} \;
+    exit 0;
+fi
