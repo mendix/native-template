@@ -1,9 +1,9 @@
 # Native Template
 ## 1. Introduction
-Native Template is the starting point for any Mendix Native App project. 
+Native Template is the starting point for any Mendix Native App project.
 The repo is kept as close to a `react-native init` as possible. The only addition are the Mendix native libraries for Android and iOS and wiring to make everything work together nicely.
 
-This repo is used as the baseline for Mendix Native Builder (https://docs.mendix.com/howto/mobile/native-builder), a tool that automates the process of building your Native Apps with Mendix.
+This repo is used as the baseline for [Mendix Native Builder](https://docs.mendix.com/howto/mobile/native-builder), a tool that automates the process of building your Native Apps with Mendix.
 
 More advanced developers may want to use it as a reference or starting point on how to setup their own Mendix App or include Mendix as an extra layer in their current apps.
 
@@ -16,11 +16,11 @@ Afterwards execute the following commands:
 - `cd ios && pod install`
 
 ### 2.2 Build your app bundle
-To bundle your Mendix project please check the documentation on how to deploy your project with MxBuild (https://docs.mendix.com/refguide/mxbuild). 
+To bundle your Mendix project please check the documentation on how to deploy your project with [MxBuild](https://docs.mendix.com/refguide/mxbuild).
 
-When done you should have an `index.android.bundle` and an `index.ios.bundle` and your projects resources for each platform relative to the native deployement folder. 
+When done you should have an `index.android.bundle` and an `index.ios.bundle` and your projects resources for each platform relative to the native deployement folder.
 
-These need to be moved to their respective places. 
+These need to be moved to their respective places.
 
 **iOS**
 
@@ -35,4 +35,3 @@ These need to be moved to their respective places.
 For iOS open the `xcworkspace` project with XCode and build as you would build any other iOS project.
 
 For Android open the `android` folder with Android Studio and build as you would any other Android project.
-
