@@ -7,6 +7,7 @@ npm i && pod install --repo-update
 
 # Untar bundle resources
 if [ -f "./Bundle/assets.tar.gz" ]; then
-    tar xvzf ./Bundle/assets.tar.gz -C ./Bundle && sudo find ./Bundle/. -type d -exec chmod u+rwx {} \;
+    mkdir ./Bundle/assets
+    tar xvzf ./Bundle/assets.tar.gz -C ./Bundle/assets && sudo find ./Bundle/assets/. -type d -exec chmod u+rwx {} \;
     exit 0;
 fi
