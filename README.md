@@ -25,7 +25,7 @@ These need to be moved to their respective places.
 **iOS**
 
 - index.ios.bundle: `./ios/Bundle`
-- resources: `./ios/img`
+- resources: `./ios/Bundle/assets/img`
 
 **Android**
 - index.android.bundle: `./android/app/src/main/assets`
