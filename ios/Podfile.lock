@@ -1,5 +1,11 @@
 PODS:
+  - Base64 (1.1.2)
   - boost-for-react-native (1.63.0)
+  - CodePush (5.6.1):
+    - Base64 (~> 1.1)
+    - JWT (~> 3.0.0-beta.7)
+    - React
+    - SSZipArchive (~> 2.1)
   - DoubleConversion (1.1.6)
   - Firebase/Core (5.15.0):
     - Firebase/CoreOnly
@@ -127,6 +133,8 @@ PODS:
   - GTMSessionFetcher/Core (1.2.2)
   - GTMSessionFetcher/Full (1.2.2):
     - GTMSessionFetcher/Core (= 1.2.2)
+  - JWT (3.0.0-beta.11):
+    - Base64 (~> 1.1.2)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -255,11 +263,13 @@ PODS:
     - React
   - RNViewShot (2.6.0):
     - React
+  - SSZipArchive (2.2.2)
   - TouchID (4.4.1):
     - React
   - yoga (0.59.9.React)
 
 DEPENDENCIES:
+  - CodePush (from `../node_modules/react-native-code-push`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - Firebase/Core
   - Firebase/Messaging (~> 5.15.0)
@@ -309,6 +319,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Base64
     - boost-for-react-native
     - Firebase
     - FirebaseAnalytics
@@ -328,10 +339,14 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GoogleUtilities
     - GTMSessionFetcher
+    - JWT
     - nanopb
     - Protobuf
+    - SSZipArchive
 
 EXTERNAL SOURCES:
+  CodePush:
+    :path: "../node_modules/react-native-code-push"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   Folly:
@@ -385,25 +400,10 @@ EXTERNAL SOURCES:
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
-CHECKOUT OPTIONS:
-  react-native-ble-plx-swift:
-    :commit: af92a39185b441f80489312d293182e0203afcfe
-    :git: https://github.com/Polidea/react-native-ble-plx.git
-  react-native-calendar-events:
-    :commit: 2179c84d68a980e1a6b27d98d7f19e4d91300733
-    :git: https://github.com/wmcmahan/react-native-calendar-events.git
-  react-native-google-maps:
-    :commit: c18c4a11fa6615c17c4e5020e38d223c096d2b14
-    :git: https://github.com/react-native-community/react-native-maps.git
-  react-native-image-picker:
-    :commit: 4130cb2f70cc8e95b2f3cb9df6bbb1431984abef
-    :git: https://github.com/marcshilling/react-native-image-picker
-  react-native-maps:
-    :commit: c18c4a11fa6615c17c4e5020e38d223c096d2b14
-    :git: https://github.com/react-native-community/react-native-maps.git
-
 SPEC CHECKSUMS:
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  CodePush: b56e29c56dba8121898f601ca48a9a48b2ff5efb
   DoubleConversion: bb338842f62ab1d708ceb63ec3d999f0f3d98ecd
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
@@ -425,32 +425,34 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  JWT: 05028b9624591bba9681bb57df2c5f95fa258bad
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
   react-native-ble-plx-swift: 730d62df0a68022e4ff81fb6d30d98a01fed3a57
-  react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
-  react-native-camera: 96a3c81f27da57b816fbb6808dde20dc96d1431e
+  react-native-calendar-events: eaa63134881d97488feb21ea114158f712894018
+  react-native-camera: f1fbfc336ba8ca6de5296190341d1b6022c71cff
   react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
   react-native-google-maps: 568cb03d0eae7fef93626f65d05be55642404ed4
   react-native-image-picker: fd93361c666f397bdf72f9c6c23f13d2685b9173
   react-native-maps: 0316ed017dbb64b33b227751fa810e2454fcfa39
-  react-native-netinfo: 27d908bc7ee7b9f29400c02938a0b2a27a1015be
-  react-native-sqlite-storage: 3cfa904d9750f7e846c9a14c47951583ee99dbf4
-  react-native-video: 25d5aebb3c9d7cdefe7a909306c7ab40be4a892c
-  react-native-webview: 21c396687cb983fadc6ccc0751cc74f554131f3f
-  RNCAsyncStorage: 2808c378f6a70f22f66eeb6c11a8d69f326dd795
-  RNDeviceInfo: 17bd6ed6c8c230f5da87d53f6275a520005f0914
+  react-native-netinfo: 0da34082d2cec3100c9b5073bb217e35f1142bdd
+  react-native-sqlite-storage: c7d77c26a0b82a304d7158d3515f188665e3ef72
+  react-native-video: 8c49eca5a6087de968a05b340933b10e3b58169a
+  react-native-webview: 5036ed4a973ad1deeeff118262d2df7b60b3419d
+  RNCAsyncStorage: b63d6e83fc629b01df6b624688f17944cea5637f
+  RNDeviceInfo: 9e6a0aece8e7455515103ce23372b393843a7ee7
   RNFirebase: f20e5e4ceaa632aebb1a29a9a91022ae0469c633
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
-  RNInAppBrowser: 425a9d10b4f3084df3d1b702a02274352ac7f193
-  RNSound: e157320f503bdd4f4ee6d8542e948d54f90c3c3a
+  RNInAppBrowser: 6a4b1c006d41d76eac14d758145335c83e1ab1cf
+  RNSound: a1d01988e043aed5dbb476c2152b5ffb02446750
   RNSVG: 90c76b7cf235654d45e54655b6c189ea4041057c
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RNViewShot: 05672e0b3c36cd70633466614b4451869a70c6c7
+  SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: 97893c48a67ffd21966f8795fc41a065646e4c40
+PODFILE CHECKSUM: 8c900d3270a17c3e109f89afb42e2a881f2fc71b
 
 COCOAPODS: 1.7.4
