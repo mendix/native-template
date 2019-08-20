@@ -69,4 +69,5 @@ target 'nativeTemplate' do
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
   pod 'ReactNativeDarkMode', :path => '../node_modules/react-native-dark-mode'
 
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
 end
