@@ -30,6 +30,11 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>codepush.azurewebsites.net</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>localhost</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -41,6 +46,8 @@
 	<string></string>
 	<key>Runtime url</key>
 	<string>$(RUNTIME_URL)</string>
+	<key>Codepush key</key>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>glyphicons-halflings-regular.ttf</string>
