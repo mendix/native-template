@@ -10,6 +10,7 @@ import com.horcrux.svg.SvgPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.mendix.mendixnative.MendixReactApplication;
+import com.mendix.mendixnative.react.EmptyPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.polidea.reactnativeble.BlePackage;
 import com.proyecto26.inappbrowser.RNInAppBrowserPackage;
@@ -26,6 +27,8 @@ import org.reactnative.camera.RNCameraPackage;
 import java.util.Arrays;
 import java.util.List;
 
+import com.microsoft.codepush.react.CodePush;
+
 import fr.greweb.reactnativeviewshot.RNViewShotPackage;
 import io.invertase.firebase.RNFirebasePackage;
 
@@ -39,6 +42,7 @@ public class MainApplication extends MendixReactApplication {
   public List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            getUseCodePush() ? new CodePush(getCodePushKey(), getApplicationContext(), BuildConfig.DEBUG) : new EmptyPackage(),
             new RNGestureHandlerPackage(),
             new RNCWebViewPackage(),
             new RNViewShotPackage(),

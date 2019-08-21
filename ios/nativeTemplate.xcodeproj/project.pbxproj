@@ -10,17 +10,17 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
-		1A6E610422E73F1C009AF54B /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E60F922E73F1C009AF54B /* i386.swiftmodule */; };
-		1A6E610522E73F1C009AF54B /* x86_64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E60FA22E73F1C009AF54B /* x86_64.swiftdoc */; };
-		1A6E610622E73F1C009AF54B /* arm64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E60FB22E73F1C009AF54B /* arm64.swiftmodule */; };
-		1A6E610722E73F1C009AF54B /* x86_64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E60FC22E73F1C009AF54B /* x86_64.swiftmodule */; };
-		1A6E610822E73F1C009AF54B /* arm.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E60FD22E73F1C009AF54B /* arm.swiftdoc */; };
-		1A6E610922E73F1C009AF54B /* i386.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E60FE22E73F1C009AF54B /* i386.swiftdoc */; };
-		1A6E610A22E73F1C009AF54B /* arm.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E60FF22E73F1C009AF54B /* arm.swiftmodule */; };
-		1A6E610B22E73F1C009AF54B /* armv7.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E610022E73F1C009AF54B /* armv7.swiftdoc */; };
-		1A6E610C22E73F1C009AF54B /* arm64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E610122E73F1C009AF54B /* arm64.swiftdoc */; };
-		1A6E610D22E73F1C009AF54B /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A6E610222E73F1C009AF54B /* armv7.swiftmodule */; };
-		1A6E610E22E73F1C009AF54B /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6E610322E73F1C009AF54B /* libMendix.a */; };
+		1A46B738230BFBEA00696567 /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B72D230BFBE900696567 /* i386.swiftmodule */; };
+		1A46B739230BFBEA00696567 /* x86_64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B72E230BFBE900696567 /* x86_64.swiftdoc */; };
+		1A46B73A230BFBEA00696567 /* arm64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B72F230BFBE900696567 /* arm64.swiftmodule */; };
+		1A46B73B230BFBEA00696567 /* x86_64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B730230BFBE900696567 /* x86_64.swiftmodule */; };
+		1A46B73C230BFBEA00696567 /* arm.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B731230BFBE900696567 /* arm.swiftdoc */; };
+		1A46B73D230BFBEA00696567 /* i386.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B732230BFBE900696567 /* i386.swiftdoc */; };
+		1A46B73E230BFBEA00696567 /* arm.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B733230BFBE900696567 /* arm.swiftmodule */; };
+		1A46B73F230BFBEA00696567 /* armv7.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B734230BFBE900696567 /* armv7.swiftdoc */; };
+		1A46B740230BFBEA00696567 /* arm64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B735230BFBE900696567 /* arm64.swiftdoc */; };
+		1A46B741230BFBEA00696567 /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A46B736230BFBE900696567 /* armv7.swiftmodule */; };
+		1A46B742230BFBEA00696567 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A46B737230BFBEA00696567 /* libMendix.a */; };
 		50E219F2C10F3245B5974EDA /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D636E05099DDFB1F7BD7B2E /* libPods-nativeTemplate.a */; };
 		EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
 		EBC808FE22DF2EF4007E5F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */; };
@@ -33,17 +33,17 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nativeTemplate/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = nativeTemplate/Info.plist; sourceTree = "<group>"; };
 		1A0B83DA22E09B2500EA1E51 /* Bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundle; sourceTree = "<group>"; };
-		1A6E60F922E73F1C009AF54B /* i386.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = i386.swiftmodule; sourceTree = "<group>"; };
-		1A6E60FA22E73F1C009AF54B /* x86_64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftdoc; sourceTree = "<group>"; };
-		1A6E60FB22E73F1C009AF54B /* arm64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftmodule; sourceTree = "<group>"; };
-		1A6E60FC22E73F1C009AF54B /* x86_64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftmodule; sourceTree = "<group>"; };
-		1A6E60FD22E73F1C009AF54B /* arm.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftdoc; sourceTree = "<group>"; };
-		1A6E60FE22E73F1C009AF54B /* i386.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = i386.swiftdoc; sourceTree = "<group>"; };
-		1A6E60FF22E73F1C009AF54B /* arm.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftmodule; sourceTree = "<group>"; };
-		1A6E610022E73F1C009AF54B /* armv7.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftdoc; sourceTree = "<group>"; };
-		1A6E610122E73F1C009AF54B /* arm64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftdoc; sourceTree = "<group>"; };
-		1A6E610222E73F1C009AF54B /* armv7.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftmodule; sourceTree = "<group>"; };
-		1A6E610322E73F1C009AF54B /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
+		1A46B72D230BFBE900696567 /* i386.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = i386.swiftmodule; sourceTree = "<group>"; };
+		1A46B72E230BFBE900696567 /* x86_64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftdoc; sourceTree = "<group>"; };
+		1A46B72F230BFBE900696567 /* arm64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftmodule; sourceTree = "<group>"; };
+		1A46B730230BFBE900696567 /* x86_64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftmodule; sourceTree = "<group>"; };
+		1A46B731230BFBE900696567 /* arm.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftdoc; sourceTree = "<group>"; };
+		1A46B732230BFBE900696567 /* i386.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = i386.swiftdoc; sourceTree = "<group>"; };
+		1A46B733230BFBE900696567 /* arm.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftmodule; sourceTree = "<group>"; };
+		1A46B734230BFBE900696567 /* armv7.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftdoc; sourceTree = "<group>"; };
+		1A46B735230BFBE900696567 /* arm64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftdoc; sourceTree = "<group>"; };
+		1A46B736230BFBE900696567 /* armv7.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftmodule; sourceTree = "<group>"; };
+		1A46B737230BFBEA00696567 /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
 		3A50E1C430A9EB98E247701D /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		7EEDF4024CB6865C31DBA5BB /* Pods-nativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		9D636E05099DDFB1F7BD7B2E /* libPods-nativeTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nativeTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A6E610E22E73F1C009AF54B /* libMendix.a in Frameworks */,
+				1A46B742230BFBEA00696567 /* libMendix.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				50E219F2C10F3245B5974EDA /* libPods-nativeTemplate.a in Frameworks */,
 			);
@@ -81,19 +81,19 @@
 			name = NativeTemplate;
 			sourceTree = "<group>";
 		};
-		1A6E60F822E73F1C009AF54B /* MendixNative.swiftmodule */ = {
+		1A46B72C230BFBE900696567 /* MendixNative.swiftmodule */ = {
 			isa = PBXGroup;
 			children = (
-				1A6E60F922E73F1C009AF54B /* i386.swiftmodule */,
-				1A6E60FA22E73F1C009AF54B /* x86_64.swiftdoc */,
-				1A6E60FB22E73F1C009AF54B /* arm64.swiftmodule */,
-				1A6E60FC22E73F1C009AF54B /* x86_64.swiftmodule */,
-				1A6E60FD22E73F1C009AF54B /* arm.swiftdoc */,
-				1A6E60FE22E73F1C009AF54B /* i386.swiftdoc */,
-				1A6E60FF22E73F1C009AF54B /* arm.swiftmodule */,
-				1A6E610022E73F1C009AF54B /* armv7.swiftdoc */,
-				1A6E610122E73F1C009AF54B /* arm64.swiftdoc */,
-				1A6E610222E73F1C009AF54B /* armv7.swiftmodule */,
+				1A46B72D230BFBE900696567 /* i386.swiftmodule */,
+				1A46B72E230BFBE900696567 /* x86_64.swiftdoc */,
+				1A46B72F230BFBE900696567 /* arm64.swiftmodule */,
+				1A46B730230BFBE900696567 /* x86_64.swiftmodule */,
+				1A46B731230BFBE900696567 /* arm.swiftdoc */,
+				1A46B732230BFBE900696567 /* i386.swiftdoc */,
+				1A46B733230BFBE900696567 /* arm.swiftmodule */,
+				1A46B734230BFBE900696567 /* armv7.swiftdoc */,
+				1A46B735230BFBE900696567 /* arm64.swiftdoc */,
+				1A46B736230BFBE900696567 /* armv7.swiftmodule */,
 			);
 			path = MendixNative.swiftmodule;
 			sourceTree = "<group>";
@@ -158,8 +158,8 @@
 		EBC808E222DF20DD007E5F3D /* MendixNative */ = {
 			isa = PBXGroup;
 			children = (
-				1A6E610322E73F1C009AF54B /* libMendix.a */,
-				1A6E60F822E73F1C009AF54B /* MendixNative.swiftmodule */,
+				1A46B737230BFBEA00696567 /* libMendix.a */,
+				1A46B72C230BFBE900696567 /* MendixNative.swiftmodule */,
 			);
 			path = MendixNative;
 			sourceTree = "<group>";
@@ -184,7 +184,6 @@
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
-				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				E76B33B54A5C7944CC054730 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -235,39 +234,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */,
-				1A6E610822E73F1C009AF54B /* arm.swiftdoc in Resources */,
-				1A6E610622E73F1C009AF54B /* arm64.swiftmodule in Resources */,
-				1A6E610722E73F1C009AF54B /* x86_64.swiftmodule in Resources */,
-				1A6E610522E73F1C009AF54B /* x86_64.swiftdoc in Resources */,
-				1A6E610C22E73F1C009AF54B /* arm64.swiftdoc in Resources */,
+				1A46B73C230BFBEA00696567 /* arm.swiftdoc in Resources */,
+				1A46B73A230BFBEA00696567 /* arm64.swiftmodule in Resources */,
+				1A46B73B230BFBEA00696567 /* x86_64.swiftmodule in Resources */,
+				1A46B739230BFBEA00696567 /* x86_64.swiftdoc in Resources */,
+				1A46B740230BFBEA00696567 /* arm64.swiftdoc in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				1A6E610422E73F1C009AF54B /* i386.swiftmodule in Resources */,
-				1A6E610B22E73F1C009AF54B /* armv7.swiftdoc in Resources */,
-				1A6E610922E73F1C009AF54B /* i386.swiftdoc in Resources */,
+				1A46B738230BFBEA00696567 /* i386.swiftmodule in Resources */,
+				1A46B73F230BFBEA00696567 /* armv7.swiftdoc in Resources */,
+				1A46B73D230BFBEA00696567 /* i386.swiftdoc in Resources */,
 				EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */,
-				1A6E610A22E73F1C009AF54B /* arm.swiftmodule in Resources */,
-				1A6E610D22E73F1C009AF54B /* armv7.swiftmodule in Resources */,
+				1A46B73E230BFBEA00696567 /* arm.swiftmodule in Resources */,
+				1A46B741230BFBEA00696567 /* armv7.swiftmodule in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native code and images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
-		};
 		9424FB93980FFC0182F8FB87 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

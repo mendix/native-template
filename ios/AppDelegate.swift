@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     guard let url = Bundle.main.object(forInfoDictionaryKey: "Runtime url") as? String, let runTimeUrl = AppUrl.forRuntime(url: url) else {
       fatalError("Missing runtime url")
     }
-    guard let bundleUrl = Bundle.main.url(forResource: "index.ios", withExtension: "bundle", subdirectory: "Bundle") else {
+    guard let bundleUrl = ReactNative.instance.getJSBundleFile() else {
       fatalError("Could not load index.ios.bundle")
     }
 
