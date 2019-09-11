@@ -10,6 +10,7 @@ import com.horcrux.svg.SvgPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.mendix.mendixnative.MendixReactApplication;
+import com.microsoft.codepush.react.CodePush;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.polidea.reactnativeble.BlePackage;
 import com.proyecto26.inappbrowser.RNInAppBrowserPackage;
@@ -40,6 +41,7 @@ public class MainApplication extends MendixReactApplication {
     return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
             new DarkModePackage(),
+            new CodePush(getCodePushKey(), getApplicationContext(), BuildConfig.DEBUG),
             new RNGestureHandlerPackage(),
             new RNCWebViewPackage(),
             new RNViewShotPackage(),
