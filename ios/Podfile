@@ -66,5 +66,5 @@ target 'nativeTemplate' do
   pod 'Firebase/Core', '~> 5.15.0'
   pod 'Firebase/Messaging', '~> 5.15.0'
   pod 'react-native-ble-plx-swift', :podspec => '../node_modules/react-native-ble-plx/react-native-ble-plx-swift.podspec'
-
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
 end

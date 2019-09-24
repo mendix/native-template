@@ -1,5 +1,11 @@
 PODS:
+  - Base64 (1.1.2)
   - boost-for-react-native (1.63.0)
+  - CodePush (5.7.0):
+    - Base64 (~> 1.1)
+    - JWT (~> 3.0.0-beta.7)
+    - React
+    - SSZipArchive (~> 2.1)
   - DoubleConversion (1.1.6)
   - Firebase/Core (5.15.0):
     - Firebase/CoreOnly
@@ -135,7 +141,7 @@ PODS:
   - Protobuf (3.10.0)
   - React (0.59.9):
     - React/Core (= 0.59.9)
-  - react-native-ble-plx-swift (1.0.3)
+  - react-native-ble-plx-swift (1.1.0)
   - react-native-calendar-events (1.7.3):
     - React
   - react-native-camera/FaceDetectorMLKit (2.11.1):
@@ -255,11 +261,13 @@ PODS:
     - React
   - RNViewShot (2.6.0):
     - React
+  - SSZipArchive (2.2.2)
   - TouchID (4.4.1):
     - React
   - yoga (0.59.9.React)
 
 DEPENDENCIES:
+  - CodePush (from `../node_modules/react-native-code-push`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - Firebase/Core (~> 5.15.0)
   - Firebase/Messaging (~> 5.15.0)
@@ -308,7 +316,8 @@ DEPENDENCIES:
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - Base64
     - boost-for-react-native
     - Firebase
     - FirebaseAnalytics
@@ -328,10 +337,14 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GoogleUtilities
     - GTMSessionFetcher
+    - JWT
     - nanopb
     - Protobuf
+    - SSZipArchive
 
 EXTERNAL SOURCES:
+  CodePush:
+    :path: "../node_modules/react-native-code-push"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   Folly:
@@ -387,7 +400,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   react-native-ble-plx-swift:
-    :commit: af92a39185b441f80489312d293182e0203afcfe
+    :commit: cad423cc4c3bdf6dc8153dcaa00a2bb9b7f07c1e
     :git: https://github.com/Polidea/react-native-ble-plx.git
   react-native-calendar-events:
     :commit: 2179c84d68a980e1a6b27d98d7f19e4d91300733
@@ -403,7 +416,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/react-native-community/react-native-maps.git
 
 SPEC CHECKSUMS:
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  CodePush: fe25db2e24ff1a2fab8b280a9633d9ba520867be
   DoubleConversion: bb338842f62ab1d708ceb63ec3d999f0f3d98ecd
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
@@ -425,10 +440,11 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 800648f8b3127618c1b59c7f97684427630c5ea3
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
+  JWT: 05028b9624591bba9681bb57df2c5f95fa258bad
   nanopb: 06f6030d554e6473f5e172460173fcf80f5548f4
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
-  react-native-ble-plx-swift: 730d62df0a68022e4ff81fb6d30d98a01fed3a57
+  react-native-ble-plx-swift: e0d041529bd7ae66eb9731123eca3df3d132e8ec
   react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
   react-native-camera: 96a3c81f27da57b816fbb6808dde20dc96d1431e
   react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
@@ -448,9 +464,10 @@ SPEC CHECKSUMS:
   RNSVG: 90c76b7cf235654d45e54655b6c189ea4041057c
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RNViewShot: 05672e0b3c36cd70633466614b4451869a70c6c7
+  SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: ccf49a41b733ef324fcb648aaaef00792dbfe656
+PODFILE CHECKSUM: e43dbaac0ca7904d703b7708ea0396a82520c860
 
 COCOAPODS: 1.8.3
