@@ -1,0 +1,56 @@
+{
+  "ios": {
+    "trigger": "manual",
+    "testEnabled": false,
+    "signed": false,
+    "environmentVariables": [],
+    "toolsets": {
+      "xcode": {
+        "xcodeVersion": "10.2.1",
+        "automaticSigning": false,
+        "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
+        "podfilePath": "ios/Podfile",
+        "scheme": "nativeTemplate"
+      },
+      "javascript": {
+        "packageJsonPath": "package.json",
+        "runTests": false,
+        "nodeVersion": "10.x"
+      },
+      "buildscripts": {
+        "package.json": {
+          "postClone": "appcenter-post-clone.sh",
+          "preBuild": "appcenter-pre-build.sh"
+        }
+      }
+    }
+  },
+  "android": {
+    "trigger": "manual",
+    "testEnabled": false,
+    "signed": false,
+    "environmentVariables": [],
+    "toolsets": {
+      "android": {
+        "module": "app",
+        "buildVariant": "debug",
+        "isRoot": false,
+        "runTests": false,
+        "runLint": false,
+        "automaticSigning": false,
+        "gradleWrapperPath": "android/gradlew"
+      },
+      "javascript": {
+        "packageJsonPath": "package.json",
+        "runTests": false,
+        "nodeVersion": "10.x"
+      },
+      "buildscripts": {
+        "package.json": {
+          "postClone": "appcenter-post-clone.sh",
+          "preBuild": "appcenter-pre-build.sh"
+        }
+      }
+    }
+  }
+}
