@@ -39,6 +39,7 @@ public class MainApplication extends MendixReactApplication {
   public List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new DarkModePackage(),
             new RNGestureHandlerPackage(),
             new RNCWebViewPackage(),
             new RNViewShotPackage(),
