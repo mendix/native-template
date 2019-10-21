@@ -135,11 +135,11 @@ PODS:
     - GTMSessionFetcher/Core (= 1.3.0)
   - JWT (3.0.0-beta.12):
     - Base64 (~> 1.1.2)
-  - nanopb (0.3.9011):
-    - nanopb/decode (= 0.3.9011)
-    - nanopb/encode (= 0.3.9011)
-  - nanopb/decode (0.3.9011)
-  - nanopb/encode (0.3.9011)
+  - nanopb (0.3.904):
+    - nanopb/decode (= 0.3.904)
+    - nanopb/encode (= 0.3.904)
+  - nanopb/decode (0.3.904)
+  - nanopb/encode (0.3.904)
   - Protobuf (3.10.0)
   - React (0.59.9):
     - React/Core (= 0.59.9)
@@ -241,6 +241,8 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
+  - ReactNativeDarkMode (0.2.0):
+    - React
   - RNCAsyncStorage (1.5.1):
     - React
   - RNDeviceInfo (1.8.0):
@@ -305,6 +307,7 @@ DEPENDENCIES:
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
+  - ReactNativeDarkMode (from `../node_modules/react-native-dark-mode`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFirebase (from `../node_modules/react-native-firebase/ios`)
@@ -377,6 +380,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native-video/react-native-video.podspec"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
+  ReactNativeDarkMode:
+    :path: "../node_modules/react-native-dark-mode"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
   RNDeviceInfo:
@@ -443,7 +448,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
   JWT: 9b5c05abbcc1a0e69c3c91e1655b3387fc7e581d
-  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  nanopb: 06f6030d554e6473f5e172460173fcf80f5548f4
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
   react-native-ble-plx-swift: e0d041529bd7ae66eb9731123eca3df3d132e8ec
@@ -457,6 +462,7 @@ SPEC CHECKSUMS:
   react-native-sqlite-storage: 3cfa904d9750f7e846c9a14c47951583ee99dbf4
   react-native-video: 25d5aebb3c9d7cdefe7a909306c7ab40be4a892c
   react-native-webview: 21c396687cb983fadc6ccc0751cc74f554131f3f
+  ReactNativeDarkMode: a2415064a7f9eb1efea18befaca8bb1fa22b19ca
   RNCAsyncStorage: 2808c378f6a70f22f66eeb6c11a8d69f326dd795
   RNDeviceInfo: 17bd6ed6c8c230f5da87d53f6275a520005f0914
   RNFirebase: f20e5e4ceaa632aebb1a29a9a91022ae0469c633
@@ -470,6 +476,6 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: 1e98487a84ee8bb08a75ee7e4b51c15fa12dee14
+PODFILE CHECKSUM: cccf09e1a653345e7467b159b2efaff4910429bf
 
 COCOAPODS: 1.8.3
