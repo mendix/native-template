@@ -3,7 +3,7 @@ brew uninstall node@6
 brew install node
 
 # Update project's dependencies
-npm i && pod install --repo-update
+npm i && pod update
 
 # Untar bundle resources
 if [ -f "./Bundle/assets.tar.gz" ]; then
