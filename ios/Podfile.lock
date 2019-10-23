@@ -143,6 +143,9 @@ PODS:
   - Protobuf (3.10.0)
   - React (0.59.9):
     - React/Core (= 0.59.9)
+  - react-native-ble-plx (1.1.0):
+    - React
+    - react-native-ble-plx-swift
   - react-native-ble-plx-swift (1.1.0)
   - react-native-calendar-events (1.7.3):
     - React
@@ -279,14 +282,15 @@ DEPENDENCIES:
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - Google-Maps-iOS-Utils
   - GoogleMaps
-  - react-native-ble-plx-swift (from `../node_modules/react-native-ble-plx/react-native-ble-plx-swift.podspec`)
-  - react-native-calendar-events (from `../node_modules/react-native-calendar-events/react-native-calendar-events.podspec`)
+  - react-native-ble-plx (from `../node_modules/react-native-ble-plx`)
+  - react-native-ble-plx-swift (from `../node_modules/react-native-ble-plx`)
+  - react-native-calendar-events (from `../node_modules/react-native-calendar-events`)
   - react-native-camera/FaceDetectorMLKit (from `../node_modules/react-native-camera`)
   - react-native-camera/TextDetector (from `../node_modules/react-native-camera`)
   - react-native-geocoder (from `../node_modules/react-native-geocoder`)
-  - react-native-google-maps (from `../node_modules/react-native-maps/react-native-google-maps.podspec`)
-  - react-native-image-picker (from `../node_modules/react-native-image-picker/react-native-image-picker.podspec`)
-  - react-native-maps (from `../node_modules/react-native-maps/react-native-maps.podspec`)
+  - react-native-google-maps (from `../node_modules/react-native-maps`)
+  - react-native-image-picker (from `../node_modules/react-native-image-picker`)
+  - react-native-maps (from `../node_modules/react-native-maps`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-sqlite-storage (from `../node_modules/react-native-sqlite-storage`)
   - react-native-video (from `../node_modules/react-native-video/react-native-video.podspec`)
@@ -358,20 +362,22 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   React:
     :path: "../node_modules/react-native"
+  react-native-ble-plx:
+    :path: "../node_modules/react-native-ble-plx"
   react-native-ble-plx-swift:
-    :podspec: "../node_modules/react-native-ble-plx/react-native-ble-plx-swift.podspec"
+    :path: "../node_modules/react-native-ble-plx"
   react-native-calendar-events:
-    :podspec: "../node_modules/react-native-calendar-events/react-native-calendar-events.podspec"
+    :path: "../node_modules/react-native-calendar-events"
   react-native-camera:
     :path: "../node_modules/react-native-camera"
   react-native-geocoder:
     :path: "../node_modules/react-native-geocoder"
   react-native-google-maps:
-    :podspec: "../node_modules/react-native-maps/react-native-google-maps.podspec"
+    :path: "../node_modules/react-native-maps"
   react-native-image-picker:
-    :podspec: "../node_modules/react-native-image-picker/react-native-image-picker.podspec"
+    :path: "../node_modules/react-native-image-picker"
   react-native-maps:
-    :podspec: "../node_modules/react-native-maps/react-native-maps.podspec"
+    :path: "../node_modules/react-native-maps"
   react-native-netinfo:
     :path: "../node_modules/@react-native-community/netinfo"
   react-native-sqlite-storage:
@@ -405,23 +411,6 @@ EXTERNAL SOURCES:
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
-CHECKOUT OPTIONS:
-  react-native-ble-plx-swift:
-    :commit: cad423cc4c3bdf6dc8153dcaa00a2bb9b7f07c1e
-    :git: https://github.com/Polidea/react-native-ble-plx.git
-  react-native-calendar-events:
-    :commit: 2179c84d68a980e1a6b27d98d7f19e4d91300733
-    :git: https://github.com/wmcmahan/react-native-calendar-events.git
-  react-native-google-maps:
-    :commit: c18c4a11fa6615c17c4e5020e38d223c096d2b14
-    :git: https://github.com/react-native-community/react-native-maps.git
-  react-native-image-picker:
-    :commit: 085d0b7d087f603bea530be2cb94cf3c1719f036
-    :git: https://github.com/marcshilling/react-native-image-picker
-  react-native-maps:
-    :commit: c18c4a11fa6615c17c4e5020e38d223c096d2b14
-    :git: https://github.com/react-native-community/react-native-maps.git
-
 SPEC CHECKSUMS:
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
@@ -451,6 +440,7 @@ SPEC CHECKSUMS:
   nanopb: 06f6030d554e6473f5e172460173fcf80f5548f4
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
+  react-native-ble-plx: 05e16667ebf56cf802986379fd58a377847885e8
   react-native-ble-plx-swift: e0d041529bd7ae66eb9731123eca3df3d132e8ec
   react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
   react-native-camera: 96a3c81f27da57b816fbb6808dde20dc96d1431e
@@ -476,6 +466,6 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: cccf09e1a653345e7467b159b2efaff4910429bf
+PODFILE CHECKSUM: 9b4934b5632f3e833eb419554c6f90b60db1f222
 
 COCOAPODS: 1.8.3
