@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "postinstall": "npx jetify",
+    "release": "node scripts/release",
     "test": "jest"
   },
   "dependencies": {
