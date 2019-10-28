@@ -3,6 +3,7 @@ package com.mendix.nativetemplate;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.brentvatne.react.ReactVideoPackage;
 import com.calendarevents.CalendarEventsPackage;
+import com.codemotionapps.reactnativedarkmode.DarkModePackage;
 import com.devfd.RNGeocoder.RNGeocoderPackage;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -38,7 +39,7 @@ public class MainApplication extends MendixReactApplication {
 
   @Override
   public List<ReactPackage> getPackages() {
-    return Arrays.<ReactPackage>asList(
+      return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
             new DarkModePackage(),
             new CodePush(getCodePushKey(), getApplicationContext(), BuildConfig.DEBUG),
