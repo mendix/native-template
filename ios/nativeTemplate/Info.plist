@@ -37,9 +37,9 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>This app may need access to your Bluetooth connection</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app may need access to your Bluetooth connection</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>This app may need access to your Bluetooth connection</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>This app requires access to the calendar</string>
@@ -70,8 +70,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
