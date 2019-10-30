@@ -6,7 +6,7 @@
     "environmentVariables": [],
     "toolsets": {
       "xcode": {
-        "xcodeVersion": "10.2.1",
+        "xcodeVersion": "11.0",
         "automaticSigning": false,
         "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
         "podfilePath": "ios/Podfile",
