@@ -65,7 +65,7 @@ android {
         }
     }
     dataBinding {
-        enabled true
+        enabled false
     }
     packagingOptions {
         pickFirst '**/libjsc.so'
