@@ -29,7 +29,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.greweb.reactnativeviewshot.RNViewShotPackage;
-import io.invertase.firebase.RNFirebasePackage;
 
 public class MainApplication extends MendixReactApplication {
   @Override
@@ -56,7 +55,6 @@ public class MainApplication extends MendixReactApplication {
             new RNInAppBrowserPackage(),
             new ImagePickerPackage(),
             new RNGeocoderPackage(),
-            new RNFirebasePackage(),
             new RNDeviceInfo(),
             new RNCameraPackage(),
             new CalendarEventsPackage(),
