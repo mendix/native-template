@@ -262,7 +262,7 @@ PODS:
     - RNSound/Core (= 0.10.9)
   - RNSound/Core (0.10.9):
     - React/Core
-  - RNSVG (9.5.3):
+  - RNSVG (9.11.1):
     - React
   - RNVectorIcons (6.6.0):
     - React
@@ -318,7 +318,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler/RNGestureHandler.podspec`)
   - RNInAppBrowser (from `../node_modules/react-native-inappbrowser-reborn`)
   - RNSound (from `../node_modules/react-native-sound/RNSound.podspec`)
-  - RNSVG (from `../node_modules/react-native-svg/RNSVG.podspec`)
+  - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - RNViewShot (from `../node_modules/react-native-view-shot`)
   - TouchID (from `../node_modules/react-native-touch-id`)
@@ -401,7 +401,7 @@ EXTERNAL SOURCES:
   RNSound:
     :podspec: "../node_modules/react-native-sound/RNSound.podspec"
   RNSVG:
-    :podspec: "../node_modules/react-native-svg/RNSVG.podspec"
+    :path: "../node_modules/react-native-svg"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   RNViewShot:
@@ -459,13 +459,13 @@ SPEC CHECKSUMS:
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
   RNInAppBrowser: 425a9d10b4f3084df3d1b702a02274352ac7f193
   RNSound: 53d2fc9c6589bd68daba530262b7560393def3ac
-  RNSVG: 90c76b7cf235654d45e54655b6c189ea4041057c
+  RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RNViewShot: 05672e0b3c36cd70633466614b4451869a70c6c7
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: 7d6d23d9264926a094270de49d8bfb8835fcd6a8
+PODFILE CHECKSUM: d2394f98144ee4e17263da86c8ae908e3be4ead3
 
 COCOAPODS: 1.8.3
