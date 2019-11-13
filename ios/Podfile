@@ -54,7 +54,7 @@ target 'nativeTemplate' do
   pod 'react-native-google-maps', :path => '../node_modules/react-native-maps'
   pod 'GoogleMaps'
   pod 'Google-Maps-iOS-Utils'
-  pod 'RNSVG', :podspec => '../node_modules/react-native-svg/RNSVG.podspec'
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
   pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
   pod 'RNInAppBrowser', :path => '../node_modules/react-native-inappbrowser-reborn'
