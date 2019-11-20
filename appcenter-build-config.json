@@ -10,7 +10,8 @@
         "automaticSigning": false,
         "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
         "podfilePath": "ios/Podfile",
-        "scheme": "nativeTemplate"
+        "scheme": "nativeTemplate",
+        "forceLegacyBuildSystem":	true
       },
       "javascript": {
         "packageJsonPath": "package.json",
