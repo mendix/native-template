@@ -40,10 +40,7 @@ target 'nativeTemplate' do
   pod 'RNGestureHandler', :podspec => '../node_modules/react-native-gesture-handler/RNGestureHandler.podspec'
   pod 'react-native-sqlite-storage', :path => '../node_modules/react-native-sqlite-storage'
   pod 'react-native-calendar-events', :path => '../node_modules/react-native-calendar-events'
-  pod 'react-native-camera', :path => '../node_modules/react-native-camera', subspecs: [
-    'TextDetector',
-    'FaceDetectorMLKit'
-  ]
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
   pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
   pod 'TouchID', :path => '../node_modules/react-native-touch-id'
   pod 'react-native-ble-plx', :path => '../node_modules/react-native-ble-plx'
