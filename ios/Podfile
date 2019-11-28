@@ -63,7 +63,6 @@ target 'nativeTemplate' do
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
   pod 'Firebase/Core', '~> 5.15.0'
   pod 'Firebase/Messaging', '~> 5.15.0'
-  pod 'CodePush', :path => '../node_modules/react-native-code-push'
   pod 'ReactNativeDarkMode', :path => '../node_modules/react-native-dark-mode'
 
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
