@@ -88,6 +88,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.8.0):
     - GoogleUtilities/Logger
+  - IQKeyboardManagerSwift (6.5.4)
   - JWT (3.0.0-beta.12):
     - Base64 (~> 1.1.2)
   - nanopb (0.3.9011):
@@ -229,6 +230,7 @@ DEPENDENCIES:
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - Google-Maps-iOS-Utils
   - GoogleMaps
+  - IQKeyboardManagerSwift
   - react-native-ble-plx (from `../node_modules/react-native-ble-plx`)
   - react-native-ble-plx-swift (from `../node_modules/react-native-ble-plx`)
   - react-native-calendar-events (from `../node_modules/react-native-calendar-events`)
@@ -284,6 +286,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleMaps
     - GoogleUtilities
+    - IQKeyboardManagerSwift
     - JWT
     - nanopb
     - Protobuf
@@ -366,6 +369,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   JWT: 9b5c05abbcc1a0e69c3c91e1655b3387fc7e581d
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
@@ -396,6 +400,6 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: f791b06ecd3f700eac213b6643fc974f75df40ec
+PODFILE CHECKSUM: 1d8a27428023f1a85ef17e1b58ea049f3f418aab
 
 COCOAPODS: 1.8.4
