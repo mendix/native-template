@@ -25,11 +25,12 @@ project.xcworkspace
 # Android/IntelliJ
 #
 build/
+android/app/.settings
 .idea
 .gradle
 local.properties
 *.iml
-*.settings/
+.classpath
 
 # iOS
 # 
