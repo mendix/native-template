@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DevAppTemplate</string>
+    <string name="hint_app_url_input">Enter your application URL</string>
+    <string name="launch_app_button">Launch</string>
+</resources>
