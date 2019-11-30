@@ -33,7 +33,34 @@
     "toolsets": {
       "android": {
         "module": "app",
-        "buildVariant": "debug",
+        "buildVariant": "appstoreDebug",
+        "isRoot": false,
+        "runTests": false,
+        "runLint": false,
+        "automaticSigning": false,
+        "gradleWrapperPath": "android/gradlew"
+      },
+      "javascript": {
+        "packageJsonPath": "package.json",
+        "runTests": false,
+        "nodeVersion": "10.x"
+      },
+      "buildscripts": {
+        "package.json": {
+          "postClone": "appcenter-post-clone.sh",
+          "preBuild": "appcenter-pre-build.sh"
+        }
+      }
+    }
+  },
+  "androidDev": {
+    "trigger": "manual",
+    "testEnabled": false,
+    "signed": false,
+    "toolsets": {
+      "android": {
+        "module": "app",
+        "buildVariant": "devDebug",
         "isRoot": false,
         "runTests": false,
         "runLint": false,
