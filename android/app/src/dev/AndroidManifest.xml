@@ -3,14 +3,14 @@
     tools:node="merge">
 
     <application android:name="com.mendix.nativeteamplate.developerapp.DevApplication" tools:node="merge" tools:replace="android:name" >
-        <activity android:name="com.mendix.nativeteamplate.developerapp.DevMenuActivity">
+        <activity android:name="com.mendix.nativeteamplate.developerapp.DevMenuActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mendix.nativetemplate.MainActivity">
+            android:name="com.mendix.mendixnative.activity.MendixReactActivity">
             <intent-filter tools:node="remove">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

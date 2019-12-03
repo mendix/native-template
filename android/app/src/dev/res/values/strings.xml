@@ -2,4 +2,8 @@
     <string name="app_name">DevAppTemplate</string>
     <string name="hint_app_url_input">Enter your application URL</string>
     <string name="launch_app_button">Launch</string>
+    <string name="neutral_button">Continue</string>
+    <string name="camera_permission_title">Camera permission</string>
+    <string name="camera_permission_message">To be able to read QR codes you need to grant the Camera permission.</string>
+    <string name="camera_permission_button">Continue</string>
 </resources>
