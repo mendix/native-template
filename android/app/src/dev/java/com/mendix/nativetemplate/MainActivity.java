@@ -1,4 +1,4 @@
-package com.mendix.nativeteamplate.developerapp;
+package com.mendix.nativetemplate;
 
 import android.Manifest;
 import android.content.Intent;
@@ -23,14 +23,13 @@ import com.mendix.mendixnative.activity.MendixReactActivity;
 import com.mendix.mendixnative.config.AppUrl;
 import com.mendix.mendixnative.react.MendixApp;
 import com.mendix.mendixnative.react.MxConfiguration;
-import com.mendix.nativetemplate.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class DevMenuActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     static private int CAMERA_REQUEST = 1;
     private Button launchAppButton;
     private CheckBox clearDataCheckBox;
