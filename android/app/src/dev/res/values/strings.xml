@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">DevAppTemplate</string>
-    <string name="hint_app_url_input">Enter your application URL</string>
+    <string name="hint_app_url_input">Your local Mendix Studio Pro URL</string>
     <string name="launch_app_button">Launch</string>
     <string name="neutral_button">Continue</string>
     <string name="camera_permission_title">Camera permission</string>
