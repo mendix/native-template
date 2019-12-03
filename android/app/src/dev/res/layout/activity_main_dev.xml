@@ -4,7 +4,13 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true">
+    android:animateLayoutChanges="true"
+    android:background="#081218">
+
+    <RelativeLayout
+        android:id="@+id/barcode_scanner_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:id="@+id/dev_menu_container"
@@ -33,6 +39,8 @@
                 android:text="Host:"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
                 app:layout_constraintBottom_toTopOf="@+id/url_input_field"
                 app:layout_constraintStart_toStartOf="@+id/url_input_field" />
 
@@ -42,6 +50,7 @@
                 android:layout_height="48dp"
                 android:layout_marginBottom="8dp"
                 android:contentDescription="appUrl"
+                android:textColor="@android:color/white"
                 android:hint="@string/hint_app_url_input"
                 android:importantForAutofill="no"
                 android:inputType="textUri"
@@ -49,6 +58,8 @@
                 android:paddingRight="10dp"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
+                android:textColorHint="#666"
+                android:background="@drawable/edittext_dark_background"
                 android:text="" />
         </LinearLayout>
 
@@ -59,7 +70,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/launch_app_button"
-            android:onClick="launchApp"></Button>
+            android:onClick="launchApp"
+            android:textColor="@android:color/white"
+            android:background="@color/mendix_green"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,6 +84,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/clear_data"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"
                 android:text="@string/clear_data" />
         </LinearLayout>
     </LinearLayout>
