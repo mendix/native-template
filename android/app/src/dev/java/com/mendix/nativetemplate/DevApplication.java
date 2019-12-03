@@ -1,6 +1,4 @@
-package com.mendix.nativeteamplate.developerapp;
-
-import com.mendix.nativetemplate.MainApplication;
+package com.mendix.nativetemplate;
 
 public class DevApplication extends MainApplication {
     @Override
