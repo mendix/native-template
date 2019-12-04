@@ -10,8 +10,8 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		1A0B3A952397DA2300388BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3A942397DA2300388BF7 /* AppDelegate.swift */; };
-		1A0B3A992397DA2300388BF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3A982397DA2300388BF7 /* ViewController.swift */; };
-		1A0B3A9C2397DA2300388BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9A2397DA2300388BF7 /* Main.storyboard */; };
+		1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */; };
+		1A0B3A9C2397DA2300388BF7 /* LaunchApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9A2397DA2300388BF7 /* LaunchApp.storyboard */; };
 		1A0B3A9E2397DA2600388BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */; };
 		1A0B3AA12397DA2600388BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9F2397DA2600388BF7 /* LaunchScreen.storyboard */; };
 		1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -34,6 +34,8 @@
 		1A0B3ACA2397DD2A00388BF7 /* armv7-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3F238FC6C8000B27DA /* armv7-apple-ios.swiftdoc */; };
 		1A0B3ACB2397DD2A00388BF7 /* i386-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF40238FC6C8000B27DA /* i386-apple-ios-simulator.swiftdoc */; };
 		1A0B3ACC2397DD2A00388BF7 /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF41238FC6C8000B27DA /* armv7.swiftmodule */; };
+		1A0B3AD32397E15800388BF7 /* MendixApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AD22397E15800388BF7 /* MendixApp.storyboard */; };
+		1A0B3AD52397E16900388BF7 /* MendixAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3AD42397E16900388BF7 /* MendixAppViewController.swift */; };
 		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
 		1A64CF43238FC6C9000B27DA /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */; };
 		1A64CF44238FC6C9000B27DA /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF31238FC6C8000B27DA /* i386.swiftmodule */; };
@@ -68,11 +70,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = nativeTemplate/Info.plist; sourceTree = "<group>"; };
 		1A0B3A922397DA2300388BF7 /* NativeTemplateDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeTemplateDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0B3A942397DA2300388BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A0B3A982397DA2300388BF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A0B3A9B2397DA2300388BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = LaunchAppViewController.swift; sourceTree = "<group>"; };
+		1A0B3A9B2397DA2300388BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchApp.storyboard; sourceTree = "<group>"; };
 		1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0B3AA02397DA2600388BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A0B3AA22397DA2600388BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0B3AD22397E15800388BF7 /* MendixApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MendixApp.storyboard; sourceTree = "<group>"; };
+		1A0B3AD42397E16900388BF7 /* MendixAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MendixAppViewController.swift; sourceTree = "<group>"; };
 		1A0B83DA22E09B2500EA1E51 /* Bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundle; sourceTree = "<group>"; };
 		1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		1A64CF31238FC6C8000B27DA /* i386.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = i386.swiftmodule; sourceTree = "<group>"; };
@@ -148,14 +152,32 @@
 		1A0B3A932397DA2300388BF7 /* Dev */ = {
 			isa = PBXGroup;
 			children = (
+				1A0B3AD12397E14800388BF7 /* MendixApp */,
+				1A0B3ACD2397E06900388BF7 /* LaunchApp */,
 				1A0B3A942397DA2300388BF7 /* AppDelegate.swift */,
-				1A0B3A982397DA2300388BF7 /* ViewController.swift */,
-				1A0B3A9A2397DA2300388BF7 /* Main.storyboard */,
 				1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */,
 				1A0B3A9F2397DA2600388BF7 /* LaunchScreen.storyboard */,
 				1A0B3AA22397DA2600388BF7 /* Info.plist */,
 			);
 			path = Dev;
+			sourceTree = "<group>";
+		};
+		1A0B3ACD2397E06900388BF7 /* LaunchApp */ = {
+			isa = PBXGroup;
+			children = (
+				1A0B3A9A2397DA2300388BF7 /* LaunchApp.storyboard */,
+				1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */,
+			);
+			path = LaunchApp;
+			sourceTree = "<group>";
+		};
+		1A0B3AD12397E14800388BF7 /* MendixApp */ = {
+			isa = PBXGroup;
+			children = (
+				1A0B3AD22397E15800388BF7 /* MendixApp.storyboard */,
+				1A0B3AD42397E16900388BF7 /* MendixAppViewController.swift */,
+			);
+			path = MendixApp;
 			sourceTree = "<group>";
 		};
 		1A64CF2F238FC6C8000B27DA /* MendixNative.swiftmodule */ = {
@@ -386,6 +408,7 @@
 				1A0B3ACB2397DD2A00388BF7 /* i386-apple-ios-simulator.swiftdoc in Resources */,
 				1A0B3AC42397DD2A00388BF7 /* i386-apple-ios-simulator.swiftmodule in Resources */,
 				1A0B3AA12397DA2600388BF7 /* LaunchScreen.storyboard in Resources */,
+				1A0B3AD32397E15800388BF7 /* MendixApp.storyboard in Resources */,
 				1A0B3ABE2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftmodule in Resources */,
 				1A0B3AC32397DD2A00388BF7 /* armv7-apple-ios.swiftmodule in Resources */,
 				1A0B3ACA2397DD2A00388BF7 /* armv7-apple-ios.swiftdoc in Resources */,
@@ -398,7 +421,7 @@
 				1A0B3AC82397DD2A00388BF7 /* armv7.swiftdoc in Resources */,
 				1A0B3AC52397DD2A00388BF7 /* i386.swiftdoc in Resources */,
 				1A0B3ABC2397DD2A00388BF7 /* i386.swiftmodule in Resources */,
-				1A0B3A9C2397DA2300388BF7 /* Main.storyboard in Resources */,
+				1A0B3A9C2397DA2300388BF7 /* LaunchApp.storyboard in Resources */,
 				1A0B3ABF2397DD2A00388BF7 /* x86_64.swiftdoc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,7 +592,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0B3A992397DA2300388BF7 /* ViewController.swift in Sources */,
+				1A0B3AD52397E16900388BF7 /* MendixAppViewController.swift in Sources */,
+				1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */,
 				1A0B3A952397DA2300388BF7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,12 +610,12 @@
 			path = nativeTemplate;
 			sourceTree = "<group>";
 		};
-		1A0B3A9A2397DA2300388BF7 /* Main.storyboard */ = {
+		1A0B3A9A2397DA2300388BF7 /* LaunchApp.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1A0B3A9B2397DA2300388BF7 /* Base */,
 			);
-			name = Main.storyboard;
+			name = LaunchApp.storyboard;
 			sourceTree = "<group>";
 		};
 		1A0B3A9F2397DA2600388BF7 /* LaunchScreen.storyboard */ = {
