@@ -2,7 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.mendix.nativetemplate">
 
-    <application tools:node="merge">
+    <application
+        android:name=".MainApplication"
+        tools:node="merge">
         <activity
             android:name="com.mendix.nativetemplate.MainActivity"
             android:label="@string/app_name"
