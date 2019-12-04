@@ -74,3 +74,16 @@ abstract_target "ReactNative" do
     # Intentionally left empty
   end
 end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if target.name == "React"
+        if config.name == "ReleaseDevApp"
+          config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+          config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << "DEBUG=1"
+        end
+      end
+    end
+  end
+end
