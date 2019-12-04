@@ -1,10 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:node="merge">
+    package="com.mendix.nativetemplate">
 
     <application
         android:name="com.mendix.nativetemplate.DevApplication"
-        tools:node="merge"
         tools:replace="android:name">
         <activity
             android:name="com.mendix.nativetemplate.MainActivity"
