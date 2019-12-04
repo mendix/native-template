@@ -32,15 +32,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epB-j8-VoM" userLabel="QRView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epB-j8-VoM" userLabel="QRView" customClass="QRView" customModule="NativeTemplateDev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOX-i5-jP6" userLabel="QRMaskView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOX-i5-jP6" userLabel="QRMaskView" customClass="QRMaskView" customModule="NativeTemplateDev" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <color key="backgroundColor" red="0.031699623912572861" green="0.030538506805896759" blue="0.055877991020679474" alpha="0.58946917808219179" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.074080057442188263" green="0.12048513442277908" blue="0.25205829739570618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="oOX-i5-jP6" firstAttribute="height" secondItem="epB-j8-VoM" secondAttribute="height" id="Jer-vc-9P7"/>
                                     <constraint firstItem="oOX-i5-jP6" firstAttribute="width" secondItem="epB-j8-VoM" secondAttribute="width" id="W6d-5d-mrl"/>
@@ -86,7 +86,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.017150042808219176" blue="0.066815590014602633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Vbz-0q-M8f" firstAttribute="centerY" secondItem="3hE-cU-vah" secondAttribute="centerY" id="CDf-gU-qZ3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3hE-cU-vah" secondAttribute="bottom" constant="48" id="Eon-sy-mQy"/>
@@ -107,6 +107,8 @@
                     <navigationItem key="navigationItem" id="b4v-MD-TTI"/>
                     <connections>
                         <outlet property="clearDataSwitch" destination="x2y-s7-GCQ" id="OlV-l9-A4a"/>
+                        <outlet property="qrMaskView" destination="oOX-i5-jP6" id="5G6-fU-qRm"/>
+                        <outlet property="qrView" destination="epB-j8-VoM" id="Byn-Bw-vg6"/>
                         <outlet property="textField" destination="3hE-cU-vah" id="vpv-XW-r61"/>
                         <segue destination="0bC-YG-oDb" kind="show" identifier="MendixApp" id="fbH-kb-DO8"/>
                     </connections>
