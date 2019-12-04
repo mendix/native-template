@@ -15,6 +15,25 @@
 		1A0B3A9E2397DA2600388BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */; };
 		1A0B3AA12397DA2600388BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9F2397DA2600388BF7 /* LaunchScreen.storyboard */; };
 		1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
+		1A0B3ABA2397DD2400388BF7 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A64CF42238FC6C9000B27DA /* libMendix.a */; };
+		1A0B3ABB2397DD2A00388BF7 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */; };
+		1A0B3ABC2397DD2A00388BF7 /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF31238FC6C8000B27DA /* i386.swiftmodule */; };
+		1A0B3ABD2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF32238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftdoc */; };
+		1A0B3ABE2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF33238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftmodule */; };
+		1A0B3ABF2397DD2A00388BF7 /* x86_64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF34238FC6C8000B27DA /* x86_64.swiftdoc */; };
+		1A0B3AC02397DD2A00388BF7 /* arm64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF35238FC6C8000B27DA /* arm64.swiftmodule */; };
+		1A0B3AC12397DD2A00388BF7 /* x86_64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF36238FC6C8000B27DA /* x86_64.swiftmodule */; };
+		1A0B3AC22397DD2A00388BF7 /* arm.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF37238FC6C8000B27DA /* arm.swiftdoc */; };
+		1A0B3AC32397DD2A00388BF7 /* armv7-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF38238FC6C8000B27DA /* armv7-apple-ios.swiftmodule */; };
+		1A0B3AC42397DD2A00388BF7 /* i386-apple-ios-simulator.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF39238FC6C8000B27DA /* i386-apple-ios-simulator.swiftmodule */; };
+		1A0B3AC52397DD2A00388BF7 /* i386.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3A238FC6C8000B27DA /* i386.swiftdoc */; };
+		1A0B3AC62397DD2A00388BF7 /* arm64-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3B238FC6C8000B27DA /* arm64-apple-ios.swiftmodule */; };
+		1A0B3AC72397DD2A00388BF7 /* arm.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3C238FC6C8000B27DA /* arm.swiftmodule */; };
+		1A0B3AC82397DD2A00388BF7 /* armv7.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3D238FC6C8000B27DA /* armv7.swiftdoc */; };
+		1A0B3AC92397DD2A00388BF7 /* arm64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3E238FC6C8000B27DA /* arm64.swiftdoc */; };
+		1A0B3ACA2397DD2A00388BF7 /* armv7-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3F238FC6C8000B27DA /* armv7-apple-ios.swiftdoc */; };
+		1A0B3ACB2397DD2A00388BF7 /* i386-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF40238FC6C8000B27DA /* i386-apple-ios-simulator.swiftdoc */; };
+		1A0B3ACC2397DD2A00388BF7 /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF41238FC6C8000B27DA /* armv7.swiftmodule */; };
 		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
 		1A64CF43238FC6C9000B27DA /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */; };
 		1A64CF44238FC6C9000B27DA /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF31238FC6C8000B27DA /* i386.swiftmodule */; };
@@ -98,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0B3ABA2397DD2400388BF7 /* libMendix.a in Frameworks */,
 				1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,9 +365,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0B3AC72397DD2A00388BF7 /* arm.swiftmodule in Resources */,
+				1A0B3AC92397DD2A00388BF7 /* arm64.swiftdoc in Resources */,
+				1A0B3AC12397DD2A00388BF7 /* x86_64.swiftmodule in Resources */,
+				1A0B3AC02397DD2A00388BF7 /* arm64.swiftmodule in Resources */,
+				1A0B3ACB2397DD2A00388BF7 /* i386-apple-ios-simulator.swiftdoc in Resources */,
+				1A0B3AC42397DD2A00388BF7 /* i386-apple-ios-simulator.swiftmodule in Resources */,
 				1A0B3AA12397DA2600388BF7 /* LaunchScreen.storyboard in Resources */,
+				1A0B3ABE2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftmodule in Resources */,
+				1A0B3AC32397DD2A00388BF7 /* armv7-apple-ios.swiftmodule in Resources */,
+				1A0B3ACA2397DD2A00388BF7 /* armv7-apple-ios.swiftdoc in Resources */,
+				1A0B3AC62397DD2A00388BF7 /* arm64-apple-ios.swiftmodule in Resources */,
 				1A0B3A9E2397DA2600388BF7 /* Assets.xcassets in Resources */,
+				1A0B3ABB2397DD2A00388BF7 /* arm64-apple-ios.swiftdoc in Resources */,
+				1A0B3ACC2397DD2A00388BF7 /* armv7.swiftmodule in Resources */,
+				1A0B3ABD2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftdoc in Resources */,
+				1A0B3AC22397DD2A00388BF7 /* arm.swiftdoc in Resources */,
+				1A0B3AC82397DD2A00388BF7 /* armv7.swiftdoc in Resources */,
+				1A0B3AC52397DD2A00388BF7 /* i386.swiftdoc in Resources */,
+				1A0B3ABC2397DD2A00388BF7 /* i386.swiftmodule in Resources */,
 				1A0B3A9C2397DA2300388BF7 /* Main.storyboard in Resources */,
+				1A0B3ABF2397DD2A00388BF7 /* x86_64.swiftdoc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,13 +674,22 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}/MendixNative",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}/MendixNative",
+				);
 				INFOPLIST_FILE = Dev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MendixNative",
+					"${SRCROOT}/MendixNative",
 				);
 				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -650,6 +697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativeTemplate.dev;
 				PRODUCT_NAME = NativeTemplateDev;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -669,18 +717,28 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}/MendixNative",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}/MendixNative",
+				);
 				INFOPLIST_FILE = Dev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MendixNative",
+					"${SRCROOT}/MendixNative",
 				);
 				MARKETING_VERSION = 1.0.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativeTemplate.dev;
 				PRODUCT_NAME = NativeTemplateDev;
+				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
