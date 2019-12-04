@@ -39,6 +39,8 @@
 		1A0B3AD62397EA8500388BF7 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
 		1A0B3AD82397EB4000388BF7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3AD72397EB4000388BF7 /* RoundedButton.swift */; };
 		1A0B3ADC2397F1FF00388BF7 /* URLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3ADB2397F1FF00388BF7 /* URLValidator.swift */; };
+		1A0B3ADE2397F36300388BF7 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3ADD2397F36300388BF7 /* QRView.swift */; };
+		1A0B3AE02397F38300388BF7 /* QRMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3ADF2397F38300388BF7 /* QRMaskView.swift */; };
 		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
 		1A64CF43238FC6C9000B27DA /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */; };
 		1A64CF44238FC6C9000B27DA /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF31238FC6C8000B27DA /* i386.swiftmodule */; };
@@ -82,6 +84,8 @@
 		1A0B3AD42397E16900388BF7 /* MendixAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MendixAppViewController.swift; sourceTree = "<group>"; };
 		1A0B3AD72397EB4000388BF7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		1A0B3ADB2397F1FF00388BF7 /* URLValidator.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = URLValidator.swift; sourceTree = "<group>"; };
+		1A0B3ADD2397F36300388BF7 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		1A0B3ADF2397F38300388BF7 /* QRMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMaskView.swift; sourceTree = "<group>"; };
 		1A0B83DA22E09B2500EA1E51 /* Bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundle; sourceTree = "<group>"; };
 		1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		1A64CF31238FC6C8000B27DA /* i386.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = i386.swiftmodule; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 			children = (
 				1A0B3A9A2397DA2300388BF7 /* LaunchApp.storyboard */,
 				1A0B3AD72397EB4000388BF7 /* RoundedButton.swift */,
+				1A0B3ADD2397F36300388BF7 /* QRView.swift */,
+				1A0B3ADF2397F38300388BF7 /* QRMaskView.swift */,
 				1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */,
 				1A0B3ADB2397F1FF00388BF7 /* URLValidator.swift */,
 			);
@@ -601,6 +607,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0B3AD52397E16900388BF7 /* MendixAppViewController.swift in Sources */,
+				1A0B3ADE2397F36300388BF7 /* QRView.swift in Sources */,
+				1A0B3AE02397F38300388BF7 /* QRMaskView.swift in Sources */,
 				1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */,
 				1A0B3ADC2397F1FF00388BF7 /* URLValidator.swift in Sources */,
 				1A0B3A952397DA2300388BF7 /* AppDelegate.swift in Sources */,
