@@ -1,6 +1,7 @@
 package com.mendix.nativetemplate;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
     private Button launchAppButton;
     private CheckBox clearDataCheckBox;
     private EditText appUrl;
-    private ZXingScannerView cameraView;
+    private View loaderView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         appUrl = findViewById(R.id.app_url_input_field);
         launchAppButton = findViewById(R.id.launch_app_button);
         clearDataCheckBox = findViewById(R.id.checkbox_clear_data);
+        loaderView = findViewById(R.id.loader);
 
         ViewGroup cameraContainer = findViewById(R.id.barcode_scanner_container);
         cameraView = new ZXingScannerView(this);
@@ -105,7 +107,10 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void attachListeners() {
+        loaderView.setOnTouchListener((view, event) -> true);
+
         appUrl.setOnEditorActionListener((view, actionId, keyEvent) -> {
             launchApp(appUrl.getText().toString());
             return false;
@@ -144,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
     }
 
     private void disableUIInteraction(boolean disable) {
-        findViewById(R.id.loader).setVisibility(disable ? View.VISIBLE : View.GONE);
+        loaderView.setVisibility(disable ? View.VISIBLE : View.GONE);
         if (!disable) {
             cameraView.resumeCameraPreview(this);
         }
@@ -179,6 +184,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
             intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
             startActivity(intent);
+            disableUIInteraction(false);
         });
     }
 }
