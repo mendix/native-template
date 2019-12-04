@@ -8,7 +8,12 @@
         <activity
             android:name="com.mendix.nativetemplate.MainActivity"
             android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:replace="android:windowSoftInputMode"
             tools:node="merge"></activity>
-        <activity android:name="com.mendix.mendixnative.activity.MendixReactActivity"></activity>
+        <activity
+            android:name="com.mendix.mendixnative.activity.MendixReactActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 </manifest>
