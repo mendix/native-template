@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class MendixAppViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
