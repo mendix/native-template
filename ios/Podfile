@@ -1,10 +1,9 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
 
-target 'nativeTemplate' do
+abstract_target "ReactNative" do
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
-  
 
   # Pods for nativeTemplate
   # RN pods start
@@ -59,12 +58,19 @@ target 'nativeTemplate' do
   pod 'react-native-geocoder', :path => '../node_modules/react-native-geocoder'
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
   pod 'react-native-netinfo', :path => '../node_modules/@react-native-community/netinfo'
-  
+
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
   pod 'Firebase/Core', '~> 5.15.0'
   pod 'Firebase/Messaging', '~> 5.15.0'
   pod 'ReactNativeDarkMode', :path => '../node_modules/react-native-dark-mode'
   pod 'IQKeyboardManagerSwift'
-
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
+  target 'nativeTemplate' do
+    # Intentionally left empty
+  end
+
+  target 'dev' do
+    # Intentionally left empty
+  end
 end
