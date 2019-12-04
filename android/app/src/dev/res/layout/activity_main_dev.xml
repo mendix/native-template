@@ -10,7 +10,12 @@
     <RelativeLayout
         android:id="@+id/barcode_scanner_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dev_menu_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/dev_menu_container"
@@ -18,10 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
         android:animateLayoutChanges="true"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_max="400dp">
@@ -37,10 +43,10 @@
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/url_input_field"
                 android:text="Host:"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/url_input_field"
                 app:layout_constraintStart_toStartOf="@+id/url_input_field" />
 
@@ -49,18 +55,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="8dp"
+                android:background="#33ffffff"
                 android:contentDescription="appUrl"
-                android:textColor="@android:color/white"
                 android:hint="@string/hint_app_url_input"
+                android:imeOptions="actionGo"
                 android:importantForAutofill="no"
                 android:inputType="textUri"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:textColorHint="#666"
-                android:background="@drawable/edittext_dark_background"
-                android:text="" />
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textColorHint="#666" />
         </LinearLayout>
 
         <Button
@@ -69,10 +76,10 @@
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/launch_app_button"
+            android:background="@color/mendix_green"
             android:onClick="launchApp"
-            android:textColor="@android:color/white"
-            android:background="@color/mendix_green"/>
+            android:text="@string/launch_app_button"
+            android:textColor="@android:color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -83,17 +90,28 @@
                 android:id="@+id/checkbox_clear_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/clear_data"
-                android:textColor="@android:color/white"
                 android:buttonTint="@android:color/white"
-                android:text="@string/clear_data" />
+                android:contentDescription="@string/clear_data"
+                android:text="@string/clear_data"
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.97811216" />
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#33ffffff">
+
+        <ProgressBar
+            android:indeterminate="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
