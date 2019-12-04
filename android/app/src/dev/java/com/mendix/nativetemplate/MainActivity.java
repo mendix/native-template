@@ -44,6 +44,8 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     static private int CAMERA_REQUEST = 1;
     private Executor httpExecutor = Executors.newSingleThreadExecutor();
+    private ZXingScannerView cameraView;
+    private AppPreferences appPreferences;
     private Button launchAppButton;
     private CheckBox clearDataCheckBox;
     private EditText appUrl;
@@ -54,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_dev);
 
+        appPreferences = new AppPreferences(this);
+
         appUrl = findViewById(R.id.app_url_input_field);
         launchAppButton = findViewById(R.id.launch_app_button);
         clearDataCheckBox = findViewById(R.id.checkbox_clear_data);
@@ -63,6 +67,8 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         cameraContainer.addView(cameraView);
 
         attachListeners();
+
+        appUrl.setText(appPreferences.getAppUrl());
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -115,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
                 try {
                     URL runtimeUrl = new URL(AppUrl.forRuntime(appUrl));
                     OkHttpClient client = new OkHttpClient.Builder().connectTimeout(4, TimeUnit.SECONDS).callTimeout(4, TimeUnit.SECONDS).build();
-                    URL statusUrl = new URL(runtimeUrl.getProtocol(), runtimeUrl.getHost(), new AppPreferences(MainActivity.this.getApplicationContext()).getRemoteDebuggingPackagerPort(), "status");
+                    URL statusUrl = new URL(runtimeUrl.getProtocol(), runtimeUrl.getHost(), appPreferences.getRemoteDebuggingPackagerPort(), "status");
                     Response response = client.newCall(new Request.Builder().url(statusUrl).get().build()).execute();
                     if (!response.isSuccessful()) {
                         showPackagerErrorToast();
