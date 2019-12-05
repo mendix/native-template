@@ -11,7 +11,6 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */; };
 		1A0B3A9C2397DA2300388BF7 /* LaunchApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9A2397DA2300388BF7 /* LaunchApp.storyboard */; };
-		1A0B3A9E2397DA2600388BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */; };
 		1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		1A0B3ABA2397DD2400388BF7 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A64CF42238FC6C9000B27DA /* libMendix.a */; };
 		1A0B3ABB2397DD2A00388BF7 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */; };
@@ -46,6 +45,7 @@
 		1A0B3AEF2399058B00388BF7 /* config.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AEE2399058B00388BF7 /* config.release.xcconfig */; };
 		1A0B3AF12399095C00388BF7 /* config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AF02399095C00388BF7 /* config.xcconfig */; };
 		1A0B3AF323990C2400388BF7 /* config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AF223990C2400388BF7 /* config.xcconfig */; };
+		1A0B3AFD23992F8200388BF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
 		1A64CF43238FC6C9000B27DA /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */; };
 		1A64CF44238FC6C9000B27DA /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF31238FC6C8000B27DA /* i386.swiftmodule */; };
@@ -81,7 +81,6 @@
 		1A0B3A922397DA2300388BF7 /* NativeTemplateDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeTemplateDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = LaunchAppViewController.swift; sourceTree = "<group>"; };
 		1A0B3A9B2397DA2300388BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchApp.storyboard; sourceTree = "<group>"; };
-		1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0B3AD22397E15800388BF7 /* MendixApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MendixApp.storyboard; sourceTree = "<group>"; };
 		1A0B3AD42397E16900388BF7 /* MendixAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MendixAppViewController.swift; sourceTree = "<group>"; };
 		1A0B3AD72397EB4000388BF7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -173,7 +172,6 @@
 				1A0B3AE82398183900388BF7 /* Config */,
 				1A0B3AD12397E14800388BF7 /* MendixApp */,
 				1A0B3ACD2397E06900388BF7 /* LaunchApp */,
-				1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */,
 			);
 			path = Dev;
 			sourceTree = "<group>";
@@ -439,6 +437,7 @@
 				1A0B3AC72397DD2A00388BF7 /* arm.swiftmodule in Resources */,
 				1A0B3AC92397DD2A00388BF7 /* arm64.swiftdoc in Resources */,
 				1A0B3AC12397DD2A00388BF7 /* x86_64.swiftmodule in Resources */,
+				1A0B3AFD23992F8200388BF7 /* Images.xcassets in Resources */,
 				1A0B3AC02397DD2A00388BF7 /* arm64.swiftmodule in Resources */,
 				1A0B3ACB2397DD2A00388BF7 /* i386-apple-ios-simulator.swiftdoc in Resources */,
 				1A0B3AC42397DD2A00388BF7 /* i386-apple-ios-simulator.swiftmodule in Resources */,
@@ -447,7 +446,6 @@
 				1A0B3AC32397DD2A00388BF7 /* armv7-apple-ios.swiftmodule in Resources */,
 				1A0B3ACA2397DD2A00388BF7 /* armv7-apple-ios.swiftdoc in Resources */,
 				1A0B3AC62397DD2A00388BF7 /* arm64-apple-ios.swiftmodule in Resources */,
-				1A0B3A9E2397DA2600388BF7 /* Assets.xcassets in Resources */,
 				1A0B3ABB2397DD2A00388BF7 /* arm64-apple-ios.swiftdoc in Resources */,
 				1A0B3ACC2397DD2A00388BF7 /* armv7.swiftmodule in Resources */,
 				1A0B3AEF2399058B00388BF7 /* config.release.xcconfig in Resources */,
