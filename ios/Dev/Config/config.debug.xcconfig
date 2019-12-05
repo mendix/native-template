@@ -1,0 +1,3 @@
+#include "Target Support Files/Pods-ReactNative-dev/Pods-ReactNative-dev.debug.xcconfig` in your build configuration (`Dev/Config/config.debug.xcconfig"
+#include "../../NativeTemplate/Config/config.xcconfig"
+#include "config.xcconfig"
