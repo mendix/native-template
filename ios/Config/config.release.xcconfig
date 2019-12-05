@@ -1,1 +1,3 @@
+#include "config.xcconfig"
+
 RUNTIME_URL = http:\/\/localhost:8080

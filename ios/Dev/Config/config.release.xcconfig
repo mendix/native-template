@@ -1,0 +1,3 @@
+#include "Target Support Files/Pods-ReactNative-dev/Pods-ReactNative-dev.release.xcconfig"
+#include "../../NativeTemplate/Config/config.xcconfig"
+#include "config.xcconfig"
