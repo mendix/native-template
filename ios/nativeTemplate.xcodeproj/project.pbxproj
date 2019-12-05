@@ -82,7 +82,6 @@
 		1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = LaunchAppViewController.swift; sourceTree = "<group>"; };
 		1A0B3A9B2397DA2300388BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchApp.storyboard; sourceTree = "<group>"; };
 		1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A0B3AA22397DA2600388BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A0B3AD22397E15800388BF7 /* MendixApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MendixApp.storyboard; sourceTree = "<group>"; };
 		1A0B3AD42397E16900388BF7 /* MendixAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MendixAppViewController.swift; sourceTree = "<group>"; };
 		1A0B3AD72397EB4000388BF7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -175,7 +174,6 @@
 				1A0B3AD12397E14800388BF7 /* MendixApp */,
 				1A0B3ACD2397E06900388BF7 /* LaunchApp */,
 				1A0B3A9D2397DA2600388BF7 /* Assets.xcassets */,
-				1A0B3AA22397DA2600388BF7 /* Info.plist */,
 			);
 			path = Dev;
 			sourceTree = "<group>";
@@ -834,7 +832,7 @@
 					"$(inherited)",
 					"${SRCROOT}/MendixNative",
 				);
-				INFOPLIST_FILE = Dev/Info.plist;
+				INFOPLIST_FILE = NativeTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -845,7 +843,7 @@
 				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativeTemplate.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativetemplate.dev;
 				PRODUCT_NAME = NativeTemplateDev;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
@@ -878,7 +876,7 @@
 					"$(inherited)",
 					"${SRCROOT}/MendixNative",
 				);
-				INFOPLIST_FILE = Dev/Info.plist;
+				INFOPLIST_FILE = NativeTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -888,7 +886,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativeTemplate.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativetemplate.dev;
 				PRODUCT_NAME = NativeTemplateDev;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1039,7 +1037,7 @@
 					"$(inherited)",
 					"${SRCROOT}/MendixNative",
 				);
-				INFOPLIST_FILE = Dev/Info.plist;
+				INFOPLIST_FILE = NativeTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1049,7 +1047,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativeTemplate.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mendix.nativetemplate.dev;
 				PRODUCT_NAME = NativeTemplateDev;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

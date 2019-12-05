@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return true
     }
 
-    guard let url = Bundle.main.object(forInfoDictionaryKey: "Runtime url") as? String, let runTimeUrl = AppUrl.forRuntime(url: url) else {
+    guard let url = Bundle.main.object(forInfoDictionaryKey: "Runtime url") as? String, let runTimeUrl = AppUrl.forRuntime(url: url.replacingOccurrences(of: "\\", with: "")) else {
       fatalError("Missing the 'Runtime url' configuration within the Info.plist file")
     }
     guard let bundleUrl = ReactNative.instance.getJSBundleFile() else {
