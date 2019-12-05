@@ -25,6 +25,32 @@
       }
     }
   },
+  "iosDev": {
+    "trigger": "manual",
+    "testEnabled": false,
+    "signed": false,
+    "environmentVariables": [{ "name": "DEV_APP_KEY", "value": false }],
+    "toolsets": {
+      "xcode": {
+        "xcodeVersion": "11.2.1",
+        "automaticSigning": false,
+        "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
+        "podfilePath": "ios/Podfile",
+        "scheme": "Dev"
+      },
+      "javascript": {
+        "packageJsonPath": "package.json",
+        "runTests": false,
+        "nodeVersion": "10.x"
+      },
+      "buildscripts": {
+        "package.json": {
+          "postClone": "appcenter-post-clone.sh",
+          "preBuild": "appcenter-pre-build.sh"
+        }
+      }
+    }
+  },
   "android": {
     "trigger": "manual",
     "testEnabled": false,
