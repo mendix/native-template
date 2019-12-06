@@ -1,3 +1,2 @@
+#include "Pods/Target Support Files/Pods-ReactNative-nativeTemplate/Pods-ReactNative-nativeTemplate.release.xcconfig"
 #include "config.xcconfig"
-
-RUNTIME_URL = http:\/\/localhost:8080
