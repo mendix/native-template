@@ -1,2 +1,4 @@
-BUNDLE_NAME = NativeTemplate
+BUNDLE_DISPLAY_NAME = NativeTemplate
 BUNDLE_IDENTIFIER = com.mendix.nativetemplate
+
+RUNTIME_URL = http:\/\/localhost:8080
