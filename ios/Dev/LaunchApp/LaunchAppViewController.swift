@@ -189,7 +189,7 @@ extension LaunchAppViewController {
             break
         case .invalidInput:
             textField.layer.opacity = 1
-            showErrorDialog(error: "The Mendix app may not be running at the moment or its an invalid URL.")
+            showErrorDialog(error: "Please verify that your Mendix App is running.")
             break
         case .invalidQRCode:
             textField.layer.opacity = 1
