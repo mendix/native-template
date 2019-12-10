@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
             boolean clearData = clearDataCheckBox.isChecked();
             Intent intent = new Intent(this, MendixReactActivity.class);
-            MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), MxConfiguration.WarningsFilter.all, true);
+            MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), MxConfiguration.WarningsFilter.partial, true);
             intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
             intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
             startActivity(intent);
