@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             String url = json.getString("url");
             launchApp(url);
         } catch (JSONException e) {
-            e.printStackTrace();
+            Toast.makeText(MainActivity.this, R.string.qr_code_invalid, Toast.LENGTH_LONG).show();
         }
     }
 
