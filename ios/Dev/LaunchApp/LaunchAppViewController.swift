@@ -107,7 +107,7 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
 
           let runtimeUrl: URL = AppUrl.forRuntime(url: AppPreferences.getAppUrl())!
 
-          mendixAppVC.setupMendixApp(MendixApp(bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: getWarningFilterValue(), enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn))
+          mendixAppVC.setupMendixApp(MendixApp(bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: WarningsFilter.partial, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn))
         }
     }
 }
@@ -120,14 +120,6 @@ private let KEYBOARD_SHOW_ANIMATION_DEBOUNCE_TIME_IN_S = 0.01
 private var keyboardShowTask: DispatchWorkItem?
 
 extension LaunchAppViewController {
-    private func getWarningFilterValue() -> WarningsFilter {
-#if DEBUG
-        return WarningsFilter.all
-#else
-        return (AppPreferences.devModeEnabled() ? WarningsFilter.partial : WarningsFilter.none)
-#endif
-    }
-
     private func validateMendixUrl(_ urlString: String, onCompletion: @escaping (_ valid: Bool) -> Void) {
         if let url = AppUrl.forValidation(url: urlString) {
             URLValidator.validate(url, onCompletion: onCompletion)
