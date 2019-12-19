@@ -87,6 +87,15 @@
             android:orientation="vertical">
 
             <CheckBox
+                android:id="@+id/checkbox_dev_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/white"
+                android:contentDescription="@string/enable_dev_mode"
+                android:text="@string/enable_dev_mode"
+                android:textColor="@android:color/white" />
+
+            <CheckBox
                 android:id="@+id/checkbox_clear_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
