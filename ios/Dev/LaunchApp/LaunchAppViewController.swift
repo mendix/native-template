@@ -4,9 +4,10 @@ import MendixNative
 class LaunchAppViewController: UIViewController, QRViewDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var clearDataSwitch: UISwitch!
+    @IBOutlet weak var enableDevModeSwitch: UISwitch!
     @IBOutlet weak var qrView: QRView!
     @IBOutlet weak var qrMaskView: QRMaskView!
-
+    
     private var uiState: State = .idle {
         didSet {
             if (oldValue != uiState) {
@@ -20,7 +21,7 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         qrView.stopScanning()
         AppPreferences.setAppUrl(url: url)
         AppPreferences.remoteDebugging(enable: false)
-        AppPreferences.devMode(enable:  true)
+        AppPreferences.devMode(enable:  enableDevModeSwitch.isOn)
         self.performSegue(withIdentifier: "MendixApp", sender: nil)
     }
 
@@ -77,6 +78,7 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         uiState = .idle
         qrView.startScanning()
         textField.text = AppPreferences.getAppUrl()
+        enableDevModeSwitch.setOn(AppPreferences.devModeEnabled(), animated: false)
         registerNotificationObservers()
     }
 
@@ -99,15 +101,15 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mendixAppVC = segue.destination as? MendixAppViewController {
-          let url = AppUrl.forBundle(
-            url: AppPreferences.getAppUrl(),
-            remoteDebuggingPackagerPort: AppPreferences.getRemoteDebuggingPackagerPort(),
-            isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled(),
-            isDevModeEnabled: AppPreferences.devModeEnabled())
+            let url = AppUrl.forBundle(
+                url: AppPreferences.getAppUrl(),
+                remoteDebuggingPackagerPort: AppPreferences.getRemoteDebuggingPackagerPort(),
+                isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled(),
+                isDevModeEnabled: AppPreferences.devModeEnabled())
+            
+            let runtimeUrl: URL = AppUrl.forRuntime(url: AppPreferences.getAppUrl())!
 
-          let runtimeUrl: URL = AppUrl.forRuntime(url: AppPreferences.getAppUrl())!
-
-          mendixAppVC.setupMendixApp(MendixApp(bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: WarningsFilter.partial, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn))
+            mendixAppVC.setupMendixApp(MendixApp(bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: WarningsFilter.partial, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn))
         }
     }
 }
