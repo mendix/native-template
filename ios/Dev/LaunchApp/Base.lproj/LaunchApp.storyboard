@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W1d-T9-r9P">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W1d-T9-r9P">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,11 +29,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LaunchAppViewController" customModule="NativeTemplateDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Container">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epB-j8-VoM" userLabel="QRView" customClass="QRView" customModule="NativeTemplateDev" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="-308" y="0.0" width="0.0" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOX-i5-jP6" userLabel="QRMaskView" customClass="QRMaskView" customModule="NativeTemplateDev" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -46,57 +46,80 @@
                                     <constraint firstItem="oOX-i5-jP6" firstAttribute="width" secondItem="epB-j8-VoM" secondAttribute="width" id="W6d-5d-mrl"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gdH-in-pOH">
-                                <rect key="frame" x="20" y="723" width="374" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DWp-ra-lGa" userLabel="Input Container">
+                                <rect key="frame" x="24" y="612" width="327" height="134"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eph-mO-4MX">
-                                        <rect key="frame" x="0.0" y="0.0" width="317" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-s7-GCQ" userLabel="ClearDataSwitch">
-                                        <rect key="frame" x="325" y="0.0" width="51" height="31"/>
-                                    </switch>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P4w-NP-ytZ" userLabel="Developer App Switch">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable dev mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMT-Mo-LWs" userLabel="Developer Mode Text">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a0g-85-CZe" userLabel="ClearDataSwitch">
+                                                <rect key="frame" x="278" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gdH-in-pOH" userLabel="Clear Data Switch">
+                                        <rect key="frame" x="0.0" y="47" width="327" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eph-mO-4MX" userLabel="Clear Data Text">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-s7-GCQ" userLabel="ClearDataSwitch">
+                                                <rect key="frame" x="278" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CW5-Mc-sma" userLabel="Url Field Container">
+                                        <rect key="frame" x="0.0" y="94" width="327" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Mendix App URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-cU-vah">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="0.26078232020547948" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="W6y-H1-rGr"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbz-0q-M8f" userLabel="GoButton" customClass="RoundedButton" customModule="NativeTemplateDev" customModuleProvider="target">
+                                                <rect key="frame" x="279" y="0.0" width="48" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="7mb-Yb-iHc"/>
+                                                    <constraint firstAttribute="width" constant="48" id="DB3-t6-nys"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="Go">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onTapGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7E-za-BlQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="cIZ-r3-rjF"/>
+                                </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Mendix App URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-cU-vah">
-                                <rect key="frame" x="20" y="774" width="318" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="0.26078232020547948" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="W6y-H1-rGr"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbz-0q-M8f" userLabel="GoButton" customClass="RoundedButton" customModule="NativeTemplateDev" customModuleProvider="target">
-                                <rect key="frame" x="346" y="774" width="48" height="40"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7mb-Yb-iHc"/>
-                                    <constraint firstAttribute="width" constant="48" id="DB3-t6-nys"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="Go">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onTapGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7E-za-BlQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.017150042808219176" blue="0.066815590014602633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Vbz-0q-M8f" firstAttribute="centerY" secondItem="3hE-cU-vah" secondAttribute="centerY" id="CDf-gU-qZ3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3hE-cU-vah" secondAttribute="bottom" constant="48" id="Eon-sy-mQy"/>
-                            <constraint firstItem="Vbz-0q-M8f" firstAttribute="leading" secondItem="3hE-cU-vah" secondAttribute="trailing" constant="8" id="IT7-S4-QJP"/>
+                            <constraint firstItem="DWp-ra-lGa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="24" id="9uI-U4-onp"/>
+                            <constraint firstItem="DWp-ra-lGa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BM3-IN-n2Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DWp-ra-lGa" secondAttribute="trailing" priority="750" constant="24" id="K5M-Jt-dMZ"/>
                             <constraint firstItem="epB-j8-VoM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ZaJ-cS-D5E"/>
-                            <constraint firstItem="gdH-in-pOH" firstAttribute="leading" secondItem="3hE-cU-vah" secondAttribute="leading" id="cMe-nv-NIp"/>
-                            <constraint firstItem="gdH-in-pOH" firstAttribute="trailing" secondItem="Vbz-0q-M8f" secondAttribute="trailing" id="dny-1o-uMZ"/>
-                            <constraint firstItem="3hE-cU-vah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eS4-0g-s2c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vbz-0q-M8f" secondAttribute="trailing" constant="20" id="ko3-fh-uic"/>
-                            <constraint firstItem="3hE-cU-vah" firstAttribute="top" secondItem="gdH-in-pOH" secondAttribute="bottom" constant="20" id="sO4-hD-Le8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DWp-ra-lGa" secondAttribute="bottom" constant="32" id="eMW-Hf-NQf"/>
                             <constraint firstItem="epB-j8-VoM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="sbd-M4-xL8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -107,6 +130,7 @@
                     <navigationItem key="navigationItem" id="b4v-MD-TTI"/>
                     <connections>
                         <outlet property="clearDataSwitch" destination="x2y-s7-GCQ" id="OlV-l9-A4a"/>
+                        <outlet property="enableDevModeSwitch" destination="a0g-85-CZe" id="YuV-yn-Jeg"/>
                         <outlet property="qrMaskView" destination="oOX-i5-jP6" id="5G6-fU-qRm"/>
                         <outlet property="qrView" destination="epB-j8-VoM" id="Byn-Bw-vg6"/>
                         <outlet property="textField" destination="3hE-cU-vah" id="vpv-XW-r61"/>
