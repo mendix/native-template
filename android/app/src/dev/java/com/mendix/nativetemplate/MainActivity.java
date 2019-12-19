@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
     private ZXingScannerView cameraView;
     private AppPreferences appPreferences;
     private Button launchAppButton;
+    private CheckBox devModeCheckBox;
     private CheckBox clearDataCheckBox;
     private EditText appUrl;
     private View loaderView;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
         appUrl = findViewById(R.id.app_url_input_field);
         launchAppButton = findViewById(R.id.launch_app_button);
+        devModeCheckBox = findViewById(R.id.checkbox_dev_mode);
         clearDataCheckBox = findViewById(R.id.checkbox_clear_data);
         loaderView = findViewById(R.id.loader);
 
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         attachListeners();
 
         appUrl.setText(appPreferences.getAppUrl());
+        devModeCheckBox.setChecked(appPreferences.isDevModeEnabled());
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -180,7 +183,9 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
             boolean clearData = clearDataCheckBox.isChecked();
             Intent intent = new Intent(this, MendixReactActivity.class);
-            MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), MxConfiguration.WarningsFilter.partial, true);
+            boolean devModeEnabled = devModeCheckBox.isChecked();
+            MxConfiguration.WarningsFilter warningsFilter = devModeEnabled ? MxConfiguration.WarningsFilter.partial : MxConfiguration.WarningsFilter.none;
+            MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), warningsFilter, devModeEnabled);
             intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
             intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
             startActivity(intent);
