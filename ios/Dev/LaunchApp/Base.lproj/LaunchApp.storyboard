@@ -32,8 +32,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epB-j8-VoM" userLabel="QRView" customClass="QRView" customModule="NativeTemplateDev" customModuleProvider="target">
-                                <rect key="frame" x="-308" y="0.0" width="0.0" height="896"/>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epB-j8-VoM" userLabel="QRView" customClass="QRView" customModule="NativeTemplateDev" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="418" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOX-i5-jP6" userLabel="QRMaskView" customClass="QRMaskView" customModule="NativeTemplateDev" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -77,7 +77,7 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CW5-Mc-sma" userLabel="Url Field Container">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CW5-Mc-sma" userLabel="Url Field Container">
                                         <rect key="frame" x="0.0" y="94" width="327" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Mendix App URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-cU-vah">
