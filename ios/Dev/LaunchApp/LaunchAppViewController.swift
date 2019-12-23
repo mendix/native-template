@@ -65,11 +65,17 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         uiState = .invalidQRCode
     }
 
+    @objc private func deviceRotated() {
+      qrView.setup()
+    }
+
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         setupQrCodeMask(size: view.frame.size)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         setupQrCodeMask(size: size)
     }
 
@@ -141,11 +147,13 @@ extension LaunchAppViewController {
     private func registerNotificationObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceRotated), name: .UIDeviceOrientationDidChange, object: nil)
     }
 
     private func unregisterNotificationObservers() {
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIDeviceOrientationDidChange, object: self)
     }
 
     @objc func keyboardWillShow(_ notification: Notification) {
