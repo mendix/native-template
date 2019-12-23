@@ -107,15 +107,16 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mendixAppVC = segue.destination as? MendixAppViewController {
+            let devModeEnabled = AppPreferences.devModeEnabled()
             let url = AppUrl.forBundle(
                 url: AppPreferences.getAppUrl(),
                 remoteDebuggingPackagerPort: AppPreferences.getRemoteDebuggingPackagerPort(),
                 isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled(),
-                isDevModeEnabled: AppPreferences.devModeEnabled())
+                isDevModeEnabled: devModeEnabled)
             
             let runtimeUrl: URL = AppUrl.forRuntime(url: AppPreferences.getAppUrl())!
 
-            mendixAppVC.setupMendixApp(MendixApp(bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: WarningsFilter.partial, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn))
+            mendixAppVC.setupMendixApp(MendixApp(bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn))
         }
     }
 }
