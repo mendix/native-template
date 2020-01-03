@@ -12,25 +12,6 @@
 		1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */; };
 		1A0B3A9C2397DA2300388BF7 /* LaunchApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3A9A2397DA2300388BF7 /* LaunchApp.storyboard */; };
 		1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
-		1A0B3ABA2397DD2400388BF7 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A64CF42238FC6C9000B27DA /* libMendix.a */; };
-		1A0B3ABB2397DD2A00388BF7 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */; };
-		1A0B3ABC2397DD2A00388BF7 /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF31238FC6C8000B27DA /* i386.swiftmodule */; };
-		1A0B3ABD2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF32238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftdoc */; };
-		1A0B3ABE2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF33238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftmodule */; };
-		1A0B3ABF2397DD2A00388BF7 /* x86_64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF34238FC6C8000B27DA /* x86_64.swiftdoc */; };
-		1A0B3AC02397DD2A00388BF7 /* arm64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF35238FC6C8000B27DA /* arm64.swiftmodule */; };
-		1A0B3AC12397DD2A00388BF7 /* x86_64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF36238FC6C8000B27DA /* x86_64.swiftmodule */; };
-		1A0B3AC22397DD2A00388BF7 /* arm.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF37238FC6C8000B27DA /* arm.swiftdoc */; };
-		1A0B3AC32397DD2A00388BF7 /* armv7-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF38238FC6C8000B27DA /* armv7-apple-ios.swiftmodule */; };
-		1A0B3AC42397DD2A00388BF7 /* i386-apple-ios-simulator.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF39238FC6C8000B27DA /* i386-apple-ios-simulator.swiftmodule */; };
-		1A0B3AC52397DD2A00388BF7 /* i386.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3A238FC6C8000B27DA /* i386.swiftdoc */; };
-		1A0B3AC62397DD2A00388BF7 /* arm64-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3B238FC6C8000B27DA /* arm64-apple-ios.swiftmodule */; };
-		1A0B3AC72397DD2A00388BF7 /* arm.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3C238FC6C8000B27DA /* arm.swiftmodule */; };
-		1A0B3AC82397DD2A00388BF7 /* armv7.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3D238FC6C8000B27DA /* armv7.swiftdoc */; };
-		1A0B3AC92397DD2A00388BF7 /* arm64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3E238FC6C8000B27DA /* arm64.swiftdoc */; };
-		1A0B3ACA2397DD2A00388BF7 /* armv7-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3F238FC6C8000B27DA /* armv7-apple-ios.swiftdoc */; };
-		1A0B3ACB2397DD2A00388BF7 /* i386-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF40238FC6C8000B27DA /* i386-apple-ios-simulator.swiftdoc */; };
-		1A0B3ACC2397DD2A00388BF7 /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF41238FC6C8000B27DA /* armv7.swiftmodule */; };
 		1A0B3AD32397E15800388BF7 /* MendixApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AD22397E15800388BF7 /* MendixApp.storyboard */; };
 		1A0B3AD52397E16900388BF7 /* MendixAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3AD42397E16900388BF7 /* MendixAppViewController.swift */; };
 		1A0B3AD62397EA8500388BF7 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
@@ -40,36 +21,19 @@
 		1A0B3AE02397F38300388BF7 /* QRMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3ADF2397F38300388BF7 /* QRMaskView.swift */; };
 		1A0B3AE22397FBF600388BF7 /* MendixReactWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3AE12397FBF600388BF7 /* MendixReactWindowExtensions.swift */; };
 		1A0B3AE6239816B300388BF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
-		1A0B3AE72398173800388BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */; };
 		1A0B3AEA2398185600388BF7 /* config.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AE92398185600388BF7 /* config.debug.xcconfig */; };
 		1A0B3AEF2399058B00388BF7 /* config.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AEE2399058B00388BF7 /* config.release.xcconfig */; };
 		1A0B3AF12399095C00388BF7 /* config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AF02399095C00388BF7 /* config.xcconfig */; };
 		1A0B3AF323990C2400388BF7 /* config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AF223990C2400388BF7 /* config.xcconfig */; };
 		1A0B3AFD23992F8200388BF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
-		1A64CF43238FC6C9000B27DA /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */; };
-		1A64CF44238FC6C9000B27DA /* i386.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF31238FC6C8000B27DA /* i386.swiftmodule */; };
-		1A64CF45238FC6C9000B27DA /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF32238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftdoc */; };
-		1A64CF46238FC6C9000B27DA /* x86_64-apple-ios-simulator.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF33238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftmodule */; };
-		1A64CF47238FC6C9000B27DA /* x86_64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF34238FC6C8000B27DA /* x86_64.swiftdoc */; };
-		1A64CF48238FC6C9000B27DA /* arm64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF35238FC6C8000B27DA /* arm64.swiftmodule */; };
-		1A64CF49238FC6C9000B27DA /* x86_64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF36238FC6C8000B27DA /* x86_64.swiftmodule */; };
-		1A64CF4A238FC6C9000B27DA /* arm.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF37238FC6C8000B27DA /* arm.swiftdoc */; };
-		1A64CF4B238FC6C9000B27DA /* armv7-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF38238FC6C8000B27DA /* armv7-apple-ios.swiftmodule */; };
-		1A64CF4C238FC6C9000B27DA /* i386-apple-ios-simulator.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF39238FC6C8000B27DA /* i386-apple-ios-simulator.swiftmodule */; };
-		1A64CF4D238FC6C9000B27DA /* i386.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3A238FC6C8000B27DA /* i386.swiftdoc */; };
-		1A64CF4E238FC6C9000B27DA /* arm64-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3B238FC6C8000B27DA /* arm64-apple-ios.swiftmodule */; };
-		1A64CF4F238FC6C9000B27DA /* arm.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3C238FC6C8000B27DA /* arm.swiftmodule */; };
-		1A64CF50238FC6C9000B27DA /* armv7.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3D238FC6C8000B27DA /* armv7.swiftdoc */; };
-		1A64CF51238FC6C9000B27DA /* arm64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3E238FC6C8000B27DA /* arm64.swiftdoc */; };
-		1A64CF52238FC6C9000B27DA /* armv7-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF3F238FC6C8000B27DA /* armv7-apple-ios.swiftdoc */; };
-		1A64CF53238FC6C9000B27DA /* i386-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF40238FC6C8000B27DA /* i386-apple-ios-simulator.swiftdoc */; };
-		1A64CF54238FC6C9000B27DA /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 1A64CF41238FC6C8000B27DA /* armv7.swiftmodule */; };
-		1A64CF55238FC6C9000B27DA /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A64CF42238FC6C9000B27DA /* libMendix.a */; };
 		88A728C9C5341839D31AD238 /* libPods-ReactNative-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A85436D5B346B3EF009CB0A0 /* libPods-ReactNative-nativeTemplate.a */; };
 		D8FD153D7F187CD755D0AFEB /* libPods-ReactNative-dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8879F6E638838733B63014A3 /* libPods-ReactNative-dev.a */; };
 		EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
-		EBC808FE22DF2EF4007E5F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */; };
+		EB55E08823BF7FF500E3FB34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78BDD823BF47FE00E56827 /* AppDelegate.m */; };
+		EB55E08A23BF7FF700E3FB34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78BDD823BF47FE00E56827 /* AppDelegate.m */; };
+		EB78BDE023BF4CFE00E56827 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB78BDDF23BF4CFE00E56827 /* libMendix.a */; };
+		EB78BDE123BF4CFE00E56827 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB78BDDF23BF4CFE00E56827 /* libMendix.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,25 +57,6 @@
 		1A0B3AF02399095C00388BF7 /* config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.xcconfig; sourceTree = "<group>"; };
 		1A0B3AF223990C2400388BF7 /* config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.xcconfig; sourceTree = "<group>"; };
 		1A0B83DA22E09B2500EA1E51 /* Bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundle; sourceTree = "<group>"; };
-		1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
-		1A64CF31238FC6C8000B27DA /* i386.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = i386.swiftmodule; sourceTree = "<group>"; };
-		1A64CF32238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
-		1A64CF33238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftmodule"; sourceTree = "<group>"; };
-		1A64CF34238FC6C8000B27DA /* x86_64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftdoc; sourceTree = "<group>"; };
-		1A64CF35238FC6C8000B27DA /* arm64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftmodule; sourceTree = "<group>"; };
-		1A64CF36238FC6C8000B27DA /* x86_64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftmodule; sourceTree = "<group>"; };
-		1A64CF37238FC6C8000B27DA /* arm.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftdoc; sourceTree = "<group>"; };
-		1A64CF38238FC6C8000B27DA /* armv7-apple-ios.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "armv7-apple-ios.swiftmodule"; sourceTree = "<group>"; };
-		1A64CF39238FC6C8000B27DA /* i386-apple-ios-simulator.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "i386-apple-ios-simulator.swiftmodule"; sourceTree = "<group>"; };
-		1A64CF3A238FC6C8000B27DA /* i386.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = i386.swiftdoc; sourceTree = "<group>"; };
-		1A64CF3B238FC6C8000B27DA /* arm64-apple-ios.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftmodule"; sourceTree = "<group>"; };
-		1A64CF3C238FC6C8000B27DA /* arm.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftmodule; sourceTree = "<group>"; };
-		1A64CF3D238FC6C8000B27DA /* armv7.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftdoc; sourceTree = "<group>"; };
-		1A64CF3E238FC6C8000B27DA /* arm64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftdoc; sourceTree = "<group>"; };
-		1A64CF3F238FC6C8000B27DA /* armv7-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "armv7-apple-ios.swiftdoc"; sourceTree = "<group>"; };
-		1A64CF40238FC6C8000B27DA /* i386-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "i386-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
-		1A64CF41238FC6C8000B27DA /* armv7.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftmodule; sourceTree = "<group>"; };
-		1A64CF42238FC6C9000B27DA /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
 		2E683DD88AD2190EB6610BB7 /* Pods-ReactNative-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-ReactNative-nativeTemplate/Pods-ReactNative-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1AE629EDD2EFAEE88E17A6 /* Pods-ReactNative-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative-dev.release.xcconfig"; path = "Target Support Files/Pods-ReactNative-dev/Pods-ReactNative-dev.release.xcconfig"; sourceTree = "<group>"; };
 		3A50E1C430A9EB98E247701D /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +68,22 @@
 		CBB85EF00DCBBB622B4C25E7 /* Pods-ReactNative-nativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative-nativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-ReactNative-nativeTemplate/Pods-ReactNative-nativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		DDC51A1160C5ED4D3C396705 /* Pods-ReactNative-dev.releasedevapp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative-dev.releasedevapp.xcconfig"; path = "Target Support Files/Pods-ReactNative-dev/Pods-ReactNative-dev.releasedevapp.xcconfig"; sourceTree = "<group>"; };
 		EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.ttf"; sourceTree = "<group>"; };
-		EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB78BDD623BF47FD00E56827 /* nativeTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nativeTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB78BDD723BF47FD00E56827 /* dev-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dev-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB78BDD823BF47FE00E56827 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB78BDDB23BF483700E56827 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB78BDDF23BF4CFE00E56827 /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
+		EB78BDFD23BF585600E56827 /* DevAppMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevAppMenu.h; sourceTree = "<group>"; };
+		EB78BDFE23BF585600E56827 /* AppPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreferences.h; sourceTree = "<group>"; };
+		EB78BDFF23BF585600E56827 /* MxConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxConfiguration.h; sourceTree = "<group>"; };
+		EB78BE0023BF585600E56827 /* AppUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUrl.h; sourceTree = "<group>"; };
+		EB78BE0123BF585600E56827 /* MendixReactWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixReactWindow.h; sourceTree = "<group>"; };
+		EB78BE0223BF585600E56827 /* AppMenuProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMenuProtocol.h; sourceTree = "<group>"; };
+		EB78BE0323BF585600E56827 /* MendixApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixApp.h; sourceTree = "<group>"; };
+		EB78BE0423BF585600E56827 /* WarningsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningsFilter.h; sourceTree = "<group>"; };
+		EB78BE0523BF585600E56827 /* NativeReloadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeReloadHandler.h; sourceTree = "<group>"; };
+		EB78BE0623BF585600E56827 /* ReactNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNative.h; sourceTree = "<group>"; };
+		EB78BE0723BF585600E56827 /* NativeFsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeFsModule.h; sourceTree = "<group>"; };
 		EBC80A6022DF4205007E5F3D /* config.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.debug.xcconfig; sourceTree = "<group>"; };
 		EBC80A6122DF42DF007E5F3D /* config.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.release.xcconfig; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -134,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A64CF55238FC6C9000B27DA /* libMendix.a in Frameworks */,
+				EB78BDE023BF4CFE00E56827 /* libMendix.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				88A728C9C5341839D31AD238 /* libPods-ReactNative-nativeTemplate.a in Frameworks */,
 			);
@@ -144,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0B3ABA2397DD2400388BF7 /* libMendix.a in Frameworks */,
+				EB78BDE123BF4CFE00E56827 /* libMendix.a in Frameworks */,
 				1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */,
 				D8FD153D7F187CD755D0AFEB /* libPods-ReactNative-dev.a in Frameworks */,
 			);
@@ -161,7 +121,6 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
-				EBC808FD22DF2EF4007E5F3D /* AppDelegate.swift */,
 			);
 			name = NativeTemplate;
 			sourceTree = "<group>";
@@ -209,31 +168,6 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		1A64CF2F238FC6C8000B27DA /* MendixNative.swiftmodule */ = {
-			isa = PBXGroup;
-			children = (
-				1A64CF30238FC6C8000B27DA /* arm64-apple-ios.swiftdoc */,
-				1A64CF31238FC6C8000B27DA /* i386.swiftmodule */,
-				1A64CF32238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftdoc */,
-				1A64CF33238FC6C8000B27DA /* x86_64-apple-ios-simulator.swiftmodule */,
-				1A64CF34238FC6C8000B27DA /* x86_64.swiftdoc */,
-				1A64CF35238FC6C8000B27DA /* arm64.swiftmodule */,
-				1A64CF36238FC6C8000B27DA /* x86_64.swiftmodule */,
-				1A64CF37238FC6C8000B27DA /* arm.swiftdoc */,
-				1A64CF38238FC6C8000B27DA /* armv7-apple-ios.swiftmodule */,
-				1A64CF39238FC6C8000B27DA /* i386-apple-ios-simulator.swiftmodule */,
-				1A64CF3A238FC6C8000B27DA /* i386.swiftdoc */,
-				1A64CF3B238FC6C8000B27DA /* arm64-apple-ios.swiftmodule */,
-				1A64CF3C238FC6C8000B27DA /* arm.swiftmodule */,
-				1A64CF3D238FC6C8000B27DA /* armv7.swiftdoc */,
-				1A64CF3E238FC6C8000B27DA /* arm64.swiftdoc */,
-				1A64CF3F238FC6C8000B27DA /* armv7-apple-ios.swiftdoc */,
-				1A64CF40238FC6C8000B27DA /* i386-apple-ios-simulator.swiftdoc */,
-				1A64CF41238FC6C8000B27DA /* armv7.swiftmodule */,
-			);
-			path = MendixNative.swiftmodule;
-			sourceTree = "<group>";
-		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,12 +182,16 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				EB78BDDB23BF483700E56827 /* AppDelegate.h */,
+				EB78BDD823BF47FE00E56827 /* AppDelegate.m */,
 				13B07FAE1A68108700A75B9A /* NativeTemplate */,
 				1A0B3A932397DA2300388BF7 /* Dev */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				A1EBC69BD21646E490B9229B /* Resources */,
 				ADF0073EA1EDDA0933D2FFE1 /* Pods */,
+				EB78BDD623BF47FD00E56827 /* nativeTemplate-Bridging-Header.h */,
+				EB78BDD723BF47FD00E56827 /* dev-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -300,11 +238,29 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		EB78BDFC23BF585600E56827 /* MendixNative */ = {
+			isa = PBXGroup;
+			children = (
+				EB78BDFD23BF585600E56827 /* DevAppMenu.h */,
+				EB78BDFE23BF585600E56827 /* AppPreferences.h */,
+				EB78BDFF23BF585600E56827 /* MxConfiguration.h */,
+				EB78BE0023BF585600E56827 /* AppUrl.h */,
+				EB78BE0123BF585600E56827 /* MendixReactWindow.h */,
+				EB78BE0223BF585600E56827 /* AppMenuProtocol.h */,
+				EB78BE0323BF585600E56827 /* MendixApp.h */,
+				EB78BE0423BF585600E56827 /* WarningsFilter.h */,
+				EB78BE0523BF585600E56827 /* NativeReloadHandler.h */,
+				EB78BE0623BF585600E56827 /* ReactNative.h */,
+				EB78BE0723BF585600E56827 /* NativeFsModule.h */,
+			);
+			path = MendixNative;
+			sourceTree = "<group>";
+		};
 		EBC808E222DF20DD007E5F3D /* MendixNative */ = {
 			isa = PBXGroup;
 			children = (
-				1A64CF42238FC6C9000B27DA /* libMendix.a */,
-				1A64CF2F238FC6C8000B27DA /* MendixNative.swiftmodule */,
+				EB78BDFC23BF585600E56827 /* MendixNative */,
+				EB78BDDF23BF4CFE00E56827 /* libMendix.a */,
 			);
 			path = MendixNative;
 			sourceTree = "<group>";
@@ -371,10 +327,11 @@
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1130;
 					};
 					1A0B3A912397DA2300388BF7 = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -404,29 +361,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A64CF49238FC6C9000B27DA /* x86_64.swiftmodule in Resources */,
-				1A64CF51238FC6C9000B27DA /* arm64.swiftdoc in Resources */,
-				1A64CF4A238FC6C9000B27DA /* arm.swiftdoc in Resources */,
 				1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */,
-				1A64CF45238FC6C9000B27DA /* x86_64-apple-ios-simulator.swiftdoc in Resources */,
-				1A64CF48238FC6C9000B27DA /* arm64.swiftmodule in Resources */,
-				1A64CF46238FC6C9000B27DA /* x86_64-apple-ios-simulator.swiftmodule in Resources */,
-				1A64CF43238FC6C9000B27DA /* arm64-apple-ios.swiftdoc in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				1A64CF4D238FC6C9000B27DA /* i386.swiftdoc in Resources */,
-				1A64CF44238FC6C9000B27DA /* i386.swiftmodule in Resources */,
-				1A64CF4C238FC6C9000B27DA /* i386-apple-ios-simulator.swiftmodule in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				1A64CF54238FC6C9000B27DA /* armv7.swiftmodule in Resources */,
-				1A64CF47238FC6C9000B27DA /* x86_64.swiftdoc in Resources */,
-				1A64CF4E238FC6C9000B27DA /* arm64-apple-ios.swiftmodule in Resources */,
-				1A64CF50238FC6C9000B27DA /* armv7.swiftdoc in Resources */,
 				EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */,
 				1A0B3AF323990C2400388BF7 /* config.xcconfig in Resources */,
-				1A64CF52238FC6C9000B27DA /* armv7-apple-ios.swiftdoc in Resources */,
-				1A64CF4B238FC6C9000B27DA /* armv7-apple-ios.swiftmodule in Resources */,
-				1A64CF53238FC6C9000B27DA /* i386-apple-ios-simulator.swiftdoc in Resources */,
-				1A64CF4F238FC6C9000B27DA /* arm.swiftmodule in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,32 +373,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0B3AC72397DD2A00388BF7 /* arm.swiftmodule in Resources */,
-				1A0B3AC92397DD2A00388BF7 /* arm64.swiftdoc in Resources */,
-				1A0B3AC12397DD2A00388BF7 /* x86_64.swiftmodule in Resources */,
 				1A0B3AFD23992F8200388BF7 /* Images.xcassets in Resources */,
-				1A0B3AC02397DD2A00388BF7 /* arm64.swiftmodule in Resources */,
-				1A0B3ACB2397DD2A00388BF7 /* i386-apple-ios-simulator.swiftdoc in Resources */,
-				1A0B3AC42397DD2A00388BF7 /* i386-apple-ios-simulator.swiftmodule in Resources */,
 				1A0B3AD32397E15800388BF7 /* MendixApp.storyboard in Resources */,
-				1A0B3ABE2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftmodule in Resources */,
-				1A0B3AC32397DD2A00388BF7 /* armv7-apple-ios.swiftmodule in Resources */,
-				1A0B3ACA2397DD2A00388BF7 /* armv7-apple-ios.swiftdoc in Resources */,
-				1A0B3AC62397DD2A00388BF7 /* arm64-apple-ios.swiftmodule in Resources */,
-				1A0B3ABB2397DD2A00388BF7 /* arm64-apple-ios.swiftdoc in Resources */,
-				1A0B3ACC2397DD2A00388BF7 /* armv7.swiftmodule in Resources */,
 				1A0B3AEF2399058B00388BF7 /* config.release.xcconfig in Resources */,
-				1A0B3ABD2397DD2A00388BF7 /* x86_64-apple-ios-simulator.swiftdoc in Resources */,
 				1A0B3AE6239816B300388BF7 /* LaunchScreen.xib in Resources */,
 				1A0B3AD62397EA8500388BF7 /* glyphicons-halflings-regular.ttf in Resources */,
-				1A0B3AC22397DD2A00388BF7 /* arm.swiftdoc in Resources */,
-				1A0B3AC82397DD2A00388BF7 /* armv7.swiftdoc in Resources */,
 				1A0B3AF12399095C00388BF7 /* config.xcconfig in Resources */,
-				1A0B3AC52397DD2A00388BF7 /* i386.swiftdoc in Resources */,
 				1A0B3AEA2398185600388BF7 /* config.debug.xcconfig in Resources */,
-				1A0B3ABC2397DD2A00388BF7 /* i386.swiftmodule in Resources */,
 				1A0B3A9C2397DA2300388BF7 /* LaunchApp.storyboard in Resources */,
-				1A0B3ABF2397DD2A00388BF7 /* x86_64.swiftdoc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +417,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReactNative-dev/Pods-ReactNative-dev-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
@@ -517,6 +439,7 @@
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManagerSwift.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
@@ -570,6 +493,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReactNative-nativeTemplate/Pods-ReactNative-nativeTemplate-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
@@ -591,6 +515,7 @@
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManagerSwift.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
@@ -621,7 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBC808FE22DF2EF4007E5F3D /* AppDelegate.swift in Sources */,
+				EB55E08A23BF7FF700E3FB34 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,11 +554,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0B3AE72398173800388BF7 /* AppDelegate.swift in Sources */,
 				1A0B3AE22397FBF600388BF7 /* MendixReactWindowExtensions.swift in Sources */,
 				1A0B3AD52397E16900388BF7 /* MendixAppViewController.swift in Sources */,
 				1A0B3ADE2397F36300388BF7 /* QRView.swift in Sources */,
 				1A0B3AE02397F38300388BF7 /* QRMaskView.swift in Sources */,
+				EB55E08823BF7FF500E3FB34 /* AppDelegate.m in Sources */,
 				1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */,
 				1A0B3ADC2397F1FF00388BF7 /* URLValidator.swift in Sources */,
 				1A0B3AD82397EB4000388BF7 /* RoundedButton.swift in Sources */,
@@ -713,7 +638,7 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = nativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -721,6 +646,7 @@
 					"$(PROJECT_DIR)/MendixNative",
 					"$(PROJECT_DIR)",
 				);
+				MACH_O_TYPE = mh_bundle;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -729,7 +655,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = nativeTemplate;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -785,7 +711,7 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = nativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -793,6 +719,7 @@
 					"$(PROJECT_DIR)/MendixNative",
 					"$(PROJECT_DIR)",
 				);
+				MACH_O_TYPE = mh_bundle;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -802,7 +729,7 @@
 				PRODUCT_NAME = nativeTemplate;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${PROJECT_DIR} ${SRCROOT}/MendixNative";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -816,6 +743,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -828,16 +756,17 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"${SRCROOT}/MendixNative",
+					"${SRCROOT}/MendixNative/**",
 				);
 				INFOPLIST_FILE = NativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MendixNative",
 					"${SRCROOT}/MendixNative",
 				);
+				MACH_O_TYPE = mh_bundle;
 				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -845,6 +774,7 @@
 				PRODUCT_NAME = NativeTemplateDev;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
+				SWIFT_OBJC_BRIDGING_HEADER = "dev-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -859,6 +789,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -872,21 +803,23 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"${SRCROOT}/MendixNative",
+					"${SRCROOT}/MendixNative/**",
 				);
 				INFOPLIST_FILE = NativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MendixNative",
 					"${SRCROOT}/MendixNative",
 				);
+				MACH_O_TYPE = mh_bundle;
 				MARKETING_VERSION = 1.0.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = NativeTemplateDev;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
+				SWIFT_OBJC_BRIDGING_HEADER = "dev-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -932,7 +865,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -988,7 +921,7 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = nativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -996,6 +929,7 @@
 					"$(PROJECT_DIR)/MendixNative",
 					"$(PROJECT_DIR)",
 				);
+				MACH_O_TYPE = mh_bundle;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1005,7 +939,7 @@
 				PRODUCT_NAME = nativeTemplate;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${PROJECT_DIR} ${SRCROOT}/MendixNative";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1019,6 +953,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -1032,21 +967,23 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"${SRCROOT}/MendixNative",
+					"${SRCROOT}/MendixNative/**",
 				);
 				INFOPLIST_FILE = NativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MendixNative",
 					"${SRCROOT}/MendixNative",
 				);
+				MACH_O_TYPE = mh_bundle;
 				MARKETING_VERSION = 1.0.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = NativeTemplateDev;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/MendixNative";
+				SWIFT_OBJC_BRIDGING_HEADER = "dev-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1099,7 +1036,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1145,7 +1082,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
