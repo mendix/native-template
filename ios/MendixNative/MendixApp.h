@@ -1,11 +1,11 @@
-#import <Foundation/Foundation.h>
 //
 //  Copyright (c) Mendix, Inc. All rights reserved.
 //
 
-#import "UIKIt/UIKIt.h"
-#import "WarningsFilter.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "AppMenuProtocol.h"
+#import "WarningsFilter.h"
 
 @interface MendixApp : NSObject
 @property NSURL * _Nonnull bundleUrl;
