@@ -40,6 +40,7 @@ public class MainApplication extends MendixReactApplication {
   public List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new FastImageViewPackage(),
             new DarkModePackage(),
             new CodePush(getCodePushKey(), getApplicationContext(), BuildConfig.DEBUG),
             new RNGestureHandlerPackage(),
