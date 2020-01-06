@@ -113,6 +113,9 @@ PODS:
     - React
   - react-native-camera/RN (2.11.1):
     - React
+  - react-native-fast-image (6.1.1):
+    - React
+    - SDWebImage (~> 5.0)
   - react-native-geocoder (0.5.0):
     - React
   - react-native-google-maps (0.24.2):
@@ -216,6 +219,9 @@ PODS:
     - React
   - RNViewShot (2.6.0):
     - React
+  - SDWebImage (5.4.0):
+    - SDWebImage/Core (= 5.4.0)
+  - SDWebImage/Core (5.4.0)
   - SSZipArchive (2.2.2)
   - TouchID (4.4.1):
     - React
@@ -235,6 +241,7 @@ DEPENDENCIES:
   - react-native-ble-plx-swift (from `../node_modules/react-native-ble-plx`)
   - react-native-calendar-events (from `../node_modules/react-native-calendar-events`)
   - react-native-camera (from `../node_modules/react-native-camera`)
+  - react-native-fast-image (from `../node_modules/react-native-fast-image`)
   - react-native-geocoder (from `../node_modules/react-native-geocoder`)
   - react-native-google-maps (from `../node_modules/react-native-maps`)
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
@@ -290,6 +297,7 @@ SPEC REPOS:
     - JWT
     - nanopb
     - Protobuf
+    - SDWebImage
     - SSZipArchive
 
 EXTERNAL SOURCES:
@@ -311,6 +319,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-calendar-events"
   react-native-camera:
     :path: "../node_modules/react-native-camera"
+  react-native-fast-image:
+    :path: "../node_modules/react-native-fast-image"
   react-native-geocoder:
     :path: "../node_modules/react-native-geocoder"
   react-native-google-maps:
@@ -378,6 +388,7 @@ SPEC CHECKSUMS:
   react-native-ble-plx-swift: e0d041529bd7ae66eb9731123eca3df3d132e8ec
   react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
   react-native-camera: 96a3c81f27da57b816fbb6808dde20dc96d1431e
+  react-native-fast-image: fdfc612dba58fd73136cf5efdaeb8cfcad7f63b2
   react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
   react-native-google-maps: 568cb03d0eae7fef93626f65d05be55642404ed4
   react-native-image-picker: e6e06d4315e3c85bad17e4b2002cd29f11d202c8
@@ -396,6 +407,7 @@ SPEC CHECKSUMS:
   RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RNViewShot: 05672e0b3c36cd70633466614b4451869a70c6c7
+  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee

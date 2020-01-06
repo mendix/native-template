@@ -90,6 +90,7 @@ project.ext.vectoricons = [
 ]
 
 dependencies {
+    implementation project(':react-native-fast-image')
     implementation project(':react-native-dark-mode')
     implementation project(':react-native-code-push')
     implementation project(":react-native-gesture-handler")
