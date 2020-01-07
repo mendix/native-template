@@ -63,7 +63,6 @@ abstract_target "ReactNative" do
   pod 'Firebase/Core', '~> 5.15.0'
   pod 'Firebase/Messaging', '~> 5.15.0'
   pod 'ReactNativeDarkMode', :path => '../node_modules/react-native-dark-mode'
-  pod 'IQKeyboardManagerSwift'
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
   pod 'IQKeyboardManager'
 
