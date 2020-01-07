@@ -5,6 +5,7 @@ import com.brentvatne.react.ReactVideoPackage;
 import com.calendarevents.CalendarEventsPackage;
 import com.codemotionapps.reactnativedarkmode.DarkModePackage;
 import com.devfd.RNGeocoder.RNGeocoderPackage;
+import com.dylanvann.fastimage.FastImageViewPackage;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.horcrux.svg.SvgPackage;
