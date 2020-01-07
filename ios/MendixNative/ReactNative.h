@@ -18,14 +18,14 @@
 }
 
 @property(nonatomic, weak) id<ReactNativeDelegate> delegate;
+@property(class, nonatomic, readonly) ReactNative *instance;
 
-+ (ReactNative *) instance;
 + (NSString *) warningsFilterToString:(WarningsFilter)warningsFilter;
 - (void) start:(MendixApp *)mendixApp;
 - (BOOL) isActive;
 - (NSURL *) getJSBundleFile;
 - (NSString *) getCodePushKey;
-- (BOOL) userCodePush;
+- (BOOL) useCodePush;
 - (void) showAppMenu;
 - (void) toggleElementInspector;
 - (RCTBridge *) getBridge;
