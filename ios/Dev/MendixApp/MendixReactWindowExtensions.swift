@@ -5,7 +5,7 @@ extension MendixReactWindow {
 
   open override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
     if (motion == .motionShake) {
-      ReactNative.instance().showAppMenu();
+      ReactNative.instance.showAppMenu();
     }
   }
 }
