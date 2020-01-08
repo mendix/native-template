@@ -26,10 +26,14 @@ import com.zmxv.RNSound.RNSoundPackage;
 import org.pgsqlite.SQLitePluginPackage;
 import org.reactnative.camera.RNCameraPackage;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import fr.greweb.reactnativeviewshot.RNViewShotPackage;
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
 
 public class MainApplication extends MendixReactApplication {
   @Override
@@ -39,7 +43,8 @@ public class MainApplication extends MendixReactApplication {
 
   @Override
   public List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
+    List<ReactPackage> packages = new ArrayList<>();
+    packages.addAll(Arrays.asList(
             new MainReactPackage(),
             new FastImageViewPackage(),
             new DarkModePackage(),
@@ -63,6 +68,16 @@ public class MainApplication extends MendixReactApplication {
             new BlePackage(),
             new NetInfoPackage(),
             new AsyncStoragePackage()
-    );
+    ));
+
+    if (BuildConfig.USE_FIREBASE) {
+      packages.addAll(Arrays.asList(
+        new RNFirebaseMessagingPackage(),
+        new RNFirebaseNotificationsPackage(),
+        new RNFirebasePackage()
+      ));
+    }
+
+    return packages;
   }
 }
