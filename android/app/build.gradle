@@ -19,6 +19,8 @@ def enableSeparateBuildPerCPUArchitecture = false
  */
 def enableProguardInReleaseBuilds = false
 
+def googleServicesEnabled = hasGoogleServicesSupport()
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
@@ -36,6 +38,7 @@ android {
         versionName "1.0"
         testBuildType System.getProperty("testBuildType", "debug")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "boolean", "USE_FIREBASE", "${googleServicesEnabled}"
     }
     splits {
         abi {
@@ -104,7 +107,17 @@ dependencies {
     implementation project(":react-native-svg")
     implementation project(":react-native-sqlite-storage")
     implementation project(":react-native-sound")
-    implementation project(":react-native-maps")
+    if (googleServicesEnabled) {
+        implementation(project(":react-native-maps")) {
+            exclude group: 'com.google.android.gms', module: 'play-services-base'
+        }
+        implementation "com.google.android.gms:play-services-base:16.1.0"
+        implementation "com.google.firebase:firebase-core:16.0.9"
+        implementation "com.google.firebase:firebase-messaging:18.0.0"
+        implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
+    } else {
+        implementation project(":react-native-maps")
+    }
     implementation project(":react-native-inappbrowser-reborn")
     implementation project(":react-native-image-picker")
     implementation project(":react-native-geocoder")
@@ -139,3 +152,21 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+apply plugin: 'com.google.gms.google-services'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
+
+if (!googleServicesEnabled) {
+    // Disable google-services-related plugins
+    tasks.whenTaskAdded { task ->
+        def name = task.name.toLowerCase()
+        if (name.contains("googleservices") || name.contains("fabric")) {
+            task.enabled = false
+        }
+    }
+}
+
+boolean hasGoogleServicesSupport() {
+    def enabled = file("$projectDir/google-services.json").exists()
+    println "Google Services support is ${enabled ? "enabled" : "disabled"}"
+    return enabled
+}
