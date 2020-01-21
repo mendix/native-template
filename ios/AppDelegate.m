@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
 #import "MendixNative/MendixNative.h"
+#import "IQKeyboardManager/IQKeyboardManager.h"
 
 @implementation AppDelegate
 
@@ -8,6 +9,7 @@
   NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
 
   if ([targetName  isEqual: @"dev"]) {
+    IQKeyboardManager.sharedManager.enable = NO;
     return YES;
   }
 
