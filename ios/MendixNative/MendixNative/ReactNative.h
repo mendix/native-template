@@ -3,9 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import <React/RCTBridge.h>
-#import <React/RCTBridgeDelegate.h>
 #import "MendixApp.h"
 
 @protocol ReactNativeDelegate;
@@ -21,7 +19,7 @@
 
 + (ReactNative *) instance;
 + (NSString *) warningsFilterToString:(WarningsFilter)warningsFilter;
-- (void) start:(MendixApp *)mendixApp;
+- (void) start:(MendixApp*)mendixApp;
 - (BOOL) isActive;
 - (NSURL *) getJSBundleFile;
 - (NSString *) getCodePushKey;

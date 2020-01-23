@@ -3,6 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AppUrl.h"
 
 @interface AppPreferences : NSObject
 + (NSString *) getAppUrl;
