@@ -1,4 +1,5 @@
 import UIKit
+import MendixNative
 
 class MendixAppViewController: UIViewController, ReactNativeDelegate {
   var mendixApp: MendixApp?
@@ -10,8 +11,8 @@ class MendixAppViewController: UIViewController, ReactNativeDelegate {
       fatalError("MendixApp not passed before starting the app")
     }
 
-    ReactNative.instance().delegate = self
-    ReactNative.instance().start(mendixApp)
+    ReactNative.instance.delegate = self
+    ReactNative.instance.start(mendixApp)
   }
 
   override func viewDidAppear(_ animated: Bool) {

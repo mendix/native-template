@@ -65,7 +65,6 @@ abstract_target "ReactNative" do
   pod 'ReactNativeDarkMode', :path => '../node_modules/react-native-dark-mode'
   pod 'IQKeyboardManagerSwift'
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
-  pod 'IQKeyboardManager'
 
   target 'nativeTemplate' do
     # Intentionally left empty

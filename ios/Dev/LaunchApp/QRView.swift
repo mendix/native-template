@@ -1,6 +1,7 @@
 import Foundation
 import AVFoundation
 import UIKit
+import MendixNative
 
 @objc protocol QRViewDelegate: class {
   @objc optional func qrScanningFailed()
@@ -11,6 +12,7 @@ import UIKit
 class QRView: UIView {
   weak var delegate: QRViewDelegate?
 
+  private let logger = Logger.create("QRView")
   private var session: AVCaptureSession?
 
   override init(frame: CGRect) {
@@ -99,6 +101,7 @@ extension QRView: AVCaptureMetadataOutputObjectsDelegate {
       guard let readableObject = metaObject as? AVMetadataMachineReadableCodeObject else { return }
       guard let stringValue = readableObject.stringValue else { return }
       result(stringValue)
+      logger.default("%{PUBLIC}@", stringValue)
     }
   }
 }

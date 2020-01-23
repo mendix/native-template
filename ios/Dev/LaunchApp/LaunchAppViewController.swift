@@ -1,4 +1,5 @@
 import UIKit
+import MendixNative
 
 class LaunchAppViewController: UIViewController, QRViewDelegate {
     @IBOutlet weak var textField: UITextField!
@@ -18,9 +19,9 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
     func launchApp(_ url: String) {
         uiState = .idle
         qrView.stopScanning()
-        AppPreferences.setAppUrl(url)
-        AppPreferences.remoteDebugging(false)
-        AppPreferences.devMode(enableDevModeSwitch.isOn)
+        AppPreferences.setAppUrl(url: url)
+        AppPreferences.remoteDebugging(enable: false)
+        AppPreferences.devMode(enable:  enableDevModeSwitch.isOn)
         self.performSegue(withIdentifier: "MendixApp", sender: nil)
     }
 
@@ -36,7 +37,7 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         uiState = .loading
         let url = textField.text ?? ""
         validateMendixUrl(url) { (running) in
-            guard running, AppUrl.isValid(url) else {
+            guard running, AppUrl.isValid(url: url) else {
                 self.uiState = .invalidInput
                 return
             }
@@ -53,7 +54,7 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         uiState = .loading
         if let jsonString = str, let json = try? JSONSerialization.jsonObject(with: Data(jsonString.utf8), options: []) as? [String: Any], let parsedJson = json, let url = parsedJson["url"] as? String {
             validateMendixUrl(url) { (running) in
-                guard running, AppUrl.isValid(url) else {
+                guard running, AppUrl.isValid(url: url) else {
                     self.uiState = .invalidInput
                     return
                 }
@@ -108,14 +109,14 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         if let mendixAppVC = segue.destination as? MendixAppViewController {
             let devModeEnabled = AppPreferences.devModeEnabled()
             let url = AppUrl.forBundle(
-                AppPreferences.getAppUrl(),
-                port: AppPreferences.getRemoteDebuggingPackagerPort(),
+                url: AppPreferences.getAppUrl(),
+                remoteDebuggingPackagerPort: AppPreferences.getRemoteDebuggingPackagerPort(),
                 isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled(),
                 isDevModeEnabled: devModeEnabled)
             
-            let runtimeUrl: URL = AppUrl.forRuntime(AppPreferences.getAppUrl())!
+            let runtimeUrl: URL = AppUrl.forRuntime(url: AppPreferences.getAppUrl())!
 
-            mendixAppVC.setupMendixApp(MendixApp.init(nil, bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn, reactLoading: nil))
+            mendixAppVC.setupMendixApp(MendixApp(bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn))
         }
     }
 }
@@ -129,7 +130,7 @@ private var keyboardShowTask: DispatchWorkItem?
 
 extension LaunchAppViewController {
     private func validateMendixUrl(_ urlString: String, onCompletion: @escaping (_ valid: Bool) -> Void) {
-        if let url = AppUrl.forValidation(urlString) {
+        if let url = AppUrl.forValidation(url: urlString) {
             URLValidator.validate(url, onCompletion: onCompletion)
             return
         }
