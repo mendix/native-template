@@ -15,14 +15,17 @@
   UIWindow *appWindow;
   MendixApp *mendixApp;
   NSString *codePushKey;
+  NSDictionary *launchOptions;
 }
 
 @property(nonatomic, weak) id<ReactNativeDelegate> delegate;
 @property(class, nonatomic, readonly) ReactNative *instance;
 
 + (NSString *) warningsFilterToString:(WarningsFilter)warningsFilter;
-- (void) start:(MendixApp *)mendixApp;
+- (void) setup:(MendixApp *)mendixApp launchOptions:(NSDictionary *)launchOptions;
+- (void) start;
 - (BOOL) isActive;
+- (BOOL) hasLaunchOptions;
 - (NSURL *) getJSBundleFile;
 - (NSString *) getCodePushKey;
 - (BOOL) useCodePush;
