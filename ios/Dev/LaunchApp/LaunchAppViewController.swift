@@ -105,7 +105,6 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let mendixAppVC = segue.destination as? MendixAppViewController {
             let devModeEnabled = AppPreferences.devModeEnabled()
             let url = AppUrl.forBundle(
                 AppPreferences.getAppUrl(),
@@ -115,10 +114,9 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
             
             let runtimeUrl: URL = AppUrl.forRuntime(AppPreferences.getAppUrl())!
 
-            mendixAppVC.setupMendixApp(MendixApp.init(nil, bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn, reactLoading: nil))
+        ReactNative.instance.setup(MendixApp.init(nil, bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn, reactLoading: nil))
         }
     }
-}
 
 private let MAX_MASK_SIZE = CGFloat(350)
 private let MASK_RELATIVE_SIZE = CGFloat(0.6)
