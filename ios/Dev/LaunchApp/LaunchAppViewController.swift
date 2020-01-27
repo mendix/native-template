@@ -104,19 +104,27 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         }
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let devModeEnabled = AppPreferences.devModeEnabled()
-            let url = AppUrl.forBundle(
-                AppPreferences.getAppUrl(),
-                port: AppPreferences.getRemoteDebuggingPackagerPort(),
-                isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled(),
-                isDevModeEnabled: devModeEnabled)
-            
-            let runtimeUrl: URL = AppUrl.forRuntime(AppPreferences.getAppUrl())!
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-        ReactNative.instance.setup(MendixApp.init(nil, bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn, reactLoading: nil))
+        if (ReactNative.instance.hasLaunchOptions()) {
+          self.performSegue(withIdentifier: "MendixApp", sender: nil)
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let devModeEnabled = AppPreferences.devModeEnabled()
+        let url = AppUrl.forBundle(
+            AppPreferences.getAppUrl(),
+            port: AppPreferences.getRemoteDebuggingPackagerPort(),
+            isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled(),
+            isDevModeEnabled: devModeEnabled)
+        
+        let runtimeUrl: URL = AppUrl.forRuntime(AppPreferences.getAppUrl())!
+
+        ReactNative.instance.setup(MendixApp.init(nil, bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, enableGestures: true, clearDataAtLaunch: clearDataSwitch.isOn, reactLoading: nil))
+    }
+}
 
 private let MAX_MASK_SIZE = CGFloat(350)
 private let MASK_RELATIVE_SIZE = CGFloat(0.6)
