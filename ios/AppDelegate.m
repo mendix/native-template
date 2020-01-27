@@ -18,6 +18,21 @@
 
   if ([targetName  isEqual: @"dev"]) {
     IQKeyboardManager.sharedManager.enable = NO;
+
+    if (launchOptions == nil) {
+      return YES;
+    }
+
+    NSString *url = [AppPreferences getAppUrl];
+    if (url == nil) {
+      return YES;
+    }
+
+    NSURL *bundleUrl = [AppUrl forBundle:url port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
+    NSURL *runtimeUrl = [AppUrl forRuntime:url];
+    MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] enableGestures:YES clearDataAtLaunch:NO reactLoadingStoryboard:nil];
+    [ReactNative.instance setup:mendixApp launchOptions:launchOptions];
+
     return YES;
   }
 
@@ -30,7 +45,7 @@
   
   [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none enableGestures:false clearDataAtLaunch:false reactLoadingStoryboard:nil] launchOptions:launchOptions];
   [ReactNative.instance start];
-  
+
   return YES;
 }
 
@@ -56,6 +71,14 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 - (BOOL) useFirebase {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"GoogleService-Info" ofType:@"plist"];
     return [[NSFileManager defaultManager] fileExistsAtPath:path];
+}
+
+- (WarningsFilter) getWarningFilterValue {
+#if DEBUG
+  return all;
+#else
+  return [AppPreferences devModeEnabled] ? partial : none;
+#endif
 }
 
 @end
