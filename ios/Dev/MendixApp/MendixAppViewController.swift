@@ -1,17 +1,11 @@
 import UIKit
 
 class MendixAppViewController: UIViewController, ReactNativeDelegate {
-  var mendixApp: MendixApp?
-
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    guard let mendixApp = mendixApp else {
-      fatalError("MendixApp not passed before starting the app")
-    }
-
     ReactNative.instance.delegate = self
-    ReactNative.instance.start(mendixApp)
+    ReactNative.instance.start()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -26,10 +20,6 @@ class MendixAppViewController: UIViewController, ReactNativeDelegate {
   override func viewWillDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
     UIApplication.shared.statusBarStyle = .lightContent
-  }
-
-  func setupMendixApp(_ mendixApp: MendixApp) {
-    self.mendixApp = mendixApp
   }
 
   func onAppClosed() {
