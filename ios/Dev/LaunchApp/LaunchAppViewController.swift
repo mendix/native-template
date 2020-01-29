@@ -107,8 +107,10 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        if (ReactNative.instance.hasLaunchOptions()) {
-          self.performSegue(withIdentifier: "MendixApp", sender: nil)
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate);
+        if (appDelegate.shouldOpenInLastApp) {
+            appDelegate.shouldOpenInLastApp = false;
+            self.performSegue(withIdentifier: "MendixApp", sender: nil)
         }
     }
 

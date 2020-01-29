@@ -96,7 +96,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - Protobuf (3.10.0)
+  - Protobuf (3.11.2)
   - React (0.59.9):
     - React/Core (= 0.59.9)
   - react-native-ble-plx (1.1.0):
@@ -219,9 +219,9 @@ PODS:
     - React
   - RNViewShot (2.6.0):
     - React
-  - SDWebImage (5.4.0):
-    - SDWebImage/Core (= 5.4.0)
-  - SDWebImage/Core (5.4.0)
+  - SDWebImage (5.4.1):
+    - SDWebImage/Core (= 5.4.1)
+  - SDWebImage/Core (5.4.1)
   - SSZipArchive (2.2.2)
   - TouchID (4.4.1):
     - React
@@ -382,7 +382,7 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
   JWT: 9b5c05abbcc1a0e69c3c91e1655b3387fc7e581d
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+  Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
   react-native-ble-plx: 05e16667ebf56cf802986379fd58a377847885e8
   react-native-ble-plx-swift: e0d041529bd7ae66eb9731123eca3df3d132e8ec
@@ -407,11 +407,11 @@ SPEC CHECKSUMS:
   RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RNViewShot: 05672e0b3c36cd70633466614b4451869a70c6c7
-  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
+  SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: c77db1cc46366c793045cdea0d38c33f1bfd4f18
+PODFILE CHECKSUM: 7fc824bf376676ed428a21db7a3c3e29eaa4ec99
 
 COCOAPODS: 1.8.3

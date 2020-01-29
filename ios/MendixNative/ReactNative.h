@@ -25,7 +25,6 @@
 - (void) setup:(MendixApp *)mendixApp launchOptions:(NSDictionary *)launchOptions;
 - (void) start;
 - (BOOL) isActive;
-- (BOOL) hasLaunchOptions;
 - (NSURL *) getJSBundleFile;
 - (NSString *) getCodePushKey;
 - (BOOL) useCodePush;
