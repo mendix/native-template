@@ -7,6 +7,8 @@
 
 @implementation AppDelegate
 
+@synthesize shouldOpenInLastApp;
+
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   if (self.useFirebase) {
     [FIRApp configure];
@@ -27,7 +29,8 @@
     if (url == nil) {
       return YES;
     }
-
+    
+    shouldOpenInLastApp = YES;
     NSURL *bundleUrl = [AppUrl forBundle:url port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
     NSURL *runtimeUrl = [AppUrl forRuntime:url];
     MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] enableGestures:YES clearDataAtLaunch:NO reactLoadingStoryboard:nil];
