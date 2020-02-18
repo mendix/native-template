@@ -12,10 +12,11 @@
 + (NSURL *) runtimeUrl;
 + (NSString *) databaseName;
 + (NSString *) filesDirectoryName;
++ (NSString *) codePushKey;
 + (WarningsFilter) warningsFilter;
 + (void) setRuntimeUrl:(NSURL*)value;
 + (void) setDatabaseName:(NSString*)value;
 + (void) setFilesDirectoryName:(NSString*)value;
 + (void) setWarningsFilter:(WarningsFilter)value;
-+ (void) setRemoteDebuggingPackagerPort:(int)port;
++ (void) setCodePushKey:(NSString*)value;
 @end

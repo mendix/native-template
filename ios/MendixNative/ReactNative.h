@@ -26,7 +26,6 @@
 - (void) start;
 - (BOOL) isActive;
 - (NSURL *) getJSBundleFile;
-- (NSString *) getCodePushKey;
 - (BOOL) useCodePush;
 - (void) showAppMenu;
 - (void) toggleElementInspector;
