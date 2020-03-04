@@ -2,8 +2,8 @@
 #import "AppDelegate.h"
 #import "MendixNative/MendixNative.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
-#import "RNFirebase/RNFirebaseNotifications.h"
-#import "RNFirebase/RNFirebaseMessaging.h"
+//#import "RNFirebase/RNFirebaseNotifications.h"
+//#import "RNFirebase/RNFirebaseMessaging.h"
 
 @implementation AppDelegate
 
@@ -12,7 +12,7 @@
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   if (self.useFirebase) {
     [FIRApp configure];
-    [RNFirebaseNotifications configure];
+//    [RNFirebaseNotifications configure];
   }
 
   NSBundle *mainBundle = [NSBundle mainBundle];
@@ -54,20 +54,20 @@
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
   if (self.useFirebase) {
-    [[RNFirebaseNotifications instance] didReceiveLocalNotification:notification];
+//    [[RNFirebaseNotifications instance] didReceiveLocalNotification:notification];
   }
 }
 
 - (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
 fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
   if (self.useFirebase) {
-    [[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
+//    [[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
   }
 }
 
 - (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
   if (self.useFirebase) {
-    [[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings];
+//    [[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings];
   }
 }
 

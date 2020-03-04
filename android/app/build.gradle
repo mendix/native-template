@@ -98,11 +98,11 @@ project.ext.vectoricons = [
 ]
 
 dependencies {
-    implementation project(':react-native-reanimated')
     implementation project(':react-native-fast-image')
     implementation project(':react-native-dark-mode')
     implementation project(':react-native-code-push')
     implementation project(":react-native-gesture-handler")
+    implementation project(":react-native-reanimated")
     implementation project(":react-native-webview")
     implementation project(":react-native-view-shot")
     implementation project(":react-native-video")
@@ -115,13 +115,19 @@ dependencies {
     implementation project(":react-native-inappbrowser-reborn")
     implementation project(":react-native-image-picker")
     implementation project(":react-native-geocoder")
-    implementation project(":react-native-firebase")
     implementation project(":react-native-device-info")
     implementation project(":react-native-camera")
     implementation project(":react-native-calendar-events")
     implementation project(":react-native-ble-plx")
     implementation project(":@react-native-community_netinfo")
     implementation project(":@react-native-community_async-storage")
+    implementation project(":react-native-localize")
+    implementation project(":@react-native-community_geolocation")
+    implementation project(":@react-native-community_cameraroll")
+    implementation project(":@react-native-community_masked-view")
+    implementation project(":react-native-safe-area-context")
+    implementation project(":@react-native-firebase_app")
+    implementation project(":@react-native-firebase_messaging")
     implementation project(":mendixnative-release")
     implementation project(path: ':react-native-localize')
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -129,8 +135,6 @@ dependencies {
     implementation "org.webkit:android-jsc:r245459"
     if (googleServicesEnabled) {
         implementation "com.google.android.gms:play-services-base:${project.playServicesVersion}"
-        implementation "com.google.firebase:firebase-core:16.0.9"
-        implementation "com.google.firebase:firebase-messaging:18.0.0"
         implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
     }
     devImplementation "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
