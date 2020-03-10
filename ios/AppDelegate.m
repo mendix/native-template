@@ -33,7 +33,7 @@
     shouldOpenInLastApp = YES;
     NSURL *bundleUrl = [AppUrl forBundle:url port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
     NSURL *runtimeUrl = [AppUrl forRuntime:url];
-    MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] enableGestures:YES clearDataAtLaunch:NO reactLoadingStoryboard:nil];
+    MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] isDeveloperApp:YES clearDataAtLaunch:NO reactLoadingStoryboard:nil];
     [ReactNative.instance setup:mendixApp launchOptions:launchOptions];
 
     return YES;
@@ -46,7 +46,7 @@
   NSURL *runtimeUrl = [AppUrl forRuntime:[url stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
   NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
   
-  [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none enableGestures:false clearDataAtLaunch:false reactLoadingStoryboard:nil] launchOptions:launchOptions];
+  [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:false clearDataAtLaunch:false reactLoadingStoryboard:nil] launchOptions:launchOptions];
   [ReactNative.instance start];
 
   return YES;
