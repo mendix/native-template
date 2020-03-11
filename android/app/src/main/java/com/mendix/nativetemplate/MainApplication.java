@@ -37,8 +37,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.greweb.reactnativeviewshot.RNViewShotPackage;
-import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
-import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
 
 public class MainApplication extends MendixReactApplication {
   @Override
@@ -83,8 +84,9 @@ public class MainApplication extends MendixReactApplication {
 
     if (BuildConfig.USE_FIREBASE) {
       packages.addAll(Arrays.asList(
-        new ReactNativeFirebaseAppPackage(),
-        new ReactNativeFirebaseMessagingPackage()
+        new RNFirebaseMessagingPackage(),
+        new RNFirebaseNotificationsPackage(),
+        new RNFirebasePackage()
       ));
     }
 

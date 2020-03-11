@@ -77,10 +77,12 @@ abstract_target "ReactNative" do
   pod 'RNLocalize', :path => '../node_modules/react-native-localize'
   pod 'react-native-geolocation', path: '../node_modules/@react-native-community/geolocation'
   pod 'react-native-cameraroll', path: '../node_modules/@react-native-community/cameraroll'
-  pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
-  pod 'RNFBMessaging', :path => '../node_modules/@react-native-firebase/messaging'
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
   pod 'RNCMaskedView', :path => '../node_modules/@react-native-community/masked-view'
+
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
+  pod 'Firebase/Core', '~> 6.19.0'
+  pod 'Firebase/Messaging', '~> 6.19.0'
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.14.0'
 
