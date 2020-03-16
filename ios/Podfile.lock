@@ -24,7 +24,7 @@ PODS:
     - GoogleUtilities/Network (~> 5.2)
     - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
-  - FirebaseAnalyticsInterop (1.4.0)
+  - FirebaseAnalyticsInterop (1.5.0)
   - FirebaseCore (5.1.10):
     - GoogleUtilities/Logger (~> 5.2)
   - FirebaseInstanceID (3.3.0):
@@ -88,7 +88,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.8.0):
     - GoogleUtilities/Logger
-  - IQKeyboardManager (6.5.4)
+  - IQKeyboardManager (6.5.5)
   - JWT (3.0.0-beta.12):
     - Base64 (~> 1.1.2)
   - nanopb (0.3.9011):
@@ -96,7 +96,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - Protobuf (3.11.2)
+  - Protobuf (3.11.4)
   - React (0.59.9):
     - React/Core (= 0.59.9)
   - react-native-ble-plx (1.1.0):
@@ -122,20 +122,20 @@ PODS:
     - Google-Maps-iOS-Utils (= 2.1.0)
     - GoogleMaps (= 2.5.0)
     - React
-  - react-native-image-picker (0.28.0):
+  - react-native-image-picker (0.28.1):
     - React
   - react-native-maps (0.24.2):
     - React
   - react-native-netinfo (3.2.1):
     - React
-  - react-native-sqlite-storage (3.3.11):
+  - react-native-sqlite-storage (3.3.10):
     - React
   - react-native-video (4.4.4):
     - React
     - react-native-video/Video (= 4.4.4)
   - react-native-video/Video (4.4.4):
     - React
-  - react-native-webview (5.12.1):
+  - react-native-webview (7.6.0):
     - React
   - React/ART (0.59.9):
     - React/Core
@@ -199,19 +199,19 @@ PODS:
     - React
   - RNCAsyncStorage (1.5.1):
     - React
-  - RNDeviceInfo (1.8.0):
+  - RNDeviceInfo (5.4.0):
     - React
   - RNFirebase (5.3.1):
     - Firebase/Core
     - React
   - RNGestureHandler (1.3.0):
     - React
-  - RNInAppBrowser (2.0.4):
+  - RNInAppBrowser (3.3.3):
     - React
-  - RNSound (0.10.9):
+  - RNSound (0.10.12):
     - React/Core
-    - RNSound/Core (= 0.10.9)
-  - RNSound/Core (0.10.9):
+    - RNSound/Core (= 0.10.12)
+  - RNSound/Core (0.10.12):
     - React/Core
   - RNSVG (9.11.1):
     - React
@@ -219,9 +219,9 @@ PODS:
     - React
   - RNViewShot (2.6.0):
     - React
-  - SDWebImage (5.4.1):
-    - SDWebImage/Core (= 5.4.1)
-  - SDWebImage/Core (5.4.1)
+  - SDWebImage (5.6.0):
+    - SDWebImage/Core (= 5.6.0)
+  - SDWebImage/Core (5.6.0)
   - SSZipArchive (2.2.2)
   - TouchID (4.4.1):
     - React
@@ -369,7 +369,7 @@ SPEC CHECKSUMS:
   DoubleConversion: bb338842f62ab1d708ceb63ec3d999f0f3d98ecd
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
-  FirebaseAnalyticsInterop: d48b6ab67bcf016a05e55b71fc39c61c0cb6b7f3
+  FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
   FirebaseCore: 35747502d9e8c6ee217385ad04446c7c2aaf9c5c
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
   FirebaseMessaging: b412996f6a09337d232bb3a6676ce4d1f353d024
@@ -379,10 +379,10 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
-  IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JWT: 9b5c05abbcc1a0e69c3c91e1655b3387fc7e581d
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
   react-native-ble-plx: 05e16667ebf56cf802986379fd58a377847885e8
   react-native-ble-plx-swift: e0d041529bd7ae66eb9731123eca3df3d132e8ec
@@ -391,27 +391,27 @@ SPEC CHECKSUMS:
   react-native-fast-image: fdfc612dba58fd73136cf5efdaeb8cfcad7f63b2
   react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
   react-native-google-maps: 568cb03d0eae7fef93626f65d05be55642404ed4
-  react-native-image-picker: e6e06d4315e3c85bad17e4b2002cd29f11d202c8
+  react-native-image-picker: fd93361c666f397bdf72f9c6c23f13d2685b9173
   react-native-maps: 0316ed017dbb64b33b227751fa810e2454fcfa39
   react-native-netinfo: 27d908bc7ee7b9f29400c02938a0b2a27a1015be
-  react-native-sqlite-storage: 3cfa904d9750f7e846c9a14c47951583ee99dbf4
+  react-native-sqlite-storage: e2514e75e65458cc2c6590d181bd1947ec6f4e3f
   react-native-video: 25d5aebb3c9d7cdefe7a909306c7ab40be4a892c
-  react-native-webview: 21c396687cb983fadc6ccc0751cc74f554131f3f
+  react-native-webview: 711cef318a554093b09a5b871894011435d87a8d
   ReactNativeDarkMode: a2415064a7f9eb1efea18befaca8bb1fa22b19ca
   RNCAsyncStorage: 2808c378f6a70f22f66eeb6c11a8d69f326dd795
-  RNDeviceInfo: 17bd6ed6c8c230f5da87d53f6275a520005f0914
+  RNDeviceInfo: d0fff8432ccdf276cb342a52e665ea6dd311472e
   RNFirebase: f20e5e4ceaa632aebb1a29a9a91022ae0469c633
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
-  RNInAppBrowser: 425a9d10b4f3084df3d1b702a02274352ac7f193
-  RNSound: 53d2fc9c6589bd68daba530262b7560393def3ac
+  RNInAppBrowser: de9ec087677135681d5794a702c1e21e6a0c3b56
+  RNSound: e157320f503bdd4f4ee6d8542e948d54f90c3c3a
   RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RNViewShot: 05672e0b3c36cd70633466614b4451869a70c6c7
-  SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
+  SDWebImage: 21b19f56b4226cdfe3aefe4e6848dc43ed129a86
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
 PODFILE CHECKSUM: 7fc824bf376676ed428a21db7a3c3e29eaa4ec99
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.9.1
