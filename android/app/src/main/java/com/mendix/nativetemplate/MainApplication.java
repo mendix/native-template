@@ -16,6 +16,7 @@ import com.microsoft.codepush.react.CodePush;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.polidea.reactnativeble.BlePackage;
 import com.proyecto26.inappbrowser.RNInAppBrowserPackage;
+import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
@@ -67,7 +68,8 @@ public class MainApplication extends MendixReactApplication {
             new CalendarEventsPackage(),
             new BlePackage(),
             new NetInfoPackage(),
-            new AsyncStoragePackage()
+            new AsyncStoragePackage(),
+            new RNLocalizePackage()
     ));
 
     if (BuildConfig.USE_FIREBASE) {
