@@ -69,6 +69,8 @@ abstract_target "ReactNative" do
 
   target 'nativeTemplate' do
     # Intentionally left empty
+    pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
   end
 
   target 'dev' do
