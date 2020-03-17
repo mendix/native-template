@@ -1,7 +1,7 @@
 PODS:
   - Base64 (1.1.2)
   - boost-for-react-native (1.63.0)
-  - CodePush (6.1.0):
+  - CodePush (6.1.1):
     - Base64 (~> 1.1)
     - JWT (~> 3.0.0-beta.7)
     - React
@@ -138,10 +138,10 @@ PODS:
   - GoogleDataTransportCCTSupport (2.0.0):
     - GoogleDataTransport (~> 5.0)
     - nanopb (~> 0.3.901)
-  - GoogleMaps (3.2.0):
-    - GoogleMaps/Maps (= 3.2.0)
-  - GoogleMaps/Base (3.2.0)
-  - GoogleMaps/Maps (3.2.0):
+  - GoogleMaps (3.5.0):
+    - GoogleMaps/Maps (= 3.5.0)
+  - GoogleMaps/Base (3.5.0)
+  - GoogleMaps/Maps (3.5.0):
     - GoogleMaps/Base
   - GoogleToolboxForMac/DebugUtils (2.2.2):
     - GoogleToolboxForMac/Defines (= 2.2.2)
@@ -376,17 +376,17 @@ PODS:
   - react-native-ble-plx-swift (1.1.1)
   - react-native-calendar-events (1.7.3):
     - React
-  - react-native-camera/FaceDetectorMLKit (3.19.0):
+  - react-native-camera/FaceDetectorMLKit (3.19.2):
     - Firebase/MLVision
     - Firebase/MLVisionFaceModel
     - React
     - react-native-camera/RCT
     - react-native-camera/RN
-  - react-native-camera/RCT (3.19.0):
+  - react-native-camera/RCT (3.19.2):
     - React
-  - react-native-camera/RN (3.19.0):
+  - react-native-camera/RN (3.19.2):
     - React
-  - react-native-camera/TextDetector (3.19.0):
+  - react-native-camera/TextDetector (3.19.2):
     - Firebase/MLVision
     - Firebase/MLVisionTextModel
     - React
@@ -398,15 +398,15 @@ PODS:
     - React
   - react-native-geolocation (2.0.2):
     - React
-  - react-native-google-maps (0.26.1):
+  - react-native-google-maps (0.27.0):
     - Google-Maps-iOS-Utils (= 2.1.0)
-    - GoogleMaps (= 3.2.0)
+    - GoogleMaps (= 3.5.0)
     - React
   - react-native-image-picker (2.3.1):
     - React
-  - react-native-maps (0.26.1):
+  - react-native-maps (0.27.0):
     - React
-  - react-native-netinfo (5.5.1):
+  - react-native-netinfo (5.6.2):
     - React
   - react-native-safe-area-context (0.7.3):
     - React
@@ -464,10 +464,10 @@ PODS:
     - React
   - RNDeviceInfo (5.5.3):
     - React
-  - RNFastImage (7.0.2):
+  - RNFastImage (8.1.5):
     - React
     - SDWebImage (~> 5.0)
-    - SDWebImageWebPCoder (~> 0.2.3)
+    - SDWebImageWebPCoder (~> 0.4.1)
   - RNFirebase (5.6.0):
     - Firebase/Core
     - React
@@ -481,7 +481,7 @@ PODS:
     - React
   - RNInAppBrowser (3.3.4):
     - React
-  - RNLocalize (1.3.3):
+  - RNLocalize (1.3.4):
     - React
   - RNReanimated (1.7.0):
     - React
@@ -490,16 +490,16 @@ PODS:
     - RNSound/Core (= 0.11.0)
   - RNSound/Core (0.11.0):
     - React
-  - RNSVG (11.0.1):
+  - RNSVG (12.0.3):
     - React
   - RNVectorIcons (6.6.0):
     - React
   - SDWebImage (5.6.0):
     - SDWebImage/Core (= 5.6.0)
   - SDWebImage/Core (5.6.0)
-  - SDWebImageWebPCoder (0.2.5):
+  - SDWebImageWebPCoder (0.4.1):
     - libwebp (~> 1.0)
-    - SDWebImage/Core (~> 5.0)
+    - SDWebImage/Core (~> 5.5)
   - SSZipArchive (2.2.2)
   - TouchID (4.4.1):
     - React
@@ -732,7 +732,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  CodePush: 559674670649e390ba1df2d71ad7652e03d679e8
+  CodePush: 46ca36050986e6afb911fc4eeb0fe80515ac1c19
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
@@ -758,7 +758,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: c29d405ff76e18551b5d158eaba6753fda8c7542
   GoogleDataTransport: a857c6a002d201b524dd4bc2ed7e7355ed07e785
   GoogleDataTransportCCTSupport: 32f75fbe904c82772fcbb6b6bd4525bfb6f2a862
-  GoogleMaps: 5046d7edfe381c1a0b20fdaf293915a375c3122b
+  GoogleMaps: 32ca02de09de357a10ac773f2c70f1986751392d
   GoogleToolboxForMac: 800648f8b3127618c1b59c7f97684427630c5ea3
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
@@ -781,14 +781,14 @@ SPEC CHECKSUMS:
   react-native-ble-plx: 304c7bee074a05581672c9990f375b3906808718
   react-native-ble-plx-swift: eb64f02b988becb84a60164aba9fab5d6ddb6dc8
   react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
-  react-native-camera: 1a62f163f06c7e54811fc9396cdb80269a665238
+  react-native-camera: 2b575b086c06caf89fd3d119d06bd977a9942103
   react-native-cameraroll: 035c425c733acd3333e6c673db5ab66a559ca2e0
   react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
   react-native-geolocation: cbd9d6bd06bac411eed2671810f454d4908484a8
-  react-native-google-maps: 2e2e697dab576abd5809d78cd74e775865b62bf7
+  react-native-google-maps: 773b7bcef4f92005847cbf455ca1fa76a21e74c7
   react-native-image-picker: 668e72d0277dc8c12ae90e835507c1eddd2e4f85
-  react-native-maps: 6e499eee4eabf422ba8b6f94e993cc768bf35153
-  react-native-netinfo: 1ee553f84e01aaffbed0e5bd53d8515f7d675055
+  react-native-maps: 6e1cf14d0aabefe59966da6dad7cb662251d3d83
+  react-native-netinfo: c67896313964727ddae153d6e119f65dae840d51
   react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
   react-native-sqlite-storage: bb10beb2407e5fc21f3f1bcd86bacbfd6edcc818
   react-native-video: 961749da457e73bf0b5565edfbaffc25abfb8974
@@ -808,17 +808,17 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: 00bdf63f7f1e0f11d3323533dba4f222e58bf092
   RNCMaskedView: 90dd32f5b786bd562e876e1421ea77c700cbf71e
   RNDeviceInfo: 67607dfe9cfbed105838144c40187a8392aa404d
-  RNFastImage: 9b0c22643872bb7494c8d87bbbb66cc4c0d9e7a2
+  RNFastImage: 35ae972d6727c84ee3f5c6897e07f84d0a3445e9
   RNFirebase: 37daa9a346d070f9f6ee1f3b4aaf4c8e3b1d5d1c
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNInAppBrowser: b51ad29a3cfe36a9a55866d42fc169aa7db8522e
-  RNLocalize: 7ea191e47e1755d2ad48614a2e9d07d290abc58e
+  RNLocalize: d8025bb1ac74c0ad54155ea9862538624ebf74d8
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNSound: c980916b596cc15c8dcd2f6ecd3b13c4881dbe20
-  RNSVG: 67f1f12dae2cef6ed59a42cae74a6b8f5a9e7b46
+  RNSVG: 7e16ddfc6e00d5aa69c9eb83e699bcce5dcb85d4
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   SDWebImage: 21b19f56b4226cdfe3aefe4e6848dc43ed129a86
-  SDWebImageWebPCoder: 947093edd1349d820c40afbd9f42acb6cdecd987
+  SDWebImageWebPCoder: 36f8f47bd9879a8aea6044765c1351120fd8e3a8
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
