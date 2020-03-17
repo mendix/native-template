@@ -23,6 +23,7 @@ import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.rnfingerprint.FingerprintAuthPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.zmxv.RNSound.RNSoundPackage;
+import com.swmansion.reanimated.ReanimatedPackage;
 
 import org.pgsqlite.SQLitePluginPackage;
 import org.reactnative.camera.RNCameraPackage;
@@ -69,7 +70,8 @@ public class MainApplication extends MendixReactApplication {
             new BlePackage(),
             new NetInfoPackage(),
             new AsyncStoragePackage(),
-            new RNLocalizePackage()
+            new RNLocalizePackage(),
+            new ReanimatedPackage()
     ));
 
     if (BuildConfig.USE_FIREBASE) {
