@@ -208,6 +208,8 @@ PODS:
     - React
   - RNInAppBrowser (3.3.3):
     - React
+  - RNReanimated (1.7.0):
+    - React
   - RNSound (0.10.12):
     - React/Core
     - RNSound/Core (= 0.10.12)
@@ -219,9 +221,9 @@ PODS:
     - React
   - RNViewShot (2.6.0):
     - React
-  - SDWebImage (5.6.0):
-    - SDWebImage/Core (= 5.6.0)
-  - SDWebImage/Core (5.6.0)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
   - SSZipArchive (2.2.2)
   - TouchID (4.4.1):
     - React
@@ -272,6 +274,7 @@ DEPENDENCIES:
   - RNFirebase (from `../node_modules/react-native-firebase/ios`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler/RNGestureHandler.podspec`)
   - RNInAppBrowser (from `../node_modules/react-native-inappbrowser-reborn`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNSound (from `../node_modules/react-native-sound/RNSound.podspec`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
@@ -349,6 +352,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native-gesture-handler/RNGestureHandler.podspec"
   RNInAppBrowser:
     :path: "../node_modules/react-native-inappbrowser-reborn"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNSound:
     :podspec: "../node_modules/react-native-sound/RNSound.podspec"
   RNSVG:
@@ -403,15 +408,16 @@ SPEC CHECKSUMS:
   RNFirebase: f20e5e4ceaa632aebb1a29a9a91022ae0469c633
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
   RNInAppBrowser: de9ec087677135681d5794a702c1e21e6a0c3b56
+  RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNSound: e157320f503bdd4f4ee6d8542e948d54f90c3c3a
   RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RNViewShot: 05672e0b3c36cd70633466614b4451869a70c6c7
-  SDWebImage: 21b19f56b4226cdfe3aefe4e6848dc43ed129a86
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: 7fc824bf376676ed428a21db7a3c3e29eaa4ec99
+PODFILE CHECKSUM: 89a7919f6457f089e92a78e6526a3ee333501f29
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.3
