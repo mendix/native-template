@@ -16,6 +16,7 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.polidea.reactnativeble.BlePackage;
 import com.proyecto26.inappbrowser.RNInAppBrowserPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
+import com.reactnativecommunity.art.ARTPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 import com.reactnativecommunity.geolocation.GeolocationPackage;
@@ -79,7 +80,8 @@ public class MainApplication extends MendixReactApplication {
             new GeolocationPackage(),
             new CameraRollPackage(),
             new RNCMaskedViewPackage(),
-            new SafeAreaContextPackage()
+            new SafeAreaContextPackage(),
+            new ARTPackage()
     ));
 
     if (BuildConfig.USE_FIREBASE) {

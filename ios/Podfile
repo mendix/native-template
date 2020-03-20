@@ -17,7 +17,6 @@ abstract_target "ReactNative" do
   pod 'React-Core/DevSupport', :path => '../node_modules/react-native'
   pod 'React-Core/RCTWebSocket', :path => '../node_modules/react-native'
 
-  pod 'React-ART', :path => '../node_modules/react-native/Libraries/ART'
   pod 'React-RCTActionSheet', :path => '../node_modules/react-native/Libraries/ActionSheetIOS'
   pod 'React-RCTAnimation', :path => '../node_modules/react-native/Libraries/NativeAnimation'
   pod 'React-RCTBlob', :path => '../node_modules/react-native/Libraries/Blob'
@@ -79,6 +78,7 @@ abstract_target "ReactNative" do
   pod 'react-native-cameraroll', path: '../node_modules/@react-native-community/cameraroll'
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
   pod 'RNCMaskedView', :path => '../node_modules/@react-native-community/masked-view'
+  pod 'ReactNativeART', :path => '../node_modules/@react-native-community/art'
 
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
   pod 'Firebase/Core', '~> 6.19.0'
