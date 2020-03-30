@@ -5,7 +5,6 @@ import com.brentvatne.react.ReactVideoPackage;
 import com.calendarevents.CalendarEventsPackage;
 import com.codemotionapps.reactnativedarkmode.DarkModePackage;
 import com.devfd.RNGeocoder.RNGeocoderPackage;
-import com.dylanvann.fastimage.FastImageViewPackage;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.horcrux.svg.SvgPackage;
@@ -17,16 +16,22 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.polidea.reactnativeble.BlePackage;
 import com.proyecto26.inappbrowser.RNInAppBrowserPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
+import com.reactnativecommunity.art.ARTPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.reactnativecommunity.cameraroll.CameraRollPackage;
+import com.reactnativecommunity.geolocation.GeolocationPackage;
 import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.rnfingerprint.FingerprintAuthPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
-import com.zmxv.RNSound.RNSoundPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+import com.zmxv.RNSound.RNSoundPackage;
+import com.dylanvann.fastimage.FastImageViewPackage;
 
 import org.pgsqlite.SQLitePluginPackage;
 import org.reactnative.camera.RNCameraPackage;
+import org.reactnative.maskedview.RNCMaskedViewPackage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,30 +53,35 @@ public class MainApplication extends MendixReactApplication {
     List<ReactPackage> packages = new ArrayList<>();
     packages.addAll(Arrays.asList(
             new MainReactPackage(),
-            new FastImageViewPackage(),
-            new DarkModePackage(),
-            new CodePush(getCodePushKey(), getApplicationContext(), BuildConfig.DEBUG),
-            new RNGestureHandlerPackage(),
-            new RNCWebViewPackage(),
-            new RNViewShotPackage(),
-            new ReactVideoPackage(),
-            new VectorIconsPackage(),
-            new FingerprintAuthPackage(),
-            new SvgPackage(),
-            new SQLitePluginPackage(),
-            new RNSoundPackage(),
-            new MapsPackage(),
-            new RNInAppBrowserPackage(),
-            new ImagePickerPackage(),
-            new RNGeocoderPackage(),
-            new RNDeviceInfo(),
-            new RNCameraPackage(),
-            new CalendarEventsPackage(),
-            new BlePackage(),
-            new NetInfoPackage(),
             new AsyncStoragePackage(),
+            new BlePackage(),
+            new CalendarEventsPackage(),
+            new CodePush(getCodePushKey(), getApplicationContext(), BuildConfig.DEBUG),
+            new FingerprintAuthPackage(),
+            new ImagePickerPackage(),
+            new NetInfoPackage(),
+            new MapsPackage(),
+            new ReactVideoPackage(),
+            new RNCameraPackage(),
+            new RNCWebViewPackage(),
+            new RNDeviceInfo(),
+            new RNGeocoderPackage(),
+            new RNGestureHandlerPackage(),
+            new ReanimatedPackage(),
+            new RNInAppBrowserPackage(),
+            new RNSoundPackage(),
+            new RNViewShotPackage(),
+            new SQLitePluginPackage(),
+            new SvgPackage(),
+            new VectorIconsPackage(),
+            new DarkModePackage(),
+            new FastImageViewPackage(),
             new RNLocalizePackage(),
-            new ReanimatedPackage()
+            new GeolocationPackage(),
+            new CameraRollPackage(),
+            new RNCMaskedViewPackage(),
+            new SafeAreaContextPackage(),
+            new ARTPackage()
     ));
 
     if (BuildConfig.USE_FIREBASE) {
