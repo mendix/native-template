@@ -663,7 +663,7 @@ EXTERNAL SOURCES:
   react-native-sqlite-storage:
     :path: "../node_modules/react-native-sqlite-storage"
   react-native-video:
-    :podspec: "../node_modules/react-native-video"
+    :path: "../node_modules/react-native-video"
   react-native-view-shot:
     :path: "../node_modules/react-native-view-shot"
   react-native-webview:
@@ -703,17 +703,17 @@ EXTERNAL SOURCES:
   RNFirebase:
     :path: "../node_modules/react-native-firebase/ios"
   RNGestureHandler:
-    :podspec: "../node_modules/react-native-gesture-handler"
+    :path: "../node_modules/react-native-gesture-handler"
   RNInAppBrowser:
     :path: "../node_modules/react-native-inappbrowser-reborn"
   RNLocalize:
     :path: "../node_modules/react-native-localize"
   RNReanimated:
-    :podspec: "../node_modules/react-native-reanimated"
+    :path: "../node_modules/react-native-reanimated"
   RNSound:
-    :podspec: "../node_modules/react-native-sound"
+    :path: "../node_modules/react-native-sound"
   RNSVG:
-    :podspec: "../node_modules/react-native-svg"
+    :path: "../node_modules/react-native-svg"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   TouchID:
@@ -815,6 +815,6 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 8dbe49c02959c2cd10c7dfe409302ad72237a0c6
+PODFILE CHECKSUM: 2aee7cbc270f66bc0af41c646cac4fb9da65c6c9
 
 COCOAPODS: 1.8.4
