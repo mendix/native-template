@@ -89,4 +89,21 @@ post_install do |installer|
       end
     end
   end
+  
+  # For RN 0.59 remove Core UIWebView references
+  installer.pods_project.targets.each do |target|
+    if target.name == 'React'
+        puts "Removing UIWebview references form RN 0.59."
+        build_phase = target.source_build_phase
+        source_files = build_phase.files
+        files_to_delete = source_files.find_all do |file|
+          file.file_ref.pretty_print == 'RNCUIWebView.h' || file.file_ref.pretty_print == 'RNCUIWebView.m' || file.file_ref.pretty_print == 'RNCUIWebViewManager.h' || file.file_ref.pretty_print == 'RNCUIWebViewManager.m' || file.file_ref.pretty_print == 'RCTWebView.h' || file.file_ref.pretty_print == 'RCTWebView.m' || file.file_ref.pretty_print == 'RCTWebViewManager.h' ||
+          file.file_ref.pretty_print == 'RCTWebViewManager.m'
+        end
+        files_to_delete.each do |file|
+          source_files.delete file
+          puts "File #{file.display_name} removed from build."
+        end
+    end
+  end
 end
