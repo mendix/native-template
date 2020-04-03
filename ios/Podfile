@@ -78,19 +78,6 @@ abstract_target "ReactNative" do
   end
 end
 
-pre_install do 
-  # For RN 0.59 remove Core UIWebView references
-  # https://github.com/facebook/react-native/issues/26255#issuecomment-528275747
-  puts("Removing UIWebView reference from RN 0.59 Core")
-  react_project = Xcodeproj::Project.open("../node_modules/react-native/React/React.xcodeproj")
-  react_project.main_group["React/Views"].files.each do |file|
-    if file.path.match(/^RCTWebView/)
-      file.remove_from_project
-    end
-  end
-  react_project.save
-end
-
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
@@ -100,6 +87,20 @@ post_install do |installer|
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << "DEBUG=1"
         end
       end
+    end
+  end
+
+  installer.pods_project.targets.each do |target|
+    if target.name == 'React'
+        source_files = target.source_build_phase.files
+        offending_files = source_files.find_all do |file|
+            puts "File: #{file.file_ref.display_name}"
+            file.file_ref.display_name.match /^RCTWebView/
+        end
+        offending_files.each do |file|
+          puts "Deleting source file #{file.inspect} from target #{target.inspect}."
+          source_files.delete file
+        end
     end
   end
 end
