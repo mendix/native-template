@@ -128,6 +128,7 @@ dependencies {
     implementation project(":@react-native-community_masked-view")
     implementation project(":react-native-safe-area-context")
     implementation project(':@react-native-community_art')
+    implementation project(':@react-native-community_datetimepicker')
     implementation project(":mendixnative-release")
     implementation project(path: ':react-native-localize')
     implementation fileTree(dir: "libs", include: ["*.jar"])

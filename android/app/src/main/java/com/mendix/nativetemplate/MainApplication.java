@@ -15,6 +15,7 @@ import com.microsoft.codepush.react.CodePush;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.polidea.reactnativeble.BlePackage;
 import com.proyecto26.inappbrowser.RNInAppBrowserPackage;
+import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.reactnativecommunity.art.ARTPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
@@ -81,7 +82,8 @@ public class MainApplication extends MendixReactApplication {
             new CameraRollPackage(),
             new RNCMaskedViewPackage(),
             new SafeAreaContextPackage(),
-            new ARTPackage()
+            new ARTPackage(),
+            new RNDateTimePickerPackage()
     ));
 
     if (BuildConfig.USE_FIREBASE) {
