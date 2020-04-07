@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
                 try {
                     URL runtimeUrl = new URL(AppUrl.forRuntime(appUrl));
                     OkHttpClient client = new OkHttpClient.Builder().connectTimeout(4, TimeUnit.SECONDS).callTimeout(4, TimeUnit.SECONDS).build();
-                    URL statusUrl = new URL(runtimeUrl.getProtocol(), runtimeUrl.getHost(), appPreferences.getRemoteDebuggingPackagerPort(), "status");
+                    URL statusUrl = new URL(runtimeUrl.getProtocol(), runtimeUrl.getHost(), appPreferences.getPackagerPort(), "status");
                     Response response = client.newCall(new Request.Builder().url(statusUrl).get().build()).execute();
                     if (!response.isSuccessful()) {
                         showPackagerErrorToast();
