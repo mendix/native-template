@@ -53,6 +53,8 @@
 	<string>To use that feature the app needs access to your location.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To use that feature the app needs access to your location.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To use that feature the app needs access to your location.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>To use that feature the app needs access to your microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
