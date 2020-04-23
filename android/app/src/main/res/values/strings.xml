@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">nativeTemplate</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey"> </string>
 </resources>
