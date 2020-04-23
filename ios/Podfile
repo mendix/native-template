@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 abstract_target "ReactNative" do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -59,11 +60,17 @@ abstract_target "ReactNative" do
   pod 'Crashlytics', '~> 3.14.0'
 
   target 'nativeTemplate' do
+    # inherit! :search_paths
     # Intentionally left empty
+
+    use_native_modules!
   end
 
   target 'dev' do
+    # inherit! :search_paths
     # Intentionally left empty
+
+    use_native_modules!
   end
 end
 
