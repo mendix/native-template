@@ -6,14 +6,16 @@
 #import <UIKit/UIKit.h>
 #import <React/RCTBridge.h>
 #import <React/RCTBridgeDelegate.h>
+#import <React/RCTReloadCommand.h>
 #import "MendixApp.h"
 
 @protocol ReactNativeDelegate;
-@interface ReactNative: NSObject<RCTBridgeDelegate> {
+@interface ReactNative: NSObject<RCTBridgeDelegate, RCTReloadListener> {
   RCTBridge *bridge;
   UIWindow *rootWindow;
   UIWindow *appWindow;
   MendixApp *mendixApp;
+  NSURL *bundleUrl;
   NSString *codePushKey;
   NSDictionary *launchOptions;
 }
