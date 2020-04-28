@@ -10,5 +10,6 @@
 + (NSURL *) forBundle:(NSString *)url port:(int)port isDebuggingRemotely:(BOOL)isDebuggingRemotely isDevModeEnabled:(BOOL)isDevModeEnabled;
 + (NSURL *) forRuntime:(NSString *)url;
 + (NSURL *) forValidation:(NSString*)url;
++ (NSURL *) forRuntimeInfo:(NSString*)url;
 + (BOOL) isValid:(NSString*)url;
 @end
