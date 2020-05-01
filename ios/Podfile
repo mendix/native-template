@@ -55,7 +55,9 @@ abstract_target "ReactNative" do
   pod 'Google-Maps-iOS-Utils'
   pod 'react-native-geocoder', :path => '../node_modules/react-native-geocoder'
   pod 'IQKeyboardManager'
+  pod 'Firebase/Core', '~> 6.19.0'
   pod 'Firebase/Messaging', '~> 6.19.0'
+  pod 'GoogleUtilities', '~> 6.5.1'
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.14.0'
 
