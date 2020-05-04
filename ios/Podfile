@@ -6,8 +6,7 @@ abstract_target "ReactNative" do
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for nativeTemplate
-  # RN pods start
+  # RN development pods
   pod 'FBLazyVector', :path => '../node_modules/react-native/Libraries/FBLazyVector'
   pod 'FBReactNativeSpec', :path => '../node_modules/react-native/Libraries/FBReactNativeSpec'
   pod 'RCTRequired', :path => '../node_modules/react-native/Libraries/RCTRequired'
@@ -36,13 +35,12 @@ abstract_target "ReactNative" do
   pod 'ReactCommon/turbomodule/core', :path => '../node_modules/react-native/ReactCommon'
   pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
 
-  # Third party deps podspec link
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
   # RN pods end
 
-  # Libs
+  # Manually linked dependencies
   pod 'react-native-camera', :path => '../node_modules/react-native-camera', subspecs: [
     'TextDetector',
     'FaceDetectorMLKit'
@@ -51,9 +49,11 @@ abstract_target "ReactNative" do
   pod 'react-native-ble-plx-swift', :path => '../node_modules/react-native-ble-plx'
   pod 'react-native-maps', :path => '../node_modules/react-native-maps'
   pod 'react-native-google-maps', :path => '../node_modules/react-native-maps'
+  pod 'react-native-geocoder', :path => '../node_modules/react-native-geocoder'
+
+  # Third party dependencies of dependencies
   pod 'GoogleMaps'
   pod 'Google-Maps-iOS-Utils'
-  pod 'react-native-geocoder', :path => '../node_modules/react-native-geocoder'
   pod 'IQKeyboardManager'
   pod 'Firebase/Core', '~> 6.19.0'
   pod 'Firebase/Messaging', '~> 6.19.0'
