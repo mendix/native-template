@@ -1,2 +1,2 @@
-#include "Pods/Target Support Files/Pods-ReactNative-nativeTemplate/Pods-ReactNative-nativeTemplate.debug.xcconfig"
+#include "Pods/Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"
 #include "config.xcconfig"
