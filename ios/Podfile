@@ -2,7 +2,7 @@
 platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-abstract_target "ReactNative" do
+def common_pods
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
 
@@ -60,20 +60,18 @@ abstract_target "ReactNative" do
   pod 'GoogleUtilities', '~> 6.5.1'
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.14.0'
+end
 
-  target 'nativeTemplate' do
-    # inherit! :search_paths
-    # Intentionally left empty
+target 'nativeTemplate' do
+  use_native_modules!
+  common_pods
+  # Intentionally left empty
+end
 
-    use_native_modules!
-  end
-
-  target 'dev' do
-    # inherit! :search_paths
-    # Intentionally left empty
-
-    use_native_modules!
-  end
+target 'dev' do
+  use_native_modules!
+  common_pods
+  # Intentionally left empty
 end
 
 post_install do |installer|
