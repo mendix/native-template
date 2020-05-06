@@ -3,6 +3,7 @@ package com.mendix.nativetemplate;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactPackage;
 import com.mendix.mendixnative.MendixReactApplication;
+import com.microsoft.codepush.react.CodePush;
 
 import java.util.Arrays;
 import java.util.List;
@@ -23,6 +24,7 @@ public class MainApplication extends MendixReactApplication {
 
         // Packages that cannot be autolinked yet can be added manually here, for example:
         // packages.add(new MyReactNativePackage());
+        packages.add(new CodePush(getCodePushKey(), getApplicationContext(), BuildConfig.DEBUG));
 
         if (BuildConfig.USE_FIREBASE) {
             packages.addAll(Arrays.asList(
