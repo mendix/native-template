@@ -1,2 +1,2 @@
-#include "Pods/Target Support Files/Pods-ReactNative-dev/Pods-ReactNative-dev.debug.xcconfig"
+#include "Pods/Target Support Files/Pods-dev/Pods-dev.debug.xcconfig"
 #include "config.xcconfig"
