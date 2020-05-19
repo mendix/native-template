@@ -114,9 +114,9 @@ dependencies {
     devImplementation "me.dm7.barcodescanner:zxing:1.9.13"
 
     // Required for Custom Dev Apps
-    implementation 'com.fasterxml.jackson.core:jackson-core:2.10.3'
-    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.3'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-core:2.10.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-databind:2.10.3'
 
     androidTestImplementation("com.wix:detox:+")
 }
