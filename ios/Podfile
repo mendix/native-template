@@ -41,10 +41,7 @@ def common_pods
   # RN pods end
 
   # Manually linked dependencies
-  pod 'react-native-camera', :path => '../node_modules/react-native-camera', subspecs: [
-    'TextDetector',
-    'FaceDetectorMLKit'
-  ]
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
   pod 'react-native-ble-plx', :path => '../node_modules/react-native-ble-plx'
   pod 'react-native-ble-plx-swift', :path => '../node_modules/react-native-ble-plx'
   pod 'react-native-maps', :path => '../node_modules/react-native-maps'

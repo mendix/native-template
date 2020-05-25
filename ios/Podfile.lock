@@ -26,15 +26,6 @@ PODS:
   - Firebase/Messaging (6.19.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 4.3.0)
-  - Firebase/MLVision (6.19.0):
-    - Firebase/CoreOnly
-    - FirebaseMLVision (~> 0.19.0)
-  - Firebase/MLVisionFaceModel (6.19.0):
-    - Firebase/CoreOnly
-    - FirebaseMLVisionFaceModel (~> 0.19.0)
-  - Firebase/MLVisionTextModel (6.19.0):
-    - Firebase/CoreOnly
-    - FirebaseMLVisionTextModel (~> 0.19.0)
   - FirebaseAnalytics (6.3.1):
     - FirebaseCore (~> 6.6)
     - FirebaseInstallations (~> 1.1)
@@ -75,28 +66,6 @@ PODS:
     - GoogleUtilities/Reachability (~> 6.5)
     - GoogleUtilities/UserDefaults (~> 6.5)
     - Protobuf (>= 3.9.2, ~> 3.9)
-  - FirebaseMLCommon (0.19.0):
-    - FirebaseCore (~> 6.3)
-    - FirebaseInstanceID (~> 4.2)
-    - GoogleToolboxForMac/Logger (~> 2.1)
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
-    - GoogleUtilities/UserDefaults (~> 6.0)
-    - GTMSessionFetcher/Core (~> 1.1)
-    - Protobuf (~> 3.5)
-  - FirebaseMLVision (0.19.0):
-    - FirebaseCore (~> 6.3)
-    - FirebaseMLCommon (~> 0.19)
-    - GoogleAPIClientForREST/Core (~> 1.3)
-    - GoogleAPIClientForREST/Vision (~> 1.3)
-    - GoogleToolboxForMac/Logger (~> 2.1)
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-    - GTMSessionFetcher/Core (~> 1.1)
-    - Protobuf (~> 3.5)
-  - FirebaseMLVisionFaceModel (0.19.0):
-    - FirebaseMLVision (~> 0.19)
-  - FirebaseMLVisionTextModel (0.19.0):
-    - FirebaseMLVision (~> 0.19)
   - Folly (2018.10.22.00):
     - boost-for-react-native
     - DoubleConversion
@@ -123,11 +92,6 @@ PODS:
     - GoogleMaps
   - Google-Maps-iOS-Utils/QuadTree (2.1.0):
     - GoogleMaps
-  - GoogleAPIClientForREST/Core (1.3.11):
-    - GTMSessionFetcher (>= 1.1.7)
-  - GoogleAPIClientForREST/Vision (1.3.11):
-    - GoogleAPIClientForREST/Core
-    - GTMSessionFetcher (>= 1.1.7)
   - GoogleAppMeasurement (6.3.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -143,18 +107,6 @@ PODS:
   - GoogleMaps/Base (3.5.0)
   - GoogleMaps/Maps (3.5.0):
     - GoogleMaps/Base
-  - GoogleToolboxForMac/DebugUtils (2.2.2):
-    - GoogleToolboxForMac/Defines (= 2.2.2)
-  - GoogleToolboxForMac/Defines (2.2.2)
-  - GoogleToolboxForMac/Logger (2.2.2):
-    - GoogleToolboxForMac/Defines (= 2.2.2)
-  - "GoogleToolboxForMac/NSData+zlib (2.2.2)":
-    - GoogleToolboxForMac/Defines (= 2.2.2)
-  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.2)":
-    - GoogleToolboxForMac/DebugUtils (= 2.2.2)
-    - GoogleToolboxForMac/Defines (= 2.2.2)
-    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.2)"
-  - "GoogleToolboxForMac/NSString+URLArguments (2.2.2)"
   - GoogleUtilities (6.5.2):
     - GoogleUtilities/AppDelegateSwizzler (= 6.5.2)
     - GoogleUtilities/Environment (= 6.5.2)
@@ -187,11 +139,6 @@ PODS:
     - GoogleUtilities/MethodSwizzler
   - GoogleUtilities/UserDefaults (6.5.2):
     - GoogleUtilities/Logger
-  - GTMSessionFetcher (1.3.1):
-    - GTMSessionFetcher/Full (= 1.3.1)
-  - GTMSessionFetcher/Core (1.3.1)
-  - GTMSessionFetcher/Full (1.3.1):
-    - GTMSessionFetcher/Core (= 1.3.1)
   - IQKeyboardManager (6.5.5)
   - JWT (3.0.0-beta.12):
     - Base64 (~> 1.1.2)
@@ -380,22 +327,14 @@ PODS:
   - react-native-ble-plx-swift (1.1.1)
   - react-native-calendar-events (1.7.3):
     - React
-  - react-native-camera/FaceDetectorMLKit (3.19.2):
-    - Firebase/MLVision
-    - Firebase/MLVisionFaceModel
+  - react-native-camera (3.19.2):
     - React
-    - react-native-camera/RCT
-    - react-native-camera/RN
+    - react-native-camera/RCT (= 3.19.2)
+    - react-native-camera/RN (= 3.19.2)
   - react-native-camera/RCT (3.19.2):
     - React
   - react-native-camera/RN (3.19.2):
     - React
-  - react-native-camera/TextDetector (3.19.2):
-    - Firebase/MLVision
-    - Firebase/MLVisionTextModel
-    - React
-    - react-native-camera/RCT
-    - react-native-camera/RN
   - react-native-cameraroll (1.4.0):
     - React
   - react-native-geocoder (0.5.0):
@@ -542,8 +481,7 @@ DEPENDENCIES:
   - react-native-ble-plx (from `../node_modules/react-native-ble-plx`)
   - react-native-ble-plx-swift (from `../node_modules/react-native-ble-plx`)
   - react-native-calendar-events (from `../node_modules/react-native-calendar-events`)
-  - react-native-camera/FaceDetectorMLKit (from `../node_modules/react-native-camera`)
-  - react-native-camera/TextDetector (from `../node_modules/react-native-camera`)
+  - react-native-camera (from `../node_modules/react-native-camera`)
   - "react-native-cameraroll (from `../node_modules/@react-native-community/cameraroll`)"
   - react-native-geocoder (from `../node_modules/react-native-geocoder`)
   - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
@@ -600,19 +538,12 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
-    - FirebaseMLCommon
-    - FirebaseMLVision
-    - FirebaseMLVisionFaceModel
-    - FirebaseMLVisionTextModel
     - Google-Maps-iOS-Utils
-    - GoogleAPIClientForREST
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleMaps
-    - GoogleToolboxForMac
     - GoogleUtilities
-    - GTMSessionFetcher
     - IQKeyboardManager
     - JWT
     - libwebp
@@ -759,21 +690,14 @@ SPEC CHECKSUMS:
   FirebaseInstallations: acb3216eb9784d3b1d2d2d635ff74fa892cc0c44
   FirebaseInstanceID: cef67c4967c7cecb56ea65d8acbb4834825c587b
   FirebaseMessaging: 828e66eb357a893e3cebd9ee0f6bc1941447cc94
-  FirebaseMLCommon: 074a67e05122b1c9f6401a4e33b2cea3b4efd224
-  FirebaseMLVision: 7a456009787690e3b53436092ae9b635563de8f3
-  FirebaseMLVisionFaceModel: d6ba42000f263df52187aee936262bc2002b3389
-  FirebaseMLVisionTextModel: c264caa3100ca804580bf2a7c1cb9ff390d1f471
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
   Google-Maps-iOS-Utils: c32891ff472eaaa1fca032beedafa1a013af7875
-  GoogleAPIClientForREST: 0f19a8280dfe6471f76016645d26eb5dae305101
   GoogleAppMeasurement: c29d405ff76e18551b5d158eaba6753fda8c7542
   GoogleDataTransport: 061fe7d9b476710e3cd8ea51e8e07d8b67c2b420
   GoogleDataTransportCCTSupport: 0f39025e8cf51f168711bd3fb773938d7e62ddb5
   GoogleMaps: 32ca02de09de357a10ac773f2c70f1986751392d
-  GoogleToolboxForMac: 800648f8b3127618c1b59c7f97684427630c5ea3
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
-  GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JWT: 9b5c05abbcc1a0e69c3c91e1655b3387fc7e581d
   libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
@@ -836,6 +760,6 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: e980337ab5870bdf546534ffa8a21fdbbc6a7d0d
+PODFILE CHECKSUM: 35856f37ea752dd18aa0d75ccdebe8e67acaef5c
 
 COCOAPODS: 1.9.1
