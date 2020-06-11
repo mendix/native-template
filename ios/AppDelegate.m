@@ -38,16 +38,24 @@
 
     return YES;
   }
+  
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  self.window.rootViewController = [UIViewController new];
+  [self.window makeKeyAndVisible];
 
   NSString *url = [mainBundle objectForInfoDictionaryKey:@"Runtime url"];
   if (url == nil) {
-    [NSException raise:@"RuntimeURLMissing" format:@"Missing the 'Runtime url' configuration within the Info.plist file"];
+    [self showUnrecoverableDialogWithTitle:@"The runtime URL is missing" message:@"Missing the 'Runtime url' configuration within the Info.plist file. The app will close."];
   }
   NSURL *runtimeUrl = [AppUrl forRuntime:[url stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
   NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
   
-  [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:false clearDataAtLaunch:false reactLoadingStoryboard:nil] launchOptions:launchOptions];
-  [ReactNative.instance start];
+  if (bundleUrl != nil) {
+    [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:false clearDataAtLaunch:false reactLoadingStoryboard:nil] launchOptions:launchOptions];
+    [ReactNative.instance start];
+  } else {
+    [self showUnrecoverableDialogWithTitle:@"No Mendix bundle found" message:@"Missing the Mendix app bundle. Make sure that the index.ios.bundle file is available in ios/NativeTemplate/Bundle folder. If building locally consult the documentation on how to generate a bundle from your project."];
+  }
 
   return YES;
 }
@@ -84,4 +92,11 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 #endif
 }
 
+- (void) showUnrecoverableDialogWithTitle:(NSString *)title message:(NSString *) message {
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+  [alertController addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [NSException raise:@"UnrecoverableError" format:message];
+  }]];
+  [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+}
 @end
