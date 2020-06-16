@@ -44,8 +44,9 @@
   [self.window makeKeyAndVisible];
 
   NSString *url = [mainBundle objectForInfoDictionaryKey:@"Runtime url"];
-  if (url == nil) {
+  if (url == nil || [url length] == 0) {
     [self showUnrecoverableDialogWithTitle:@"The runtime URL is missing" message:@"Missing the 'Runtime url' configuration within the Info.plist file. The app will close."];
+    return NO;
   }
   NSURL *runtimeUrl = [AppUrl forRuntime:[url stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
   NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
