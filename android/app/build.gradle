@@ -98,6 +98,7 @@ project.ext.vectoricons = [
 ]
 
 dependencies {
+    implementation project(':react-native-splash-screen')
     implementation project(':react-native-code-push')
     implementation project(":react-native-firebase")
     implementation project(":mendixnative-release")
