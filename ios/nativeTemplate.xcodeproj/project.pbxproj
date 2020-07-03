@@ -28,8 +28,10 @@
 		1A0B3AFD23992F8200388BF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
 		1AAE158923C5FEFC00F855F4 /* SwiftInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE158823C5FEFC00F855F4 /* SwiftInterop.swift */; };
-		2C005A9523DF3EF300003E29 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C005A9423DF3EF300003E29 /* libMendix.a */; };
-		2C005A9623DF3EF300003E29 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C005A9423DF3EF300003E29 /* libMendix.a */; };
+		2C887F7224B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */; };
+		2C887F7324B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */; };
+		2C887FD324B7E4510003DC53 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C887FC824B7E4500003DC53 /* libMendix.a */; };
+		2C887FD424B7E4510003DC53 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C887FC824B7E4500003DC53 /* libMendix.a */; };
 		9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */; };
 		B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11502903429AC2E6E69E6482 /* libPods-dev.a */; };
 		EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
@@ -64,7 +66,25 @@
 		1AAE158823C5FEFC00F855F4 /* SwiftInterop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftInterop.swift; sourceTree = "<group>"; };
 		24E659414C7D37BED2C1EE79 /* Pods-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.debug.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.debug.xcconfig"; sourceTree = "<group>"; };
 		2C005A7823D5B1E200003E29 /* nativeTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = nativeTemplate.entitlements; path = nativeTemplate/nativeTemplate.entitlements; sourceTree = "<group>"; };
-		2C005A9423DF3EF300003E29 /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
+		2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashScreenPresenter.m; sourceTree = "<group>"; };
+		2C887F7424B7C0440003DC53 /* SplashScreenPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashScreenPresenter.h; sourceTree = "<group>"; };
+		2C887FC224B7E4500003DC53 /* MendixNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixNative.h; sourceTree = "<group>"; };
+		2C887FC324B7E4500003DC53 /* NativeReloadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeReloadHandler.h; sourceTree = "<group>"; };
+		2C887FC424B7E4500003DC53 /* AppMenuProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMenuProtocol.h; sourceTree = "<group>"; };
+		2C887FC524B7E4500003DC53 /* WarningsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningsFilter.h; sourceTree = "<group>"; };
+		2C887FC624B7E4500003DC53 /* SplashScreenPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenPresenterProtocol.h; sourceTree = "<group>"; };
+		2C887FC724B7E4500003DC53 /* AppPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreferences.h; sourceTree = "<group>"; };
+		2C887FC824B7E4500003DC53 /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
+		2C887FC924B7E4500003DC53 /* ReactNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNative.h; sourceTree = "<group>"; };
+		2C887FCA24B7E4500003DC53 /* MendixApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixApp.h; sourceTree = "<group>"; };
+		2C887FCB24B7E4510003DC53 /* AppUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUrl.h; sourceTree = "<group>"; };
+		2C887FCC24B7E4510003DC53 /* MxConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxConfiguration.h; sourceTree = "<group>"; };
+		2C887FCD24B7E4510003DC53 /* MendixBackwardsCompatUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixBackwardsCompatUtility.h; sourceTree = "<group>"; };
+		2C887FCE24B7E4510003DC53 /* MendixReactWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixReactWindow.h; sourceTree = "<group>"; };
+		2C887FCF24B7E4510003DC53 /* RuntimeInfoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeInfoProvider.h; sourceTree = "<group>"; };
+		2C887FD024B7E4510003DC53 /* RuntimeInfoResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeInfoResponse.h; sourceTree = "<group>"; };
+		2C887FD124B7E4510003DC53 /* UnsupportedFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsupportedFeatures.h; sourceTree = "<group>"; };
+		2C887FD224B7E4510003DC53 /* RuntimeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeInfo.h; sourceTree = "<group>"; };
 		2E683DD88AD2190EB6610BB7 /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1AE629EDD2EFAEE88E17A6 /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
 		3A50E1C430A9EB98E247701D /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,17 +98,6 @@
 		CBB85EF00DCBBB622B4C25E7 /* Pods-nativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		DDC51A1160C5ED4D3C396705 /* Pods-dev.releasedevapp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.releasedevapp.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.releasedevapp.xcconfig"; sourceTree = "<group>"; };
 		EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.ttf"; sourceTree = "<group>"; };
-		EB59213F23BF95B6001D6155 /* MendixNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixNative.h; sourceTree = "<group>"; };
-		EB59214B23BF9B57001D6155 /* AppMenuProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMenuProtocol.h; sourceTree = "<group>"; };
-		EB59214C23BF9B57001D6155 /* AppUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUrl.h; sourceTree = "<group>"; };
-		EB59214D23BF9B57001D6155 /* MxConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxConfiguration.h; sourceTree = "<group>"; };
-		EB59214E23BF9B57001D6155 /* AppPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreferences.h; sourceTree = "<group>"; };
-		EB59215023BF9B57001D6155 /* NativeReloadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeReloadHandler.h; sourceTree = "<group>"; };
-		EB59215123BF9B57001D6155 /* ReactNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNative.h; sourceTree = "<group>"; };
-		EB59215223BF9B57001D6155 /* MendixApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixApp.h; sourceTree = "<group>"; };
-		EB59215323BF9B57001D6155 /* MendixNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixNative.h; sourceTree = "<group>"; };
-		EB59215723BF9BBB001D6155 /* WarningsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningsFilter.h; sourceTree = "<group>"; };
-		EB59215923BF9C93001D6155 /* MendixReactWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixReactWindow.h; sourceTree = "<group>"; };
 		EB59215A23BFA1F5001D6155 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB78BDD623BF47FD00E56827 /* nativeTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nativeTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		EB78BDD823BF47FE00E56827 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C005A9523DF3EF300003E29 /* libMendix.a in Frameworks */,
+				2C887FD324B7E4510003DC53 /* libMendix.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */,
 			);
@@ -113,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C005A9623DF3EF300003E29 /* libMendix.a in Frameworks */,
+				2C887FD424B7E4510003DC53 /* libMendix.a in Frameworks */,
 				1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */,
 				B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */,
 			);
@@ -131,6 +140,8 @@
 				EB59215A23BFA1F5001D6155 /* main.m */,
 				EB78BDDB23BF483700E56827 /* AppDelegate.h */,
 				EB78BDD823BF47FE00E56827 /* AppDelegate.m */,
+				2C887F7424B7C0440003DC53 /* SplashScreenPresenter.h */,
+				2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				1AAE158823C5FEFC00F855F4 /* SwiftInterop.swift */,
@@ -256,18 +267,23 @@
 		EBC808E222DF20DD007E5F3D /* MendixNative */ = {
 			isa = PBXGroup;
 			children = (
-				EB59214B23BF9B57001D6155 /* AppMenuProtocol.h */,
-				EB59214E23BF9B57001D6155 /* AppPreferences.h */,
-				EB59215723BF9BBB001D6155 /* WarningsFilter.h */,
-				EB59214C23BF9B57001D6155 /* AppUrl.h */,
-				EB59215223BF9B57001D6155 /* MendixApp.h */,
-				EB59215323BF9B57001D6155 /* MendixNative.h */,
-				2C005A9423DF3EF300003E29 /* libMendix.a */,
-				EB59214D23BF9B57001D6155 /* MxConfiguration.h */,
-				EB59215923BF9C93001D6155 /* MendixReactWindow.h */,
-				EB59215023BF9B57001D6155 /* NativeReloadHandler.h */,
-				EB59215123BF9B57001D6155 /* ReactNative.h */,
-				EB59213F23BF95B6001D6155 /* MendixNative.h */,
+				2C887FC424B7E4500003DC53 /* AppMenuProtocol.h */,
+				2C887FC724B7E4500003DC53 /* AppPreferences.h */,
+				2C887FCB24B7E4510003DC53 /* AppUrl.h */,
+				2C887FC824B7E4500003DC53 /* libMendix.a */,
+				2C887FCA24B7E4500003DC53 /* MendixApp.h */,
+				2C887FCD24B7E4510003DC53 /* MendixBackwardsCompatUtility.h */,
+				2C887FC224B7E4500003DC53 /* MendixNative.h */,
+				2C887FCE24B7E4510003DC53 /* MendixReactWindow.h */,
+				2C887FCC24B7E4510003DC53 /* MxConfiguration.h */,
+				2C887FC324B7E4500003DC53 /* NativeReloadHandler.h */,
+				2C887FC924B7E4500003DC53 /* ReactNative.h */,
+				2C887FD224B7E4510003DC53 /* RuntimeInfo.h */,
+				2C887FCF24B7E4510003DC53 /* RuntimeInfoProvider.h */,
+				2C887FD024B7E4510003DC53 /* RuntimeInfoResponse.h */,
+				2C887FC624B7E4500003DC53 /* SplashScreenPresenterProtocol.h */,
+				2C887FD124B7E4510003DC53 /* UnsupportedFeatures.h */,
+				2C887FC524B7E4500003DC53 /* WarningsFilter.h */,
 			);
 			path = MendixNative;
 			sourceTree = "<group>";
@@ -547,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB59215B23BFA1F5001D6155 /* main.m in Sources */,
+				2C887F7224B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */,
 				1AAE158923C5FEFC00F855F4 /* SwiftInterop.swift in Sources */,
 				EB55E08A23BF7FF700E3FB34 /* AppDelegate.m in Sources */,
 			);
@@ -559,6 +576,7 @@
 				1A0B3AE22397FBF600388BF7 /* MendixReactWindowExtensions.swift in Sources */,
 				1A0B3AD52397E16900388BF7 /* MendixAppViewController.swift in Sources */,
 				1A0B3ADE2397F36300388BF7 /* QRView.swift in Sources */,
+				2C887F7324B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */,
 				1A0B3AE02397F38300388BF7 /* QRMaskView.swift in Sources */,
 				EB55E08823BF7FF500E3FB34 /* AppDelegate.m in Sources */,
 				1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */,
