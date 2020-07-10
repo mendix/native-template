@@ -1,17 +1,18 @@
 #import "SplashScreenPresenter.h"
 #import "ReactNative.h"
 #import "RNSplashScreen.h"
+#import "StoryBoardSplash.m"
 
 @implementation SplashScreenPresenter
 
 - (void) show:(UIView * _Nullable)rootView {
   if (rootView != nil) {
-    [RNSplashScreen showSplash:@"LaunchScreen" inRootView:rootView];
+    [RNSplashScreen showStoryBoard:@"LaunchScreen" inRootView:rootView];
   }
 }
 
 - (void) hide {
-  [RNSplashScreen hide];
+  [RNSplashScreen hideStoryBoard];
 }
 
 @end
