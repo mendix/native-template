@@ -4,6 +4,11 @@
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "RNFirebase/RNFirebaseNotifications.h"
 #import "RNFirebase/RNFirebaseMessaging.h"
+#import "Constants.h"
+
+#if ENABLE_DEEP_LINK
+#import "React/RCTLinkingManager.h"
+#endif
 
 @implementation AppDelegate
 
@@ -100,4 +105,11 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
   }]];
   [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
 }
+
+#if ENABLE_DEEP_LINK
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+#endif
+
 @end
