@@ -6,7 +6,7 @@
     "environmentVariables": [{ "name": "CODE_PUSH_KEY", "value": "" }, { "name": "IS_DEV_APP", "value": false }],
     "toolsets": {
       "xcode": {
-        "xcodeVersion": "11.4.1",
+        "xcodeVersion": "11.5",
         "automaticSigning": false,
         "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
         "podfilePath": "ios/Podfile",
