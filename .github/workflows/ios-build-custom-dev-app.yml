@@ -21,5 +21,5 @@ jobs:
       run: pod install
       working-directory: ./ios
     - name: build
-      run: xcodebuild archive -workspace nativetemplate.xcworkspace -scheme Dev -archivePath ./nativetemplate.xcarchive
+      run: xcodebuild archive -workspace nativetemplate.xcworkspace -scheme Dev -archivePath ./nativetemplate.xcarchive -allowProvisioningUpdates
       working-directory: ./ios
