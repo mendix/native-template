@@ -22,4 +22,5 @@ jobs:
               with:
                     packageManager: npm
             - name: Build with Gradle
-              run: ./android/gradlew assembleDevDebug
+              run: ./gradlew assembleDevDebug
+              working-directory: ./android
