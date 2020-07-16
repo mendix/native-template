@@ -1,0 +1,25 @@
+name: IOS Build Custom Dev App
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: npm install
+      uses: Jaid/action-npm-install@v1.2.4
+      with:
+        packageManager: npm
+    - name: pod Install
+      run: pod install
+      working-directory: ./ios
+    - name: build
+      run: xcodebuild -workspace nativetemplate.xcworkspace -scheme Dev
+      working-directory: ./ios
