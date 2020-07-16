@@ -1,4 +1,4 @@
-name: IOS Build Custom Dev App
+name: IOS Custom Dev App CI
 
 on:
   push:
