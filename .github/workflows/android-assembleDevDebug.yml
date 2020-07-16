@@ -1,4 +1,4 @@
-name: Android CI
+name: Android Custom Dev App CI
 
 on:
     push:
