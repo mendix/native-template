@@ -1,0 +1,95 @@
+{
+    "capabilities": {
+        "deepLink": {
+            "ios": {
+                "imports": [
+                    "\"React/RCTLinkingManager.h\""
+                ],
+                "hooks": {
+                    "openURL": [
+                        "[RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation]"
+                    ]
+                }
+            }
+        }
+    },
+    "dependencies": {
+        "react-native-ble-plx": {
+            "ios": {
+                "pods": {
+                    "react-native-ble-plx": {
+                        "path": "react-native-ble-plx"
+                    },
+                    "react-native-ble-plx-swift": {
+                        "path": "react-native-ble-plx"
+                    }
+                }
+            }
+        },
+        "react-native-camera": {
+            "ios": {
+                "pods": {
+                    "react-native-camera": {
+                        "path": "react-native-camera"
+                    }
+                }
+            }
+        },
+        "react-native-firebase": {
+            "ios": {
+                "pods": {
+                    "Firebase/Core": {
+                        "version": "~> 6.19.0"
+                    },
+                    "Firebase/Messaging": {
+                        "version": "~> 6.19.0"
+                    },
+                    "GoogleUtilities": {
+                        "version": "~> 6.5.1"
+                    }
+                },
+                "imports": [
+                    "<Firebase.h>",
+                    "\"RNFirebase/RNFirebaseNotifications.h\"",
+                    "\"RNFirebase/RNFirebaseMessaging.h\""
+                ],
+                "hooks": {
+                    "didFinishLaunchingWithOptions": [
+                        "[FIRApp configure]",
+                        "[RNFirebaseNotifications configure]"
+                    ],
+                    "didReceiveLocalNotification": [
+                        "[[RNFirebaseNotifications instance] didReceiveLocalNotification:notification]"
+                    ],
+                    "didReceiveRemoteNotification": [
+                        "[[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler]"
+                    ],
+                    "didRegisterUserNotificationSettings": [
+                        "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings]"
+                    ],
+                    "openURL": []
+                }
+            }
+        },
+        "react-native-geocoder": {
+            "ios": {
+                "pods": {
+                    "react-native-geocoder": {
+                        "path": "react-native-geocoder"
+                    }
+                }
+            }
+        },
+        "react-native-maps": {
+            "ios": {
+                "pods": {
+                    "react-native-google-maps": {
+                        "path": "react-native-maps"
+                    },
+                    "GoogleMaps": {},
+                    "Google-Maps-iOS-Utils": {}
+                }
+            }
+        }
+    }
+}

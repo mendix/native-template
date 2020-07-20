@@ -1,0 +1,115 @@
+require 'json'
+
+def generate_pod_dependencies!
+	modules = get_react_native_config!["dependencies"]
+	config = get_project_config!
+	config["dependencies"].each do |name, options|
+		modules.include?(name) && include_pods!(name, options["ios"]["pods"])
+	end
+end
+
+def generate_mendix_delegate!
+	imports = []
+	hooks = {
+		didFinishLaunchingWithOptions: [],
+		didReceiveLocalNotification: [],
+		didReceiveRemoteNotification: [],
+		didRegisterUserNotificationSettings: [],
+		openURL: [],
+	}
+
+	config = get_project_config!
+	modules = get_react_native_config!["dependencies"]
+	dependencies = config["dependencies"].select { |name, _| modules.include?(name) }.transform_values { |options| options["ios"] }
+	capabilities = config["capabilities"].transform_values { |options| options["ios"] }
+	({}).merge(dependencies, capabilities).each do |_, options|
+		!options['imports'].nil? && imports << options['imports'].map { |import| "#import #{import}" }
+
+		!options['hooks'].nil? && hooks.each do |name, hook|
+			!options['hooks'][name.to_s].nil? && hook << options['hooks'][name.to_s].map { |line| "#{line};" }
+		end
+	end
+
+	open('MendixAppDelegate.m', 'w') do |file|
+		file << replace_template_with_values!(
+			imports.flatten.uniq.join("\n"),
+			hooks[:didFinishLaunchingWithOptions].flatten.uniq.join("\n"),
+			hooks[:didReceiveLocalNotification].flatten.uniq.join("\n"),
+			hooks[:didReceiveRemoteNotification].flatten.uniq.join("\n"),
+			hooks[:didRegisterUserNotificationSettings].flatten.uniq.join("\n"),
+			hooks[:openURL].flatten.uniq.join("\n")
+		)
+	end
+end
+
+def replace_template_with_values!(
+	imports = "", 
+	didFinishLaunchingWithOptions = "",
+	didReceiveLocalNotification = "",
+	didReceiveRemoteNotification = "",
+	didRegisterUserNotificationSettings = "",
+	openURL = ""
+)
+	return %(// DO NOT EDIT BY HAND. THIS FILE IS AUTO-GENERATED
+
+#import <Foundation/Foundation.h>
+#import "MendixAppDelegate.h"
+#{imports}
+
+@implementation MendixAppDelegate
+
++ (void) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	#{didFinishLaunchingWithOptions}
+}
+
++ (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+	#{didReceiveLocalNotification}
+}
+
++ (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
+fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
+	#{didReceiveRemoteNotification}
+}
+
++ (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+	#{didRegisterUserNotificationSettings}
+}
+
++ (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+	#{openURL}
+}
+
+@end
+	)
+end
+
+def get_project_config!
+	return JSON.parse(File.read(File.join(__dir__, '..', 'config.json')))
+end
+
+# Source @react-native-community/cli-platform-ios/native_modules
+def get_react_native_config!
+	cli_command = "try {console.log(require('@react-native-community/cli').bin);} catch (e) {console.log(require('react-native/cli').bin);}"
+	cli_result = Pod::Executable.execute_command("node", ["-e", cli_command], true).strip
+
+	json = []
+	IO.popen(["node", cli_result, "config"]) do |data|
+			while line = data.gets
+			json << line
+			end
+	end
+
+	return JSON.parse(json.join("\n"))
+end
+
+def include_pods!(name, pods)
+	pods.each do |name, pod|
+		if pod["path"] != nil && !pod["path"].empty?
+			pod name, :path => "../node_modules/#{pod['path']}"
+		elsif pod["version"] != nil && !pod["version"].empty?
+			pod name, pod["version"]
+		else
+			pod name
+		end
+	end
+end
