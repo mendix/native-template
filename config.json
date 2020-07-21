@@ -12,6 +12,32 @@
                     ]
                 }
             }
+        },
+        "pushNotification": {
+            "enabled": true,
+            "ios": {
+                "imports": [
+                    "<Firebase.h>",
+                    "\"RNFirebase/RNFirebaseNotifications.h\"",
+                    "\"RNFirebase/RNFirebaseMessaging.h\""
+                ],
+                "hooks": {
+                    "didFinishLaunchingWithOptions": [
+                        "[FIRApp configure]",
+                        "[RNFirebaseNotifications configure]"
+                    ],
+                    "didReceiveLocalNotification": [
+                        "[[RNFirebaseNotifications instance] didReceiveLocalNotification:notification]"
+                    ],
+                    "didReceiveRemoteNotification": [
+                        "[[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler]"
+                    ],
+                    "didRegisterUserNotificationSettings": [
+                        "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings]"
+                    ],
+                    "openURL": []
+                }
+            }
         }
     },
     "dependencies": {
@@ -48,27 +74,6 @@
                     "GoogleUtilities": {
                         "version": "~> 6.5.1"
                     }
-                },
-                "imports": [
-                    "<Firebase.h>",
-                    "\"RNFirebase/RNFirebaseNotifications.h\"",
-                    "\"RNFirebase/RNFirebaseMessaging.h\""
-                ],
-                "hooks": {
-                    "didFinishLaunchingWithOptions": [
-                        "[FIRApp configure]",
-                        "[RNFirebaseNotifications configure]"
-                    ],
-                    "didReceiveLocalNotification": [
-                        "[[RNFirebaseNotifications instance] didReceiveLocalNotification:notification]"
-                    ],
-                    "didReceiveRemoteNotification": [
-                        "[[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler]"
-                    ],
-                    "didRegisterUserNotificationSettings": [
-                        "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings]"
-                    ],
-                    "openURL": []
                 }
             }
         },
