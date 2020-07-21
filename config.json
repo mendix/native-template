@@ -1,7 +1,6 @@
 {
     "capabilities": {
         "deepLink": {
-            "enabled": true,
             "ios": {
                 "imports": [
                     "\"React/RCTLinkingManager.h\""
@@ -14,7 +13,6 @@
             }
         },
         "pushNotification": {
-            "enabled": true,
             "ios": {
                 "imports": [
                     "<Firebase.h>",
@@ -34,8 +32,7 @@
                     ],
                     "didRegisterUserNotificationSettings": [
                         "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings]"
-                    ],
-                    "openURL": []
+                    ]
                 }
             }
         }
