@@ -18,9 +18,20 @@ def generate_mendix_delegate!
 		openURL: [],
 	}
 
+	capabilities = []
 	config = get_project_config!
-	capabilities = config["capabilities"].select { |_, value| value["enabled"] }.transform_values { |options| options["ios"] }
-	capabilities.each do |_, options|
+	get_project_capabilities!.select { |_, value| value == true }.each do |name, _|
+		capability = config["capabilities"][name.to_s]
+		if capability.nil?
+				Pod::UI.warn "'#{name.to_s}' is not a valid Mendix capability. This file should not be manipulated without guidance."
+    end
+    next if capability.nil?
+
+		Pod::UI.notice "'#{name.to_s}' capability was enabled for this project."
+		capabilities << capability["ios"]
+	end
+
+	capabilities.each do |options|
 		!options['imports'].nil? && imports << options['imports'].map { |import| "#import #{import}" }
 
 		!options['hooks'].nil? && hooks.each do |name, hook|
@@ -83,6 +94,10 @@ end
 
 def get_project_config!
 	return JSON.parse(File.read(File.join(__dir__, '..', 'config.json')))
+end
+
+def get_project_capabilities!
+	return JSON.parse(File.read(File.join(__dir__, '..', 'capabilities.json')))
 end
 
 # Source @react-native-community/cli-platform-ios/native_modules
