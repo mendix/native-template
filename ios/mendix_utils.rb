@@ -19,10 +19,8 @@ def generate_mendix_delegate!
 	}
 
 	config = get_project_config!
-	modules = get_react_native_config!["dependencies"]
-	dependencies = config["dependencies"].select { |name, _| modules.include?(name) }.transform_values { |options| options["ios"] }
 	capabilities = config["capabilities"].select { |_, value| value["enabled"] }.transform_values { |options| options["ios"] }
-	({}).merge(dependencies, capabilities).each do |_, options|
+	capabilities.each do |_, options|
 		!options['imports'].nil? && imports << options['imports'].map { |import| "#import #{import}" }
 
 		!options['hooks'].nil? && hooks.each do |name, hook|
