@@ -1,6 +1,7 @@
 {
     "capabilities": {
         "deepLink": {
+            "enabled": true,
             "ios": {
                 "imports": [
                     "\"React/RCTLinkingManager.h\""
