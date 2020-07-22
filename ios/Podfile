@@ -48,15 +48,15 @@ def common_pods
 end
 
 target 'nativeTemplate' do
-  generate_pod_dependencies!
-  generate_mendix_delegate!
+  generate_pod_dependencies
+  generate_mendix_delegate
   use_native_modules!
   common_pods
   # Intentionally left empty
 end
 
 target 'dev' do
-  generate_pod_dependencies!
+  generate_pod_dependencies
   use_native_modules!
   common_pods
   # Intentionally left empty
