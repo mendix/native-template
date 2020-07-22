@@ -4,6 +4,7 @@ def generate_pod_dependencies
   modules = get_react_native_config["dependencies"]
   config = get_project_config
   config["dependencies"].each do |name, options|
+    next if options["ios"].nil?
     include_pods(name, options["ios"]["pods"]) if modules.include?(name)
   end
 end
@@ -23,11 +24,13 @@ def generate_mendix_delegate
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
     capability = config["capabilities"][name.to_s]
     if capability.nil?
-      Pod::UI.warn "'#{name.to_s}' is not a valid Mendix capability. This file should not be manipulated without guidance."
+      Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
       next
     end
 
-    Pod::UI.notice "'#{name.to_s}' capability was enabled for this project."
+    next if capability["ios"].nil?
+
+    Pod::UI.notice "Capability for '#{name.to_s}' was enabled for this project."
     capabilities << capability["ios"]
   end
 
