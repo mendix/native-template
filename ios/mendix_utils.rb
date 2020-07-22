@@ -2,7 +2,7 @@ require "json"
 
 def generate_pod_dependencies
   modules = get_react_native_config["dependencies"]
-  config = get_project_config
+  config = get_dependency_config
   config["dependencies"].each do |name, options|
     next if options["ios"].nil?
     include_pods(name, options["ios"]["pods"]) if modules.include?(name)
@@ -20,7 +20,7 @@ def generate_mendix_delegate
   }
 
   capabilities = []
-  config = get_project_config
+  config = get_dependency_config
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
     capability = config["capabilities"][name.to_s]
     if capability.nil?
@@ -96,8 +96,8 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 	)
 end
 
-def get_project_config
-  JSON.parse(File.read(File.join(__dir__, "..", "config.json")))
+def get_dependency_config
+  JSON.parse(File.read(File.join(__dir__, "..", "dependency-config.json")))
 end
 
 def get_project_capabilities

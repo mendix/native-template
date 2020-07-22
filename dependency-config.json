@@ -12,7 +12,7 @@
                 }
             }
         },
-        "pushNotification": {
+        "pushNotifications": {
             "ios": {
                 "imports": [
                     "<Firebase.h>",
