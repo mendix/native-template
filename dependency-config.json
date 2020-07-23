@@ -61,6 +61,14 @@
         },
         "maps": {
             "ios": {
+                "imports": [
+                    "<GoogleMaps/GoogleMaps.h>"
+                ],
+                "hooks": {
+                    "didFinishLaunchingWithOptions": [
+                        "[GMSServices provideAPIKey:@\"_YOUR_API_KEY_\"]"
+                    ]
+                },
                 "pods": {
                     "react-native-google-maps": {
                         "path": "react-native-maps"
