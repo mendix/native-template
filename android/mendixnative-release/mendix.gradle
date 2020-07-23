@@ -145,15 +145,17 @@ class MendixModules {
             this.logLifecycle("Failed parsing the capabilities file. Error?")
         }
 
-        try {
-            dependenciesConfig = new JsonSlurper().parse(this.nodeModulesDependenciesConfigFile)
-            (dependenciesConfig as Map).retainAll { dependencyConfig ->
-                this.reactNativeModules.find { nativeModule ->
-                    nativeModule.get("name") == dependencyConfig.key
-                } && dependencyConfig.value["android"] != null
+        if (this.nodeModulesDependenciesConfigFile.exists()) {
+            try {
+                dependenciesConfig = new JsonSlurper().parse(this.nodeModulesDependenciesConfigFile)
+                (dependenciesConfig as Map).retainAll { dependencyConfig ->
+                    this.reactNativeModules.find { nativeModule ->
+                        nativeModule.get("name") == dependencyConfig.key
+                    } && dependencyConfig.value["android"] != null
+                }
+            } catch (ignored) {
+                this.logLifecycle("Failed parsing the configuration for unlinked node_modules. Error?")
             }
-        } catch (ignored) {
-            this.logLifecycle("Failed parsing the configuration for unlinked node_modules. Error?")
         }
 
         this.dependenciesConfig = capabilitiesConfig + dependenciesConfig
