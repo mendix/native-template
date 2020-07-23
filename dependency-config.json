@@ -72,15 +72,6 @@
         }
     },
     "dependencies": {
-        "react-native-camera": {
-            "ios": {
-                "pods": {
-                    "react-native-camera": {
-                        "path": "react-native-camera"
-                    }
-                }
-            }
-        },
         "react-native-geocoder": {
             "ios": {
                 "pods": {
