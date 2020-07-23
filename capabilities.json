@@ -1,0 +1,6 @@
+{
+    "deepLink": true,
+    "pushNotifications": false,
+    "bluetooth": true,
+    "maps": true
+}
