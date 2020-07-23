@@ -33,34 +33,7 @@
                     "didRegisterUserNotificationSettings": [
                         "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings]"
                     ]
-                }
-            }
-        }
-    },
-    "dependencies": {
-        "react-native-ble-plx": {
-            "ios": {
-                "pods": {
-                    "react-native-ble-plx": {
-                        "path": "react-native-ble-plx"
-                    },
-                    "react-native-ble-plx-swift": {
-                        "path": "react-native-ble-plx"
-                    }
-                }
-            }
-        },
-        "react-native-camera": {
-            "ios": {
-                "pods": {
-                    "react-native-camera": {
-                        "path": "react-native-camera"
-                    }
-                }
-            }
-        },
-        "react-native-firebase": {
-            "ios": {
+                },
                 "pods": {
                     "Firebase/Core": {
                         "version": "~> 6.19.0"
@@ -74,16 +47,19 @@
                 }
             }
         },
-        "react-native-geocoder": {
+        "bluetooth": {
             "ios": {
                 "pods": {
-                    "react-native-geocoder": {
-                        "path": "react-native-geocoder"
+                    "react-native-ble-plx": {
+                        "path": "react-native-ble-plx"
+                    },
+                    "react-native-ble-plx-swift": {
+                        "path": "react-native-ble-plx"
                     }
                 }
             }
         },
-        "react-native-maps": {
+        "maps": {
             "ios": {
                 "pods": {
                     "react-native-google-maps": {
@@ -91,6 +67,26 @@
                     },
                     "GoogleMaps": {},
                     "Google-Maps-iOS-Utils": {}
+                }
+            }
+        }
+    },
+    "dependencies": {
+        "react-native-camera": {
+            "ios": {
+                "pods": {
+                    "react-native-camera": {
+                        "path": "react-native-camera"
+                    }
+                }
+            }
+        },
+        "react-native-geocoder": {
+            "ios": {
+                "pods": {
+                    "react-native-geocoder": {
+                        "path": "react-native-geocoder"
+                    }
                 }
             }
         }
