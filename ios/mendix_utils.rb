@@ -2,12 +2,13 @@ require "json"
 
 def generate_pod_dependencies
   modules = get_react_native_config["dependencies"]
-  config = get_dependency_config
+  capabilities_setup_config = get_capabilities_setup_config
+  unlinked_dependency_config = get_unlinked_dependency_config
 
   pods = {}
 
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
-    capability = config["capabilities"][name.to_s]
+    capability = capabilities_setup_config[name.to_s]
     if capability.nil?
       Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
       next
@@ -18,7 +19,7 @@ def generate_pod_dependencies
     pods = pods.merge capability["ios"]["pods"]
   end
 
-  config["dependencies"].each do |name, options|
+  unlinked_dependency_config.each do |name, options|
     next if options["ios"].nil? || !modules.include?(name)
     pods = pods.merge options["ios"]["pods"]
   end
@@ -37,9 +38,9 @@ def generate_mendix_delegate
   }
 
   capabilities = []
-  config = get_dependency_config
+  capabilities_setup_config = get_capabilities_setup_config
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
-    capability = config["capabilities"][name.to_s]
+    capability = capabilities_setup_config[name.to_s]
     if capability.nil?
       Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
       next
@@ -113,8 +114,12 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 	)
 end
 
-def get_dependency_config
-  JSON.parse(File.read(File.join(__dir__, "..", "dependency-config.json")))
+def get_unlinked_dependency_config
+  JSON.parse(File.read(File.join(__dir__, "..", "unlinked-dependency-config.json")))
+end
+
+def get_capabilities_setup_config
+  JSON.parse(File.read(File.join(__dir__, "..", "capabilities-setup-config.json")))
 end
 
 def get_project_capabilities

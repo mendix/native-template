@@ -1,4 +1,16 @@
 {
+    "deepLink": {
+        "ios": {
+            "imports": [
+                "\"React/RCTLinkingManager.h\""
+            ],
+            "hooks": {
+                "openURL": [
+                    "[RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation]"
+                ]
+            }
+        }
+    },
     "pushNotifications": {
         "android": {
             "externalDependencies": [
@@ -22,6 +34,67 @@
                 "plugins": [
                     "com.google.gms.google-services"
                 ]
+            }
+        },
+        "ios": {
+            "imports": [
+                "<Firebase.h>",
+                "\"RNFirebase/RNFirebaseNotifications.h\"",
+                "\"RNFirebase/RNFirebaseMessaging.h\""
+            ],
+            "hooks": {
+                "didFinishLaunchingWithOptions": [
+                    "[FIRApp configure]",
+                    "[RNFirebaseNotifications configure]"
+                ],
+                "didReceiveLocalNotification": [
+                    "[[RNFirebaseNotifications instance] didReceiveLocalNotification:notification]"
+                ],
+                "didReceiveRemoteNotification": [
+                    "[[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler]"
+                ],
+                "didRegisterUserNotificationSettings": [
+                    "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings]"
+                ]
+            },
+            "pods": {
+                "Firebase/Core": {
+                    "version": "~> 6.19.0"
+                },
+                "Firebase/Messaging": {
+                    "version": "~> 6.19.0"
+                },
+                "GoogleUtilities": {
+                    "version": "~> 6.5.1"
+                }
+            }
+        }
+    },
+    "bluetooth": {
+        "ios": {
+            "pods": {
+                "react-native-ble-plx-swift": {
+                    "path": "react-native-ble-plx"
+                }
+            }
+        }
+    },
+    "maps": {
+        "ios": {
+            "imports": [
+                "<GoogleMaps/GoogleMaps.h>"
+            ],
+            "hooks": {
+                "didFinishLaunchingWithOptions": [
+                    "[GMSServices provideAPIKey:@\"_YOUR_API_KEY_\"]"
+                ]
+            },
+            "pods": {
+                "react-native-google-maps": {
+                    "path": "react-native-maps"
+                },
+                "GoogleMaps": {},
+                "Google-Maps-iOS-Utils": {}
             }
         }
     }
