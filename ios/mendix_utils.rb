@@ -49,16 +49,14 @@ def generate_mendix_delegate
     next if capability["ios"].nil?
 
     Pod::UI.notice "Capability for '#{name.to_s}' was enabled for this project."
-    capabilities << capability["ios"]
+    capabilities << capability["ios"]["AppDelegate"] if !capability["ios"]["AppDelegate"].nil?
   end
 
   capabilities.each do |options|
-    imports << options["imports"].map { |import| "#import #{import}" } if !options["imports"].nil?
+    imports << options["imports"] if !options["imports"].nil?
 
-    if !options["hooks"].nil?
-      hooks.each do |name, hook|
-        hook << options["hooks"][name.to_s].map { |line| "#{line};" } if !options["hooks"][name.to_s].nil?
-      end
+    hooks.each do |name, hook|
+      hook << options[name.to_s].map { |line| "#{line}" } if !options[name.to_s].nil?
     end
   end
 
@@ -115,7 +113,7 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 end
 
 def read_json_file_gracefully(path)
-	file_path = File.join(__dir__, "..", path)
+  file_path = File.join(__dir__, "..", path)
   JSON.parse(File.read(file_path)) if File.exists?(file_path)
 end
 
