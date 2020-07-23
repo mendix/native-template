@@ -56,7 +56,7 @@ def generate_mendix_delegate
     imports << options["imports"] if !options["imports"].nil?
 
     hooks.each do |name, hook|
-      hook << options[name.to_s].map { |line| "#{line}" } if !options[name.to_s].nil?
+      hook << options[name.to_s].map { |line| "  #{line}" } if !options[name.to_s].nil?
     end
   end
 
@@ -88,24 +88,24 @@ def replace_template_with_values(
 @implementation MendixAppDelegate
 
 + (void) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	#{didFinishLaunchingWithOptions}
+#{didFinishLaunchingWithOptions}
 }
 
 + (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-	#{didReceiveLocalNotification}
+#{didReceiveLocalNotification}
 }
 
 + (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
 fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
-	#{didReceiveRemoteNotification}
+#{didReceiveRemoteNotification}
 }
 
 + (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-	#{didRegisterUserNotificationSettings}
+#{didRegisterUserNotificationSettings}
 }
 
 + (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-	#{openURL}
+#{openURL}
 }
 
 @end
