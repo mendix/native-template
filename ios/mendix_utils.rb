@@ -114,16 +114,21 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 	)
 end
 
+def read_json_file_gracefully(path)
+	file_path = File.join(__dir__, "..", path)
+  JSON.parse(File.read(file_path)) if File.exists?(file_path)
+end
+
 def get_unlinked_dependency_config
-  JSON.parse(File.read(File.join(__dir__, "..", "unlinked-dependency-config.json")))
+  read_json_file_gracefully("unlinked-dependency-config.json") || {}
 end
 
 def get_capabilities_setup_config
-  JSON.parse(File.read(File.join(__dir__, "..", "capabilities-setup-config.json")))
+  read_json_file_gracefully("capabilities-setup-config.json") || {}
 end
 
 def get_project_capabilities
-  JSON.parse(File.read(File.join(__dir__, "..", "capabilities.json")))
+  read_json_file_gracefully("capabilities.json") || {}
 end
 
 # Source @react-native-community/cli-platform-ios/native_modules
