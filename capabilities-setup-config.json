@@ -1,12 +1,12 @@
 {
     "deepLink": {
         "ios": {
-            "imports": [
-                "\"React/RCTLinkingManager.h\""
-            ],
-            "hooks": {
+            "AppDelegate": {
+                "imports": [
+                    "#import \"React/RCTLinkingManager.h\""
+                ],
                 "openURL": [
-                    "[RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation]"
+                    "[RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];"
                 ]
             }
         }
@@ -37,24 +37,24 @@
             }
         },
         "ios": {
-            "imports": [
-                "<Firebase.h>",
-                "\"RNFirebase/RNFirebaseNotifications.h\"",
-                "\"RNFirebase/RNFirebaseMessaging.h\""
-            ],
-            "hooks": {
+            "AppDelegate": {
+                "imports": [
+                    "#import <Firebase.h>",
+                    "#import \"RNFirebase/RNFirebaseNotifications.h\"",
+                    "#import \"RNFirebase/RNFirebaseMessaging.h\""
+                ],
                 "didFinishLaunchingWithOptions": [
-                    "[FIRApp configure]",
-                    "[RNFirebaseNotifications configure]"
+                    "[FIRApp configure];",
+                    "[RNFirebaseNotifications configure];"
                 ],
                 "didReceiveLocalNotification": [
-                    "[[RNFirebaseNotifications instance] didReceiveLocalNotification:notification]"
+                    "[[RNFirebaseNotifications instance] didReceiveLocalNotification:notification];"
                 ],
                 "didReceiveRemoteNotification": [
-                    "[[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler]"
+                    "[[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];"
                 ],
                 "didRegisterUserNotificationSettings": [
-                    "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings]"
+                    "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings];"
                 ]
             },
             "pods": {
@@ -81,12 +81,12 @@
     },
     "maps": {
         "ios": {
-            "imports": [
-                "<GoogleMaps/GoogleMaps.h>"
-            ],
-            "hooks": {
+            "AppDelegate": {
+                "imports": [
+                    "#import <GoogleMaps/GoogleMaps.h>"
+                ],
                 "didFinishLaunchingWithOptions": [
-                    "[GMSServices provideAPIKey:@\"_YOUR_API_KEY_\"]"
+                    "[GMSServices provideAPIKey:@\"_YOUR_API_KEY_\"];"
                 ]
             },
             "pods": {
