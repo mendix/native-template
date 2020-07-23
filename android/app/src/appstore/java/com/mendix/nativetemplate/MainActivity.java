@@ -12,6 +12,7 @@ import com.mendix.mendixnative.react.MxConfiguration;
 public class MainActivity extends MendixReactActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        this.getLifecycle().addObserver(new MendixActivityObserver(this));
         Boolean hasDeveloperSupport = ((MainApplication) getApplication()).getUseDeveloperSupport();
         mendixApp = new MendixApp(AppUrl.getUrlFromResource(this), MxConfiguration.WarningsFilter.none, hasDeveloperSupport);
         super.onCreate(savedInstanceState);
