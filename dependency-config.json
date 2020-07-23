@@ -50,9 +50,6 @@
         "bluetooth": {
             "ios": {
                 "pods": {
-                    "react-native-ble-plx": {
-                        "path": "react-native-ble-plx"
-                    },
                     "react-native-ble-plx-swift": {
                         "path": "react-native-ble-plx"
                     }
@@ -79,15 +76,5 @@
             }
         }
     },
-    "dependencies": {
-        "react-native-geocoder": {
-            "ios": {
-                "pods": {
-                    "react-native-geocoder": {
-                        "path": "react-native-geocoder"
-                    }
-                }
-            }
-        }
-    }
+    "dependencies": {}
 }
