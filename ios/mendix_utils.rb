@@ -3,10 +3,27 @@ require "json"
 def generate_pod_dependencies
   modules = get_react_native_config["dependencies"]
   config = get_dependency_config
-  config["dependencies"].each do |name, options|
-    next if options["ios"].nil?
-    include_pods(name, options["ios"]["pods"]) if modules.include?(name)
+
+  pods = {}
+
+  get_project_capabilities.select { |_, value| value == true }.each do |name, _|
+    capability = config["capabilities"][name.to_s]
+    if capability.nil?
+      Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
+      next
+    end
+
+    next if capability["ios"].nil? || capability["ios"]["pods"].nil?
+
+    pods = pods.merge capability["ios"]["pods"]
   end
+
+  config["dependencies"].each do |name, options|
+    next if options["ios"].nil? || !modules.include?(name)
+    pods = pods.merge options["ios"]["pods"]
+  end
+
+  include_pods(pods.compact)
 end
 
 def generate_mendix_delegate
@@ -119,7 +136,7 @@ def get_react_native_config
   JSON.parse(json.join("\n"))
 end
 
-def include_pods(name, pods)
+def include_pods(pods = {})
   pods.each do |name, pod|
     if pod["path"] != nil && !pod["path"].empty?
       pod name, :path => "../node_modules/#{pod["path"]}"
