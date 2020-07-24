@@ -8,4 +8,5 @@
 @interface NativeReloadHandler : RCTEventEmitter
 - (void) reloadClientWithState;
 - (void) reload;
+- (void) exitApp;
 @end
