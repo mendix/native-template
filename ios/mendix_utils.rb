@@ -1,12 +1,9 @@
 require "json"
 
 def generate_pod_dependencies
-  modules = get_react_native_config["dependencies"]
+  resolved_pods = {}
+
   capabilities_setup_config = get_capabilities_setup_config
-  unlinked_dependency_config = get_unlinked_dependency_config
-
-  pods = {}
-
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
     capability = capabilities_setup_config[name.to_s]
     if capability.nil?
@@ -14,17 +11,17 @@ def generate_pod_dependencies
       next
     end
 
-    next if capability["ios"].nil? || capability["ios"]["pods"].nil?
-
-    pods = pods.merge capability["ios"]["pods"]
+    next unless capability["ios"] && pods = capability["ios"]["pods"]
+    resolved_pods.merge! pods
   end
 
-  unlinked_dependency_config.each do |name, options|
-    next if options["ios"].nil? || !modules.include?(name)
-    pods = pods.merge options["ios"]["pods"]
+  modules = get_react_native_config["dependencies"]
+  get_unlinked_dependency_config.each do |name, options|
+    next unless options["ios"] && modules.include?(name) && pods = options["ios"]["pods"]
+    resolved_pods.merge! pods
   end
 
-  include_pods(pods.compact)
+  include_pods(resolved_pods.compact)
 end
 
 def generate_mendix_delegate
@@ -37,7 +34,6 @@ def generate_mendix_delegate
     openURL: [],
   }
 
-  capabilities = []
   capabilities_setup_config = get_capabilities_setup_config
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
     capability = capabilities_setup_config[name.to_s]
@@ -49,67 +45,57 @@ def generate_mendix_delegate
     next if capability["ios"].nil?
 
     Pod::UI.notice "Capability for '#{name.to_s}' was enabled for this project."
-    capabilities << capability["ios"]["AppDelegate"] if !capability["ios"]["AppDelegate"].nil?
-  end
 
-  capabilities.each do |options|
-    imports << options["imports"] if !options["imports"].nil?
+    next unless capability = capability["ios"]["AppDelegate"]
+
+    imports << capability["imports"] if !capability["imports"].nil?
 
     hooks.each do |name, hook|
-      hook << options[name.to_s].map { |line| "  #{line}" } if !options[name.to_s].nil?
+      hook << capability[name.to_s].map { |line| "  #{line}" } if !capability[name.to_s].nil?
     end
   end
 
   File.open("MendixAppDelegate.m", "w") do |file|
-    file << replace_template_with_values(
-      imports.flatten.uniq.join("\n"),
-      hooks[:didFinishLaunchingWithOptions].flatten.uniq.join("\n"),
-      hooks[:didReceiveLocalNotification].flatten.uniq.join("\n"),
-      hooks[:didReceiveRemoteNotification].flatten.uniq.join("\n"),
-      hooks[:didRegisterUserNotificationSettings].flatten.uniq.join("\n"),
-      hooks[:openURL].flatten.uniq.join("\n")
-    )
+    mendix_app_delegate = mendix_app_delegate_template.sub("{{ imports }}", stringify(imports))
+    hooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook)) }
+    file << mendix_app_delegate
   end
 end
 
-def replace_template_with_values(
-  imports,
-  didFinishLaunchingWithOptions,
-  didReceiveLocalNotification,
-  didReceiveRemoteNotification,
-  didRegisterUserNotificationSettings,
-  openURL
-)
+def mendix_app_delegate_template
   %(// DO NOT EDIT BY HAND. THIS FILE IS AUTO-GENERATED
 #import <Foundation/Foundation.h>
 #import "MendixAppDelegate.h"
-#{imports}
+{{ imports }}
 
 @implementation MendixAppDelegate
 
 + (void) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-#{didFinishLaunchingWithOptions}
+{{ didFinishLaunchingWithOptions }}
 }
 
 + (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-#{didReceiveLocalNotification}
+{{ didReceiveLocalNotification }}
 }
 
 + (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
 fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
-#{didReceiveRemoteNotification}
+{{ didReceiveRemoteNotification }}
 }
 
 + (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-#{didRegisterUserNotificationSettings}
+{{ didRegisterUserNotificationSettings }}
 }
 
 + (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-#{openURL}
+{{ openURL }}
 }
 
-@end
-	)
+@end\n)
+end
+
+def stringify(array)
+  array.flatten.uniq.join("\n")
 end
 
 def read_json_file_gracefully(path)
