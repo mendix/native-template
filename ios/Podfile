@@ -44,8 +44,6 @@ def common_pods
 
   # Third party dependencies of dependencies
   pod 'IQKeyboardManager'
-  pod 'Fabric', '~> 1.10.2'
-  pod 'Crashlytics', '~> 3.14.0'
 end
 
 target 'nativeTemplate' do
