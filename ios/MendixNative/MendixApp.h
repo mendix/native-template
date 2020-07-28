@@ -16,13 +16,18 @@
 @property BOOL isDeveloperApp;
 @property BOOL clearDataAtLaunch;
 @property id<AppMenuProtocol> _Nullable appMenu;
-@property id<SplashScreenPresenterProtocol> _Nonnull splashScreenPresenter;
-@property UIStoryboard * _Nullable reactLoadingStoryboard;
+@property id<SplashScreenPresenterProtocol> _Nullable splashScreenPresenter;
+@property UIStoryboard * _Nullable reactLoading;
 @property BOOL enableThreeFingerGestures;
 
 -(id _Nonnull)init:(NSString * _Nullable)identifier bundleUrl:(NSURL * _Nonnull)bundleUrl runtimeUrl:(NSURL * _Nonnull)runtimeUrl warningsFilter:(WarningsFilter)warningsFilter isDeveloperApp:(BOOL)enableGestures clearDataAtLaunch:(BOOL)clearDataAtLaunch splashScreenPresenter:(id<SplashScreenPresenterProtocol> _Nonnull)splashScreenPresenter;
 
--(id _Nonnull)init:(NSString * _Nullable)identifier bundleUrl:(NSURL * _Nonnull)bundleUrl runtimeUrl:(NSURL * _Nonnull)runtimeUrl warningsFilter:(WarningsFilter)warningsFilter isDeveloperApp:(BOOL)enableGestures clearDataAtLaunch:(BOOL)clearDataAtLaunch splashScreenPresenter:(id<SplashScreenPresenterProtocol> _Nonnull)splashScreenPresenter enableThreeFingerGestures:(BOOL)enableThreeFingerGestures reactLoadingStoryboard:(UIStoryboard * _Nullable)reactLoadingStoryboard;
+-(id _Nonnull)init:(NSString * _Nullable)identifier bundleUrl:(NSURL * _Nonnull)bundleUrl runtimeUrl:(NSURL * _Nonnull)runtimeUrl warningsFilter:(WarningsFilter)warningsFilter isDeveloperApp:(BOOL)enableGestures clearDataAtLaunch:(BOOL)clearDataAtLaunch reactLoading:(UIStoryboard * _Nonnull)reactLoading;
 
--(id _Nonnull)init:(NSString * _Nullable)identifier bundleUrl:(NSURL * _Nonnull)bundleUrl runtimeUrl:(NSURL * _Nonnull)runtimeUrl warningsFilter:(WarningsFilter)warningsFilter isDeveloperApp:(BOOL)enableGestures clearDataAtLaunch:(BOOL)clearDataAtLaunch splashScreenPresenter:(id<SplashScreenPresenterProtocol> _Nonnull)splashScreenPresenter reactLoadingStoryboard:(UIStoryboard * _Nullable)reactLoadingStoryboard;
+-(id _Nonnull)init:(NSString * _Nullable)identifier bundleUrl:(NSURL * _Nonnull)bundleUrl runtimeUrl:(NSURL * _Nonnull)runtimeUrl warningsFilter:(WarningsFilter)warningsFilter isDeveloperApp:(BOOL)enableGestures clearDataAtLaunch:(BOOL)clearDataAtLaunch splashScreenPresenter:(id<SplashScreenPresenterProtocol> _Nonnull)splashScreenPresenter enableThreeFingerGestures:(BOOL)enableThreeFingerGestures ;
+
+-(id _Nonnull)init:(NSString * _Nullable)identifier bundleUrl:(NSURL * _Nonnull)bundleUrl runtimeUrl:(NSURL * _Nonnull)runtimeUrl warningsFilter:(WarningsFilter)warningsFilter isDeveloperApp:(BOOL)enableGestures clearDataAtLaunch:(BOOL)clearDataAtLaunch reactLoading:(UIStoryboard * _Nonnull)reactLoading enableThreeFingerGestures:(BOOL)enableThreeFingerGestures;
+
+-(id _Nonnull)init:(NSString * _Nullable)identifier bundleUrl:(NSURL * _Nonnull)bundleUrl runtimeUrl:(NSURL * _Nonnull)runtimeUrl warningsFilter:(WarningsFilter)warningsFilter isDeveloperApp:(BOOL)enableGestures clearDataAtLaunch:(BOOL)clearDataAtLaunch;
+
 @end
