@@ -44,12 +44,12 @@ public class MainApplication extends MendixReactApplication {
         return packages;
     }
 
-    @NonNull
     @Override
     public MendixSplashScreenPresenter createSplashScreenPresenter() {
         return new MendixSplashScreenPresenter() {
             @Override
             public void show(@NonNull Activity activity) {
+                hide(activity);
                 SplashScreen.show(activity, true);
             }
 
