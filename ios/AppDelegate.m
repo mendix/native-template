@@ -34,7 +34,7 @@
     shouldOpenInLastApp = YES;
     NSURL *bundleUrl = [AppUrl forBundle:url port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
     NSURL *runtimeUrl = [AppUrl forRuntime:url];
-    MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] isDeveloperApp:YES clearDataAtLaunch:NO splashScreenPresenter:[SplashScreenPresenter new]];
+    MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] isDeveloperApp:YES clearDataAtLaunch:NO];
     [ReactNative.instance setup:mendixApp launchOptions:launchOptions];
 
     return YES;
