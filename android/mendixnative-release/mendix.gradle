@@ -399,22 +399,30 @@ def mendixModules = new MendixModules(capabilitiesConfig, unlinkedDependenciesCo
 
 def logLifecycle = { String message -> logger.lifecycle("${LOG_PREFIX}${message}") }
 
+
 ext.applyMendixGradle = { Project project ->
-    logLifecycle("Executing Mendix Module Generator")
-    logLifecycle("App root: ${rootDir}")
-    logLifecycle("CLI path: ${cliBinPath}")
-
-    logLifecycle("Generating ${mainActivityObserverFileName}")
-    mendixModules.generateMainActivityObserver(generatedCodeDir, mainActivityObserverFileName, mainActivityObserverTemplate)
-
-    logLifecycle("Generating ${mendixPackageListFileName}")
-    mendixModules.generateMendixPackageList(generatedCodeDir, mendixPackageListFileName, mendixPackageListTemplate)
-
     logLifecycle("Registering extra dependencies")
     mendixModules.addExtraDependencies(project)
 
     logLifecycle("Registering plugins")
     mendixModules.addAndroidPlugins(project)
+    task generateMendixDependencies {
+        doLast {
+            logLifecycle("Executing Mendix Module Generator")
+            logLifecycle("App root: ${rootDir}")
+            logLifecycle("CLI path: ${cliBinPath}")
+
+            logLifecycle("Generating ${mainActivityObserverFileName}")
+            mendixModules.generateMainActivityObserver(generatedCodeDir, mainActivityObserverFileName, mainActivityObserverTemplate)
+
+            logLifecycle("Generating ${mendixPackageListFileName}")
+            mendixModules.generateMendixPackageList(generatedCodeDir, mendixPackageListFileName, mendixPackageListTemplate)
+
+
+        }
+    }
+
+    preBuild.dependsOn generateMendixDependencies
 
     android {
         sourceSets {
