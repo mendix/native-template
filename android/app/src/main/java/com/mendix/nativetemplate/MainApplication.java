@@ -1,9 +1,16 @@
 package com.mendix.nativetemplate;
 
+import android.app.Activity;
+
+import androidx.annotation.NonNull;
+
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactPackage;
 import com.mendix.mendixnative.MendixReactApplication;
+import com.mendix.mendixnative.react.splash.MendixSplashScreenPresenter;
 import com.microsoft.codepush.react.CodePush;
+
+import org.devio.rn.splashscreen.SplashScreen;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,5 +42,21 @@ public class MainApplication extends MendixReactApplication {
         }
 
         return packages;
+    }
+
+    @Override
+    public MendixSplashScreenPresenter createSplashScreenPresenter() {
+        return new MendixSplashScreenPresenter() {
+            @Override
+            public void show(@NonNull Activity activity) {
+                hide(activity);
+                SplashScreen.show(activity, true);
+            }
+
+            @Override
+            public void hide(@NonNull Activity activity) {
+                SplashScreen.hide(activity);
+            }
+        };
     }
 }
