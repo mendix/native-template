@@ -34,6 +34,8 @@
 		2C887FE324B8948F0003DC53 /* StoryBoardSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887FE124B8948F0003DC53 /* StoryBoardSplash.m */; };
 		2CD8398224D14DF900A83374 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD8397224D14DF700A83374 /* libMendix.a */; };
 		2CD8398324D14DF900A83374 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD8397224D14DF700A83374 /* libMendix.a */; };
+		2C4991D124C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
+		2C4991D224C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
 		9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */; };
 		B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11502903429AC2E6E69E6482 /* libPods-dev.a */; };
 		EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
@@ -89,6 +91,8 @@
 		2CD8397F24D14DF800A83374 /* UnsupportedFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsupportedFeatures.h; sourceTree = "<group>"; };
 		2CD8398024D14DF800A83374 /* MendixBackwardsCompatUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixBackwardsCompatUtility.h; sourceTree = "<group>"; };
 		2CD8398124D14DF900A83374 /* RuntimeInfoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeInfoProvider.h; sourceTree = "<group>"; };
+		2C4991D024C593C3008403BB /* MendixAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MendixAppDelegate.m; sourceTree = "<group>"; };
+		2C4991D324C595F0008403BB /* MendixAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MendixAppDelegate.h; sourceTree = "<group>"; };
 		2E683DD88AD2190EB6610BB7 /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1AE629EDD2EFAEE88E17A6 /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
 		3A50E1C430A9EB98E247701D /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */,
 				2C887FE024B893FC0003DC53 /* RNSplashScreen+StoryBoardSplash.h */,
 				2C887FE124B8948F0003DC53 /* StoryBoardSplash.m */,
+				2C4991D024C593C3008403BB /* MendixAppDelegate.m */,
+				2C4991D324C595F0008403BB /* MendixAppDelegate.h */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				1AAE158823C5FEFC00F855F4 /* SwiftInterop.swift */,
 				2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */,
@@ -571,6 +577,7 @@
 				2C887FE224B8948F0003DC53 /* StoryBoardSplash.m in Sources */,
 				EB59215B23BFA1F5001D6155 /* main.m in Sources */,
 				2C887F7224B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */,
+				2C4991D124C593C3008403BB /* MendixAppDelegate.m in Sources */,
 				1AAE158923C5FEFC00F855F4 /* SwiftInterop.swift in Sources */,
 				EB55E08A23BF7FF700E3FB34 /* AppDelegate.m in Sources */,
 			);
@@ -589,6 +596,7 @@
 				EB55E08823BF7FF500E3FB34 /* AppDelegate.m in Sources */,
 				1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */,
 				1A0B3ADC2397F1FF00388BF7 /* URLValidator.swift in Sources */,
+				2C4991D224C593C3008403BB /* MendixAppDelegate.m in Sources */,
 				EB59215C23BFA1F5001D6155 /* main.m in Sources */,
 				1A0B3AD82397EB4000388BF7 /* RoundedButton.swift in Sources */,
 			);

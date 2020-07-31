@@ -1,6 +1,8 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative './mendix_utils'
+generate_mendix_delegate
 
 def common_pods
   # Comment the next line if you don't want to use dynamic frameworks
@@ -41,32 +43,21 @@ def common_pods
   # RN pods end
 
   # Manually linked dependencies
-  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
-  pod 'react-native-ble-plx', :path => '../node_modules/react-native-ble-plx'
-  pod 'react-native-ble-plx-swift', :path => '../node_modules/react-native-ble-plx'
-  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
-  pod 'react-native-google-maps', :path => '../node_modules/react-native-maps'
-  pod 'react-native-geocoder', :path => '../node_modules/react-native-geocoder'
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
   # Third party dependencies of dependencies
-  pod 'GoogleMaps'
-  pod 'Google-Maps-iOS-Utils'
   pod 'IQKeyboardManager'
-  pod 'Firebase/Core', '~> 6.19.0'
-  pod 'Firebase/Messaging', '~> 6.19.0'
-  pod 'GoogleUtilities', '~> 6.5.1'
-  pod 'Fabric', '~> 1.10.2'
-  pod 'Crashlytics', '~> 3.14.0'
 end
 
 target 'nativeTemplate' do
+  generate_pod_dependencies
   use_native_modules!
   common_pods
   # Intentionally left empty
 end
 
 target 'dev' do
+  generate_pod_dependencies
   use_native_modules!
   common_pods
   # Intentionally left empty
