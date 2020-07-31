@@ -386,7 +386,6 @@ class MendixModules {
 
         return [reactNativeModules, json["project"]["android"]["packageName"]];
     }
-
 }
 
 def generatedSrcDir = new File(buildDir, "generated/mendix/src/main/java")
@@ -417,8 +416,6 @@ ext.applyMendixGradle = { Project project ->
 
             logLifecycle("Generating ${mendixPackageListFileName}")
             mendixModules.generateMendixPackageList(generatedCodeDir, mendixPackageListFileName, mendixPackageListTemplate)
-
-
         }
     }
 
