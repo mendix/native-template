@@ -42,6 +42,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+import static com.mendix.mendixnative.activity.MendixReactActivity.MENDIX_APP_INTENT_KEY;
+
 public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     static private int CAMERA_REQUEST = 1;
     private Executor httpExecutor = Executors.newSingleThreadExecutor();
@@ -74,6 +76,12 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
         appUrl.setText(appPreferences.getAppUrl());
         devModeCheckBox.setChecked(appPreferences.isDevModeEnabled());
+
+        // This check is required for deep link to work.
+        // Changes here will affect deep linking functionality
+        if (getIntent().getSerializableExtra(MENDIX_APP_INTENT_KEY) == null) {
+            launchApp(appPreferences.getAppUrl());
+        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
