@@ -30,8 +30,11 @@
 - (NSURL *) getJSBundleFile;
 - (BOOL) useCodePush;
 - (void) showAppMenu;
+- (void) showSplashScreen;
+- (void) hideSplashScreen;
 - (void) toggleElementInspector;
 - (RCTBridge *) getBridge;
+- (UIView * _Nullable) getRootView;
 - (void) clearData;
 - (void) clearCookies;
 - (void) stop;

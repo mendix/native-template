@@ -47,6 +47,7 @@ def common_pods
   pod 'react-native-maps', :path => '../node_modules/react-native-maps'
   pod 'react-native-google-maps', :path => '../node_modules/react-native-maps'
   pod 'react-native-geocoder', :path => '../node_modules/react-native-geocoder'
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
   # Third party dependencies of dependencies
   pod 'GoogleMaps'

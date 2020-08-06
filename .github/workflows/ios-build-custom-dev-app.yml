@@ -1,28 +1,25 @@
 name: IOS Custom Dev App CI
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: npm install
-      uses: Jaid/action-npm-install@v1.2.4
-      with:
-        packageManager: npm
-    - name: pod install
-      run: pod install
-      working-directory: ./ios
-    - name: iOS Build Action
-      uses: yukiarrr/ios-build-action@v0.5.1
-      with:
+      - uses: actions/checkout@v2
+      - name: npm install
+        uses: Jaid/action-npm-install@v1.2.4
+        with:
+          packageManager: npm
+      - name: pod install
+        run: pod install
+        working-directory: ./ios
+      - name: iOS Build Action
+        uses: yukiarrr/ios-build-action@v0.5.1
+        with:
           project-path: ./ios/nativetemplate.xcodeproj
           p12-base64: ${{ secrets.IOS_DUMMY_P12 }}
           mobileprovision-base64: ${{ secrets.IOS_DUMMY_PROVISION }}

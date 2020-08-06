@@ -4,6 +4,7 @@
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "RNFirebase/RNFirebaseNotifications.h"
 #import "RNFirebase/RNFirebaseMessaging.h"
+#import "SplashScreenPresenter.h"
 
 @implementation AppDelegate
 
@@ -33,7 +34,7 @@
     shouldOpenInLastApp = YES;
     NSURL *bundleUrl = [AppUrl forBundle:url port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
     NSURL *runtimeUrl = [AppUrl forRuntime:url];
-    MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] isDeveloperApp:YES clearDataAtLaunch:NO reactLoadingStoryboard:nil];
+    MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] isDeveloperApp:YES clearDataAtLaunch:NO];
     [ReactNative.instance setup:mendixApp launchOptions:launchOptions];
 
     return YES;
@@ -52,7 +53,7 @@
   NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
   
   if (bundleUrl != nil) {
-    [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:false clearDataAtLaunch:false reactLoadingStoryboard:nil] launchOptions:launchOptions];
+    [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:false clearDataAtLaunch:false splashScreenPresenter:[SplashScreenPresenter new]] launchOptions:launchOptions];
     [ReactNative.instance start];
   } else {
     [self showUnrecoverableDialogWithTitle:@"No Mendix bundle found" message:@"Missing the Mendix app bundle. Make sure that the index.ios.bundle file is available in ios/NativeTemplate/Bundle folder. If building locally consult the documentation on how to generate a bundle from your project."];

@@ -10,4 +10,7 @@
 #import "NativeReloadHandler.h"
 #import "ReactNative.h"
 #import "WarningsFilter.h"
+#import "SplashScreenPresenterProtocol.h"
 #import "MendixReactWindow.h"
+#import "MendixBackwardsCompatUtility.h"
+#import "RuntimeInfoProvider.h"
