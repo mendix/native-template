@@ -16,11 +16,9 @@ Afterwards execute the following commands:
 - `cd ios && pod install`
 
 ### 2.2 Build your app bundle
-To bundle your Mendix project please check the documentation on how to deploy your project with [MxBuild](https://docs.mendix.com/refguide/mxbuild). Do not forget to pass the `--native-packager` flag.
+To bundle your Mendix project please check the documentation on how to deploy your project with [Native Builder](https://docs.mendix.com/refguide/native-builder#2-8-generating-only-the-app-bundles).
 
-When done you should have an `index.android.bundle` and an `index.ios.bundle` and your projects resources for each platform relative to the native deployement folder.
-
-These need to be moved to their respective places.
+The unarchived results from Native Buillders need to be moved to their respective places.
 
 **iOS**
 
