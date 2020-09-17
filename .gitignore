@@ -35,10 +35,12 @@ local.properties
 # iOS
 # 
 ios/Pods/
+ios/MendixAppDelegate.m
 
 # node.js
 #
-node_modules/
+# Use / before node_modules because iOS assets folder has a node_modules folder that should not be excluded.
+/node_modules/
 npm-debug.log
 yarn-error.log
 

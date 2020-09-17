@@ -1,19 +1,14 @@
-#import <Firebase.h>
 #import "AppDelegate.h"
+#import "MendixAppDelegate.h"
 #import "MendixNative/MendixNative.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
-#import "RNFirebase/RNFirebaseNotifications.h"
-#import "RNFirebase/RNFirebaseMessaging.h"
 
 @implementation AppDelegate
 
 @synthesize shouldOpenInLastApp;
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  if (self.useFirebase) {
-    [FIRApp configure];
-    [RNFirebaseNotifications configure];
-  }
+  [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
 
   NSBundle *mainBundle = [NSBundle mainBundle];
   NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
@@ -52,7 +47,7 @@
   NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
   
   if (bundleUrl != nil) {
-    [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:false clearDataAtLaunch:false reactLoadingStoryboard:nil] launchOptions:launchOptions];
+    [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:NO clearDataAtLaunch:NO reactLoadingStoryboard:nil] launchOptions:launchOptions];
     [ReactNative.instance start];
   } else {
     [self showUnrecoverableDialogWithTitle:@"No Mendix bundle found" message:@"Missing the Mendix app bundle. Make sure that the index.ios.bundle file is available in ios/NativeTemplate/Bundle folder. If building locally consult the documentation on how to generate a bundle from your project."];
@@ -62,27 +57,21 @@
 }
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-  if (self.useFirebase) {
-    [[RNFirebaseNotifications instance] didReceiveLocalNotification:notification];
-  }
+  [MendixAppDelegate application:application didReceiveLocalNotification:notification];
 }
 
 - (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
 fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
-  if (self.useFirebase) {
-    [[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
-  }
+  [MendixAppDelegate application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
 }
 
 - (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-  if (self.useFirebase) {
-    [[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings];
-  }
+  [MendixAppDelegate application:application didRegisterUserNotificationSettings:notificationSettings];
 }
 
-- (BOOL) useFirebase {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"GoogleService-Info" ofType:@"plist"];
-    return [[NSFileManager defaultManager] fileExistsAtPath:path];
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+  [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+  return YES;
 }
 
 - (WarningsFilter) getWarningFilterValue {

@@ -1,0 +1,32 @@
+name: IOS Custom Dev App CI
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: npm install
+        uses: Jaid/action-npm-install@v1.2.4
+        with:
+          packageManager: npm
+      - name: pod install
+        run: pod install
+        working-directory: ./ios
+      - name: iOS Build Action
+        uses: yukiarrr/ios-build-action@v0.5.1
+        with:
+          project-path: ./ios/nativetemplate.xcodeproj
+          p12-base64: ${{ secrets.IOS_DUMMY_P12 }}
+          mobileprovision-base64: ${{ secrets.IOS_DUMMY_PROVISION }}
+          code-signing-identity: ${{ secrets.IOS_CODE_SIGNING_IDENTITY }}
+          team-id: ${{ secrets.IOS_TEAM_ID }}
+          workspace-path: ./ios/nativetemplate.xcworkspace
+          export-method: development
+          configuration: Debug
+          certificate-password: ${{ secrets.IOS_DUMMY_P12_PASSWORD }}
+          scheme: Dev
