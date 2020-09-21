@@ -393,7 +393,7 @@ def generatedCodeDir = new File(generatedSrcDir, generatedFilePackage.replace('.
 
 def capabilitiesConfig = new File("${rootDir}capabilities-setup-config.json")
 def unlinkedDependenciesConfigFile = new File("${rootDir}unlinked-dependency-config.json")
-def capabilitiesFile = new File("${rootDir}capabilities.json")
+def capabilitiesFile = new File("${rootDir}capabilities.android.json")
 def mendixModules = new MendixModules(capabilitiesConfig, unlinkedDependenciesConfigFile, capabilitiesFile, cliBinPath, rootDir, logger, LOG_PREFIX)
 
 def logLifecycle = { String message -> logger.lifecycle("${LOG_PREFIX}${message}") }
