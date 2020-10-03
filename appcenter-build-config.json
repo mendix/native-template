@@ -6,7 +6,7 @@
     "environmentVariables": [{ "name": "CODE_PUSH_KEY", "value": "" }, { "name": "IS_DEV_APP", "value": false }],
     "toolsets": {
       "xcode": {
-        "xcodeVersion": "11.5",
+        "xcodeVersion": "12.0",
         "automaticSigning": false,
         "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
         "podfilePath": "ios/Podfile",
@@ -15,7 +15,7 @@
       "javascript": {
         "packageJsonPath": "package.json",
         "runTests": false,
-        "nodeVersion": "10.x"
+        "nodeVersion": "12.x"
       },
       "buildscripts": {
         "package.json": {
@@ -43,7 +43,7 @@
       "javascript": {
         "packageJsonPath": "package.json",
         "runTests": false,
-        "nodeVersion": "10.x"
+        "nodeVersion": "12.x"
       },
       "buildscripts": {
         "package.json": {
