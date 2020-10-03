@@ -15,6 +15,7 @@
     [FIRApp configure];
     [RNFirebaseNotifications configure];
   }
+  [self setupUI];
 
   NSBundle *mainBundle = [NSBundle mainBundle];
   NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
@@ -100,5 +101,11 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
     [NSException raise:@"UnrecoverableError" format:message];
   }]];
   [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void) setupUI {
+  if (@available(iOS 13.4, *)) {
+    [UIDatePicker appearance].preferredDatePickerStyle = UIDatePickerStyleWheels;
+  }
 }
 @end
