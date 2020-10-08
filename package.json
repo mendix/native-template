@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -48,7 +48,7 @@
     "@babel/core": "^7.5.4",
     "@babel/runtime": "^7.5.4",
     "babel-jest": "^25.2.6",
-    "detox": "16.9.2",
+    "detox": "17.6.1",
     "jest": "^25.2.7",
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "^0.58.0",
