@@ -70,15 +70,6 @@
             }
         }
     },
-    "bluetooth": {
-        "ios": {
-            "pods": {
-                "react-native-ble-plx-swift": {
-                    "path": "react-native-ble-plx"
-                }
-            }
-        }
-    },
     "maps": {},
     "mapsIos": {
         "ios": {
