@@ -112,7 +112,7 @@ def get_capabilities_setup_config
 end
 
 def get_project_capabilities
-  read_json_file_gracefully("capabilities.json") || {}
+  read_json_file_gracefully("capabilities.ios.json") || {}
 end
 
 # Source @react-native-community/cli-platform-ios/native_modules

@@ -3,7 +3,7 @@ import groovy.json.JsonSlurper
 def LOG_PREFIX = ":Mendix: "
 
 def rootDir = buildscript.sourceFile.toString().split("android(/|\\\\)mendixnative-release")[0]
-def cliBinPath = "${rootDir}/node_modules/.bin/react-native${System.properties['os.name'].toLowerCase().contains('windows') ? ".bat" : ""}"
+def cliBinPath = "${rootDir}/node_modules/.bin/react-native${System.properties['os.name'].toLowerCase().contains('windows') ? ".cmd" : ""}"
 
 def generatedFilePackage = "com.mendix.nativetemplate"
 def mainActivityObserverFileName = "MendixActivityObserver.java"
@@ -393,7 +393,7 @@ def generatedCodeDir = new File(generatedSrcDir, generatedFilePackage.replace('.
 
 def capabilitiesConfig = new File("${rootDir}capabilities-setup-config.json")
 def unlinkedDependenciesConfigFile = new File("${rootDir}unlinked-dependency-config.json")
-def capabilitiesFile = new File("${rootDir}capabilities.json")
+def capabilitiesFile = new File("${rootDir}capabilities.android.json")
 def mendixModules = new MendixModules(capabilitiesConfig, unlinkedDependenciesConfigFile, capabilitiesFile, cliBinPath, rootDir, logger, LOG_PREFIX)
 
 def logLifecycle = { String message -> logger.lifecycle("${LOG_PREFIX}${message}") }
