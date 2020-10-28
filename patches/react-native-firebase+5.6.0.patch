@@ -1,0 +1,51 @@
+diff --git a/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m b/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m
+index 90fdb1d..92ac092 100644
+--- a/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m
++++ b/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m
+@@ -187,8 +187,10 @@ - (void)messaging:(nonnull FIRMessaging *)messaging
+ }
+ 
+ RCT_EXPORT_METHOD(registerForRemoteNotifications:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+-    [RCTSharedApplication() registerForRemoteNotifications];
+-    resolve(nil);
++    dispatch_async(dispatch_get_main_queue(), ^{
++        [RCTSharedApplication() registerForRemoteNotifications];
++        resolve(nil);
++    });
+ }
+ 
+ // Non Web SDK methods
+diff --git a/node_modules/react-native-firebase/ios/RNFirebase/notifications/RNFirebaseNotifications.m b/node_modules/react-native-firebase/ios/RNFirebase/notifications/RNFirebaseNotifications.m
+index d3aa1e3..0e34d39 100644
+--- a/node_modules/react-native-firebase/ios/RNFirebase/notifications/RNFirebaseNotifications.m
++++ b/node_modules/react-native-firebase/ios/RNFirebase/notifications/RNFirebaseNotifications.m
+@@ -102,17 +102,19 @@ - (void)didReceiveLocalNotification:(nonnull UILocalNotification *)localNotifica
+ 
+ RCT_EXPORT_METHOD(complete:(NSString*)handlerKey fetchResult:(UIBackgroundFetchResult)fetchResult) {
+     if (handlerKey != nil) {
+-        void (^fetchCompletionHandler)(UIBackgroundFetchResult) = fetchCompletionHandlers[handlerKey];
+-        if (fetchCompletionHandler != nil) {
+-            fetchCompletionHandlers[handlerKey] = nil;
+-            fetchCompletionHandler(fetchResult);
+-        } else {
+-            void(^completionHandler)(void) = completionHandlers[handlerKey];
+-            if (completionHandler != nil) {
+-                completionHandlers[handlerKey] = nil;
+-                completionHandler();
++        dispatch_async(dispatch_get_main_queue(), ^{
++            void (^fetchCompletionHandler)(UIBackgroundFetchResult) = fetchCompletionHandlers[handlerKey];
++            if (fetchCompletionHandler != nil) {
++                fetchCompletionHandlers[handlerKey] = nil;
++                fetchCompletionHandler(fetchResult);
++            } else {
++                void(^completionHandler)(void) = completionHandlers[handlerKey];
++                if (completionHandler != nil) {
++                    completionHandlers[handlerKey] = nil;
++                    completionHandler();
++                }
+             }
+-        }
++        });
+     }
+ }
+ 
