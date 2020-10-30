@@ -14,25 +14,16 @@
     "pushNotifications": {
         "android": {
             "externalDependencies": [
-                "com.google.firebase:firebase-messaging:20.1.2",
                 "me.leolin:ShortcutBadger:1.1.22@aar"
             ],
-            "packageListEntries": {
-                "imports": [
-                    "import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;",
-                    "import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;"
-                ],
-                "packageClassInstances": [
-                    "new RNFirebaseMessagingPackage()",
-                    "new RNFirebaseNotificationsPackage()"
-                ]
-            },
             "gradle": {
                 "classpaths": [
-                    "com.google.gms:google-services:4.2.0"
+                    "com.google.gms:google-services:4.3.3",
+                    "com.google.firebase:firebase-crashlytics-gradle:2.2.0"
                 ],
                 "plugins": [
-                    "com.google.gms.google-services"
+                    "com.google.gms.google-services",
+                    "com.google.firebase.crashlytics"
                 ]
             }
         },
