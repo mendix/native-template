@@ -3,6 +3,9 @@
 #import "MendixNative/MendixNative.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "SplashScreenPresenter.h"
+// Required for local notifications
+#import <UserNotifications/UserNotifications.h>
+#import <RNCPushNotificationIOS.h>
 
 @implementation AppDelegate
 
@@ -11,7 +14,12 @@
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
-  
+
+  // Required for Local Notifications
+  UNUserNotificationCenter *center =
+        [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+
   NSBundle *mainBundle = [NSBundle mainBundle];
   NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
 
@@ -26,7 +34,7 @@
     if (url == nil) {
       return YES;
     }
-    
+
     shouldOpenInLastApp = YES;
     NSURL *bundleUrl = [AppUrl forBundle:url port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
     NSURL *runtimeUrl = [AppUrl forRuntime:url];
@@ -35,7 +43,7 @@
 
     return YES;
   }
-  
+
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.rootViewController = [UIViewController new];
   [self.window makeKeyAndVisible];
@@ -47,7 +55,7 @@
   }
   NSURL *runtimeUrl = [AppUrl forRuntime:[url stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
   NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
-  
+
   if (bundleUrl != nil) {
     [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:NO clearDataAtLaunch:NO splashScreenPresenter:[SplashScreenPresenter new]] launchOptions:launchOptions];
     [ReactNative.instance start];
@@ -56,6 +64,12 @@
   }
 
   return YES;
+}
+
+//Called when a notification is delivered to a foreground app.
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+{
+  completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);
 }
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
@@ -96,5 +110,12 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
   if (@available(iOS 13.4, *)) {
     [UIDatePicker appearance].preferredDatePickerStyle = UIDatePickerStyleWheels;
   }
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+    didReceiveNotificationResponse:(UNNotificationResponse *)response
+             withCompletionHandler:(void (^)(void))completionHandler {
+  [RNCPushNotificationIOS didReceiveNotificationResponse:response];
+  completionHandler();
 }
 @end
