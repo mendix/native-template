@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "5.0.5",
+  "version": "5.0.6",
   "private": true,
   "scripts": {
     "postinstall": "npx patch-package && npx jetify"
