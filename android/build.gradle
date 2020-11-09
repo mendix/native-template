@@ -43,8 +43,5 @@ allprojects {
         maven {
             url "https://maven.fabric.io/public"
         }
-        maven {
-            url "$rootDir/../node_modules/detox/Detox-android"
-        }
     }
 }
