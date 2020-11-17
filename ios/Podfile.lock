@@ -156,7 +156,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - PromisesObjC (1.2.10)
+  - PromisesObjC (1.2.11)
   - Protobuf (3.13.0)
   - RCTRequired (0.61.5)
   - RCTTypeSafety (0.61.5):
@@ -407,8 +407,8 @@ PODS:
     - React
   - RNCMaskedView (0.1.7):
     - React
-  - RNDateTimePicker (2.3.0):
-    - React
+  - RNDateTimePicker (3.0.4):
+    - React-Core
   - RNDeviceInfo (5.5.3):
     - React
   - RNFastImage (8.1.5):
@@ -441,9 +441,9 @@ PODS:
     - React
   - RNVectorIcons (6.6.0):
     - React
-  - SDWebImage (5.9.2):
-    - SDWebImage/Core (= 5.9.2)
-  - SDWebImage/Core (5.9.2)
+  - SDWebImage (5.10.0):
+    - SDWebImage/Core (= 5.10.0)
+  - SDWebImage/Core (5.10.0)
   - SDWebImageWebPCoder (0.4.1):
     - libwebp (~> 1.0)
     - SDWebImage/Core (~> 5.5)
@@ -702,7 +702,7 @@ SPEC CHECKSUMS:
   JWT: 9b5c05abbcc1a0e69c3c91e1655b3387fc7e581d
   libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
   RCTRequired: b153add4da6e7dbc44aebf93f3cf4fcae392ddf1
   RCTTypeSafety: 9aa1b91d7f9310fc6eadc3cf95126ffe818af320
@@ -743,7 +743,7 @@ SPEC CHECKSUMS:
   ReactNativeDarkMode: 0178ffca3b10f6a7c9f49d6f9810232b328fa949
   RNCAsyncStorage: 00bdf63f7f1e0f11d3323533dba4f222e58bf092
   RNCMaskedView: 90dd32f5b786bd562e876e1421ea77c700cbf71e
-  RNDateTimePicker: d7d3dde9497b4bd4b3ea84881c41d3f0ece481f5
+  RNDateTimePicker: 88dc10d685ce961339bad3353c64db96c5abd19b
   RNDeviceInfo: 67607dfe9cfbed105838144c40187a8392aa404d
   RNFastImage: 35ae972d6727c84ee3f5c6897e07f84d0a3445e9
   RNFirebase: 37daa9a346d070f9f6ee1f3b4aaf4c8e3b1d5d1c
@@ -754,7 +754,7 @@ SPEC CHECKSUMS:
   RNSound: c980916b596cc15c8dcd2f6ecd3b13c4881dbe20
   RNSVG: 7e16ddfc6e00d5aa69c9eb83e699bcce5dcb85d4
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
-  SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
+  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   SDWebImageWebPCoder: 36f8f47bd9879a8aea6044765c1351120fd8e3a8
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
