@@ -30,22 +30,18 @@
         "ios": {
             "AppDelegate": {
                 "imports": [
-                    "#import <Firebase.h>",
-                    "#import \"RNFirebase/RNFirebaseNotifications.h\"",
-                    "#import \"RNFirebase/RNFirebaseMessaging.h\""
+                    "#import <RNCPushNotificationIOS.h>"
                 ],
                 "didFinishLaunchingWithOptions": [
-                    "[FIRApp configure];",
-                    "[RNFirebaseNotifications configure];"
+                    "UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];",
+                    "center.delegate = self;"
                 ],
-                "didReceiveLocalNotification": [
-                    "[[RNFirebaseNotifications instance] didReceiveLocalNotification:notification];"
+                "willPresentNotification": [
+                    "completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);"
                 ],
-                "didReceiveRemoteNotification": [
-                    "[[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];"
-                ],
-                "didRegisterUserNotificationSettings": [
-                    "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings];"
+                "didReceiveNotificationResponse": [
+                    "[RNCPushNotificationIOS didReceiveNotificationResponse:response];",
+                    "completionHandler();"
                 ]
             },
             "pods": {}
