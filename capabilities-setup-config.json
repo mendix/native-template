@@ -34,7 +34,7 @@
                 ],
                 "didFinishLaunchingWithOptions": [
                     "UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];",
-                    "center.delegate = self;"
+                    "center.delegate = MendixAppDelegate.delegate;"
                 ],
                 "willPresentNotification": [
                     "completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);"
@@ -43,8 +43,7 @@
                     "[RNCPushNotificationIOS didReceiveNotificationResponse:response];",
                     "completionHandler();"
                 ]
-            },
-            "pods": {}
+            }
         }
     },
     "maps": {},

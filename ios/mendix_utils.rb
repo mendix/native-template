@@ -72,6 +72,8 @@ def mendix_app_delegate_template
 
 @implementation MendixAppDelegate
 
+static UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable delegate;
+
 + (void) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 {{ didFinishLaunchingWithOptions }}
 }
@@ -99,6 +101,14 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 
 - (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
 {{ didReceiveNotificationResponse }}
+}
+
++ (UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable) delegate {
+  return delegate;
+}
+
++ (void) setDelegate:(UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nonnull)value {
+  delegate = value;
 }
 
 @end\n)
