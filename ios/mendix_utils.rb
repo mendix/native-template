@@ -32,6 +32,8 @@ def generate_mendix_delegate
     didReceiveRemoteNotification: [],
     didRegisterUserNotificationSettings: [],
     openURL: [],
+    willPresentNotification: [],
+    didReceiveNotificationResponse: [],
   }
 
   capabilities_setup_config = get_capabilities_setup_config
@@ -89,6 +91,14 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 
 + (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 {{ openURL }}
+}
+
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+{{ willPresentNotification }}
+}
+
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+{{ didReceiveNotificationResponse }}
 }
 
 @end\n)
