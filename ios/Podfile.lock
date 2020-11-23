@@ -15,76 +15,75 @@ PODS:
     - React-Core (= 0.63.3)
     - React-jsi (= 0.63.3)
     - ReactCommon/turbomodule/core (= 0.63.3)
-  - Firebase/Analytics (6.34.0):
+  - Firebase/Analytics (7.0.0):
     - Firebase/Core
-  - Firebase/Core (6.34.0):
+  - Firebase/Core (7.0.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 6.9.0)
-  - Firebase/CoreOnly (6.34.0):
-    - FirebaseCore (= 6.10.4)
-  - Firebase/Crashlytics (6.34.0):
+    - FirebaseAnalytics (= 7.0.0)
+  - Firebase/CoreOnly (7.0.0):
+    - FirebaseCore (= 7.0.0)
+  - Firebase/Crashlytics (7.0.0):
     - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 4.6.2)
-  - Firebase/Messaging (6.34.0):
+    - FirebaseCrashlytics (~> 7.0.0)
+  - Firebase/Messaging (7.0.0):
     - Firebase/CoreOnly
-    - FirebaseMessaging (~> 4.7.1)
-  - Firebase/MLVision (6.34.0):
+    - FirebaseMessaging (~> 7.0.0)
+  - Firebase/MLVision (7.0.0):
     - Firebase/CoreOnly
-    - FirebaseMLVision (~> 0.21.0)
-  - FirebaseAnalytics (6.9.0):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.7)
-    - GoogleAppMeasurement (= 6.9.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/MethodSwizzler (~> 6.7)
-    - GoogleUtilities/Network (~> 6.7)
-    - "GoogleUtilities/NSData+zlib (~> 6.7)"
-    - nanopb (~> 1.30906.0)
-  - FirebaseCore (6.10.4):
-    - FirebaseCoreDiagnostics (~> 1.6)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/Logger (~> 6.7)
-  - FirebaseCoreDiagnostics (1.7.0):
-    - GoogleDataTransport (~> 7.4)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/Logger (~> 6.7)
-    - nanopb (~> 1.30906.0)
-  - FirebaseCrashlytics (4.6.2):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.6)
-    - GoogleDataTransport (~> 7.2)
-    - nanopb (~> 1.30906.0)
+    - FirebaseMLVision (~> 7.0.0-beta)
+  - FirebaseAnalytics (7.0.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleAppMeasurement (= 7.0.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30906.0)
+  - FirebaseCore (7.0.0):
+    - FirebaseCoreDiagnostics (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Logger (~> 7.0)
+  - FirebaseCoreDiagnostics (7.1.0):
+    - GoogleDataTransport (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Logger (~> 7.0)
+    - nanopb (~> 2.30906.0)
+  - FirebaseCrashlytics (7.0.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleDataTransport (~> 8.0)
+    - nanopb (~> 2.30906.0)
     - PromisesObjC (~> 1.2)
-  - FirebaseInstallations (1.7.0):
-    - FirebaseCore (~> 6.10)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/UserDefaults (~> 6.7)
+  - FirebaseInstallations (7.1.0):
+    - FirebaseCore (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
     - PromisesObjC (~> 1.2)
-  - FirebaseInstanceID (4.8.0):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.6)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/UserDefaults (~> 6.7)
-  - FirebaseMessaging (4.7.1):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstanceID (~> 4.7)
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/Reachability (~> 6.7)
-    - GoogleUtilities/UserDefaults (~> 6.7)
-    - Protobuf (>= 3.9.2, ~> 3.9)
-  - FirebaseMLCommon (0.21.0):
-    - FirebaseCore (~> 6.9)
-    - FirebaseInstallations (~> 1.5)
+  - FirebaseInstanceID (7.1.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebaseMessaging (7.0.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstanceID (~> 7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Reachability (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebaseMLCommon (7.1.0-beta):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
-    - GoogleUtilities/UserDefaults (~> 6.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.12)
-  - FirebaseMLVision (0.21.0):
-    - FirebaseCore (~> 6.9)
-    - FirebaseMLCommon (~> 0.21)
+  - FirebaseMLVision (7.0.0-beta):
+    - FirebaseCore (~> 7.0)
+    - FirebaseMLCommon (~> 7.0-beta)
     - GoogleAPIClientForREST/Core (~> 1.3)
     - GoogleAPIClientForREST/Vision (~> 1.3)
     - GoogleToolboxForMac/Logger (~> 2.1)
@@ -122,14 +121,14 @@ PODS:
   - GoogleAPIClientForREST/Vision (1.5.1):
     - GoogleAPIClientForREST/Core
     - GTMSessionFetcher (>= 1.1.7)
-  - GoogleAppMeasurement (6.9.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/MethodSwizzler (~> 6.7)
-    - GoogleUtilities/Network (~> 6.7)
-    - "GoogleUtilities/NSData+zlib (~> 6.7)"
-    - nanopb (~> 1.30906.0)
-  - GoogleDataTransport (7.5.1):
-    - nanopb (~> 1.30906.0)
+  - GoogleAppMeasurement (7.0.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30906.0)
+  - GoogleDataTransport (8.0.1):
+    - nanopb (~> 2.30906.0)
   - GoogleMaps (3.5.0):
     - GoogleMaps/Maps (= 3.5.0)
   - GoogleMaps/Base (3.5.0)
@@ -147,24 +146,24 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.3.0)
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.0)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.3.0)"
-  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
+  - GoogleUtilities/AppDelegateSwizzler (7.1.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.7.2):
+  - GoogleUtilities/Environment (7.1.1):
     - PromisesObjC (~> 1.2)
-  - GoogleUtilities/Logger (6.7.2):
+  - GoogleUtilities/Logger (7.1.1):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.7.2):
+  - GoogleUtilities/MethodSwizzler (7.1.1):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.7.2):
+  - GoogleUtilities/Network (7.1.1):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.7.2)"
-  - GoogleUtilities/Reachability (6.7.2):
+  - "GoogleUtilities/NSData+zlib (7.1.1)"
+  - GoogleUtilities/Reachability (7.1.1):
     - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (6.7.2):
+  - GoogleUtilities/UserDefaults (7.1.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher (1.5.0):
     - GTMSessionFetcher/Full (= 1.5.0)
@@ -184,11 +183,11 @@ PODS:
     - libwebp/demux
   - libwebp/webp (1.1.0)
   - MultiplatformBleAdapter (0.1.6)
-  - nanopb (1.30906.0):
-    - nanopb/decode (= 1.30906.0)
-    - nanopb/encode (= 1.30906.0)
-  - nanopb/decode (1.30906.0)
-  - nanopb/encode (1.30906.0)
+  - nanopb (2.30906.0):
+    - nanopb/decode (= 2.30906.0)
+    - nanopb/encode (= 2.30906.0)
+  - nanopb/decode (2.30906.0)
+  - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
   - Protobuf (3.13.0)
   - RCTRequired (0.63.3)
@@ -477,23 +476,23 @@ PODS:
     - React
     - SDWebImage (~> 5.8)
     - SDWebImageWebPCoder (~> 0.6.1)
-  - RNFBAnalytics (7.6.8):
-    - Firebase/Analytics (~> 6.34.0)
+  - RNFBAnalytics (8.0.1):
+    - Firebase/Analytics (~> 7.0.0)
     - React-Core
     - RNFBApp
-  - RNFBApp (8.4.6):
-    - Firebase/CoreOnly (~> 6.34.0)
+  - RNFBApp (9.0.0):
+    - Firebase/CoreOnly (~> 7.0.0)
     - React-Core
-  - RNFBCrashlytics (8.4.10):
-    - Firebase/Crashlytics (~> 6.34.0)
-    - React-Core
-    - RNFBApp
-  - RNFBMessaging (7.9.1):
-    - Firebase/Messaging (~> 6.34.0)
+  - RNFBCrashlytics (8.5.2):
+    - Firebase/Crashlytics (~> 7.0.0)
     - React-Core
     - RNFBApp
-  - RNFBMLVision (7.4.10):
-    - Firebase/MLVision (~> 6.34.0)
+  - RNFBMessaging (8.0.1):
+    - Firebase/Messaging (~> 7.0.0)
+    - React-Core
+    - RNFBApp
+  - RNFBML (8.0.2):
+    - Firebase/MLVision (~> 7.0.0)
     - React-Core
     - RNFBApp
   - RNGestureHandler (1.8.0):
@@ -583,7 +582,7 @@ DEPENDENCIES:
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBCrashlytics (from `../node_modules/@react-native-firebase/crashlytics`)"
   - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
-  - "RNFBMLVision (from `../node_modules/@react-native-firebase/ml-vision`)"
+  - "RNFBML (from `../node_modules/@react-native-firebase/ml`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNInAppBrowser (from `../node_modules/react-native-inappbrowser-reborn`)
   - RNLocalize (from `../node_modules/react-native-localize`)
@@ -734,8 +733,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-firebase/crashlytics"
   RNFBMessaging:
     :path: "../node_modules/@react-native-firebase/messaging"
-  RNFBMLVision:
-    :path: "../node_modules/@react-native-firebase/ml-vision"
+  RNFBML:
+    :path: "../node_modules/@react-native-firebase/ml"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNInAppBrowser:
@@ -762,31 +761,31 @@ SPEC CHECKSUMS:
   DoubleConversion: cde416483dac037923206447da6e1454df403714
   FBLazyVector: 878b59e31113e289e275165efbe4b54fa614d43d
   FBReactNativeSpec: 7da9338acfb98d4ef9e5536805a0704572d33c2f
-  Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
-  FirebaseAnalytics: 3bb096873ee0d7fa4b6c70f5e9166b6da413cc7f
-  FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
-  FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
-  FirebaseCrashlytics: 1a747c9cc084a24dc6d9511c991db1cd078154eb
-  FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
-  FirebaseInstanceID: bd3ffc24367f901a43c063b36c640b345a4a5dd1
-  FirebaseMessaging: 5eca4ef173de76253352511aafef774caa1cba2a
-  FirebaseMLCommon: d218d75dd1c6c4e447f731ac22da56b88cb79431
-  FirebaseMLVision: 68dd092b4c52a7ac163ec0d4f541d5711fc9fec6
+  Firebase: 50be68416f50eb4eb2ecb0e78acab9a051ef95df
+  FirebaseAnalytics: c1166b7990bae464c6436132510bb718c6680f80
+  FirebaseCore: cf3122185fce1cf71cedbbc498ea84d2b3e7cb69
+  FirebaseCoreDiagnostics: 872cdb9b749b23346dddd5c1014d1babd2257de3
+  FirebaseCrashlytics: bd430b7323e8b49492a93e563e81899d0615f917
+  FirebaseInstallations: 3de38553e86171b5f81d83cdeef63473d37bfdb0
+  FirebaseInstanceID: 61e8d10a4192a582c6239378169d10e504ca8d91
+  FirebaseMessaging: ecf9e04716b7ff1f1d92debab4d6f0e6bdb490aa
+  FirebaseMLCommon: d10d915b2fd1b285f7b80694afa1a65d7fb90f5c
+  FirebaseMLVision: 39cfe86b963ce9db9216da6630529d3089254b9a
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
   Google-Maps-iOS-Utils: c32891ff472eaaa1fca032beedafa1a013af7875
   GoogleAPIClientForREST: 4bb409633efcc2e1b3f945afe7e35039b5a61db2
-  GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
-  GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
+  GoogleAppMeasurement: 7790ef975d1d463c8614cd949a847e612edf087a
+  GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
   GoogleMaps: 32ca02de09de357a10ac773f2c70f1986751392d
   GoogleToolboxForMac: 1350d40e86a76f7863928d63bcb0b89c84c521c5
-  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   JWT: 9b5c05abbcc1a0e69c3c91e1655b3387fc7e581d
   libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   MultiplatformBleAdapter: 652f47ecd7f5036756517cf66833210709a72eab
-  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
   RCTRequired: 48884c74035a0b5b76dbb7a998bd93bcfc5f2047
@@ -832,11 +831,11 @@ SPEC CHECKSUMS:
   RNDateTimePicker: 88dc10d685ce961339bad3353c64db96c5abd19b
   RNDeviceInfo: 881482f308d517d935df6e87ddc800846f432ff4
   RNFastImage: e19ba191922e7dab9d932a4d59d62d76660aa222
-  RNFBAnalytics: 2dc4dd9e2445faffca041b10447a23a71dcdabf8
-  RNFBApp: 7eacc7da7ab19f96c05e434017d44a9f09410da8
-  RNFBCrashlytics: 4870c14cf8833053b6b5648911abefe1923854d2
-  RNFBMessaging: 93a705b8286452d422a404d1303689a9b59012a0
-  RNFBMLVision: c47331df119039316dcddaf00b018b4d3471d097
+  RNFBAnalytics: e6327172c7367e1b435310c3ed251f2711adb36a
+  RNFBApp: 2810471bdc092151f20f16a9f8915b1ad70325b2
+  RNFBCrashlytics: 4310122621964af3c6b06d009c45db781da82cd2
+  RNFBMessaging: 37ea050803005191f1c42ff02234353225429c07
+  RNFBML: 0f0e557e20fc6a88daee1fafd1548f31e357c532
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
   RNInAppBrowser: 6097fbc6b09051b40a6a9ec22caf7af40b115ec0
   RNLocalize: 4071198b59b461f3b74eebc5fee8c50f13e39e79
