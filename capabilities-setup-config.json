@@ -48,17 +48,7 @@
                     "[[RNFirebaseMessaging instance] didRegisterUserNotificationSettings:notificationSettings];"
                 ]
             },
-            "pods": {
-                "Firebase/Core": {
-                    "version": "~> 6.19.0"
-                },
-                "Firebase/Messaging": {
-                    "version": "~> 6.19.0"
-                },
-                "GoogleUtilities": {
-                    "version": "~> 6.5.1"
-                }
-            }
+            "pods": {}
         }
     },
     "maps": {},
