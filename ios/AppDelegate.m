@@ -3,22 +3,15 @@
 #import "MendixNative/MendixNative.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "SplashScreenPresenter.h"
-// Required for local notifications
-#import <UserNotifications/UserNotifications.h>
-#import <RNCPushNotificationIOS.h>
 
 @implementation AppDelegate
 
 @synthesize shouldOpenInLastApp;
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  MendixAppDelegate.delegate = self;
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
-
-  // Required for Local Notifications
-  UNUserNotificationCenter *center =
-        [UNUserNotificationCenter currentNotificationCenter];
-    center.delegate = self;
 
   NSBundle *mainBundle = [NSBundle mainBundle];
   NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
@@ -66,12 +59,6 @@
   return YES;
 }
 
-//Called when a notification is delivered to a foreground app.
--(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
-{
-  completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);
-}
-
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
   [MendixAppDelegate application:application didReceiveLocalNotification:notification];
 }
@@ -112,10 +99,15 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
   }
 }
 
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center
+        willPresentNotification:(UNNotification *)notification
+          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+  [MendixAppDelegate userNotificationCenter:center willPresentNotification:notification withCompletionHandler:completionHandler];
+}
+
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center
     didReceiveNotificationResponse:(UNNotificationResponse *)response
              withCompletionHandler:(void (^)(void))completionHandler {
-  [RNCPushNotificationIOS didReceiveNotificationResponse:response];
-  completionHandler();
+  [MendixAppDelegate userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
 }
 @end
