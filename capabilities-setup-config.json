@@ -30,9 +30,11 @@
         "ios": {
             "AppDelegate": {
                 "imports": [
+                    "#import <Firebase.h>",
                     "#import <RNCPushNotificationIOS.h>"
                 ],
                 "didFinishLaunchingWithOptions": [
+                    "[FIRApp configure];",
                     "UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];",
                     "center.delegate = MendixAppDelegate.delegate;"
                 ],
