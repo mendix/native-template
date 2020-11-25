@@ -18,12 +18,10 @@
             ],
             "gradle": {
                 "classpaths": [
-                    "com.google.gms:google-services:4.3.3",
-                    "com.google.firebase:firebase-crashlytics-gradle:2.2.0"
+                    "com.google.gms:google-services:4.3.3"
                 ],
                 "plugins": [
-                    "com.google.gms.google-services",
-                    "com.google.firebase.crashlytics"
+                    "com.google.gms.google-services"
                 ]
             }
         },
