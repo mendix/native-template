@@ -3,9 +3,7 @@
   "version": "6.0.0",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "postinstall": "npx jetify",
-    "test": "jest"
+    "postinstall": "npx patch-package && npx jetify"
   },
   "dependencies": {
     "@react-native-community/art": "1.2.0",
@@ -56,6 +54,7 @@
     "jest": "^25.2.7",
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "^0.63.0",
+    "patch-package": "^6.2.2",
     "react-test-renderer": "~16.9.0"
   },
   "jest": {
