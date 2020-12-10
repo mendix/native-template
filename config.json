@@ -1,0 +1,40 @@
+{
+    "projectName": "CoolApp",
+    "appName": "CoolApp",
+    "runtimeUrl": "localhost:8080",
+    "deviceTarget": {
+        "phone": true,
+        "tablet": false
+    },
+    "orientation": {
+        "portrait": true,
+        "landscape": true
+    },
+    "appIdentifier": "com.mendix.developerapp",
+    "appVersion": "1.2.3",
+    "buildNumber": "26",
+    "capabilities": {
+        "deepLink": {
+            "value": "",
+            "enabled": false
+        },
+        "maps": {
+            "value": "Keysss",
+            "enabled": true
+        },
+        "mapsIos": {
+            "value": {
+                "purpose": "To use that feature the app needs access to your location."
+            },
+            "enabled": false
+        },
+        "pushNotifications": {
+            "value": {
+                "androidPath": "",
+                "iosPath": ""
+            },
+            "enabled": false
+        }
+    },
+    "configVersion": 1
+}
