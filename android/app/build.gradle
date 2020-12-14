@@ -4,6 +4,15 @@ import com.android.build.OutputFile
 
 apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
+project.ext.react = [
+        bundleInDebug        : false,
+        bundleInRelease      : false,
+        enableHermes         : false,  // clean and rebuild if changing
+        nodeExecutableAndArgs: ["/usr/local/bin/node"]
+]
+
+apply from: file("../../node_modules/react-native/react.gradle")
+
 /**
  * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
@@ -20,9 +29,26 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 /**
- * Condition for including google services for firebase
+ * The preferred build flavor of JavaScriptCore.
+ *
+ * For example, to use the international variant, you can use:
+ * `def jscFlavor = 'org.webkit:android-jsc-intl:+'`
+ *
+ * The international variant includes ICU i18n library and necessary data
+ * allowing to use e.g. `Date.toLocaleString` and `String.localeCompare` that
+ * give correct results when using with locales other than en-US.  Note that
+ * this variant is about 6MiB larger per architecture than default.
  */
-def googleServicesEnabled = hasGoogleServicesSupport()
+def jscFlavor = 'org.webkit:android-jsc:+'
+
+/**
+ * Whether to enable the Hermes VM.
+ *
+ * This should be set on project.ext.react and mirrored here.  If it is not set
+ * on project.ext.react, JavaScript will not be compiled to Hermes Bytecode
+ * and the benefits of using Hermes will therefore be sharply reduced.
+ */
+def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -41,7 +67,6 @@ android {
         versionName "1.0"
         testBuildType System.getProperty("testBuildType", "debug")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "boolean", "USE_FIREBASE", "${googleServicesEnabled}"
     }
     splits {
         abi {
@@ -70,11 +95,9 @@ android {
     }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
-        tasks.create(name: "bundle${variant.name.capitalize()}JsAndAssets") {}
-
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
-            // https://developer.android.com/studio/build/configure-apk-splits.html
+            // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
             def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
@@ -83,8 +106,8 @@ android {
             }
         }
     }
-    dataBinding {
-        enabled false
+    buildFeatures {
+        viewBinding true
     }
     packagingOptions {
         pickFirst '**/libjsc.so'
@@ -93,24 +116,42 @@ android {
 }
 
 project.ext.vectoricons = [
-    // Intentionally left blank
-    iconFontNames: []
+        // Intentionally left blank
+        iconFontNames: []
 ]
 
 dependencies {
+    implementation "com.facebook.react:react-native:+"  // From node_modules
+
+    // Flipper debugger
+    implementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
+        exclude group: 'com.facebook.flipper'
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }
+    implementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
+        exclude group: 'com.facebook.flipper'
+    }
+
+    // Javascript engine
+    if (enableHermes) {
+        def hermesPath = "../../node_modules/hermes-engine/android/";
+        implementation files(hermesPath + "hermes-debug.aar")
+    } else {
+        implementation jscFlavor
+    }
+
     implementation project(':react-native-splash-screen')
     implementation project(':react-native-code-push')
     implementation project(":mendixnative-release")
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation "org.webkit:android-jsc:r245459"
-    devImplementation "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
-    devImplementation "me.dm7.barcodescanner:zxing:1.9.13"
 
     // Required for Custom Dev Apps
-    devImplementation 'com.fasterxml.jackson.core:jackson-core:2.10.3'
-    devImplementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.3'
-    devImplementation 'com.fasterxml.jackson.core:jackson-databind:2.10.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-core:2.11.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-annotations:2.11.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-databind:2.11.3'
+    devImplementation "androidx.constraintlayout:constraintlayout:2.0.4"
+    devImplementation "me.dm7.barcodescanner:zxing:1.9.13"
 
     androidTestImplementation("com.wix:detox:+")
 }
@@ -128,18 +169,8 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into "libs"
 }
 
-apply from: file("../mendixnative-release/mendix.gradle"); applyMendixGradle(project)
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply from: file("../mendixnative-release/mendix.gradle");
+applyMendixGradle(project)
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle");
+applyNativeModulesAppBuildGradle(project)
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
-
-// Disable till dependencies are ironed out
-try {
-    com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
-} catch (e) {
-}
-
-boolean hasGoogleServicesSupport() {
-    def enabled = file("$projectDir/google-services.json").exists()
-    println "Google Services support is ${enabled ? "enabled" : "disabled"}"
-    return enabled
-}
