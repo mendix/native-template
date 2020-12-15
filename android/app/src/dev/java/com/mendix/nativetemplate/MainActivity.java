@@ -42,8 +42,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static com.mendix.mendixnative.activity.MendixReactActivity.MENDIX_APP_INTENT_KEY;
-
 public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     static private int CAMERA_REQUEST = 1;
     private Executor httpExecutor = Executors.newSingleThreadExecutor();
@@ -76,10 +74,12 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
         appUrl.setText(appPreferences.getAppUrl());
         devModeCheckBox.setChecked(appPreferences.isDevModeEnabled());
+    }
 
-        // This check is required for deep link to work.
-        // Changes here will affect deep linking functionality
-        if (getIntent().getSerializableExtra(MENDIX_APP_INTENT_KEY) == null) {
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        if (intent.getExtras() != null) {
             launchApp(appPreferences.getAppUrl());
         }
     }
@@ -189,11 +189,13 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
                 return;
             }
 
+            String runtimeUrl = AppUrl.forRuntime(url);
+            appPreferences.setAppUrl(AppUrl.forRuntime(runtimeUrl));
             boolean clearData = clearDataCheckBox.isChecked();
             Intent intent = new Intent(this, MendixReactActivity.class);
             boolean devModeEnabled = devModeCheckBox.isChecked();
             MxConfiguration.WarningsFilter warningsFilter = devModeEnabled ? MxConfiguration.WarningsFilter.partial : MxConfiguration.WarningsFilter.none;
-            MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), warningsFilter, devModeEnabled);
+            MendixApp mendixApp = new MendixApp(runtimeUrl, warningsFilter, devModeEnabled);
             intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
             intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
             startActivity(intent);
