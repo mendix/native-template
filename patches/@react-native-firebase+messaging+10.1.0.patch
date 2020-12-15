@@ -1,0 +1,23 @@
+diff --git a/node_modules/@react-native-firebase/messaging/android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java b/node_modules/@react-native-firebase/messaging/android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java
+index efe88d2..182dd64 100644
+--- a/node_modules/@react-native-firebase/messaging/android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java
++++ b/node_modules/@react-native-firebase/messaging/android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java
+@@ -192,10 +192,14 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
+   @Override
+   public Map<String, Object> getConstants() {
+     final Map<String, Object> constants = new HashMap<>();
+-    constants.put(
+-      "isAutoInitEnabled",
+-      FirebaseMessaging.getInstance().isAutoInitEnabled()
+-    );
++    try {
++      constants.put(
++        "isAutoInitEnabled",
++        FirebaseMessaging.getInstance().isAutoInitEnabled()
++      );
++    } catch(Exception e) {
++      // Ignored on purpose
++    }
+     return constants;
+   }
+ 
