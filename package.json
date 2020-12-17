@@ -43,7 +43,7 @@
     "react-native-webview": "10.9.1"
   },
   "devDependencies": {
-    "detox": "17.6.1",
+    "detox": "17.14.5",
     "jetifier": "^1.6.3",
     "patch-package": "^6.2.2"
   }
