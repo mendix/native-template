@@ -47,7 +47,7 @@
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "babel-jest": "^25.2.6",
-    "detox": "17.6.1",
+    "detox": "17.14.5",
     "jest": "^25.2.7",
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "^0.63.0",
