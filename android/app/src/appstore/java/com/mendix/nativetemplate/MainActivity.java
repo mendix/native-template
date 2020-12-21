@@ -14,7 +14,7 @@ public class MainActivity extends MendixReactActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         this.getLifecycle().addObserver(new MendixActivityObserver(this));
         Boolean hasDeveloperSupport = ((MainApplication) getApplication()).getUseDeveloperSupport();
-        mendixApp = new MendixApp(AppUrl.getUrlFromResource(this), MxConfiguration.WarningsFilter.none, hasDeveloperSupport);
+        mendixApp = new MendixApp(AppUrl.getUrlFromResource(this), MxConfiguration.WarningsFilter.none, hasDeveloperSupport, false);
         super.onCreate(savedInstanceState);
     }
 }
