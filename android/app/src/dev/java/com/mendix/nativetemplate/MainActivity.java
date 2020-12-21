@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             Intent intent = new Intent(this, MendixReactActivity.class);
             boolean devModeEnabled = devModeCheckBox.isChecked();
             MxConfiguration.WarningsFilter warningsFilter = devModeEnabled ? MxConfiguration.WarningsFilter.partial : MxConfiguration.WarningsFilter.none;
-            MendixApp mendixApp = new MendixApp(runtimeUrl, warningsFilter, devModeEnabled);
+            MendixApp mendixApp = new MendixApp(runtimeUrl, warningsFilter, devModeEnabled, true);
             intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
             intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
             startActivity(intent);
