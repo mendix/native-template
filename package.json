@@ -3,7 +3,7 @@
   "version": "6.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "npx --no-install patch-package && npx --no-install jetify"
+    "postinstall": "patch-package && jetify"
   },
   "dependencies": {
     "@react-native-community/art": "1.2.0",
