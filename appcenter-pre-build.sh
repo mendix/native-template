@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ $SUPPORTS_MOBILE_TOOLKIT == True ]]; then
+    echo "Configuring template with mobile toolkit"
+    npm run configure
+fi
+
 INFO_PLIST=$APPCENTER_SOURCE_DIRECTORY/ios/$APPCENTER_XCODE_SCHEME/Info.plist
 if [[ -e "$INFO_PLIST" && $IS_DEV_APP == False ]]; then
     echo "Stripping unwanted MendixNative (i386, x86_64) archs"
