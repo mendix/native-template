@@ -2,9 +2,9 @@ name: Android Custom Dev App CI
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
-jobs:     
+jobs:
   build:
     runs-on: ubuntu-latest
 
@@ -17,7 +17,9 @@ jobs:
       - name: npm install
         uses: Jaid/action-npm-install@v1.2.4
         with:
-              packageManager: npm
+          packageManager: npm
+      - name: Add NDK 21.0.6113699
+        run: echo "y" | sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;21.0.6113699"
       - name: Build with Gradle
         run: ./gradlew assembleDevDebug
         working-directory: ./android
