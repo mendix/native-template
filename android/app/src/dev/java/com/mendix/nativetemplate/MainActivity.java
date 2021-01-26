@@ -43,8 +43,8 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
-    static private int CAMERA_REQUEST = 1;
-    private Executor httpExecutor = Executors.newSingleThreadExecutor();
+    static private final int CAMERA_REQUEST = 1;
+    private final Executor httpExecutor = Executors.newSingleThreadExecutor();
     private ZXingScannerView cameraView;
     private AppPreferences appPreferences;
     private Button launchAppButton;
@@ -188,12 +188,13 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
                 disableUIInteraction(false);
                 return;
             }
-
-            String runtimeUrl = AppUrl.forRuntime(url);
-            appPreferences.setAppUrl(AppUrl.forRuntime(runtimeUrl));
             boolean clearData = clearDataCheckBox.isChecked();
-            Intent intent = new Intent(this, MendixReactActivity.class);
             boolean devModeEnabled = devModeCheckBox.isChecked();
+            String runtimeUrl = AppUrl.forRuntime(url);
+
+            appPreferences.setAppUrl(AppUrl.forRuntime(runtimeUrl));
+
+            Intent intent = new Intent(this, MendixReactActivity.class);
             MxConfiguration.WarningsFilter warningsFilter = devModeEnabled ? MxConfiguration.WarningsFilter.partial : MxConfiguration.WarningsFilter.none;
             MendixApp mendixApp = new MendixApp(runtimeUrl, warningsFilter, devModeEnabled, true);
             intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
