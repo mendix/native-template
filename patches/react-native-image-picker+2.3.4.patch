@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-native-image-picker/android/src/main/java/com/imagepicker/utils/MediaUtils.java b/node_modules/react-native-image-picker/android/src/main/java/com/imagepicker/utils/MediaUtils.java
+index aa7641c..9438aea 100644
+--- a/node_modules/react-native-image-picker/android/src/main/java/com/imagepicker/utils/MediaUtils.java
++++ b/node_modules/react-native-image-picker/android/src/main/java/com/imagepicker/utils/MediaUtils.java
+@@ -216,6 +216,11 @@ public class MediaUtils
+             scaledPhoto.recycle();
+             scaledPhoto = null;
+         }
++
++        if(imageConfig.original.getAbsolutePath() != null){
++            new File(imageConfig.original.getAbsolutePath()).delete();
++        }
++
+         return result;
+     }
+
