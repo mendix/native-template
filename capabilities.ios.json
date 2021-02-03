@@ -1,6 +1,6 @@
 {
     "deepLink": false,
     "pushNotifications": false,
-    "maps": true,
-    "mapsIos": true
+    "maps": false,
+    "mapsIos": false
 }
