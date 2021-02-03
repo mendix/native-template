@@ -128,11 +128,14 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     // Flipper debugger
-    implementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
+    debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
+        exclude group: 'com.facebook.fbjni'
+    }
+    debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group: 'com.facebook.flipper'
         exclude group: 'com.squareup.okhttp3', module: 'okhttp'
     }
-    implementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
+    debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
         exclude group: 'com.facebook.flipper'
     }
 
