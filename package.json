@@ -10,6 +10,7 @@
     "@react-native-community/datetimepicker": "3.0.3",
     "@react-native-community/masked-view": "0.1.10",
     "@react-native-community/async-storage": "1.12.0",
+    "@react-native-community/push-notification-ios": "1.7.1",
     "@react-native-firebase/app": "10.1.0",
     "@react-native-firebase/messaging": "10.1.0",
     "react-native": "0.63.3",
@@ -28,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/runtime": "^7.8.4",
-    "@mendix/native-mobile-toolkit": "^1.0.0",
+    "@mendix/native-mobile-toolkit": "latest",
     "detox": "17.14.5",
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "^0.63.0",
