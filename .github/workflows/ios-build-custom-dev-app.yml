@@ -1,8 +1,10 @@
-name: IOS Custom Dev App CI
+name: '[iOS] Custom Dev App CI'
 
 on:
+  schedule: 
+    - cron: '0 0 * * *'
   pull_request:
-    branches: [master]
+    branches: [master, release/*]
 
 jobs:
   build:
