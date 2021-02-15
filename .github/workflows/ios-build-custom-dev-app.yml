@@ -1,4 +1,4 @@
-name: IOS Custom Dev App CI
+name: '[iOS] Custom Dev App CI'
 
 on:
   schedule: 
