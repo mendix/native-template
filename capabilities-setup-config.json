@@ -11,11 +11,33 @@
             }
         }
     },
-    "pushNotifications": {
+    "localNotifications": {
         "android": {
             "externalDependencies": [
                 "me.leolin:ShortcutBadger:1.1.22@aar"
-            ],
+            ]
+        },
+        "ios": {
+            "AppDelegate": {
+                "imports": [
+                    "#import <RNCPushNotificationIOS.h>"
+                ],
+                "didFinishLaunchingWithOptions": [
+                    "UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];",
+                    "center.delegate = MendixAppDelegate.delegate;"
+                ],
+                "willPresentNotification": [
+                    "completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);"
+                ],
+                "didReceiveNotificationResponse": [
+                    "[RNCPushNotificationIOS didReceiveNotificationResponse:response];",
+                    "completionHandler();"
+                ]
+            }
+        }
+    },
+    "pushNotifications": {
+        "android": {
             "gradle": {
                 "classpaths": [
                     "com.google.gms:google-services:4.3.3"
@@ -28,20 +50,10 @@
         "ios": {
             "AppDelegate": {
                 "imports": [
-                    "#import <Firebase.h>",
-                    "#import <RNCPushNotificationIOS.h>"
+                    "#import <Firebase.h>"
                 ],
                 "didFinishLaunchingWithOptions": [
-                    "[FIRApp configure];",
-                    "UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];",
-                    "center.delegate = MendixAppDelegate.delegate;"
-                ],
-                "willPresentNotification": [
-                    "completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);"
-                ],
-                "didReceiveNotificationResponse": [
-                    "[RNCPushNotificationIOS didReceiveNotificationResponse:response];",
-                    "completionHandler();"
+                    "[FIRApp configure];"
                 ]
             }
         }
