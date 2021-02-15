@@ -20,8 +20,8 @@ jobs:
         uses: Jaid/action-npm-install@v1.2.4
         with:
           packageManager: npm
-      - name: Add NDK 21.0.6113699
-        run: echo "y" | sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;21.0.6113699"
+      - name: Add NDK 21.4.7075529d
+        run: echo "y" | sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;21.4.7075529"
       - name: Build with Gradle
         run: ./gradlew assembleDevDebug
         working-directory: ./android
