@@ -1,3 +1,21 @@
+diff --git a/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java b/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
+index 24f472e..7a70099 100644
+--- a/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
++++ b/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
+@@ -155,6 +155,13 @@ public class RNFirebaseModule extends ReactContextBaseJavaModule {
+   public Map<String, Object> getConstants() {
+     Map<String, Object> constants = new HashMap<>();
+     List<Map<String, Object>> appMapsList = new ArrayList<>();
++    try {
++      Class.forName("FirebaseApp");
++    } catch (Exception e) {
++      Log.e("RNFirebaseModule", "Firebase app not found. Did you enable the Firebase capability?");
++      Log.e("RNFirebaseModule", e.getLocalizedMessage());
++      return constants;
++    }
+     List<FirebaseApp> firebaseAppList = FirebaseApp.getApps(getReactApplicationContext());
+ 
+     // TODO no way to get client id currently from app options - firebase sdk issue
 diff --git a/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m b/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m
 index 90fdb1d..92ac092 100644
 --- a/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m
@@ -16,7 +34,7 @@ index 90fdb1d..92ac092 100644
  
  // Non Web SDK methods
 diff --git a/node_modules/react-native-firebase/ios/RNFirebase/notifications/RNFirebaseNotifications.m b/node_modules/react-native-firebase/ios/RNFirebase/notifications/RNFirebaseNotifications.m
-index d3aa1e3..0e34d39 100644
+index d3aa1e3..b35e7c2 100644
 --- a/node_modules/react-native-firebase/ios/RNFirebase/notifications/RNFirebaseNotifications.m
 +++ b/node_modules/react-native-firebase/ios/RNFirebase/notifications/RNFirebaseNotifications.m
 @@ -102,17 +102,19 @@ - (void)didReceiveLocalNotification:(nonnull UILocalNotification *)localNotifica
