@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
         // This check is required for deep link to work.
         // Changes here will affect deep linking functionality
-        if (getIntent().getSerializableExtra(MENDIX_APP_INTENT_KEY) == null) {
+        if (getIntent().getSerializableExtra(MENDIX_APP_INTENT_KEY) != null) {
             launchApp(appPreferences.getAppUrl());
         }
     }
