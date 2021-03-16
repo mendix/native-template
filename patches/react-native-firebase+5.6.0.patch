@@ -1,21 +1,56 @@
 diff --git a/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java b/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
-index 24f472e..7a70099 100644
+index 24f472e..f32911f 100644
 --- a/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
 +++ b/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
-@@ -155,6 +155,13 @@ public class RNFirebaseModule extends ReactContextBaseJavaModule {
+@@ -155,24 +155,30 @@ public class RNFirebaseModule extends ReactContextBaseJavaModule {
    public Map<String, Object> getConstants() {
      Map<String, Object> constants = new HashMap<>();
      List<Map<String, Object>> appMapsList = new ArrayList<>();
+-    List<FirebaseApp> firebaseAppList = FirebaseApp.getApps(getReactApplicationContext());
+-
+-    // TODO no way to get client id currently from app options - firebase sdk issue
+-    for (FirebaseApp app : firebaseAppList) {
+-      String appName = app.getName();
+-      FirebaseOptions appOptions = app.getOptions();
+-      Map<String, Object> appProps = new HashMap<>();
+-
+-      appProps.put("name", appName);
+-      appProps.put("apiKey", appOptions.getApiKey());
+-      appProps.put("appId", appOptions.getApplicationId());
+-      appProps.put("projectId", appOptions.getProjectId());
+-      appProps.put("projectId", appOptions.getProjectId());
+-      appProps.put("databaseURL", appOptions.getDatabaseUrl());
+-      appProps.put("messagingSenderId", appOptions.getGcmSenderId());
+-      appProps.put("storageBucket", appOptions.getStorageBucket());
+-
+-      appMapsList.add(appProps);
++
 +    try {
-+      Class.forName("FirebaseApp");
++      List<FirebaseApp> firebaseAppList = FirebaseApp.getApps(getReactApplicationContext());
++
++      // TODO no way to get client id currently from app options - firebase sdk issue
++      for (FirebaseApp app : firebaseAppList) {
++        String appName = app.getName();
++        FirebaseOptions appOptions = app.getOptions();
++        Map<String, Object> appProps = new HashMap<>();
++
++        appProps.put("name", appName);
++        appProps.put("apiKey", appOptions.getApiKey());
++        appProps.put("appId", appOptions.getApplicationId());
++        appProps.put("projectId", appOptions.getProjectId());
++        appProps.put("projectId", appOptions.getProjectId());
++        appProps.put("databaseURL", appOptions.getDatabaseUrl());
++        appProps.put("messagingSenderId", appOptions.getGcmSenderId());
++        appProps.put("storageBucket", appOptions.getStorageBucket());
++
++        appMapsList.add(appProps);
++      }
 +    } catch (Exception e) {
 +      Log.e("RNFirebaseModule", "Firebase app not found. Did you enable the Firebase capability?");
 +      Log.e("RNFirebaseModule", e.getLocalizedMessage());
-+      return constants;
-+    }
-     List<FirebaseApp> firebaseAppList = FirebaseApp.getApps(getReactApplicationContext());
+     }
  
-     // TODO no way to get client id currently from app options - firebase sdk issue
+     constants.put("apps", appMapsList);
 diff --git a/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m b/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m
 index 90fdb1d..92ac092 100644
 --- a/node_modules/react-native-firebase/ios/RNFirebase/messaging/RNFirebaseMessaging.m
