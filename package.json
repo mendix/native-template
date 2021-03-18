@@ -1,15 +1,15 @@
 {
   "name": "native-template",
-  "version": "6.1.1",
+  "version": "6.1.2",
   "private": true,
   "scripts": {
     "postinstall": "patch-package && jetify",
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "1.12.0",
     "@react-native-community/datetimepicker": "3.0.3",
     "@react-native-community/masked-view": "0.1.10",
-    "@react-native-community/async-storage": "1.12.0",
     "@react-native-community/push-notification-ios": "1.7.1",
     "@react-native-firebase/app": "10.1.0",
     "@react-native-firebase/messaging": "10.1.0",
@@ -26,7 +26,8 @@
     "react-native-splash-screen": "3.2.0",
     "react-native-sqlite-storage": "5.0.0",
     "react-native-svg": "12.1.0",
-    "react-native-vector-icons": "7.1.0"
+    "react-native-vector-icons": "7.1.0",
+    "react-native-video": "^5.1.1"
   },
   "devDependencies": {
     "@babel/runtime": "^7.8.4",
