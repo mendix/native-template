@@ -1,0 +1,27 @@
+name: Update releases list
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch & Generate Releases List
+        uses: actions/github-script@v3
+        with:
+          script: |
+            const script = require(`${process.env.GITHUB_WORKSPACE}/.github/update_releases_list.js`);
+            await script({github});
+
+      - name: Commit Releases
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: 'Update releases list'
+          add: './.mx/releases_list.json'
