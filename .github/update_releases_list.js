@@ -2,7 +2,7 @@ const {writeFileSync} = require("fs");
 
 module.exports = async ({ github }) => {
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
-    const response = await github.repos.listReleases({ owner, repo });
+    const response = await github.repos.listReleases({ owner, repo, per_page: 100 });
     const releases = response.data.map((release) => {
         return {
             id: release.id,
