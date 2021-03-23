@@ -1,6 +1,4 @@
-const { writeFileSync } = require("fs");
-
-const relativeReleasesListPath = ".mx/releases_list.json";
+const {writeFileSync} = require("fs");
 
 module.exports = async ({ github }) => {
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
@@ -20,5 +18,5 @@ module.exports = async ({ github }) => {
         }
     });
 
-    writeFileSync(`${process.env.GITHUB_WORKSPACE}/${relativeReleasesListPath}`, `${JSON.stringify(releases, null, 4)}\n`)
+    writeFileSync(`${process.env.GITHUB_WORKSPACE}/${process.env.OUTPUT_PATH}`, `${JSON.stringify(releases, null, 4)}\n`)
 }

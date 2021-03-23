@@ -1,9 +1,10 @@
-name: Update releases list
+name: Update Releases List
 
 on:
-  push:
-    tags:
-      - '*'
+  workflow_dispatch:
+
+env:
+  OUTPUT_PATH: ./.mx/releases_list.json
 
 jobs:
   releases:
@@ -18,11 +19,14 @@ jobs:
             const script = require(`${process.env.GITHUB_WORKSPACE}/.github/update_releases_list.js`);
             await script({github});
 
-      - name: Commit Releases
-        uses: EndBug/add-and-commit@v7
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
         with:
-          branch: master
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          message: 'Update releases list'
-          add: './.mx/releases_list.json'
+          commit-message: '[BUILD] Update Release List'
+          committer: github-action <41898282+github-actions[bot]@users.noreply.github.com>
+          author: github-action <41898282+github-actions[bot]@users.noreply.github.com>
+          delete-branch: true
+          title: '[BUILD] Update Release List'
+          body: ''
+          branch: update-releases-list
+          branch-suffix: short-commit-hash
