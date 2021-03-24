@@ -1,6 +1,9 @@
 {
   "name": "native-template",
-  "version": "6.1.0",
+  "version": "6.1.2",
+  "mendix": {
+    "templateVersion": "6.1.2"
+  },
   "private": true,
   "scripts": {
     "postinstall": "patch-package && jetify",
