@@ -3,7 +3,8 @@
   "version": "5.1.8",
   "private": true,
   "scripts": {
-    "postinstall": "patch-package && jetify"
+    "postinstall": "patch-package && jetify",
+    "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
     "@react-native-community/art": "1.2.0",
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/runtime": "^7.5.4",
+    "@mendix/native-mobile-toolkit": "latest",
     "babel-jest": "^25.2.6",
     "detox": "17.6.1",
     "jest": "^25.2.7",
