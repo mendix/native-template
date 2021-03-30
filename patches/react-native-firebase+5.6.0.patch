@@ -1,8 +1,8 @@
 diff --git a/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java b/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
-index 24f472e..f32911f 100644
+index 24f472e..085f926 100644
 --- a/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
 +++ b/node_modules/react-native-firebase/android/src/main/java/io/invertase/firebase/RNFirebaseModule.java
-@@ -155,24 +155,30 @@ public class RNFirebaseModule extends ReactContextBaseJavaModule {
+@@ -155,24 +155,33 @@ public class RNFirebaseModule extends ReactContextBaseJavaModule {
    public Map<String, Object> getConstants() {
      Map<String, Object> constants = new HashMap<>();
      List<Map<String, Object>> appMapsList = new ArrayList<>();
@@ -46,6 +46,9 @@ index 24f472e..f32911f 100644
 +        appMapsList.add(appProps);
 +      }
 +    } catch (Exception e) {
++      Log.e("RNFirebaseModule", "Firebase app not found. Did you enable the Firebase capability?");
++      Log.e("RNFirebaseModule", e.getLocalizedMessage());
++    } catch (NoClassDefFoundError e) {
 +      Log.e("RNFirebaseModule", "Firebase app not found. Did you enable the Firebase capability?");
 +      Log.e("RNFirebaseModule", e.getLocalizedMessage());
      }
