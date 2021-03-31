@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 if [[ $SUPPORTS_MOBILE_TOOLKIT == True ]]; then
     echo "Configuring template with mobile toolkit"
