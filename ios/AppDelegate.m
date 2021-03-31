@@ -16,15 +16,17 @@
   NSBundle *mainBundle = [NSBundle mainBundle];
   NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
 
-  if ([targetName  isEqual: @"dev"]) {
+  if ([targetName isEqual: @"dev"]) {
     IQKeyboardManager.sharedManager.enable = NO;
 
-    if (launchOptions == nil) {
-      return YES;
-    }
+    self.window = [[MendixReactWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LaunchApp" bundle:nil];
+    self.window.rootViewController = [storyboard instantiateInitialViewController];
+    [self.window makeKeyAndVisible];
+    [self.window setUserInteractionEnabled:YES];
 
     NSString *url = [AppPreferences getAppUrl];
-    if (url == nil) {
+    if (launchOptions == nil || url == nil) {
       return YES;
     }
 
