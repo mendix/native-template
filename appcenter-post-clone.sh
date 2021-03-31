@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # Untar bundle resources
 if [ -f "./android/res.tar.gz" ]; then 

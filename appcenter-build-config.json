@@ -3,7 +3,11 @@
     "trigger": "manual",
     "testEnabled": false,
     "signed": false,
-    "environmentVariables": [{ "name": "CODE_PUSH_KEY", "value": "" }, { "name": "IS_DEV_APP", "value": false }],
+    "environmentVariables": [
+      { "name": "CODE_PUSH_KEY", "value": "" },
+      { "name": "IS_DEV_APP", "value": false },
+      { "name": "SUPPORTS_MOBILE_TOOLKIT", "value": false }
+    ],
     "toolsets": {
       "xcode": {
         "xcodeVersion": "12.0",
@@ -29,7 +33,11 @@
     "trigger": "manual",
     "testEnabled": false,
     "signed": false,
-    "environmentVariables": [{ "name": "CODE_PUSH_KEY", "value": "" }, { "name": "IS_DEV_APP", "value": false }],
+    "environmentVariables": [
+      { "name": "CODE_PUSH_KEY", "value": "" },
+      { "name": "IS_DEV_APP", "value": false },
+      { "name": "SUPPORTS_MOBILE_TOOLKIT", "value": false }
+    ],
     "toolsets": {
       "android": {
         "module": "app",
