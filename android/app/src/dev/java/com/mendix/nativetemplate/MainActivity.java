@@ -42,8 +42,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static com.mendix.mendixnative.activity.MendixReactActivity.MENDIX_APP_INTENT_KEY;
-
 public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     static private int CAMERA_REQUEST = 1;
     private Executor httpExecutor = Executors.newSingleThreadExecutor();
@@ -77,11 +75,15 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         appUrl.setText(appPreferences.getAppUrl());
         devModeCheckBox.setChecked(appPreferences.isDevModeEnabled());
 
-        // This check is required for deep link to work.
-        // Changes here will affect deep linking functionality
-        if (getIntent().getSerializableExtra(MENDIX_APP_INTENT_KEY) != null) {
-            launchApp(appPreferences.getAppUrl());
+        if (getIntent().getData() != null && getIntent().getAction() != null) {
+            this.launchApp(appPreferences.getAppUrl(), getIntent());
         }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        this.launchApp(appPreferences.getAppUrl(), intent);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -103,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         try {
             JSONObject json = new JSONObject(rawResult.getText());
             String url = json.getString("url");
-            launchApp(url);
+            launchApp(url, null);
         } catch (JSONException e) {
             Toast.makeText(MainActivity.this, R.string.qr_code_invalid, Toast.LENGTH_LONG).show();
         }
@@ -123,11 +125,11 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         loaderView.setOnTouchListener((view, event) -> true);
 
         appUrl.setOnEditorActionListener((view, actionId, keyEvent) -> {
-            launchApp(appUrl.getText().toString());
+            launchApp(appUrl.getText().toString(), null);
             return false;
         });
 
-        launchAppButton.setOnClickListener((view) -> launchApp(appUrl.getText().toString()));
+        launchAppButton.setOnClickListener((view) -> launchApp(appUrl.getText().toString(), null));
     }
 
     private void isPackagerRunning(String appUrl, Consumer<Boolean> result) {
@@ -181,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         }
     }
 
-    private void launchApp(String url) {
+    private void launchApp(String url, Intent passedIntent) {
         disableUIInteraction(true);
         isPackagerRunning(url, (res) -> {
             if (!res) {
@@ -196,6 +198,17 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             MendixApp mendixApp = new MendixApp(AppUrl.forRuntime(url), warningsFilter, devModeEnabled);
             intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
             intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
+
+            if (passedIntent != null) {
+                if (passedIntent.getData() != null) {
+                    intent.setData(passedIntent.getData());
+                }
+
+                if (passedIntent.getAction() != null) {
+                    intent.setAction(passedIntent.getAction());
+                }
+            }
+
             startActivity(intent);
             disableUIInteraction(false);
         });
