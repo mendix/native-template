@@ -6,4 +6,5 @@
 
 @property (nonatomic, strong) UIWindow *window;
 @property BOOL shouldOpenInLastApp;
+@property BOOL hasHandledLaunchAppWithOptions;
 @end
