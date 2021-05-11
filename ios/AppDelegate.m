@@ -7,6 +7,7 @@
 @implementation AppDelegate
 
 @synthesize shouldOpenInLastApp;
+@synthesize hasHandledLaunchAppWithOptions;
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   MendixAppDelegate.delegate = self;
@@ -30,6 +31,7 @@
       return YES;
     }
 
+    hasHandledLaunchAppWithOptions = YES;
     shouldOpenInLastApp = YES;
     NSURL *bundleUrl = [AppUrl forBundle:url port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
     NSURL *runtimeUrl = [AppUrl forRuntime:url];
@@ -76,6 +78,32 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
   [MendixAppDelegate application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+
+  if (hasHandledLaunchAppWithOptions) {
+    hasHandledLaunchAppWithOptions = NO;
+    return YES;
+  }
+
+  NSBundle *mainBundle = [NSBundle mainBundle];
+  NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
+  if (![targetName isEqual: @"dev"]) {
+    return YES;
+  }
+  
+  NSString *appUrl = [AppPreferences getAppUrl];
+  if (appUrl == nil || [appUrl length] == 0 || [ReactNative.instance isActive]) {
+    return YES;
+  }
+
+  NSURL *bundleUrl = [AppUrl forBundle:appUrl port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
+  NSURL *runtimeUrl = [AppUrl forRuntime:appUrl];
+  MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] isDeveloperApp:YES clearDataAtLaunch:NO];
+  [ReactNative.instance setup:mendixApp launchOptions:@{
+    UIApplicationLaunchOptionsAnnotationKey: annotation,
+    UIApplicationLaunchOptionsURLKey: url
+  }];
+  [ReactNative.instance start];
+
   return YES;
 }
 
