@@ -1,11 +1,23 @@
 [
     {
+        "id": 42842834,
+        "tag_name": "v6.1.5",
+        "name": "Fix for failing Android builds when using Firebase",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\nA new version of Google Firebase has been released that breaks compatibility with the version used in the the Firebase related pluggable widgets. \r\n\r\n**If you are using Firebase push notifications in your application, update your Native Template to avoid your Android builds failing.**",
+        "created_at": "2021-05-12T13:38:24Z",
+        "published_at": "2021-05-12T13:58:15Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.5",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.5"
+    },
+    {
         "id": 40999241,
         "tag_name": "v5.1.10",
         "name": "Hotfixes for Mendix 8.15.1 and newer",
         "draft": false,
         "prerelease": false,
-        "body": "### Hotfix for v5.1.9\r\n\r\nWe fixed an issue that was causing iOS builds to fail with Native Template v5.1.9.\r\n",
+        "body": "### Hotfix for v5.1.9\r\n\r\nThis release fixes a bug with v5.1.9 that could lead to iOS builds failing for no apparent reason.\r\n\r\n### Improvements \r\n\r\n- Android Custom Developer Apps support deep links. \r\n\r\n### Fixes \r\n\r\n- We fixed an issue that was causing iOS builds to fail with Native Template v5.1.9.\r\n",
         "created_at": "2021-04-06T13:53:37Z",
         "published_at": "2021-04-06T13:56:25Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.10",
