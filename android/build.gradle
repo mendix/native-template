@@ -46,4 +46,10 @@ allprojects {
             url "$rootDir/../node_modules/detox/Detox-android"
         }
     }
+
+    ext {
+        // Backwards compatibility for react-native-push-notifications dependency
+        // Can be removed only if the project uses react-natice-push-notifications v7+
+        set("firebaseMessagingVersion", "21.0.0")
+    }
 }
