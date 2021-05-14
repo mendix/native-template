@@ -1,5 +1,11 @@
 module.exports = {
     dependencies: {
+        'react-native-firebase': {
+            platforms: {
+                // disable only on ios as we handle linking
+                ios: null,
+            },
+        },
         'react-native-code-push': {
             platforms: {
                 // disable only on Android as we require some conditional setup
