@@ -20,7 +20,7 @@ jobs:
         run: pod install
         working-directory: ./ios
       - name: iOS Build Action
-        uses: yukiarrr/ios-build-action@v0.5.1
+        uses: yukiarrr/ios-build-action@v1.3.2
         with:
           project-path: ./ios/nativetemplate.xcodeproj
           p12-base64: ${{ secrets.IOS_DUMMY_P12 }}
