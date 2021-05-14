@@ -1,5 +1,17 @@
 [
     {
+        "id": 42965873,
+        "tag_name": "v5.1.11",
+        "name": "Hotfixes for Mendix 8.15.1 and newer",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n\r\n- We fixed an issue with the Firebase module dependencies being automatically linked on the iOS application even when the Firebase capability is disabled.",
+        "created_at": "2021-05-14T15:18:36Z",
+        "published_at": "2021-05-14T15:21:09Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.11",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.11"
+    },
+    {
         "id": 42842834,
         "tag_name": "v6.1.5",
         "name": "Fix for failing Android builds when using Firebase",
