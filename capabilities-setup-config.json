@@ -58,6 +58,9 @@
                 ]
             },
             "pods": {
+                "RNFirebase": {
+                    "path": "react-native-firebase/ios"
+                },
                 "Firebase/Core": {
                     "version": "~> 6.19.0"
                 },
