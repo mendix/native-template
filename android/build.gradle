@@ -9,6 +9,7 @@ buildscript {
         kotlin_version = "1.4.21"
         excludeAppGlideModule = true
         playServicesVersion = "17+"
+        firebaseMessagingVersion = "21.0.0"
     }
     repositories {
         google()
