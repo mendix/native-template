@@ -75,14 +75,16 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         appUrl.setText(appPreferences.getAppUrl());
         devModeCheckBox.setChecked(appPreferences.isDevModeEnabled());
 
-        if (getIntent().getData() != null && getIntent().getAction() != null) {
-            launchApp(appPreferences.getAppUrl(), getIntent());
-        }
+        handleLaunchWithData(getIntent());
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        handleLaunchWithData(intent);
+    }
+
+    private void handleLaunchWithData(Intent intent) {
         if (intent.getData() != null) {
             launchApp(appPreferences.getAppUrl(), intent);
         }
@@ -203,15 +205,9 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
             MendixApp mendixApp = new MendixApp(runtimeUrl, warningsFilter, devModeEnabled, true);
             intent.putExtra(MendixReactActivity.MENDIX_APP_INTENT_KEY, mendixApp);
             intent.putExtra(MendixReactActivity.CLEAR_DATA, clearData);
-
             if (passedIntent != null) {
-                if (passedIntent.getData() != null) {
-                    intent.setData(passedIntent.getData());
-                }
-
-                if (passedIntent.getAction() != null) {
-                    intent.setAction(passedIntent.getAction());
-                }
+                intent.setData(passedIntent.getData());
+                intent.setAction(passedIntent.getAction());
             }
 
             startActivity(intent);
