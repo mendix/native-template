@@ -31,10 +31,16 @@ def generate_mendix_delegate
     didReceiveLocalNotification: [],
     didReceiveRemoteNotification: [],
     didRegisterUserNotificationSettings: [],
+    openURLWithOptions: [],
     openURL: [],
     willPresentNotification: [],
     didReceiveNotificationResponse: [],
+    overrides: [],
   }
+
+  returnHooks = { boolean_openURLWithOptions: "  return false" }
+
+  mappedReturnHooks = {}
 
   capabilities_setup_config = get_capabilities_setup_config
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
@@ -55,11 +61,14 @@ def generate_mendix_delegate
     hooks.each do |name, hook|
       hook << capability[name.to_s].map { |line| "  #{line}" } if !capability[name.to_s].nil?
     end
+
+    mappedReturnHooks = returnHooks.map  { |name, hook| [name , !capability[name.to_s].nil? ?  "  return #{capability[name.to_s].to_s}":  hook] }.to_h
   end
 
   File.open("MendixAppDelegate.m", "w") do |file|
     mendix_app_delegate = mendix_app_delegate_template.sub("{{ imports }}", stringify(imports))
     hooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook)) }
+    mappedReturnHooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", hook) }
     file << mendix_app_delegate
   end
 end
@@ -89,6 +98,11 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 
 + (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
 {{ didRegisterUserNotificationSettings }}
+}
+
++ (BOOL) application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+{{ openURLWithOptions }}
+{{ boolean_openURLWithOptions }}
 }
 
 + (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
