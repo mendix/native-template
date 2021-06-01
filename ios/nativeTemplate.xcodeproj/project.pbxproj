@@ -26,6 +26,8 @@
 		1A0B3AFD23992F8200388BF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B83DA22E09B2500EA1E51 /* Bundle */; };
 		1AAE158923C5FEFC00F855F4 /* SwiftInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE158823C5FEFC00F855F4 /* SwiftInterop.swift */; };
+		2C4991D124C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
+		2C4991D224C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
 		2C887F7224B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */; };
 		2C887F7324B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */; };
 		2C887FDA24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */; };
@@ -34,13 +36,11 @@
 		2C887FE324B8948F0003DC53 /* StoryBoardSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887FE124B8948F0003DC53 /* StoryBoardSplash.m */; };
 		2CD8398224D14DF900A83374 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD8397224D14DF700A83374 /* libMendix.a */; };
 		2CD8398324D14DF900A83374 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD8397224D14DF700A83374 /* libMendix.a */; };
-		2C4991D124C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
-		2C4991D224C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
 		9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */; };
 		B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11502903429AC2E6E69E6482 /* libPods-dev.a */; };
+		DF32E91C266689F60052ACD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32E91B266689F60052ACD3 /* AppDelegate.m */; };
+		DF32E91D266699300052ACD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78BDD823BF47FE00E56827 /* AppDelegate.m */; };
 		EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
-		EB55E08823BF7FF500E3FB34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78BDD823BF47FE00E56827 /* AppDelegate.m */; };
-		EB55E08A23BF7FF700E3FB34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78BDD823BF47FE00E56827 /* AppDelegate.m */; };
 		EB59215B23BFA1F5001D6155 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59215A23BFA1F5001D6155 /* main.m */; };
 		EB59215C23BFA1F5001D6155 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59215A23BFA1F5001D6155 /* main.m */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -69,6 +69,8 @@
 		1AAE158823C5FEFC00F855F4 /* SwiftInterop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftInterop.swift; sourceTree = "<group>"; };
 		24E659414C7D37BED2C1EE79 /* Pods-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.debug.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.debug.xcconfig"; sourceTree = "<group>"; };
 		2C005A7823D5B1E200003E29 /* nativeTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = nativeTemplate.entitlements; path = nativeTemplate/nativeTemplate.entitlements; sourceTree = "<group>"; };
+		2C4991D024C593C3008403BB /* MendixAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MendixAppDelegate.m; sourceTree = "<group>"; };
+		2C4991D324C595F0008403BB /* MendixAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MendixAppDelegate.h; sourceTree = "<group>"; };
 		2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashScreenPresenter.m; sourceTree = "<group>"; };
 		2C887F7424B7C0440003DC53 /* SplashScreenPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashScreenPresenter.h; sourceTree = "<group>"; };
 		2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = nativeTemplate/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,8 +93,6 @@
 		2CD8397F24D14DF800A83374 /* UnsupportedFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsupportedFeatures.h; sourceTree = "<group>"; };
 		2CD8398024D14DF800A83374 /* MendixBackwardsCompatUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixBackwardsCompatUtility.h; sourceTree = "<group>"; };
 		2CD8398124D14DF900A83374 /* RuntimeInfoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeInfoProvider.h; sourceTree = "<group>"; };
-		2C4991D024C593C3008403BB /* MendixAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MendixAppDelegate.m; sourceTree = "<group>"; };
-		2C4991D324C595F0008403BB /* MendixAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MendixAppDelegate.h; sourceTree = "<group>"; };
 		2E683DD88AD2190EB6610BB7 /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1AE629EDD2EFAEE88E17A6 /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
 		3A50E1C430A9EB98E247701D /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +105,7 @@
 		BFF2B70938A7895ADAB4177A /* Pods-dev.releasedevapp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.releasedevapp.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.releasedevapp.xcconfig"; sourceTree = "<group>"; };
 		CBB85EF00DCBBB622B4C25E7 /* Pods-nativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		DDC51A1160C5ED4D3C396705 /* Pods-dev.releasedevapp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.releasedevapp.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.releasedevapp.xcconfig"; sourceTree = "<group>"; };
+		DF32E91B266689F60052ACD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.ttf"; sourceTree = "<group>"; };
 		EB59215A23BFA1F5001D6155 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB78BDD623BF47FD00E56827 /* nativeTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nativeTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 				1A0B3AE82398183900388BF7 /* Config */,
 				1A0B3AD12397E14800388BF7 /* MendixApp */,
 				1A0B3ACD2397E06900388BF7 /* LaunchApp */,
+				DF32E91B266689F60052ACD3 /* AppDelegate.m */,
 			);
 			path = Dev;
 			sourceTree = "<group>";
@@ -576,10 +578,10 @@
 			files = (
 				2C887FE224B8948F0003DC53 /* StoryBoardSplash.m in Sources */,
 				EB59215B23BFA1F5001D6155 /* main.m in Sources */,
+				DF32E91D266699300052ACD3 /* AppDelegate.m in Sources */,
 				2C887F7224B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */,
 				2C4991D124C593C3008403BB /* MendixAppDelegate.m in Sources */,
 				1AAE158923C5FEFC00F855F4 /* SwiftInterop.swift in Sources */,
-				EB55E08A23BF7FF700E3FB34 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +595,7 @@
 				1A0B3ADE2397F36300388BF7 /* QRView.swift in Sources */,
 				2C887F7324B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */,
 				1A0B3AE02397F38300388BF7 /* QRMaskView.swift in Sources */,
-				EB55E08823BF7FF500E3FB34 /* AppDelegate.m in Sources */,
+				DF32E91C266689F60052ACD3 /* AppDelegate.m in Sources */,
 				1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */,
 				1A0B3ADC2397F1FF00388BF7 /* URLValidator.swift in Sources */,
 				2C4991D224C593C3008403BB /* MendixAppDelegate.m in Sources */,

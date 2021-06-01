@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
 #import "MendixAppDelegate.h"
-#import "MendixNative/MendixNative.h"
+#import "MendixNative.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "SplashScreenPresenter.h"
 
@@ -11,29 +11,27 @@
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
-  
-  NSBundle *mainBundle = [NSBundle mainBundle];
-  NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
 
-  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  self.window.rootViewController = [UIViewController new];
-  [self.window makeKeyAndVisible];
+  IQKeyboardManager.sharedManager.enable = NO;
+  return YES;
+}
 
-  NSString *url = [mainBundle objectForInfoDictionaryKey:@"Runtime url"];
-  if (url == nil || [url length] == 0) {
-    [self showUnrecoverableDialogWithTitle:@"The runtime URL is missing" message:@"Missing the 'Runtime url' configuration within the Info.plist file. The app will close."];
-    return NO;
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+	BOOL handled = [MendixAppDelegate application:app openURL:url options:options];
+	
+	NSString *runtimeUrl = [AppPreferences getAppUrl];
+	if ([ReactNative.instance isActive] || !handled || runtimeUrl == nil ) {
+		return handled;
   }
-  NSURL *runtimeUrl = [AppUrl forRuntime:[url stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
-  NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
-  
-  if (bundleUrl != nil) {
-    [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:NO clearDataAtLaunch:NO splashScreenPresenter:[SplashScreenPresenter new]] launchOptions:launchOptions];
-    [ReactNative.instance start];
-  } else {
-    [self showUnrecoverableDialogWithTitle:@"No Mendix bundle found" message:@"Missing the Mendix app bundle. Make sure that the index.ios.bundle file is available in ios/NativeTemplate/Bundle folder. If building locally consult the documentation on how to generate a bundle from your project."];
-  }
-
+	
+  NSURL *bundleUrl = [AppUrl forBundle:runtimeUrl port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
+  NSURL *runtimeUrlFormatted = [AppUrl forRuntime:runtimeUrl];
+  NSMutableDictionary *launchOptions = [options mutableCopy];
+	[launchOptions setValue:[options valueForKey:UIApplicationOpenURLOptionsAnnotationKey] forKey:UIApplicationOpenURLOptionsAnnotationKey];
+	[launchOptions setValue:url forKey:UIApplicationLaunchOptionsURLKey];
+  MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrlFormatted warningsFilter:[self getWarningFilterValue] isDeveloperApp:YES clearDataAtLaunch:NO];
+  [ReactNative.instance setup:mendixApp launchOptions:launchOptions];
+  [ReactNative.instance start];
   return YES;
 }
 
