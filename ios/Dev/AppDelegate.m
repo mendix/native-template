@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
 #import "MendixAppDelegate.h"
-#import "MendixNative/MendixNative.h"
+#import "MendixNative.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "SplashScreenPresenter.h"
 
@@ -14,28 +14,13 @@
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
 
-  NSBundle *mainBundle = [NSBundle mainBundle];
-  NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
-
-  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  self.window.rootViewController = [UIViewController new];
+  IQKeyboardManager.sharedManager.enable = NO;
+  self.window = [[MendixReactWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LaunchApp" bundle:nil];
+  self.window.rootViewController = [storyboard instantiateInitialViewController];
   [self.window makeKeyAndVisible];
-
-  NSString *url = [mainBundle objectForInfoDictionaryKey:@"Runtime url"];
-  if (url == nil || [url length] == 0) {
-    [self showUnrecoverableDialogWithTitle:@"The runtime URL is missing" message:@"Missing the 'Runtime url' configuration within the Info.plist file. The app will close."];
-    return NO;
-  }
-  NSURL *runtimeUrl = [AppUrl forRuntime:[url stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
-  NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
-
-  if (bundleUrl != nil) {
-    [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:NO clearDataAtLaunch:NO splashScreenPresenter:[SplashScreenPresenter new]] launchOptions:launchOptions];
-    [ReactNative.instance start];
-  } else {
-    [self showUnrecoverableDialogWithTitle:@"No Mendix bundle found" message:@"Missing the Mendix app bundle. Make sure that the index.ios.bundle file is available in ios/NativeTemplate/Bundle folder. If building locally consult the documentation on how to generate a bundle from your project."];
-  }
-
+  [self.window setUserInteractionEnabled:YES];
+  
   return YES;
 }
 
@@ -52,12 +37,34 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
   [MendixAppDelegate application:application didRegisterUserNotificationSettings:notificationSettings];
 }
 
-- (BOOL) application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-	return [MendixAppDelegate application:app openURL:url options:options];
+- (BOOL) application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+	BOOL isHandled = [MendixAppDelegate application:application openURL:url options:options];
+
+  NSString *appUrl = [AppPreferences getAppUrl];
+  if (!isHandled || appUrl == nil || [appUrl length] == 0 || [ReactNative.instance isActive]) {
+    return NO;
+  }
+
+  NSURL *bundleUrl = [AppUrl forBundle:appUrl port:[AppPreferences getRemoteDebuggingPackagerPort] isDebuggingRemotely:[AppPreferences remoteDebuggingEnabled] isDevModeEnabled:[AppPreferences devModeEnabled]];
+  NSURL *runtimeUrl = [AppUrl forRuntime:appUrl];
+  NSMutableDictionary *launchOptions = [options mutableCopy];
+	[launchOptions setValue:[options valueForKey:UIApplicationOpenURLOptionsAnnotationKey] forKey:UIApplicationOpenURLOptionsAnnotationKey];
+	[launchOptions setValue:url forKey:UIApplicationLaunchOptionsURLKey];
+  MendixApp *mendixApp = [[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:[self getWarningFilterValue] isDeveloperApp:YES clearDataAtLaunch:NO];
+  [ReactNative.instance setup:mendixApp launchOptions:launchOptions];
+  dispatch_after(2.0, dispatch_get_main_queue(), ^(void){
+  	[ReactNative.instance start];
+  });
+
+  return isHandled;
 }
 
 - (WarningsFilter) getWarningFilterValue {
-  return none;
+#if DEBUG
+  return all;
+#else
+  return [AppPreferences devModeEnabled] ? partial : none;
+#endif
 }
 
 - (void) showUnrecoverableDialogWithTitle:(NSString *)title message:(NSString *) message {
