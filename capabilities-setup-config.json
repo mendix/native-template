@@ -5,9 +5,7 @@
                 "imports": [
                     "#import \"React/RCTLinkingManager.h\""
                 ],
-                "openURL": [
-                    "[RCTLinkingManager application:application openURL:url sourceApplication:sourceApplication annotation:annotation];"
-                ]
+                "boolean_openURLWithOptions": "[RCTLinkingManager application:application openURL:url options:options];"
             }
         }
     },
