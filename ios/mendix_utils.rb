@@ -1,5 +1,7 @@
 require "json"
 
+$default_boolean_return_value = "  return false"
+
 def generate_pod_dependencies
   resolved_pods = {}
 
@@ -38,7 +40,7 @@ def generate_mendix_delegate
     overrides: [],
   }
 
-  returnHooks = { boolean_openURLWithOptions: "  return false" }
+  returnHooks = { boolean_openURLWithOptions: $default_boolean_return_value }
 
   mappedReturnHooks = {}
 
@@ -62,13 +64,22 @@ def generate_mendix_delegate
       hook << capability[name.to_s].map { |line| "  #{line}" } if !capability[name.to_s].nil?
     end
 
-    mappedReturnHooks = returnHooks.map  { |name, hook| [name , !capability[name.to_s].nil? ?  "  return #{capability[name.to_s].to_s}":  hook] }.to_h
+    returnHooks.each  do |name, currentValue| 
+      defaultValue = get_return_hooks_default_value(name)
+      if (currentValue.to_s == defaultValue.to_s)
+        returnHooks[name] = !capability[name.to_s].nil? ?  "  return #{capability[name.to_s].to_s}":  defaultValue
+      else 
+        Pod::UI.warn "A value has already been assigned to return hook '#{name}'. Only one return value is valid."
+      end
+    end
   end
 
   File.open("MendixAppDelegate.m", "w") do |file|
     mendix_app_delegate = mendix_app_delegate_template.sub("{{ imports }}", stringify(imports))
     hooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook)) }
-    mappedReturnHooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", hook) }
+    returnHooks.each do |name, hook|
+      mendix_app_delegate.sub!("{{ #{name.to_s} }}", hook) 
+    end
     file << mendix_app_delegate
   end
 end
@@ -78,53 +89,40 @@ def mendix_app_delegate_template
 #import <Foundation/Foundation.h>
 #import "MendixAppDelegate.h"
 {{ imports }}
-
 @implementation MendixAppDelegate
-
 static UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable delegate;
-
 + (void) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 {{ didFinishLaunchingWithOptions }}
 }
-
 + (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
 {{ didReceiveLocalNotification }}
 }
-
 + (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
 fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
 {{ didReceiveRemoteNotification }}
 }
-
 + (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
 {{ didRegisterUserNotificationSettings }}
 }
-
 + (BOOL) application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
 {{ openURLWithOptions }}
 {{ boolean_openURLWithOptions }}
 }
-
 + (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 {{ openURL }}
 }
-
 + (void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
 {{ willPresentNotification }}
 }
-
 + (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
 {{ didReceiveNotificationResponse }}
 }
-
 + (UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable) delegate {
   return delegate;
 }
-
 + (void) setDelegate:(UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nonnull)value {
   delegate = value;
 }
-
 @end\n)
 end
 
@@ -173,5 +171,13 @@ def include_pods(pods = {})
     else
       pod name
     end
+  end
+end
+
+def get_return_hooks_default_value(name = "")
+  if (name.to_s.start_with?("boolean"))
+    $default_boolean_return_value
+  else 
+    nil
   end
 end
