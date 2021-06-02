@@ -42,12 +42,9 @@ def generate_mendix_delegate
 
   returnHooks = { boolean_openURLWithOptions: $default_boolean_return_value }
 
-  mappedReturnHooks = {}
-
   capabilities_setup_config = get_capabilities_setup_config
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
     capability = capabilities_setup_config[name.to_s]
-    puts(name)
     if capability.nil?
       Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
       next
@@ -176,7 +173,6 @@ def include_pods(pods = {})
 end
 
 def get_return_hooks_default_value(name = "")
-  puts(name)
   if (name.to_s.start_with?("boolean"))
     $default_boolean_return_value
   else 
