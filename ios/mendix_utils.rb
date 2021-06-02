@@ -1,6 +1,6 @@
 require "json"
 
-$default_boolean_return_value = "  return false"
+$default_boolean_return_value = "  return false;"
 
 def generate_pod_dependencies
   resolved_pods = {}
