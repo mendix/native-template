@@ -24,7 +24,7 @@
     "react-native-image-picker": "2.3.4",
     "react-native-localize": "1.4.2",
     "react-native-push-notification": "^6.1.2",
-    "react-native-reanimated": "1.13.1",
+    "react-native-reanimated": "1.13.3",
     "react-native-safe-area-context": "3.1.8",
     "react-native-splash-screen": "3.2.0",
     "react-native-sqlite-storage": "5.0.0",
