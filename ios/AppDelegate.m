@@ -13,7 +13,6 @@
   [self setupUI];
   
   NSBundle *mainBundle = [NSBundle mainBundle];
-  NSString *targetName = [mainBundle objectForInfoDictionaryKey:@"TargetName"] ?: @"";
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.rootViewController = [UIViewController new];
