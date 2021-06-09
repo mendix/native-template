@@ -1,27 +1,27 @@
 [
     {
-        "id": 44027819,
-        "tag_name": "v6.1.6-rc3",
+        "id": 44334134,
+        "tag_name": "v5.1.12-rc2",
         "name": "",
         "draft": false,
         "prerelease": true,
         "body": "",
-        "created_at": "2021-06-03T08:43:52Z",
-        "published_at": "2021-06-03T08:44:27Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.6-rc3",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.6-rc3"
+        "created_at": "2021-06-09T09:34:44Z",
+        "published_at": "2021-06-09T09:36:09Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.12-rc2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.12-rc2"
     },
     {
-        "id": 43976877,
-        "tag_name": "v6.1.6-rc2",
+        "id": 44334105,
+        "tag_name": "v6.1.6-rc4",
         "name": "",
         "draft": false,
         "prerelease": true,
         "body": "",
-        "created_at": "2021-06-02T13:52:56Z",
-        "published_at": "2021-06-02T13:53:28Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.6-rc2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.6-rc2"
+        "created_at": "2021-06-09T09:35:00Z",
+        "published_at": "2021-06-09T09:35:42Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.6-rc4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.6-rc4"
     },
     {
         "id": 42965873,
