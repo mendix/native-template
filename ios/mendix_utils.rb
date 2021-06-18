@@ -1,5 +1,7 @@
 require "json"
 
+XCODE_VERSION = (%x[xcrun xcodebuild -version | head -1 | awk '{print $2}']).to_s.strip
+
 def generate_pod_dependencies
   resolved_pods = {}
 
