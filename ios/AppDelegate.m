@@ -54,6 +54,10 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
   return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+	return [MendixAppDelegate application:app openURL:url options:options];
+}
+
 - (WarningsFilter) getWarningFilterValue {
 #if DEBUG
   return all;
