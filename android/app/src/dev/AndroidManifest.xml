@@ -14,7 +14,7 @@
         <activity
             android:name="com.mendix.mendixnative.activity.MendixReactActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-            android:launchMode="singleTop"
+            android:launchMode="singleInstance"
             android:windowSoftInputMode="adjustPan"></activity>
     </application>
 </manifest>
