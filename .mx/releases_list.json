@@ -1,5 +1,17 @@
 [
     {
+        "id": 45712837,
+        "tag_name": "v6.2.0-alpha1",
+        "name": "",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2021-07-02T17:08:10Z",
+        "published_at": "2021-07-05T12:16:48Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.0-alpha1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.0-alpha1"
+    },
+    {
         "id": 45502590,
         "tag_name": "v5.1.13",
         "name": "Hardening Deeplinks on Custom Dev apps",
