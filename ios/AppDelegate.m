@@ -26,7 +26,7 @@
     return NO;
   }
   NSURL *runtimeUrl = [AppUrl forRuntime:[url stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
-  NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
+  NSURL *bundleUrl = [MendixAppDelegate getJSBundleFile];
 
   if (bundleUrl != nil) {
     [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:NO clearDataAtLaunch:NO splashScreenPresenter:[SplashScreenPresenter new]] launchOptions:launchOptions];
