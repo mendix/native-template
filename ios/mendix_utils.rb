@@ -34,6 +34,7 @@ def generate_mendix_delegate
     openURL: [],
     willPresentNotification: [],
     didReceiveNotificationResponse: [],
+    getJSBundleFile: [],
   }
 
   returnHooks = { 
@@ -76,6 +77,7 @@ end
 def mendix_app_delegate_template
   %(// DO NOT EDIT BY HAND. THIS FILE IS AUTO-GENERATED
 #import <Foundation/Foundation.h>
+#import "MendixNative/MendixNative.h"
 #import "MendixAppDelegate.h"
 {{ imports }}
 
@@ -122,6 +124,11 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 
 + (void) setDelegate:(UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nonnull)value {
   delegate = value;
+}
+
++ (NSURL *) getJSBundleFile {
+{{ getJSBundleFile }}
+  return [ReactNative.instance getJSBundleFile];
 }
 
 @end\n)
