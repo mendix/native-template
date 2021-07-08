@@ -17,7 +17,7 @@
     "@react-native-firebase/app": "10.1.0",
     "@react-native-firebase/messaging": "10.1.0",
     "react-native": "0.63.3",
-    "react-native-code-push": "6.3.0",
+    "react-native-code-push": "6.4.1",
     "react-native-device-info": "8.0.1",
     "react-native-fast-image": "8.3.2",
     "react-native-gesture-handler": "1.8.0",
