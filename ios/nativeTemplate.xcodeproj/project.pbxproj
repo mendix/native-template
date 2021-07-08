@@ -28,14 +28,14 @@
 		1AAE158923C5FEFC00F855F4 /* SwiftInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE158823C5FEFC00F855F4 /* SwiftInterop.swift */; };
 		2C4991D124C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
 		2C4991D224C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
-		2C826D5C260A3BB800BE246B /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C826D5B260A3BB800BE246B /* libMendix.a */; };
-		2C826D5D260A3BB800BE246B /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C826D5B260A3BB800BE246B /* libMendix.a */; };
 		2C887F7224B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */; };
 		2C887F7324B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */; };
 		2C887FDA24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */; };
 		2C887FDB24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */; };
 		2C887FE224B8948F0003DC53 /* StoryBoardSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887FE124B8948F0003DC53 /* StoryBoardSplash.m */; };
 		2C887FE324B8948F0003DC53 /* StoryBoardSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887FE124B8948F0003DC53 /* StoryBoardSplash.m */; };
+		2CFAABDA26A1731600A89862 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFAABD926A1731500A89862 /* libMendix.a */; };
+		2CFAABDB26A1731600A89862 /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFAABD926A1731500A89862 /* libMendix.a */; };
 		9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */; };
 		B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11502903429AC2E6E69E6482 /* libPods-dev.a */; };
 		DF6591BE26650DF3006E3A5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6591BD26650DF3006E3A5E /* AppDelegate.m */; };
@@ -71,7 +71,6 @@
 		2C005A7823D5B1E200003E29 /* nativeTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = nativeTemplate.entitlements; path = nativeTemplate/nativeTemplate.entitlements; sourceTree = "<group>"; };
 		2C4991D024C593C3008403BB /* MendixAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MendixAppDelegate.m; sourceTree = "<group>"; };
 		2C4991D324C595F0008403BB /* MendixAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MendixAppDelegate.h; sourceTree = "<group>"; };
-		2C826D5B260A3BB800BE246B /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
 		2C826D69260A3C5100BE246B /* DevAppMenuUIAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevAppMenuUIAlertController.h; sourceTree = "<group>"; };
 		2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashScreenPresenter.m; sourceTree = "<group>"; };
 		2C887F7424B7C0440003DC53 /* SplashScreenPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashScreenPresenter.h; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		2CD8397F24D14DF800A83374 /* UnsupportedFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsupportedFeatures.h; sourceTree = "<group>"; };
 		2CD8398024D14DF800A83374 /* MendixBackwardsCompatUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MendixBackwardsCompatUtility.h; sourceTree = "<group>"; };
 		2CD8398124D14DF900A83374 /* RuntimeInfoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeInfoProvider.h; sourceTree = "<group>"; };
+		2CFAABD926A1731500A89862 /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
 		2E683DD88AD2190EB6610BB7 /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1AE629EDD2EFAEE88E17A6 /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
 		3A50E1C430A9EB98E247701D /* Pods-nativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C826D5C260A3BB800BE246B /* libMendix.a in Frameworks */,
+				2CFAABDA26A1731600A89862 /* libMendix.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */,
 			);
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C826D5D260A3BB800BE246B /* libMendix.a in Frameworks */,
+				2CFAABDB26A1731600A89862 /* libMendix.a in Frameworks */,
 				1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */,
 				B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */,
 			);
@@ -282,7 +282,7 @@
 		EBC808E222DF20DD007E5F3D /* MendixNative */ = {
 			isa = PBXGroup;
 			children = (
-				2C826D5B260A3BB800BE246B /* libMendix.a */,
+				2CFAABD926A1731500A89862 /* libMendix.a */,
 				2CD8397724D14DF700A83374 /* AppMenuProtocol.h */,
 				2CD8397A24D14DF800A83374 /* AppPreferences.h */,
 				2CD8397924D14DF800A83374 /* AppUrl.h */,
