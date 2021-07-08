@@ -11,7 +11,7 @@
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
-  
+
   NSBundle *mainBundle = [NSBundle mainBundle];
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -24,8 +24,8 @@
     return NO;
   }
   NSURL *runtimeUrl = [AppUrl forRuntime:[url stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
-  NSURL *bundleUrl = [ReactNative.instance getJSBundleFile];
-  
+  NSURL *bundleUrl = [MendixAppDelegate getJSBundleFile];
+
   if (bundleUrl != nil) {
     [ReactNative.instance setup:[[MendixApp alloc] init:nil bundleUrl:bundleUrl runtimeUrl:runtimeUrl warningsFilter:none isDeveloperApp:NO clearDataAtLaunch:NO splashScreenPresenter:[SplashScreenPresenter new]] launchOptions:launchOptions];
     [ReactNative.instance start];
