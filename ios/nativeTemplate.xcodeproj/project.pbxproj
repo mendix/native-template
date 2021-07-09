@@ -28,8 +28,8 @@
 		1AAE158923C5FEFC00F855F4 /* SwiftInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE158823C5FEFC00F855F4 /* SwiftInterop.swift */; };
 		2C4991D124C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
 		2C4991D224C593C3008403BB /* MendixAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4991D024C593C3008403BB /* MendixAppDelegate.m */; };
-		2C826D5C260A3BB800BE246B /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C826D5B260A3BB800BE246B /* libMendix.a */; };
-		2C826D5D260A3BB800BE246B /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C826D5B260A3BB800BE246B /* libMendix.a */; };
+		2C704C88269D78EB0049B13C /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C704C87269D78EA0049B13C /* libMendix.a */; };
+		2C704C89269D78EB0049B13C /* libMendix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C704C87269D78EA0049B13C /* libMendix.a */; };
 		2C887F7224B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */; };
 		2C887F7324B7BFFE0003DC53 /* SplashScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */; };
 		2C887FDA24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */; };
@@ -71,7 +71,7 @@
 		2C005A7823D5B1E200003E29 /* nativeTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = nativeTemplate.entitlements; path = nativeTemplate/nativeTemplate.entitlements; sourceTree = "<group>"; };
 		2C4991D024C593C3008403BB /* MendixAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MendixAppDelegate.m; sourceTree = "<group>"; };
 		2C4991D324C595F0008403BB /* MendixAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MendixAppDelegate.h; sourceTree = "<group>"; };
-		2C826D5B260A3BB800BE246B /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
+		2C704C87269D78EA0049B13C /* libMendix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMendix.a; sourceTree = "<group>"; };
 		2C826D69260A3C5100BE246B /* DevAppMenuUIAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevAppMenuUIAlertController.h; sourceTree = "<group>"; };
 		2C887F7124B7BFFE0003DC53 /* SplashScreenPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashScreenPresenter.m; sourceTree = "<group>"; };
 		2C887F7424B7C0440003DC53 /* SplashScreenPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashScreenPresenter.h; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C826D5C260A3BB800BE246B /* libMendix.a in Frameworks */,
+				2C704C88269D78EB0049B13C /* libMendix.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */,
 			);
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C826D5D260A3BB800BE246B /* libMendix.a in Frameworks */,
+				2C704C89269D78EB0049B13C /* libMendix.a in Frameworks */,
 				1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */,
 				B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */,
 			);
@@ -282,7 +282,7 @@
 		EBC808E222DF20DD007E5F3D /* MendixNative */ = {
 			isa = PBXGroup;
 			children = (
-				2C826D5B260A3BB800BE246B /* libMendix.a */,
+				2C704C87269D78EA0049B13C /* libMendix.a */,
 				2CD8397724D14DF700A83374 /* AppMenuProtocol.h */,
 				2CD8397A24D14DF800A83374 /* AppPreferences.h */,
 				2CD8397924D14DF800A83374 /* AppUrl.h */,
