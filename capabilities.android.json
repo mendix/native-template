@@ -2,6 +2,7 @@
     "deepLink": false,
     "pushNotifications": false,
     "bluetooth": true,
+    "appCenterOTA": false,
     "maps": true,
     "mapsIos": true
 }
