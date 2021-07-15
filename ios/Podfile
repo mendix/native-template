@@ -19,6 +19,12 @@ def common_pods
 
   # Third party dependencies of dependencies
   pod 'IQKeyboardManager'
+
+  # At least one permission must be added when `react-native-permissions` used
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
+
 end
 
 target 'nativeTemplate' do
