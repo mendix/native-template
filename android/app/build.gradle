@@ -100,6 +100,7 @@ project.ext.vectoricons = [
 dependencies {
     implementation project(':react-native-splash-screen')
     implementation project(':react-native-code-push')
+    implementation project(':react-native-permissions')
     implementation project(":mendixnative-release")
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules

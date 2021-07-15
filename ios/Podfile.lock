@@ -50,6 +50,10 @@ PODS:
   - libwebp/mux (1.2.0):
     - libwebp/demux
   - libwebp/webp (1.2.0)
+  - Permission-Camera (3.0.4):
+    - RNPermissions
+  - Permission-PhotoLibrary (3.0.4):
+    - RNPermissions
   - RCTRequired (0.61.5)
   - RCTTypeSafety (0.61.5):
     - FBLazyVector (= 0.61.5)
@@ -237,7 +241,7 @@ PODS:
     - Google-Maps-iOS-Utils (= 2.1.0)
     - GoogleMaps (= 3.5.0)
     - React
-  - react-native-image-picker (2.3.4):
+  - react-native-image-picker (4.0.3):
     - React-Core
   - react-native-maps (0.27.0):
     - React
@@ -315,6 +319,8 @@ PODS:
     - React
   - RNLocalize (1.3.4):
     - React
+  - RNPermissions (3.0.4):
+    - React-Core
   - RNReanimated (1.7.0):
     - React
   - RNSound (0.11.0):
@@ -345,6 +351,8 @@ DEPENDENCIES:
   - Google-Maps-iOS-Utils
   - GoogleMaps
   - IQKeyboardManager
+  - Permission-Camera (from `../node_modules/react-native-permissions/ios/Camera`)
+  - Permission-PhotoLibrary (from `../node_modules/react-native-permissions/ios/PhotoLibrary`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native`)
@@ -394,6 +402,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNInAppBrowser (from `../node_modules/react-native-inappbrowser-reborn`)
   - RNLocalize (from `../node_modules/react-native-localize`)
+  - RNPermissions (from `../node_modules/react-native-permissions`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNSound (from `../node_modules/react-native-sound`)
   - RNSVG (from `../node_modules/react-native-svg`)
@@ -422,6 +431,10 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  Permission-Camera:
+    :path: "../node_modules/react-native-permissions/ios/Camera"
+  Permission-PhotoLibrary:
+    :path: "../node_modules/react-native-permissions/ios/PhotoLibrary"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -514,6 +527,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-inappbrowser-reborn"
   RNLocalize:
     :path: "../node_modules/react-native-localize"
+  RNPermissions:
+    :path: "../node_modules/react-native-permissions"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNSound:
@@ -538,6 +553,8 @@ SPEC CHECKSUMS:
   GoogleMaps: 32ca02de09de357a10ac773f2c70f1986751392d
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
+  Permission-Camera: ffd449756840ddc0f6294e95d688fecaadfe238c
+  Permission-PhotoLibrary: ab3b6b959e615aa10e3638218a50d135250638ff
   RCTRequired: b153add4da6e7dbc44aebf93f3cf4fcae392ddf1
   RCTTypeSafety: 9aa1b91d7f9310fc6eadc3cf95126ffe818af320
   React: b6a59ef847b2b40bb6e0180a97d0ca716969ac78
@@ -555,7 +572,7 @@ SPEC CHECKSUMS:
   react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
   react-native-geolocation: cbd9d6bd06bac411eed2671810f454d4908484a8
   react-native-google-maps: 773b7bcef4f92005847cbf455ca1fa76a21e74c7
-  react-native-image-picker: 32d1ad2c0024ca36161ae0d5c2117e2d6c441f11
+  react-native-image-picker: 4089335b89b625d4e34d53fb249c48a7a791b3ea
   react-native-maps: 6e1cf14d0aabefe59966da6dad7cb662251d3d83
   react-native-netinfo: c67896313964727ddae153d6e119f65dae840d51
   react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
@@ -584,6 +601,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNInAppBrowser: b51ad29a3cfe36a9a55866d42fc169aa7db8522e
   RNLocalize: d8025bb1ac74c0ad54155ea9862538624ebf74d8
+  RNPermissions: 75128bfb4c4ef92f572a8efdb8adfbfab75e8ed0
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNSound: c980916b596cc15c8dcd2f6ecd3b13c4881dbe20
   RNSVG: 7e16ddfc6e00d5aa69c9eb83e699bcce5dcb85d4
@@ -593,6 +611,6 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 486d4dce0660fbe43dca209aa941a2d035770be6
+PODFILE CHECKSUM: 9f910a6996d7a5e1a87addc10a046a6338cccad8
 
 COCOAPODS: 1.10.1
