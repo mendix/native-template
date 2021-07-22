@@ -153,6 +153,10 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.webkit:android-jsc:r245459"
 
+    // Explicit add okhttp
+    implementation("com.squareup.okhttp3:okhttp:3.14.9")
+    implementation("com.squareup.okhttp3:okhttp-urlconnection:3.14.9")
+
     // Required for Custom Dev Apps
     devImplementation 'com.fasterxml.jackson.core:jackson-core:2.11.3'
     devImplementation 'com.fasterxml.jackson.core:jackson-annotations:2.11.3'
