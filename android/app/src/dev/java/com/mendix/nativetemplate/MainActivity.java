@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         appUrl.setText(appPreferences.getAppUrl());
         devModeCheckBox.setChecked(appPreferences.isDevModeEnabled());
 
+        cameraView.setResultHandler(this);
+        startCameraWithPermissions();
+
         if (getIntent().getData() != null && getIntent().getAction() != null) {
             this.launchApp(appPreferences.getAppUrl(), getIntent());
         }
@@ -90,8 +93,11 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
     @Override
     protected void onResume() {
         super.onResume();
-        cameraView.setResultHandler(this);
-        startCameraWithPermissions();
+        try {
+            cameraView.startCamera();
+        } catch (Exception e) {
+            // No permissions
+        }
     }
 
     @Override
