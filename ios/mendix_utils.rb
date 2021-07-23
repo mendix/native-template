@@ -11,8 +11,13 @@ def generate_pod_dependencies
       next
     end
 
-    next unless capability["ios"] && pods = capability["ios"]["pods"]
-    resolved_pods.merge! pods
+    next unless config = capability["ios"]
+
+    resolved_pods.merge! config["pods"]
+
+    if !config["buildPhases"].nil?
+      include_script_phases(config["buildPhases"])
+    end
   end
 
   modules = get_react_native_config["dependencies"]
@@ -37,8 +42,8 @@ def generate_mendix_delegate
     getJSBundleFile: [],
   }
 
-  returnHooks = { 
-    boolean_openURLWithOptions: [], 
+  returnHooks = {
+    boolean_openURLWithOptions: [],
   }
 
   capabilities_setup_config = get_capabilities_setup_config
@@ -69,7 +74,7 @@ def generate_mendix_delegate
   File.open("MendixAppDelegate.m", "w") do |file|
     mendix_app_delegate = mendix_app_delegate_template.sub("{{ imports }}", stringify(imports))
     hooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook)) }
-    returnHooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook).length > 0 ? stringify(hook) : "  return YES;" ) }
+    returnHooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook).length > 0 ? stringify(hook) : "  return YES;") }
     file << mendix_app_delegate
   end
 end
@@ -179,5 +184,21 @@ def include_pods(pods = {})
     else
       pod name
     end
+  end
+end
+
+def include_script_phases(phases)
+  phases.each do |phase|
+    if phase["path"]
+      phase["script"] = File.read(File.expand_path(phase["path"], ".."))
+      phase.delete("path")
+    end
+
+    if phase["execution_position"]
+      phase["execution_position"] = phase["execution_position"].to_sym
+    end
+
+    phase = Hash[phase.map { |k, v| [k.to_sym, v] }]
+    script_phase phase
   end
 end
