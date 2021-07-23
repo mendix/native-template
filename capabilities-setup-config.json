@@ -26,25 +26,15 @@
                     "new RNFirebaseMessagingPackage()",
                     "new RNFirebaseNotificationsPackage()"
                 ]
-            },
-            "gradle": {
-                "classpaths": [
-                    "com.google.gms:google-services:4.2.0"
-                ],
-                "plugins": [
-                    "com.google.gms.google-services"
-                ]
             }
         },
         "ios": {
             "AppDelegate": {
                 "imports": [
-                    "#import <Firebase.h>",
                     "#import \"RNFirebase/RNFirebaseNotifications.h\"",
                     "#import \"RNFirebase/RNFirebaseMessaging.h\""
                 ],
                 "didFinishLaunchingWithOptions": [
-                    "[FIRApp configure];",
                     "[RNFirebaseNotifications configure];"
                 ],
                 "didReceiveLocalNotification": [
@@ -58,13 +48,39 @@
                 ]
             },
             "pods": {
+                "Firebase/Messaging": {
+                    "version": "~> 6.19.0"
+                }
+            }
+        }
+    },
+    "firebaseAndroid": {
+        "android": {
+            "gradle": {
+                "classpaths": [
+                    "com.google.gms:google-services:4.2.0"
+                ],
+                "plugins": [
+                    "com.google.gms.google-services"
+                ]
+            }
+        }
+    },
+    "firebaseIos": {
+        "ios": {
+            "AppDelegate": {
+                "imports": [
+                    "#import <Firebase.h>"
+                ],
+                "didFinishLaunchingWithOptions": [
+                    "[FIRApp configure];"
+                ]
+            },
+            "pods": {
                 "RNFirebase": {
                     "path": "react-native-firebase/ios"
                 },
                 "Firebase/Core": {
-                    "version": "~> 6.19.0"
-                },
-                "Firebase/Messaging": {
                     "version": "~> 6.19.0"
                 },
                 "GoogleUtilities": {
