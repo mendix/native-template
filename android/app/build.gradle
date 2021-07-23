@@ -109,13 +109,13 @@ dependencies {
     devImplementation "me.dm7.barcodescanner:zxing:1.9.13"
 
     // Explicit add okhttp
-    implementation("com.squareup.okhttp3:okhttp:3.14.9")
-    implementation("com.squareup.okhttp3:okhttp-urlconnection:3.14.9")
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation("com.squareup.okhttp3:okhttp-urlconnection:4.9.1")
 
     // Required for Custom Dev Apps
-    devImplementation 'com.fasterxml.jackson.core:jackson-core:2.10.3'
-    devImplementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.3'
-    devImplementation 'com.fasterxml.jackson.core:jackson-databind:2.10.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-core:2.11.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-annotations:2.11.3'
+    devImplementation 'com.fasterxml.jackson.core:jackson-databind:2.11.3'
 
     androidTestImplementation("com.wix:detox:+")
 }
