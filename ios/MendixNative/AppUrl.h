@@ -11,5 +11,6 @@
 + (NSURL *) forRuntime:(NSString *)url;
 + (NSURL *) forValidation:(NSString*)url;
 + (NSURL *) forRuntimeInfo:(NSString*)url;
++ (NSURL *) forPackagerStatus:(NSString*)url port:(int)port;
 + (BOOL) isValid:(NSString*)url;
 @end

@@ -5,7 +5,7 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTEventEmitter.h>
 
-@interface NativeReloadHandler : RCTEventEmitter
+@interface NativeReloadHandler : RCTEventEmitter<RCTBridgeModule>
 - (void) reloadClientWithState;
 - (void) reload;
 - (void) exitApp;
