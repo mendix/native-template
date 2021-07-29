@@ -13,7 +13,9 @@ def generate_pod_dependencies
 
     next unless config = capability["ios"]
 
-    resolved_pods.merge! config["pods"]
+    if !config["pods"].nil?
+      resolved_pods.merge! config["pods"]
+    end
 
     if !config["buildPhases"].nil?
       include_script_phases(config["buildPhases"])
