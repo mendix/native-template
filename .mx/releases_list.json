@@ -1,5 +1,17 @@
 [
     {
+        "id": 46991691,
+        "tag_name": "v6.2.2",
+        "name": "Fix for auto linking failures on iOS",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Description \r\nThis release fixes a bug with the auto linking mechanism for iOS that was introduced with v6.2.1. Please update if you previously updated to v6.2.1.\r\n\r\n### Fixes\r\n- We fixed a bug with the auto linking mechanism introduced with v6.2.1 which can lead to iOS builds failing.",
+        "created_at": "2021-07-29T16:29:10Z",
+        "published_at": "2021-07-29T16:33:29Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.2"
+    },
+    {
         "id": 46968158,
         "tag_name": "v6.3.0-rc.1",
         "name": "v6.3.0-rc.1",
