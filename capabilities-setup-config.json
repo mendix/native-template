@@ -14,7 +14,7 @@
     "pushNotifications": {
         "android": {
             "externalDependencies": [
-                "com.google.firebase:firebase-messaging:20.1.2",
+                "com.google.firebase:firebase-messaging:20.1.6",
                 "me.leolin:ShortcutBadger:1.1.22@aar"
             ],
             "packageListEntries": {
@@ -26,25 +26,15 @@
                     "new RNFirebaseMessagingPackage()",
                     "new RNFirebaseNotificationsPackage()"
                 ]
-            },
-            "gradle": {
-                "classpaths": [
-                    "com.google.gms:google-services:4.2.0"
-                ],
-                "plugins": [
-                    "com.google.gms.google-services"
-                ]
             }
         },
         "ios": {
             "AppDelegate": {
                 "imports": [
-                    "#import <Firebase.h>",
                     "#import \"RNFirebase/RNFirebaseNotifications.h\"",
                     "#import \"RNFirebase/RNFirebaseMessaging.h\""
                 ],
                 "didFinishLaunchingWithOptions": [
-                    "[FIRApp configure];",
                     "[RNFirebaseNotifications configure];"
                 ],
                 "didReceiveLocalNotification": [
@@ -58,13 +48,76 @@
                 ]
             },
             "pods": {
+                "Firebase/Messaging": {
+                    "version": "~> 6"
+                }
+            }
+        }
+    },
+    "crashlytics": {
+        "android": {
+            "gradle": {
+                "classpaths": [
+                    "com.google.firebase:firebase-crashlytics-gradle:2.0.0"
+                ],
+                "plugins": [
+                    "com.google.firebase.crashlytics"
+                ]
+            },
+            "externalDependencies": [
+                "com.google.firebase:firebase-crashlytics:17.4.0",
+                "com.google.firebase:firebase-analytics:17.4.0"
+            ]
+        },
+        "ios": {
+            "pods": {
+                "Firebase/Crashlytics": {
+                    "version": "~> 6"
+                },
+                "Firebase/Core": {
+                    "version": "~> 6"
+                }
+            },
+            "buildPhases": [
+                {
+                    "name": "[RNFB] Crashlytics Configuration",
+                    "path": "./ios/crashlytics-config.sh",
+                    "execution_position": "after_compile",
+                    "input_files": [
+                        "${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+                        "$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)"
+                    ]
+                }
+            ]
+        }
+    },
+    "firebaseAndroid": {
+        "android": {
+            "gradle": {
+                "classpaths": [
+                    "com.google.gms:google-services:4.2.0"
+                ],
+                "plugins": [
+                    "com.google.gms.google-services"
+                ]
+            }
+        }
+    },
+    "firebaseIos": {
+        "ios": {
+            "AppDelegate": {
+                "imports": [
+                    "#import <Firebase.h>"
+                ],
+                "didFinishLaunchingWithOptions": [
+                    "[FIRApp configure];"
+                ]
+            },
+            "pods": {
                 "RNFirebase": {
                     "path": "react-native-firebase/ios"
                 },
                 "Firebase/Core": {
-                    "version": "~> 6.19.0"
-                },
-                "Firebase/Messaging": {
                     "version": "~> 6.19.0"
                 },
                 "GoogleUtilities": {
