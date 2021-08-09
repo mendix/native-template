@@ -25,6 +25,7 @@
 @property(class, nonatomic, readonly) ReactNative *instance;
 
 + (NSString *) warningsFilterToString:(WarningsFilter)warningsFilter;
++ (NSDictionary *) getNativeDependencies;
 - (void) setup:(MendixApp *)mendixApp launchOptions:(NSDictionary *)launchOptions;
 - (void) setup:(MendixApp *)mendixApp launchOptions:(NSDictionary *)launchOptions mendixOTAEnabled:(BOOL)mendixOTAEnabled;
 - (void) start;
