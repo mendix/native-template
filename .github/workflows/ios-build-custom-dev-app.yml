@@ -23,8 +23,8 @@ jobs:
         shell: bash
         working-directory: ./  
         run: |
-          chmod +x ./appcenter-pe-build.sh
-          ./appcenter-pe-build.sh
+          chmod +x ./appcenter-pre-build.sh
+          ./appcenter-pre-build.sh
       - name: iOS Build Action
         uses: yukiarrr/ios-build-action@v1.3.2
         with:
