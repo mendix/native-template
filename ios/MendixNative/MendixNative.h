@@ -17,4 +17,4 @@
 #import "NativeDownloadHandler.h"
 #import "DevAppMenuUIAlertController.h"
 #import "JSBundleFileProviderProtocol.h"
-#import "OTAJSBundleFileProvider.h"
+#import "OtaJSBundleFileProvider.h"
