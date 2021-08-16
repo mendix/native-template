@@ -19,7 +19,7 @@
       "javascript": {
         "packageJsonPath": "package.json",
         "runTests": false,
-        "nodeVersion": "12.x"
+        "nodeVersion": "14.x"
       },
       "buildscripts": {
         "package.json": {
@@ -51,7 +51,7 @@
       "javascript": {
         "packageJsonPath": "package.json",
         "runTests": false,
-        "nodeVersion": "12.x"
+        "nodeVersion": "14.x"
       },
       "buildscripts": {
         "package.json": {
