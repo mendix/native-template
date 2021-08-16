@@ -1,8 +1,8 @@
 diff --git a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
-index 55bc2c8..62a9a18 100644
+index 4ab9940..2a2b830 100644
 --- a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
 +++ b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
-@@ -272,6 +272,10 @@ - (void)displayDidRefresh:(CADisplayLink *)displayLink
+@@ -276,6 +276,10 @@ - (void)displayDidRefresh:(CADisplayLink *)displayLink
  
  - (void)displayLayer:(CALayer *)layer
  {
