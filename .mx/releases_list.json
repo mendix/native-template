@@ -1,5 +1,29 @@
 [
     {
+        "id": 49136973,
+        "tag_name": "v5.2.3",
+        "name": "Fix for failing Android builds",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Description\r\nWe identified an issue with dependency resolution on Android that will fail the builds. Please upgrade if you are facing failing Android builds.\r\n\r\n### Fixes\r\n\r\n* We fixed an issue with dependencies resolution on Android.",
+        "created_at": "2021-09-07T15:04:49Z",
+        "published_at": "2021-09-07T15:07:58Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.3"
+    },
+    {
+        "id": 49136929,
+        "tag_name": "v6.2.3",
+        "name": "Fix for failing Android builds",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Description\r\nWe identified an issue with dependency resolution on Android that will fail the builds. Please upgrade if you are facing failing Android builds.\r\n\r\n### Fixes\r\n\r\n* We fixed an issue with dependencies resolution on Android.",
+        "created_at": "2021-09-07T15:04:20Z",
+        "published_at": "2021-09-07T15:07:28Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.3"
+    },
+    {
         "id": 47354605,
         "tag_name": "v5.1.15",
         "name": "Firebase Crashlytics support for Mendix v8.15 up to v8.18.8 Apps",
