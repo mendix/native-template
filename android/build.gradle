@@ -10,6 +10,7 @@ buildscript {
         excludeAppGlideModule = true
         playServicesVersion = "17+"
         firebaseMessagingVersion = "21.0.0"
+        androidXCore = "1.6.0"
     }
     repositories {
         google()
