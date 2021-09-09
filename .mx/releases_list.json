@@ -1,5 +1,17 @@
 [
     {
+        "id": 49277137,
+        "tag_name": "v5.1.16",
+        "name": "Fix for failing Android builds",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Description\r\nWe identified an issue with dependency resolution on Android that will fail the builds. Please upgrade if you are facing failing Android builds.\r\n\r\n### Fixes\r\n\r\n* We fixed an issue with dependencies resolution on Android.",
+        "created_at": "2021-09-09T13:23:53Z",
+        "published_at": "2021-09-09T13:24:40Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.16",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.16"
+    },
+    {
         "id": 49136973,
         "tag_name": "v5.2.3",
         "name": "Fix for failing Android builds",
