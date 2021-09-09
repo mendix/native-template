@@ -9,6 +9,7 @@ buildscript {
         kotlinVersion = "1.3.50"
         excludeAppGlideModule = true
         playServicesVersion = "16.1.0"
+        androidXCore = "1.6.0"
     }
     repositories {
         google()
