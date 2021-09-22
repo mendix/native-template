@@ -4,7 +4,7 @@
         "tag_name": "v6.2.4",
         "name": "Updated to latest required dependencies",
         "draft": false,
-        "prerelease": false,
+        "prerelease": true,
         "body": "### Description\r\nTo support new features and capabilities introduced with the latest versions of Mendix 9 we updated the main dependencies. \r\nThis version is backward compatible with previous Mendix Studio Pro 9 versions. \r\n\r\n\r\n### Improvements\r\n- Updated the React Native dependencies to v0.64.2",
         "created_at": "2021-09-17T15:52:45Z",
         "published_at": "2021-09-22T09:23:59Z",
