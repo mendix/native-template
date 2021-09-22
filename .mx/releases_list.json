@@ -1,5 +1,17 @@
 [
     {
+        "id": 50042537,
+        "tag_name": "v6.2.4",
+        "name": "Update to React Native 64",
+        "draft": false,
+        "prerelease": true,
+        "body": "### Description\r\nWe updated to the latest React Native version to support the latest Mendix 9 features.",
+        "created_at": "2021-09-17T15:52:45Z",
+        "published_at": "2021-09-22T09:23:59Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.4"
+    },
+    {
         "id": 49277137,
         "tag_name": "v5.1.16",
         "name": "Fix for failing Android builds",
