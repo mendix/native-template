@@ -1,0 +1,39 @@
+diff --git a/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RestoredState.swift b/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RestoredState.swift
+index 7557193..120e35a 100644
+--- a/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RestoredState.swift
++++ b/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RestoredState.swift
+@@ -65,7 +65,7 @@ import CoreBluetooth
+             return arrayOfAnyObjects.compactMap { $0 as? CBService }
+                 .map(RxCBService.init)
+                 .map { Service(peripheral: Peripheral(manager: bluetoothManager,
+-                                                      peripheral: RxCBPeripheral(peripheral: $0.service.peripheral)),
++                                                      peripheral: RxCBPeripheral(peripheral: $0.service.peripheral!)),
+                                service: $0) }
+         }
+     }
+diff --git a/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RxCBCharacteristic.swift b/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RxCBCharacteristic.swift
+index e3747eb..1aadac9 100644
+--- a/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RxCBCharacteristic.swift
++++ b/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RxCBCharacteristic.swift
+@@ -56,7 +56,7 @@ class RxCBCharacteristic: RxCharacteristicType {
+     }
+ 
+     var service: RxServiceType {
+-        return RxCBService(service: characteristic.service)
++        return RxCBService(service: characteristic.service!)
+     }
+ 
+     func isEqualTo(characteristic: RxCharacteristicType) -> Bool {
+diff --git a/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RxCBDescriptor.swift b/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RxCBDescriptor.swift
+index 46915cc..edcf1e9 100644
+--- a/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RxCBDescriptor.swift
++++ b/node_modules/react-native-ble-plx/ios/RxBluetoothKit/RxCBDescriptor.swift
+@@ -40,7 +40,7 @@ class RxCBDescriptor: RxDescriptorType {
+     }
+ 
+     var characteristic: RxCharacteristicType {
+-        return RxCBCharacteristic(characteristic: descriptor.characteristic)
++        return RxCBCharacteristic(characteristic: descriptor.characteristic!)
+     }
+ 
+     var value: Any? {
