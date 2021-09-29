@@ -1,10 +1,46 @@
 [
     {
+        "id": 50302484,
+        "tag_name": "v5.1.17",
+        "name": "",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2021-09-22T17:41:17Z",
+        "published_at": "2021-09-27T08:48:11Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.17",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.17"
+    },
+    {
+        "id": 50302440,
+        "tag_name": "v5.2.4",
+        "name": "",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2021-09-22T17:41:36Z",
+        "published_at": "2021-09-27T08:47:28Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.4"
+    },
+    {
+        "id": 50302421,
+        "tag_name": "v6.2.5",
+        "name": "Update AppCenter configuration to XCode 13",
+        "draft": false,
+        "prerelease": true,
+        "body": "## Description\r\nWit the release of iOS 15 it is required to re-compile apps that didn't previously use 64bit with XCode 13.\r\nThis release bumps the configuration of App Center to use XCode 13.",
+        "created_at": "2021-09-22T16:35:39Z",
+        "published_at": "2021-09-27T08:47:02Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.5",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.5"
+    },
+    {
         "id": 50042537,
         "tag_name": "v6.2.4",
         "name": "Updated to latest required dependencies",
         "draft": false,
-        "prerelease": true,
+        "prerelease": false,
         "body": "### Description\r\nTo support new features and capabilities introduced with the latest versions of Mendix 9 we updated the main dependencies. \r\nThis version is backward compatible with previous Mendix Studio Pro 9 versions. \r\n\r\n\r\n### Improvements\r\n- Updated the React Native dependencies to v0.64.2",
         "created_at": "2021-09-17T15:52:45Z",
         "published_at": "2021-09-22T09:23:59Z",
