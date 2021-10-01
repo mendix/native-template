@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "postinstall": "patch-package && jetify",
+    "postinstall": "patch-package && jetify && jcenter-replacer",
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
@@ -37,6 +37,7 @@
     "@babel/runtime": "^7.8.4",
     "@mendix/native-mobile-toolkit": "latest",
     "detox": "17.14.5",
+    "jcenter-replacer": "^0.5.0",
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
     "patch-package": "^6.2.2"
