@@ -43,7 +43,7 @@
     "react-native-svg": "12.0.3",
     "react-native-touch-id": "4.4.1",
     "react-native-vector-icons": "6.6.0",
-    "react-native-video": "5.0.2",
+    "react-native-video": "git+https://github.com/react-native-video/react-native-video.git#bf11502fdb83751ad826f3e4b448732075292805",
     "react-native-view-shot": "3.1.2",
     "react-native-webview": "8.1.2"
   },
