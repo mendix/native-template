@@ -14,7 +14,8 @@ buildscript {
     }
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven { url  "https://repo1.maven.org/maven2/" }
         maven {
             url "https://maven.fabric.io/public"
         }
@@ -33,7 +34,8 @@ allprojects {
     repositories {
         mavenLocal()
         google()
-        jcenter()
+        mavenCentral()
+        maven { url  "https://repo1.maven.org/maven2/" }
         maven { url "https://www.jitpack.io" }
         maven {
             url "$rootDir/../node_modules/react-native/android"
