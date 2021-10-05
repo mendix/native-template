@@ -15,3 +15,5 @@
 #import "MendixBackwardsCompatUtility.h"
 #import "RuntimeInfoProvider.h"
 #import "DevAppMenuUIAlertController.h"
+#import "JSBundleFileProviderProtocol.h"
+#import "OtaJSBundleFileProvider.h"
