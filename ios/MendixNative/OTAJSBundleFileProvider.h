@@ -5,12 +5,6 @@
 #import <React/RCTBridgeModule.h>
 #import "JSBundleFileProviderProtocol.h"
 
-@interface OTAJSBundleFileProvider : NSObject<JSBundleFileProviderProtocol>
-
-+(nonnull NSString *)getManifestPath;
-
-+(nonnull NSString *)getBaseDirectory;
-
+@interface OtaJSBundleFileProvider : NSObject<JSBundleFileProviderProtocol>
 +(nullable NSURL *)getBundleUrl;
-
 @end

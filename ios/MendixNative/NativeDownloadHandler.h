@@ -14,7 +14,7 @@
 @property (strong, nonnull) NSString *downloadPath;
 
 - (nonnull id)init:(NSDictionary * _Nullable)config doneCallback:(void (^_Nonnull)(void))doneCallback
-  progressCallback:(void (^_Nonnull)(long long, long long))progressCallback
+  progressCallback:(void (^_Nullable)(long long, long long))progressCallback
       failCallback:(void (^_Nonnull)(NSError *_Nonnull err))failCallback;
 
 - (void)download:(NSString *_Nonnull)url downloadPath:(NSString *_Nonnull)downloadPath;
