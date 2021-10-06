@@ -8,5 +8,7 @@
 
 + (NSString *)resolveAppVersion;
 + (NSString *)resolveAbsolutePathRelativeToOtaDir:(NSString *)relativePath;
-- (void)deploy:(NSDictionary *)config resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject;
+- (void)deploy:(NSDictionary *)config
+      resolver:(RCTPromiseResolveBlock)resolve
+      rejecter:(RCTPromiseRejectBlock)reject;
 @end

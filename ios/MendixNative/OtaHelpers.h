@@ -9,4 +9,5 @@
 + (NSString *)getOtaManifestFilepath;
 + (NSString *)resolveAbsolutePathRelativeToOtaDir:(NSString *)relativePath;
 + (NSDictionary *)readManifestAsDictionary;
++ (NSDictionary *)getNativeDependencies;
 @end
