@@ -47,4 +47,9 @@ public class MainApplication extends MendixReactApplication {
             }
         };
     }
+
+    @Override
+    public boolean getEnableMendixOTA() {
+        return true;
+    }
 }
