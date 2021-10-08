@@ -25,6 +25,8 @@ def common_pods
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
 
+  # Required MendixNative dependency
+  pod 'SSZipArchive'
 end
 
 target 'nativeTemplate' do
