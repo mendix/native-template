@@ -1,8 +1,8 @@
 {
   "name": "native-template",
-  "version": "6.2.7-alpha.2",
+  "version": "6.2.7-alpha.3",
   "mendix": {
-    "templateVersion": "6.2.7-alpha.2"
+    "templateVersion": "6.2.7-alpha.3"
   },
   "private": true,
   "scripts": {
