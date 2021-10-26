@@ -1,5 +1,29 @@
 [
     {
+        "id": 52010048,
+        "tag_name": "v5.2.5",
+        "name": "Android improvements",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Improvements\r\nWe improved the Sqlite database lifecycle on Android. This should remove the possibility for dead locks when the application is being restarted, for instance after an over the air update. ",
+        "created_at": "2021-10-25T21:31:32Z",
+        "published_at": "2021-10-25T21:34:11Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.5",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.5"
+    },
+    {
+        "id": 52009736,
+        "tag_name": "v6.2.7",
+        "name": "Mendix over the air update support",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Mendix over the air update support\r\n\r\nWith Mendix Studio Pro 9.7, Mendix added a new over the air update mechanism. With this new mechanism it's possible to update your apps directly via the runtime of your project and there's no need for 3rd party services. [Read More on the updated OTA how-to docs.](https://docs.mendix.com/howto/mobile/how-to-ota)\r\n\r\n### Fixes\r\n- We fixed bugs and optimised performance.",
+        "created_at": "2021-10-25T21:23:43Z",
+        "published_at": "2021-10-25T21:28:38Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.7",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.7"
+    },
+    {
         "id": 51381526,
         "tag_name": "v6.2.7-alpha.3",
         "name": "",
