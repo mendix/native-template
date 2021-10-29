@@ -19,7 +19,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:3.4.2"
+        classpath "com.android.tools.build:gradle:3.4.3"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         apply from: file("./mendixnative-release/mendix.gradle"); applyMendixClassPaths(project)
 
