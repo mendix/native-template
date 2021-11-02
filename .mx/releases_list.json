@@ -4,7 +4,7 @@
         "tag_name": "v5.2.6",
         "name": "Android login behaviour bug fix",
         "draft": false,
-        "prerelease": true,
+        "prerelease": false,
         "body": "### Fixes\r\n- We fixed a bug on Android that would not allow an app to reload correctly after the first login.",
         "created_at": "2021-11-02T11:55:04Z",
         "published_at": "2021-11-02T11:57:19Z",
