@@ -1,5 +1,17 @@
 [
     {
+        "id": 52766552,
+        "tag_name": "v6.2.8",
+        "name": "Fix for the CallPhoneNumber javascript action on Android 11+",
+        "draft": false,
+        "prerelease": false,
+        "body": "## Description\r\nWe identified and added a missing configuration that was failing the `CallPhoneNumber` javascript action on Android 11+ devices. Without it, the action will fail.\r\n\r\n## Fixes\r\n- We fixed an issue with the `CallPhoneNumber` javascript action on Android 11+ devices.",
+        "created_at": "2021-11-05T08:38:22Z",
+        "published_at": "2021-11-05T08:39:47Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.8",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.8"
+    },
+    {
         "id": 52765836,
         "tag_name": "v5.2.7",
         "name": "Fix for the OpenURL and CallPhoneNumber javascript action on Android 11+ ",
