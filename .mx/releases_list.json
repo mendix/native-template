@@ -1,5 +1,17 @@
 [
     {
+        "id": 52765836,
+        "tag_name": "v5.2.7",
+        "name": "Fix for the OpenURL and CallPhoneNumber javascript action on Android 11+ ",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Description\r\n\r\nWe identified and added a missing configuration that was failing the `OpenURL` and `CallPhoneNumber` javascript action on Android 11+ devices. Without it, the actions will fail.\r\n\r\n### Fixes\r\n- We fixed an issue with the `OpenURL` and `CallPhoneNumber` javascript actions on Android 11+ devices.\r\n",
+        "created_at": "2021-11-05T08:20:28Z",
+        "published_at": "2021-11-05T08:25:30Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.7",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.7"
+    },
+    {
         "id": 52513333,
         "tag_name": "v5.2.6",
         "name": "Android login behaviour bug fix",
