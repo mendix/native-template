@@ -21,5 +21,10 @@ module.exports = {
               },
             },
         },
+        'react-native-encrypted-storage': {
+            platforms: {
+                android: null // Linked manually for android
+            }
+        }
     },
 };
