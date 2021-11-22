@@ -10,6 +10,7 @@
 @synthesize hasHandledLaunchAppWithOptions;
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [ReactNative clearKeychain];
   MendixAppDelegate.delegate = self;
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
