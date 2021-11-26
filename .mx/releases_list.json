@@ -1,5 +1,17 @@
 [
     {
+        "id": 54140155,
+        "tag_name": "v6.2.9-beta.1",
+        "name": "",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2021-11-26T14:53:06Z",
+        "published_at": "2021-11-26T14:53:42Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.9-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.9-beta.1"
+    },
+    {
         "id": 52766552,
         "tag_name": "v6.2.8",
         "name": "Fix for the CallPhoneNumber javascript action on Android 11+",
