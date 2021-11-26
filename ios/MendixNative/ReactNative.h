@@ -24,6 +24,7 @@
 @property(nonatomic, weak) id<ReactNativeDelegate> delegate;
 @property(class, nonatomic, readonly) ReactNative *instance;
 
++ (void) clearKeychain;
 + (NSString *) warningsFilterToString:(WarningsFilter)warningsFilter;
 - (void) setup:(MendixApp *)mendixApp launchOptions:(NSDictionary *)launchOptions;
 - (void) setup:(MendixApp *)mendixApp launchOptions:(NSDictionary *)launchOptions mendixOTAEnabled:(BOOL)mendixOTAEnabled;
