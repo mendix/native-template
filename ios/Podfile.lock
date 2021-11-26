@@ -231,7 +231,7 @@ PODS:
     - React
   - react-native-camera/RN (3.19.2):
     - React
-  - react-native-cameraroll (1.4.0):
+  - react-native-cameraroll (4.0.1):
     - React
   - react-native-geocoder (0.5.0):
     - React
@@ -568,7 +568,7 @@ SPEC CHECKSUMS:
   react-native-ble-plx-swift: eb64f02b988becb84a60164aba9fab5d6ddb6dc8
   react-native-calendar-events: 2fe35a9294af05de0ed819d3a1b5dac048d2c010
   react-native-camera: 2b575b086c06caf89fd3d119d06bd977a9942103
-  react-native-cameraroll: 1edb879e985fe97d1d44f42372cb4a948e0384cd
+  react-native-cameraroll: 9d2b7c1707204d2040d2812f960c6cebdbd9f670
   react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
   react-native-geolocation: cbd9d6bd06bac411eed2671810f454d4908484a8
   react-native-google-maps: 773b7bcef4f92005847cbf455ca1fa76a21e74c7
@@ -613,4 +613,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9f910a6996d7a5e1a87addc10a046a6338cccad8
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
