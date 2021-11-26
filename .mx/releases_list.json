@@ -1,5 +1,17 @@
 [
     {
+        "id": 54147553,
+        "tag_name": "v6.2.9-beta.2",
+        "name": "",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2021-11-26T17:12:15Z",
+        "published_at": "2021-11-26T17:15:12Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.9-beta.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.9-beta.2"
+    },
+    {
         "id": 54140155,
         "tag_name": "v6.2.9-beta.1",
         "name": "",
