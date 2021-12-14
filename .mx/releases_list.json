@@ -1,5 +1,17 @@
 [
     {
+        "id": 55289991,
+        "tag_name": "v6.2.10",
+        "name": "Fix for Android crash when Appcenter's Codepush is enabled",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes \r\n\r\n* We fixed an issue introduced with v6.2.9, that could crash the Android app when CodePush is enabled.",
+        "created_at": "2021-12-14T16:12:44Z",
+        "published_at": "2021-12-14T16:15:04Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.10",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.10"
+    },
+    {
         "id": 54241309,
         "tag_name": "v6.2.9",
         "name": "Add encryption for token and cookie to native mobile apps",
