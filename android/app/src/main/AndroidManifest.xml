@@ -23,14 +23,18 @@
 
     <queries>
         <intent>
-             <action android:name="android.intent.action.VIEW" />
-             <data android:scheme="https"/>
-         </intent>
-         <intent>
-             <action android:name="android.intent.action.VIEW"/>
-             <data android:scheme="tel"/>
-         </intent>
-     </queries>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="tel"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="google.navigation"/>
+        </intent>
+    </queries>
 
     <application
       android:name=".MainApplication"
