@@ -10,7 +10,7 @@
 @synthesize hasHandledLaunchAppWithOptions;
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [ReactNative clearKeychain];
+  [self clearKeychain];
   MendixAppDelegate.delegate = self;
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
@@ -93,4 +93,12 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
              withCompletionHandler:(void (^)(void))completionHandler {
   [MendixAppDelegate userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
 }
+
+- (void) clearKeychain {
+  if ([NSUserDefaults.standardUserDefaults boolForKey:@"HAS_RUN_BEFORE"] == NO) {
+    [NSUserDefaults.standardUserDefaults setBool:YES forKey:@"HAS_RUN_BEFORE"];
+    [ReactNative clearKeychain];
+  }
+}
+
 @end
