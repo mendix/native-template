@@ -1,5 +1,17 @@
 [
     {
+        "id": 56529497,
+        "tag_name": "v6.2.11-beta.0",
+        "name": "",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2022-01-06T11:32:13Z",
+        "published_at": "2022-01-06T11:32:42Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.11-beta.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.11-beta.0"
+    },
+    {
         "id": 55289991,
         "tag_name": "v6.2.10",
         "name": "Fix for Android crash when Appcenter's Codepush is enabled",
