@@ -3,13 +3,14 @@ apply plugin: 'kotlin-android'
 
 import com.android.build.OutputFile
 
-apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
-
 project.ext.react = [
-        bundleInDebug        : false,
-        bundleInRelease      : false,
-        enableHermes         : false,  // clean and rebuild if changing
-        nodeExecutableAndArgs: ["/usr/local/bin/node"]
+        bundleInDebug           : false,
+        bundleInRelease         : false,
+        bundleInDevDebug        : false,
+        bundleInDevRelease      : false,
+        bundleInAppstoreDebug   : false,
+        bundleInAppstoreRelease : false,
+        enableHermes            : false  // clean and rebuild if changing
 ]
 
 apply from: file("../../node_modules/react-native/react.gradle")
