@@ -5,7 +5,7 @@
         "name": "Various hotfixes",
         "draft": false,
         "prerelease": false,
-        "body": "### Fixes\r\n- We identified and fixed an issue when using `react-native-async-storage` that would fail iOS build due to duplicated symbols being generated.\r\n\r\n- We identified and fixed the reason why compiling the release flavour of the Android app would fail when building on a Windows machine.",
+        "body": "### Fixes\r\n- We identified and fixed an issue when using `react-native-async-storage` that would fail the iOS build due to duplicated symbols being generated.\r\n\r\n- We identified and fixed the reason why compiling the release flavour of the Android app would fail when building on a Windows machine.",
         "created_at": "2022-03-16T13:38:21Z",
         "published_at": "2022-03-16T13:43:20Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.13",
