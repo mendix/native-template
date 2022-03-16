@@ -9,6 +9,7 @@
 @interface MxConfiguration : NSObject <RCTBridgeModule>
 + (NSURL *) runtimeUrl;
 + (NSString *) appName;
++ (BOOL) isDeveloperApp;
 + (NSString *) databaseName;
 + (NSString *) filesDirectoryName;
 + (NSString *) codePushKey;
@@ -19,4 +20,5 @@
 + (void) setFilesDirectoryName:(NSString*)value;
 + (void) setWarningsFilter:(WarningsFilter)value;
 + (void) setCodePushKey:(NSString*)value;
++ (void) setIsDeveloperApp:(BOOL)value;
 @end
