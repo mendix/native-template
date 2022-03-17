@@ -10,7 +10,7 @@
     ],
     "toolsets": {
       "xcode": {
-        "xcodeVersion": "13.0",
+        "xcodeVersion": "13.2.1",
         "automaticSigning": false,
         "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
         "podfilePath": "ios/Podfile",
