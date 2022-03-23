@@ -1,5 +1,17 @@
 [
     {
+        "id": 62589378,
+        "tag_name": "v6.2.15",
+        "name": "Fix custom developer apps failing to build on iOS",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n\r\n- We fixed an issue where iOS custom developer apps incurred problems while building.",
+        "created_at": "2022-03-23T15:14:20Z",
+        "published_at": "2022-03-23T15:16:00Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.15",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.15"
+    },
+    {
         "id": 62100367,
         "tag_name": "v6.2.14",
         "name": "Various hotfixes",
@@ -1186,17 +1198,5 @@
         "published_at": "2019-10-29T15:05:42Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v1.1.0",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v1.1.0"
-    },
-    {
-        "id": 19140199,
-        "tag_name": "v1.0.3",
-        "name": "Fix iOS static images missing after build",
-        "draft": false,
-        "prerelease": false,
-        "body": "Images are now correctly extracted to `Bundle/assets/img`",
-        "created_at": "2019-08-07T15:24:22Z",
-        "published_at": "2019-08-07T15:25:57Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v1.0.3",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v1.0.3"
     }
 ]
