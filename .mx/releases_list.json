@@ -1,5 +1,17 @@
 [
     {
+        "id": 63012502,
+        "tag_name": "v5.2.9",
+        "name": "Android video player full screen support",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Improvements\r\n\r\n- Native Template now supports full-screen Android video. The full-screen icon can be found at the top of the video when the show control's property is set to `true`. When the icon is pressed the video will continue working on an overlay modal. (Ticket 135581)",
+        "created_at": "2022-03-29T08:38:19Z",
+        "published_at": "2022-03-29T08:47:13Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.9",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.9"
+    },
+    {
         "id": 62589378,
         "tag_name": "v6.2.15",
         "name": "Fix custom developer apps failing to build on iOS",
@@ -1186,17 +1198,5 @@
         "published_at": "2019-10-30T14:06:25Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v2.0.0",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v2.0.0"
-    },
-    {
-        "id": 21057237,
-        "tag_name": "v1.1.0",
-        "name": "Stabilise Native dependencies for Android and iOS",
-        "draft": false,
-        "prerelease": false,
-        "body": "- Make sure to pin risky modules to specific versions\r\n- Lock device rotation to portrait only\r\n- Introduce project-based App Center build configurations\r\n- Fix reload handler for Android\r\n- Fix jitpack.io dependency repository",
-        "created_at": "2019-10-29T15:02:34Z",
-        "published_at": "2019-10-29T15:05:42Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v1.1.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v1.1.0"
     }
 ]
