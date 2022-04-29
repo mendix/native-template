@@ -1,5 +1,41 @@
 [
     {
+        "id": 63053226,
+        "tag_name": "v6.2.16",
+        "name": "Fixing App Center OTA for Android",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes \r\n\r\n- We fixed an issue with App Center CodePush on Android which would fail to install new OTA updates on devices. (Ticket 145335)",
+        "created_at": "2022-03-29T15:49:40Z",
+        "published_at": "2022-03-29T15:55:53Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.16",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.16"
+    },
+    {
+        "id": 63012502,
+        "tag_name": "v5.2.9",
+        "name": "Android video player full screen support",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Improvements\r\n\r\n- Native Template now supports full-screen Android video. The full-screen icon can be found at the top of the video when the show control's property is set to `true`. When the icon is pressed the video will continue working on an overlay modal. (Ticket 135581)",
+        "created_at": "2022-03-29T08:38:19Z",
+        "published_at": "2022-03-29T08:47:13Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.9",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.9"
+    },
+    {
+        "id": 62589378,
+        "tag_name": "v6.2.15",
+        "name": "Fix custom developer apps failing to build on iOS",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n\r\n- We fixed an issue where iOS custom developer apps incurred problems while building.",
+        "created_at": "2022-03-23T15:14:20Z",
+        "published_at": "2022-03-23T15:16:00Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.15",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.15"
+    },
+    {
         "id": 62100367,
         "tag_name": "v6.2.14",
         "name": "Various hotfixes",
@@ -1162,41 +1198,5 @@
         "published_at": "2019-11-07T10:15:54Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v2.0.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v2.0.1"
-    },
-    {
-        "id": 21088001,
-        "tag_name": "v2.0.0",
-        "name": "A New Beginning",
-        "draft": false,
-        "prerelease": false,
-        "body": "- Added support for Dark theme and Dark Mode for Android 10 and iOS 13 respectively\r\n- Added Over-the-air updates support\r\n- Migrated iOS project to Xcode 11\r\n- Switch App Center build platform to standard ReactNative",
-        "created_at": "2019-10-30T14:04:40Z",
-        "published_at": "2019-10-30T14:06:25Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v2.0.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v2.0.0"
-    },
-    {
-        "id": 21057237,
-        "tag_name": "v1.1.0",
-        "name": "Stabilise Native dependencies for Android and iOS",
-        "draft": false,
-        "prerelease": false,
-        "body": "- Make sure to pin risky modules to specific versions\r\n- Lock device rotation to portrait only\r\n- Introduce project-based App Center build configurations\r\n- Fix reload handler for Android\r\n- Fix jitpack.io dependency repository",
-        "created_at": "2019-10-29T15:02:34Z",
-        "published_at": "2019-10-29T15:05:42Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v1.1.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v1.1.0"
-    },
-    {
-        "id": 19140199,
-        "tag_name": "v1.0.3",
-        "name": "Fix iOS static images missing after build",
-        "draft": false,
-        "prerelease": false,
-        "body": "Images are now correctly extracted to `Bundle/assets/img`",
-        "created_at": "2019-08-07T15:24:22Z",
-        "published_at": "2019-08-07T15:25:57Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v1.0.3",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v1.0.3"
     }
 ]
