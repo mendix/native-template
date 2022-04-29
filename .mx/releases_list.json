@@ -24,6 +24,18 @@
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.9"
     },
     {
+        "id": 65666650,
+        "tag_name": "v6.2.17-beta.1",
+        "name": "6.2.17",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2022-03-23T15:59:05Z",
+        "published_at": "2022-04-29T10:49:11Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.17-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.17-beta.1"
+    },
+    {
         "id": 62589378,
         "tag_name": "v6.2.15",
         "name": "Fix custom developer apps failing to build on iOS",
@@ -1186,17 +1198,5 @@
         "published_at": "2019-11-25T16:58:53Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v2.0.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v2.0.2"
-    },
-    {
-        "id": 21282545,
-        "tag_name": "v2.0.1",
-        "name": "Support for Developer Mode",
-        "draft": false,
-        "prerelease": false,
-        "body": "* Include support for developer mode\r\n* Removed RNFirebase package as this breaks remote debugging when not configured\r\n* Disable development-mode handler in release mode",
-        "created_at": "2019-11-07T07:32:07Z",
-        "published_at": "2019-11-07T10:15:54Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v2.0.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v2.0.1"
     }
 ]
