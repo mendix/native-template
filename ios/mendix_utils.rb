@@ -84,7 +84,7 @@ end
 def mendix_app_delegate_template
   %(// DO NOT EDIT BY HAND. THIS FILE IS AUTO-GENERATED
 #import <Foundation/Foundation.h>
-#import "MendixNative/MendixNative.h"
+#import <MendixNative/MendixNative_Framework.h>
 #import "MendixAppDelegate.h"
 {{ imports }}
 
