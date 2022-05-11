@@ -1,5 +1,29 @@
 [
     {
+        "id": 66494920,
+        "tag_name": "v6.2.18",
+        "name": "Use Mendix maven repository",
+        "draft": false,
+        "prerelease": false,
+        "body": "",
+        "created_at": "2022-05-11T08:01:23Z",
+        "published_at": "2022-05-10T16:36:45Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.18",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.18"
+    },
+    {
+        "id": 66494900,
+        "tag_name": "v5.2.11",
+        "name": "Use Mendix maven repository",
+        "draft": false,
+        "prerelease": false,
+        "body": "",
+        "created_at": "2022-05-11T08:01:33Z",
+        "published_at": "2022-05-10T16:36:30Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.11",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.11"
+    },
+    {
         "id": 63053226,
         "tag_name": "v6.2.16",
         "name": "Fixing App Center OTA for Android",
@@ -1174,29 +1198,5 @@
         "published_at": "2019-12-18T09:24:43Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v2.1.0",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v2.1.0"
-    },
-    {
-        "id": 21740119,
-        "tag_name": "v2.0.2",
-        "name": "SVG Support",
-        "draft": false,
-        "prerelease": false,
-        "body": "With this release, we officially added support for the SVG in Mendix apps. \r\nIn addition, a number of fixes have been applied.\r\n\r\nAndroid: \r\n* Fixed an issue that would not allow apps to work in offline mode\r\n* Updated SVG library\r\n* Added all required but missing permissions\r\n\r\niOS \r\n* Fixed a configuration issue that would make Firebase a mandatory requirement for the Barcode Scanner functionality\r\n* Compiled libraries for XCode 11.2.1 and latest Swift version",
-        "created_at": "2019-11-25T16:51:01Z",
-        "published_at": "2019-11-25T16:58:53Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v2.0.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v2.0.2"
-    },
-    {
-        "id": 21282545,
-        "tag_name": "v2.0.1",
-        "name": "Support for Developer Mode",
-        "draft": false,
-        "prerelease": false,
-        "body": "* Include support for developer mode\r\n* Removed RNFirebase package as this breaks remote debugging when not configured\r\n* Disable development-mode handler in release mode",
-        "created_at": "2019-11-07T07:32:07Z",
-        "published_at": "2019-11-07T10:15:54Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v2.0.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v2.0.1"
     }
 ]
