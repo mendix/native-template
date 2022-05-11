@@ -22,7 +22,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.util.Consumer;
 
-// import com.google.zxing.Result;
+import com.google.zxing.Result;
 import com.mendix.mendixnative.activity.MendixReactActivity;
 import com.mendix.mendixnative.config.AppPreferences;
 import com.mendix.mendixnative.config.AppUrl;
@@ -37,15 +37,15 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-// import me.dm7.barcodescanner.zxing.ZXingScannerView;
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     static private final int CAMERA_REQUEST = 1;
     private final Executor httpExecutor = Executors.newSingleThreadExecutor();
-    // private ZXingScannerView cameraView;
+    private ZXingScannerView cameraView;
     private AppPreferences appPreferences;
     private Button launchAppButton;
     private CheckBox devModeCheckBox;
@@ -67,15 +67,15 @@ public class MainActivity extends AppCompatActivity {
         loaderView = findViewById(R.id.loader);
 
         ViewGroup cameraContainer = findViewById(R.id.barcode_scanner_container);
-        // cameraView = new ZXingScannerView(this);
-        // cameraContainer.addView(cameraView);
+        cameraView = new ZXingScannerView(this);
+        cameraContainer.addView(cameraView);
 
         attachListeners();
 
         appUrl.setText(appPreferences.getAppUrl());
         devModeCheckBox.setChecked(appPreferences.isDevModeEnabled());
 
-        // cameraView.setResultHandler(this);
+        cameraView.setResultHandler(this);
         startCameraWithPermissions();
 
         handleLaunchWithData(getIntent());
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         try {
-           // cameraView.startCamera();
+            cameraView.startCamera();
         } catch (Exception e) {
             // No permissions
         }
@@ -107,25 +107,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-     //   cameraView.stopCamera();
+        cameraView.stopCamera();
     }
 
-//     @Override
-//     public void handleResult(Result rawResult) {
-//         try {
-//             JSONObject json = new JSONObject(rawResult.getText());
-//             String url = json.getString("url");
-//             launchApp(url, null);
-//         } catch (JSONException e) {
-//             Toast.makeText(MainActivity.this, R.string.qr_code_invalid, Toast.LENGTH_LONG).show();
-//         }
-//     }
+    @Override
+    public void handleResult(Result rawResult) {
+        try {
+            JSONObject json = new JSONObject(rawResult.getText());
+            String url = json.getString("url");
+            launchApp(url, null);
+        } catch (JSONException e) {
+            Toast.makeText(MainActivity.this, R.string.qr_code_invalid, Toast.LENGTH_LONG).show();
+        }
+    }
 
-    // @Override
+    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == CAMERA_REQUEST) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-               // cameraView.startCamera();
+                cameraView.startCamera();
             }
         }
     }
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
     private void disableUIInteraction(boolean disable) {
         loaderView.setVisibility(disable ? View.VISIBLE : View.GONE);
         if (!disable) {
-           // cameraView.resumeCameraPreview(this);
+            cameraView.resumeCameraPreview(this);
         }
     }
 
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST);
             }
         } else {
-          //  cameraView.startCamera();
+            cameraView.startCamera();
         }
     }
 
