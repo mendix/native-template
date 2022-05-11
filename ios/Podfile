@@ -1,3 +1,5 @@
+source 'https://cdn.cocoapods.org/'
+
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
@@ -102,3 +104,6 @@ def find_and_replace(dir, findstr, replacestr)
   end
   Dir[dir + '*/'].each(&method(:find_and_replace))
 end
+
+require 'typhoeus'
+Typhoeus::Config.user_agent = 'CocoaPods'
