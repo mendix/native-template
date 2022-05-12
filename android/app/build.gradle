@@ -167,7 +167,7 @@ dependencies {
 
     // Required for Custom Dev Apps
     devImplementation "androidx.constraintlayout:constraintlayout:2.0.4"
-    devImplementation "me.dm7.barcodescanner:zxing:1.9.13"
+    devImplementation "me.dm7.barcodescanner:zxing:1.9.8"
 
     androidTestImplementation("com.wix:detox:+")
 }
