@@ -14,9 +14,12 @@ buildscript {
     }
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven {
             url "https://maven.fabric.io/public"
+        }
+        maven {
+            url "https://packages.rnd.mendix.com/jcenter"
         }
     }
     dependencies {
@@ -31,9 +34,8 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenLocal()
         google()
-        jcenter()
+        mavenCentral()
         maven { url "https://www.jitpack.io" }
         maven {
             url "$rootDir/../node_modules/react-native/android"
@@ -47,6 +49,7 @@ allprojects {
         maven {
             url "$rootDir/../node_modules/detox/Detox-android"
         }
+        maven { url "https://packages.rnd.mendix.com/jcenter" }
     }
 
     ext {
