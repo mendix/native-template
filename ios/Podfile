@@ -1,3 +1,5 @@
+source 'https://cdn.cocoapods.org/'
+
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
@@ -83,4 +85,35 @@ post_install do |installer|
       end
     end
   end
+
+  XCODE_VERSION = ""
+  begin
+    XCODE_VERSION << (%x[xcrun xcodebuild -version | head -1 | awk '{print $2}']).to_s.strip
+  rescue RuntimeError
+    Pod::UI.warn "We could not derive your Xcode version. Verify if you have xcode command line tools installed on your machine. See https://developer.apple.com/library/archive/technotes/tn2339/_index.html"
+  end
+
+  ## Fix for XCode >=12.5. see https://github.com/facebook/react-native/issues/28405#issuecomment-827353727
+  major, minor, * = XCODE_VERSION.split('.')
+  if major.to_i > 12 || (major.to_i == 12 && minor.to_i >= 5)
+    puts "Found Xcode v#{XCODE_VERSION}. Replacing RCTCxxBridge's contents"
+    find_and_replace("../node_modules/react-native/React/CxxBridge/RCTCxxBridge.mm", "_initializeModules:(NSArray<id<RCTBridgeModule>> *)modules", "_initializeModules:(NSArray<Class> *)modules")
+    find_and_replace("../node_modules/react-native/ReactCommon/turbomodule/core/platform/ios/RCTTurboModuleManager.mm", "RCTBridgeModuleNameForClass(module))", "RCTBridgeModuleNameForClass(Class(module)))")
+  end
 end
+
+def find_and_replace(dir, findstr, replacestr)
+  Dir[dir].each do |name|
+    text = File.read(name)
+    replace = text.gsub(findstr, replacestr)
+    if text != replace
+      puts "Fix: " + name
+      File.open(name, "w") { |file| file.puts replace }
+      STDOUT.flush
+    end
+  end
+  Dir[dir + '*/'].each(&method(:find_and_replace))
+end
+
+require 'typhoeus'
+Typhoeus::Config.user_agent = 'CocoaPods'
