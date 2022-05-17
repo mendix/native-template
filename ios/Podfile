@@ -86,6 +86,13 @@ post_install do |installer|
     end
   end
 
+  XCODE_VERSION = ""
+  begin
+    XCODE_VERSION << (%x[xcrun xcodebuild -version | head -1 | awk '{print $2}']).to_s.strip
+  rescue RuntimeError
+    Pod::UI.warn "We could not derive your Xcode version. Verify if you have xcode command line tools installed on your machine. See https://developer.apple.com/library/archive/technotes/tn2339/_index.html"
+  end
+
   ## Fix for XCode >=12.5. see https://github.com/facebook/react-native/issues/28405#issuecomment-827353727
   major, minor, * = XCODE_VERSION.split('.')
   if major.to_i > 12 || (major.to_i == 12 && minor.to_i >= 5)
