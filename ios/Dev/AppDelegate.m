@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
 #import "MendixAppDelegate.h"
-#import "MendixNative.h"
+#import <MendixNative/MendixNative_Framework.h>
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "SplashScreenPresenter.h"
 
