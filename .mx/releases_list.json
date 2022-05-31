@@ -1,5 +1,17 @@
 [
     {
+        "id": 68260271,
+        "tag_name": "v6.2.21",
+        "name": "Fix iOS build issue",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes \r\n\r\n- We fixed an iOS build issue for projects using Crashlytics.",
+        "created_at": "2022-05-31T15:52:01Z",
+        "published_at": "2022-05-31T15:52:12Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.21",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.21"
+    },
+    {
         "id": 68159853,
         "tag_name": "v6.2.20",
         "name": "Logout issue bugfix",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-03-24T16:34:50Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v3.2.0",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v3.2.0"
-    },
-    {
-        "id": 24132514,
-        "tag_name": "v3.1.3",
-        "name": "Android enhancements ",
-        "draft": false,
-        "prerelease": false,
-        "body": "* We fixed a memory issue. The Android template now uses use a larger heap by default to accommodate for memory-heavy tasks.\r\n* We fixed an issue where the Android app crashed when the maps widget was used but the API key had not been configured yet. The Android app no longer crashes in this case.",
-        "created_at": "2020-03-02T14:07:46Z",
-        "published_at": "2020-03-02T14:12:27Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v3.1.3",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v3.1.3"
     }
 ]
