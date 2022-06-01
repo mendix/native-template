@@ -1,0 +1,23 @@
+name: Update Releases List
+
+on:
+  workflow_dispatch:
+
+jobs:
+  releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'npm'
+          cache-dependency-path: '**/package.lock'
+
+      - name: Release a new version
+        run: |
+          npm install -g release-it
+          release-it --increment=patch --ci --github.release --github.draft  -d
+
+      
