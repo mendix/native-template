@@ -15,6 +15,8 @@ jobs:
           node-version: 14
 
       - name: Release a new version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install -g release-it
           release-it --dry-run  --increment=patch --ci --github.release --github.draft
