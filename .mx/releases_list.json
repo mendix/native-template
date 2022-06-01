@@ -1,13 +1,13 @@
 [
     {
-        "id": 68260271,
+        "id": 68318557,
         "tag_name": "v6.2.21",
         "name": "Fix iOS build issue",
         "draft": false,
         "prerelease": false,
         "body": "### Fixes \r\n\r\n- We fixed an iOS build issue for projects using Crashlytics.",
-        "created_at": "2022-05-31T15:52:01Z",
-        "published_at": "2022-05-31T15:52:12Z",
+        "created_at": "2022-06-01T08:40:05Z",
+        "published_at": "2022-06-01T08:41:41Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.21",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.21"
     },
