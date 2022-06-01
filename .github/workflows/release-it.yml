@@ -2,7 +2,6 @@ name: Release a new version
 
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   release:
@@ -19,6 +18,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install -g release-it
-          release-it --dry-run  --increment=patch --ci --github.release --github.draft --git.commitMessage="chore: release v\${version}"  --git.tagName="v\${version}"
+          release-it --increment=patch --ci --github.release --github.draft --git.commitMessage="chore: release v\${version}"  --git.tagName="v\${version}" --no-npm
 
       
