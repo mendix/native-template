@@ -15,7 +15,7 @@ jobs:
 
       - name: Release a new version
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_ADMIN_TOKEN }}
         run: |
           npm install -g release-it
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
