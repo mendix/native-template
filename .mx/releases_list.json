@@ -1,5 +1,17 @@
 [
     {
+        "id": 68424186,
+        "tag_name": "v6.2.22",
+        "name": "Release 6.2.22",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes \r\n\r\n- We fixed an iOS build issue  (#150964, #150934)",
+        "created_at": "2022-06-02T08:31:38Z",
+        "published_at": "2022-06-02T08:33:35Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.22",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.22"
+    },
+    {
         "id": 68318557,
         "tag_name": "v6.2.21",
         "name": "Fix iOS build issue",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-04-03T18:58:03Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v3.2.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v3.2.1"
-    },
-    {
-        "id": 24818504,
-        "tag_name": "v3.2.0",
-        "name": "Removal of UIWebView",
-        "draft": false,
-        "prerelease": false,
-        "body": "With this release, we are removing the UIWebView from our codebase. This is in compliance with Apple's App Store requirements for releasing new apps.\r\n\r\n### This release is compatible with Mendix Studio Pro 8.8 and later and is required to release new Apps on the App Store from 1st of April.",
-        "created_at": "2020-03-24T16:31:24Z",
-        "published_at": "2020-03-24T16:34:50Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v3.2.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v3.2.0"
     }
 ]
