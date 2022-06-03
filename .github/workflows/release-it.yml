@@ -1,0 +1,25 @@
+name: Release a new version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PUBLIC_REPO_ADMIN_TOKEN }}
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Release a new version
+        env:
+          GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_ADMIN_TOKEN }}
+        run: |
+          npm install -g release-it
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-action"
+          release-it --increment=patch --ci --github.release --github.draft --git.commitMessage="chore: release v\${version}"  --git.tagName="v\${version}"
