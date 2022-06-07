@@ -114,6 +114,3 @@ def find_and_replace(dir, findstr, replacestr)
   end
   Dir[dir + '*/'].each(&method(:find_and_replace))
 end
-
-require 'typhoeus'
-Typhoeus::Config.user_agent = 'CocoaPods'
