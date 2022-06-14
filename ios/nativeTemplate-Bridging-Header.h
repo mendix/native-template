@@ -3,6 +3,6 @@
 //
 
 #import "AppDelegate.h"
-#import <MendixNative/MendixNative_Framework.h>
+#import <MendixNative.h>
 #import "SplashScreenPresenter.h"
 
