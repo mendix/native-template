@@ -41,5 +41,16 @@
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
     "patch-package": "^6.2.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "overrides": {
+    "react": "17.0.2",
+    "react-native": "0.64.2"
+  },
+  "resolutions": {
+    "react": "17.0.2",
+    "react-native": "0.64.2"
   }
 }
