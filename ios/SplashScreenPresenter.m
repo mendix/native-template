@@ -1,5 +1,5 @@
+#import <MendixNative.h>
 #import "SplashScreenPresenter.h"
-#import "ReactNative.h"
 #import "RNSplashScreen.h"
 #import "StoryBoardSplash.m"
 

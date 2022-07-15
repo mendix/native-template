@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "SplashScreenPresenterProtocol.h"
+#import <MendixNative.h>
 
 @interface SplashScreenPresenter : NSObject<SplashScreenPresenterProtocol>
 @end
