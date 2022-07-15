@@ -1,0 +1,19 @@
+name: '[Linux] Test npm installation on latest node'
+
+on:
+  pull_request:
+    branches: [master, release/*]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checking-out code"
+        uses: actions/checkout@v3
+      - name: "Defining node version"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'latest'
+      - name: "Install dependencies"
+        run: npm install
