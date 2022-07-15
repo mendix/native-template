@@ -1,5 +1,17 @@
 [
     {
+        "id": 72079102,
+        "tag_name": "6.2.23-beta.1",
+        "name": "6.2.23-beta.1",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2022-07-15T10:46:51Z",
+        "published_at": "2022-07-15T10:48:11Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.23-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.23-beta.1"
+    },
+    {
         "id": 70859921,
         "tag_name": "v6.2.23-beta.0",
         "name": "6.2.23-beta.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-06-15T17:31:40Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.1.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.1.1"
-    },
-    {
-        "id": 26858289,
-        "tag_name": "v4.1.0",
-        "name": "Support for Mendix Studio Pro 8.10 features",
-        "draft": false,
-        "prerelease": false,
-        "body": "New Features: \r\n\r\n### Support for Mendix Studio 8.10 synchronization fixes for Custom Developer Apps\r\nPrior to 8.10, Custom Developer Apps had to do a full session data request with each reload, slowing down the developer experience tremendously. \r\nFrom 8.10 onwards the client is able to tell when and what to sync. This behavior should emulate incremental syncs better and more consistently.\r\n\r\n### Fixes \r\n* We removed the complimentary libraries for the Camera module that were added with the 4.0.0 release and that made Firebase a mandatory dependency when any camera functionality was used of iOS.",
-        "created_at": "2020-05-25T10:28:25Z",
-        "published_at": "2020-05-25T10:36:18Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.1.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.1.0"
     }
 ]
