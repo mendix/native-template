@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "0.0.0-master",
+  "version": "0.0.0",
   "mendix": {
     "templateVersion": "0.0.0-master"
   },
