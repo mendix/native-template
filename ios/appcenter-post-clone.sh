@@ -1,6 +1,5 @@
-# Update node version to latest; appcenter defaults to v6
-brew uninstall node@6
-brew install node
+# Update node version to 14;
+brew install node@14
 
 # Update project's dependencies
 npm i && pod update
