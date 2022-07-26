@@ -1,5 +1,17 @@
 [
     {
+        "id": 72841553,
+        "tag_name": "6.2.24-beta.1",
+        "name": "6.2.24-beta.1",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2022-07-26T10:19:50Z",
+        "published_at": "2022-07-26T10:23:54Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.24-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.24-beta.1"
+    },
+    {
         "id": 72223508,
         "tag_name": "v6.2.23",
         "name": "Release 6.2.23",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-08-26T11:56:25Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.2.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.2.1"
-    },
-    {
-        "id": 29416707,
-        "tag_name": "v5.0.0",
-        "name": "Better splash screen support",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Notice\r\nMendix Studio Pro 8.12.1 introduces better splash screen support for Native Apps. As the new functionality requires new native dependencies the changes are not backward compatible with previous Mendix Studio versions.\r\n\r\n### Improvements\r\nIn the first implementation, splash screens were static resources controlled by the native side of the app. While good enough in simple cases; they are inadequate for longer syncing sessions; where the splash screen could toggle off too soon.\r\n\r\nWith the new implementation, splash screens are fully togglable via the client. That means that the client has full control over the splash screen. That translates to better on/off timing and less missed frames for longer syncing sessions.",
-        "created_at": "2020-08-06T16:09:10Z",
-        "published_at": "2020-08-06T16:28:33Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.0"
     }
 ]
