@@ -1,5 +1,17 @@
 [
     {
+        "id": 72853440,
+        "tag_name": "6.2.24-beta.2",
+        "name": "6.2.24-beta.2",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2022-07-26T12:39:03Z",
+        "published_at": "2022-07-26T12:39:57Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.24-beta.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.24-beta.2"
+    },
+    {
         "id": 72841553,
         "tag_name": "6.2.24-beta.1",
         "name": "6.2.24-beta.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-08-26T11:48:00Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.1"
-    },
-    {
-        "id": 30152217,
-        "tag_name": "v4.2.1",
-        "name": "Comply with targetSDK 29 requirement for Google Play for Mendix Studio up to 8.12",
-        "draft": false,
-        "prerelease": false,
-        "body": "As of August 2020 Google Play requires apps to be build targetting SDK 29. This version of the Native Template complies with these requirements.\r\n\r\n**More info**: https://support.google.com/googleplay/android-developer/answer/113469#targetsdk",
-        "created_at": "2020-08-26T11:54:33Z",
-        "published_at": "2020-08-26T11:56:25Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.2.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.2.1"
     }
 ]
