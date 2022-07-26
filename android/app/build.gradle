@@ -53,6 +53,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
+    ndkVersion "21.4.7075529"
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     compileOptions {
