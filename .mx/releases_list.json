@@ -6,7 +6,7 @@
         "draft": false,
         "prerelease": false,
         "body": "* We fixed an issue while uploading an iOS application to App Store\r\n* We fixed crashes on Xiaomi smartphones\r\n* We fixed an issue while building Android apps on AppCenter",
-        "created_at": "2022-07-26T10:21:06Z",
+        "created_at": "2022-07-26T14:11:21Z",
         "published_at": "2022-07-26T14:20:30Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.24",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.24"
