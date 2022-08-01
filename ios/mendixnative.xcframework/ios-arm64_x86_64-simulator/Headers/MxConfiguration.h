@@ -13,6 +13,7 @@
 + (NSString *) databaseName;
 + (NSString *) filesDirectoryName;
 + (NSString *) codePushKey;
++ (NSString *) appSessionId;
 + (WarningsFilter) warningsFilter;
 + (void) setRuntimeUrl:(NSURL*)value;
 + (void) setAppName:(NSString*)value;
@@ -21,4 +22,5 @@
 + (void) setWarningsFilter:(WarningsFilter)value;
 + (void) setCodePushKey:(NSString*)value;
 + (void) setIsDeveloperApp:(BOOL)value;
++ (void) setAppSessionId:(NSString*)value;
 @end
