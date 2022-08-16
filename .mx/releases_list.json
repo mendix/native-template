@@ -1,5 +1,17 @@
 [
     {
+        "id": 74502742,
+        "tag_name": "6.2.25-beta.2",
+        "name": "6.2.25-beta.2",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2022-08-16T10:40:23Z",
+        "published_at": "2022-08-16T10:40:51Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.25-beta.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.25-beta.2"
+    },
+    {
         "id": 73315925,
         "tag_name": "v6.2.25-beta.1",
         "name": "6.2.25 - beta.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-09-17T14:06:58Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.3.0-beta",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.3.0-beta"
-    },
-    {
-        "id": 31338382,
-        "tag_name": "v5.1.0-beta",
-        "name": "[Beta] Capabilities support",
-        "draft": false,
-        "prerelease": true,
-        "body": "### Description\r\nThis is a beta release of Native Template complimentary to the Native Builder UI Beta. \r\nIt is required for capabilities support to function correctly in Native Builder UI.\r\n\r\n### Features\r\n- Capabilities toggling support\r\n- Advance dependency linking",
-        "created_at": "2020-09-15T15:33:36Z",
-        "published_at": "2020-09-15T15:37:17Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.0-beta",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.0-beta"
     }
 ]
