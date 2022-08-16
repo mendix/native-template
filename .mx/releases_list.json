@@ -1,5 +1,17 @@
 [
     {
+        "id": 74504504,
+        "tag_name": "6.2.25-beta.3",
+        "name": "6.2.25-beta.3",
+        "draft": false,
+        "prerelease": true,
+        "body": "- Update ndk version to match AppCenter\r\n- Update react-native-permissions library\r\n- Removed `mendix.templateVersion` from package.json",
+        "created_at": "2022-08-16T10:43:23Z",
+        "published_at": "2022-08-16T11:04:32Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.25-beta.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.25-beta.3"
+    },
+    {
         "id": 74502742,
         "tag_name": "6.2.25-beta.2",
         "name": "6.2.25-beta.2",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-10-03T12:21:15Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.2.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.2.2"
-    },
-    {
-        "id": 31473607,
-        "tag_name": "v4.3.0-beta",
-        "name": "[Beta] Capabilities support for Studio Pro up to 8.12",
-        "draft": false,
-        "prerelease": true,
-        "body": "### Description\r\nThis is a beta release of Native Template complimentary to the Native Builder UI Beta. \r\nIt is required for capabilities support to function correctly in Native Builder UI.\r\n\r\n### Features\r\n- Capabilities toggling support\r\n- Advance dependency linking",
-        "created_at": "2020-09-17T14:03:46Z",
-        "published_at": "2020-09-17T14:06:58Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.3.0-beta",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.3.0-beta"
     }
 ]
