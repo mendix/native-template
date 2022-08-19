@@ -1,5 +1,17 @@
 [
     {
+        "id": 74840521,
+        "tag_name": "6.2.26-beta.1",
+        "name": "6.2.26-beta.1",
+        "draft": false,
+        "prerelease": true,
+        "body": "Add fonts from vector-icons",
+        "created_at": "2022-08-19T14:23:02Z",
+        "published_at": "2022-08-19T14:25:35Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.26-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.26-beta.1"
+    },
+    {
         "id": 74509369,
         "tag_name": "v6.2.25",
         "name": "Release 6.2.25",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-10-09T04:14:26Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.4",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.4"
-    },
-    {
-        "id": 32122998,
-        "tag_name": "v4.2.2",
-        "name": "XCode 12 support Mendix Studio Pro up to 8.12.0",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\nWe updated a number of dependencies to ensure support with XCode 12. We also updated the App Center configuration to use XCode 12 and Node LTS.",
-        "created_at": "2020-10-03T10:55:05Z",
-        "published_at": "2020-10-03T12:21:15Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.2.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.2.2"
     }
 ]
