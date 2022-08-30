@@ -1,5 +1,17 @@
 [
     {
+        "id": 75746644,
+        "tag_name": "v6.2.26-beta.2",
+        "name": "v6.2.26-beta.2",
+        "draft": false,
+        "prerelease": true,
+        "body": "Test 726",
+        "created_at": "2022-08-23T11:44:21Z",
+        "published_at": "2022-08-30T09:19:54Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.26-beta.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.26-beta.2"
+    },
+    {
         "id": 75652109,
         "tag_name": "6.2.26-beta.1",
         "name": "v6.2.26-beta.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-10-19T13:57:48Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.2.3",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.2.3"
-    },
-    {
-        "id": 32353000,
-        "tag_name": "v5.0.4",
-        "name": "XCode 12 support Medix Studio Pro 8.12+",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\n\r\nWe updated a number of dependencies to ensure support with XCode 12. We also updated the App Center configuration to use XCode 12 and Node LTS.",
-        "created_at": "2020-10-08T18:19:11Z",
-        "published_at": "2020-10-09T04:14:26Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.4",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.4"
     }
 ]
