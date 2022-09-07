@@ -1,5 +1,17 @@
 [
     {
+        "id": 76467851,
+        "tag_name": "v6.2.26-beta.3",
+        "name": "v6.2.26-beta.3",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2022-09-07T09:26:21Z",
+        "published_at": "2022-09-07T09:43:33Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.26-beta.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.26-beta.3"
+    },
+    {
         "id": 75746644,
         "tag_name": "v6.2.26-beta.2",
         "name": "v6.2.26-beta.2",
@@ -1186,17 +1198,5 @@
         "published_at": "2020-10-19T13:58:45Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.5",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.5"
-    },
-    {
-        "id": 32757719,
-        "tag_name": "v4.2.3",
-        "name": "Fix for Android 10 legacy external storage",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- Setting the legacy external storage flag to support Android 10 and later.\r\n- Added support for missing iPad icons.",
-        "created_at": "2020-10-19T13:52:55Z",
-        "published_at": "2020-10-19T13:57:48Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.2.3",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.2.3"
     }
 ]
