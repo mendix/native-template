@@ -36,9 +36,9 @@
 		2C887FE324B8948F0003DC53 /* StoryBoardSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C887FE124B8948F0003DC53 /* StoryBoardSplash.m */; };
 		9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */; };
 		B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11502903429AC2E6E69E6482 /* libPods-dev.a */; };
-		DF619A7527E3AD0900002AE8 /* mendixnative.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF619A7327E3AD0900002AE8 /* mendixnative.xcframework */; };
 		DF6591BE26650DF3006E3A5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6591BD26650DF3006E3A5E /* AppDelegate.m */; };
 		E88B6BD8281C2AD20080EE78 /* mendixnative.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF619A7327E3AD0900002AE8 /* mendixnative.xcframework */; };
+		E8F3044B283E645100D10AF3 /* mendixnative.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF619A7327E3AD0900002AE8 /* mendixnative.xcframework */; };
 		EB55620C22E0755000E19C26 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB55620B22E0755000E19C26 /* glyphicons-halflings-regular.ttf */; };
 		EB55E08A23BF7FF700E3FB34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78BDD823BF47FE00E56827 /* AppDelegate.m */; };
 		EB59215B23BFA1F5001D6155 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59215A23BFA1F5001D6155 /* main.m */; };
@@ -115,9 +115,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F3044B283E645100D10AF3 /* mendixnative.xcframework in Frameworks */,
 				1A0B3AB92397DA6800388BF7 /* JavaScriptCore.framework in Frameworks */,
 				B28D6DAD97033B55832E5853 /* libPods-dev.a in Frameworks */,
-				DF619A7527E3AD0900002AE8 /* mendixnative.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,7 +652,7 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = nativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -730,7 +730,7 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = nativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -959,7 +959,7 @@
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = nativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

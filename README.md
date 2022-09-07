@@ -11,19 +11,14 @@ Contact [Mendix support](https://support.mendix.com/hc/en-us) if assistance is r
 ### Branching policy
  
 #### Master branch
- 
-**Please avoid using master directly.**
- 
-Master is considered an active development branch. What is on master is actively worked on and might:
-- Not support your current version of Mendix Studio Pro
-- Include experimental features
-- Be in a possible broken state for your usage
+
+Current master branch is the latest release, all the LTS versions live in `release/x.x.x`.
  
 #### Release branches
  
 Official releases are done via the `release/x.x.x` branches. If you need a particular version, checkout the appropriate branch; latest should reflect the latest patch version released.
  
-Otherwise the GitHub releases also include a zipped version of the branch state they were created from. You can download and unzip that for further use.
+Otherwise, the GitHub releases also include a zipped version of the branch state they were created from. You can download and unzip that for further use.
  
 To deduct which version of Native Template fits to your current Mendix Studio Pro version, please use the [mendix version json file](https://github.com/mendix/native-template/blob/master/mendix_version.json). It include a map of studio pro version ranges to Native template version ranges.
  
