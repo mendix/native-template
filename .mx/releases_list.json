@@ -1,5 +1,17 @@
 [
     {
+        "id": 76994127,
+        "tag_name": "v6.3.0-beta.2",
+        "name": "v6.3.0-beta.2",
+        "draft": false,
+        "prerelease": true,
+        "body": "MOO-666",
+        "created_at": "2022-09-13T10:45:06Z",
+        "published_at": "2022-09-13T11:26:18Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.0-beta.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.0-beta.2"
+    },
+    {
         "id": 76608496,
         "tag_name": "v6.2.26",
         "name": "Release 6.2.26",
@@ -22,18 +34,6 @@
         "published_at": "2022-09-08T07:07:10Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.0-beta.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.0-beta.1"
-    },
-    {
-        "id": 76467851,
-        "tag_name": "v6.2.26-beta.3",
-        "name": "v6.2.26-beta.3",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2022-09-07T09:26:21Z",
-        "published_at": "2022-09-07T09:43:33Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.26-beta.3",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.26-beta.3"
     },
     {
         "id": 75746644,
