@@ -17,10 +17,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: npm install
-        uses: Jaid/action-npm-install@v1.2.4
+      - name: actions/setup-node
+        uses: actions/setup-node
         with:
-          packageManager: npm
+          node-version: "14.18.2"
+      - name: npm install
+        run: npm ci
       - name: Add NDK 21.4.7075529
         run: echo "y" | sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;21.4.7075529"
       - name: Build with Gradle
