@@ -186,7 +186,7 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into "libs"
 }
 
-apply from: file("../mendixnative-release/mendix.gradle");
+apply from: file("../../node_modules/@mendix/native/android/mendix.gradle");
 applyMendixGradle(project)
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle");
 applyNativeModulesAppBuildGradle(project)
