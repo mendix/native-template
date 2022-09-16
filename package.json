@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "6.2.26",
+  "version": "6.2.27",
   "private": true,
   "scripts": {
     "postinstall": "patch-package && jetify",
