@@ -29,9 +29,6 @@ def common_pods
   
   # Required MendixNative dependency
   pod 'SSZipArchive'
-
-  # Required MendixNative dependency
-  pod 'SSZipArchive'
 end
 
 target 'nativeTemplate' do
