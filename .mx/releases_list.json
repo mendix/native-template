@@ -1,5 +1,41 @@
 [
     {
+        "id": 77650234,
+        "tag_name": "v6.3.0",
+        "name": "Release 6.3.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Features\r\n\r\n- We improved our app security allowing apps to use new Database encryption capability of Studio Pro 9.18",
+        "created_at": "2022-09-19T07:33:59Z",
+        "published_at": "2022-09-20T12:16:04Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.0"
+    },
+    {
+        "id": 77375074,
+        "tag_name": "v6.2.27",
+        "name": "Release 6.2.27",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Features\r\n\r\n- We added support from the following fonts from `react-native-vector-icons` library:\r\n    * AntDesign\r\n    * Entype\r\n    * EvilIcons\r\n    * Feather\r\n    * FontAwesome\r\n    * FontAwesome 5\r\n    * Fontisto\r\n    * Foundation\r\n    * Ionicons\r\n    * MaterialCommunityIcons\r\n    * MaterialIcons\r\n    * Octicons\r\n    * SimpleLineIcons\r\n    * Zocial\r\n",
+        "created_at": "2022-09-16T09:18:51Z",
+        "published_at": "2022-09-19T16:19:51Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.27",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.27"
+    },
+    {
+        "id": 78287100,
+        "tag_name": "v6.3.1-beta.1",
+        "name": "MOO-669",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2022-09-15T14:19:17Z",
+        "published_at": "2022-09-27T12:27:16Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.1-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.1-beta.1"
+    },
+    {
         "id": 77130624,
         "tag_name": "v6.3.0-beta.4",
         "name": "v6.3.0-beta.4",
@@ -1162,41 +1198,5 @@
         "published_at": "2020-11-09T17:10:25Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v3.2.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v3.2.2"
-    },
-    {
-        "id": 33363355,
-        "tag_name": "v5.1.1",
-        "name": "Xcode 12 base64 image support for Studio Pro 8.15.x and newer",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\nThis release makes Mendix Native Mobile apps fully compatible with Xcode 12's build system.\r\n\r\n### Fixes\r\n- Base64 encoded images should again be fully supported with builds done with Xcode 12.",
-        "created_at": "2020-11-02T16:40:22Z",
-        "published_at": "2020-11-02T16:41:44Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.1"
-    },
-    {
-        "id": 33363164,
-        "tag_name": "v5.0.6",
-        "name": "Xcode 12 base64 image support for Studio Pro 8.12.1 up to 8.14.x",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\nThis release makes Mendix Native Mobile apps fully compatible with Xcode 12's build system.\r\n\r\n### Fixes\r\n- Base64 encoded images should again be fully supported with builds done with Xcode 12.\r\n",
-        "created_at": "2020-11-02T16:36:37Z",
-        "published_at": "2020-11-02T16:38:50Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.6"
-    },
-    {
-        "id": 33362896,
-        "tag_name": "v4.2.4",
-        "name": "Xcode 12 base64 image support for Studio Pro 8.9.x up to 8.12.0",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\nThis release makes Mendix Native Mobile apps fully compatible with Xcode 12's build system.\r\n\r\n### Fixes\r\n- Base64 encoded images should again be fully supported with builds done with Xcode 12. ",
-        "created_at": "2020-11-02T16:17:20Z",
-        "published_at": "2020-11-02T16:34:23Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.2.4",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.2.4"
     }
 ]
