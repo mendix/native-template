@@ -26,3 +26,5 @@ if [[ -e "$CODE_PUSH_KEY_FILE" && $IS_DEV_APP == False ]]; then
 
     cat $CODE_PUSH_KEY_FILE
 fi
+
+export JAVA_HOME=$JAVA_HOME_11_X64
