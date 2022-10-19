@@ -1,15 +1,15 @@
 [
     {
-        "id": 80083533,
-        "tag_name": "v6.3.2-beta.1",
-        "name": "Release 6.3.2 (MOO-791)",
+        "id": 80298748,
+        "tag_name": "v6.3.2-beta.2",
+        "name": "Release 6.3.2-b2 (MOO-791)",
         "draft": false,
         "prerelease": true,
         "body": "MOO-791",
-        "created_at": "2022-10-17T12:39:50Z",
-        "published_at": "2022-10-17T13:01:52Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.2-beta.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.2-beta.1"
+        "created_at": "2022-10-19T08:35:29Z",
+        "published_at": "2022-10-19T08:36:17Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.2-beta.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.2-beta.2"
     },
     {
         "id": 79152954,
