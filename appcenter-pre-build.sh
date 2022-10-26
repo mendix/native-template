@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+export JAVA_HOME=${JAVA_HOME_11_X64}
+export PATH=${JAVA_HOME}/bin:${PATH}
+
 if [[ $SUPPORTS_MOBILE_TOOLKIT == True ]]; then
     echo "Configuring template with mobile toolkit"
     npm run configure
@@ -26,8 +29,3 @@ if [[ -e "$CODE_PUSH_KEY_FILE" && $IS_DEV_APP == False ]]; then
 
     cat $CODE_PUSH_KEY_FILE
 fi
-
-echo "Current Java Home: $(JAVA_HOME)"
-export JAVA_HOME=$JAVA_HOME_11_X64
-export PATH=$JAVA_HOME/bin:$PATH
-echo "New Java Home: $(JAVA_HOME)"

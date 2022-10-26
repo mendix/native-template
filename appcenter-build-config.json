@@ -52,7 +52,7 @@
       "javascript": {
         "packageJsonPath": "package.json",
         "runTests": false,
-        "nodeVersion": "14.x"
+        "nodeVersion": "16.x"
       },
       "buildscripts": {
         "package.json": {
