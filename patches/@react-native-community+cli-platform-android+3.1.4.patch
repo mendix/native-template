@@ -1,0 +1,30 @@
+diff --git a/node_modules/@react-native-community/cli-platform-android/native_modules.gradle b/node_modules/@react-native-community/cli-platform-android/native_modules.gradle
+index 8f5dc40..7d00d73 100644
+--- a/node_modules/@react-native-community/cli-platform-android/native_modules.gradle
++++ b/node_modules/@react-native-community/cli-platform-android/native_modules.gradle
+@@ -148,10 +148,10 @@ class ReactNativeModules {
+    * Runs a specified command using Runtime exec() in a specified directory.
+    * Throws when the command result is empty.
+    */
+-  String getCommandOutput(String[] command) {
++  String getCommandOutput(String[] command, File directory) {
+     try {
+       def output = ""
+-      def cmdProcess = Runtime.getRuntime().exec(command)
++      def cmdProcess = Runtime.getRuntime().exec(command, null, directory)
+       def bufferedReader = new BufferedReader(new InputStreamReader(cmdProcess.getInputStream()))
+       def buff = ""
+       def readBuffer = new StringBuffer()
+@@ -194,10 +194,10 @@ class ReactNativeModules {
+      */
+     def cliResolveScript = "console.log(require('react-native/cli').bin);"
+     String[] nodeCommand = ["node", "-e", cliResolveScript]
+-    def cliPath = this.getCommandOutput(nodeCommand)
++    def cliPath = this.getCommandOutput(nodeCommand, new File(this.jsAppDir))
+ 
+     String[] reactNativeConfigCommand = ["node", cliPath, "config"]
+-    def reactNativeConfigOutput = this.getCommandOutput(reactNativeConfigCommand)
++    def reactNativeConfigOutput = this.getCommandOutput(reactNativeConfigCommand, new File(this.jsAppDir))
+ 
+     def json
+     try {
