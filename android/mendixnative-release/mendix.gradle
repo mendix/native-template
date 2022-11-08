@@ -311,10 +311,10 @@ class MendixModules {
      * Runs a specified command using Runtime exec() in a specified directory.
      * Throws when the command result is empty.
      */
-    String getCommandOutput(String[] command) {
+    String getCommandOutput(String[] command, File directory) {
         try {
             def output = ""
-            def cmdProcess = Runtime.getRuntime().exec(command)
+            def cmdProcess = Runtime.getRuntime().exec(command, null, directory)
             def bufferedReader = new BufferedReader(new InputStreamReader(cmdProcess.getInputStream()))
             def buff = ""
             def readBuffer = new StringBuffer()
@@ -348,7 +348,7 @@ class MendixModules {
         ArrayList<HashMap<String, String>> reactNativeModules = new ArrayList<HashMap<String, String>>()
 
         String[] reactNativeConfigCommand = [this.cliBinPath, "config"]
-        def reactNativeConfigOutput = this.getCommandOutput(reactNativeConfigCommand)
+        def reactNativeConfigOutput = this.getCommandOutput(reactNativeConfigCommand, new File(this.rootDir))
 
         def json
         try {
