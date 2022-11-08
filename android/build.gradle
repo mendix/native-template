@@ -13,6 +13,7 @@ buildscript {
     }
     repositories {
         google()
+        mavenCentral()
         maven {
             url "https://maven.fabric.io/public"
         }
@@ -32,6 +33,14 @@ buildscript {
 
 allprojects {
     repositories {
+        all { ArtifactRepository repo ->
+            println repo.url.toString()
+            if (repo.url.toString().startsWith("https://jcenter.bintray.com/")) {
+                project.logger.warn "Repository ${repo.url} removed."
+                remove repo
+                mavenCentral()
+            }
+        }
         google()
         mavenCentral()
         maven { url "https://www.jitpack.io" }
@@ -48,5 +57,11 @@ allprojects {
             url "$rootDir/../node_modules/detox/Detox-android"
         }
         maven { url "https://packages.rnd.mendix.com/jcenter" }
+    }
+    configurations.all {
+        resolutionStrategy {
+            // Can be removed when upgraded to any version 0.64.4+, as a proper fix is included in react-native itself.
+            force "com.facebook.react:react-native:0.61.5"
+        }
     }
 }
