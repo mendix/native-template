@@ -34,8 +34,22 @@ buildscript {
 
 allprojects {
     repositories {
+    	exclusiveContent {
+			filter {
+				includeGroup "com.facebook.react"
+			}
+			forRepository {
+				maven {
+					url "$rootDir/../node_modules/react-native/android"
+				}
+			}
+		}
         google()
-        mavenCentral()
+        mavenCentral {
+			content {
+				excludeGroup("com.facebook.react")
+			}
+		}
         maven { url "https://www.jitpack.io" }
         maven {
             url "$rootDir/../node_modules/react-native/android"
@@ -54,7 +68,7 @@ allprojects {
 
     ext {
         // Backwards compatibility for react-native-push-notifications dependency
-        // Can be removed only if the project uses react-natice-push-notifications v7+
+        // Can be removed only if the project uses react-native-push-notifications v7+
         set("firebaseMessagingVersion", "21.0.0")
     }
 }
