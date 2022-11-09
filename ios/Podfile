@@ -26,12 +26,14 @@ def common_pods
   permissions_path = '../node_modules/react-native-permissions/ios'
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
-  
-  # Required MendixNative dependency
-  pod 'SSZipArchive'
 
   # Required MendixNative dependency
   pod 'SSZipArchive'
+
+  # Required for Push notifications
+  pod 'Firebase', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
+  pod 'GoogleUtilities', :modular_headers => true
 end
 
 target 'nativeTemplate' do

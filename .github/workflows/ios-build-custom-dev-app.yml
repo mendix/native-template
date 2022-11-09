@@ -19,7 +19,7 @@ jobs:
       - name: actions/setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: "14.18.2"
+          node-version: "16.14.2"
       - name: npm install
         run: npm ci
       - name: pod install

@@ -36,7 +36,8 @@
     "environmentVariables": [
       { "name": "CODE_PUSH_KEY", "value": "" },
       { "name": "IS_DEV_APP", "value": false },
-      { "name": "SUPPORTS_MOBILE_TOOLKIT", "value": false }
+      { "name": "SUPPORTS_MOBILE_TOOLKIT", "value": false },
+      { "name": "JAVA_HOME", "value": "$(JAVA_HOME_11_X64)" }
     ],
     "toolsets": {
       "android": {
@@ -51,7 +52,7 @@
       "javascript": {
         "packageJsonPath": "package.json",
         "runTests": false,
-        "nodeVersion": "14.x"
+        "nodeVersion": "16.x"
       },
       "buildscripts": {
         "package.json": {

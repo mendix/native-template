@@ -1,23 +1,21 @@
 diff --git a/node_modules/@react-native-firebase/messaging/android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java b/node_modules/@react-native-firebase/messaging/android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java
-index efe88d2..182dd64 100644
+index 3b89817..057083a 100644
 --- a/node_modules/@react-native-firebase/messaging/android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java
 +++ b/node_modules/@react-native-firebase/messaging/android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java
-@@ -192,10 +192,14 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
+@@ -243,7 +243,15 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
    @Override
    public Map<String, Object> getConstants() {
      final Map<String, Object> constants = new HashMap<>();
--    constants.put(
--      "isAutoInitEnabled",
--      FirebaseMessaging.getInstance().isAutoInitEnabled()
--    );
+-    constants.put("isAutoInitEnabled", FirebaseMessaging.getInstance().isAutoInitEnabled());
 +    try {
-+      constants.put(
-+        "isAutoInitEnabled",
-+        FirebaseMessaging.getInstance().isAutoInitEnabled()
-+      );
++      constants.put("isAutoInitEnabled", FirebaseMessaging.getInstance().isAutoInitEnabled());
 +    } catch(Exception e) {
 +      // Ignored on purpose
++
++      // Ekrem: We had this patch for @10.1.0 version of this module. However, I'm not sure 
++      // if we still need it after upgrading to @15.7.0. 
 +    }
-     return constants;
-   }
- 
++    
+     constants.put(
+         "isDeliveryMetricsExportToBigQueryEnabled",
+         FirebaseMessaging.getInstance().deliveryMetricsExportToBigQueryEnabled());
