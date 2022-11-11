@@ -1,15 +1,15 @@
 [
     {
-        "id": 82392517,
-        "tag_name": "v6.3.3-beta.1",
-        "name": "6.3.3-beta.1 for MOO-791",
+        "id": 82572893,
+        "tag_name": "v6.3.3",
+        "name": "Release 6.3.3",
         "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2022-11-08T13:52:55Z",
-        "published_at": "2022-11-08T13:55:04Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.3-beta.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.3-beta.1"
+        "prerelease": false,
+        "body": "## Fixes\r\n\r\n* We fixed an issue with Push Notifications not working correctly on Android 12 devices. Tickets 167479, 167837, 168814.\r\n\r\n### Warning\r\n\r\n**Please make sure you are using the new version of Native Mobile Resources module from Marketplace (version 3.13.0).**\r\n\r\nIf you already have a project in AppCenter you will need to add the following environment variable in order to be compatible, to do follow the steps below:\r\n1. Open your project in AppCenter and go to \"Build\" menu item\r\n2. For **all branches**, click on the wrench icon\r\n3. In \"Environment Variable\", add the following Name and Value (If this option is not enable, please enable it):\r\n3.1. Name: **JAVA_HOME**  Value: **$(JAVA_HOME_11_X64)**\r\n\r\nCheck image below to make sure it is set as expected:\r\n\r\n![env_var](https://user-images.githubusercontent.com/45102481/200879507-cdba57bd-6b99-44be-a838-e243fa324bdb.png)\r\n\r\n",
+        "created_at": "2022-11-10T15:26:32Z",
+        "published_at": "2022-11-11T06:44:09Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.3"
     },
     {
         "id": 82381996,
