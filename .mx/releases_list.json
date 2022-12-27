@@ -1,11 +1,59 @@
 [
     {
+        "id": 87296164,
+        "tag_name": "v6.3.4",
+        "name": "Release 6.3.4",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n- We changed the order of repositories in Android builds to fix an issue with jitpack.io",
+        "created_at": "2022-12-27T11:49:04Z",
+        "published_at": "2022-12-27T11:54:12Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.4"
+    },
+    {
+        "id": 87296176,
+        "tag_name": "v6.2.29",
+        "name": "Release 6.2.29",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n- We changed the order of repositories in Android builds to fix an issue with jitpack.io",
+        "created_at": "2022-12-27T11:49:20Z",
+        "published_at": "2022-12-27T11:54:02Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.29",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.29"
+    },
+    {
+        "id": 87296180,
+        "tag_name": "v5.2.15",
+        "name": "Release 5.2.15",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n- We changed the order of repositories in Android builds to fix an issue with jitpack.io",
+        "created_at": "2022-12-27T11:49:25Z",
+        "published_at": "2022-12-27T11:53:45Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.15",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.15"
+    },
+    {
+        "id": 87296192,
+        "tag_name": "v5.1.21",
+        "name": "Release 5.1.21",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n- We changed the order of repositories in Android builds to fix an issue with jitpack.io",
+        "created_at": "2022-12-27T11:49:37Z",
+        "published_at": "2022-12-27T11:53:30Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.21",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.21"
+    },
+    {
         "id": 82572893,
         "tag_name": "v6.3.3",
         "name": "Release 6.3.3",
         "draft": false,
         "prerelease": false,
-        "body": "## Fixes\r\n\r\n* We fixed an issue with Push Notifications not working correctly on Android 12 devices. Tickets 167479, 167837, 168814.\r\n\r\n### Warning\r\n\r\n**Please make sure you are using the new version of Native Mobile Resources module from Marketplace (version 3.13.0).**\r\n\r\nIf you already have a project in AppCenter you will need to add the following environment variable in order to be compatible, to do follow the steps below:\r\n1. Open your project in AppCenter and go to \"Build\" menu item\r\n2. For **all branches**, click on the wrench icon\r\n3. In \"Environment Variable\", add the following Name and Value (If this option is not enable, please enable it):\r\n3.1. Name: **JAVA_HOME**  Value: **$(JAVA_HOME_11_X64)**\r\n\r\nCheck image below to make sure it is set as expected:\r\n\r\n![env_var](https://user-images.githubusercontent.com/45102481/200879507-cdba57bd-6b99-44be-a838-e243fa324bdb.png)\r\n\r\n",
+        "body": "## Fixes\r\n\r\n* We fixed an issue with push notifications not working correctly on Android 12 devices. (Tickets 167479, 167837, 168814)\r\n\r\n### Update Your Native Mobile Resources Module\r\n\r\nDue to a library update, your Native Template must be aligned with Native Mobile Resources or else your build will fail. Please make sure you are using the newest version of the Native Mobile Resources module from Marketplace (currently [version 3.13.0](https://marketplace.mendix.com/link/component/109513)).\r\n\r\nIf you already have a project in AppCenter, then you must add the following environment variable to ensure compatibility:\r\n\r\n1. Open your project in AppCenter and go to **Build** menu item.\r\n1. In **all branches**, click the wrench icon.\r\n1. In **Environment Variable**, add the following **Name** and **Value** (if this option is not enabled, enable it):\r\n    1. Name: **JAVA_HOME**.\r\n    1. Value: **$(JAVA_HOME_11_X64)**.\r\n\r\nIn the end, your variable should be set up like this:\r\n\r\n![env_var](https://user-images.githubusercontent.com/45102481/200879507-cdba57bd-6b99-44be-a838-e243fa324bdb.png)\r\n\r\n",
         "created_at": "2022-11-10T15:26:32Z",
         "published_at": "2022-11-11T06:44:09Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.3",
@@ -1150,53 +1198,5 @@
         "published_at": "2021-01-25T17:39:59Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.0.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.0.1"
-    },
-    {
-        "id": 35619036,
-        "tag_name": "v6.0.0",
-        "name": "Support for Mendix Studio Pro 9",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description\r\nMendix Studio Pro 9 and Mendix Studio 9 give you powerful new tools to enhance your apps. For the full list of changes, see the Studio Pro 9 and Studio 9 release notes. With Native template 6.0.0 we add support for Mendix Studio Pro 9 Native Mobile development.\r\n\r\n### Highlights\r\n- Upgraded core dependencies.\r\n- Better push notification support. Local notifications do not require Firebase to be setup and work out of the box.\r\n",
-        "created_at": "2020-12-22T15:09:11Z",
-        "published_at": "2020-12-22T15:10:31Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.0.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.0.0"
-    },
-    {
-        "id": 35575982,
-        "tag_name": "v5.1.4",
-        "name": "Fix push notification handler iOS crash for Studio Pro 8.15.1 and newer",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We fixed the the App crashing when opening a push notification (iOS)",
-        "created_at": "2020-12-17T14:35:52Z",
-        "published_at": "2020-12-21T16:39:22Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.4",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.4"
-    },
-    {
-        "id": 35575777,
-        "tag_name": "v5.0.8",
-        "name": "Fix push notification handler iOS crash for Studio Pro 8.12.1 up to 8.15.0",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We fixed the the App crashing when opening a push notification (iOS)",
-        "created_at": "2020-12-17T14:36:15Z",
-        "published_at": "2020-12-21T16:39:09Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.8",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.8"
-    },
-    {
-        "id": 35576289,
-        "tag_name": "v4.2.6",
-        "name": "Fix push notification handler iOS crash for Studio Pro 8.9.x up to 8.12.0",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We fixed the the App crashing when opening a push notification (iOS)",
-        "created_at": "2020-12-17T14:39:39Z",
-        "published_at": "2020-12-21T16:38:52Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v4.2.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v4.2.6"
     }
 ]
