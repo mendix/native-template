@@ -10,6 +10,8 @@ buildscript {
         excludeAppGlideModule = true
         playServicesVersion = "16.1.0"
         androidXCore = "1.6.0"
+        androidXAnnotation = "1.5.0"
+        androidXBrowser = "1.4.0"
     }
     repositories {
         google()
