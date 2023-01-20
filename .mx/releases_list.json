@@ -1,5 +1,17 @@
 [
     {
+        "id": 89699734,
+        "tag_name": "v5.2.16",
+        "name": "Release 5.2.16",
+        "draft": false,
+        "prerelease": false,
+        "body": "* Pinned AndroidX library versions to prevent compilation errors for Android builds.",
+        "created_at": "2023-01-20T13:46:20Z",
+        "published_at": "2023-01-20T14:13:28Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.16",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.16"
+    },
+    {
         "id": 87296164,
         "tag_name": "v6.3.4",
         "name": "Release 6.3.4",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-02-04T19:03:06Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.9",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.9"
-    },
-    {
-        "id": 36872065,
-        "tag_name": "v6.0.1",
-        "name": "Android build specific fixes for Mendix 9",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- Downgraded targetAPI to 29 to support legacy storage on Android version 10 and 11.\r\n- Downgraded the Android Gradle Plugin version to v4.0.2 to fix an issue on App Center with v4.1.x.",
-        "created_at": "2021-01-25T17:34:25Z",
-        "published_at": "2021-01-25T17:39:59Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.0.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.0.1"
     }
 ]
