@@ -73,6 +73,15 @@ allprojects {
         }
         maven { url "https://packages.rnd.mendix.com/jcenter" }
         maven { url "https://www.jitpack.io" }
+        maven {
+            url "https://maven.scijava.org/content/repositories/public/"
+        }
+        maven {
+            url "https://maven.scijava.org/content/repositories/jitpack/"
+        }
+        maven {
+            url "https://maven.scijava.org/content/repositories/jcenter/"
+        }
     }
 
     ext {
