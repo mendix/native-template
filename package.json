@@ -24,7 +24,7 @@
     "react-native-permissions": "3.3.1",
     "react-native-localize": "1.4.2",
     "react-native-push-notification": "^6.1.2",
-    "react-native-reanimated": "1.13.1",
+    "react-native-reanimated": "2.14.4",
     "react-native-safe-area-context": "3.1.8",
     "react-native-splash-screen": "3.2.0",
     "@mendix/react-native-sqlite-storage": "5.1.3",
