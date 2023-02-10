@@ -1,7 +1,8 @@
 source 'https://cdn.cocoapods.org/'
 
+deployment_target = '12.4'
 # Uncomment the next line to define a global platform for your project
-platform :ios, '12.0'
+platform :ios, deployment_target
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 require_relative './mendix_utils'
@@ -13,7 +14,7 @@ def common_pods
 
   # RN development pods
   config = use_native_modules!
-  use_react_native!(:path => config["reactNativePath"])
+  use_react_native!(:path => config[:reactNativePath])
   # RN pods end
 
   # Manually linked dependencies
@@ -61,4 +62,22 @@ post_install do |installer|
       end
     end
   end
+  # Ensure deployment_target is set correctly for all projects
+  installer.generated_projects.each do |project|
+      project.targets.each do |target|
+          target.build_configurations.each do |config|
+              config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
+          end
+      end
+      project.build_configurations.each do |bc|
+          bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
+      end
+  end
+  react_native_post_install(
+    installer,
+    # Set `mac_catalyst_enabled` to `true` in order to apply patches
+    # necessary for Mac Catalyst builds
+    :mac_catalyst_enabled => false
+  )
+  __apply_Xcode_12_5_M1_post_install_workaround(installer)
 end

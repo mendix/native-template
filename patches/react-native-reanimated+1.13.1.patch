@@ -1,0 +1,53 @@
+diff --git a/node_modules/react-native-reanimated/android/build.gradle b/node_modules/react-native-reanimated/android/build.gradle
+index 21c386c..809b62e 100644
+--- a/node_modules/react-native-reanimated/android/build.gradle
++++ b/node_modules/react-native-reanimated/android/build.gradle
+@@ -18,7 +18,7 @@ buildscript {
+ }
+ 
+ apply plugin: 'com.android.library'
+-apply plugin: 'maven'
++apply plugin: 'maven-publish'
+ 
+ android {
+     compileSdkVersion safeExtGet('compileSdkVersion', 28)
+@@ -84,18 +84,6 @@ def configureReactNativePom(def pom) {
+ 
+ afterEvaluate { project ->
+ 
+-    task androidJavadoc(type: Javadoc) {
+-        source = android.sourceSets.main.java.srcDirs
+-        classpath += files(android.bootClasspath)
+-        classpath += files(project.getConfigurations().getByName('compile').asList())
+-        include '**/*.java'
+-    }
+-
+-    task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
+-        classifier = 'javadoc'
+-        from androidJavadoc.destinationDir
+-    }
+-
+     task androidSourcesJar(type: Jar) {
+         classifier = 'sources'
+         from android.sourceSets.main.java.srcDirs
+@@ -118,16 +106,14 @@ afterEvaluate { project ->
+ 
+     artifacts {
+         archives androidSourcesJar
+-        archives androidJavadocJar
+     }
+ 
+     task installArchives(type: Upload) {
+         configuration = configurations.archives
+-        repositories.mavenDeployer {
+-            // Deploy to react-native-event-bridge/maven, ready to publish to npm
+-            repository url: "file://${projectDir}/../android/maven"
+-
+-            configureReactNativePom pom
++        repositories {
++            maven {
++                url = uri("${projectDir}/../android/maven")
++            }
+         }
+     }
+ }
