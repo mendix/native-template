@@ -1,0 +1,28 @@
+diff --git a/node_modules/react-native-geocoder/android/build.gradle b/node_modules/react-native-geocoder/android/build.gradle
+index 8a174dc..97761e9 100644
+--- a/node_modules/react-native-geocoder/android/build.gradle
++++ b/node_modules/react-native-geocoder/android/build.gradle
+@@ -1,12 +1,12 @@
+ apply plugin: 'com.android.library'
+ 
+ android {
+-    compileSdkVersion 25
++    compileSdkVersion 31
+     buildToolsVersion "25.0.2"
+ 
+     defaultConfig {
+         minSdkVersion 16
+-        targetSdkVersion 25
++        targetSdkVersion 31
+         versionCode 1
+         versionName "1.0"
+         ndk {
+@@ -16,6 +16,6 @@ android {
+ }
+ 
+ dependencies {
+-    compile fileTree(include: ['*.jar'], dir: 'libs')
+-    compile "com.facebook.react:react-native:+"
++    api fileTree(include: ['*.jar'], dir: 'libs')
++    api "com.facebook.react:react-native:+"
+ }
