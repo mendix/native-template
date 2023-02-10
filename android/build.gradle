@@ -6,8 +6,9 @@ buildscript {
         minSdkVersion = 21
         compileSdkVersion = 31
         targetSdkVersion = 31
-        kotlin_version = "1.4.21"
+        kotlin_version = "1.5.21"
         excludeAppGlideModule = true
+        androidx_lifecycle_version = "2.3.1"
         playServicesVersion = "17+"
         firebaseMessagingVersion = "21.0.0"
         androidXCore = "1.6.0"
@@ -23,7 +24,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath "com.android.tools.build:gradle:7.2.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         apply from: file("../node_modules/@mendix/native/android/mendix.gradle"); applyMendixClassPaths(project)
 
@@ -34,7 +35,7 @@ buildscript {
 
 allprojects {
     repositories {
-        all { ArtifactRepository repo ->
+        all { repo ->
             println repo.url.toString()
             if (repo.url.toString().contains("jcenter.bintray.com") || repo.url.toString().contains("jitpack.io")) {
                 project.logger.warn "Repository ${repo.url} removed."
