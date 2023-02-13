@@ -14,7 +14,19 @@ def common_pods
 
   # RN development pods
   config = use_native_modules!
-  use_react_native!(:path => config[:reactNativePath])
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # Hermes is now enabled by default. Disable by setting this flag to false.
+    :hermes_enabled => false,
+    :fabric_enabled => false,
+    # Enables Flipper.
+    #
+    # Note that if you have use_frameworks! enabled, Flipper will not work and
+    # you should disable the next line.
+    :flipper_configuration => FlipperConfiguration.enabled,
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
   # RN pods end
 
   # Manually linked dependencies
@@ -52,6 +64,15 @@ target 'dev' do
 end
 
 post_install do |installer|
+  react_native_post_install(
+    installer,
+    # Set `mac_catalyst_enabled` to `true` in order to apply patches
+    # necessary for Mac Catalyst builds
+    :mac_catalyst_enabled => false
+  )
+
+  __apply_Xcode_12_5_M1_post_install_workaround(installer)
+
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       if target.name == "React"
@@ -73,11 +94,4 @@ post_install do |installer|
           bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
       end
   end
-  react_native_post_install(
-    installer,
-    # Set `mac_catalyst_enabled` to `true` in order to apply patches
-    # necessary for Mac Catalyst builds
-    :mac_catalyst_enabled => false
-  )
-  __apply_Xcode_12_5_M1_post_install_workaround(installer)
 end
