@@ -1,13 +1,13 @@
 {
   "name": "native-template",
-  "version": "7.0.0",
+  "version": "7.0.0-alpha.1",
   "private": true,
   "scripts": {
-    "postinstall": "patch-package && jetify",
+    "postinstall": "node patches/apply-patches.js && jetify",
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
-    "@mendix/native": "/Users/Diego.Antonelli/Desktop/projects/appdev/developerapp/lib/mendix-native-2.0.1.tgz",
+    "@mendix/native": "alpha",
     "@react-native-community/async-storage": "1.12.0",
     "@react-native-community/cameraroll": "4.0.1",
     "@react-native-community/datetimepicker": "3.0.3",
