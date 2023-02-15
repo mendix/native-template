@@ -10,8 +10,11 @@ fi
 
 INFO_PLIST=$APPCENTER_SOURCE_DIRECTORY/ios/$APPCENTER_XCODE_SCHEME/Info.plist
 if [[ -e "$INFO_PLIST" && $IS_DEV_APP == False ]]; then
-    echo "Stripping unwanted MendixNative (i386, x86_64) archs"
+    echo "Removing old MendixNative lib"
+    rm -rf $APPCENTER_SOURCE_DIRECTORY/ios/MendixNative
+    echo "Stripping references of old MendixNative (i386, x86_64, arm64) archs"
     LIB_PATH=$APPCENTER_SOURCE_DIRECTORY/ios/MendixNative/libMendix.a
+    lipo -remove arm64 -output $LIB_PATH $LIB_PATH || true
     lipo -remove x86_64 -output $LIB_PATH $LIB_PATH || true
     lipo -remove i386 -output $LIB_PATH $LIB_PATH || true
     lipo -info $LIB_PATH || true
