@@ -1,0 +1,207 @@
+diff --git a/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPicker.java b/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPicker.java
+index 6d725ca..e8e9a72 100644
+--- a/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPicker.java
++++ b/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPicker.java
+@@ -281,6 +281,28 @@ public class ReactPicker extends AppCompatSpinner {
+     backgroundDrawable.setColor(color);
+   }
+ 
++  public void setBackgroundRadius(float radius) {
++    LayerDrawable drawable = (LayerDrawable) this.getBackground();
++    GradientDrawable backgroundDrawable = (GradientDrawable) drawable.findDrawableByLayerId(R.id.dropdown_background);
++    backgroundDrawable.setCornerRadius(radius);
++  }
++
++  public void setBackgroundBorder(@Nullable int color, int width) {
++    LayerDrawable drawable = (LayerDrawable) this.getBackground();
++    GradientDrawable backgroundDrawable = (GradientDrawable) drawable.findDrawableByLayerId(R.id.dropdown_background);
++    backgroundDrawable.setStroke(width, color);
++  }
++
++  public void hideIcon(boolean hidden) {
++    LayerDrawable drawable = (LayerDrawable) this.getBackground();
++    RippleDrawable iconDrawable = (RippleDrawable) drawable.findDrawableByLayerId(R.id.dropdown_icon);
++    if (hidden) {
++      iconDrawable.mutate().setAlpha(0);
++    } else{
++      iconDrawable.mutate().setAlpha(255);
++    }
++  }
++
+   @VisibleForTesting
+   public int getMode() {
+     return mMode;
+diff --git a/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPickerManager.java b/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPickerManager.java
+index 0ac9387..eabb5d3 100644
+--- a/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPickerManager.java
++++ b/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPickerManager.java
+@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
+ import android.widget.BaseAdapter;
++import android.widget.LinearLayout;
+ import android.widget.Spinner;
+ import android.widget.TextView;
+ 
+@@ -46,6 +47,9 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+   private static final int FOCUS_PICKER = 1;
+   private static final int BLUR_PICKER = 2;
+ 
++  private int borderWidth = 0;
++  private int borderColor = Color.TRANSPARENT;
++
+   @Nullable
+   @Override
+   public Map<String, Object> getExportedCustomBubblingEventTypeConstants() {
+@@ -116,6 +120,29 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+     view.setBackgroundColor(color);
+   }
+ 
++  @ReactProp(name = ViewProps.BORDER_RADIUS)
++  @Override
++  public void setBorderRadius(ReactPicker view, float radius) {
++    view.setBackgroundRadius(radius);
++  }
++
++  @ReactProp(name = ViewProps.BORDER_WIDTH)
++  public void setBorderWidth(ReactPicker view, int width) {
++    this.borderWidth = width;
++    view.setBackgroundBorder(this.borderColor, width);
++  }
++
++  @ReactProp(name = ViewProps.BORDER_COLOR)
++  public void setBorderColor(ReactPicker view, @Nullable int color) {
++    this.borderColor = color;
++    view.setBackgroundBorder(color, this.borderWidth);
++  }
++
++  @ReactProp(name = "hideIcon")
++  public void hideIcon(ReactPicker view, @Nullable boolean visible) {
++    view.hideIcon(visible);
++  }
++
+   @ReactProp(name = "dropdownIconColor")
+   public void setDropdownIconColor(ReactPicker view, @Nullable int color) {
+     view.setDropdownIconColor(color);
+@@ -244,6 +271,10 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+       ReadableMap item = getItem(position);
+       @Nullable ReadableMap style = null;
+       boolean enabled = true;
++      int paddingTop = 0;
++      int paddingBottom = 0;
++      int paddingLeft = 0;
++      int paddingRight = 0;
+ 
+       if (item.hasKey("style")) {
+         style = item.getMap("style");
+@@ -256,6 +287,8 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+         convertView = mInflater.inflate(layoutResId, parent, false);
+       }
+ 
++      boolean isRTL = I18nUtil.getInstance().isRTL(convertView.getContext());
++
+       if (item.hasKey("enabled")) {
+         enabled = item.getBoolean("enabled");
+       }
+@@ -287,6 +320,58 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+           Typeface face = Typeface.create(style.getString("fontFamily"), Typeface.NORMAL);
+           textView.setTypeface(face);
+         }
++
++        // Adds custom options for paddings
++        if (style.hasKey("paddingLeft") && !style.isNull("paddingLeft")) {
++          paddingLeft = style.getInt("paddingLeft");
++        }
++
++        if (style.hasKey("paddingRight") && !style.isNull("paddingRight")) {
++          paddingRight = style.getInt("paddingRight");
++        }
++
++        if (style.hasKey("paddingTop") && !style.isNull("paddingTop")) {
++          paddingTop = style.getInt("paddingTop");
++        }
++
++        if (style.hasKey("paddingBottom") && !style.isNull("paddingBottom")) {
++          paddingBottom = style.getInt("paddingBottom");
++        }
++
++        if (style.hasKey("paddingStart") && !style.isNull("paddingStart")) {
++          if(isRTL){
++            paddingRight = style.getInt("paddingStart");
++          } else {
++            paddingLeft = style.getInt("paddingStart");
++          }
++        }
++
++        if (style.hasKey("paddingEnd") && !style.isNull("paddingEnd")) {
++          if(isRTL){
++            paddingLeft = style.getInt("paddingEnd");
++          } else {
++            paddingRight = style.getInt("paddingEnd");
++          }
++        }
++
++        if (style.hasKey("paddingVertical") && !style.isNull("paddingVertical")) {
++          paddingTop = style.getInt("paddingVertical");
++          paddingBottom = style.getInt("paddingVertical");
++        }
++
++        if (style.hasKey("paddingHorizontal") && !style.isNull("paddingHorizontal")) {
++          paddingLeft = style.getInt("paddingHorizontal");
++          paddingRight = style.getInt("paddingHorizontal");
++        }
++
++        if (style.hasKey("padding") && !style.isNull("padding")) {
++          paddingTop = style.getInt("padding");
++          paddingBottom = style.getInt("padding");
++          paddingLeft = style.getInt("padding");
++          paddingRight = style.getInt("padding");
++        }
++
++        textView.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
+       }
+ 
+       if (!isDropdown && mPrimaryTextColor != null) {
+@@ -300,7 +385,6 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+         textView.setTypeface(face);
+       }
+ 
+-      boolean isRTL = I18nUtil.getInstance().isRTL(convertView.getContext());
+       if (isRTL) {
+         convertView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+         convertView.setTextDirection(View.TEXT_DIRECTION_RTL);
+diff --git a/node_modules/@react-native-picker/picker/android/src/main/res/drawable/spinner_dropdown_background.xml b/node_modules/@react-native-picker/picker/android/src/main/res/drawable/spinner_dropdown_background.xml
+index a9a7a2b..93179a5 100644
+--- a/node_modules/@react-native-picker/picker/android/src/main/res/drawable/spinner_dropdown_background.xml
++++ b/node_modules/@react-native-picker/picker/android/src/main/res/drawable/spinner_dropdown_background.xml
+@@ -3,6 +3,8 @@
+     <item android:id="@+id/dropdown_background">
+         <shape android:shape="rectangle">
+             <solid android:color="@android:color/transparent" />
++            <stroke android:color="@android:color/transparent" />
++            <corners android:radius="0dp" />
+         </shape>
+     </item>
+     <item
+diff --git a/node_modules/@react-native-picker/picker/android/src/main/res/layout/simple_spinner_dropdown_item.xml b/node_modules/@react-native-picker/picker/android/src/main/res/layout/simple_spinner_dropdown_item.xml
+index a642d5c..9e87efa 100644
+--- a/node_modules/@react-native-picker/picker/android/src/main/res/layout/simple_spinner_dropdown_item.xml
++++ b/node_modules/@react-native-picker/picker/android/src/main/res/layout/simple_spinner_dropdown_item.xml
+@@ -4,5 +4,4 @@
+           style="?android:attr/spinnerDropDownItemStyle"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+-          android:ellipsize="end"
+-          android:padding="16dp"/>
++          android:ellipsize="end" />
+diff --git a/node_modules/@react-native-picker/picker/android/src/main/res/layout/simple_spinner_item.xml b/node_modules/@react-native-picker/picker/android/src/main/res/layout/simple_spinner_item.xml
+index 22419e6..ceeb724 100644
+--- a/node_modules/@react-native-picker/picker/android/src/main/res/layout/simple_spinner_item.xml
++++ b/node_modules/@react-native-picker/picker/android/src/main/res/layout/simple_spinner_item.xml
+@@ -4,5 +4,4 @@
+           style="?android:attr/spinnerItemStyle"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+-          android:ellipsize="end"
+-          android:padding="16dp"/>
++          android:ellipsize="end" />
