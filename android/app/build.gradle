@@ -4,13 +4,8 @@ apply plugin: "kotlin-android"
 import com.android.build.OutputFile
 
 project.ext.react = [
-        bundleInDebug           : false,
-        bundleInRelease         : false,
-        bundleInDevDebug        : false,
-        bundleInDevRelease      : false,
-        bundleInAppstoreDebug   : false,
-        bundleInAppstoreRelease : false,
-        enableHermes            : false  // clean and rebuild if changing
+        bundleForVariant: { def variant -> false },
+        enableHermes : false  // clean and rebuild if changing
 ]
 
 apply from: file("../../node_modules/react-native/react.gradle")
