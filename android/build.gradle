@@ -34,9 +34,25 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        mavenCentral()
-        maven { url "https://www.jitpack.io" }
+        all { ArtifactRepository repo ->
+            println repo.url.toString()
+            if (repo.url.toString().contains("jcenter.bintray.com") || repo.url.toString().contains("jitpack.io")) {
+                project.logger.warn "Repository ${repo.url} removed."
+                remove repo
+                google()
+                mavenCentral()
+            }
+        }
+    	exclusiveContent {
+			filter {
+				includeGroup "com.facebook.react"
+			}
+			forRepository {
+				maven {
+					url "$rootDir/../node_modules/react-native/android"
+				}
+			}
+		}
         maven {
             url "$rootDir/../node_modules/react-native/android"
         }
@@ -44,17 +60,33 @@ allprojects {
             url "$rootDir/../node_modules/jsc-android/dist"
         }
         maven {
-            url "https://maven.fabric.io/public"
-        }
-        maven {
             url "$rootDir/../node_modules/detox/Detox-android"
         }
+        google()
+        mavenCentral {
+			content {
+				excludeGroup("com.facebook.react")
+			}
+		}
+        maven {
+            url "https://maven.fabric.io/public"
+        }
         maven { url "https://packages.rnd.mendix.com/jcenter" }
+        maven { url "https://www.jitpack.io" }
+        maven {
+            url "https://maven.scijava.org/content/repositories/public/"
+        }
+        maven {
+            url "https://maven.scijava.org/content/repositories/jitpack/"
+        }
+        maven {
+            url "https://maven.scijava.org/content/repositories/jcenter/"
+        }
     }
 
     ext {
         // Backwards compatibility for react-native-push-notifications dependency
-        // Can be removed only if the project uses react-natice-push-notifications v7+
+        // Can be removed only if the project uses react-native-push-notifications v7+
         set("firebaseMessagingVersion", "21.0.0")
     }
 }

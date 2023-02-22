@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "6.3.1",
+  "version": "6.3.5",
   "private": true,
   "scripts": {
     "postinstall": "patch-package && jetify",
@@ -13,8 +13,8 @@
     "@react-native-community/datetimepicker": "3.0.3",
     "@react-native-community/masked-view": "0.1.10",
     "@react-native-community/push-notification-ios": "1.7.1",
-    "@react-native-firebase/app": "10.1.0",
-    "@react-native-firebase/messaging": "10.1.0",
+    "@react-native-firebase/app": "15.7.0",
+    "@react-native-firebase/messaging": "15.7.0",
     "react-native": "0.64.2",
     "react-native-code-push": "7.0.5",
     "react-native-device-info": "8.0.1",
@@ -45,7 +45,8 @@
   },
   "overrides": {
     "react": "17.0.2",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "@xmldom/xmldom": "0.8.4"
   },
   "resolutions": {
     "react": "17.0.2",
