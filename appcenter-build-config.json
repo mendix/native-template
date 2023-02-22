@@ -10,7 +10,7 @@
     ],
     "toolsets": {
       "xcode": {
-        "xcodeVersion": "13.2.1",
+        "xcodeVersion": "14.2",
         "automaticSigning": false,
         "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
         "podfilePath": "ios/Podfile",
@@ -19,7 +19,7 @@
       "javascript": {
         "packageJsonPath": "package.json",
         "runTests": false,
-        "nodeVersion": "14.x"
+        "nodeVersion": "16.x"
       },
       "buildscripts": {
         "package.json": {
