@@ -6,7 +6,7 @@ buildscript {
         minSdkVersion = 21
         compileSdkVersion = 31
         targetSdkVersion = 31
-        kotlin_version = "1.5.21"
+        kotlin_version = "1.7.21"
         excludeAppGlideModule = true
         androidx_lifecycle_version = "2.3.1"
         playServicesVersion = "18+"
@@ -84,11 +84,5 @@ allprojects {
         maven {
             url "https://maven.scijava.org/content/repositories/jcenter/"
         }
-    }
-
-    ext {
-        // Backwards compatibility for react-native-push-notifications dependency
-        // Can be removed only if the project uses react-native-push-notifications v7+
-        set("firebaseMessagingVersion", "21.0.0")
     }
 }
