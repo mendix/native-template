@@ -15,7 +15,7 @@
     "@react-native-community/push-notification-ios": "1.7.1",
     "@react-native-firebase/app": "15.7.0",
     "@react-native-firebase/messaging": "15.7.0",
-    "react-native": "0.64.2",
+    "react-native": "0.68.0",
     "react-native-code-push": "7.0.5",
     "react-native-device-info": "8.0.1",
     "react-native-fast-image": "8.3.2",
