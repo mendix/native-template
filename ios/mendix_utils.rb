@@ -7,7 +7,9 @@ def generate_pod_dependencies
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
     capability = capabilities_setup_config[name.to_s]
     if capability.nil?
-      Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
+      unless get_excluded_capabilities.include?(name.to_s)
+        Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
+      end
       next
     end
 
@@ -52,7 +54,9 @@ def generate_mendix_delegate
   get_project_capabilities.select { |_, value| value == true }.each do |name, _|
     capability = capabilities_setup_config[name.to_s]
     if capability.nil?
-      Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
+      unless get_excluded_capabilities.include?(name.to_s)
+        Pod::UI.warn "Capability for '#{name.to_s}' is not valid. This file should not be manipulated without guidance."
+      end
       next
     end
 
@@ -203,4 +207,8 @@ def include_script_phases(phases)
     phase = Hash[phase.map { |k, v| [k.to_sym, v] }]
     script_phase phase
   end
+end
+
+def get_excluded_capabilities
+    ["nativeOTA"]
 end

@@ -2,20 +2,20 @@ name: '[iOS] Custom Dev App CI'
 
 on:
   workflow_dispatch:
-  schedule: 
+  schedule:
     - cron: '0 0 * * *'
   pull_request:
     branches: [master, release/*]
 
 jobs:
   build:
-    runs-on: macos-11
+    runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: switch XCode to 13
+      - name: switch XCode to 14.2
         run: | 
-          sudo xcode-select -s /Applications/Xcode_13.0.app
+          sudo xcode-select -s /Applications/Xcode_14.2.app
       - name: actions/setup-node
         uses: actions/setup-node@v3
         with:
@@ -27,12 +27,12 @@ jobs:
         working-directory: ./ios
       - name: appcenter prebuilt script test
         shell: bash
-        working-directory: ./  
+        working-directory: ./
         run: |
           chmod +x ./appcenter-pre-build.sh
           APPCENTER_XCODE_SCHEME="nativeTemplate" APPCENTER_SOURCE_DIRECTORY="./" IS_DEV_APP=False ./appcenter-pre-build.sh
       - name: iOS Build Action
-        uses: yukiarrr/ios-build-action@v1.4.0
+        uses: yukiarrr/ios-build-action@v1.5.0
         with:
           project-path: ./ios/nativetemplate.xcodeproj
           p12-base64: ${{ secrets.IOS_DUMMY_P12 }}
