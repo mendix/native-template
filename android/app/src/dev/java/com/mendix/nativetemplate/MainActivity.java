@@ -123,10 +123,9 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
     @Override
     public void handleResult(Result rawResult) {
         try {
-            JSONObject json = new JSONObject(rawResult.getText());
-            String url = json.getString("url");
+            String url = rawResult.getText();
             launchApp(url, null);
-        } catch (JSONException e) {
+        } catch (Exception e) {
             Toast.makeText(MainActivity.this, R.string.qr_code_invalid, Toast.LENGTH_LONG).show();
         }
     }

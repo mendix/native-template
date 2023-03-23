@@ -7,5 +7,5 @@
     <string name="camera_permission_message">To be able to read QR codes you need to grant the Camera permission.</string>
     <string name="camera_permission_button">Continue</string>
     <string name="packager_connection_timeout">Please verify that your Mendix App is running.</string>
-    <string name="qr_code_invalid">This is not a Mendix QR code.</string>
+    <string name="qr_code_invalid">This is not a valid QR code.</string>
 </resources>
