@@ -1,5 +1,17 @@
 [
     {
+        "id": 98428440,
+        "tag_name": "v7.0.1-beta.1",
+        "name": "[MOO-1000] Fix duplicate symbols for iOS build",
+        "draft": false,
+        "prerelease": true,
+        "body": "Internal test only",
+        "created_at": "2023-04-06T13:52:25Z",
+        "published_at": "2023-04-06T14:22:22Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.1-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.1-beta.1"
+    },
+    {
         "id": 96654640,
         "tag_name": "v7.0.0",
         "name": "Native Template v7.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-02-15T17:16:28Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.6",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.6"
-    },
-    {
-        "id": 38072172,
-        "tag_name": "v5.0.10",
-        "name": "Hotfixes for Mendix 8.12.1 up to 8.15.0",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We updated react-native-image-picker dependency\r\n- The react-native-image-picker patch should now apply correctly on windows.\r\n- On iOS the PRODUCT_NAME variable is now settable via XC config file of each target. ",
-        "created_at": "2021-02-15T17:08:01Z",
-        "published_at": "2021-02-15T17:15:22Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.10",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.10"
     }
 ]
