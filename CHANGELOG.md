@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixes
+
+- We updated the version of @mendix/native to 2.0.1
 
 ## [6.2.25] - 2022-08-16
 ### Fixes
