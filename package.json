@@ -17,7 +17,7 @@
     "@react-native-firebase/messaging": "17.3.0",
     "@react-native-picker/picker": "^2.4.8",
     "react-native": "0.70.7",
-    "react-native-code-push": "7.0.5",
+    "react-native-code-push": "7.1.0",
     "react-native-device-info": "8.0.1",
     "react-native-fast-image": "8.3.2",
     "react-native-gesture-handler": "1.10.3",
