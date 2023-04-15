@@ -19,7 +19,7 @@
     "react-native": "0.70.7",
     "react-native-code-push": "7.0.5",
     "react-native-device-info": "8.0.1",
-    "react-native-fast-image": "8.3.2",
+    "react-native-fast-image": "8.6.3",
     "react-native-gesture-handler": "1.10.3",
     "react-native-image-picker": "5.0.1",
     "react-native-permissions": "3.3.1",
