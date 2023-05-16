@@ -1,5 +1,17 @@
 [
     {
+        "id": 103124967,
+        "tag_name": "v5.2.17",
+        "name": "Release 5.2.17",
+        "draft": false,
+        "prerelease": false,
+        "body": "* Update AppCenter configurations (eb36c65)",
+        "created_at": "2023-05-16T09:40:23Z",
+        "published_at": "2023-05-16T09:42:04Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.17",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.17"
+    },
+    {
         "id": 99362967,
         "tag_name": "v7.0.1",
         "name": "Native Template v7.0.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-02-15T17:15:22Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.10",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.10"
-    },
-    {
-        "id": 37991246,
-        "tag_name": "v6.1.0",
-        "name": "Dependency management for Mendix Studio Pro 9.0.3 Beta ",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Dependency Management\r\nWith this release Native Template supports the newly introduced Native Dependency management system released with Mendix Studio Pro 9.0.3 in conjunction with Mendix Native Mobile Builder.\r\n\r\nNative widgets and JS actions can now define their Native Dependencies. Mendix Native Mobile Builder, collects the dependencies and sets up your Native Template with exactly the dependencies that are needed. \r\n\r\n### Mobile Toolkit\r\nMobile Toolkit is a new configuration CLI that we introduced to the Native Template. This way we are moving the responsibility of configuring your project to the Template, allowing off-line users a path to auto configuring their project that previously was impossible due to the online requirement of the Native Mobile Builder. The cli supports a single command: \r\n\r\n`native-mobile-toolkit configure --config-path='./config.json'` \r\n\r\nor \r\n\r\n`npm run configure`\r\n\r\nNative Mobile Builder writes to the config.json and commits assets to relative locations. The CLI then reads the config and handles, configuring the projects and moving any assets to the right locations for the projects. \r\n\r\n### Fixes \r\n- Target SKD reverted to 29 to support legacy storage on Android API 30\r\n- Reverted Android Gradle Plugin version to 4.0.2 to fix a short coming of App Center and version 4.1.x\r\n- Updated the React Native Device Info library to fix security issues\r\n- Patched React Native Image Picker to fix an issue with duplicate images on Android.",
-        "created_at": "2021-02-05T13:30:25Z",
-        "published_at": "2021-02-12T18:50:48Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.0"
     }
 ]
