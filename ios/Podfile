@@ -76,7 +76,6 @@ post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
-      config.build_settings['VALID_ARCHS'] = '$(ARCHS_STANDARD_32_BIT)'
       if target.name == "React"
         if config.name == "ReleaseDevApp"
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
@@ -93,17 +92,18 @@ post_install do |installer|
     find_and_replace("../node_modules/react-native/React/CxxBridge/RCTCxxBridge.mm", "_initializeModules:(NSArray<id<RCTBridgeModule>> *)modules", "_initializeModules:(NSArray<Class> *)modules")
     find_and_replace("../node_modules/react-native/ReactCommon/turbomodule/core/platform/ios/RCTTurboModuleManager.mm", "RCTBridgeModuleNameForClass(module))", "RCTBridgeModuleNameForClass(Class(module)))")
   end
-
-  # Ensure deployment_target is set correctly for all projects
-  installer.generated_projects.each do |project|
-    project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
-        end
-    end
-    project.build_configurations.each do |bc|
-        bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
-    end
+  if major.to_i > 14 || (major.to_i == 14 && minor.to_i >= 2)
+    find_and_replace("Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTPrioritizer.m", "static NSString *ArchivePath()", "static NSString *ArchivePath(void)")
+    find_and_replace("Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTNanopbHelpers.m", "gdt_cct_ClientInfo GDTCCTConstructClientInfo()", "gdt_cct_ClientInfo GDTCCTConstructClientInfo(void)")
+    find_and_replace("Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTNanopbHelpers.m", "gdt_cct_IosClientInfo GDTCCTConstructiOSClientInfo()", "gdt_cct_IosClientInfo GDTCCTConstructiOSClientInfo(void)")
+    find_and_replace("Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTNanopbHelpers.m", "NSData *GDTCCTConstructNetworkConnectionInfoData()", "NSData *GDTCCTConstructNetworkConnectionInfoData(void)")
+    find_and_replace("Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTNanopbHelpers.m", "gdt_cct_NetworkConnectionInfo_MobileSubtype GDTCCTNetworkConnectionInfoNetworkMobileSubtype()", "gdt_cct_NetworkConnectionInfo_MobileSubtype GDTCCTNetworkConnectionInfoNetworkMobileSubtype(void)")
+    find_and_replace("Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORClock.m", "static int64_t KernelBootTimeInNanoseconds()", "static int64_t KernelBootTimeInNanoseconds(void)")
+    find_and_replace("Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORClock.m", "static int64_t UptimeInNanoseconds()", "static int64_t UptimeInNanoseconds(void)")
+    find_and_replace("Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORPlatform.m", "GDTCORNetworkType GDTCORNetworkTypeMessage()", "GDTCORNetworkType GDTCORNetworkTypeMessage(void)")
+    find_and_replace("Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORPlatform.m", "GDTCORNetworkMobileSubtype GDTCORNetworkMobileSubTypeMessage()", "GDTCORNetworkMobileSubtype GDTCORNetworkMobileSubTypeMessage(void)")
+    find_and_replace("Pods/FirebaseMessaging/Firebase/Messaging/Protos/GtalkExtensions.pbobjc.m", "// imports needed when using CocoaPods.", "#include <libkern/OSAtomic.h>")
+    find_and_replace("Pods/FirebaseMessaging/Firebase/Messaging/Protos/GtalkCore.pbobjc.m", "// imports needed when using CocoaPods.", "#include <libkern/OSAtomic.h>")
   end
 end
 
