@@ -76,6 +76,7 @@ post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+      config.build_settings['VALID_ARCHS'] = '$(ARCHS_STANDARD_32_BIT)'
       if target.name == "React"
         if config.name == "ReleaseDevApp"
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
