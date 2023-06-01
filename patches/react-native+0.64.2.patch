@@ -111,3 +111,16 @@ index 6302abe..bd6a094 100644
        }
      }
  
+diff --git a/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.cpp b/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.cpp
+index 97e6407..80a6c22 100644
+--- a/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.cpp
++++ b/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.cpp
+@@ -3047,7 +3047,7 @@ static void YGNodelayoutImpl(
+     }
+ 
+     node->setLayoutHadOverflow(
+-        node->getLayout().hadOverflow() |
++        node->getLayout().hadOverflow() ||
+         (collectedFlexItemsValues.remainingFreeSpace < 0));
+ 
+     // STEP 6: MAIN-AXIS JUSTIFICATION & CROSS-AXIS SIZE DETERMINATION
