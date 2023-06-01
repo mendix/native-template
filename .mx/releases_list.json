@@ -1,5 +1,17 @@
 [
     {
+        "id": 105643954,
+        "tag_name": "v6.3.6",
+        "name": "Release 6.3.6",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n* We fixed an issue with cookie management in Native Apps (Ticket 178053).\r\n* We fixed an issue while compiling the native iOS app using Xcode 14+",
+        "created_at": "2023-06-01T08:42:42Z",
+        "published_at": "2023-06-01T08:44:53Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.6",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.6"
+    },
+    {
         "id": 104095765,
         "tag_name": "v5.2.18",
         "name": "Release 5.2.18",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-02-15T17:18:09Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.1"
-    },
-    {
-        "id": 38072200,
-        "tag_name": "v5.1.6",
-        "name": "Hotfixes for Mendix 8.15.1 and newer",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We updated react-native-image-picker dependency\r\n- The react-native-image-picker patch should now apply correctly on windows.\r\n- On iOS the PRODUCT_NAME variable is now settable via XC config file of each target. ",
-        "created_at": "2021-02-15T17:08:17Z",
-        "published_at": "2021-02-15T17:16:28Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.6"
     }
 ]
