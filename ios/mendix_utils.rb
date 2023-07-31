@@ -151,7 +151,7 @@ end
 
 def read_json_file_gracefully(path)
   file_path = File.join(__dir__, "..", path)
-  JSON.parse(File.read(file_path)) if File.exists?(file_path)
+  JSON.parse(File.read(file_path)) if File.exist?(file_path)
 end
 
 def get_unlinked_dependency_config
