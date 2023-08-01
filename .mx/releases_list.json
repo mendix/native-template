@@ -1,5 +1,17 @@
 [
     {
+        "id": 114649389,
+        "tag_name": "v7.0.2-beta.1",
+        "name": "Release 7.0.2-beta.1",
+        "draft": false,
+        "prerelease": true,
+        "body": "### Fixes\r\n\r\n- We fixed an issue with QR code scanner not working on iOS version of the custom dev app",
+        "created_at": "2023-07-31T15:50:20Z",
+        "published_at": "2023-08-01T13:01:54Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.2-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.2-beta.1"
+    },
+    {
         "id": 105643954,
         "tag_name": "v6.3.6",
         "name": "Release 6.3.6",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-03-12T22:53:15Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.11",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.11"
-    },
-    {
-        "id": 38072265,
-        "tag_name": "v6.1.1",
-        "name": "Hotfixes for Mendix 9.0.3 or later",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- The react-native-image-picker patch should now apply correctly on windows.\r\n- On iOS the PRODUCT_NAME variable is now settable via the XC config file of each target. ",
-        "created_at": "2021-02-15T17:08:52Z",
-        "published_at": "2021-02-15T17:18:09Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.1"
     }
 ]
