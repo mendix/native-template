@@ -1,5 +1,17 @@
 [
     {
+        "id": 114668576,
+        "tag_name": "v7.0.2",
+        "name": "Release v7.0.2",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n\r\n- We fixed an issue with QR code scanner not working on iOS version of the custom dev app",
+        "created_at": "2023-08-01T14:53:24Z",
+        "published_at": "2023-08-01T14:57:01Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.2"
+    },
+    {
         "id": 114649389,
         "tag_name": "v7.0.2-beta.1",
         "name": "Release 7.0.2-beta.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-03-12T22:54:23Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.7",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.7"
-    },
-    {
-        "id": 39742186,
-        "tag_name": "v5.0.11",
-        "name": "[Retracted] Hotfixes for Mendix 8.12.1 up to 8.15.0",
-        "draft": false,
-        "prerelease": true,
-        "body": "### Fixes\r\n- We fixed an issue that could crash a custom developer app when JS debugging was enabled.",
-        "created_at": "2021-03-12T22:47:56Z",
-        "published_at": "2021-03-12T22:53:15Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.11",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.11"
     }
 ]
