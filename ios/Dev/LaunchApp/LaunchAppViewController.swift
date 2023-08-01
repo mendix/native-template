@@ -51,7 +51,7 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         }
 
         uiState = .loading
-        if let jsonString = str, let json = try? JSONSerialization.jsonObject(with: Data(jsonString.utf8), options: []) as? [String: Any], let parsedJson = json, let url = parsedJson["url"] as? String {
+        if let url = str {
             validateMendixUrl(url) { (running) in
                 guard running, AppUrl.isValid(url) else {
                     self.uiState = .invalidInput
