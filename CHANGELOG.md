@@ -5,9 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [7.0.2] - 2023-08-01
 ### Fixes
-
-- We updated the version of @mendix/native to 2.0.1
+- We fixed an issue with QR code scanner not working on iOS version of the custom dev app
 
 ## [6.2.25] - 2022-08-16
 ### Fixes
