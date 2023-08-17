@@ -1,5 +1,17 @@
 [
     {
+        "id": 117640839,
+        "tag_name": "v7.0.3-beta.1",
+        "name": "Release 7.0.3-beta.1",
+        "draft": false,
+        "prerelease": true,
+        "body": "### Fixed\r\n\r\n- We fixed distorted splash screen issue for android",
+        "created_at": "2023-08-17T15:02:16Z",
+        "published_at": "2023-08-17T15:06:27Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.3-beta.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.3-beta.1"
+    },
+    {
         "id": 114668576,
         "tag_name": "v7.0.2",
         "name": "Release v7.0.2",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-03-17T06:59:04Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.12",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.12"
-    },
-    {
-        "id": 39742207,
-        "tag_name": "v5.1.7",
-        "name": "[Retracted] Hotfixes for Mendix 8.15.1 and newer",
-        "draft": false,
-        "prerelease": true,
-        "body": "### Fixes\r\n- We fixed an issue that could crash a custom developer app when JS debugging was enabled.",
-        "created_at": "2021-03-12T22:48:58Z",
-        "published_at": "2021-03-12T22:54:23Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.7",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.7"
     }
 ]
