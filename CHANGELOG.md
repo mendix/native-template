@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We upgraded minimum sdk version to 33
+
+## [7.0.3] - 2023-08-08
+### Fixes
+- We fixed distorted splash screen issue for android
 ## [7.0.2] - 2023-08-01
 ### Fixes
 - We fixed an issue with QR code scanner not working on iOS version of the custom dev app
