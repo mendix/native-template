@@ -1,5 +1,17 @@
 [
     {
+        "id": 118181744,
+        "tag_name": "v7.0.4",
+        "name": "Release 7.0.4",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2023-08-22T12:13:11Z",
+        "published_at": "2023-08-22T12:14:40Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.4"
+    },
+    {
         "id": 117773472,
         "tag_name": "v7.0.3",
         "name": "Release 7.0.3",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-03-18T09:16:15Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.2"
-    },
-    {
-        "id": 39922613,
-        "tag_name": "v5.1.8",
-        "name": "Hotfixes for Mendix 8.15.1 and newer",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n* We fixed an issue that  could crash apps due to the fix released with v5.1.7 of Native Template\r\n* We fixed an issue that could crash a custom developer app when JS debugging was enabled.",
-        "created_at": "2021-03-17T06:55:26Z",
-        "published_at": "2021-03-17T06:58:20Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.8",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.8"
     }
 ]
