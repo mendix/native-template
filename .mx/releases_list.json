@@ -1,5 +1,17 @@
 [
     {
+        "id": 118378989,
+        "tag_name": "v7.0.5",
+        "name": "Release 7.0.5",
+        "draft": false,
+        "prerelease": true,
+        "body": "",
+        "created_at": "2023-08-23T10:06:39Z",
+        "published_at": "2023-08-23T10:07:16Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.5",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.5"
+    },
+    {
         "id": 118181744,
         "tag_name": "v7.0.4",
         "name": "Release 7.0.4",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-03-31T09:44:03Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.13",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.13"
-    },
-    {
-        "id": 39990814,
-        "tag_name": "v6.1.2",
-        "name": "Improvements for Mendix 9",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\n\r\n* Switched to using ExoPlayer for the video widgets.\r\n* When toggling capabilities manually a know version of the required dependency will be added to the app.\r\n* We Introduced firebase and Crashlytics capabilities for each supported platform.\r\n\r\n\r\n\r\n\r\n",
-        "created_at": "2021-03-18T09:08:36Z",
-        "published_at": "2021-03-18T09:16:15Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.2"
     }
 ]
