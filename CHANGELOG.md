@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- Introduced `com.google.android.gms.permission.AD_ID` permission to the Android Manifest file. This permission governs access to the advertising ID, facilitating more effective targeting and personalization within the app's advertisement services. (Note: This permission is currently disabled with the tools:node="remove" attribute.)
+
+## [7.0.5] - 2023-08-23
+
 ### Fixed
 
 - We upgraded android SDK version to 33
