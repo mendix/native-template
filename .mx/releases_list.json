@@ -1,5 +1,17 @@
 [
     {
+        "id": 122226486,
+        "tag_name": "v7.0.7",
+        "name": "Release v7.0.7",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n\r\n- We have updated clearKeychain method to clear only necessary data.",
+        "created_at": "2023-09-22T15:29:09Z",
+        "published_at": "2023-09-22T15:34:02Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.7",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.7"
+    },
+    {
         "id": 121282553,
         "tag_name": "v7.0.6",
         "name": "Release 7.0.6",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-03-31T09:46:08Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.9",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.9"
-    },
-    {
-        "id": 40747684,
-        "tag_name": "v5.0.13",
-        "name": "Hotfixes for Mendix 8.12.1 up to 8.15.0",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We fixed another case where Firebase might crash the Custom Developer app when enabling debug mode. ",
-        "created_at": "2021-03-31T09:32:43Z",
-        "published_at": "2021-03-31T09:44:03Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.13",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.13"
     }
 ]
