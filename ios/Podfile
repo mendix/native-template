@@ -94,6 +94,7 @@ post_install do |installer|
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << "DEBUG=1"
         end
       end
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', '_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION']
     end
   end
   # Ensure deployment_target is set correctly for all projects
