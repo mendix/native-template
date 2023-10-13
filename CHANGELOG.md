@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- We've fixed build errors caused by the recent Xcode update.
+- We fixed build errors caused by the recent XCode 15 update.
 
 ## [7.0.8] - 2023-09-25
 
