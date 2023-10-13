@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- We fixed build errors caused by the recent XCode 15 update.
+
+## [7.0.8] - 2023-09-25
+
+### Fixed
+
 - We have enhanced file encryption on Android.
 
 ## [7.0.7] - 2023-09-22
