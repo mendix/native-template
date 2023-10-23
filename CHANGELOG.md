@@ -6,9 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Updated
+
+- We have updated React Native version to 0.70.13 for better performance and stability.
+
+## [7.0.9] - 2023-10-13
+
 ### Fixed
 
 - We fixed build errors caused by the recent XCode 15 update.
+
 
 ## [7.0.8] - 2023-09-25
 
