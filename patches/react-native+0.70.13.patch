@@ -1,8 +1,8 @@
 diff --git a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
-index f532ce5..bd46641 100644
+index 9e1cd1e..fb42ae5 100644
 --- a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
 +++ b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
-@@ -283,6 +283,10 @@ - (void)displayDidRefresh:(CADisplayLink *)displayLink
+@@ -276,6 +276,10 @@ static NSUInteger RCTDeviceFreeMemory() {
  
  - (void)displayLayer:(CALayer *)layer
  {
