@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [7.1.0] - 2023-11-22
+
 ### Updated
 
 - We have updated React Native version to 0.70.13 for better performance and stability.
