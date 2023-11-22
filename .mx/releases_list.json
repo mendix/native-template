@@ -1,17 +1,5 @@
 [
     {
-        "id": 130675884,
-        "tag_name": "v7.0.10",
-        "name": "Release 7.0.10",
-        "draft": false,
-        "prerelease": true,
-        "body": "* Merge pull request #732 from mendix/moo/update-rn-to-0-70-13 (2092dc5)",
-        "created_at": "2023-11-21T14:46:24Z",
-        "published_at": "2023-11-21T14:47:00Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.10",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.10"
-    },
-    {
         "id": 124993140,
         "tag_name": "v7.0.9",
         "name": "Release v7.0.9",
