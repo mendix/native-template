@@ -48,7 +48,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.70.7",
-    "@babel/traverse": "7.23.2"
+    "@babel/traverse": "7.23.2",
+    "unset-value": "2.0.1"
   },
   "resolutions": {
     "react": "18.2.0",
