@@ -47,7 +47,8 @@
   "overrides": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.70.7"
+    "react-native": "0.70.7",
+    "@babel/traverse": "7.23.2"
   },
   "resolutions": {
     "react": "18.2.0",
