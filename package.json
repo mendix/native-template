@@ -1,15 +1,15 @@
 {
   "name": "native-template",
-  "version": "7.0.10",
+  "version": "7.0.9",
   "private": true,
   "scripts": {
     "postinstall": "node patches/apply-patches.js && jetify",
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
-    "@mendix/native": "./mendix-native-2.1.0.tgz",
+    "@mendix/native": "~2.0.4",
     "@mendix/react-native-sqlite-storage": "5.1.3",
-    "@react-native-community/async-storage": "1.12.0",
+    "@react-native-community/async-storage": "1.12.1",
     "@react-native-community/cameraroll": "4.0.1",
     "@react-native-community/datetimepicker": "3.0.3",
     "@react-native-community/masked-view": "0.1.10",
@@ -17,9 +17,9 @@
     "@react-native-firebase/app": "17.3.0",
     "@react-native-firebase/messaging": "17.3.0",
     "@react-native-picker/picker": "^2.4.8",
-    "react-native": "0.70.13",
+    "react-native": "0.70.7",
     "react-native-code-push": "7.0.5",
-    "react-native-device-info": "10.11.0",
+    "react-native-device-info": "8.0.1",
     "react-native-fast-image": "8.3.2",
     "react-native-gesture-handler": "1.10.3",
     "react-native-image-picker": "5.0.1",
@@ -31,14 +31,15 @@
     "react-native-splash-screen": "3.2.0",
     "react-native-svg": "12.1.0",
     "react-native-vector-icons": "9.2.0",
-    "react-native-video": "5.2.1"
+    "react-native-video": "5.2.1",
+    "semver": "5.7.2"
   },
   "devDependencies": {
     "@babel/runtime": "^7.8.4",
     "@mendix/native-mobile-toolkit": "latest",
     "detox": "19.13.0",
     "jetifier": "^1.6.3",
-    "metro-react-native-babel-preset": "~0.72.4",
+    "metro-react-native-babel-preset": "~0.72.3",
     "patch-package": "^6.2.2"
   },
   "engines": {
@@ -47,12 +48,14 @@
   "overrides": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.70.13",
-    "@react-native-community/cli-platform-android": "9.3.1"
+    "react-native": "0.70.7",
+    "@babel/traverse": "7.23.2",
+    "unset-value": "2.0.1",
+    "semver": "5.7.2"
   },
   "resolutions": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.70.13"
+    "react-native": "0.70.7"
   }
 }
