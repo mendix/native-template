@@ -31,7 +31,8 @@
     "react-native-splash-screen": "3.2.0",
     "react-native-svg": "12.1.0",
     "react-native-vector-icons": "9.2.0",
-    "react-native-video": "5.2.1"
+    "react-native-video": "5.2.1",
+    "semver": "5.7.2"
   },
   "devDependencies": {
     "@babel/runtime": "^7.8.4",
@@ -49,7 +50,8 @@
     "react-dom": "18.2.0",
     "react-native": "0.70.7",
     "@babel/traverse": "7.23.2",
-    "unset-value": "2.0.1"
+    "unset-value": "2.0.1",
+    "semver": "5.7.2"
   },
   "resolutions": {
     "react": "18.2.0",
