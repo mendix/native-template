@@ -1,20 +1,20 @@
 diff --git a/node_modules/react-native-reanimated/android/build.gradle b/node_modules/react-native-reanimated/android/build.gradle
-index 21c386c..809b62e 100644
+index 21c386c..a82118e 100644
 --- a/node_modules/react-native-reanimated/android/build.gradle
 +++ b/node_modules/react-native-reanimated/android/build.gradle
 @@ -18,7 +18,7 @@ buildscript {
  }
- 
+
  apply plugin: 'com.android.library'
 -apply plugin: 'maven'
 +apply plugin: 'maven-publish'
- 
+
  android {
      compileSdkVersion safeExtGet('compileSdkVersion', 28)
-@@ -84,18 +84,6 @@ def configureReactNativePom(def pom) {
- 
+@@ -84,20 +84,8 @@ def configureReactNativePom(def pom) {
+
  afterEvaluate { project ->
- 
+
 -    task androidJavadoc(type: Javadoc) {
 -        source = android.sourceSets.main.java.srcDirs
 -        classpath += files(android.bootClasspath)
@@ -28,15 +28,18 @@ index 21c386c..809b62e 100644
 -    }
 -
      task androidSourcesJar(type: Jar) {
-         classifier = 'sources'
+-        classifier = 'sources'
++        archiveClassifier = 'sources'
          from android.sourceSets.main.java.srcDirs
+         include '**/*.java'
+     }
 @@ -118,16 +106,14 @@ afterEvaluate { project ->
- 
+
      artifacts {
          archives androidSourcesJar
 -        archives androidJavadocJar
      }
- 
+
      task installArchives(type: Upload) {
          configuration = configurations.archives
 -        repositories.mavenDeployer {
