@@ -41,7 +41,7 @@
     "detox": "19.13.0",
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "0.76.8",
-    "patch-package": "^6.2.2"
+    "patch-package": "^8.0.0"
   },
   "engines": {
     "node": ">=16"
