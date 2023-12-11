@@ -1,12 +1,25 @@
 source 'https://cdn.cocoapods.org/'
 
-deployment_target = '12.4'
-# Uncomment the next line to define a global platform for your project
-platform :ios, deployment_target
-require_relative '../node_modules/react-native/scripts/react_native_pods'
-require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+# Resolve react_native_pods.rb with node to allow for hoisting
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
 require_relative './mendix_utils'
+
+deployment_target = min_ios_version_supported
+platform :ios, deployment_target
+
+prepare_react_native_project!
 generate_mendix_delegate
+
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
 
 def common_pods
   # Comment the next line if you don't want to use dynamic frameworks
@@ -64,10 +77,10 @@ target 'dev' do
 end
 
 post_install do |installer|
+  config = use_native_modules!
   react_native_post_install(
     installer,
-    # Set `mac_catalyst_enabled` to `true` in order to apply patches
-    # necessary for Mac Catalyst builds
+    config[:reactNativePath],
     :mac_catalyst_enabled => false
   )
 

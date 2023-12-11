@@ -1,0 +1,112 @@
+diff --git a/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js b/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
+index 9a38143..4bd33b4 100644
+--- a/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
++++ b/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
+@@ -50,12 +50,6 @@ function currentlyFocusedInput(): ?ComponentRef {
+  * If no text field is focused it returns null
+  */
+ function currentlyFocusedField(): ?number {
+-  if (__DEV__) {
+-    console.error(
+-      'currentlyFocusedField is deprecated and will be removed in a future release. Use currentlyFocusedInput',
+-    );
+-  }
+-
+   return findNodeHandle(currentlyFocusedInputRef);
+ }
+
+diff --git a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
+index f532ce5..bd46641 100644
+--- a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
++++ b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m
+@@ -283,6 +283,10 @@ - (void)displayDidRefresh:(CADisplayLink *)displayLink
+
+ - (void)displayLayer:(CALayer *)layer
+ {
++  if (!_currentFrame) {
++    _currentFrame = self.image;
++  }
++
+   if (_currentFrame) {
+     layer.contentsScale = self.animatedImageScale;
+     layer.contents = (__bridge id)_currentFrame.CGImage;
+diff --git a/node_modules/react-native/React/Base/RCTKeyCommands.m b/node_modules/react-native/React/Base/RCTKeyCommands.m
+index 1ceaf6e..6c3b75a 100644
+--- a/node_modules/react-native/React/Base/RCTKeyCommands.m
++++ b/node_modules/react-native/React/Base/RCTKeyCommands.m
+@@ -18,11 +18,11 @@
+
+ @interface UIEvent (UIPhysicalKeyboardEvent)
+
+-@property (nonatomic) NSString *_modifiedInput;
+-@property (nonatomic) NSString *_unmodifiedInput;
+-@property (nonatomic) UIKeyModifierFlags _modifierFlags;
+-@property (nonatomic) BOOL _isKeyDown;
+-@property (nonatomic) long _keyCode;
++@property (nonatomic) NSString *modifiedInput;
++@property (nonatomic) NSString *unmodifiedInput;
++@property (nonatomic) UIKeyModifierFlags modifierFlags;
++@property (nonatomic) BOOL isKeyDown;
++@property (nonatomic) long keyCode;
+
+ @end
+
+@@ -116,16 +116,16 @@ - (void)handleKeyUIEventSwizzle:(UIEvent *)event
+   UIKeyModifierFlags modifierFlags = 0;
+   BOOL isKeyDown = NO;
+
+-  if ([event respondsToSelector:@selector(_modifiedInput)]) {
+-    modifiedInput = [event _modifiedInput];
++  if ([event respondsToSelector:@selector(modifiedInput)]) {
++    modifiedInput = [event modifiedInput];
+   }
+
+-  if ([event respondsToSelector:@selector(_modifierFlags)]) {
+-    modifierFlags = [event _modifierFlags];
++  if ([event respondsToSelector:@selector(modifierFlags)]) {
++    modifierFlags = [event modifierFlags];
+   }
+
+-  if ([event respondsToSelector:@selector(_isKeyDown)]) {
+-    isKeyDown = [event _isKeyDown];
++  if ([event respondsToSelector:@selector(isKeyDown)]) {
++    isKeyDown = [event isKeyDown];
+   }
+
+   BOOL interactionEnabled = !RCTSharedApplication().isIgnoringInteractionEvents;
+diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerClient.h b/node_modules/react-native/React/DevSupport/RCTPackagerClient.h
+index 6dea84f..7adc8f5 100644
+--- a/node_modules/react-native/React/DevSupport/RCTPackagerClient.h
++++ b/node_modules/react-native/React/DevSupport/RCTPackagerClient.h
+@@ -25,7 +25,7 @@ extern const int RCT_PACKAGER_CLIENT_PROTOCOL_VERSION;
+ @protocol RCTPackagerClientMethod <NSObject>
+
+ - (void)handleRequest:(NSDictionary<NSString *, id> *)params withResponder:(RCTPackagerClientResponder *)responder;
+-- (void)handleNotification:(NSDictionary<NSString *, id> *)params;
++//- (void)handleNotification:(NSDictionary<NSString *, id> *)params;
+
+ @optional
+
+diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
+index 08c0ca1..5a41feb 100644
+--- a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
++++ b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
+@@ -208,12 +208,12 @@ - (void)addHandler:(id<RCTPackagerClientMethod>)handler forMethod:(NSString *)me
+   dispatch_queue_t queue =
+       [handler respondsToSelector:@selector(methodQueue)] ? [handler methodQueue] : dispatch_get_main_queue();
+
+-  [self
+-      addNotificationHandler:^(NSDictionary<NSString *, id> *notification) {
+-        [handler handleNotification:notification];
+-      }
+-                       queue:queue
+-                   forMethod:method];
++//  [self
++//      addNotificationHandler:^(NSDictionary<NSString *, id> *notification) {
++//         [handler handleNotification:notification];
++//       }
++//                        queue:queue
++//                    forMethod:method];
+   [self
+       addRequestHandler:^(NSDictionary<NSString *, id> *request, RCTPackagerClientResponder *responder) {
+         [handler handleRequest:request withResponder:responder];
