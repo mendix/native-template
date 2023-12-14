@@ -6,9 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## Added
+### Added
 
 - We have upgrade react-native to version 0.72.7
+- We have upgrade node to version 18
+- We have upgrade JAVA to version 17
 
 ## [7.0.9] - 2023-10-13
 

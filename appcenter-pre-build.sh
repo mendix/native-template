@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export JAVA_HOME=${JAVA_HOME_11_X64}
+export JAVA_HOME=${JAVA_HOME_17_X64}
 export PATH=${JAVA_HOME}/bin:${PATH}
 
 if [[ $SUPPORTS_MOBILE_TOOLKIT == True ]]; then
