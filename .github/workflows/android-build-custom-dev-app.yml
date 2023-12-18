@@ -17,15 +17,15 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: 11
+          java-version: 17
       - name: actions/setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: "16.14.2"
+          node-version: "18.18.2"
       - name: npm install
         run: npm ci
-      - name: Add NDK 21.4.7075529
-        run: echo "y" | sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;21.4.7075529"
+      - name: Add NDK 23.1.7779620
+        run: echo "y" | sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;23.1.7779620"
       - name: Build with Gradle
         run: ./gradlew assembleDevDebug
         working-directory: ./android
