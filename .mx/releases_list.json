@@ -1,5 +1,17 @@
 [
     {
+        "id": 134786683,
+        "tag_name": "v8.0.0",
+        "name": "Release 8.0.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Added\r\n- We upgraded React Native version to 0.72.7",
+        "created_at": "2023-12-21T14:41:46Z",
+        "published_at": "2023-12-21T14:45:00Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.0"
+    },
+    {
         "id": 124993140,
         "tag_name": "v7.0.9",
         "name": "Release v7.0.9",
