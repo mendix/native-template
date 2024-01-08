@@ -17,7 +17,7 @@
     "@react-native-firebase/app": "17.3.0",
     "@react-native-firebase/messaging": "17.3.0",
     "@react-native-picker/picker": "2.4.8",
-    "@react-native/metro-config": "^0.73.2",
+    "@react-native/metro-config": "^0.74.0",
     "react-native": "0.72.7",
     "react-native-code-push": "7.0.5",
     "react-native-device-info": "8.0.1",
