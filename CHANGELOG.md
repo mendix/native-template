@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- We updated `react-native-vector-icons` to version `10.0.3`
+
+## [8.0.0] - 2023-12-21
+
 ### Added
 
 - We have upgrade react-native to version 0.72.7
