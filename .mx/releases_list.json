@@ -1,5 +1,17 @@
 [
     {
+        "id": 137413792,
+        "tag_name": "v8.0.1",
+        "name": "Release 8.0.1",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #756 from mendix/moo/MOO_Vector_icons_issue_fix (e0121e1)",
+        "created_at": "2024-01-17T15:59:02Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 134786683,
         "tag_name": "v8.0.0",
         "name": "Release 8.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-05-12T13:58:15Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.5",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.5"
-    },
-    {
-        "id": 40999241,
-        "tag_name": "v5.1.10",
-        "name": "Hotfixes for Mendix 8.15.1 and newer",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Hotfix for v5.1.9\r\n\r\nThis release fixes a bug with v5.1.9 that could lead to iOS builds failing for no apparent reason.\r\n\r\n### Improvements \r\n\r\n- Android Custom Developer Apps support deep links. \r\n\r\n### Fixes \r\n\r\n- We fixed an issue that was causing iOS builds to fail with Native Template v5.1.9.\r\n",
-        "created_at": "2021-04-06T13:53:37Z",
-        "published_at": "2021-04-06T13:56:25Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.10",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.10"
     }
 ]
