@@ -1,15 +1,27 @@
 [
     {
-        "id": 137413792,
-        "tag_name": "v8.0.1",
-        "name": "Release 8.0.1",
+        "id": 137554536,
+        "tag_name": "v8.0.2",
+        "name": "Release 8.0.2",
         "draft": true,
         "prerelease": false,
-        "body": "* Merge pull request #756 from mendix/moo/MOO_Vector_icons_issue_fix (e0121e1)",
-        "created_at": "2024-01-17T15:59:02Z",
+        "body": "* Merge pull request #757 from mendix/update-releases-list-bf409a8 (005432f)",
+        "created_at": "2024-01-18T13:00:59Z",
         "published_at": null,
         "tarball_url": null,
         "zipball_url": null
+    },
+    {
+        "id": 137413792,
+        "tag_name": "v8.0.1",
+        "name": "Release 8.0.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "## Fixed\r\n\r\n- We updated `react-native-vector-icons` to version `10.0.3`\r\n",
+        "created_at": "2024-01-17T15:59:02Z",
+        "published_at": "2024-01-17T16:02:00Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.1"
     },
     {
         "id": 134786683,
@@ -1186,17 +1198,5 @@
         "published_at": "2021-05-14T15:21:09Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.11",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.11"
-    },
-    {
-        "id": 42842834,
-        "tag_name": "v6.1.5",
-        "name": "Fix for failing Android builds when using Firebase",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\nA new version of Google Firebase has been released that breaks compatibility with the version used in the the Firebase related pluggable widgets. \r\n\r\n**If you are using Firebase push notifications in your application, update your Native Template to avoid your Android builds failing.**",
-        "created_at": "2021-05-12T13:38:24Z",
-        "published_at": "2021-05-12T13:58:15Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.5",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.5"
     }
 ]
