@@ -8,6 +8,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
+- We have removed redundant launch screen
+
+## [8.0.2] - 2024-01-18
+
+### Fixed
+
+- We have fixed issues related to building with pipelines
+
+## [8.0.1] - 2024-01-17
+
+### Fixed
+
 - We updated `react-native-vector-icons` to version `10.0.3`
 
 ## [8.0.0] - 2023-12-21
