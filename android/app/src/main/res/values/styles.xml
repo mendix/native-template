@@ -3,11 +3,15 @@
     <!-- Base light application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
         <item name="android:editTextStyle">@style/MendixEditText</item>
     </style>
     <!-- Base dark application theme. -->
     <style name="AppTheme_Dark" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
         <item name="android:editTextStyle">@style/MendixEditText</item>
     </style>
 
