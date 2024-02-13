@@ -1,15 +1,27 @@
 [
     {
-        "id": 137554536,
-        "tag_name": "v8.0.2",
-        "name": "Release 8.0.2",
+        "id": 141752771,
+        "tag_name": "v8.0.3",
+        "name": "Release 8.0.3",
         "draft": true,
         "prerelease": false,
-        "body": "* Merge pull request #757 from mendix/update-releases-list-bf409a8 (005432f)",
-        "created_at": "2024-01-18T13:00:59Z",
+        "body": "* Merge pull request #759 from mendix/fix/splash-screen-issue (1eedb2d)",
+        "created_at": "2024-02-13T08:38:01Z",
         "published_at": null,
         "tarball_url": null,
         "zipball_url": null
+    },
+    {
+        "id": 137554536,
+        "tag_name": "v8.0.2",
+        "name": "Release 8.0.2",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixed\r\n- We have fixed issues related to building with pipelines",
+        "created_at": "2024-01-18T13:00:59Z",
+        "published_at": "2024-01-18T13:04:06Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.2"
     },
     {
         "id": 137413792,
@@ -29,7 +41,7 @@
         "name": "Release 8.0.0",
         "draft": false,
         "prerelease": false,
-        "body": "### Added\r\n- We upgraded React Native version to 0.72.7",
+        "body": "### Added\r\n- We upgraded React Native version to 0.72.7\r\n- We have upgrade node to version 18\r\n- We have upgrade JAVA to version 17",
         "created_at": "2023-12-21T14:41:46Z",
         "published_at": "2023-12-21T14:45:00Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-06-09T09:36:09Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.12-rc2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.12-rc2"
-    },
-    {
-        "id": 42965873,
-        "tag_name": "v5.1.11",
-        "name": "Hotfixes for Mendix 8.15.1 and newer",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We fixed an issue with the Firebase module dependencies being automatically linked on the iOS application even when the Firebase capability is disabled.",
-        "created_at": "2021-05-14T15:18:36Z",
-        "published_at": "2021-05-14T15:21:09Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.11",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.11"
     }
 ]
