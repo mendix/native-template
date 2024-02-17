@@ -8,6 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
+- We have removed deprecated attribute from manifest files.
+
+## [8.0.3] - 2024-02-13
+
+### Fixed
+
 - We have removed redundant launch screen
 
 ## [8.0.2] - 2024-01-18
