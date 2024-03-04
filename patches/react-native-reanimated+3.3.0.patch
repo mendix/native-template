@@ -12,6 +12,21 @@ index 747cc58..f89fb59 100644
          classpath "com.diffplug.spotless:spotless-plugin-gradle:6.11.0"
      }
  }
+diff --git a/node_modules/react-native-reanimated/android/build.gradle b/node_modules/react-native-reanimated/android/build.gradle
+index 747cc58..8af333e 100644
+--- a/node_modules/react-native-reanimated/android/build.gradle
++++ b/node_modules/react-native-reanimated/android/build.gradle
+@@ -495,6 +495,10 @@ android {
+         compileTask ->
+             compileTask.dependsOn(packageNdkLibs)
+     }
++    tasks.withType(com.android.build.gradle.tasks.MergeSourceSetFolders) {
++        compileTask ->
++            compileTask.dependsOn(packageNdkLibs)
++    }
+     configurations {
+         extractHeaders
+         extractSO
 diff --git a/node_modules/react-native-reanimated/ios/native/UIResponder+Reanimated.h b/node_modules/react-native-reanimated/ios/native/UIResponder+Reanimated.h
 index d245c5a..9570d30 100644
 --- a/node_modules/react-native-reanimated/ios/native/UIResponder+Reanimated.h
