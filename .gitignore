@@ -28,6 +28,7 @@ build/
 android/app/.settings
 .idea
 .gradle
+local.properties
 *.iml
 .classpath
 
