@@ -19,9 +19,6 @@ if [[ -e "$INFO_PLIST" && $IS_DEV_APP == False ]]; then
     lipo -remove i386 -output $LIB_PATH $LIB_PATH || true
     lipo -info $LIB_PATH || true
 
-    echo "Updating Info.plist with code push key"
-    plutil -replace "CodePushKey" -string $CODE_PUSH_KEY $INFO_PLIST || true
-
     cat $INFO_PLIST
 fi
 

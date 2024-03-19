@@ -99,25 +99,5 @@
                 "Google-Maps-iOS-Utils": {}
             }
         }
-    },
-    "appCenterOTA": {
-        "ios": {
-            "AppDelegate": {
-                "imports": [
-                    "#import <CodePush/CodePush.h>"
-                ],
-                "getJSBundleFile": [
-                    "if ([ReactNative.instance useCodePush]) {",
-                    "    [CodePush setDeploymentKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@\"CodePushKey\"] ?: @\"\"];",
-                    "    return [CodePush bundleURLForResource:@\"index.ios\" withExtension:@\"bundle\" subdirectory:@\"Bundle\"];",
-                    "}"
-                ]
-            },
-            "pods": {
-                "CodePush": {
-                    "path": "../node_modules/react-native-code-push"
-                }
-            }
-        }
     }
 }
