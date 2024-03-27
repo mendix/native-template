@@ -35,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - We fixed build errors caused by the recent XCode 15 update.
+- We have Updated androidManifest to support open url with links to websites whose apps are installed on the device.
 
 ## [7.0.8] - 2023-09-25
 
