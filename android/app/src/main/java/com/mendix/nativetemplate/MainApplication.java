@@ -8,8 +8,6 @@ import com.facebook.react.PackageList;
 import com.facebook.react.ReactPackage;
 import com.mendix.mendixnative.MendixReactApplication;
 import com.mendix.mendixnative.react.splash.MendixSplashScreenPresenter;
-import com.microsoft.codepush.react.BuildConfig;
-import com.microsoft.codepush.react.CodePush;
 
 import org.devio.rn.splashscreen.SplashScreen;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
@@ -29,7 +27,6 @@ public class MainApplication extends MendixReactApplication {
 
         // Packages that cannot be autolinked yet can be added manually here, for example:
         // packages.add(new MyReactNativePackage());
-        packages.add(new CodePush(getCodePushKey(), getApplicationContext(), BuildConfig.DEBUG));
         packages.add(new SplashScreenReactPackage());
 
         return packages;

@@ -139,7 +139,6 @@ dependencies {
     }
 
     implementation project(":react-native-splash-screen")
-    implementation project(":react-native-code-push")
     implementation project(":mendixnative-release")
     implementation "org.webkit:android-jsc:r174650"
 
