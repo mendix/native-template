@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - We have removed redundant launch screen
+- We've resolved a build error related to Flipper on Xcode 15.3.
 
 ## [8.0.2] - 2024-01-18
 
