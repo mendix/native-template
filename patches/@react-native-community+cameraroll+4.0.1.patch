@@ -1,5 +1,15 @@
+diff --git a/node_modules/@react-native-community/cameraroll/android/gradle.properties b/node_modules/@react-native-community/cameraroll/android/gradle.properties
+index 0bec1b5..a3dbe4e 100644
+--- a/node_modules/@react-native-community/cameraroll/android/gradle.properties
++++ b/node_modules/@react-native-community/cameraroll/android/gradle.properties
+@@ -1,4 +1,4 @@
+-ReactNativeCameraRoll_compileSdkVersion=28
++ReactNativeCameraRoll_compileSdkVersion=33
+ ReactNativeCameraRoll_buildToolsVersion=28.0.3
+ ReactNativeCameraRoll_targetSdkVersion=27
+ ReactNativeCameraRoll_minSdkVersion=16
 diff --git a/node_modules/@react-native-community/cameraroll/android/src/main/java/com/reactnativecommunity/cameraroll/CameraRollModule.java b/node_modules/@react-native-community/cameraroll/android/src/main/java/com/reactnativecommunity/cameraroll/CameraRollModule.java
-index b13e570..b681c45 100644
+index b13e570..bfe46b2 100644
 --- a/node_modules/@react-native-community/cameraroll/android/src/main/java/com/reactnativecommunity/cameraroll/CameraRollModule.java
 +++ b/node_modules/@react-native-community/cameraroll/android/src/main/java/com/reactnativecommunity/cameraroll/CameraRollModule.java
 @@ -9,6 +9,7 @@ package com.reactnativecommunity.cameraroll;
@@ -159,6 +169,32 @@ index b13e570..b681c45 100644
              null,
              new MediaScannerConnection.OnScanCompletedListener() {
                @Override
+@@ -633,7 +666,11 @@ public class CameraRollModule extends ReactContextBaseJavaModule {
+                 + photoUri.toString(),
+             e);
+       }
+-      retriever.release();
++      try {
++        retriever.release();
++      } catch (IOException e) {
++        // Do nothing. We can't handle this, and this is usually a system problem
++      }
+     }
+ 
+     if (photoDescriptor != null) {
+@@ -699,7 +736,12 @@ public class CameraRollModule extends ReactContextBaseJavaModule {
+                     + photoUri.toString(),
+                 e);
+           }
++
++        try {
+           retriever.release();
++        } catch (IOException e) {
++          // Do nothing. We can't handle this, and this is usually a system problem
++        }
+         } else {
+           BitmapFactory.Options options = new BitmapFactory.Options();
+           // Set inJustDecodeBounds to true so we don't actually load the Bitmap, but only get its
 diff --git a/node_modules/@react-native-community/cameraroll/android/src/main/java/com/reactnativecommunity/cameraroll/Utils.java b/node_modules/@react-native-community/cameraroll/android/src/main/java/com/reactnativecommunity/cameraroll/Utils.java
 new file mode 100644
 index 0000000..880802c
