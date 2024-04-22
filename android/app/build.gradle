@@ -150,7 +150,7 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-core:2.11.3")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.11.3")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.11.3")
-    implementation 'androidx.security:security-crypto:1.1.0-alpha04'
+    implementation "androidx.security:security-crypto:1.1.0-alpha06"
 
     // Required for Custom Dev Apps
     devImplementation "androidx.constraintlayout:constraintlayout:2.0.4"
