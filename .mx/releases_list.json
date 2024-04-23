@@ -1,5 +1,17 @@
 [
     {
+        "id": 152401852,
+        "tag_name": "v8.1.0",
+        "name": "Release 8.1.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have resolved a build error related to Flipper in Xcode 15.3.\r\n* We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06.\r\n* We have upgraded @mendix/react-native-sqlite-storage to version 7.1.0 and @mendix/native to the latest compatible version",
+        "created_at": "2024-04-23T13:21:37Z",
+        "published_at": "2024-04-23T13:31:04Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.1.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.1.0"
+    },
+    {
         "id": 149020939,
         "tag_name": "v8.0.4",
         "name": "Release 8.0.4",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-06-30T15:20:00Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.7",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.7"
-    },
-    {
-        "id": 45502590,
-        "tag_name": "v5.1.13",
-        "name": "Hardening Deeplinks on Custom Dev apps",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description\r\n**DISCLAIMER: Release builds of your apps are not affected by any of these bugs.** \r\n\r\nWe identified and fixed that iOS Custom Dev Apps do not call the correct callback when the app is opened. \r\n\r\nWe Identified that Android Custom Dev Apps might crash with the common \"Call your administrator\" dialog under certain circumstances when Deep Links are used. \r\n\r\n### Improvements\r\nWhen installing pods (`pod install`) the Native Template is able to derive the XCode version on the system and correctly apply the XCode 12.5 compatibility patch. \r\n\r\n### Fixes\r\n- We identified and fixed an issue on iOS Custom Dev Apps with Deep links.\r\n- We identified and fixed an issue on Android Custom Dev apps with Deep links crashing the application.",
-        "created_at": "2021-06-30T15:49:17Z",
-        "published_at": "2021-06-30T15:51:23Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.13",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.13"
     }
 ]
