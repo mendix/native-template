@@ -1,5 +1,41 @@
 [
     {
+        "id": 149020939,
+        "tag_name": "v8.0.4",
+        "name": "Release 8.0.4",
+        "draft": false,
+        "prerelease": false,
+        "body": "*  We have removed `react-native-code-push` dependency. We recommend migrating to Mendix OTA instead.",
+        "created_at": "2024-03-29T13:21:18Z",
+        "published_at": "2024-03-29T13:23:55Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.4"
+    },
+    {
+        "id": 146807441,
+        "tag_name": "v7.0.10",
+        "name": "Release 7.0.10",
+        "draft": false,
+        "prerelease": false,
+        "body": "* [BUILD] Update Release List (8871493)",
+        "created_at": "2024-03-15T15:57:12Z",
+        "published_at": "2024-03-15T16:01:07Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.10",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.10"
+    },
+    {
+        "id": 146752538,
+        "tag_name": "v5.2.19",
+        "name": "Release 5.2.19",
+        "draft": false,
+        "prerelease": false,
+        "body": "# Fixes\r\n- Use File.exist instead of deprecated .existS (deprecated since 2016)",
+        "created_at": "2024-03-15T10:33:40Z",
+        "published_at": "2024-03-15T10:36:15Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.19",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.19"
+    },
+    {
         "id": 141752771,
         "tag_name": "v8.0.3",
         "name": "Release 8.0.3",
@@ -1162,41 +1198,5 @@
         "published_at": "2021-06-30T15:51:23Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.13",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.13"
-    },
-    {
-        "id": 44474518,
-        "tag_name": "v5.1.12",
-        "name": "Add Deep Links support to Custom Developer Apps for Mendx 9 apps",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\n\r\n* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link).\r\n\r\n### Breaking Change\r\n\r\nOn iOS, there are now two implementations of `AppDelegate.m.`: one for release apps, and one for developer apps. The more features we added, the more boilerplate we had to add to support the more complex requirements of custom developer apps. By splitting the implementation, release apps now receive a clean and simple implementation with the more complex implementation abstracted away. \r\n\r\nThis should make it easier to add custom code by simply following a dependency's documentation. \r\n\r\nPlease note that if your app requires custom initialization, for example, due to third-party dependencies, and you plan to test the implementation using custom developer apps, from this version and higher **you must duplicate that custom work** in the AppDelegate (found in `Dev/AppDelegate.m`).**",
-        "created_at": "2021-06-11T11:42:09Z",
-        "published_at": "2021-06-11T11:43:00Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.12",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.12"
-    },
-    {
-        "id": 44359445,
-        "tag_name": "v6.1.6",
-        "name": "Add Deep Links support to Custom Developer Apps for Mendx 9 apps",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\n\r\n* Custom developer apps now fully support deep links. This allows you to use custom developer apps to test deeplink use cases. For more information, see [How to Create a Custom Developer App](/howto/mobile/how-to-devapps) and [How to Set Up Deep Links in Native Mobile Apps](/howto/mobile/native-deep-link).\r\n\r\n### Breaking Change\r\n\r\nOn iOS, there are now two implementations of `AppDelegate.m.`: one for release apps, and one for developer apps. The more features we added, the more boilerplate we had to add to support the more complex requirements of custom developer apps. By splitting the implementation, release apps now receive a clean and simple implementation with the more complex implementation abstracted away. \r\n\r\nThis should make it easier to add custom code by simply following a dependency's documentation. \r\n\r\nPlease note that if your app requires custom initialization, for example, due to third-party dependencies, and you plan to test the implementation using custom developer apps, from this version and higher **you must duplicate that custom work** in the AppDelegate (found in `Dev/AppDelegate.m`).**",
-        "created_at": "2021-06-09T16:11:07Z",
-        "published_at": "2021-06-09T16:12:14Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.6"
-    },
-    {
-        "id": 44334134,
-        "tag_name": "v5.1.12-rc2",
-        "name": "",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2021-06-09T09:34:44Z",
-        "published_at": "2021-06-09T09:36:09Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.12-rc2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.12-rc2"
     }
 ]

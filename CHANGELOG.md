@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - We have removed redundant launch screen
+- We have resolved a build error related to Flipper on Xcode 15.3.
+- We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06
+- We have upgraded @mendix/react-native-sqlite-storage to version 7.1.0 and @mendix/native to the latest compatible version
 
 ## [8.0.2] - 2024-01-18
 
@@ -37,6 +40,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - We fixed build errors caused by the recent XCode 15 update.
+- We have Updated androidManifest to support open url with links to websites whose apps are installed on the device.
 
 ## [7.0.8] - 2023-09-25
 
