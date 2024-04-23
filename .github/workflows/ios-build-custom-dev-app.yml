@@ -32,7 +32,7 @@ jobs:
           chmod +x ./appcenter-pre-build.sh
           APPCENTER_XCODE_SCHEME="nativeTemplate" APPCENTER_SOURCE_DIRECTORY="./" IS_DEV_APP=False ./appcenter-pre-build.sh
       - name: iOS Build Action
-        uses: yukiarrr/ios-build-action@v1.11.2
+        uses: yukiarrr/ios-build-action@v1.7.0
         with:
           project-path: ./ios/nativetemplate.xcodeproj
           p12-base64: ${{ secrets.IOS_DUMMY_P12 }}
