@@ -8,10 +8,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- We have removed redundant launch screen
 - We have resolved a build error related to Flipper on Xcode 15.3.
 - We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06
 - We have upgraded @mendix/react-native-sqlite-storage to version 7.1.0 and @mendix/native to the latest compatible version
+
+## [8.0.4] - 2024-03-29
+
+- We have removed react-native-code-push dependency. We recommend migrating to Mendix OTA instead.
+
+## [8.0.3] - 2024-02-13
+
+### Fixed
+
+- We have removed redundant launch screen
 
 ## [8.0.2] - 2024-01-18
 
