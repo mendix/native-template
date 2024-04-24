@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have updated the @mendix/native dependency to the latest compatible version.
+
+## [8.0.4] - 2024-03-29
+
+- We have removed react-native-code-push dependency. We recommend migrating to Mendix OTA instead.
+
+## [8.0.3] - 2024-02-13
+
 ### Fixed
 
 - We have removed redundant launch screen
