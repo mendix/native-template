@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-### Fixed
+### Changes
+
+- We have upgraded @mendix/native to the latest stable version
+
+## [8.1.0] - 2024-04-24
 
 - We have resolved a build error related to Flipper on Xcode 15.3.
 - We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06
