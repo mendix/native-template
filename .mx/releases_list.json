@@ -1,5 +1,17 @@
 [
     {
+        "id": 152630831,
+        "tag_name": "v8.0.5",
+        "name": "Release 8.0.5",
+        "draft": false,
+        "prerelease": false,
+        "body": "* Update the @mendix/native dependency to the latest compatible version (4aa3819)",
+        "created_at": "2024-04-24T15:08:58Z",
+        "published_at": "2024-04-24T15:09:47Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.5",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.5"
+    },
+    {
         "id": 152401852,
         "tag_name": "v8.1.0",
         "name": "Release 8.1.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-07-20T13:41:47Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.0",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.0"
-    },
-    {
-        "id": 45500375,
-        "tag_name": "v6.1.7",
-        "name": "Fix Android Custom Dev App crash with Deeplinks",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description\r\n**DISCLAIMER: Release builds of your apps are not affected by this bug.** \r\n\r\nWe Identified that Android Custom Dev Apps might crash with the common \"Call your administrator\" dialog under certain circumstances when Deep Links are used. \r\n\r\n### Fixes \r\n\r\n- We identified and fixed an issue on Android Custom Dev apps with Deep links crashing the application.",
-        "created_at": "2021-06-30T15:14:14Z",
-        "published_at": "2021-06-30T15:20:00Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.1.7",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.1.7"
     }
 ]
