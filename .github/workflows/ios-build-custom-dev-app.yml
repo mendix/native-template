@@ -23,10 +23,6 @@ jobs:
           node-version-file: .nvmrc
           cache: 'npm'
 
-      - name: IOS buildcache
-        uses: mikehardy/buildcache-action@v1
-        continue-on-error: true
-
       - name: npm install
         run: npm ci
 
