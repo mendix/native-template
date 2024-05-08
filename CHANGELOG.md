@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changes
 
 - We have upgraded @mendix/native to the latest stable version
+- We have added support for Hermes
 
 ## [8.1.0] - 2024-04-24
 
