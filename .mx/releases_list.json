@@ -1,5 +1,17 @@
 [
     {
+        "id": 155243491,
+        "tag_name": "v8.1.2",
+        "name": "Release 8.1.2",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS SDK requirements. (9e752c3)",
+        "created_at": "2024-05-10T11:53:26Z",
+        "published_at": "2024-05-10T11:55:17Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.1.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.1.2"
+    },
+    {
         "id": 152632098,
         "tag_name": "v8.1.1",
         "name": "Release 8.1.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-07-20T13:41:04Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.14",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.14"
-    },
-    {
-        "id": 46420756,
-        "tag_name": "v6.2.0",
-        "name": "Android API 30 support",
-        "draft": false,
-        "prerelease": true,
-        "body": "\r\n### Breaking Change\r\n\r\n- We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers would need to update their `NativeMobileResources` module from the App Store to the latest version to avoid unexpected behaviours. Due to this change, developers previously relying on Over-The-Air updates for their apps would have to release new applications to the app store.\r\n\r\n[Read more on the API 30 requirent for Google Play](https://developer.android.com/distribute/play-policies#APILevel30)\r\n\r\n### Improvements\r\n\r\n- We made an improvement to the the capability configurations. We added an Implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when Over-The-Air support is not enabled via the Native Mobile App Builder.\r\n- We implemented support for Android 11 devices.\r\n- We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.\r\n",
-        "created_at": "2021-07-19T13:53:12Z",
-        "published_at": "2021-07-20T13:41:56Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.0"
     }
 ]
