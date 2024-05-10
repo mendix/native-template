@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- We have updated the @mendix/native dependency to the latest compatible version.
+- We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
+
+## [8.0.5] - 2024-04-24
+
+- We have upgraded the @mendix/native dependency to the latest compatible version.
 
 ## [8.0.4] - 2024-03-29
 
