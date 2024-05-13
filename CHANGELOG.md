@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
+
+## [7.0.9] - 2023-10-13
+
 ### Fixed
 
 - We fixed build errors caused by the recent XCode 15 update.
