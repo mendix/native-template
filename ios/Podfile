@@ -38,10 +38,16 @@ def common_pods
 
   # RN development pods
   config = use_native_modules!
+
+  xcconfig_file = "./Config/config.xcconfig"
+  xcconfig = Xcodeproj::Config.new(xcconfig_file)
+
+  hermes_enabled = xcconfig.attributes['HERMES_ENABLED'] || 'false'
+
   use_react_native!(
     :path => config[:reactNativePath],
-    # Hermes is disabled by default to avoid incompatibilities and slowness with Mendix Runtime.
-    :hermes_enabled => false,
+    # Hermes is configurable in Studio Pro via Navigation Profile
+    :hermes_enabled => (hermes_enabled == 'YES'),
     :fabric_enabled => false,
     # Enables Flipper.
     #
