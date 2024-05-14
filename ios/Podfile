@@ -46,7 +46,7 @@ def common_pods
 
   use_react_native!(
     :path => config[:reactNativePath],
-    # Hermes is disabled by default to avoid incompatibilities and slowness with Mendix Runtime.
+    # Hermes is configurable in Studio Pro via Navigation Profile
     :hermes_enabled => (hermes_enabled == 'YES'),
     :fabric_enabled => false,
     # Enables Flipper.
