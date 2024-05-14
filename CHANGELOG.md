@@ -6,16 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-### Changes
+- We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
 
+<<<<<<< moo/MOO-1359-make-hermes-the-default-for-native-mobile
 - We have upgraded @mendix/native to the latest stable version
 - We have added support for Hermes
+=======
+## [8.1.1] - 2024-04-24
+
+- We have upgraded the @mendix/native dependency to the latest compatible version
+>>>>>>> master
 
 ## [8.1.0] - 2024-04-24
 
 - We have resolved a build error related to Flipper on Xcode 15.3.
 - We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06
 - We have upgraded @mendix/react-native-sqlite-storage to version 7.1.0 and @mendix/native to the latest compatible version
+
+## [8.0.5] - 2024-04-24
+
+- We have upgraded the @mendix/native dependency to the latest compatible version
 
 ## [8.0.4] - 2024-03-29
 
