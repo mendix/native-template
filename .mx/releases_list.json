@@ -1,5 +1,17 @@
 [
     {
+        "id": 155720122,
+        "tag_name": "v8.1.3",
+        "name": "Release 8.1.3",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #786 from mendix/moo/MOO-1359-make-hermes-the-default-for-native-mobile (408197e)",
+        "created_at": "2024-05-14T15:11:30Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 155483074,
         "tag_name": "v7.0.11",
         "name": "Release 7.0.11",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-07-29T16:33:29Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.2"
-    },
-    {
-        "id": 46913890,
-        "tag_name": "v6.2.1",
-        "name": "Android API 30 support",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Re-release of v6.2.0\r\nThis is a re-release of v6.2.0 with the required fixes. Please update if you already are on v6.2.0\r\n\r\n### Breaking Change\r\n\r\n- We bumped the `react-native-image` internal dependency to version `4.0.3` and introduced the `react-native-permissions` dependency. Developers would need to update their `NativeMobileResources` module from the App Store to the latest version to avoid unexpected behaviours. Due to this change, developers previously relying on Over-The-Air updates for their apps would have to release new applications to the app store.\r\n\r\n[Read more on the API 30 requirent for Google Play](https://developer.android.com/distribute/play-policies#APILevel30)\r\n\r\n\r\n### Improvements\r\n\r\n- We made an improvement to the the capability configurations. We added an Implementation for the `appCenterOTA` capability. This removes the previous need to have `Codepush` bundled with every application even when Over-The-Air support is not enabled via the Native Mobile App Builder.\r\n- We implemented support for Android 11 devices.\r\n- We bumped `react-native-codepush` dependency to `6.4.1` due to security concerns on the previous version.\r\n\r\n### Fixes\r\n\r\n- We fixed a bug with Custom Developer apps introduced with 6.2.0 \r\n- We fixed a bug with a peer dependency introduce when upgading to API 30. \r\n",
-        "created_at": "2021-07-28T15:18:22Z",
-        "published_at": "2021-07-28T15:22:15Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.1"
     }
 ]
