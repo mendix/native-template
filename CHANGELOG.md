@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have upgraded React-navigation to version 6
+
+## [8.1.3] - 2024-05-14
+
 - We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
 - We have added support for Hermes
 
