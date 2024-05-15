@@ -6,7 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
+### Fixed
+
+- We have resolved a build error related to Flipper on Xcode 15.3.
+
+## [8.0.6] - 2024-05-10
+
+- We have made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS SDK requirements.
 
 ## [8.0.5] - 2024-04-24
 
