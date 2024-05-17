@@ -1,5 +1,17 @@
 [
     {
+        "id": 156277279,
+        "tag_name": "v8.2.0",
+        "name": "Release 8.2.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have upgraded React-navigation to version 6",
+        "created_at": "2024-05-17T14:00:27Z",
+        "published_at": "2024-05-17T14:01:25Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.0"
+    },
+    {
         "id": 155916929,
         "tag_name": "v8.0.7",
         "name": "Release 8.0.7",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-08-05T13:05:46Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.2"
-    },
-    {
-        "id": 47354605,
-        "tag_name": "v5.1.15",
-        "name": "Firebase Crashlytics support for Mendix v8.15 up to v8.18.8 Apps",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description \r\n\r\nThis release introduces support for Firebase Crashlytics and removes previous references to the deprecated `Fabric.io` dependencies. \r\n",
-        "created_at": "2021-08-05T11:09:55Z",
-        "published_at": "2021-08-05T13:05:56Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.15",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.15"
     }
 ]
