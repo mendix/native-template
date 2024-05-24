@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [8.2.0] - 2024-05-17
 
 - We have upgraded React-navigation to version 6
+- We have added a basic privacy manifest to iOS.
 
 ## [8.1.3] - 2024-05-14
 
