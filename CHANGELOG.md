@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We have removed Flipper from iOS Podfile
+- We've added the support of scheduling local notifications on Android 14
 
 ## [8.2.0] - 2024-05-17
 
