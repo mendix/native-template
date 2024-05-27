@@ -1,0 +1,17 @@
+diff --git a/node_modules/react-native-push-notification/android/src/main/java/com/dieam/reactnativepushnotification/modules/RNPushNotificationHelper.java b/node_modules/react-native-push-notification/android/src/main/java/com/dieam/reactnativepushnotification/modules/RNPushNotificationHelper.java
+index 248ff08..0ab1b34 100644
+--- a/node_modules/react-native-push-notification/android/src/main/java/com/dieam/reactnativepushnotification/modules/RNPushNotificationHelper.java
++++ b/node_modules/react-native-push-notification/android/src/main/java/com/dieam/reactnativepushnotification/modules/RNPushNotificationHelper.java
+@@ -171,6 +171,12 @@ public class RNPushNotificationHelper {
+             return;
+         }
+ 
++        // call canScheduleExactAlarms to confirm the user has allowed alarms to be set. otherwise,
++        // attempting to set an alarm below will crash the app!
++        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && !getAlarmManager().canScheduleExactAlarms()) {
++             return;
++        }
++
+         Log.d(LOG_TAG, String.format("Setting a notification with id %s at time %s",
+                 bundle.getString("id"), Long.toString(fireDate)));
+         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
