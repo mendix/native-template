@@ -1,5 +1,17 @@
 [
     {
+        "id": 157640270,
+        "tag_name": "v8.2.1",
+        "name": "Release 8.2.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "* [MOO-1361] Add patch to push notifications and add rn-schedule-exact-alarm (#787) (63d5f68)",
+        "created_at": "2024-05-27T14:08:59Z",
+        "published_at": "2024-05-27T14:09:52Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.1"
+    },
+    {
         "id": 156277279,
         "tag_name": "v8.2.0",
         "name": "Release 8.2.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-09-07T15:07:58Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.3",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.3"
-    },
-    {
-        "id": 47354493,
-        "tag_name": "v5.2.2",
-        "name": "Firebase Crashlytics support for Mendix v8.18.9 Apps",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description \r\n\r\nThis release introduces support for Firebase Crashlytics and removes previous references to the deprecated `Fabric.io` dependencies. \r\n",
-        "created_at": "2021-08-05T11:09:03Z",
-        "published_at": "2021-08-05T13:05:46Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.2"
     }
 ]
