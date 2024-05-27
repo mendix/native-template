@@ -8,10 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
 - We have added a basic privacy manifest to iOS.
-
-## [7.0.12] - 2024-05-16
-
-- We've fixed a crash when using scheduled local notifications on Android 14
+- We've added the support of scheduling local notifications on Android 14
 
 ## [7.0.9] - 2023-10-13
 
