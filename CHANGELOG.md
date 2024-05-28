@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - We have resolved a build error related to Flipper on Xcode 15.3.
+- We've added the support of scheduling local notifications on Android 14
 
 ## [8.0.6] - 2024-05-10
 
