@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We have upgraded `react-native-gesture-handler` to 2.16.2
+- We have upgraded `@mendix/native` to 3.1.4
 
 ## [8.2.1]
 
