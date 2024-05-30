@@ -6,7 +6,7 @@ buildscript {
         minSdkVersion = 21
         compileSdkVersion = 33
         targetSdkVersion = 33
-        kotlin_version = "1.7.21"
+        kotlinVersion = "1.7.21"
         excludeAppGlideModule = true
         androidx_lifecycle_version = "2.3.1"
         playServicesVersion = "18+"
