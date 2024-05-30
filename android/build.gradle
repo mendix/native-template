@@ -41,12 +41,15 @@ buildscript {
 allprojects {
     repositories {
         all { repo ->
-            println repo.url.toString()
-            if (repo.url.toString().contains("jcenter.bintray.com") || repo.url.toString().contains("jitpack.io")) {
-                project.logger.warn "Repository ${repo.url} removed."
-                remove repo
-                google()
-                mavenCentral()
+            println repo.toString()
+            if (repo instanceof org.gradle.api.artifacts.repositories.MavenArtifactRepository) {
+                println repo.url.toString()
+                if (repo.url.toString().contains("jcenter.bintray.com") /*|| repo.url.toString().contains("jitpack.io")*/) {
+                    project.logger.warn "Repository ${repo.url} removed."
+                    remove repo
+                    google()
+                    mavenCentral()
+                }
             }
         }
         maven {
