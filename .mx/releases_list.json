@@ -1,5 +1,17 @@
 [
     {
+        "id": 158576249,
+        "tag_name": "v8.2.2",
+        "name": "Release 8.2.2",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We've upgraded `react-native-gesture-handler`\r\n- We've upgraded `@mendix/native` to be compatible with the latest changes",
+        "created_at": "2024-06-03T09:44:11Z",
+        "published_at": "2024-06-03T09:47:19Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.2"
+    },
+    {
         "id": 157850635,
         "tag_name": "v8.0.8",
         "name": "Release 8.0.8",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-09-22T09:23:59Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.4",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.4"
-    },
-    {
-        "id": 49277137,
-        "tag_name": "v5.1.16",
-        "name": "Fix for failing Android builds",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description\r\nWe identified an issue with dependency resolution on Android that will fail the builds. Please upgrade if you are facing failing Android builds.\r\n\r\n### Fixes\r\n\r\n* We fixed an issue with dependencies resolution on Android.",
-        "created_at": "2021-09-09T13:23:53Z",
-        "published_at": "2021-09-09T13:24:40Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.16",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.16"
     }
 ]
