@@ -17,9 +17,9 @@
     "@react-native-firebase/app": "17.3.0",
     "@react-native-firebase/messaging": "17.3.0",
     "@react-native-picker/picker": "2.4.8",
-    "@react-native/metro-config": "^0.73.2",
+    "@react-native/metro-config": "^0.73.5",
     "@react-navigation/native": "6.1.6",
-    "react-native": "0.72.7",
+    "react-native": "0.73.8",
     "react-native-device-info": "8.0.1",
     "react-native-fast-image": "8.3.2",
     "react-native-gesture-handler": "2.11.0",
@@ -44,7 +44,7 @@
     "@mendix/native-mobile-toolkit": "latest",
     "detox": "19.13.0",
     "jetifier": "^1.6.3",
-    "metro-react-native-babel-preset": "0.76.8",
+    "@react-native/babel-preset": "0.73.21",
     "patch-package": "^8.0.0"
   },
   "engines": {
@@ -53,7 +53,7 @@
   "overrides": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.72.7",
+    "react-native": "0.73.8",
     "@babel/traverse": "7.23.2",
     "unset-value": "2.0.1",
     "semver": "5.7.2"
@@ -61,6 +61,6 @@
   "resolutions": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.72.7"
+    "react-native": "0.73.8"
   }
 }
