@@ -43,7 +43,6 @@
     "@mendix/native-mobile-toolkit": "latest",
     "@react-native/babel-preset": "^0.73.21",
     "@react-native/metro-config": "^0.73.5",
-    "@types/react": "^18.3.3",
     "detox": "19.13.0",
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "0.76.8",
