@@ -1008,10 +1008,14 @@ PODS:
   - react-native-sqlite-storage (7.1.0):
     - React-Core
     - SQLCipher
-  - react-native-video (5.2.1):
+  - react-native-video (6.1.2):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
     - React-Core
-    - react-native-video/Video (= 5.2.1)
-  - react-native-video/Video (5.2.1):
+    - react-native-video/Video (= 6.1.2)
+  - react-native-video/Video (6.1.2):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
     - React-Core
   - React-nativeconfig (0.73.8)
   - React-NativeModulesApple (0.73.8):
@@ -1200,7 +1204,9 @@ PODS:
     - FirebaseCoreExtension (= 10.5.0)
     - React-Core
     - RNFBApp
-  - RNGestureHandler (2.11.0):
+  - RNGestureHandler (2.16.2):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
     - React-Core
   - RNLocalize (1.4.2):
     - React-Core
@@ -1208,7 +1214,9 @@ PODS:
     - React-Core
   - RNReanimated (1.13.1):
     - React
-  - RNScreens (3.20.0):
+  - RNScreens (3.31.1):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
     - React-Core
     - React-RCTImage
   - RNSVG (12.1.0):
@@ -1532,7 +1540,7 @@ SPEC CHECKSUMS:
   react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-sqlite-storage: 7697e1df2125d556c58de9d9764549195b25afcf
-  react-native-video: c26780b224543c62d5e1b2a7244a5cd1b50e8253
+  react-native-video: 88cf186299aa6c3e4fb54aa1bc99267bf99c2b91
   React-nativeconfig: 2e44d0d2dd222b12a5183f4bcaa4a91881497acb
   React-NativeModulesApple: 464a9590389efd364d45d726a35ef7ade6b5c59a
   React-perflogger: f9367428cf475f4606b5965c1d5a71781bb95299
@@ -1562,11 +1570,11 @@ SPEC CHECKSUMS:
   RNFastImage: e19ba191922e7dab9d932a4d59d62d76660aa222
   RNFBApp: 13ca8ba0feba98d4bac2057884894dcf8eedf97f
   RNFBMessaging: 0bdc8269fefad36f6820d6fc89b0bcae3f705891
-  RNGestureHandler: 026038a97d4c8649ce397a22e162ca58b4e6c230
+  RNGestureHandler: 96439cf6543defdde87459e48cd1a3f0e45a008e
   RNLocalize: 452d4118e338dee1e5ca3fac4d5a11a4ab26a46a
   RNPermissions: 34d678157c800b25b22a488e4d8babb57456e796
   RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
-  RNScreens: 218801c16a2782546d30bd2026bb625c0302d70f
+  RNScreens: 134a7511b12b8eb440b87aac21e36a71295d6024
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   RNVectorIcons: 73ab573085f65a572d3b6233e68996d4707fd505
   SDWebImage: dfe95b2466a9823cf9f0c6d01217c06550d7b29a
