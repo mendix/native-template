@@ -6,9 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+# [7.0.13] - 2024-06-05
+
+- We enhanced encrypted file sync on Android.
+
+# [7.0.12] - 2024-05-27
+
+- We've added the support of scheduling local notifications on Android 14
+
+# [7.0.11] - 2024-05-13
+
 - We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
 - We have added a basic privacy manifest to iOS.
-- We've added the support of scheduling local notifications on Android 14
+
+# [7.0.10] - 2024-03-15
+
+- We updated the Android manifest file to support opening URLs with links to websites whose apps are installed on the device.
 
 ## [7.0.9] - 2023-10-13
 
