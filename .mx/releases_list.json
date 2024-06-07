@@ -1,5 +1,17 @@
 [
     {
+        "id": 159338692,
+        "tag_name": "v8.2.3",
+        "name": "Release 8.2.3",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have upgraded the `@mendix/native` dependency to `3.1.5`",
+        "created_at": "2024-06-07T09:12:56Z",
+        "published_at": "2024-06-07T09:16:24Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.3"
+    },
+    {
         "id": 158976776,
         "tag_name": "v7.0.13",
         "name": "Release 7.0.13",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-09-27T08:47:28Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.4",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.4"
-    },
-    {
-        "id": 50302484,
-        "tag_name": "v5.1.17",
-        "name": "Update AppCenter configuration to XCode 13",
-        "draft": false,
-        "prerelease": false,
-        "body": "## Description\r\nWith the release of iOS 15 it is required to re-compile apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.",
-        "created_at": "2021-09-22T17:41:17Z",
-        "published_at": "2021-09-27T08:48:11Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.17",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.17"
     }
 ]
