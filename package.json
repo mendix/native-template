@@ -20,7 +20,7 @@
     "@react-navigation/native": "6.1.6",
     "react-native": "0.73.8",
     "react-native-device-info": "11.1.0",
-    "react-native-fast-image": "8.3.2",
+    "react-native-fast-image": "8.6.3",
     "react-native-gesture-handler": "2.16.2",
     "react-native-image-picker": "5.0.1",
     "react-native-localize": "1.4.2",
