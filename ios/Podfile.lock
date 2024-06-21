@@ -43,9 +43,9 @@ PODS:
     - GoogleUtilities/Logger (~> 7.8)
   - FirebaseCoreExtension (10.5.0):
     - FirebaseCore (~> 10.0)
-  - FirebaseCoreInternal (10.27.0):
+  - FirebaseCoreInternal (10.28.0):
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
-  - FirebaseInstallations (10.27.0):
+  - FirebaseInstallations (10.28.0):
     - FirebaseCore (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
     - GoogleUtilities/UserDefaults (~> 7.8)
@@ -1008,14 +1008,10 @@ PODS:
   - react-native-sqlite-storage (7.1.0):
     - React-Core
     - SQLCipher
-  - react-native-video (6.1.2):
-    - glog
-    - RCT-Folly (= 2022.05.16.00)
+  - react-native-video (5.2.1):
     - React-Core
-    - react-native-video/Video (= 6.1.2)
-  - react-native-video/Video (6.1.2):
-    - glog
-    - RCT-Folly (= 2022.05.16.00)
+    - react-native-video/Video (= 5.2.1)
+  - react-native-video/Video (5.2.1):
     - React-Core
   - React-nativeconfig (0.73.8)
   - React-NativeModulesApple (0.73.8):
@@ -1190,12 +1186,12 @@ PODS:
     - React-Core
   - RNDateTimePicker (3.0.3):
     - React-Core
-  - RNDeviceInfo (8.0.1):
+  - RNDeviceInfo (11.1.0):
     - React-Core
-  - RNFastImage (8.3.2):
-    - React
-    - SDWebImage (~> 5.8)
-    - SDWebImageWebPCoder (~> 0.6.1)
+  - RNFastImage (8.6.3):
+    - React-Core
+    - SDWebImage (~> 5.11.1)
+    - SDWebImageWebPCoder (~> 0.8.4)
   - RNFBApp (17.3.0):
     - Firebase/CoreOnly (= 10.5.0)
     - React-Core
@@ -1214,23 +1210,22 @@ PODS:
     - React-Core
   - RNReanimated (1.13.1):
     - React
-  - RNScreens (3.31.1):
+  - RNScreens (3.29.0):
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
-    - React-RCTImage
   - RNSVG (12.1.0):
     - React
   - RNVectorIcons (10.0.3):
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
-  - SDWebImage (5.19.2):
-    - SDWebImage/Core (= 5.19.2)
-  - SDWebImage/Core (5.19.2)
-  - SDWebImageWebPCoder (0.6.1):
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SDWebImageWebPCoder (0.8.5):
     - libwebp (~> 1.0)
-    - SDWebImage/Core (~> 5.7)
+    - SDWebImage/Core (~> 5.10)
   - SocketRocket (0.6.1)
   - SQLCipher (4.6.0):
     - SQLCipher/standard (= 4.6.0)
@@ -1499,8 +1494,8 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: 6f7430030cb6b22fe1db2e3bed782e999b76dc00
   FirebaseCore: 324b8d182d9ff7e3f6d1fa2f04b082d1c7a3e366
   FirebaseCoreExtension: d9fa427f1ae1edccf2368ce5e8d567e4c1f0ebc8
-  FirebaseCoreInternal: 4b297a2d56063dbea2c1d0d04222d44a8d058862
-  FirebaseInstallations: 766dabca09fd94aef922538aaf144cc4a6fb6869
+  FirebaseCoreInternal: 58d07f1362fddeb0feb6a857d1d1d1c5e558e698
+  FirebaseInstallations: 60c1d3bc1beef809fd1ad1189a8057a040c59f2e
   FirebaseMessaging: 35ecbbc68ff547fca80f9326c9622e79288c7149
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
@@ -1540,7 +1535,7 @@ SPEC CHECKSUMS:
   react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-sqlite-storage: 7697e1df2125d556c58de9d9764549195b25afcf
-  react-native-video: 88cf186299aa6c3e4fb54aa1bc99267bf99c2b91
+  react-native-video: c26780b224543c62d5e1b2a7244a5cd1b50e8253
   React-nativeconfig: 2e44d0d2dd222b12a5183f4bcaa4a91881497acb
   React-NativeModulesApple: 464a9590389efd364d45d726a35ef7ade6b5c59a
   React-perflogger: f9367428cf475f4606b5965c1d5a71781bb95299
@@ -1566,19 +1561,19 @@ SPEC CHECKSUMS:
   RNCPicker: 0bf8ef8f7800524f32d2bb2a8bcadd53eda0ecd1
   RNCPushNotificationIOS: 87b8d16d3ede4532745e05b03c42cff33a36cc45
   RNDateTimePicker: 6f62fd42ac8b58bcc30c43ac3620e5097e8a227f
-  RNDeviceInfo: 921a809eaf9de79645a24de1c6ca90db6cb91786
-  RNFastImage: e19ba191922e7dab9d932a4d59d62d76660aa222
+  RNDeviceInfo: b899ce37a403a4dea52b7cb85e16e49c04a5b88e
+  RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
   RNFBApp: 13ca8ba0feba98d4bac2057884894dcf8eedf97f
   RNFBMessaging: 0bdc8269fefad36f6820d6fc89b0bcae3f705891
   RNGestureHandler: 96439cf6543defdde87459e48cd1a3f0e45a008e
   RNLocalize: 452d4118e338dee1e5ca3fac4d5a11a4ab26a46a
   RNPermissions: 34d678157c800b25b22a488e4d8babb57456e796
   RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
-  RNScreens: 134a7511b12b8eb440b87aac21e36a71295d6024
+  RNScreens: 17e2f657f1b09a71ec3c821368a04acbb7ebcb46
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   RNVectorIcons: 73ab573085f65a572d3b6233e68996d4707fd505
-  SDWebImage: dfe95b2466a9823cf9f0c6d01217c06550d7b29a
-  SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   SQLCipher: 30a8e81afa6128e600b17ffa77d0f92fa05ed208
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
