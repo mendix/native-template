@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreeleased]
 
-## [8.0.9] - 2024-06-24
+### [8.0.10] - 2024-06-24
 
 - We have fixed synchronization issue between encrypting-decrypting files.
 - We have upgraded the @mendix/native dependency to the latest compatible version.
