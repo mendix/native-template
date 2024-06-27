@@ -6,16 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreeleased]
 
-## [8.0.9] - 2024-06-24
+## [8.0.10] - 2024-06-24
 
 - We have fixed synchronization issue between encrypting-decrypting files.
 - We have upgraded the @mendix/native dependency to the latest compatible version.
 
-### [8.0.8] - 2024-05-28
+## [8.0.8] - 2024-05-28
 
 - We have fixed issue on scheduling local notifications on Android 14
 
-### [8.0.7] - 2024-05-15
+## [8.0.7] - 2024-05-15
 
 - We have resolved a build error related to Flipper on Xcode 15.3.
 - We've added the support of scheduling local notifications on Android 14
