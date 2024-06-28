@@ -1,5 +1,17 @@
 [
     {
+        "id": 163002177,
+        "tag_name": "v7.0.14",
+        "name": "Release 7.0.14",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We've fixed an issue with cookies encryption. If you still run into a problem, please logout & login or clear the app cache.",
+        "created_at": "2024-06-28T13:49:49Z",
+        "published_at": "2024-06-28T13:50:54Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.14",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.14"
+    },
+    {
         "id": 162093518,
         "tag_name": "v8.0.10",
         "name": "Release 8.0.10",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-10-04T10:30:36Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.6",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.6"
-    },
-    {
-        "id": 50302421,
-        "tag_name": "v6.2.5",
-        "name": "Update AppCenter configuration to XCode 13",
-        "draft": false,
-        "prerelease": false,
-        "body": "## Description\r\nWith the release of iOS 15 it is required to re-compile apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.",
-        "created_at": "2021-09-22T16:35:39Z",
-        "published_at": "2021-09-27T08:47:02Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.5",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.5"
     }
 ]
