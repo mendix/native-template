@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We've fixed an issue with cookies encryption. If you still run into a problem, please logout & login or clear the app cache.
+
 # [7.0.13] - 2024-06-05
 
 - We enhanced encrypted file sync on Android.
