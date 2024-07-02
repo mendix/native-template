@@ -6,10 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have upgraded `@mendix/native` to 3.1.5
+
+## [8.2.2] - 2024-05-29
+
 - We have upgraded `react-native-gesture-handler` to 2.16.2
 - We have upgraded `@mendix/native` to 3.1.4
 
-## [8.2.1]
+## [8.2.1] - 2024-05-27
 
 - We have removed Flipper from iOS Podfile
 - We've added the support of scheduling local notifications on Android 14

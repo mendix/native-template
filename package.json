@@ -1,13 +1,13 @@
 {
   "name": "native-template",
-  "version": "8.2.2",
+  "version": "8.2.3",
   "private": true,
   "scripts": {
     "postinstall": "node patches/apply-patches.js && jetify",
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
-    "@mendix/native": "3.1.4",
+    "@mendix/native": "3.1.5",
     "@mendix/react-native-sqlite-storage": "^7.1.0",
     "@react-native-community/async-storage": "1.12.1",
     "@react-native-community/cameraroll": "4.0.1",
