@@ -6,9 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [8.2.5] - 2024-07-05
+
 - We have updated the @mendix/native dependency to fix the encryption issue.
 
-## [8.2.3] - 2024-06-7
+## [8.2.3] - 2024-06-07
 
 - We have upgraded `@mendix/native` to 3.1.5
 
