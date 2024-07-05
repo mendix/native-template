@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - We have updated the @mendix/native dependency to fix the encryption issue.
 
+## [8.2.3] - 2024-06-7
+
+- We have upgraded `@mendix/native` to 3.1.5
+
 ## [8.2.2] - 2024-05-29
 
 - We have upgraded `react-native-gesture-handler` to 2.16.2
