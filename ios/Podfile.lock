@@ -997,6 +997,8 @@ PODS:
     - React
   - react-native-image-picker (5.0.1):
     - React-Core
+  - react-native-netinfo (11.3.2):
+    - React-Core
   - react-native-pager-view (6.3.0):
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1272,6 +1274,7 @@ DEPENDENCIES:
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - "react-native-cameraroll (from `../node_modules/@react-native-community/cameraroll`)"
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
+  - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
@@ -1400,6 +1403,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/cameraroll"
   react-native-image-picker:
     :path: "../node_modules/react-native-image-picker"
+  react-native-netinfo:
+    :path: "../node_modules/@react-native-community/netinfo"
   react-native-pager-view:
     :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
@@ -1531,6 +1536,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: 672a9342eb75a4d0663306e94d4dfc88aee73b93
   react-native-cameraroll: 60ba0068826eab1c8d43146191bafd4363ea58a7
   react-native-image-picker: 8cb4280e2c1efc3daeb2d9d597f9429a60472e40
+  react-native-netinfo: 076df4f9b07f6670acf4ce9a75aac8d34c2e2ccc
   react-native-pager-view: 0eb900a8c5d83c02a74b0125d4b5f9fdcc5b8f44
   react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
