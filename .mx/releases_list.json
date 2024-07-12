@@ -1,5 +1,17 @@
 [
     {
+        "id": 165191733,
+        "tag_name": "v9.0.0",
+        "name": "Release 9.0.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Added\r\n\r\n- We have upgrade react-native to version 0.73.8.",
+        "created_at": "2024-07-12T13:32:12Z",
+        "published_at": "2024-07-12T13:33:15Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v9.0.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v9.0.0"
+    },
+    {
         "id": 164126664,
         "tag_name": "v8.2.5",
         "name": "Release 8.2.5",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-10-14T17:56:29Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.7-alpha.3",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.7-alpha.3"
-    },
-    {
-        "id": 51036003,
-        "tag_name": "v6.2.7-alpha.2",
-        "name": "",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2021-10-08T13:33:09Z",
-        "published_at": "2021-10-08T13:33:38Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.7-alpha.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.7-alpha.2"
     }
 ]
