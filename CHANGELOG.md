@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- We have upgrade react-native to version 0.73.8.
+
 ## [8.2.5] - 2024-07-05
 
 - We have updated the @mendix/native dependency to fix the encryption issue.
