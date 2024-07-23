@@ -843,7 +843,7 @@
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 				);
 				INFOPLIST_FILE = NativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -901,7 +901,7 @@
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 				);
 				INFOPLIST_FILE = NativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1101,7 +1101,7 @@
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 				);
 				INFOPLIST_FILE = NativeTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
