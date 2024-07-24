@@ -2,10 +2,11 @@
 
 buildscript {
     ext {
-        buildToolsVersion = "33.0.0"
+        buildToolsVersion = "34.0.0"
         minSdkVersion = 21
-        compileSdkVersion = 33
-        targetSdkVersion = 33
+        compileSdkVersion = 34
+        targetSdkVersion = 34
+        kotlinVersion = "1.7.21"
         kotlin_version = "1.7.21"
         excludeAppGlideModule = true
         androidx_lifecycle_version = "2.3.1"
@@ -30,7 +31,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:7.4.0"
         classpath "com.facebook.react:react-native-gradle-plugin"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         apply from: file("../node_modules/@mendix/native/androidlib/mendix.gradle"); applyMendixClassPaths(project)
 
         // NOTE: Do not place your application dependencies here; they belong
