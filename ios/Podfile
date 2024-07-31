@@ -108,6 +108,12 @@ post_install do |installer|
         end
       end
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', '_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION']
+      
+      # Specify Swift Version=5.0 for resolving archieve errors.
+      if target.name == 'react-native-video'
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+      end
+
     end
   end
   # Ensure deployment_target is set correctly for all projects
