@@ -1,0 +1,22 @@
+diff --git a/node_modules/react-native-video/android-exoplayer/src/main/java/com/brentvatne/exoplayer/ReactExoplayerView.java b/node_modules/react-native-video/android-exoplayer/src/main/java/com/brentvatne/exoplayer/ReactExoplayerView.java
+index fe95fdf..dc0422a 100644
+--- a/node_modules/react-native-video/android-exoplayer/src/main/java/com/brentvatne/exoplayer/ReactExoplayerView.java
++++ b/node_modules/react-native-video/android-exoplayer/src/main/java/com/brentvatne/exoplayer/ReactExoplayerView.java
+@@ -327,7 +327,7 @@ class ReactExoplayerView extends FrameLayout implements
+         });
+ 
+         //Handling the playButton click event
+-        ImageButton playButton = playerControlView.findViewById(R.id.exo_play);
++        ImageButton playButton = playerControlView.findViewById(com.google.android.exoplayer2.R.id.exo_play);
+         playButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+@@ -339,7 +339,7 @@ class ReactExoplayerView extends FrameLayout implements
+         });
+ 
+         //Handling the pauseButton click event
+-        ImageButton pauseButton = playerControlView.findViewById(R.id.exo_pause);
++        ImageButton pauseButton = playerControlView.findViewById(com.google.android.exoplayer2.R.id.exo_pause);
+         pauseButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
