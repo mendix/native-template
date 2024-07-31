@@ -85,7 +85,6 @@ post_install do |installer|
     :mac_catalyst_enabled => false
   )
 
-  __apply_Xcode_12_5_M1_post_install_workaround(installer)
 
   installer.pods_project.build_configurations.each do |config|
     config.build_settings['ENABLE_BITCODE'] = 'YES'
