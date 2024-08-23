@@ -20,7 +20,7 @@
     "jsc-android": "245459.0.0",
     "react": "~16.9.0",
     "react-native": "0.61.5",
-    "react-native-ble-plx": "1.1.1",
+    "react-native-ble-plx": "2.0.3",
     "react-native-calendar-events": "1.7.3",
     "react-native-camera": "3.19.2",
     "react-native-code-push": "6.4.1",
