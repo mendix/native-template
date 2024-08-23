@@ -1,11 +1,23 @@
 [
     {
+        "id": 171630581,
+        "tag_name": "v5.2.20",
+        "name": "Release 5.2.20",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #855 from mendix/chore/fix-pipeline (ed142f5)",
+        "created_at": "2024-08-23T09:22:19Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 168249604,
         "tag_name": "v8.2.6",
         "name": "Release 8.2.6",
         "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #849 from mendix/moo/chore/update-build-tools-version-10.12 (b456e21)",
+        "body": "### Improvements\r\n\r\n* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.",
         "created_at": "2024-08-01T13:41:13Z",
         "published_at": "2024-08-02T13:18:49Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.6",
@@ -17,7 +29,7 @@
         "name": "Release 8.0.14",
         "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #847 from mendix/moo/chore/update-build-tools-version-10.6 (b99774f)",
+        "body": "### Improvements\r\n\r\n* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.",
         "created_at": "2024-08-01T13:39:55Z",
         "published_at": "2024-08-02T13:18:42Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.14",
@@ -29,7 +41,7 @@
         "name": "Release 7.0.15",
         "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #846 from mendix/moo/chore/update-build-tools-version-9.24 (6ea09d7)",
+        "body": "### Improvements\r\n\r\n* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.",
         "created_at": "2024-08-01T13:13:33Z",
         "published_at": "2024-08-02T13:18:34Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.15",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-11-05T08:25:30Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.7",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.7"
-    },
-    {
-        "id": 52513333,
-        "tag_name": "v5.2.6",
-        "name": "Android login behaviour bug fix",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We fixed a bug on Android that would not allow an app to reload correctly after the first login.",
-        "created_at": "2021-11-02T11:55:04Z",
-        "published_at": "2021-11-02T11:57:19Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.6"
     }
 ]
