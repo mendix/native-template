@@ -1,15 +1,63 @@
 [
     {
-        "id": 168242901,
-        "tag_name": "v7.0.15",
-        "name": "Release 7.0.15",
+        "id": 171630581,
+        "tag_name": "v5.2.20",
+        "name": "Release 5.2.20",
         "draft": true,
         "prerelease": false,
-        "body": "* Merge pull request #846 from mendix/moo/chore/update-build-tools-version-9.24 (6ea09d7)",
-        "created_at": "2024-08-01T13:13:33Z",
+        "body": "* Merge pull request #855 from mendix/chore/fix-pipeline (ed142f5)",
+        "created_at": "2024-08-23T09:22:19Z",
         "published_at": null,
         "tarball_url": null,
         "zipball_url": null
+    },
+    {
+        "id": 172541945,
+        "tag_name": "v7.0.16",
+        "name": "Release 7.0.16",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We've resolved a build error related to Flipper on Xcode 15.3",
+        "created_at": "2024-08-29T11:39:13Z",
+        "published_at": "2024-08-29T11:41:05Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.16",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.16"
+    },
+    {
+        "id": 168249604,
+        "tag_name": "v8.2.6",
+        "name": "Release 8.2.6",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Improvements\r\n\r\n* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.",
+        "created_at": "2024-08-01T13:41:13Z",
+        "published_at": "2024-08-02T13:18:49Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.6",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.6"
+    },
+    {
+        "id": 168249156,
+        "tag_name": "v8.0.14",
+        "name": "Release 8.0.14",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Improvements\r\n\r\n* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.",
+        "created_at": "2024-08-01T13:39:55Z",
+        "published_at": "2024-08-02T13:18:42Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.14",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.14"
+    },
+    {
+        "id": 168242901,
+        "tag_name": "v7.0.15",
+        "name": "Release 7.0.15",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Improvements\r\n\r\n* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.",
+        "created_at": "2024-08-01T13:13:33Z",
+        "published_at": "2024-08-02T13:18:34Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.15",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.15"
     },
     {
         "id": 165191733,
@@ -1150,53 +1198,5 @@
         "published_at": "2021-11-05T08:39:47Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.8",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.8"
-    },
-    {
-        "id": 52765836,
-        "tag_name": "v5.2.7",
-        "name": "Fix for the OpenURL and CallPhoneNumber javascript action on Android 11+ ",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description\r\n\r\nWe identified and added a missing configuration that was failing the `OpenURL` and `CallPhoneNumber` javascript action on Android 11+ devices. Without it, the actions will fail.\r\n\r\n### Fixes\r\n- We fixed an issue with the `OpenURL` and `CallPhoneNumber` javascript actions on Android 11+ devices.\r\n",
-        "created_at": "2021-11-05T08:20:28Z",
-        "published_at": "2021-11-05T08:25:30Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.7",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.7"
-    },
-    {
-        "id": 52513333,
-        "tag_name": "v5.2.6",
-        "name": "Android login behaviour bug fix",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We fixed a bug on Android that would not allow an app to reload correctly after the first login.",
-        "created_at": "2021-11-02T11:55:04Z",
-        "published_at": "2021-11-02T11:57:19Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.6"
-    },
-    {
-        "id": 52009736,
-        "tag_name": "v6.2.7",
-        "name": "Mendix over the air update support",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Mendix over the air update support\r\n\r\nWith Mendix Studio Pro 9.7, Mendix added a new over the air update mechanism. With this new mechanism it's possible to update your apps directly via the runtime of your project and there's no need for 3rd party services. [Read More on the updated OTA how-to docs.](https://docs.mendix.com/howto/mobile/how-to-ota)\r\n\r\n### Fixes\r\n- We fixed bugs and optimised performance.",
-        "created_at": "2021-10-25T21:23:43Z",
-        "published_at": "2021-10-25T21:28:38Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.7",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.7"
-    },
-    {
-        "id": 52010048,
-        "tag_name": "v5.2.5",
-        "name": "Android improvements",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\nWe improved the Sqlite database lifecycle on Android. This should remove the possibility for dead locks when the application is being restarted, for instance after an over the air update. ",
-        "created_at": "2021-10-25T21:31:32Z",
-        "published_at": "2021-10-25T21:34:11Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.5",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.5"
     }
 ]
