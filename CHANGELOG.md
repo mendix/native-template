@@ -6,7 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- We've fixed an issue with cookies encryption. If you still run into a problem, please logout & login or clear the app cache.
+- We've resolved a build error related to Flipper on Xcode 15.3.
+
+# [7.0.15] - 2024-08-1
+
+- Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.
+
+# [7.0.14] - 2024-06-28
+
+- We enhanced encrypted file sync on Android.
 
 # [7.0.13] - 2024-06-05
 
