@@ -9,7 +9,7 @@ require Pod::Executable.execute_command('node', ['-p',
 
 require_relative './mendix_utils'
 
-deployment_target = min_ios_version_supported
+deployment_target = '13.4'
 platform :ios, deployment_target
 
 prepare_react_native_project!
@@ -109,6 +109,10 @@ post_install do |installer|
         end
       end
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', '_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION']
+      # Specify 'Swift Version: 5.0' for resolving archieve errors.
+      if target.name == 'react-native-video'
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+      end
     end
   end
   # Ensure deployment_target is set correctly for all projects

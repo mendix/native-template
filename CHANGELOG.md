@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [8.2.8] - 2024-08-30
+
+- We have upgraded `react-native-video` to 6.4.5
+
 - We have updated the @mendix/native dependency to fix the encryption issue.
 
 ## [8.2.3] - 2024-06-7
