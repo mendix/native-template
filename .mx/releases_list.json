@@ -1,17 +1,5 @@
 [
     {
-        "id": 173246808,
-        "tag_name": "v8.2.7",
-        "name": "Release 8.2.7",
-        "draft": true,
-        "prerelease": false,
-        "body": "* Merge pull request #863 from mendix/MOO-1516-fix-ota-ios18-10_12 (bd659ef)",
-        "created_at": "2024-09-03T15:19:03Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
-    },
-    {
         "id": 171630581,
         "tag_name": "v5.2.20",
         "name": "Release 5.2.20",
@@ -22,6 +10,18 @@
         "published_at": null,
         "tarball_url": null,
         "zipball_url": null
+    },
+    {
+        "id": 173246808,
+        "tag_name": "v8.2.7",
+        "name": "Release 8.2.7",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have fixed OTA updates compatibility issues on iOS 18.",
+        "created_at": "2024-09-03T15:19:03Z",
+        "published_at": "2024-09-03T15:20:45Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.7",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.7"
     },
     {
         "id": 173244164,
