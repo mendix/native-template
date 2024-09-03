@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have fixed OTA updates compatibility issues on iOS 18.
+
+## [8.0.14] - 2024-08-02
+
+- Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.
+
 ## [8.0.13] - 2024-07-04
 
 - We have updated the @mendix/native dependency to fix the encryption issue.
