@@ -36,6 +36,18 @@
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.7"
     },
     {
+        "id": 173248815,
+        "tag_name": "v8.0.15",
+        "name": "Release 8.0.15",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have fixed OTA updates compatibility issues on iOS 18.",
+        "created_at": "2024-09-03T15:27:54Z",
+        "published_at": "2024-09-03T15:28:43Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.15",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.15"
+    },
+    {
         "id": 173244164,
         "tag_name": "v7.0.17",
         "name": "Release 7.0.17",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-12-14T16:15:04Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.10",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.10"
-    },
-    {
-        "id": 54241309,
-        "tag_name": "v6.2.9",
-        "name": "Add encryption for token and cookie to native mobile apps",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\n\r\n* We added support for the new native mobile encryption features introduced with Mendix Studio Pro v9.8.\r\n* We added support for authentication token encryption for iOS and Android.\r\n  * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.\r\n* We added support for all cookies on Android.\r\n  * All new app-specific cookies on Android from Native Template v6.2.9 and above will be automatically encrypted independently of the Studio Pro 9 minor version.\r\n\r\n### Fixes\r\n\r\n* We added file storage support for Android 30 to address the camera roll dependency.",
-        "created_at": "2021-11-29T13:31:23Z",
-        "published_at": "2021-11-29T13:51:23Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.9",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.9"
     }
 ]
