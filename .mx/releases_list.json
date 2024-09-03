@@ -12,6 +12,18 @@
         "zipball_url": null
     },
     {
+        "id": 173247867,
+        "tag_name": "v9.0.1",
+        "name": "Release 9.0.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have fixed OTA updates compatibility issues on iOS 18.",
+        "created_at": "2024-09-03T15:23:16Z",
+        "published_at": "2024-09-03T15:23:42Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v9.0.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v9.0.1"
+    },
+    {
         "id": 173246808,
         "tag_name": "v8.2.7",
         "name": "Release 8.2.7",
@@ -1186,17 +1198,5 @@
         "published_at": "2021-11-29T13:51:23Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.9",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.9"
-    },
-    {
-        "id": 54147553,
-        "tag_name": "v6.2.9-beta.2",
-        "name": "",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2021-11-26T17:12:15Z",
-        "published_at": "2021-11-26T17:15:12Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.9-beta.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.9-beta.2"
     }
 ]
