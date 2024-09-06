@@ -437,10 +437,12 @@ PODS:
   - react-native-sqlite-storage (7.1.0):
     - React-Core
     - SQLCipher
-  - react-native-video (5.2.1):
+  - react-native-video (6.4.5):
+    - RCT-Folly (= 2021.07.22.00)
     - React-Core
-    - react-native-video/Video (= 5.2.1)
-  - react-native-video/Video (5.2.1):
+    - react-native-video/Video (= 6.4.5)
+  - react-native-video/Video (6.4.5):
+    - RCT-Folly (= 2021.07.22.00)
     - React-Core
   - React-NativeModulesApple (0.72.7):
     - React-callinvoker
@@ -571,7 +573,8 @@ PODS:
     - FirebaseCoreExtension (= 10.5.0)
     - React-Core
     - RNFBApp
-  - RNGestureHandler (2.11.0):
+  - RNGestureHandler (2.16.2):
+    - RCT-Folly (= 2021.07.22.00)
     - React-Core
   - RNLocalize (1.4.2):
     - React-Core
@@ -868,7 +871,7 @@ SPEC CHECKSUMS:
   react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-sqlite-storage: 7697e1df2125d556c58de9d9764549195b25afcf
-  react-native-video: c26780b224543c62d5e1b2a7244a5cd1b50e8253
+  react-native-video: fdcfbf66416475f8e122be9f7d72dd1d156ef3ed
   React-NativeModulesApple: 6f63747fd6e237b646c61957a8f877a2713617af
   React-perflogger: 31ea61077185eb1428baf60c0db6e2886f141a5a
   React-RCTActionSheet: 392090a3abc8992eb269ef0eaa561750588fc39d
@@ -895,7 +898,7 @@ SPEC CHECKSUMS:
   RNFastImage: e19ba191922e7dab9d932a4d59d62d76660aa222
   RNFBApp: 13ca8ba0feba98d4bac2057884894dcf8eedf97f
   RNFBMessaging: 0bdc8269fefad36f6820d6fc89b0bcae3f705891
-  RNGestureHandler: 026038a97d4c8649ce397a22e162ca58b4e6c230
+  RNGestureHandler: d678f94a8f74de70ce3d9f5d23eb0f97b686e943
   RNLocalize: 452d4118e338dee1e5ca3fac4d5a11a4ab26a46a
   RNPermissions: 34d678157c800b25b22a488e4d8babb57456e796
   RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
@@ -909,6 +912,6 @@ SPEC CHECKSUMS:
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   Yoga: 4c3aa327e4a6a23eeacd71f61c81df1bcdf677d5
 
-PODFILE CHECKSUM: 656811f8e329abb6aa1f45d77bc0740ab0602b18
+PODFILE CHECKSUM: 3c72d20d0c20b4b115759ef77785f3927ca3633e
 
 COCOAPODS: 1.15.2
