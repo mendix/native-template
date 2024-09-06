@@ -6,13 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [8.2.7] - 2024-08-30
-
 - We have upgraded `react-native-video` to 6.4.5
+
+- We have fixed OTA updates compatibility issues on iOS 18.
+
+## [8.2.6] - 2024-08-02
+
+- Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.
+
+## [8.2.5] - 2024-07-25
 
 - We have updated the @mendix/native dependency to fix the encryption issue.
 
-## [8.2.3] - 2024-06-7
+## [8.2.3] - 2024-06-07
 
 - We have upgraded `@mendix/native` to 3.1.5
 
