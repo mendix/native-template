@@ -1,5 +1,17 @@
 [
     {
+        "id": 174283713,
+        "tag_name": "v9.1.0-0",
+        "name": "Release 9.1.0-0",
+        "draft": true,
+        "prerelease": true,
+        "body": "* remove firebase packages from package.json file (2301f56)",
+        "created_at": "2024-09-10T08:46:00Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 171630581,
         "tag_name": "v5.2.20",
         "name": "Release 5.2.20",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-01-06T12:45:22Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.11",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.11"
-    },
-    {
-        "id": 55289991,
-        "tag_name": "v6.2.10",
-        "name": "Fix for Android crash when Appcenter's Codepush is enabled",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n\r\n* We fixed an issue introduced with v6.2.9, that could crash the Android app when CodePush is enabled.",
-        "created_at": "2021-12-14T16:12:44Z",
-        "published_at": "2021-12-14T16:15:04Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.10",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.10"
     }
 ]
