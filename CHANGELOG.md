@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We have fixed OTA updates compatibility issues on iOS 18.
+- We upgraded android SDK version to 35
 
 ## [9.0.0] - 2024-07-12
 
