@@ -36,7 +36,7 @@
     "react-native-svg": "12.1.0",
     "react-native-tab-view": "3.5.1",
     "react-native-vector-icons": "10.0.3",
-    "react-native-video": "5.2.1",
+    "react-native-video": "6.4.5",
     "semver": "5.7.2"
   },
   "devDependencies": {
