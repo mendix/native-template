@@ -43,9 +43,9 @@ PODS:
     - GoogleUtilities/Logger (~> 7.8)
   - FirebaseCoreExtension (10.5.0):
     - FirebaseCore (~> 10.0)
-  - FirebaseCoreInternal (10.28.0):
+  - FirebaseCoreInternal (10.29.0):
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
-  - FirebaseInstallations (10.28.0):
+  - FirebaseInstallations (10.29.0):
     - FirebaseCore (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
     - GoogleUtilities/UserDefaults (~> 7.8)
@@ -997,7 +997,7 @@ PODS:
     - React
   - react-native-image-picker (5.0.1):
     - React-Core
-  - react-native-netinfo (11.3.2):
+  - react-native-netinfo (11.4.0):
     - React-Core
   - react-native-pager-view (6.3.0):
     - glog
@@ -1010,10 +1010,14 @@ PODS:
   - react-native-sqlite-storage (7.1.0):
     - React-Core
     - SQLCipher
-  - react-native-video (5.2.1):
+  - react-native-video (6.4.5):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
     - React-Core
-    - react-native-video/Video (= 5.2.1)
-  - react-native-video/Video (5.2.1):
+    - react-native-video/Video (= 6.4.5)
+  - react-native-video/Video (6.4.5):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
     - React-Core
   - React-nativeconfig (0.73.8)
   - React-NativeModulesApple (0.73.8):
@@ -1229,10 +1233,10 @@ PODS:
     - libwebp (~> 1.0)
     - SDWebImage/Core (~> 5.10)
   - SocketRocket (0.6.1)
-  - SQLCipher (4.6.0):
-    - SQLCipher/standard (= 4.6.0)
-  - SQLCipher/common (4.6.0)
-  - SQLCipher/standard (4.6.0):
+  - SQLCipher (4.6.1):
+    - SQLCipher/standard (= 4.6.1)
+  - SQLCipher/common (4.6.1)
+  - SQLCipher/standard (4.6.1):
     - SQLCipher/common
   - SSZipArchive (2.4.3)
   - Yoga (1.14.0)
@@ -1492,18 +1496,18 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: d3f49c53809116a5d38da093a8aa78bf551aed09
-  DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
+  DoubleConversion: fea03f2699887d960129cc54bba7e52542b6f953
   FBLazyVector: df34a309e356a77581809834f6ec3fbe7153f620
   FBReactNativeSpec: bbe8b686178e5ce03d1d8a356789f211f91f31b8
   Firebase: 3d6637234ab163e31852834617b4fe1df3b7af6d
   FirebaseAnalytics: 6f7430030cb6b22fe1db2e3bed782e999b76dc00
   FirebaseCore: 324b8d182d9ff7e3f6d1fa2f04b082d1c7a3e366
   FirebaseCoreExtension: d9fa427f1ae1edccf2368ce5e8d567e4c1f0ebc8
-  FirebaseCoreInternal: 58d07f1362fddeb0feb6a857d1d1d1c5e558e698
-  FirebaseInstallations: 60c1d3bc1beef809fd1ad1189a8057a040c59f2e
+  FirebaseCoreInternal: df84dd300b561c27d5571684f389bf60b0a5c934
+  FirebaseInstallations: 913cf60d0400ebd5d6b63a28b290372ab44590dd
   FirebaseMessaging: 35ecbbc68ff547fca80f9326c9622e79288c7149
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
+  glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
   GoogleAppMeasurement: 40c70a7d89013f0eca72006c4b9732163ea4cdae
   GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
@@ -1536,12 +1540,12 @@ SPEC CHECKSUMS:
   React-Mapbuffer: 672a9342eb75a4d0663306e94d4dfc88aee73b93
   react-native-cameraroll: 60ba0068826eab1c8d43146191bafd4363ea58a7
   react-native-image-picker: 8cb4280e2c1efc3daeb2d9d597f9429a60472e40
-  react-native-netinfo: 076df4f9b07f6670acf4ce9a75aac8d34c2e2ccc
+  react-native-netinfo: e8e9cf28ede012e47603c9b35b2fa5b19b7bd71d
   react-native-pager-view: 0eb900a8c5d83c02a74b0125d4b5f9fdcc5b8f44
   react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-sqlite-storage: 7697e1df2125d556c58de9d9764549195b25afcf
-  react-native-video: c26780b224543c62d5e1b2a7244a5cd1b50e8253
+  react-native-video: 848bcb856d67585199b80fdfc93dd642d33d0ae6
   React-nativeconfig: 2e44d0d2dd222b12a5183f4bcaa4a91881497acb
   React-NativeModulesApple: 464a9590389efd364d45d726a35ef7ade6b5c59a
   React-perflogger: f9367428cf475f4606b5965c1d5a71781bb95299
@@ -1581,10 +1585,10 @@ SPEC CHECKSUMS:
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  SQLCipher: 30a8e81afa6128e600b17ffa77d0f92fa05ed208
+  SQLCipher: 77fbe633cd84db04b07876dd50766b4924b57d61
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
-  Yoga: 2a16e58450c48e110211dae1159fb114bbcdcfc0
+  Yoga: e5b887426cee15d2a326bdd34afc0282fc0486ad
 
-PODFILE CHECKSUM: 1bda1277452db12bac2549f57a931227ce8625a1
+PODFILE CHECKSUM: 08a2d1a37fd125698f40a997c6118bf26f1736fe
 
 COCOAPODS: 1.15.2
