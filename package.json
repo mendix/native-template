@@ -24,7 +24,7 @@
     "react-native-gesture-handler": "1.10.3",
     "react-native-image-picker": "5.0.1",
     "react-native-localize": "1.4.2",
-    "react-native-permissions": "3.3.1",
+    "react-native-permissions": "3.6.1",
     "react-native-push-notification": "8.1.1",
     "react-native-reanimated": "1.13.1",
     "react-native-safe-area-context": "3.1.8",
