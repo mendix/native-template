@@ -1,0 +1,27 @@
+diff --git a/node_modules/@op-engineering/op-sqlite/android/build.gradle b/node_modules/@op-engineering/op-sqlite/android/build.gradle
+index 59b472e..daffbee 100644
+--- a/node_modules/@op-engineering/op-sqlite/android/build.gradle
++++ b/node_modules/@op-engineering/op-sqlite/android/build.gradle
+@@ -166,8 +166,8 @@ android {
+   }
+   
+   compileOptions {
+-    sourceCompatibility JavaVersion.VERSION_1_8
+-    targetCompatibility JavaVersion.VERSION_1_8
++    sourceCompatibility JavaVersion.VERSION_17
++    targetCompatibility JavaVersion.VERSION_17
+   }
+ 
+   externalNativeBuild {
+--- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
++++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
+@@ -2,9 +2,7 @@ package com.op.sqlite
+ 
+ import com.facebook.react.bridge.ReactContext
+ import com.facebook.react.turbomodule.core.CallInvokerHolderImpl
+-import com.facebook.react.common.annotations.FrameworkAPI
+ 
+-@OptIn(FrameworkAPI::class)
+ class OPSQLiteBridge {
+     private external fun installNativeJsi(
+         jsContextNativePointer: Long,
