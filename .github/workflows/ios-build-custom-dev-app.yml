@@ -25,12 +25,6 @@ jobs:
       - name: npm install
         run: npm ci
 
-      - name: cache cocoapods
-        uses: actions/cache@v3
-        with:
-          path: ios/Pods
-          key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
-
       - name: pod install
         run: pod install
         working-directory: ./ios
