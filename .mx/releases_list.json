@@ -1,12 +1,12 @@
 [
     {
-        "id": 174283713,
-        "tag_name": "v9.1.0-0",
-        "name": "Release 9.1.0-0",
+        "id": 176997936,
+        "tag_name": "v9.2.0-0",
+        "name": "Release 9.2.0-0",
         "draft": true,
         "prerelease": true,
-        "body": "* remove firebase packages from package.json file (2301f56)",
-        "created_at": "2024-09-10T08:46:00Z",
+        "body": "* chore: release v9.1.0-0 (c5a6abd)",
+        "created_at": "2024-09-26T07:56:14Z",
         "published_at": null,
         "tarball_url": null,
         "zipball_url": null
