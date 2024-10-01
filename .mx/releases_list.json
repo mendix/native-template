@@ -1,5 +1,17 @@
 [
     {
+        "id": 177752469,
+        "tag_name": "v7.0.19",
+        "name": "Release 7.0.19",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #882 from mendix/update-changelog-and-version (5559a5c)",
+        "created_at": "2024-10-01T08:57:00Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 176997936,
         "tag_name": "v9.2.0-0",
         "name": "Release 9.2.0-0",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-01-25T18:07:48Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.8",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.8"
-    },
-    {
-        "id": 56534014,
-        "tag_name": "v6.2.11",
-        "name": "Fix for persisting sessions on app restart on iOS",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Summary\r\nWe identified and fixed a bug introduced with Native Template v6.2.9 and Mendix clients built with Mendix Studio Pro 9.8.0 or later and that support the new mobile encryption features. The iOS apps would wrongly clear the keychain values on each restart forcing users of the app to re-authenticate on each app restart.\r\n\r\n**Rebuilding and releasing a new iOS app with this Native Template version will solve the issue.** \r\n\r\n### Fixes\r\n\r\n- iOS apps should correctly persist the user session after each restart for clients built with Mendix Studio Pro 9.8.0 or later. (Ticket 138881)",
-        "created_at": "2022-01-06T12:33:09Z",
-        "published_at": "2022-01-06T12:45:22Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.11",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.11"
     }
 ]
