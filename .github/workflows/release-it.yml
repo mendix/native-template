@@ -19,7 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_ADMIN_TOKEN }}
         run: |
-          npm install -g release-it
+          npm install -g release-it@16.2.1
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-action"
           release-it --increment=patch --ci --github.release --github.draft --git.commitMessage="chore: release v\${version}"  --git.tagName="v\${version}"
