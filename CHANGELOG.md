@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We have fixed OTA updates compatibility issues on iOS 18.
+- We have updated `react-native-permissions` to version `3.6.1`.
 
 # [7.0.16] - 2024-08-29
 
