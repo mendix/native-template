@@ -1,17 +1,5 @@
 [
     {
-        "id": 177752469,
-        "tag_name": "v7.0.19",
-        "name": "Release 7.0.19",
-        "draft": true,
-        "prerelease": false,
-        "body": "* Merge pull request #882 from mendix/update-changelog-and-version (5559a5c)",
-        "created_at": "2024-10-01T08:57:00Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
-    },
-    {
         "id": 176997936,
         "tag_name": "v9.2.0-0",
         "name": "Release 9.2.0-0",
@@ -34,6 +22,30 @@
         "published_at": null,
         "tarball_url": null,
         "zipball_url": null
+    },
+    {
+        "id": 177975970,
+        "tag_name": "v9.0.3",
+        "name": "Release 9.0.3",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We upgraded Android SDK version to 35\r\n- We have updated `react-native-permissions` to version 4.1.5",
+        "created_at": "2024-10-02T11:18:09Z",
+        "published_at": "2024-10-02T11:19:28Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v9.0.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v9.0.3"
+    },
+    {
+        "id": 177752469,
+        "tag_name": "v7.0.19",
+        "name": "Release 7.0.19",
+        "draft": false,
+        "prerelease": false,
+        "body": "* Merge pull request #882 from mendix/update-changelog-and-version (5559a5c)",
+        "created_at": "2024-10-01T08:57:00Z",
+        "published_at": "2024-10-01T08:59:23Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.19",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.19"
     },
     {
         "id": 173247867,
@@ -1186,17 +1198,5 @@
         "published_at": "2022-01-25T18:03:56Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.12",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.12"
-    },
-    {
-        "id": 57945310,
-        "tag_name": "v5.2.8",
-        "name": "Fix for the \"Navigate To\" action on Android 11+ for Mendix 8",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We identified and fixed an issue that would stop the \"Navigate To\" action from launching Google Maps on Android OS version 11 and later.",
-        "created_at": "2022-01-25T18:05:51Z",
-        "published_at": "2022-01-25T18:07:48Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.8",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.8"
     }
 ]
