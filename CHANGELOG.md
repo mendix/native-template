@@ -6,10 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- We have upgraded `react-native-video` to 6.4.5
-- We have fixed OTA updates compatibility issues on iOS 18.
+## [9.0.3] - 2024-10-02
+
 - We upgraded android SDK version to 35
 - We have updated `react-native-permissions` to version 4.1.5
+
+## [9.0.1] - 2024-09-03
+
+- We have upgraded `react-native-video` to 6.4.5
+- We have fixed OTA updates compatibility issues on iOS 18.
 
 ## [9.0.0] - 2024-07-12
 
