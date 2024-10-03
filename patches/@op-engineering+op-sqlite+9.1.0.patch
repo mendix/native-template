@@ -1,8 +1,39 @@
 diff --git a/node_modules/@op-engineering/op-sqlite/android/build.gradle b/node_modules/@op-engineering/op-sqlite/android/build.gradle
-index 4186aa3..069fe1e 100644
+index 4186aa3..52efae1 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/build.gradle
 +++ b/node_modules/@op-engineering/op-sqlite/android/build.gradle
-@@ -171,8 +171,8 @@ android {
+@@ -27,10 +27,10 @@ def isNewArchitectureEnabled() {
+   return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
+ }
+ 
+-def useSQLCipher = false
++def useSQLCipher = true
+ def useLibsql = false
+ def useCRSQLite = false
+-def performanceMode = "0"
++def performanceMode = "2"
+ def sqliteFlags = ""
+ def enableFTS5 = false
+ def useSqliteVec = false
+@@ -38,17 +38,6 @@ def useSqliteVec = false
+ def packageJsonFile = new File("$rootDir/../package.json")
+ def packageJson = new JsonSlurper().parseText(packageJsonFile.text)
+ 
+-def opsqliteConfig = packageJson["op-sqlite"]
+-if(opsqliteConfig) {
+-  useSQLCipher = opsqliteConfig["sqlcipher"]
+-  useCRSQLite = opsqliteConfig["crsqlite"]
+-  useSqliteVec = opsqliteConfig["sqliteVec"]
+-  performanceMode = opsqliteConfig["performanceMode"] ? opsqliteConfig["performanceMode"] : ""
+-  sqliteFlags = opsqliteConfig["sqliteFlags"] ? opsqliteConfig["sqliteFlags"] : ""
+-  enableFTS5 = opsqliteConfig["fts5"]
+-  useLibsql = opsqliteConfig["libsql"]
+-}
+-
+ if(useSQLCipher) {
+   println "[OP-SQLITE] using SQLCipher 🔒"
+ } else if(useLibsql) {
+@@ -171,8 +160,8 @@ android {
    }
    
    compileOptions {
@@ -45,3 +76,36 @@ index f5a3c48..512deaa 100644
      if (!location.empty()) {
        if (location == ":memory:") {
          path = ":memory:";
+diff --git a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
+index ee168c4..94902f2 100644
+--- a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
++++ b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
+@@ -19,26 +19,15 @@ else
+ end
+ 
+ op_sqlite_config = app_package["op-sqlite"]
+-use_sqlcipher = false
++use_sqlcipher = true
+ use_crsqlite = false
+ use_libsql = false
+-performance_mode = "0"
++performance_mode = "2"
+ phone_version = false
+ sqlite_flags = ""
+ fts5 = false
+ use_sqlite_vec = false
+ 
+-if(op_sqlite_config != nil)
+-  use_sqlcipher = op_sqlite_config["sqlcipher"] == true
+-  use_crsqlite = op_sqlite_config["crsqlite"] == true
+-  use_libsql = op_sqlite_config["libsql"] == true
+-  performance_mode = op_sqlite_config["performanceMode"] || "0"
+-  phone_version = op_sqlite_config["iosSqlite"] == true
+-  sqlite_flags = op_sqlite_config["sqliteFlags"] || ""
+-  fts5 = op_sqlite_config["fts5"] == true
+-  use_sqlite_vec = op_sqlite_config["sqliteVec"] == true
+-end
+-
+ if phone_version && use_sqlcipher
+   raise "Cannot use phone embedded version and SQLCipher. SQLCipher needs to be compiled from sources with the project."
+ end
