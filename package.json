@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@mendix/native": "./mendix-native-4.0.2-beta.2.tgz",
-    "@op-engineering/op-sqlite": "8.0.2",
+    "@op-engineering/op-sqlite": "9.1.0",
     "@react-native-community/async-storage": "1.12.1",
     "@react-native-community/cameraroll": "4.0.1",
     "@react-native-community/datetimepicker": "3.0.3",

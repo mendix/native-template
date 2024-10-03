@@ -1,8 +1,8 @@
 diff --git a/node_modules/@op-engineering/op-sqlite/android/build.gradle b/node_modules/@op-engineering/op-sqlite/android/build.gradle
-index 59b472e..daffbee 100644
+index 4186aa3..069fe1e 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/build.gradle
 +++ b/node_modules/@op-engineering/op-sqlite/android/build.gradle
-@@ -166,8 +166,8 @@ android {
+@@ -171,8 +171,8 @@ android {
    }
    
    compileOptions {
@@ -13,6 +13,8 @@ index 59b472e..daffbee 100644
    }
  
    externalNativeBuild {
+diff --git a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
+index 7445a4c..2d922aa 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
 +++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
 @@ -2,9 +2,7 @@ package com.op.sqlite
@@ -25,3 +27,21 @@ index 59b472e..daffbee 100644
  class OPSQLiteBridge {
      private external fun installNativeJsi(
          jsContextNativePointer: Long,
+diff --git a/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp b/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
+index f5a3c48..512deaa 100644
+--- a/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
++++ b/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
+@@ -68,13 +68,6 @@ void install(jsi::Runtime &rt, std::shared_ptr<react::CallInvoker> invoker,
+           options.getProperty(rt, "encryptionKey").asString(rt).utf8(rt);
+     }
+ 
+-#ifdef OP_SQLITE_USE_SQLCIPHER
+-    if (encryptionKey.empty()) {
+-      throw std::runtime_error(
+-          "[OP SQLite] using SQLCipher encryption key is required");
+-    }
+-#endif
+-
+     if (!location.empty()) {
+       if (location == ":memory:") {
+         path = ":memory:";
