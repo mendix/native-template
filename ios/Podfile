@@ -23,7 +23,7 @@ def common_pods
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
     # you should disable the next line.
-    :flipper_configuration => FlipperConfiguration.enabled(["Debug"], {'Flipper' => '0.189.0' , 'Flipper-DoubleConversion' => '1.1.7'}),
+    # :flipper_configuration => FlipperConfiguration.enabled(["Debug"], {'Flipper' => '0.189.0' , 'Flipper-DoubleConversion' => '1.1.7'}),
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
@@ -40,13 +40,15 @@ def common_pods
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
 
+  # The pods listed in this section are essential for the application to function correctly.
+  # These pods are added by Native Builder UI (NBUI) and should not be modified under any circumstances.
+  # Do not make any changes to the pods in this section.
+  # REQUIRED PODS START
+
   # Required MendixNative dependency
   pod 'SSZipArchive'
 
-  # Required for Push notifications
-  pod 'Firebase', :modular_headers => true
-  pod 'FirebaseCore', :modular_headers => true
-  pod 'GoogleUtilities', :modular_headers => true
+  # REQUIRED PODS END
 end
 
 def patch_flipper_xcode_15_3

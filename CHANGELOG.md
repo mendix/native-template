@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application.
+
 - We have updated `react-native-permissions` to version `3.6.1`.
 
 # [7.0.17] - 2024-09-03
