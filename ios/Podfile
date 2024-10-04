@@ -60,11 +60,6 @@ def common_pods
   # Third party dependencies of dependencies
   pod 'IQKeyboardManager'
 
-  # At least one permission must be added when `react-native-permissions` used
-  permissions_path = '../node_modules/react-native-permissions/ios'
-  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
-  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
-
   # The pods listed in this section are essential for the application to function correctly.
   # These pods are added by Native Builder UI (NBUI) and should not be modified under any circumstances.
   # Do not make any changes to the pods in this section.
