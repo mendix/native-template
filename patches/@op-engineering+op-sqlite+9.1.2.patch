@@ -1,8 +1,14 @@
 diff --git a/node_modules/@op-engineering/op-sqlite/android/build.gradle b/node_modules/@op-engineering/op-sqlite/android/build.gradle
-index 4186aa3..52efae1 100644
+index 4186aa3..242dd95 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/build.gradle
 +++ b/node_modules/@op-engineering/op-sqlite/android/build.gradle
-@@ -27,10 +27,10 @@ def isNewArchitectureEnabled() {
+@@ -1,5 +1,4 @@
+ import java.nio.file.Paths
+-import groovy.json.JsonSlurper
+ 
+ buildscript {
+   repositories {
+@@ -27,28 +26,14 @@ def isNewArchitectureEnabled() {
    return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
  }
  
@@ -15,10 +21,10 @@ index 4186aa3..52efae1 100644
  def sqliteFlags = ""
  def enableFTS5 = false
  def useSqliteVec = false
-@@ -38,17 +38,6 @@ def useSqliteVec = false
- def packageJsonFile = new File("$rootDir/../package.json")
- def packageJson = new JsonSlurper().parseText(packageJsonFile.text)
  
+-def packageJsonFile = new File("$rootDir/../package.json")
+-def packageJson = new JsonSlurper().parseText(packageJsonFile.text)
+-
 -def opsqliteConfig = packageJson["op-sqlite"]
 -if(opsqliteConfig) {
 -  useSQLCipher = opsqliteConfig["sqlcipher"]
@@ -33,7 +39,7 @@ index 4186aa3..52efae1 100644
  if(useSQLCipher) {
    println "[OP-SQLITE] using SQLCipher 🔒"
  } else if(useLibsql) {
-@@ -171,8 +160,8 @@ android {
+@@ -171,8 +156,8 @@ android {
    }
    
    compileOptions {
@@ -77,13 +83,23 @@ index f5a3c48..512deaa 100644
        if (location == ":memory:") {
          path = ":memory:";
 diff --git a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
-index ee168c4..94902f2 100644
+index ee168c4..103e3bf 100644
 --- a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
 +++ b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
-@@ -19,26 +19,15 @@ else
- end
+@@ -9,36 +9,16 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1
+ fabric_enabled = ENV['RCT_NEW_ARCH_ENABLED'] == '1'
  
- op_sqlite_config = app_package["op-sqlite"]
+ parent_folder_name = File.basename(__dir__)
+-app_package = nil
+-# for development purposes on user machines the podspec should be able to read the package.json from the root folder
+-# since it lives inside node_modules/@op-engineering/op-sqlite
+-if __dir__.include?("node_modules")
+-  app_package = JSON.parse(File.read(File.join(__dir__, "..", "..", "..", "package.json")))
+-else
+-  app_package = JSON.parse(File.read(File.join(__dir__, "example", "package.json")))
+-end
+ 
+-op_sqlite_config = app_package["op-sqlite"]
 -use_sqlcipher = false
 +use_sqlcipher = true
  use_crsqlite = false
