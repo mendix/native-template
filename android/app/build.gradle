@@ -135,7 +135,8 @@ dependencies {
         implementation jscFlavor
         implementation "org.webkit:android-jsc:r174650"
     }
-
+    
+    implementation project(':react-native-localize')
     implementation project(":react-native-splash-screen")
     implementation project(":mendixnative-release")
 
