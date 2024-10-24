@@ -100,7 +100,7 @@ index 7445a4c..3ec88ef 100644
      )
      private external fun clearStateNativeJsi()
  
-+    private external fun deleteAllDBsJsi()
++    private external fun deleteAllDBsJsi(): Boolean
 +
      fun install(context: ReactContext) {
          val jsContextPointer = context.javaScriptContextHolder!!.get()
