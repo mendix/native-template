@@ -21,7 +21,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-ios/.xcode.env.local
+**/.xcode.env.local
 
 # Android/IntelliJ
 #
@@ -35,7 +35,7 @@ local.properties
 
 # iOS
 # 
-ios/Pods/
+**/Pods/
 ios/MendixAppDelegate.m
 
 # node.js
