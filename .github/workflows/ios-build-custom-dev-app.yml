@@ -12,30 +12,25 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: switch XCode to 14.3.1
         run: | 
           sudo xcode-select -s /Applications/Xcode_14.3.1.app
-
       - name: actions/setup-node
         uses: actions/setup-node@v3
         with:
           node-version: "16.14.2"
-
       - name: npm install
         run: npm ci
-
       - name: pod install
         run: pod install
         working-directory: ./ios
-
       - name: appcenter prebuilt script test
         shell: bash
         working-directory: ./
         run: |
           chmod +x ./appcenter-pre-build.sh
           APPCENTER_XCODE_SCHEME="nativeTemplate" APPCENTER_SOURCE_DIRECTORY="./" IS_DEV_APP=False ./appcenter-pre-build.sh
-
       - name: iOS Build Action
         uses: yukiarrr/ios-build-action@v1.5.0
         with:
