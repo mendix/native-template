@@ -16,10 +16,10 @@ index 9a38143..4bd33b4 100644
  }
  
 diff --git a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-index aa0abfe..481c817 100644
+index 62131f5..78372ec 100644
 --- a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
 +++ b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-@@ -283,6 +283,10 @@ - (void)displayDidRefresh:(CADisplayLink *)displayLink
+@@ -282,6 +282,10 @@ static NSUInteger RCTDeviceFreeMemory(void)
  
  - (void)displayLayer:(CALayer *)layer
  {
@@ -31,7 +31,7 @@ index aa0abfe..481c817 100644
      layer.contentsScale = self.animatedImageScale;
      layer.contents = (__bridge id)_currentFrame.CGImage;
 diff --git a/node_modules/react-native/React/Base/RCTKeyCommands.m b/node_modules/react-native/React/Base/RCTKeyCommands.m
-index 1ceaf6e..6c3b75a 100644
+index 19ef5b1..b5653aa 100644
 --- a/node_modules/react-native/React/Base/RCTKeyCommands.m
 +++ b/node_modules/react-native/React/Base/RCTKeyCommands.m
 @@ -18,11 +18,11 @@
@@ -51,7 +51,7 @@ index 1ceaf6e..6c3b75a 100644
  
  @end
  
-@@ -116,16 +116,16 @@ - (void)handleKeyUIEventSwizzle:(UIEvent *)event
+@@ -116,16 +116,16 @@ RCT_NOT_IMPLEMENTED(-(instancetype)init)
    UIKeyModifierFlags modifierFlags = 0;
    BOOL isKeyDown = NO;
  
@@ -91,7 +91,7 @@ diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 index bd4075c..6a518c3 100644
 --- a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 +++ b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-@@ -209,12 +209,12 @@ - (void)addHandler:(id<RCTPackagerClientMethod>)handler forMethod:(NSString *)me
+@@ -209,12 +209,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
    dispatch_queue_t queue =
        [handler respondsToSelector:@selector(methodQueue)] ? [handler methodQueue] : dispatch_get_main_queue();
  
@@ -110,26 +110,3 @@ index bd4075c..6a518c3 100644
    [self
        addRequestHandler:^(NSDictionary<NSString *, id> *request, RCTPackagerClientResponder *responder) {
          [handler handleRequest:request withResponder:responder];
-diff --git a/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp b/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
-index 906ca7c..f89717d 100644
---- a/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
-+++ b/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
-@@ -387,12 +387,12 @@ JSCRuntime::~JSCRuntime() {
-   // has started.
-   ctxInvalid_ = true;
-   JSGlobalContextRelease(ctx_);
--#ifndef NDEBUG
--  assert(
--      objectCounter_ == 0 && "JSCRuntime destroyed with a dangling API object");
--  assert(
--      stringCounter_ == 0 && "JSCRuntime destroyed with a dangling API string");
--#endif
-+// #ifndef NDEBUG
-+//   assert(
-+//       objectCounter_ == 0 && "JSCRuntime destroyed with a dangling API object");
-+//   assert(
-+//       stringCounter_ == 0 && "JSCRuntime destroyed with a dangling API string");
-+// #endif
- }
- 
- std::shared_ptr<const jsi::PreparedJavaScript> JSCRuntime::prepareJavaScript(
