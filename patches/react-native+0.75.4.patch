@@ -16,10 +16,10 @@ index 9a38143..4bd33b4 100644
  }
  
 diff --git a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-index 62131f5..5ce17e6 100644
+index 62131f5..78372ec 100644
 --- a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
 +++ b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-@@ -282,6 +282,10 @@ - (void)displayDidRefresh:(CADisplayLink *)displayLink
+@@ -282,6 +282,10 @@ static NSUInteger RCTDeviceFreeMemory(void)
  
  - (void)displayLayer:(CALayer *)layer
  {
@@ -51,7 +51,7 @@ index 19ef5b1..b5653aa 100644
  
  @end
  
-@@ -116,16 +116,16 @@ - (void)handleKeyUIEventSwizzle:(UIEvent *)event
+@@ -116,16 +116,16 @@ RCT_NOT_IMPLEMENTED(-(instancetype)init)
    UIKeyModifierFlags modifierFlags = 0;
    BOOL isKeyDown = NO;
  
@@ -91,7 +91,7 @@ diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 index bd4075c..6a518c3 100644
 --- a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 +++ b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-@@ -209,12 +209,12 @@ - (void)addHandler:(id<RCTPackagerClientMethod>)handler forMethod:(NSString *)me
+@@ -209,12 +209,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
    dispatch_queue_t queue =
        [handler respondsToSelector:@selector(methodQueue)] ? [handler methodQueue] : dispatch_get_main_queue();
  
@@ -110,26 +110,3 @@ index bd4075c..6a518c3 100644
    [self
        addRequestHandler:^(NSDictionary<NSString *, id> *request, RCTPackagerClientResponder *responder) {
          [handler handleRequest:request withResponder:responder];
-diff --git a/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp b/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
-index e63260a..c1b2465 100644
---- a/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
-+++ b/node_modules/react-native/ReactCommon/jsc/JSCRuntime.cpp
-@@ -401,12 +401,12 @@ JSCRuntime::~JSCRuntime() {
-   // No need to unprotect nativeStateSymbol_ since the heap is getting torn down
-   // anyway
-   JSGlobalContextRelease(ctx_);
--#ifndef NDEBUG
--  assert(
--      objectCounter_ == 0 && "JSCRuntime destroyed with a dangling API object");
--  assert(
--      stringCounter_ == 0 && "JSCRuntime destroyed with a dangling API string");
--#endif
-+// #ifndef NDEBUG
-+//   assert(
-+//       objectCounter_ == 0 && "JSCRuntime destroyed with a dangling API object");
-+//   assert(
-+//       stringCounter_ == 0 && "JSCRuntime destroyed with a dangling API string");
-+// #endif
- }
- 
- std::shared_ptr<const jsi::PreparedJavaScript> JSCRuntime::prepareJavaScript(

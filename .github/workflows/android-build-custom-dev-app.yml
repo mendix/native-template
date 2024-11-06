@@ -29,8 +29,8 @@ jobs:
       - name: npm install
         run: npm ci
 
-      - name: Add NDK 25.1.8937393
-        run: echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;25.1.8937393"
+      - name: Add NDK 26.1.10909125
+        run: echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;26.1.10909125"
 
       - name: Build with Gradle
         run: ./gradlew assembleDevDebug
