@@ -128,14 +128,8 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     // Javascript engine
-    if (hermesEnabled.toBoolean()) {
-        implementation("com.facebook.react:hermes-android")
-    } else {
-        implementation jscFlavor
-        implementation "org.webkit:android-jsc:r174650"
-    }
-    
-    implementation project(':react-native-localize')
+    implementation("com.facebook.react:hermes-android")
+
     implementation project(":react-native-splash-screen")
     implementation project(":mendixnative-release")
 
