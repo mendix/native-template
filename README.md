@@ -1,5 +1,6 @@
 # Native Template
  
+ 
 Native Template is the starting point for any Mendix Native App project.
  
 This repo is used as the baseline for Mendix Native Mobile Builder, a GUI tool that automates the process of building your Native Apps with Mendix and is provided with Mendix Studio Pro.
