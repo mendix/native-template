@@ -1,5 +1,17 @@
 [
     {
+        "id": 185466957,
+        "tag_name": "v9.1.0",
+        "name": "Release 9.1.0",
+        "draft": true,
+        "prerelease": false,
+        "body": "* revert the version change (b773064)",
+        "created_at": "2024-11-14T16:19:38Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 185190223,
         "tag_name": "v10.0.0-0",
         "name": "Release 10.0.0-0",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-03-23T15:16:00Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.15",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.15"
-    },
-    {
-        "id": 62100367,
-        "tag_name": "v6.2.14",
-        "name": "Various hotfixes",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description\r\nThis is a re-release of v6.2.13. We identified an issue when building an iOS app with Native Template v6.2.13 which we rectified with the release of v6.2.14.\r\n\r\n### Fixes\r\n* We fixed an issue where using `react-native-async-storage` made the iOS build fail due to duplicated symbols being generated.\r\n* We fixed an issue where compiling an Android app for release would fail when building on a Windows machine.",
-        "created_at": "2022-03-17T13:02:41Z",
-        "published_at": "2022-03-17T13:03:33Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.14",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.14"
     }
 ]
