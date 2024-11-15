@@ -17,4 +17,4 @@ jobs:
         with:
           node-version: '20'
           architecture: 'x64'
-      - run: npm install
+      - run: npm ci
