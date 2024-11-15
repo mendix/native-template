@@ -1,8 +1,8 @@
 diff --git a/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPicker.java b/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPicker.java
-index 6d725ca..e8e9a72 100644
+index c9ca3d5..892fb10 100644
 --- a/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPicker.java
 +++ b/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPicker.java
-@@ -281,6 +281,28 @@ public class ReactPicker extends AppCompatSpinner {
+@@ -306,6 +306,29 @@ public class ReactPicker extends FabricEnabledPicker {
      backgroundDrawable.setColor(color);
    }
  
@@ -28,14 +28,15 @@ index 6d725ca..e8e9a72 100644
 +    }
 +  }
 +
++
    @VisibleForTesting
    public int getMode() {
      return mMode;
 diff --git a/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPickerManager.java b/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPickerManager.java
-index 0ac9387..eabb5d3 100644
+index 8cf7eee..9801c2b 100644
 --- a/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPickerManager.java
 +++ b/node_modules/@react-native-picker/picker/android/src/main/java/com/reactnativecommunity/picker/ReactPickerManager.java
-@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
+@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
  import android.view.View;
  import android.view.ViewGroup;
  import android.widget.BaseAdapter;
@@ -43,9 +44,9 @@ index 0ac9387..eabb5d3 100644
  import android.widget.Spinner;
  import android.widget.TextView;
  
-@@ -46,6 +47,9 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
-   private static final int FOCUS_PICKER = 1;
+@@ -55,6 +56,9 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
    private static final int BLUR_PICKER = 2;
+   private static final int SET_NATIVE_SELECTED = 3;
  
 +  private int borderWidth = 0;
 +  private int borderColor = Color.TRANSPARENT;
@@ -53,7 +54,7 @@ index 0ac9387..eabb5d3 100644
    @Nullable
    @Override
    public Map<String, Object> getExportedCustomBubblingEventTypeConstants() {
-@@ -116,6 +120,29 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+@@ -171,6 +175,29 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
      view.setBackgroundColor(color);
    }
  
@@ -83,7 +84,7 @@ index 0ac9387..eabb5d3 100644
    @ReactProp(name = "dropdownIconColor")
    public void setDropdownIconColor(ReactPicker view, @Nullable int color) {
      view.setDropdownIconColor(color);
-@@ -244,6 +271,10 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+@@ -319,6 +346,10 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
        ReadableMap item = getItem(position);
        @Nullable ReadableMap style = null;
        boolean enabled = true;
@@ -94,75 +95,74 @@ index 0ac9387..eabb5d3 100644
  
        if (item.hasKey("style")) {
          style = item.getMap("style");
-@@ -256,6 +287,8 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+@@ -331,6 +362,8 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
          convertView = mInflater.inflate(layoutResId, parent, false);
        }
  
 +      boolean isRTL = I18nUtil.getInstance().isRTL(convertView.getContext());
-+
++      
        if (item.hasKey("enabled")) {
          enabled = item.getBoolean("enabled");
        }
-@@ -287,6 +320,58 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
-           Typeface face = Typeface.create(style.getString("fontFamily"), Typeface.NORMAL);
-           textView.setTypeface(face);
+@@ -369,6 +402,57 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+             Typeface face = Typeface.create(style.getString("fontFamily"), Typeface.NORMAL);
+             textView.setTypeface(face);
+           }
++          // Adds custom options for paddings
++          if (style.hasKey("paddingLeft") && !style.isNull("paddingLeft")) {
++            paddingLeft = style.getInt("paddingLeft");
++          }
++  
++          if (style.hasKey("paddingRight") && !style.isNull("paddingRight")) {
++            paddingRight = style.getInt("paddingRight");
++          }
++  
++          if (style.hasKey("paddingTop") && !style.isNull("paddingTop")) {
++            paddingTop = style.getInt("paddingTop");
++          }
++  
++          if (style.hasKey("paddingBottom") && !style.isNull("paddingBottom")) {
++            paddingBottom = style.getInt("paddingBottom");
++          }
++  
++          if (style.hasKey("paddingStart") && !style.isNull("paddingStart")) {
++            if(isRTL){
++              paddingRight = style.getInt("paddingStart");
++            } else {
++              paddingLeft = style.getInt("paddingStart");
++            }
++          }
++  
++          if (style.hasKey("paddingEnd") && !style.isNull("paddingEnd")) {
++            if(isRTL){
++              paddingLeft = style.getInt("paddingEnd");
++            } else {
++              paddingRight = style.getInt("paddingEnd");
++            }
++          }
++  
++          if (style.hasKey("paddingVertical") && !style.isNull("paddingVertical")) {
++            paddingTop = style.getInt("paddingVertical");
++            paddingBottom = style.getInt("paddingVertical");
++          }
++  
++          if (style.hasKey("paddingHorizontal") && !style.isNull("paddingHorizontal")) {
++            paddingLeft = style.getInt("paddingHorizontal");
++            paddingRight = style.getInt("paddingHorizontal");
++          }
++  
++          if (style.hasKey("padding") && !style.isNull("padding")) {
++            paddingTop = style.getInt("padding");
++            paddingBottom = style.getInt("padding");
++            paddingLeft = style.getInt("padding");
++            paddingRight = style.getInt("padding");
++          }
++  
++          textView.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
          }
-+
-+        // Adds custom options for paddings
-+        if (style.hasKey("paddingLeft") && !style.isNull("paddingLeft")) {
-+          paddingLeft = style.getInt("paddingLeft");
-+        }
-+
-+        if (style.hasKey("paddingRight") && !style.isNull("paddingRight")) {
-+          paddingRight = style.getInt("paddingRight");
-+        }
-+
-+        if (style.hasKey("paddingTop") && !style.isNull("paddingTop")) {
-+          paddingTop = style.getInt("paddingTop");
-+        }
-+
-+        if (style.hasKey("paddingBottom") && !style.isNull("paddingBottom")) {
-+          paddingBottom = style.getInt("paddingBottom");
-+        }
-+
-+        if (style.hasKey("paddingStart") && !style.isNull("paddingStart")) {
-+          if(isRTL){
-+            paddingRight = style.getInt("paddingStart");
-+          } else {
-+            paddingLeft = style.getInt("paddingStart");
-+          }
-+        }
-+
-+        if (style.hasKey("paddingEnd") && !style.isNull("paddingEnd")) {
-+          if(isRTL){
-+            paddingLeft = style.getInt("paddingEnd");
-+          } else {
-+            paddingRight = style.getInt("paddingEnd");
-+          }
-+        }
-+
-+        if (style.hasKey("paddingVertical") && !style.isNull("paddingVertical")) {
-+          paddingTop = style.getInt("paddingVertical");
-+          paddingBottom = style.getInt("paddingVertical");
-+        }
-+
-+        if (style.hasKey("paddingHorizontal") && !style.isNull("paddingHorizontal")) {
-+          paddingLeft = style.getInt("paddingHorizontal");
-+          paddingRight = style.getInt("paddingHorizontal");
-+        }
-+
-+        if (style.hasKey("padding") && !style.isNull("padding")) {
-+          paddingTop = style.getInt("padding");
-+          paddingBottom = style.getInt("padding");
-+          paddingLeft = style.getInt("padding");
-+          paddingRight = style.getInt("padding");
-+        }
-+
-+        textView.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
        }
  
-       if (!isDropdown && mPrimaryTextColor != null) {
-@@ -300,7 +385,6 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
+@@ -387,7 +471,6 @@ public abstract class ReactPickerManager extends BaseViewManager<ReactPicker, Re
          textView.setTypeface(face);
        }
  
