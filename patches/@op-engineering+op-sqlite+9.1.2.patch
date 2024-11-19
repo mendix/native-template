@@ -83,20 +83,10 @@ index ed599ea..4813667 100644
  }
 \ No newline at end of file
 diff --git a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
-index 7445a4c..3ec88ef 100644
+index 7445a4c..a9dcf14 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
 +++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
-@@ -2,9 +2,7 @@ package com.op.sqlite
- 
- import com.facebook.react.bridge.ReactContext
- import com.facebook.react.turbomodule.core.CallInvokerHolderImpl
--import com.facebook.react.common.annotations.FrameworkAPI
- 
--@OptIn(FrameworkAPI::class)
- class OPSQLiteBridge {
-     private external fun installNativeJsi(
-         jsContextNativePointer: Long,
-@@ -13,6 +11,8 @@ class OPSQLiteBridge {
+@@ -13,6 +13,8 @@ class OPSQLiteBridge {
      )
      private external fun clearStateNativeJsi()
  
@@ -105,7 +95,7 @@ index 7445a4c..3ec88ef 100644
      fun install(context: ReactContext) {
          val jsContextPointer = context.javaScriptContextHolder!!.get()
          val jsCallInvokerHolder =
-@@ -31,6 +31,10 @@ class OPSQLiteBridge {
+@@ -31,6 +33,10 @@ class OPSQLiteBridge {
          clearStateNativeJsi()
      }
  
@@ -189,7 +179,7 @@ index dcb694c..8ec3f4b 100644
  
  private:
 diff --git a/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp b/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
-index b471d3d..3db3fd6 100644
+index b471d3d..e06ec0c 100644
 --- a/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
 +++ b/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
 @@ -47,6 +47,13 @@ void clearState() {
