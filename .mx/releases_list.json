@@ -1,5 +1,17 @@
 [
     {
+        "id": 186452714,
+        "tag_name": "v10.1.1-0",
+        "name": "Release 10.1.1-0",
+        "draft": true,
+        "prerelease": true,
+        "body": "* Merge pull request #901 from mendix/fix/rn-screens (d9060b1)",
+        "created_at": "2024-11-20T16:07:19Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 185633821,
         "tag_name": "v10.1.0-0",
         "name": "Release 10.1.0-0",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-03-29T15:55:53Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.16",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.16"
-    },
-    {
-        "id": 63012502,
-        "tag_name": "v5.2.9",
-        "name": "Android video player full screen support",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\n\r\n- Native Template now supports full-screen Android video. The full-screen icon can be found at the top of the video when the show control's property is set to `true`. When the icon is pressed the video will continue working on an overlay modal. (Ticket 135581)",
-        "created_at": "2022-03-29T08:38:19Z",
-        "published_at": "2022-03-29T08:47:13Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.9",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.9"
     }
 ]
