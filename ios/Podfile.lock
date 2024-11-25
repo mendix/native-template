@@ -2,8 +2,126 @@ PODS:
   - boost (1.84.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.75.4)
+  - Firebase (10.5.0):
+    - Firebase/Core (= 10.5.0)
+  - Firebase/Core (10.5.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 10.5.0)
+  - Firebase/CoreOnly (10.5.0):
+    - FirebaseCore (= 10.5.0)
+  - Firebase/Messaging (10.5.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 10.5.0)
+  - FirebaseAnalytics (10.5.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.5.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.5.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseCore (10.5.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Logger (~> 7.8)
+  - FirebaseCoreExtension (10.5.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseCoreInternal (10.29.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseInstallations (10.29.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseMessaging (10.5.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Reachability (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
   - fmt (9.1.0)
   - glog (0.3.5)
+  - GoogleAppMeasurement (10.5.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.5.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.5.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/MethodSwizzler (~> 7.8)
+    - GoogleUtilities/Network (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleDataTransport (9.4.1):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities (7.13.3):
+    - GoogleUtilities/AppDelegateSwizzler (= 7.13.3)
+    - GoogleUtilities/Environment (= 7.13.3)
+    - GoogleUtilities/ISASwizzler (= 7.13.3)
+    - GoogleUtilities/Logger (= 7.13.3)
+    - GoogleUtilities/MethodSwizzler (= 7.13.3)
+    - GoogleUtilities/Network (= 7.13.3)
+    - "GoogleUtilities/NSData+zlib (= 7.13.3)"
+    - GoogleUtilities/Privacy (= 7.13.3)
+    - GoogleUtilities/Reachability (= 7.13.3)
+    - GoogleUtilities/SwizzlerTestHelpers (= 7.13.3)
+    - GoogleUtilities/UserDefaults (= 7.13.3)
+  - GoogleUtilities/AppDelegateSwizzler (7.13.3):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (7.13.3):
+    - GoogleUtilities/Privacy
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/ISASwizzler (7.13.3):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (7.13.3):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/MethodSwizzler (7.13.3):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (7.13.3):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.13.3)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (7.13.3)
+  - GoogleUtilities/Reachability (7.13.3):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/SwizzlerTestHelpers (7.13.3):
+    - GoogleUtilities/MethodSwizzler
+  - GoogleUtilities/UserDefaults (7.13.3):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
   - IQKeyboardManager (6.5.19)
   - libwebp (1.3.2):
     - libwebp/demux (= 1.3.2)
@@ -17,6 +135,12 @@ PODS:
   - libwebp/sharpyuv (1.3.2)
   - libwebp/webp (1.3.2):
     - libwebp/sharpyuv
+  - nanopb (2.30909.1):
+    - nanopb/decode (= 2.30909.1)
+    - nanopb/encode (= 2.30909.1)
+  - nanopb/decode (2.30909.1)
+  - nanopb/encode (2.30909.1)
+  - PromisesObjC (2.4.0)
   - RCT-Folly (2024.01.01.00):
     - boost
     - DoubleConversion
@@ -1249,7 +1373,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context (3.1.8):
+  - react-native-safe-area-context (4.11.0):
     - React-Core
   - react-native-splash-screen (3.2.0):
     - React
@@ -1542,23 +1666,31 @@ PODS:
     - React-logger (= 0.75.4)
     - React-perflogger (= 0.75.4)
     - React-utils (= 0.75.4)
-  - RNCAsyncStorage (1.12.1):
+  - RNCAsyncStorage (2.0.0):
     - React-Core
-  - RNCMaskedView (0.1.10):
-    - React
-  - RNCPicker (2.4.8):
+  - RNCMaskedView (0.3.1):
+    - React-Core
+  - RNCPicker (2.8.1):
     - React-Core
   - RNCPushNotificationIOS (1.10.1):
     - React-Core
-  - RNDateTimePicker (3.0.3):
+  - RNDateTimePicker (8.2.0):
     - React-Core
-  - RNDeviceInfo (11.1.0):
+  - RNDeviceInfo (13.0.0):
     - React-Core
   - RNFastImage (8.6.3):
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
-  - RNGestureHandler (2.20.0):
+  - RNFBApp (17.3.0):
+    - Firebase/CoreOnly (= 10.5.0)
+    - React-Core
+  - RNFBMessaging (17.3.0):
+    - Firebase/Messaging (= 10.5.0)
+    - FirebaseCoreExtension (= 10.5.0)
+    - React-Core
+    - RNFBApp
+  - RNGestureHandler (2.20.2):
     - DoubleConversion
     - glog
     - RCT-Folly (= 2024.01.01.00)
@@ -1579,13 +1711,13 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNLocalize (1.4.2):
+  - RNLocalize (3.2.1):
     - React-Core
   - RNPermissions (4.1.5):
     - React-Core
   - RNReanimated (1.13.1):
     - React
-  - RNScreens (3.34.0):
+  - RNScreens (3.29.0):
     - DoubleConversion
     - glog
     - RCT-Folly (= 2024.01.01.00)
@@ -1600,16 +1732,15 @@ PODS:
     - React-jsi
     - React-NativeModulesApple
     - React-RCTFabric
-    - React-RCTImage
     - React-rendererdebug
     - React-utils
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNSVG (12.1.0):
-    - React
-  - RNVectorIcons (10.0.3):
+  - RNSVG (15.7.1):
+    - React-Core
+  - RNVectorIcons (10.2.0):
     - DoubleConversion
     - glog
     - RCT-Folly (= 2024.01.01.00)
@@ -1649,8 +1780,11 @@ DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
+  - Firebase
+  - FirebaseCore
   - fmt (from `../node_modules/react-native/third-party-podspecs/fmt.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - GoogleUtilities
   - IQKeyboardManager
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCT-Folly/Fabric (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
@@ -1716,13 +1850,15 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
-  - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - "RNCPushNotificationIOS (from `../node_modules/@react-native-community/push-notification-ios`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFastImage (from `../node_modules/react-native-fast-image`)
+  - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
+  - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNLocalize (from `../node_modules/react-native-localize`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
@@ -1735,8 +1871,20 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseInstallations
+    - FirebaseMessaging
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUtilities
     - IQKeyboardManager
     - libwebp
+    - nanopb
+    - PromisesObjC
     - SDWebImage
     - SDWebImageWebPCoder
     - SocketRocket
@@ -1879,9 +2027,9 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
-    :path: "../node_modules/@react-native-community/async-storage"
+    :path: "../node_modules/@react-native-async-storage/async-storage"
   RNCMaskedView:
-    :path: "../node_modules/@react-native-community/masked-view"
+    :path: "../node_modules/@react-native-masked-view/masked-view"
   RNCPicker:
     :path: "../node_modules/@react-native-picker/picker"
   RNCPushNotificationIOS:
@@ -1892,6 +2040,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-device-info"
   RNFastImage:
     :path: "../node_modules/react-native-fast-image"
+  RNFBApp:
+    :path: "../node_modules/@react-native-firebase/app"
+  RNFBMessaging:
+    :path: "../node_modules/@react-native-firebase/messaging"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNLocalize:
@@ -1913,10 +2065,22 @@ SPEC CHECKSUMS:
   boost: 4cb898d0bf20404aab1850c656dcea009429d6c1
   DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   FBLazyVector: 430e10366de01d1e3d57374500b1b150fe482e6d
+  Firebase: 3d6637234ab163e31852834617b4fe1df3b7af6d
+  FirebaseAnalytics: 6f7430030cb6b22fe1db2e3bed782e999b76dc00
+  FirebaseCore: 324b8d182d9ff7e3f6d1fa2f04b082d1c7a3e366
+  FirebaseCoreExtension: d9fa427f1ae1edccf2368ce5e8d567e4c1f0ebc8
+  FirebaseCoreInternal: df84dd300b561c27d5571684f389bf60b0a5c934
+  FirebaseInstallations: 913cf60d0400ebd5d6b63a28b290372ab44590dd
+  FirebaseMessaging: 35ecbbc68ff547fca80f9326c9622e79288c7149
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
   glog: 69ef571f3de08433d766d614c73a9838a06bf7eb
+  GoogleAppMeasurement: 40c70a7d89013f0eca72006c4b9732163ea4cdae
+  GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
+  GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
+  nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RCT-Folly: 4464f4d875961fce86008d45f4ecf6cef6de0740
   RCTDeprecation: 726d24248aeab6d7180dac71a936bbca6a994ed1
   RCTRequired: a94e7febda6db0345d207e854323c37e3a31d93b
@@ -1950,7 +2114,7 @@ SPEC CHECKSUMS:
   react-native-image-picker: 8cb4280e2c1efc3daeb2d9d597f9429a60472e40
   react-native-netinfo: 076df4f9b07f6670acf4ce9a75aac8d34c2e2ccc
   react-native-pager-view: 707f0384a5d5d1fe103c44789ea48187ffdae5ce
-  react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
+  react-native-safe-area-context: 851c62c48dce80ccaa5637b6aa5991a1bc36eca9
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-sqlite-storage: 7697e1df2125d556c58de9d9764549195b25afcf
   react-native-video: 1ab90e23263d1764849070f0ec84582101c9f3a2
@@ -1979,20 +2143,22 @@ SPEC CHECKSUMS:
   React-utils: 546831c4f1be57fac614f68de34ac8763e67db55
   ReactCodegen: 5d297fcaf283fac32424f6bed10aa8d733fd2e5a
   ReactCommon: 8377a2a5504f72e284ce1b1cd207d8455bdbfdf3
-  RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
-  RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNCPicker: 0bf8ef8f7800524f32d2bb2a8bcadd53eda0ecd1
+  RNCAsyncStorage: d35c79ffba52c1013013e16b1fc295aec2feabb6
+  RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
+  RNCPicker: 0b6860a6b208d4046227d2f626ad0722f99a969c
   RNCPushNotificationIOS: 87b8d16d3ede4532745e05b03c42cff33a36cc45
-  RNDateTimePicker: 6f62fd42ac8b58bcc30c43ac3620e5097e8a227f
-  RNDeviceInfo: b899ce37a403a4dea52b7cb85e16e49c04a5b88e
+  RNDateTimePicker: 40ffda97d071a98a10fdca4fa97e3977102ccd14
+  RNDeviceInfo: 55264dd7cc939dad6e9c231a7621311f5277f1dc
   RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
-  RNGestureHandler: 18b9b5d65c77c4744a640f69b7fccdd47ed935c0
-  RNLocalize: 452d4118e338dee1e5ca3fac4d5a11a4ab26a46a
+  RNFBApp: 13ca8ba0feba98d4bac2057884894dcf8eedf97f
+  RNFBMessaging: 0bdc8269fefad36f6820d6fc89b0bcae3f705891
+  RNGestureHandler: 82f59e40580e0c2f8262552c149716511131b412
+  RNLocalize: 4f22418187ecd5ca693231093ff1d912d1b3c9bc
   RNPermissions: 4da8c626e4ac9d71c1a199d500d52dd54da62e38
   RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
-  RNScreens: 5288a8dbeedb3c5051aa2d5658c1c553c050b80a
-  RNSVG: ce9d996113475209013317e48b05c21ee988d42e
-  RNVectorIcons: 3f20cdd392aacf01b14ca2f56cddd99ab0279983
+  RNScreens: cc5a541265125d485c8548812f524fec51cdf997
+  RNSVG: 4590aa95758149fa27c5c83e54a6a466349a1688
+  RNVectorIcons: 0cbcb1c0cb6da1ca1d43d3d990255e584bb99028
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
@@ -2000,6 +2166,6 @@ SPEC CHECKSUMS:
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   Yoga: aa3df615739504eebb91925fc9c58b4922ea9a08
 
-PODFILE CHECKSUM: e09d3dc1119ebe5de7da629a02f81bb0c2c953c3
+PODFILE CHECKSUM: 1afb857cfdd7095996e0ea634e0ec13445f35339
 
 COCOAPODS: 1.15.2
