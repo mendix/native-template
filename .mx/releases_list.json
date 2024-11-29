@@ -1,75 +1,15 @@
 [
     {
-        "id": 185633821,
-        "tag_name": "v10.1.0-0",
-        "name": "Release 10.1.0-0",
-        "draft": true,
-        "prerelease": true,
-        "body": "* Fix pipeline (7f82656)",
-        "created_at": "2024-11-15T13:35:15Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
-    },
-    {
-        "id": 185466957,
-        "tag_name": "v9.1.0",
-        "name": "Release 9.1.0",
-        "draft": true,
+        "id": 187825044,
+        "tag_name": "v10.0.0",
+        "name": "Release 10.0.0",
+        "draft": false,
         "prerelease": false,
-        "body": "* revert the version change (b773064)",
-        "created_at": "2024-11-14T16:19:38Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
-    },
-    {
-        "id": 185190223,
-        "tag_name": "v10.0.0-0",
-        "name": "Release 10.0.0-0",
-        "draft": true,
-        "prerelease": true,
-        "body": "* update readme (bfc0f92)",
-        "created_at": "2024-11-13T14:03:51Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
-    },
-    {
-        "id": 176997936,
-        "tag_name": "v9.2.0-0",
-        "name": "Release 9.2.0-0",
-        "draft": true,
-        "prerelease": true,
-        "body": "* chore: release v9.1.0-0 (c5a6abd)",
-        "created_at": "2024-09-26T07:56:14Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
-    },
-    {
-        "id": 185184989,
-        "tag_name": "v9.1.0-0",
-        "name": "Release 9.1.0-0",
-        "draft": true,
-        "prerelease": true,
-        "body": "* Update package-lock (79af21a)",
-        "created_at": "2024-09-10T08:46:00Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
-    },
-    {
-        "id": 171630581,
-        "tag_name": "v5.2.20",
-        "name": "Release 5.2.20",
-        "draft": true,
-        "prerelease": false,
-        "body": "* Merge pull request #855 from mendix/chore/fix-pipeline (ed142f5)",
-        "created_at": "2024-08-23T09:22:19Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "body": "# Release Notes for Android and iOS\r\n\r\nThese updates ensure a smoother, more stable experience on both Android and iOS while maintaining compatibility with the latest operating system features and performance improvements.\r\n\r\n---\r\n\r\n## 🚀 Version Update: React Native 0.75.4  \r\nWe've upgraded the core framework to **React Native 0.75.4** to enhance performance, stability, and compatibility across both Android and iOS platforms.\r\n\r\n---\r\n\r\n## 📦 Library Updates and Improvements  \r\nWe've upgraded the following libraries to their latest versions for improved functionality, security, and stability:\r\n\r\n- **@react-native-async-storage/async-storage:** 2.0.0  \r\n- **@react-native-community/datetimepicker:** 8.2.0  \r\n- **@react-native-masked-view/masked-view:** 0.3.1  \r\n- **@react-native-picker/picker:** 2.8.1  \r\n- **react-native-device-info:** 13.0.0  \r\n- **react-native-gesture-handler:** 2.20.2  \r\n- **react-native-localize:** 3.2.1  \r\n- **react-native-pager-view:** 6.4.1  \r\n- **react-native-safe-area-context:** 4.11.0  \r\n- **react-native-svg:** 15.7.1  \r\n- **react-native-tab-view:** 3.5.2  \r\n- **react-native-vector-icons:** 10.2.0  \r\n\r\n---\r\n\r\n## 🔄 Library Migrations  \r\nWe've migrated the following libraries to their updated npm packages to ensure future compatibility and ongoing support:\r\n\r\n- **@react-native-community/async-storage** → **@react-native-async-storage/async-storage**  \r\n- **@react-native-community/masked-view** → **@react-native-masked-view/masked-view**  ",
+        "created_at": "2024-11-27T13:41:28Z",
+        "published_at": "2024-11-27T13:43:09Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v10.0.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v10.0.0"
     },
     {
         "id": 177975970,
@@ -1198,5 +1138,65 @@
         "published_at": "2022-03-29T08:47:13Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.9",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.9"
+    },
+    {
+        "id": 62589378,
+        "tag_name": "v6.2.15",
+        "name": "Fix custom developer apps failing to build on iOS",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n\r\n- We fixed an issue where iOS custom developer apps incurred problems while building.",
+        "created_at": "2022-03-23T15:14:20Z",
+        "published_at": "2022-03-23T15:16:00Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.15",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.15"
+    },
+    {
+        "id": 62100367,
+        "tag_name": "v6.2.14",
+        "name": "Various hotfixes",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Description\r\nThis is a re-release of v6.2.13. We identified an issue when building an iOS app with Native Template v6.2.13 which we rectified with the release of v6.2.14.\r\n\r\n### Fixes\r\n* We fixed an issue where using `react-native-async-storage` made the iOS build fail due to duplicated symbols being generated.\r\n* We fixed an issue where compiling an Android app for release would fail when building on a Windows machine.",
+        "created_at": "2022-03-17T13:02:41Z",
+        "published_at": "2022-03-17T13:03:33Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.14",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.14"
+    },
+    {
+        "id": 62001041,
+        "tag_name": "v6.2.13",
+        "name": "[Retracted] Please update to v6.2.14",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Retracted\r\nPlease ignore this update. If you already updated to v6.2.13 update to v6.2.14 to avoid failing iOS builds.",
+        "created_at": "2022-03-16T13:38:21Z",
+        "published_at": "2022-03-16T13:43:20Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.13",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.13"
+    },
+    {
+        "id": 57944859,
+        "tag_name": "v6.2.12",
+        "name": "Fix for the \"Navigate To\" action on Android 11+",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n\r\n- We identified and fixed an issue that would stop the \"Navigate To\" action from launching Google Maps on Android OS version 11 and later.",
+        "created_at": "2022-01-25T18:02:19Z",
+        "published_at": "2022-01-25T18:03:56Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.12",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.12"
+    },
+    {
+        "id": 57945310,
+        "tag_name": "v5.2.8",
+        "name": "Fix for the \"Navigate To\" action on Android 11+ for Mendix 8",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Fixes\r\n\r\n- We identified and fixed an issue that would stop the \"Navigate To\" action from launching Google Maps on Android OS version 11 and later.",
+        "created_at": "2022-01-25T18:05:51Z",
+        "published_at": "2022-01-25T18:07:48Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.8",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.8"
     }
 ]
