@@ -130,6 +130,7 @@ dependencies {
     // Javascript engine
     implementation("com.facebook.react:hermes-android")
 
+    implementation project(':react-native-localize')
     implementation project(":react-native-splash-screen")
     implementation project(":mendixnative-release")
 
