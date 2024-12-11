@@ -744,7 +744,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
-					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/@react-native-async-storage/async-storage/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/netinfo/ios",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
@@ -824,7 +824,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
-					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/@react-native-async-storage/async-storage/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/netinfo/ios",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
@@ -1081,7 +1081,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
-					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
+					"$(SRCROOT)/../node_modules/@react-native-async-storage/async-storage/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/netinfo/ios",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
