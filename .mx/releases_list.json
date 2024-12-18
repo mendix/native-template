@@ -1,11 +1,23 @@
 [
     {
+        "id": 189428888,
+        "tag_name": "v11.0.0",
+        "name": "Release 11.0.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "# Release Notes for Android and iOS\r\n\r\nWe've removed the support for JSC entirely from 10.18 version and upwards\r\n\r\n## ⚠️ Breaking Changes  \r\n- The native apps need to be rebuilt from App -> Build Native Mobile App",
+        "created_at": "2024-12-06T15:20:34Z",
+        "published_at": "2024-12-18T15:19:29Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v11.0.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v11.0.0"
+    },
+    {
         "id": 187825044,
         "tag_name": "v10.0.0",
         "name": "Release 10.0.0",
         "draft": false,
         "prerelease": false,
-        "body": "# Release Notes for Android and iOS\r\n\r\nThese updates ensure a smoother, more stable experience on both Android and iOS while maintaining compatibility with the latest operating system features and performance improvements.\r\n\r\n---\r\n\r\n## 🚀 Version Update: React Native 0.75.4  \r\nWe've upgraded the core framework to **React Native 0.75.4** to enhance performance, stability, and compatibility across both Android and iOS platforms.\r\n\r\n---\r\n\r\n## 📦 Library Updates and Improvements  \r\nWe've upgraded the following libraries to their latest versions for improved functionality, security, and stability:\r\n\r\n- **@react-native-async-storage/async-storage:** 2.0.0  \r\n- **@react-native-community/datetimepicker:** 8.2.0  \r\n- **@react-native-masked-view/masked-view:** 0.3.1  \r\n- **@react-native-picker/picker:** 2.8.1  \r\n- **react-native-device-info:** 13.0.0  \r\n- **react-native-gesture-handler:** 2.20.2  \r\n- **react-native-localize:** 3.2.1  \r\n- **react-native-pager-view:** 6.4.1  \r\n- **react-native-safe-area-context:** 4.11.0  \r\n- **react-native-svg:** 15.7.1  \r\n- **react-native-tab-view:** 3.5.2  \r\n- **react-native-vector-icons:** 10.2.0  \r\n\r\n---\r\n\r\n## 🔄 Library Migrations  \r\nWe've migrated the following libraries to their updated npm packages to ensure future compatibility and ongoing support:\r\n\r\n- **@react-native-community/async-storage** → **@react-native-async-storage/async-storage**  \r\n- **@react-native-community/masked-view** → **@react-native-masked-view/masked-view**  ",
+        "body": "# Release Notes for Android and iOS\r\n\r\n---\r\n\r\n## 🚀 Version Update: React Native 0.75.4  \r\nWe've upgraded the core framework to **React Native 0.75.4** to enhance performance, stability, and compatibility across both Android and iOS platforms.\r\n\r\n---\r\n\r\n## 📦 Library Updates and Improvements  \r\nWe've upgraded the following libraries to their latest versions for improved functionality, security, and stability:\r\n\r\n- **@react-native-async-storage/async-storage:** 2.0.0  \r\n- **@react-native-community/datetimepicker:** 8.2.0  \r\n- **@react-native-masked-view/masked-view:** 0.3.1  \r\n- **@react-native-picker/picker:** 2.8.1  \r\n- **@react-navigation/native:** 6.1.18  \r\n- **react-native-device-info:** 13.0.0  \r\n- **react-native-gesture-handler:** 2.20.2  \r\n- **react-native-localize:** 3.2.1  \r\n- **react-native-pager-view:** 6.4.1  \r\n- **react-native-safe-area-context:** 4.11.0  \r\n- **react-native-svg:** 15.7.1  \r\n- **react-native-tab-view:** 3.5.2  \r\n- **react-native-vector-icons:** 10.2.0  \r\n\r\n---\r\n\r\n## ⚠️ Breaking Changes  \r\n- **React Native Upgrade Impact:** Ensure all custom native modules are compatible with **React Native 0.75.4**. Some APIs or third-party modules might need adjustments to maintain functionality.  \r\n- **Library Migration:**  \r\n  - **@react-native-community/async-storage** has been replaced by **@react-native-async-storage/async-storage**. Ensure your imports and project dependencies reflect this change.  \r\n  - **@react-native-community/masked-view** has been replaced by **@react-native-masked-view/masked-view**. Update your references accordingly.  \r\n\r\n### PopupMenu Component\r\n\r\nThe PopupMenu component in the updated Native Mobile Resources module includes a breaking change.\r\nThis issue only affects projects that are:\r\n  * Upgrading from Mendix versions below 10.17 to 10.17 or higher, and\r\n  * Updating the Native Mobile Resources module to its latest version.\r\n\r\nWhat You Need to Do\r\n\r\nAfter updating the Native Mobile Resources module, you will encounter the following warning in Studio Pro:\r\n\r\n> *\"The definition of this widget has changed. Update this widget by right-clicking it and selecting 'Update widget,' or select 'Update all widgets' to update all widgets in the app.\"*\r\n\r\n1. Right-click on the warning in Studio Pro.\r\n1. Select Update All Widgets to apply the necessary updates.\r\n---\r\n\r\n## 🛠️ Important Actions  \r\n- **Native Mobile Resources and Nanoflow Commons Module:**  \r\n  The **Native Mobile Resources Module** and **Nanoflow Commons Module** in the Mendix App Store needs to be updated within your Mendix projects. This update ensures compatibility with the latest React Native version and library upgrades.  \r\n\r\n---\r\n\r\nThese updates ensure a smoother, more stable experience on both Android and iOS while maintaining compatibility with the latest operating system features and performance improvements.",
         "created_at": "2024-11-27T13:41:28Z",
         "published_at": "2024-11-27T13:43:09Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v10.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-01-25T18:03:56Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.12",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.12"
-    },
-    {
-        "id": 57945310,
-        "tag_name": "v5.2.8",
-        "name": "Fix for the \"Navigate To\" action on Android 11+ for Mendix 8",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We identified and fixed an issue that would stop the \"Navigate To\" action from launching Google Maps on Android OS version 11 and later.",
-        "created_at": "2022-01-25T18:05:51Z",
-        "published_at": "2022-01-25T18:07:48Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.8",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.8"
     }
 ]
