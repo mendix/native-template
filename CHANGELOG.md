@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have updated min sdk to 23 on android.
+
+# [7.0.19] - 2024-10-01
+
 - We have updated `react-native-permissions` to version `3.6.1`.
 
 # [7.0.17] - 2024-09-03
