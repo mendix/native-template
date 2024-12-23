@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have updated min sdk to 23 on android.
+
+## [8.2.7] - 2024-09-03
+
 - We have fixed OTA updates compatibility issues on iOS 18.
 
 ## [8.2.6] - 2024-08-02
