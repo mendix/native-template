@@ -2,6 +2,7 @@
 
 MAIN_STORY_BOARD = LaunchApp
 BUNDLE_DISPLAY_NAME = Dev - NativeTemplate
+BUNDLE_IDENTIFIER = com.mendix.native.template
 BUNDLE_IDENTIFIER_APPEND = .developerapp
 
 PRODUCT_NAME = NativeTemplateDev
