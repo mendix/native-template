@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have updated the implementation of the registerReceiver method to align with Android SDK 34 and above.
+
+# [7.0.20] - 2024-12-23
+
 - We have updated min sdk to 23 on android.
 
 # [7.0.19] - 2024-10-01
