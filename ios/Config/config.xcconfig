@@ -4,3 +4,5 @@ BUNDLE_IDENTIFIER = com.mendix.native.template
 PRODUCT_BUNDLE_IDENTIFIER = $(BUNDLE_IDENTIFIER)$(BUNDLE_IDENTIFIER_APPEND)
 
 RUNTIME_URL = http:\/\/localhost:8080
+
+PRODUCT_NAME = nativeTemplate
