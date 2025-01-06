@@ -1,5 +1,41 @@
 [
     {
+        "id": 193070548,
+        "tag_name": "v7.0.22",
+        "name": "Release 7.0.22",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We fixed an issue that occurred when selecting the devDebug variant in Android Studio for API levels greater than 34.\r\n\r\n",
+        "created_at": "2025-01-03T14:02:21Z",
+        "published_at": "2025-01-03T14:03:35Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.22",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.22"
+    },
+    {
+        "id": 192123872,
+        "tag_name": "v8.2.8",
+        "name": "Release 8.2.8",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We've updated min sdk to 23 on android.",
+        "created_at": "2024-12-23T15:26:04Z",
+        "published_at": "2024-12-23T15:28:06Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.8",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.8"
+    },
+    {
+        "id": 192134809,
+        "tag_name": "v7.0.20",
+        "name": "Release 7.0.20",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We've updated min sdk to 23 on android.",
+        "created_at": "2024-12-23T16:45:23Z",
+        "published_at": "2024-12-23T16:46:20Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.20",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.20"
+    },
+    {
         "id": 189428888,
         "tag_name": "v11.0.0",
         "name": "Release 11.0.0",
@@ -1162,41 +1198,5 @@
         "published_at": "2022-03-23T15:16:00Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.15",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.15"
-    },
-    {
-        "id": 62100367,
-        "tag_name": "v6.2.14",
-        "name": "Various hotfixes",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Description\r\nThis is a re-release of v6.2.13. We identified an issue when building an iOS app with Native Template v6.2.13 which we rectified with the release of v6.2.14.\r\n\r\n### Fixes\r\n* We fixed an issue where using `react-native-async-storage` made the iOS build fail due to duplicated symbols being generated.\r\n* We fixed an issue where compiling an Android app for release would fail when building on a Windows machine.",
-        "created_at": "2022-03-17T13:02:41Z",
-        "published_at": "2022-03-17T13:03:33Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.14",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.14"
-    },
-    {
-        "id": 62001041,
-        "tag_name": "v6.2.13",
-        "name": "[Retracted] Please update to v6.2.14",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Retracted\r\nPlease ignore this update. If you already updated to v6.2.13 update to v6.2.14 to avoid failing iOS builds.",
-        "created_at": "2022-03-16T13:38:21Z",
-        "published_at": "2022-03-16T13:43:20Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.13",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.13"
-    },
-    {
-        "id": 57944859,
-        "tag_name": "v6.2.12",
-        "name": "Fix for the \"Navigate To\" action on Android 11+",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We identified and fixed an issue that would stop the \"Navigate To\" action from launching Google Maps on Android OS version 11 and later.",
-        "created_at": "2022-01-25T18:02:19Z",
-        "published_at": "2022-01-25T18:03:56Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.12",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.12"
     }
 ]
