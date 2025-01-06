@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [11.0.0] - 2024-12-18
+
+- We've removed the support for JSC entirely from Studio Pro version 10.18 and up. All native apps are using Hermes JS engine now.
+
+## [10.0.0] - 2024-11-27
+
+- We've upgraded the core framework to React Native 0.75.4 to enhance performance, stability, and compatibility across both Android and iOS platforms.
+
 ## [9.0.3] - 2024-10-02
 
 - We upgraded android SDK version to 35
