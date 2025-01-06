@@ -4,13 +4,13 @@
     "testEnabled": false,
     "signed": false,
     "environmentVariables": [
-        { "name": "CODE_PUSH_KEY", "value": "" },
-        { "name": "IS_DEV_APP", "value": false },
-        { "name": "SUPPORTS_MOBILE_TOOLKIT", "value": false }
+      { "name": "CODE_PUSH_KEY", "value": "" },
+      { "name": "IS_DEV_APP", "value": false },
+      { "name": "SUPPORTS_MOBILE_TOOLKIT", "value": false }
     ],
     "toolsets": {
       "xcode": {
-        "xcodeVersion": "15.1 Preview",
+        "xcodeVersion": "15.4",
         "automaticSigning": false,
         "projectOrWorkspacePath": "ios/NativeTemplate.xcworkspace",
         "podfilePath": "ios/Podfile",
