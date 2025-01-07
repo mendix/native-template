@@ -7,10 +7,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We have updated the AppCenter's Xcode version to 15.4.
+- We added a parameter to Xcode configs to fix Bundle Identifier issues.
 
 ## [11.0.0] - 2024-12-18
 
-- We've removed the support for JSC entirely from Studio Pro version 10.18 and up. All native apps are using Hermes JS engine now.
+- We've removed the support for JSC entirely from Studio Pro version 10.18 and up. All native apps are using Hermes JS engine now. The native apps need to be rebuilt via Studio Pro (App -> Build Native Mobile App).
 
 ## [10.0.0] - 2024-11-27
 
