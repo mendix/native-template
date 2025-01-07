@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have updated the AppCenter's Xcode version to 15.4.
+
 ## [11.0.0] - 2024-12-18
 
 - We've removed the support for JSC entirely from Studio Pro version 10.18 and up. All native apps are using Hermes JS engine now.
