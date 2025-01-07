@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We added a parameter to Xcode configs to fix Bundle Identifier issues.
+
+## [11.0.0] - 2024-12-18
+
+- We've removed the support for JSC entirely from 10.18 version and upwards.
+- The native apps need to be rebuilt from App -> Build Native Mobile App
+
+## [10.0.0] - 2024-11-27
+
+- We upgraded the core framework to React Native 0.75.4 to enhance performance, stability, and compatibility across both Android and iOS platforms.
+
 ## [9.0.3] - 2024-10-02
 
 - We upgraded android SDK version to 35
