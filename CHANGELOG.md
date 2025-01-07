@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have updated the AppCenter's Xcode version to 15.4.
+
+## [8.2.8] - 2024-12-23
+
 - We have updated min sdk to 23 on android.
 
 ## [8.2.7] - 2024-09-03
