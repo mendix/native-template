@@ -12,27 +12,39 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: switch XCode to 14.2
+      - uses: actions/checkout@v3
+      - name: switch XCode to 15.4
         run: | 
-          sudo xcode-select -s /Applications/Xcode_14.2.app
+          sudo xcode-select -s /Applications/Xcode_15.4.app
+
       - name: actions/setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: "18.18.2"
+          node-version-file: .nvmrc
+          cache: 'npm'
+
       - name: npm install
         run: npm ci
+
+      - name: cache cocoapods
+        uses: actions/cache@v3
+        with:
+          path: ios/Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+
       - name: pod install
         run: pod install
         working-directory: ./ios
+
       - name: appcenter prebuilt script test
         shell: bash
         working-directory: ./
         run: |
           chmod +x ./appcenter-pre-build.sh
           APPCENTER_XCODE_SCHEME="nativeTemplate" APPCENTER_SOURCE_DIRECTORY="./" IS_DEV_APP=False ./appcenter-pre-build.sh
+
       - name: iOS Build Action
-        uses: yukiarrr/ios-build-action@v1.5.0
+        uses: yukiarrr/ios-build-action@v1.12.0
         with:
           project-path: ./ios/nativetemplate.xcodeproj
           p12-base64: ${{ secrets.IOS_DUMMY_P12 }}

@@ -13,19 +13,25 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - name: set up JDK
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: 17
+
       - name: actions/setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: "18.18.2"
+          node-version-file: .nvmrc
+          cache: 'npm'
+
       - name: npm install
         run: npm ci
-      - name: Add NDK 23.1.7779620
-        run: echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;23.1.7779620"
+
+      - name: Add NDK 26.1.10909125
+        run: echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;26.1.10909125"
+
       - name: Build with Gradle
         run: ./gradlew assembleDevDebug
         working-directory: ./android

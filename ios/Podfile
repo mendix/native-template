@@ -1,15 +1,21 @@
 source 'https://cdn.cocoapods.org/'
 
-# Resolve react_native_pods.rb with node to allow for hoisting
-require Pod::Executable.execute_command('node', ['-p',
-  'require.resolve(
-    "react-native/scripts/react_native_pods.rb",
-    {paths: [process.argv[1]]},
-  )', __dir__]).strip
+def node_require(script)
+  # Resolve script with node to allow for hoisting
+  require Pod::Executable.execute_command('node', ['-p',
+    "require.resolve(
+      '#{script}',
+      {paths: [process.argv[1]]},
+    )", __dir__]).strip
+end
+
+# Use it to require both react-native's and this package's scripts:
+node_require('react-native/scripts/react_native_pods.rb')
+node_require('react-native-permissions/scripts/setup.rb')
 
 require_relative './mendix_utils'
 
-deployment_target = min_ios_version_supported
+deployment_target = "13.4"
 platform :ios, deployment_target
 
 prepare_react_native_project!
@@ -21,22 +27,23 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+setup_permissions([
+  'Camera',
+  'PhotoLibrary',
+])
+
 def common_pods
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
 
   # RN development pods
   config = use_native_modules!
+
+  xcconfig_file = "./Config/config.xcconfig"
+  xcconfig = Xcodeproj::Config.new(xcconfig_file)
+
   use_react_native!(
     :path => config[:reactNativePath],
-    # Hermes is disabled by default to avoid incompatibilities and slowness with Mendix Runtime.
-    :hermes_enabled => false,
-    :fabric_enabled => false,
-    # Enables Flipper.
-    #
-    # Note that if you have use_frameworks! enabled, Flipper will not work and
-    # you should disable the next line.
-    :flipper_configuration => FlipperConfiguration.enabled(["Debug"], {'Flipper' => '0.189.0' , 'Flipper-DoubleConversion' => '1.1.7'}),
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
@@ -47,11 +54,6 @@ def common_pods
 
   # Third party dependencies of dependencies
   pod 'IQKeyboardManager'
-
-  # At least one permission must be added when `react-native-permissions` used
-  permissions_path = '../node_modules/react-native-permissions/ios'
-  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
-  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
 
   # Required MendixNative dependency
   pod 'SSZipArchive'
@@ -81,10 +83,10 @@ post_install do |installer|
   react_native_post_install(
     installer,
     config[:reactNativePath],
-    :mac_catalyst_enabled => false
+    :mac_catalyst_enabled => false,
+    # :ccache_enabled => true
   )
 
-  __apply_Xcode_12_5_M1_post_install_workaround(installer)
 
   installer.pods_project.build_configurations.each do |config|
     config.build_settings['ENABLE_BITCODE'] = 'YES'
@@ -108,6 +110,10 @@ post_install do |installer|
         end
       end
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', '_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION']
+      # Specify 'Swift Version: 5.0' for resolving archieve errors.
+      if target.name == 'react-native-video'
+          config.build_settings['SWIFT_VERSION'] = '5.0'
+      end
     end
   end
   # Ensure deployment_target is set correctly for all projects
