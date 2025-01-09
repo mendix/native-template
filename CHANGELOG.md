@@ -7,6 +7,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application
+- We have updated the AppCenter's Xcode version to 15.4.
+- We added a parameter to Xcode configs to fix Bundle Identifier issues.
+
+## [11.0.0] - 2024-12-18
+
+- We've removed the support for JSC entirely from Studio Pro version 10.18 and up. All native apps are using Hermes JS engine now. The native apps need to be rebuilt via Studio Pro (App -> Build Native Mobile App).
+
+## [10.0.0] - 2024-11-27
+
+- We've upgraded the core framework to React Native 0.75.4 to enhance performance, stability, and compatibility across both Android and iOS platforms.
 
 ## [9.0.3] - 2024-10-02
 
