@@ -1,14 +1,18 @@
 const { execSync } = require('child_process');
-const { copyFileSync } = require('fs');
+const { copyFileSync, unlinkSync } = require('fs');
 const { join } = require("path");
 const rootDir = process.cwd();
 
-// We check if geocoder lib is added via widget/js action and then apply patch if necessary
-if (hasDependency("react-native-geocoder")){
-    copyFileSync(join(rootDir, "intermediary-patches/react-native-geocoder+0.5.0.patch"), join(rootDir, "patches/react-native-geocoder+0.5.0.patch"))
-}
-// We execute patch-package normally after copy or not the patch(es)
-execSync("npx patch-package", {cwd: rootDir, stdio: "inherit"});
+const patchOperations = [
+    {
+        dependency: "react-native-geocoder",
+        patchFile: "react-native-geocoder+0.5.0.patch"
+    },
+    {
+        dependency: "@react-native-firebase/app",
+        patchFile: "@react-native-firebase+messaging+17.3.0.patch"
+    }
+];
 
 function hasDependency(name) {
     try {
@@ -18,3 +22,32 @@ function hasDependency(name) {
         return false;
     }
 }
+
+function applyPatch(patchFile) {
+    const sourcePath = join(rootDir, "intermediary-patches", patchFile);
+    const destPath = join(rootDir, "patches", patchFile);
+    copyFileSync(sourcePath, destPath);
+    console.log(`Applied patch: ${patchFile}`);
+}
+
+function removePatch(patchFile) {
+    const patchFilePath = join(rootDir, "patches", patchFile);
+    try {
+        unlinkSync(patchFilePath);
+        console.log(`Deleted patch file: ${patchFile}`);
+    } catch (err) {
+        if (err.code !== 'ENOENT') {
+            console.error(`Error deleting patch file ${patchFile}: ${err.message}`);
+        }
+    }
+}
+
+patchOperations.forEach(({ dependency, patchFile }) => {
+    if (hasDependency(dependency)) {
+        applyPatch(patchFile);
+    } else {
+        removePatch(patchFile);
+    }
+});
+
+execSync("npx patch-package", { cwd: rootDir, stdio: "inherit" });
