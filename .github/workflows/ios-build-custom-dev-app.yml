@@ -21,7 +21,7 @@ jobs:
         shell: bash
         working-directory: ./
         run: |
-          sed -i 's/\$(BUNDLE_IDENTIFIER)/com.mendix.native.template/g' ./ios/Config/config.xcconfig
+          sed -i '' 's/\$(BUNDLE_IDENTIFIER)/com.mendix.native.template/g' ./ios/Config/config.xcconfig
 
       - name: actions/setup-node
         uses: actions/setup-node@v3
