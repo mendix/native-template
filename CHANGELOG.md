@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application
+
+## [11.0.1] - 2025-01-7
+
 - We have updated the AppCenter's Xcode version to 15.4.
 - We added a parameter to Xcode configs to fix Bundle Identifier issues.
 

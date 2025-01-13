@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "11.0.1",
+  "version": "11.0.2",
   "private": true,
   "scripts": {
     "postinstall": "node patches/apply-patches.js && jetify",
@@ -15,8 +15,6 @@
     "@react-native-masked-view/masked-view": "0.3.1",
     "@react-native-community/netinfo": "^11.3.2",
     "@react-native-community/push-notification-ios": "1.10.1",
-    "@react-native-firebase/app": "17.3.0",
-    "@react-native-firebase/messaging": "17.3.0",
     "@react-native-picker/picker": "2.8.1",
     "@react-navigation/native": "6.1.18",
     "react-native": "0.75.4",

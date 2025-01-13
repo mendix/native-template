@@ -1,5 +1,17 @@
 [
     {
+        "id": 194440312,
+        "tag_name": "v11.0.2",
+        "name": "Release 11.0.2",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #933 from mendix/update-changelog-11-0-1 (2131049)",
+        "created_at": "2025-01-13T14:29:19Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 193487161,
         "tag_name": "v11.0.1",
         "name": "Release 11.0.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-05-10T16:36:45Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.18",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.18"
-    },
-    {
-        "id": 66576272,
-        "tag_name": "v5.2.12",
-        "name": "Fixed issue with CocoaPods",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n\r\n- We fixed an issue with CocoaPods on iOS, which would fail to build",
-        "created_at": "2022-05-11T12:40:50Z",
-        "published_at": "2022-05-11T12:41:44Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.12",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.12"
     }
 ]
