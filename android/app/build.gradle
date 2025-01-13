@@ -102,6 +102,7 @@ android {
     }
     packagingOptions {
         pickFirst "**/libc++_shared.so"
+        pickFirst "**/libcrypto.so"
     }
 }
 
