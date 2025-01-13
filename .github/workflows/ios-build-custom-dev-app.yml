@@ -17,6 +17,12 @@ jobs:
         run: | 
           sudo xcode-select -s /Applications/Xcode_15.4.app
 
+      - name: update bundle identifier in Dev config
+        shell: bash
+        working-directory: ./
+        run: |
+          sed -i 's/\$(BUNDLE_IDENTIFIER)/com.mendix.native.template/g' ./ios/Config/config.xcconfig
+
       - name: actions/setup-node
         uses: actions/setup-node@v3
         with:
