@@ -6,31 +6,45 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## Improvements
+
 - We have changed Offline Database Management Backend to op-sqlite. The native apps need to be rebuilt via Studio Pro (App -> Build Native Mobile App).
 
 ## [11.0.2] - 2025-01-13
 
+## Fixes
+
 - We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application
 
 ## [11.0.1] - 2025-01-7
+
+## Fixes
 
 - We have updated the AppCenter's Xcode version to 15.4.
 - We added a parameter to Xcode configs to fix Bundle Identifier issues.
 
 ## [11.0.0] - 2024-12-18
 
+## Fixes
+
 - We've removed the support for JSC entirely from Studio Pro version 10.18 and up. All native apps are using Hermes JS engine now. The native apps need to be rebuilt via Studio Pro (App -> Build Native Mobile App).
 
 ## [10.0.0] - 2024-11-27
+
+## Fixes
 
 - We've upgraded the core framework to React Native 0.75.4 to enhance performance, stability, and compatibility across both Android and iOS platforms.
 
 ## [9.0.3] - 2024-10-02
 
+## Fixes
+
 - We upgraded android SDK version to 35
 - We have updated `react-native-permissions` to version 4.1.5
 
 ## [9.0.1] - 2024-09-03
+
+## Fixes
 
 - We have upgraded `react-native-video` to 6.4.5
 - We have fixed OTA updates compatibility issues on iOS 18.
@@ -43,37 +57,53 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [8.2.5] - 2024-07-05
 
+## Fixes
+
 - We have updated the @mendix/native dependency to fix the encryption issue.
 
 ## [8.2.3] - 2024-06-07
 
+## Fixes
+
 - We have upgraded `@mendix/native` to 3.1.5
 
 ## [8.2.2] - 2024-05-29
+
+## Fixes
 
 - We have upgraded `react-native-gesture-handler` to 2.16.2
 - We have upgraded `@mendix/native` to 3.1.4
 
 ## [8.2.1] - 2024-05-27
 
+## Fixes
+
 - We have removed Flipper from iOS Podfile
 - We've added the support of scheduling local notifications on Android 14
 
 ## [8.2.0] - 2024-05-17
+
+## Fixes
 
 - We have upgraded React-navigation to version 6
 - We have added a basic privacy manifest to iOS.
 
 ## [8.1.3] - 2024-05-14
 
+## Fixes
+
 - We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
 - We have added support for Hermes
 
 ## [8.1.1] - 2024-04-24
 
+## Fixes
+
 - We have upgraded the @mendix/native dependency to the latest compatible version
 
 ## [8.1.0] - 2024-04-24
+
+## Fixes
 
 - We have resolved a build error related to Flipper on Xcode 15.3.
 - We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06
@@ -81,9 +111,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [8.0.5] - 2024-04-24
 
+## Fixes
+
 - We have upgraded the @mendix/native dependency to the latest compatible version
 
 ## [8.0.4] - 2024-03-29
+
+## Fixes
 
 - We have removed react-native-code-push dependency. We recommend migrating to Mendix OTA instead.
 
