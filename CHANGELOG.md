@@ -6,57 +6,85 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [8.2.10] - 2025-01-15
+
+### Fixes
+
 - We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application.
 
 ## [8.2.9] - 2025-01-07
+
+### Fixes
 
 - We have updated the AppCenter's Xcode version to 15.4.
 
 ## [8.2.8] - 2024-12-23
 
+### Fixes
+
 - We have updated min sdk to 23 on android.
 
 ## [8.2.7] - 2024-09-03
+
+### Fixes
 
 - We have fixed OTA updates compatibility issues on iOS 18.
 
 ## [8.2.6] - 2024-08-02
 
+### Fixes
+
 - Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.
 
 ## [8.2.5] - 2024-07-25
+
+### Fixes
 
 - We have updated the @mendix/native dependency to fix the encryption issue.
 
 ## [8.2.3] - 2024-06-07
 
+### Fixes
+
 - We have upgraded `@mendix/native` to 3.1.5
 
 ## [8.2.2] - 2024-05-29
+
+### Fixes
 
 - We have upgraded `react-native-gesture-handler` to 2.16.2
 - We have upgraded `@mendix/native` to 3.1.4
 
 ## [8.2.1] - 2024-05-27
 
+### Fixes
+
 - We have removed Flipper from iOS Podfile
 - We've added the support of scheduling local notifications on Android 14
 
 ## [8.2.0] - 2024-05-17
+
+### Fixes
 
 - We have upgraded React-navigation to version 6
 - We have added a basic privacy manifest to iOS.
 
 ## [8.1.3] - 2024-05-14
 
+### Fixes
+
 - We've made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
 - We have added support for Hermes
 
 ## [8.1.1] - 2024-04-24
 
+### Improvements
+
 - We have upgraded the @mendix/native dependency to the latest compatible version
 
 ## [8.1.0] - 2024-04-24
+
+### Fixes
 
 - We have resolved a build error related to Flipper on Xcode 15.3.
 - We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06
@@ -64,27 +92,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [8.0.5] - 2024-04-24
 
+### Fixes
+
 - We have upgraded the @mendix/native dependency to the latest compatible version
 
 ## [8.0.4] - 2024-03-29
+
+### Fixes
 
 - We have removed react-native-code-push dependency. We recommend migrating to Mendix OTA instead.
 
 ## [8.0.3] - 2024-02-13
 
-### Fixed
+### Fixes
 
 - We have removed redundant launch screen
 
 ## [8.0.2] - 2024-01-18
 
-### Fixed
+### Fixes
 
 - We have fixed issues related to building with pipelines
 
 ## [8.0.1] - 2024-01-17
 
-### Fixed
+### Fixes
 
 - We updated `react-native-vector-icons` to version `10.0.3`
 
@@ -98,20 +130,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [7.0.9] - 2023-10-13
 
-### Fixed
+### Fixes
 
 - We fixed build errors caused by the recent XCode 15 update.
 - We have Updated androidManifest to support open url with links to websites whose apps are installed on the device.
 
 ## [7.0.8] - 2023-09-25
 
-### Fixed
+### Fixes
 
 - We have enhanced file encryption on Android.
 
 ## [7.0.7] - 2023-09-22
 
-### Fixed
+### Fixes
 
 - We have updated clearKeychain method to clear only necessary data.
 
@@ -121,7 +153,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [7.0.5] - 2023-08-23
 
-### Fixed
+### Fixes
 
 - We upgraded android SDK version to 33
 
