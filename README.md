@@ -9,7 +9,10 @@
 
 > **Compatible Mendix Studio Pro Versions**
 
-![Studio Pro 10.19 and above](https://img.shields.io/badge/Studio_Pro-10.19_and_above-blue)
+![Studio Pro 10.6](https://img.shields.io/badge/Studio_Pro-10.6-blue)
+![Studio Pro 10.7](https://img.shields.io/badge/Studio_Pro-10.7-blue)
+![Studio Pro 10.8](https://img.shields.io/badge/Studio_Pro-10.8-blue)
+![Studio Pro 10.9](https://img.shields.io/badge/Studio_Pro-10.9-blue)
 
 ---
 
