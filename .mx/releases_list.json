@@ -5,7 +5,7 @@
         "name": "Release 11.0.2",
         "draft": true,
         "prerelease": false,
-        "body": "* We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application",
+        "body": "## Fixed\r\n\r\n- We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application.\r\n",
         "created_at": "2025-01-13T14:29:19Z",
         "published_at": null,
         "tarball_url": null,
