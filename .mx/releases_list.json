@@ -1,15 +1,51 @@
 [
     {
+        "id": 194842113,
+        "tag_name": "v8.2.10",
+        "name": "Release 8.2.10",
+        "draft": false,
+        "prerelease": false,
+        "body": "## Fixed\r\n\r\n- We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application.",
+        "created_at": "2025-01-15T07:52:05Z",
+        "published_at": "2025-01-15T08:10:42Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.10",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.10"
+    },
+    {
+        "id": 194845049,
+        "tag_name": "v8.0.17",
+        "name": "Release 8.0.17",
+        "draft": false,
+        "prerelease": false,
+        "body": "## Fixed\r\n\r\n- We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application.",
+        "created_at": "2025-01-15T08:13:16Z",
+        "published_at": "2025-01-15T08:13:36Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.17",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.17"
+    },
+    {
+        "id": 194845654,
+        "tag_name": "v7.0.24",
+        "name": "Release 7.0.24",
+        "draft": false,
+        "prerelease": false,
+        "body": "## Fixed\r\n\r\n- We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application.",
+        "created_at": "2025-01-15T08:17:16Z",
+        "published_at": "2025-01-15T08:17:27Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.24",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.24"
+    },
+    {
         "id": 194440312,
         "tag_name": "v11.0.2",
         "name": "Release 11.0.2",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application",
+        "body": "## Fixed\r\n\r\n- We have resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. We have ensured that Firebase dependencies are now only included when explicitly required by the application.\r\n",
         "created_at": "2025-01-13T14:29:19Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2025-01-13T17:04:11Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v11.0.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v11.0.2"
     },
     {
         "id": 193487161,
@@ -1162,41 +1198,5 @@
         "published_at": "2022-05-17T11:52:45Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.0.14",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.0.14"
-    },
-    {
-        "id": 66576594,
-        "tag_name": "v5.1.19",
-        "name": "Use Mendix maven repository",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n\r\n- We fixed an issue with JCenter on Android and CocoaPods on iOS, which would fail to build (Ticket #148798 #148819 #148830 #148840) ",
-        "created_at": "2022-05-16T16:23:27Z",
-        "published_at": "2022-05-11T12:44:25Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.19",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.19"
-    },
-    {
-        "id": 66575923,
-        "tag_name": "v6.2.19",
-        "name": "Fixed issue with CocoaPods",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n\r\n- We fixed an issue with CocoaPods on iOS, which would fail to build",
-        "created_at": "2022-05-11T12:36:38Z",
-        "published_at": "2022-05-11T12:38:29Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.19",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.19"
-    },
-    {
-        "id": 66494920,
-        "tag_name": "v6.2.18",
-        "name": "Use Mendix maven repository",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n\r\n- We fixed an issue with JCenter on Android, which would fail to build (Ticket #148798 #148819 #148830 #148840) ",
-        "created_at": "2022-05-11T08:01:23Z",
-        "published_at": "2022-05-10T16:36:45Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.18",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.18"
     }
 ]
