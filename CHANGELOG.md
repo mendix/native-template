@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We resolved an issue with the bundle identifier in the Dev scheme on Xcode.
+
 ## Improvements
 
 - We have changed Offline Database Management Backend to op-sqlite. The native apps need to be rebuilt via Studio Pro (App -> Build Native Mobile App).
