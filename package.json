@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "8.0.16",
+  "version": "8.0.17",
   "private": true,
   "scripts": {
     "postinstall": "node patches/apply-patches.js && jetify",
