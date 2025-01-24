@@ -37,7 +37,7 @@
       { "name": "CODE_PUSH_KEY", "value": "" },
       { "name": "IS_DEV_APP", "value": false },
       { "name": "SUPPORTS_MOBILE_TOOLKIT", "value": false },
-      { "name": "JAVA_HOME", "value": "$(JAVA_HOME_11_X64)" }
+      { "name": "JAVA_HOME", "value": "$(JAVA_HOME_17_X64)" }
     ],
     "toolsets": {
       "android": {
