@@ -21,7 +21,7 @@ jobs:
       - name: actions/setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: "16.14.2"
+          node-version-file: '.nvmrc'
       - name: npm install
         run: npm ci
       - name: Add NDK 21.4.7075529
