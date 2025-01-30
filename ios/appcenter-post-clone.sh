@@ -1,5 +1,5 @@
 # Update node version to 14;
-brew install node@14
+brew install node@20
 
 # Update project's dependencies
 npm i && pod update

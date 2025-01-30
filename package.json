@@ -41,7 +41,7 @@
     "patch-package": "^6.2.2"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
   },
   "overrides": {
     "react": "18.2.0",
