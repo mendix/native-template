@@ -1,5 +1,17 @@
 [
     {
+        "id": 197565723,
+        "tag_name": "v7.0.25",
+        "name": "Release 7.0.25",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We have upgraded Node.js version to v20.\r\n- [Android] We have replaced the MaxPermSize JVM parameter with MaxMetaspaceSize, as MaxPermSize is no longer available since Java 8.",
+        "created_at": "2025-01-30T12:41:55Z",
+        "published_at": "2025-01-30T12:42:35Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.25",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.25"
+    },
+    {
         "id": 196078277,
         "tag_name": "v12.0.0",
         "name": "Release 12.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-06-02T08:33:35Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.22",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.22"
-    },
-    {
-        "id": 68318557,
-        "tag_name": "v6.2.21",
-        "name": "Fix iOS build issue",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n\r\n- We fixed an iOS build issue for projects using Crashlytics.",
-        "created_at": "2022-06-01T08:40:05Z",
-        "published_at": "2022-06-01T08:41:41Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.21",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.21"
     }
 ]
