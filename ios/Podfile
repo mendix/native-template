@@ -9,6 +9,7 @@ def node_require(script)
     )", __dir__]).strip
 end
 
+# Explicitly disable new architecture until all dependencies are updated
 ENV['RCT_NEW_ARCH_ENABLED'] = '0'
 
 # Use it to require both react-native's and this package's scripts:
@@ -17,7 +18,7 @@ node_require('react-native-permissions/scripts/setup.rb')
 
 require_relative './mendix_utils'
 
-deployment_target = "15.1"
+deployment_target = "15.5"
 platform :ios, deployment_target
 
 prepare_react_native_project!
