@@ -7,7 +7,7 @@
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
-    "@mendix/native": "7.0.0",
+    "@mendix/native": "./mendix-native-7.0.0.tgz",
     "@op-engineering/op-sqlite": "9.1.2",
     "@react-native-async-storage/async-storage": "2.0.0",
     "@react-native-community/cameraroll": "4.0.1",
