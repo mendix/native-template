@@ -28,6 +28,7 @@ import com.mendix.mendixnative.config.AppPreferences;
 import com.mendix.mendixnative.config.AppUrl;
 import com.mendix.mendixnative.react.MendixApp;
 import com.mendix.mendixnative.react.MxConfiguration;
+import com.mendix.mendixnative.util.CookieEncryption;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         devModeCheckBox = findViewById(R.id.checkbox_dev_mode);
         clearDataCheckBox = findViewById(R.id.checkbox_clear_data);
         loaderView = findViewById(R.id.loader);
+
+        CookieEncryption.init(this);
 
         ViewGroup cameraContainer = findViewById(R.id.barcode_scanner_container);
         cameraView = new ZXingScannerView(this);

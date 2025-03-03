@@ -10,6 +10,7 @@ import com.mendix.mendixnative.activity.MendixReactActivity;
 import com.mendix.mendixnative.config.AppUrl;
 import com.mendix.mendixnative.react.MendixApp;
 import com.mendix.mendixnative.react.MxConfiguration;
+import com.mendix.mendixnative.util.CookieEncryption;
 
 import org.devio.rn.splashscreen.SplashScreen;
 
@@ -21,7 +22,7 @@ public class MainActivity extends MendixReactActivity {
         boolean hasDeveloperSupport = ((MainApplication) getApplication()).getUseDeveloperSupport();
         mendixApp = new MendixApp(AppUrl.getUrlFromResource(this), MxConfiguration.WarningsFilter.none, hasDeveloperSupport, false);
         super.onCreate(savedInstanceState);
-
+        CookieEncryption.init(this);
         // Checks the current theme and apply the correct style (Backwards compatible)
         boolean isDarkMode;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
