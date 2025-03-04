@@ -78,7 +78,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="" />
       <meta-data 
-            android:name="com.mendix.mendixnative.CookieEncryption" 
+            android:name="mendixnative.CookieEncryption" 
             android:value="${cookieEncryption}" />
     </application>
 
