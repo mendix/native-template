@@ -1,5 +1,17 @@
 [
     {
+        "id": 204132578,
+        "tag_name": "v12.1.1",
+        "name": "Release 12.1.1",
+        "draft": false,
+        "prerelease": true,
+        "body": "This release is for testing only!",
+        "created_at": "2025-03-06T14:37:47Z",
+        "published_at": "2025-03-06T14:38:24Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v12.1.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v12.1.1"
+    },
+    {
         "id": 197565723,
         "tag_name": "v7.0.25",
         "name": "Release 7.0.25",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-06-15T09:03:44Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.13",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.13"
-    },
-    {
-        "id": 68424186,
-        "tag_name": "v6.2.22",
-        "name": "Release 6.2.22",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n\r\n- We fixed an iOS build issue  (#150964, #150934)",
-        "created_at": "2022-06-02T08:31:38Z",
-        "published_at": "2022-06-02T08:33:35Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.22",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.22"
     }
 ]
