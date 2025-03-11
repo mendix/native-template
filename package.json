@@ -7,7 +7,7 @@
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
-    "@mendix/native": "./mendix-native-8.0.2.tgz",
+    "@mendix/native": "./mendix-native-8.0.3.tgz",
     "@op-engineering/op-sqlite": "9.2.7",
     "@react-native-async-storage/async-storage": "2.0.0",
     "@react-native-community/cameraroll": "4.0.1",
@@ -17,7 +17,7 @@
     "@react-native-community/push-notification-ios": "1.10.1",
     "@react-native-picker/picker": "2.11.0",
     "@react-navigation/native": "6.1.18",
-    "react-native": "0.77.0",
+    "react-native": "0.77.1",
     "@react-native-community/cli": "16.0.2",
     "@react-native-community/cli-platform-android": "16.0.2",
     "@react-native-community/cli-platform-ios": "16.0.2",
@@ -43,8 +43,8 @@
   "devDependencies": {
     "@babel/runtime": "^7.20.0",
     "@mendix/native-mobile-toolkit": "latest",
-    "@react-native/babel-preset": "0.77.0",
-    "@react-native/metro-config": "0.77.0",
+    "@react-native/babel-preset": "0.77.1",
+    "@react-native/metro-config": "0.77.1",
     "detox": "19.13.0",
     "jetifier": "^1.6.8",
     "patch-package": "^8.0.0"
@@ -55,13 +55,13 @@
   "overrides": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-native": "0.77.0",
+    "react-native": "0.77.1",
     "unset-value": "2.0.1",
     "semver": "5.7.2"
   },
   "resolutions": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-native": "0.77.0"
+    "react-native": "0.77.1"
   }
 }
