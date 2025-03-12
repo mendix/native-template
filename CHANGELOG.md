@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Improvements
 
-- We've upgraded the core React Native dependency to version 0.77.0 to enhance performance, stability, and compatibility across both Android and iOS platforms.
+- We've upgraded the core React Native dependency to version 0.77.1 to enhance performance, stability, and compatibility across both Android and iOS platforms.
 
 ## [12.0.0] - 2025-01-25
 
