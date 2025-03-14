@@ -1,8 +1,8 @@
 diff --git a/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js b/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
-index 9a38143..4bd33b4 100644
+index b3dfd5c..1a418a7 100644
 --- a/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
 +++ b/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
-@@ -50,12 +50,6 @@ function currentlyFocusedInput(): ?ComponentRef {
+@@ -48,12 +48,6 @@ function currentlyFocusedInput(): ?HostInstance {
   * If no text field is focused it returns null
   */
  function currentlyFocusedField(): ?number {
@@ -26,12 +26,12 @@ index 62131f5..78372ec 100644
 +  if (!_currentFrame) {
 +    _currentFrame = self.image;
 +  }
-+  
++
    if (_currentFrame) {
      layer.contentsScale = self.animatedImageScale;
      layer.contents = (__bridge id)_currentFrame.CGImage;
 diff --git a/node_modules/react-native/React/Base/RCTKeyCommands.m b/node_modules/react-native/React/Base/RCTKeyCommands.m
-index 19ef5b1..b5653aa 100644
+index 1961de7..622d189 100644
 --- a/node_modules/react-native/React/Base/RCTKeyCommands.m
 +++ b/node_modules/react-native/React/Base/RCTKeyCommands.m
 @@ -18,11 +18,11 @@
@@ -73,25 +73,39 @@ index 19ef5b1..b5653aa 100644
 +    isKeyDown = [event isKeyDown];
    }
  
-   BOOL interactionEnabled = !RCTSharedApplication().isIgnoringInteractionEvents;
+   if (isKeyDown && modifiedInput.length > 0) {
 diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerClient.h b/node_modules/react-native/React/DevSupport/RCTPackagerClient.h
-index 6dea84f..7adc8f5 100644
+index 6dea84f..bfcf7ae 100644
 --- a/node_modules/react-native/React/DevSupport/RCTPackagerClient.h
 +++ b/node_modules/react-native/React/DevSupport/RCTPackagerClient.h
-@@ -25,7 +25,7 @@ extern const int RCT_PACKAGER_CLIENT_PROTOCOL_VERSION;
+@@ -13,10 +13,11 @@
+ @class RCTReconnectingWebSocket;
+ 
+ #if defined(__cplusplus)
+-extern "C" {
++extern "C"
++{
+ #endif
+ 
+-extern const int RCT_PACKAGER_CLIENT_PROTOCOL_VERSION;
++    extern const int RCT_PACKAGER_CLIENT_PROTOCOL_VERSION;
+ 
+ #if defined(__cplusplus)
+ }
+@@ -25,7 +26,7 @@ extern const int RCT_PACKAGER_CLIENT_PROTOCOL_VERSION;
  @protocol RCTPackagerClientMethod <NSObject>
  
  - (void)handleRequest:(NSDictionary<NSString *, id> *)params withResponder:(RCTPackagerClientResponder *)responder;
 -- (void)handleNotification:(NSDictionary<NSString *, id> *)params;
-+//- (void)handleNotification:(NSDictionary<NSString *, id> *)params;
++// - (void)handleNotification:(NSDictionary<NSString *, id> *)params;
  
  @optional
  
 diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-index bd4075c..6a518c3 100644
+index 39419d6..1c28e82 100644
 --- a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 +++ b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-@@ -209,12 +209,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
+@@ -220,12 +220,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
    dispatch_queue_t queue =
        [handler respondsToSelector:@selector(methodQueue)] ? [handler methodQueue] : dispatch_get_main_queue();
  
