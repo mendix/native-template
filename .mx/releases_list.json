@@ -1,15 +1,15 @@
 [
     {
-        "id": 205293534,
-        "tag_name": "v13.0.1-0",
-        "name": "Release 13.0.1-0",
-        "draft": true,
-        "prerelease": true,
-        "body": "* RN 0.77.1",
-        "created_at": "2025-03-12T13:34:24Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "id": 207414609,
+        "tag_name": "v13.0.0",
+        "name": "Release 13.0.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We have updated React Navigation to V7 \r\n- We have updated the following additional dependencies:\r\n  - react-native-reanimated to 3.16.1 \r\n  - react-native-screens to 4.4.0\r\n  - react-native-image-picker to 7.2.3\r\n  - @react-native-community/netinfo to 11.4.1\r\n- We're now using @gorhom/bottom-sheet for bottom sheet implementation\r\n- We have added the option to enable or disable cookie encryption for Android devices. ",
+        "created_at": "2025-03-21T12:28:24Z",
+        "published_at": "2025-03-21T12:34:57Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v13.0.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v13.0.0"
     },
     {
         "id": 204741257,
