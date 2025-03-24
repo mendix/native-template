@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We resolved an issue with the bundle identifier in the Dev scheme on Xcode.
+- We have upgraded `@mendix/native` to 8.0.1
 
 ## Improvements
 
