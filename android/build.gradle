@@ -1,10 +1,9 @@
 buildscript {
     ext {
         buildToolsVersion = "35.0.0"
-        minSdkVersion = 23
+        minSdkVersion = 24
         compileSdkVersion = 35
         targetSdkVersion = 35
-        kotlin_version = "1.9.24"
         kotlinVersion = "1.9.24"
         excludeAppGlideModule = true
         androidx_lifecycle_version = "2.8.6"
@@ -26,9 +25,10 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.4.0"
+        classpath "com.android.tools.build:gradle:7.4.2"
         classpath "com.facebook.react:react-native-gradle-plugin"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'org.jetbrains.kotlin:compose-compiler-gradle-plugin:2.0.21'
         apply from: file("../node_modules/@mendix/native/androidlib/mendix.gradle"); applyMendixClassPaths(project)
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -54,7 +54,6 @@ allprojects {
         maven {
             url "https://maven.fabric.io/public"
         }
-        maven { url "https://packages.rnd.mendix.com/jcenter" }
         maven { url "https://www.jitpack.io" }
         maven {
             url "https://maven.scijava.org/content/repositories/public/"
@@ -65,6 +64,7 @@ allprojects {
         maven {
             url "https://maven.scijava.org/content/repositories/jcenter/"
         }
+        maven { url "https://packages.rnd.mendix.com/jcenter" }
     }
 }
 
