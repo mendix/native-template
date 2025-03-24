@@ -1,5 +1,41 @@
 [
     {
+        "id": 207414609,
+        "tag_name": "v13.0.0",
+        "name": "Release 13.0.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We have updated React Navigation to V7 \r\n- We have updated the following additional dependencies:\r\n  - react-native-reanimated to 3.16.1 \r\n  - react-native-screens to 4.4.0\r\n  - react-native-image-picker to 7.2.3\r\n  - @react-native-community/netinfo to 11.4.1\r\n- We're now using @gorhom/bottom-sheet for bottom sheet implementation\r\n- We have added the option to enable or disable cookie encryption for Android devices. ",
+        "created_at": "2025-03-21T12:28:24Z",
+        "published_at": "2025-03-21T12:34:57Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v13.0.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v13.0.0"
+    },
+    {
+        "id": 204741257,
+        "tag_name": "v12.0.1",
+        "name": "Release 12.0.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We resolved an issue where changing the system font scale could cause crashes on Android.\r\n",
+        "created_at": "2025-03-10T13:34:00Z",
+        "published_at": "2025-03-10T13:34:46Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v12.0.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v12.0.1"
+    },
+    {
+        "id": 204739809,
+        "tag_name": "v11.0.5",
+        "name": "Release 11.0.5",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We resolved an issue where changing the system font scale could cause crashes on Android. ",
+        "created_at": "2025-03-10T13:28:04Z",
+        "published_at": "2025-03-10T13:31:19Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v11.0.5",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v11.0.5"
+    },
+    {
         "id": 197565723,
         "tag_name": "v7.0.25",
         "name": "Release 7.0.25",
@@ -1162,41 +1198,5 @@
         "published_at": "2022-07-15T10:48:11Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.23-beta.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.23-beta.1"
-    },
-    {
-        "id": 70859921,
-        "tag_name": "v6.2.23-beta.0",
-        "name": "6.2.23-beta.0",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2022-06-15T09:18:49Z",
-        "published_at": "2022-06-29T12:56:46Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.23-beta.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.23-beta.0"
-    },
-    {
-        "id": 69498009,
-        "tag_name": "v5.2.13",
-        "name": "Release 5.2.13",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We fixed an issue with the date picker not being visible in dark mode.",
-        "created_at": "2022-06-15T08:57:22Z",
-        "published_at": "2022-06-15T09:03:44Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.13",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.13"
-    },
-    {
-        "id": 68424186,
-        "tag_name": "v6.2.22",
-        "name": "Release 6.2.22",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes \r\n\r\n- We fixed an iOS build issue  (#150964, #150934)",
-        "created_at": "2022-06-02T08:31:38Z",
-        "published_at": "2022-06-02T08:33:35Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.22",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.22"
     }
 ]

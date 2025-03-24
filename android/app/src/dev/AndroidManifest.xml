@@ -13,7 +13,7 @@
             tools:node="merge"></activity>
         <activity
             android:name="com.mendix.mendixnative.activity.MendixReactActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|fontScale"
             android:launchMode="singleInstance"
             android:windowSoftInputMode="adjustPan"
             android:exported="true"></activity>
