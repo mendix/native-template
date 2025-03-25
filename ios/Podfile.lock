@@ -1256,8 +1256,27 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-cameraroll (4.0.1):
-    - React
+  - react-native-cameraroll (7.4.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - react-native-image-picker (7.2.3):
     - DoubleConversion
     - glog
@@ -1834,7 +1853,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
-  - "react-native-cameraroll (from `../node_modules/@react-native-community/cameraroll`)"
+  - "react-native-cameraroll (from `../node_modules/@react-native-camera-roll/camera-roll`)"
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
@@ -1970,7 +1989,7 @@ EXTERNAL SOURCES:
   React-microtasksnativemodule:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/microtasks"
   react-native-cameraroll:
-    :path: "../node_modules/@react-native-community/cameraroll"
+    :path: "../node_modules/@react-native-camera-roll/camera-roll"
   react-native-image-picker:
     :path: "../node_modules/react-native-image-picker"
   react-native-netinfo:
@@ -2108,7 +2127,7 @@ SPEC CHECKSUMS:
   React-logger: d79b704bf215af194f5213a6b7deec50ba8e6a9b
   React-Mapbuffer: b982d5bba94a8bc073bda48f0d27c9b28417fae3
   React-microtasksnativemodule: 2b73e68f0462f3175f98782db08896f8501afd20
-  react-native-cameraroll: 60ba0068826eab1c8d43146191bafd4363ea58a7
+  react-native-cameraroll: 2501572a79da186b62ca0b11c3b812eb59484226
   react-native-image-picker: df4f6aefbc662b0a5f991065650662c9731977a3
   react-native-netinfo: f0a9899081c185db1de5bb2fdc1c88c202a059ac
   react-native-pager-view: c476f76d54f946df5147645e902d3d7173688187
