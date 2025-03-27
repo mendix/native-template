@@ -3,13 +3,13 @@
         "id": 208618063,
         "tag_name": "v13.1.0",
         "name": "Release 13.1.0",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #977 from mendix/cameraRollVersionUpdate (1aac0bb)",
+        "body": "",
         "created_at": "2025-03-27T09:39:03Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2025-03-27T09:42:47Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v13.1.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v13.1.0"
     },
     {
         "id": 207414609,
