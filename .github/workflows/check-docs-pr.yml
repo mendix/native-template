@@ -1,0 +1,88 @@
+name: Check Docs PR
+
+on:
+  pull_request:
+    types: [opened, edited]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  check-docs-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check Skip Docs Check Comment
+        id: check-skip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Get PR comments
+          COMMENTS=$(gh pr view ${{ github.event.pull_request.number }} --json comments --jq '.comments[].body')
+
+          # Check if skip-docs-check comment exists
+          if echo "$COMMENTS" | grep -q "skip-docs-check"; then
+            echo "skip_check=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip_check=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check Docs PR Link
+        if: steps.check-skip.outputs.skip_check == 'false'
+        id: check-docs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Get PR description
+          PR_DESCRIPTION=$(gh pr view ${{ github.event.pull_request.number }} --json body --jq .body)
+
+          # Check if docs PR link exists
+          if echo "$PR_DESCRIPTION" | grep -q "https://github.com/mendix/docs/pull"; then
+            echo "docs_pr=found" >> $GITHUB_OUTPUT
+          else
+            echo "docs_pr=missing" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check Existing Docs Check Comment
+        id: check-existing-comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Get PR comments
+          COMMENTS=$(gh pr view ${{ github.event.pull_request.number }} --json comments --jq '.comments[].body')
+
+          # Check if our docs check comment exists
+          if echo "$COMMENTS" | grep -q "please add a link to the corresponding docs PR"; then
+            echo "has_comment=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_comment=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Add Label if Missing
+        if: steps.check-docs.outputs.docs_pr == 'missing' && steps.check-skip.outputs.skip_check == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          # Add missing-docs-pr label
+          gh pr edit ${{ github.event.pull_request.number }} --add-label missing-docs-pr
+
+          # Add comment to PR only if it doesn't exist
+          if [ "${{ steps.check-existing-comment.outputs.has_comment }}" = "false" ]; then
+            gh pr comment ${{ github.event.pull_request.number }} --body "Hi @$PR_AUTHOR, please add a link to the corresponding docs PR in the description. If documentation update is not required for this PR, you can add a comment with 'skip-docs-check' to skip this check."
+          fi
+
+          # Fail the workflow
+          echo "Docs PR link is missing in the description"
+          exit 1
+
+      - name: Remove Label if Found or Skip Check
+        if: steps.check-docs.outputs.docs_pr == 'found' || steps.check-skip.outputs.skip_check == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Remove missing-docs-pr label if it exists
+          gh pr edit ${{ github.event.pull_request.number }} --remove-label missing-docs-pr

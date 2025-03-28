@@ -24,6 +24,7 @@ To ensure this pull request meets the requirements for merging, please complete 
 
 - PRs **will not be merged** without a corresponding release note update in the Mendix Docs repository.
 - Make sure the release note accurately describes the changes and impacts introduced by this PR.
+- If documentation update is not required, add a comment with `skip-docs-check` to skip the docs check.
 
 Thank you for keeping our documentation up-to-date! 🚀
 
