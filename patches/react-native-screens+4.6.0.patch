@@ -1,0 +1,15 @@
+diff --git a/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt b/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt
+index 3889c2f..08784b9 100644
+--- a/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt
++++ b/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt
+@@ -87,7 +87,9 @@ open class ScreenViewManager :
+         stateWrapper: StateWrapper?,
+     ): Any? {
+         if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+-            view.setStateWrapper(stateWrapper)
++            if (stateWrapper != null) {
++                view.setStateWrapper(stateWrapper)
++            }
+         }
+         return super.updateState(view, props, stateWrapper)
+     }
