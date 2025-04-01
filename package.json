@@ -43,7 +43,7 @@
     "semver": "5.7.2"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.20.0",
+    "@babel/runtime": "^7.27.0",
     "@mendix/native-mobile-toolkit": "latest",
     "@react-native/babel-preset": "0.77.1",
     "@react-native/metro-config": "0.77.1",
