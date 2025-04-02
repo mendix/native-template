@@ -6,9 +6,40 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## Fixes
+
+- We have upgraded `@mendix/native` to version 9.0.1
+
+## [14.0.0] - 2025-04-01
+
 ## Improvements
 
 - We've upgraded the core React Native dependency to version 0.77.1 to enhance performance, stability, and compatibility across both Android and iOS platforms.
+
+## [13.0.1] - 2025-03-27
+
+## Fixes
+
+- We have applied the patch for @react-native-camera-roll to fix the saving picture issue.
+
+## [13.0.0] - 2025-03-21
+
+## Improvements
+
+- We have updated React Navigation to V7
+- We have updated the following additional dependencies:
+    react-native-reanimated to 3.16.1
+    react-native-screens to 4.4.0
+    react-native-image-picker to 7.2.3
+    @react-native-community/netinfo to 11.4.1
+- We're now using @gorhom/bottom-sheet for bottom sheet implementation
+- We have added the option to enable or disable cookie encryption for Android devices.
+
+## [12.0.1] - 2025-03-10
+
+## Fixes
+
+- We resolved an issue where changing the system font scale could cause crashes on Android.
 
 ## [12.0.0] - 2025-01-25
 
