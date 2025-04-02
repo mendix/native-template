@@ -1,5 +1,17 @@
 [
     {
+        "id": 209860334,
+        "tag_name": "v13.1.1",
+        "name": "Release 13.1.1",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #983 from mendix/chore/update-podfile-lock (6b272ec)",
+        "created_at": "2025-04-02T13:36:39Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 209595487,
         "tag_name": "v14.0.0",
         "name": "Release 14.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-07-26T10:23:54Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.24-beta.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.24-beta.1"
-    },
-    {
-        "id": 72223508,
-        "tag_name": "v6.2.23",
-        "name": "Release 6.2.23",
-        "draft": false,
-        "prerelease": false,
-        "body": "- We updated the minimum version of iOS to 14\r\n- We remove QUERY_ALL_PACKAGES permission for Android apps\r\n- We updated the version of react-native-vector-icons to 9.1.0\r\n- We fixed an issue while building iOS apps in AppCenter",
-        "created_at": "2022-07-18T13:03:45Z",
-        "published_at": "2022-07-18T13:06:16Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.23",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.23"
     }
 ]
