@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [14.1.0] - 2025-04-02
+
+## Fixes
+
+- We have upgraded `@mendix/native` to version 9.0.1
+
+## [14.0.0] - 2025-04-01
+
 ## Improvements
 
 - We've upgraded the core React Native dependency to version 0.77.1 to enhance performance, stability, and compatibility across both Android and iOS platforms.

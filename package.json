@@ -1,13 +1,13 @@
 {
   "name": "native-template",
-  "version": "14.0.0",
+  "version": "14.1.0",
   "private": true,
   "scripts": {
     "postinstall": "node patches/apply-patches.js && jetify",
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
-    "@mendix/native": "9.0.0-1",
+    "@mendix/native": "9.0.1",
     "@op-engineering/op-sqlite": "9.2.7",
     "@swan-io/react-native-browser": "0.4.1",
     "@react-native-async-storage/async-storage": "2.0.0",
