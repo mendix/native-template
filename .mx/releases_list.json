@@ -1,10 +1,22 @@
 [
     {
+        "id": 209860334,
+        "tag_name": "v13.1.1",
+        "name": "Release 13.1.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have fixed an issue building iOS apps using Bitrise",
+        "created_at": "2025-04-02T13:36:39Z",
+        "published_at": "2025-04-02T13:41:26Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v13.1.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v13.1.1"
+    },
+    {
         "id": 209595487,
         "tag_name": "v14.0.0",
         "name": "Release 14.0.0",
         "draft": false,
-        "prerelease": true,
+        "prerelease": false,
         "body": "- We upgraded our React Native version to 0.77.1. This update brings latest security and performance improvements.\r\n\r\n#### Library Updates and Improvements\r\n\r\n- **@op-engineering/op-sqlite:** 9.2.7\r\n- **@react-native-picker/picker:** 2.11.0\r\n- **@react-native-community/cli:** 16.0.2\r\n- **@react-native-community/cli-platform-android:** 16.0.2\r\n- **@react-native-community/cli-platform-ios:** 16.0.2\r\n- **react-native-gesture-handler:** 2.23.1\r\n- **react-native-safe-area-context:** 5.2.0\r\n- **react-native-screens:** 4.6.0\r\n- **react-native-svg:** 15.11.1\r\n- **react-native-video:** 6.10.0\r\n",
         "created_at": "2025-04-01T12:57:00Z",
         "published_at": "2025-04-01T12:58:36Z",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-07-26T10:23:54Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.24-beta.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.24-beta.1"
-    },
-    {
-        "id": 72223508,
-        "tag_name": "v6.2.23",
-        "name": "Release 6.2.23",
-        "draft": false,
-        "prerelease": false,
-        "body": "- We updated the minimum version of iOS to 14\r\n- We remove QUERY_ALL_PACKAGES permission for Android apps\r\n- We updated the version of react-native-vector-icons to 9.1.0\r\n- We fixed an issue while building iOS apps in AppCenter",
-        "created_at": "2022-07-18T13:03:45Z",
-        "published_at": "2022-07-18T13:06:16Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.23",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.23"
     }
 ]
