@@ -1,0 +1,140 @@
+/* Mendix Design System Colors */
+:root {
+    --mx-blue: #0595DB;
+    --mx-dark-blue: #006FBA;
+    --mx-light-blue: #E6F4FA;
+    --mx-gray-100: #F5F5F5;
+    --mx-gray-200: #EEEEEE;
+    --mx-gray-300: #E0E0E0;
+    --mx-gray-400: #BDBDBD;
+    --mx-gray-500: #9E9E9E;
+    --mx-gray-600: #757575;
+    --mx-gray-700: #616161;
+    --mx-gray-800: #424242;
+    --mx-gray-900: #212121;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--mx-gray-900);
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 1.5rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: var(--mx-dark-blue);
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.version-table {
+    background-color: white;
+    border: 1px solid var(--mx-gray-200);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+th {
+    background-color: var(--mx-light-blue);
+    color: var(--mx-dark-blue);
+    font-weight: 500;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid var(--mx-gray-200);
+    font-size: 0.875rem;
+}
+
+td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--mx-gray-200);
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: var(--mx-gray-100);
+}
+
+/* Android SDK version cell styling */
+td:nth-child(4) {
+    white-space: pre-line;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 0.875rem;
+    color: var(--mx-gray-700);
+}
+
+/* Version number styling */
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(5),
+td:nth-child(6) {
+    color: var(--mx-gray-700);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .logo {
+        height: 32px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    th, td {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+} 
