@@ -15,11 +15,32 @@ index 9a38143..4bd33b4 100644
    return findNodeHandle(currentlyFocusedInputRef);
  }
  
+diff --git a/node_modules/react-native/Libraries/Image/RCTImageLoader.mm b/node_modules/react-native/Libraries/Image/RCTImageLoader.mm
+index dac4ecc..d8b38dc 100644
+--- a/node_modules/react-native/Libraries/Image/RCTImageLoader.mm
++++ b/node_modules/react-native/Libraries/Image/RCTImageLoader.mm
+@@ -470,7 +470,15 @@ - (RCTImageURLLoaderRequest *)_loadImageOrDataWithURLRequest:(NSURLRequest *)req
+ 
+     // Add missing png extension
+     if (request.URL.fileURL && request.URL.pathExtension.length == 0) {
+-      mutableRequest.URL = [request.URL URLByAppendingPathExtension:@"png"];
++        // Check if there exists a file with that url on disk already
++        // This should fix issue https://github.com/facebook/react-native/issues/46870
++        if ([[NSFileManager defaultManager] fileExistsAtPath:request.URL.path]) {
++          mutableRequest.URL = request.URL;
++        } else {
++          // This is the default behavior in case there is no file on disk with no extension.
++          // We assume that the extension is `png`.
++          mutableRequest.URL = [request.URL URLByAppendingPathExtension:@"png"];
++        }
+     }
+     if (_redirectDelegate != nil) {
+       mutableRequest.URL = [_redirectDelegate redirectAssetsURL:mutableRequest.URL];
 diff --git a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-index 62131f5..78372ec 100644
+index 62131f5..5ce17e6 100644
 --- a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
 +++ b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-@@ -282,6 +282,10 @@ static NSUInteger RCTDeviceFreeMemory(void)
+@@ -282,6 +282,10 @@ - (void)displayDidRefresh:(CADisplayLink *)displayLink
  
  - (void)displayLayer:(CALayer *)layer
  {
@@ -51,7 +72,7 @@ index 19ef5b1..b5653aa 100644
  
  @end
  
-@@ -116,16 +116,16 @@ RCT_NOT_IMPLEMENTED(-(instancetype)init)
+@@ -116,16 +116,16 @@ - (void)handleKeyUIEventSwizzle:(UIEvent *)event
    UIKeyModifierFlags modifierFlags = 0;
    BOOL isKeyDown = NO;
  
@@ -91,7 +112,7 @@ diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 index bd4075c..6a518c3 100644
 --- a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 +++ b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-@@ -209,12 +209,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
+@@ -209,12 +209,12 @@ - (void)addHandler:(id<RCTPackagerClientMethod>)handler forMethod:(NSString *)me
    dispatch_queue_t queue =
        [handler respondsToSelector:@selector(methodQueue)] ? [handler methodQueue] : dispatch_get_main_queue();
  
