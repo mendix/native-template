@@ -19,7 +19,7 @@ diff --git a/node_modules/react-native/Libraries/Image/RCTImageLoader.mm b/node_
 index dac4ecc..d8b38dc 100644
 --- a/node_modules/react-native/Libraries/Image/RCTImageLoader.mm
 +++ b/node_modules/react-native/Libraries/Image/RCTImageLoader.mm
-@@ -470,7 +470,15 @@ - (RCTImageURLLoaderRequest *)_loadImageOrDataWithURLRequest:(NSURLRequest *)req
+@@ -470,7 +470,15 @@ static UIImage *RCTResizeImageIfNeeded(UIImage *image, CGSize size, CGFloat scal
  
      // Add missing png extension
      if (request.URL.fileURL && request.URL.pathExtension.length == 0) {
@@ -40,7 +40,7 @@ diff --git a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
 index 62131f5..5ce17e6 100644
 --- a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
 +++ b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-@@ -282,6 +282,10 @@ - (void)displayDidRefresh:(CADisplayLink *)displayLink
+@@ -282,6 +282,10 @@ static NSUInteger RCTDeviceFreeMemory(void)
  
  - (void)displayLayer:(CALayer *)layer
  {
@@ -72,7 +72,7 @@ index 19ef5b1..b5653aa 100644
  
  @end
  
-@@ -116,16 +116,16 @@ - (void)handleKeyUIEventSwizzle:(UIEvent *)event
+@@ -116,16 +116,16 @@ RCT_NOT_IMPLEMENTED(-(instancetype)init)
    UIKeyModifierFlags modifierFlags = 0;
    BOOL isKeyDown = NO;
  
@@ -112,7 +112,7 @@ diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 index bd4075c..6a518c3 100644
 --- a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 +++ b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-@@ -209,12 +209,12 @@ - (void)addHandler:(id<RCTPackagerClientMethod>)handler forMethod:(NSString *)me
+@@ -209,12 +209,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
    dispatch_queue_t queue =
        [handler respondsToSelector:@selector(methodQueue)] ? [handler methodQueue] : dispatch_get_main_queue();
  
