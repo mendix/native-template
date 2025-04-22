@@ -124,7 +124,10 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         
         let runtimeUrl: URL = AppUrl.forRuntime(AppPreferences.getAppUrl())!
 
-        ReactNative.instance.setup(MendixApp.init(nil, bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, isDeveloperApp: true, clearDataAtLaunch: clearDataSwitch.isOn, reactLoading: UIStoryboard(name: "LaunchScreen", bundle: nil)))
+        let mxApp = MendixApp.init(nil, bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, isDeveloperApp: true, clearDataAtLaunch: clearDataSwitch.isOn, reactLoading: UIStoryboard(name: "LaunchScreen", bundle: nil))
+        mxApp.splashScreenPresenter = SplashScreenPresenter()
+        
+        ReactNative.instance.setup(mxApp)
     }
 }
 
