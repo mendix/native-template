@@ -12,6 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
       - name: Fetch & Generate Releases List
         uses: actions/github-script@v3
         with:
@@ -19,14 +24,36 @@ jobs:
             const script = require(`${process.env.GITHUB_WORKSPACE}/.github/update_releases_list.js`);
             await script({github});
 
+      - name: Update Version Compatibility
+        run: |
+          cd docs/version-compatibility
+          node -e "require('./update-versions.js').updateVersionsJson()"
+
       - name: Create Pull Request
+        id: pr
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: '[BUILD] Update Release List'
+          commit-message: "[BUILD] Update Release List and Version Compatibility"
           committer: github-action <41898282+github-actions[bot]@users.noreply.github.com>
           author: github-action <41898282+github-actions[bot]@users.noreply.github.com>
           delete-branch: true
-          title: '[BUILD] Update Release List'
-          body: ''
+          title: "[BUILD] Update Release List and Version Compatibility"
+          body: |
+            This PR updates:
+            - Release list
+            - Version compatibility information
           branch: update-releases-list
           branch-suffix: short-commit-hash
+
+      - name: Send Slack Notification
+        if: success()
+        uses: ./.github/actions/slack-notification
+        with:
+          channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
+          bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
+          message: |
+            🚀 *New Native Template Version Released*
+
+            A new version of Native Template has been released with updated version compatibility information.
+
+            Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull/${{ steps.pr.outputs.number }}
