@@ -9,24 +9,24 @@ PODS:
     - hermes-engine/Pre-built (= 0.77.1)
   - hermes-engine/Pre-built (0.77.1)
   - IQKeyboardManager (6.5.19)
-  - libwebp (1.3.2):
-    - libwebp/demux (= 1.3.2)
-    - libwebp/mux (= 1.3.2)
-    - libwebp/sharpyuv (= 1.3.2)
-    - libwebp/webp (= 1.3.2)
-  - libwebp/demux (1.3.2):
+  - libwebp (1.5.0):
+    - libwebp/demux (= 1.5.0)
+    - libwebp/mux (= 1.5.0)
+    - libwebp/sharpyuv (= 1.5.0)
+    - libwebp/webp (= 1.5.0)
+  - libwebp/demux (1.5.0):
     - libwebp/webp
-  - libwebp/mux (1.3.2):
+  - libwebp/mux (1.5.0):
     - libwebp/demux
-  - libwebp/sharpyuv (1.3.2)
-  - libwebp/webp (1.3.2):
+  - libwebp/sharpyuv (1.5.0)
+  - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
   - op-sqlite (9.2.7):
     - OpenSSL-Universal
     - React
     - React-callinvoker
     - React-Core
-  - OpenSSL-Universal (3.3.2000)
+  - OpenSSL-Universal (3.3.3001)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -2113,9 +2113,9 @@ SPEC CHECKSUMS:
   glog: eb93e2f488219332457c3c4eafd2738ddc7e80b8
   hermes-engine: ccc24d29d650ea725d582a9a53d57cd417fbdb53
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
-  libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
+  libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
   op-sqlite: 619906dc2ed9c1fcc33ff455eb52fa10bda5e70c
-  OpenSSL-Universal: b60a3702c9fea8b3145549d421fdb018e53ab7b4
+  OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
   RCT-Folly: 36fe2295e44b10d831836cc0d1daec5f8abcf809
   RCTDeprecation: 664055db806cce35c3c1b43c84414dd66e117ae6
   RCTRequired: dc9a83fa1012054f94430d210337ca3a1afe6fc0
