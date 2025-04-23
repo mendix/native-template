@@ -30,11 +30,9 @@ jobs:
 
       - name: Release a new version
         env:
-          GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install -g release-it
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-action"
           release-it --increment=${{ github.event.inputs.version }} --ci --github.release --github.draft --git.commitMessage="chore: release v\${version}"  --git.tagName="v\${version}"
-
-      
