@@ -144,6 +144,11 @@ dependencies {
 configurations.all {
     resolutionStrategy {
         force "androidx.annotation:annotation:1.1.0"
+        force(
+            "com.google.android.gms:play-services-base:18.6.0",
+            "com.google.android.gms:play-services-basement:18.6.0",
+            "com.google.android.gms:play-services-tasks:18.2.1"
+        )
     }
 }
 
