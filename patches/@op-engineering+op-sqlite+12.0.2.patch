@@ -184,6 +184,18 @@ index 3af52b2..90e8ded 100644
  void install(jsi::Runtime &rt,
               const std::shared_ptr<react::CallInvoker> &invoker,
               const char *base_path, const char *crsqlite_path,
+diff --git a/node_modules/@op-engineering/op-sqlite/cpp/bindings.h b/node_modules/@op-engineering/op-sqlite/cpp/bindings.h
+index 91511ab..cc73dfe 100644
+--- a/node_modules/@op-engineering/op-sqlite/cpp/bindings.h
++++ b/node_modules/@op-engineering/op-sqlite/cpp/bindings.h
+@@ -14,6 +14,7 @@ void install(jsi::Runtime &rt,
+              const char *base_path, const char *crsqlite_path,
+              const char *sqlite_vec_path);
+ void invalidate();
++bool deleteAllDbs();
+ void expoUpdatesWorkaround(const char *base_path);
+ 
+ } // namespace opsqlite
 diff --git a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
 index b8568b9..f547bc0 100644
 --- a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
