@@ -1,5 +1,65 @@
 [
     {
+        "id": 215668861,
+        "tag_name": "v14.1.1",
+        "name": "Release 14.1.1",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #997 from mendix/moo/moo-1860-gradleError (8ec678b)",
+        "created_at": "2025-04-30T07:24:57Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
+        "id": 215669108,
+        "tag_name": "v11.0.7",
+        "name": "Release 11.0.7",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #1003 from mendix/moo/moo-1860-gradleError-10.18 (d971911)",
+        "created_at": "2025-04-30T07:26:17Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
+        "id": 215669036,
+        "tag_name": "v8.2.11",
+        "name": "Release 8.2.11",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #1002 from mendix/moo/moo-1860-gradleError-10.12 (5a653ef)",
+        "created_at": "2025-04-30T07:25:54Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
+        "id": 215668967,
+        "tag_name": "v7.0.26",
+        "name": "Release 7.0.26",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #1001 from mendix/moo/moo-1860-gradleError-9.24 (eb1e84a)",
+        "created_at": "2025-04-30T07:25:29Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
+        "id": 214274626,
+        "tag_name": "v11.0.6",
+        "name": "Release 11.0.6",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We fixed an issue where an image that was not in PNG format caused errors because the react-native version was missing a patch.",
+        "created_at": "2025-04-23T16:01:58Z",
+        "published_at": "2025-04-23T16:04:04Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v11.0.6",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v11.0.6"
+    },
+    {
         "id": 209873777,
         "tag_name": "v14.1.0",
         "name": "Release 14.1.0",
@@ -1138,65 +1198,5 @@
         "published_at": "2022-08-29T15:04:56Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.26-beta.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.26-beta.1"
-    },
-    {
-        "id": 74509369,
-        "tag_name": "v6.2.25",
-        "name": "Release 6.2.25",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- Update ndk version to match AppCenter\r\n- Update react-native-permissions library\r\n- Removed `mendix.templateVersion` from package.json\r\n",
-        "created_at": "2022-08-16T12:08:07Z",
-        "published_at": "2022-08-16T12:10:50Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.25",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.25"
-    },
-    {
-        "id": 74506867,
-        "tag_name": "6.2.25-beta.4",
-        "name": "6.2.25-beta.4",
-        "draft": false,
-        "prerelease": true,
-        "body": "### Fixes\r\n- Update ndk version to match AppCenter\r\n- Update react-native-permissions library\r\n- Removed `mendix.templateVersion` from package.json\r\n",
-        "created_at": "2022-08-16T11:04:25Z",
-        "published_at": "2022-08-16T11:35:13Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.25-beta.4",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.25-beta.4"
-    },
-    {
-        "id": 73315925,
-        "tag_name": "v6.2.25-beta.1",
-        "name": "6.2.25 - beta.1",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2022-08-01T08:08:01Z",
-        "published_at": "2022-08-01T08:17:27Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.25-beta.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.25-beta.1"
-    },
-    {
-        "id": 72862729,
-        "tag_name": "v6.2.24",
-        "name": "Release 6.2.24",
-        "draft": false,
-        "prerelease": false,
-        "body": "* We fixed an issue while uploading an iOS application to App Store\r\n* We fixed crashes on Xiaomi smartphones\r\n* We fixed an issue while building Android apps on AppCenter",
-        "created_at": "2022-07-26T14:11:21Z",
-        "published_at": "2022-07-26T14:20:30Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.24",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.24"
-    },
-    {
-        "id": 72853440,
-        "tag_name": "6.2.24-beta.2",
-        "name": "6.2.24-beta.2",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2022-07-26T12:39:03Z",
-        "published_at": "2022-07-26T12:39:57Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.24-beta.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.24-beta.2"
     }
 ]
