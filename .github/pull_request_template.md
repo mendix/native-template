@@ -18,6 +18,7 @@ To ensure this pull request meets the requirements for merging, please complete 
 - [ ] Feature
 - [ ] Refactor
 - [ ] Documentation
+- [ ] Dependency Upgrade(s) (add versions)
 - [ ] Other (describe)
 
 ## Important Notes
