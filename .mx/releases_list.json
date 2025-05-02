@@ -1,51 +1,63 @@
 [
     {
-        "id": 215668861,
-        "tag_name": "v14.1.1",
-        "name": "Release 14.1.1",
+        "id": 216150110,
+        "tag_name": "v14.2.0",
+        "name": "Release 14.2.0",
         "draft": true,
         "prerelease": false,
-        "body": "* Merge pull request #997 from mendix/moo/moo-1860-gradleError (8ec678b)",
-        "created_at": "2025-04-30T07:24:57Z",
+        "body": "* Merge pull request #1008 from mendix/off/734-update-op-sqlite (612c170)",
+        "created_at": "2025-05-02T11:23:09Z",
         "published_at": null,
         "tarball_url": null,
         "zipball_url": null
+    },
+    {
+        "id": 215668861,
+        "tag_name": "v14.1.1",
+        "name": "Release 14.1.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.",
+        "created_at": "2025-04-30T07:24:57Z",
+        "published_at": "2025-05-02T12:05:41Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.1"
     },
     {
         "id": 215669108,
         "tag_name": "v11.0.7",
         "name": "Release 11.0.7",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #1003 from mendix/moo/moo-1860-gradleError-10.18 (d971911)",
+        "body": "* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.",
         "created_at": "2025-04-30T07:26:17Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2025-05-02T12:06:22Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v11.0.7",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v11.0.7"
     },
     {
         "id": 215669036,
         "tag_name": "v8.2.11",
         "name": "Release 8.2.11",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #1002 from mendix/moo/moo-1860-gradleError-10.12 (5a653ef)",
+        "body": "* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.",
         "created_at": "2025-04-30T07:25:54Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2025-05-02T12:06:37Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.11",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.11"
     },
     {
         "id": 215668967,
         "tag_name": "v7.0.26",
         "name": "Release 7.0.26",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #1001 from mendix/moo/moo-1860-gradleError-9.24 (eb1e84a)",
+        "body": "* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.",
         "created_at": "2025-04-30T07:25:29Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2025-05-02T12:06:04Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.26",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.26"
     },
     {
         "id": 214274626,
@@ -1186,17 +1198,5 @@
         "published_at": "2022-08-30T09:19:54Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.26-beta.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.26-beta.2"
-    },
-    {
-        "id": 75652109,
-        "tag_name": "6.2.26-beta.1",
-        "name": "v6.2.26-beta.1",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2022-08-19T14:23:02Z",
-        "published_at": "2022-08-29T15:04:56Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/6.2.26-beta.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/6.2.26-beta.1"
     }
 ]
