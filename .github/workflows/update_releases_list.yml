@@ -31,7 +31,7 @@ jobs:
 
       - name: Create Pull Request
         id: pr
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
           commit-message: "[BUILD] Update Release List and Version Compatibility"
           committer: github-action <41898282+github-actions[bot]@users.noreply.github.com>
@@ -56,4 +56,4 @@ jobs:
 
             A new version of Native Template has been released with updated version compatibility information.
 
-            Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull/${{ steps.pr.outputs.number }}
+            Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull/${{ steps.pr.outputs.pull-request-number }}
