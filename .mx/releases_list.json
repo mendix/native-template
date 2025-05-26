@@ -1,39 +1,27 @@
 [
     {
-        "id": 220593459,
-        "tag_name": "v15.1.0",
-        "name": "Release 15.1.0",
-        "draft": true,
-        "prerelease": false,
-        "body": "* Merge pull request #1011 from mendix/update-releases-list-afcd54f (c4a95be)",
-        "created_at": "2025-05-23T09:30:44Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
-    },
-    {
         "id": 220593649,
         "tag_name": "v11.1.0",
         "name": "Release 11.1.0",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #1012 from mendix/fix/MOO-1251-Splash-Screen-10.18 (1e27922)",
+        "body": "We have fixed an issue where a white screen was showing instead of splash screen for nanoflow based home screen",
         "created_at": "2025-05-23T09:31:39Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2025-05-23T09:36:13Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v11.1.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v11.1.0"
     },
     {
         "id": 220593579,
         "tag_name": "v7.0.27",
         "name": "Release 7.0.27",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #993 from mendix/fix/MOO-1251-Splash-Screen-9.24 (a7e1aa7)",
+        "body": "We have fixed an issue where a white screen was showing instead of splash screen for nanoflow based home screen",
         "created_at": "2025-05-23T09:31:21Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2025-05-23T09:36:59Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.27",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.27"
     },
     {
         "id": 216189022,
@@ -1198,5 +1186,17 @@
         "published_at": "2022-09-13T11:26:18Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.0-beta.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.0-beta.2"
+    },
+    {
+        "id": 76608496,
+        "tag_name": "v6.2.26",
+        "name": "Release 6.2.26",
+        "draft": false,
+        "prerelease": false,
+        "body": "### Features\r\n- We enabled compatibility with Android 12 and above.",
+        "created_at": "2022-09-08T15:13:24Z",
+        "published_at": "2022-09-08T15:19:01Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.26",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.26"
     }
 ]
