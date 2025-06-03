@@ -7,7 +7,7 @@
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
   "dependencies": {
-    "@mendix/native": "9.0.1",
+    "@mendix/native": "9.0.3",
     "@op-engineering/op-sqlite": "9.2.7",
     "@swan-io/react-native-browser": "0.4.1",
     "@react-native-async-storage/async-storage": "2.0.0",
