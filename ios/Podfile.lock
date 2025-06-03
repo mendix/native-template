@@ -2113,9 +2113,9 @@ SPEC CHECKSUMS:
   glog: eb93e2f488219332457c3c4eafd2738ddc7e80b8
   hermes-engine: ccc24d29d650ea725d582a9a53d57cd417fbdb53
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
-  libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
+  libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
   op-sqlite: 137cd6d3df9b86e147fb7e2f70c8d6f97bd0941b
-  OpenSSL-Universal: d776ce24dab24323e6995dfb17c64d598885d05c
+  OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
   RCT-Folly: 36fe2295e44b10d831836cc0d1daec5f8abcf809
   RCTDeprecation: 664055db806cce35c3c1b43c84414dd66e117ae6
   RCTRequired: dc9a83fa1012054f94430d210337ca3a1afe6fc0
