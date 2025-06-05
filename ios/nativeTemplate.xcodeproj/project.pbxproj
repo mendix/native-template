@@ -90,7 +90,7 @@
 		BFF2B70938A7895ADAB4177A /* Pods-dev.releasedevapp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.releasedevapp.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.releasedevapp.xcconfig"; sourceTree = "<group>"; };
 		C5A009072BE291FE00F10EC1 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		CBB85EF00DCBBB622B4C25E7 /* Pods-nativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
-		DBB22F41E3AF5D95F9759402 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		DBB22F41E3AF5D95F9759402 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		DDC51A1160C5ED4D3C396705 /* Pods-dev.releasedevapp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.releasedevapp.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.releasedevapp.xcconfig"; sourceTree = "<group>"; };
 		DF6591BD26650DF3006E3A5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E8B1254D2869E1AF000161E3 /* mendixnative.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = mendixnative.xcframework; path = "../node_modules/@mendix/native/ios/mendixnative.xcframework"; sourceTree = "<group>"; };
@@ -872,7 +872,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline DEBUG";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/../node_modules/@mendix/native/ios";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
@@ -927,7 +927,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline DEBUG";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/../node_modules/@mendix/native/ios";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
@@ -1129,7 +1129,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline DEBUG";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/../node_modules/@mendix/native/ios";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
