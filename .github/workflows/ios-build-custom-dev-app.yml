@@ -53,7 +53,7 @@ jobs:
         shell: bash
         working-directory: ./
         run: |
-          - run: echo "$IOS_DUMMY_PROVISION" | base64 --decode
+          echo "$IOS_DUMMY_PROVISION" | base64 --decode
 
       - name: iOS Build Action
         uses: yukiarrr/ios-build-action@v1.12.0
