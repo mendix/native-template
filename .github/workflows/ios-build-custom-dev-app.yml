@@ -19,7 +19,7 @@ jobs:
 
       - name: Log provision profile content (debug only)
         run: |
-          echo "$IOS_DUMMY_PROVISION"
+          echo "$IOS_DUMMY_PROVISION" | base64 --decode
         env:
           IOS_DUMMY_PROVISION: ${{ secrets.IOS_DUMMY_PROVISION }}
 
