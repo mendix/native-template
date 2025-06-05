@@ -19,7 +19,7 @@ jobs:
 
       - name: Log provision profile content (debug only)
         run: |
-          echo "$IOS_DUMMY_PROVISION" | base64 --decode | security cms -D - | plutil -extract Name xml1 -o - -
+          echo "$IOS_DUMMY_PROVISION"
         env:
           IOS_DUMMY_PROVISION: ${{ secrets.IOS_DUMMY_PROVISION }}
 
