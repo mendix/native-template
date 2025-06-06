@@ -2109,7 +2109,7 @@ SPEC CHECKSUMS:
   hermes-engine: ccc24d29d650ea725d582a9a53d57cd417fbdb53
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
-  op-sqlite: 137cd6d3df9b86e147fb7e2f70c8d6f97bd0941b
+  op-sqlite: 7c3a6a7f84f0969b96266dbd143a3793bc2bc9cf
   OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
   RCT-Folly: 36fe2295e44b10d831836cc0d1daec5f8abcf809
   RCTDeprecation: 664055db806cce35c3c1b43c84414dd66e117ae6
@@ -2194,7 +2194,7 @@ SPEC CHECKSUMS:
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
-  Yoga: 1fd059161b449018342943b095a6d4e69bcaa719
+  Yoga: 2957d0e744897870b5a377f26522e3f08cadd7ac
 
 PODFILE CHECKSUM: 0721d8defdcee9bbb168ccd39c73b4972842a2af
 
