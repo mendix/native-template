@@ -1,5 +1,17 @@
 [
     {
+        "id": 224533177,
+        "tag_name": "v15.2.0",
+        "name": "Release 15.2.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "We have fixed an issue where iOS apps built with Mendix 10.18 and above would not run when the React Client was enabled. Android was not affected.",
+        "created_at": "2025-06-11T08:40:22Z",
+        "published_at": "2025-06-11T08:41:51Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v15.2.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v15.2.0"
+    },
+    {
         "id": 224301406,
         "tag_name": "v11.1.1",
         "name": "Release 11.1.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-09-19T16:19:51Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.27",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.27"
-    },
-    {
-        "id": 78287100,
-        "tag_name": "v6.3.1-beta.1",
-        "name": "MOO-669",
-        "draft": false,
-        "prerelease": true,
-        "body": "",
-        "created_at": "2022-09-15T14:19:17Z",
-        "published_at": "2022-09-27T12:27:16Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.1-beta.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.1-beta.1"
     }
 ]
