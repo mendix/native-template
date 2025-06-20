@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^5.1.1",
-    "@mendix/native": "./mendix-native-10.2.0.tgz",
+    "@mendix/native": "./mendix-native-10.2.1.tgz",
     "@op-engineering/op-sqlite": "12.0.2",
     "@react-native-async-storage/async-storage": "2.0.0",
     "@react-native-camera-roll/camera-roll": "7.4.0",
@@ -20,7 +20,7 @@
     "@react-native-picker/picker": "2.11.0",
     "@react-navigation/native": "6.1.18",
     "@notifee/react-native": "9.1.8",
-    "react-native": "0.79.3",
+    "react-native": "0.78.2",
     "react-native-device-info": "14.0.4",
     "react-native-blob-util": "0.21.2",
     "react-native-fast-image": "8.6.3",
@@ -44,8 +44,8 @@
   "devDependencies": {
     "@babel/runtime": "^7.20.0",
     "@mendix/native-mobile-toolkit": "latest",
-    "@react-native/babel-preset": "0.79.3",
-    "@react-native/metro-config": "0.79.3",
+    "@react-native/babel-preset": "0.78.2",
+    "@react-native/metro-config": "0.78.2",
     "detox": "19.13.0",
     "jetifier": "^1.6.8",
     "patch-package": "^8.0.0"
@@ -56,13 +56,13 @@
   "overrides": {
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-native": "0.79.3",
+    "react-native": "0.78.2",
     "unset-value": "2.0.1",
     "semver": "5.7.2"
   },
   "resolutions": {
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-native": "0.79.3"
+    "react-native": "0.78.2"
   }
 }
