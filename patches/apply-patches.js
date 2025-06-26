@@ -9,7 +9,7 @@ const patchOperations = [
         patchFile: "react-native-geocoder+0.5.0.patch"
     },
     {
-        dependency: "@react-native-firebase/app",
+        dependency: "@react-native-firebase/messaging",
         patchFile: "@react-native-firebase+messaging+17.3.0.patch"
     }
 ];
