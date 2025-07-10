@@ -1,11 +1,35 @@
 [
     {
+        "id": 231358755,
+        "tag_name": "v14.1.4",
+        "name": "Release 14.1.4",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We applied an important fix to @mendix/native which caused OTA not working.",
+        "created_at": "2025-07-10T07:15:55Z",
+        "published_at": "2025-07-10T07:18:08Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.4"
+    },
+    {
+        "id": 228759343,
+        "tag_name": "v11.1.2",
+        "name": "Release 11.1.2",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We applied an important fix to `@mendix/native` which caused infrequent crashes in the published app. iOS was not affected.\r\n\r\nVersion 10.18 is required to use this version and upwards.",
+        "created_at": "2025-06-30T12:31:10Z",
+        "published_at": "2025-06-30T12:48:04Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v11.1.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v11.1.2"
+    },
+    {
         "id": 227106602,
         "tag_name": "v15.3.0",
         "name": "Release 15.3.0",
         "draft": false,
         "prerelease": false,
-        "body": "**Library Updates and Improvements**\r\n- **@notifee/react-native**: 9.1.8 ( migrated from react-native-push-notification )\r\n- **react-native-device-info**: 14.0.4",
+        "body": "- We migrated several libraries that hadn’t been maintained in years to modern, actively supported alternatives.\r\n- We improved update process from an older version of Studio Pro to the Latest version(s).\r\n\r\n### Removed\r\n\r\n* **@react-native-community/push-notification-ios:** 1.10.1\r\n\r\n### New Libraries\r\n\r\n* **notifee@notifee/react-native:** 9.1.8\r\n* **react-native-blob-util:** 0.21.0\r\n\r\n### Library Updates and Improvements\r\n\r\n* **react-native-device-info:** 13.0.0 -> 14.0.4\r\n* **@mendix/native:** 11.0.3 -> 11.0.7",
         "created_at": "2025-06-23T14:41:09Z",
         "published_at": "2025-06-23T14:41:36Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v15.3.0",
@@ -29,7 +53,7 @@
         "name": "Release 15.2.0",
         "draft": false,
         "prerelease": false,
-        "body": "We have fixed an issue where iOS apps built with Mendix 10.18 and above would not run when the React Client was enabled. Android was not affected.",
+        "body": "We updated one library\r\n\r\n### Library Updates and Improvements\r\n\r\n- **@mendix/native:** 10.1.4\r\n",
         "created_at": "2025-06-11T08:40:22Z",
         "published_at": "2025-06-11T08:41:51Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v15.2.0",
@@ -1174,29 +1198,5 @@
         "published_at": "2022-11-08T12:28:28Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.14",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.14"
-    },
-    {
-        "id": 82381579,
-        "tag_name": "v5.1.20",
-        "name": "Release 5.1.20",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We fixed an issues related to a recent React Native release that caused Android build failures. Tickets 170385, 170396, 170398 and 170469.\r\n- We fixed an issue to build Android apps locally using Apple M1 machines.",
-        "created_at": "2022-11-08T12:23:05Z",
-        "published_at": "2022-11-08T12:28:14Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.20",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.20"
-    },
-    {
-        "id": 79152954,
-        "tag_name": "v6.3.1",
-        "name": "Release 6.3.1",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We removed default permissions for read and write external storage for Android",
-        "created_at": "2022-10-06T11:33:47Z",
-        "published_at": "2022-10-06T11:35:37Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.1"
     }
 ]
