@@ -1,9 +1,9 @@
 buildscript {
     ext {
-        buildToolsVersion = "35.0.0"
-        minSdkVersion = 24
-        compileSdkVersion = 35
-        targetSdkVersion = 35
+        buildToolsVersion = "36.0.0"
+        minSdkVersion = 25
+        compileSdkVersion = 36
+        targetSdkVersion = 36
         kotlinVersion = "1.9.24"
         excludeAppGlideModule = true
         androidx_lifecycle_version = "2.8.6"
