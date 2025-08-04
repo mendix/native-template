@@ -1651,7 +1651,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNSVG (15.12.0):
+  - RNSVG (15.11.2):
     - React-Core
   - RNVectorIcons (10.2.0):
     - DoubleConversion
@@ -2044,7 +2044,7 @@ SPEC CHECKSUMS:
   RNPermissions: 6a02e3cb2c65fbcdceb5111131e7725cda40efd2
   RNReanimated: 5cf9d578b1b596f0c33cb3cfbfd500b272143666
   RNScreens: f7656034912d7171175c2e37108f333d7f9ca1a4
-  RNSVG: e3ad69848b6357587545e0a49628b1148acf082c
+  RNSVG: 7d403633772d39f695b8a1ccb64db8499e807dac
   RNVectorIcons: 182892e7d1a2f27b52d3c627eca5d2665a22ee28
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
@@ -2055,4 +2055,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: caa7228f1b877c31a3dd10cbcf0c92c1ca8dec76
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.15.2
