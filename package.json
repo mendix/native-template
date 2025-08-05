@@ -16,7 +16,6 @@
     "@react-native-community/cli-platform-android": "16.0.2",
     "@react-native-community/cli-platform-ios": "16.0.2",
     "@react-native-community/datetimepicker": "8.2.0",
-    "@react-native-community/netinfo": "11.4.1",
     "@react-native-picker/picker": "2.11.0",
     "@react-navigation/native": "6.1.18",
     "@notifee/react-native": "9.1.8",
