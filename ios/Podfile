@@ -18,7 +18,7 @@ node_require('react-native-permissions/scripts/setup.rb')
 
 require_relative './mendix_utils'
 
-deployment_target = "15.5"
+deployment_target = "17.0"
 platform :ios, deployment_target
 
 prepare_react_native_project!
