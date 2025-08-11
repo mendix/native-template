@@ -19,7 +19,7 @@
     "@react-native-community/push-notification-ios": "1.10.1",
     "@react-native-masked-view/masked-view": "0.3.1",
     "@react-native-picker/picker": "2.11.0",
-    "@react-navigation/native": "6.1.18",
+    "@react-navigation/native": "7.0.14",
     "@swan-io/react-native-browser": "0.4.1",
     "react-native": "0.77.3",
     "react-native-blob-util": "0.21.2",
