@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Fixes
 
+- We have removed USE_EXACT_ALARM permission from the manifest to comply with updated Google Play policies.
+
 - We have upgraded `@mendix/native` to version 9.0.1
 
 ## [14.0.0] - 2025-04-01
