@@ -26,7 +26,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version-file: .nvmrc
 
       - name: Release a new version
         env:
@@ -35,6 +35,6 @@ jobs:
           npm install -g release-it
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-action"
-          release-it --increment=${{ github.event.inputs.version }} --ci --github.release --github.draft --git.commitMessage="chore: release v\${version}"  --git.tagName="v\${version}"
+          release-it -VV --increment=${{ github.event.inputs.version }} --ci --github.release --github.draft --git.commitMessage="chore: release v\${version}"  --git.tagName="v\${version}"
 
       
