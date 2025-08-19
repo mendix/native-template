@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We added a new property to gradle.properties for scanning QR codes.
+
 - We have migrated from react-native-push-notification to @notifee/react-native for better new architecture compatibility and enhanced push notification features
 
 - We have upgraded `react-native-permissions` to version 5.4.2
