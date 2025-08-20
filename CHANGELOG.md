@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## Changes
+
+- Migrated from `react-native-splash-screen@3.2.0` to `react-native-bootsplash@^7.7.0` for better splash screen support and autolinking compatibility.
+
 ## Fixes
 
 - We have removed USE_EXACT_ALARM permission from the manifest to comply with updated Google Play policies.
