@@ -6,8 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have upgraded `react-native-maps` to version 1.20.1
 - We have upgraded `react-native-permissions` to version 5.4.2
-
 - We have removed `react-native-schedule-exact-alarm-permission` dependency
 
 - We have added a USE_BIOMETRIC permission in Android.
