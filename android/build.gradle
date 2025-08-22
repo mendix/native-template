@@ -65,9 +65,6 @@ allprojects {
             url "https://maven.scijava.org/content/repositories/jcenter/"
         }
         maven { url "https://packages.rnd.mendix.com/jcenter" }
-        maven {
-            url "$rootDir/../node_modules/@notifee/react-native/android/libs"
-        }
     }
 }
 
