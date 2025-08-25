@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - We have removed `react-native-schedule-exact-alarm-permission` dependency
 
+- We have added a USE_BIOMETRIC permission in Android.
+
 ## Fixes
 
 - We have removed USE_EXACT_ALARM permission from the manifest to comply with updated Google Play policies.
