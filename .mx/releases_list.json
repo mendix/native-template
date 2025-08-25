@@ -1,5 +1,17 @@
 [
     {
+        "id": 242209921,
+        "tag_name": "v11.1.4",
+        "name": "Release 11.1.4",
+        "draft": true,
+        "prerelease": false,
+        "body": "* Merge pull request #1072 from mendix/patch-deprecated-kotlin-function (6a03ba0)",
+        "created_at": "2025-08-25T09:40:01Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 239067114,
         "tag_name": "v14.1.5",
         "name": "Release 14.1.5",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-11-11T06:44:09Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.3",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.3"
-    },
-    {
-        "id": 82381996,
-        "tag_name": "v6.3.2",
-        "name": "Release 6.3.2",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We fixed an issues related to a recent React Native release that caused Android build failures. Tickets 170385, 170396, 170398 and 170469.",
-        "created_at": "2022-11-08T12:23:15Z",
-        "published_at": "2022-11-08T12:28:53Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.2"
     }
 ]
