@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have fixed deprecated kotin extension function used in react native screens package.
+
 ## [11.0.4] - 2025-01-15
 
 - We resolved an issue with the bundle identifier in the Dev scheme on Xcode.
