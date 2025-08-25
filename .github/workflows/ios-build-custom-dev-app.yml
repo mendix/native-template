@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-14 # macos-latest now points to macos-15, xcode 15.4 required for build is not available on macos-15 - https://github.com/actions/runner-images/issues/12520
 
     steps:
       - uses: actions/checkout@v3
