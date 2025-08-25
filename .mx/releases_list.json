@@ -3,13 +3,13 @@
         "id": 242209921,
         "tag_name": "v11.1.4",
         "name": "Release 11.1.4",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #1072 from mendix/patch-deprecated-kotlin-function (6a03ba0)",
+        "body": "* We have fixed deprecated Kotlin extension function used in react native screens package.",
         "created_at": "2025-08-25T09:40:01Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2025-08-25T09:42:17Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v11.1.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v11.1.4"
     },
     {
         "id": 239067114,
