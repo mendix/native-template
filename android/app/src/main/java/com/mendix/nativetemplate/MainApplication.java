@@ -36,12 +36,13 @@ public class MainApplication extends MendixReactApplication {
             @Override
             public void show(@NonNull Activity activity) {
                 hide(activity);
-                RNBootSplash.init(activity);
+                RNBootSplash.init(activity, R.style.BootTheme);
             }
 
             @Override
             public void hide(@NonNull Activity activity) {
-                RNBootSplash.hide(activity, true);
+                // Note: hiding is now handled via the JavaScript API
+                // RNBootSplash.hide() should be called from JS/TS code
             }
         };
     }
