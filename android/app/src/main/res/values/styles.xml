@@ -21,7 +21,7 @@
     </style>
 
     <!-- BootSplash theme. -->
-    <style name="BootTheme" parent="Theme.SplashScreen">
+    <style name="BootTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
