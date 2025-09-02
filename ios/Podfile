@@ -53,7 +53,7 @@ def common_pods
   # RN pods end
 
   # Manually linked dependencies
-  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+  # react-native-bootsplash supports autolinking
 
   # Third party dependencies of dependencies
   pod 'IQKeyboardManager'
