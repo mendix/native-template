@@ -9,6 +9,11 @@ PODS:
     - hermes-engine/Pre-built (= 0.77.3)
   - hermes-engine/Pre-built (0.77.3)
   - IQKeyboardManager (6.5.19)
+  - libavif/core (0.11.1)
+  - libavif/libdav1d (0.11.1):
+    - libavif/core
+    - libdav1d (>= 0.6.0)
+  - libdav1d (1.2.0)
   - libwebp (1.5.0):
     - libwebp/demux (= 1.5.0)
     - libwebp/mux (= 1.5.0)
@@ -1638,10 +1643,13 @@ PODS:
     - React-Core
   - RNDeviceInfo (14.0.4):
     - React-Core
-  - RNFastImage (8.6.3):
+  - RNFastImage (8.11.1):
+    - libavif/core (~> 0.11.1)
+    - libavif/libdav1d (~> 0.11.1)
     - React-Core
-    - SDWebImage (~> 5.11.1)
-    - SDWebImageWebPCoder (~> 0.8.4)
+    - SDWebImage (>= 5.19.1)
+    - SDWebImageAVIFCoder (~> 0.11.0)
+    - SDWebImageWebPCoder (~> 0.14)
   - RNGestureHandler (2.23.1):
     - DoubleConversion
     - glog
@@ -1804,12 +1812,15 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
-  - SDWebImageWebPCoder (0.8.5):
+  - SDWebImage (5.21.1):
+    - SDWebImage/Core (= 5.21.1)
+  - SDWebImage/Core (5.21.1)
+  - SDWebImageAVIFCoder (0.11.0):
+    - libavif/core (>= 0.11.0)
+    - SDWebImage (~> 5.10)
+  - SDWebImageWebPCoder (0.14.6):
     - libwebp (~> 1.0)
-    - SDWebImage/Core (~> 5.10)
+    - SDWebImage/Core (~> 5.17)
   - SocketRocket (0.7.1)
   - SSZipArchive (2.6.0)
   - Yoga (0.0.0)
@@ -1895,7 +1906,7 @@ DEPENDENCIES:
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
-  - RNFastImage (from `../node_modules/react-native-fast-image`)
+  - "RNFastImage (from `../node_modules/@d11/react-native-fast-image`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNLocalize (from `../node_modules/react-native-localize`)
   - "RNNotifee (from `../node_modules/@notifee/react-native`)"
@@ -1910,9 +1921,12 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - IQKeyboardManager
+    - libavif
+    - libdav1d
     - libwebp
     - OpenSSL-Universal
     - SDWebImage
+    - SDWebImageAVIFCoder
     - SDWebImageWebPCoder
     - SocketRocket
     - SSZipArchive
@@ -2074,7 +2088,7 @@ EXTERNAL SOURCES:
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNFastImage:
-    :path: "../node_modules/react-native-fast-image"
+    :path: "../node_modules/@d11/react-native-fast-image"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNLocalize:
@@ -2103,6 +2117,8 @@ SPEC CHECKSUMS:
   glog: eb93e2f488219332457c3c4eafd2738ddc7e80b8
   hermes-engine: b2187dbe13edb0db8fcb2a93a69c1987a30d98a4
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
+  libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
   op-sqlite: 137cd6d3df9b86e147fb7e2f70c8d6f97bd0941b
   OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
@@ -2175,7 +2191,7 @@ SPEC CHECKSUMS:
   RNCPicker: 4f6d5e8d107064be32dfc8f1bcb5a3741135db0b
   RNDateTimePicker: 40ffda97d071a98a10fdca4fa97e3977102ccd14
   RNDeviceInfo: feea80a690d2bde1fe51461cf548039258bd03f2
-  RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
+  RNFastImage: 1e4df4dcbe3b0804dba6a276de8bb78eaae344cf
   RNGestureHandler: de78ee811b577ae76d679715e5e9298b23a8c278
   RNLocalize: 4f22418187ecd5ca693231093ff1d912d1b3c9bc
   RNNotifee: 4a6ee5c7deaf00e005050052d73ee6315dff7ec9
@@ -2184,8 +2200,9 @@ SPEC CHECKSUMS:
   RNScreens: e9bb7c3063237983e75d01bb45ce591cc4e7afc2
   RNSVG: 515a902fc18a375907eb4c3abec0b803fbfa37ef
   RNVectorIcons: 85ed086927e7548461d593e68b190c38a6606a05
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
-  SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
+  SDWebImage: f29024626962457f3470184232766516dee8dfea
+  SDWebImageAVIFCoder: 00310d246aab3232ce77f1d8f0076f8c4b021d90
+  SDWebImageWebPCoder: e38c0a70396191361d60c092933e22c20d5b1380
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
   Yoga: 92f3bb322c40a86b7233b815854730442e01b8c4
