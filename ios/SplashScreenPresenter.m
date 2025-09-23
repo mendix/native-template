@@ -1,18 +1,18 @@
 #import <MendixNative.h>
 #import "SplashScreenPresenter.h"
-#import "RNSplashScreen.h"
+#import "RNBootSplash.h"
 #import "StoryBoardSplash.m"
 
 @implementation SplashScreenPresenter
 
 - (void) show:(UIView * _Nullable)rootView {
   if (rootView != nil) {
-    [RNSplashScreen showStoryBoard:@"LaunchScreen" inRootView:rootView];
+    [RNBootSplash showStoryBoard:@"LaunchScreen" inRootView:rootView];
   }
 }
 
 - (void) hide {
-  [RNSplashScreen hideStoryBoard];
+  [RNBootSplash hideStoryBoard];
 }
 
 @end

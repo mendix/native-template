@@ -9,8 +9,7 @@ import com.facebook.react.ReactPackage;
 import com.mendix.mendixnative.MendixReactApplication;
 import com.mendix.mendixnative.react.splash.MendixSplashScreenPresenter;
 
-import org.devio.rn.splashscreen.SplashScreen;
-import org.devio.rn.splashscreen.SplashScreenReactPackage;
+import com.zoontek.rnbootsplash.RNBootSplash;
 
 import java.util.List;
 
@@ -27,7 +26,6 @@ public class MainApplication extends MendixReactApplication {
 
         // Packages that cannot be autolinked yet can be added manually here, for example:
         // packages.add(new MyReactNativePackage());
-        packages.add(new SplashScreenReactPackage());
 
         return packages;
     }
@@ -38,12 +36,11 @@ public class MainApplication extends MendixReactApplication {
             @Override
             public void show(@NonNull Activity activity) {
                 hide(activity);
-                SplashScreen.show(activity, true);
+                RNBootSplash.init(activity, R.style.BootTheme);
             }
 
             @Override
             public void hide(@NonNull Activity activity) {
-                SplashScreen.hide(activity);
             }
         };
     }
