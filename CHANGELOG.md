@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have migrated from `react-native-splash-screen@3.2.0` to `react-native-bootsplash@^7.7.0` for better splash screen support and autolinking compatibility.
+
 - We have migrated from react-native-push-notification to @notifee/react-native for better new architecture compatibility and enhanced push notification features
 
 - We have upgraded `react-native-permissions` to version 5.4.2
