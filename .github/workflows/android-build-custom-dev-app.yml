@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: 17
+          java-version: 21
 
       - name: actions/setup-node
         uses: actions/setup-node@v3
@@ -29,8 +29,8 @@ jobs:
       - name: npm install
         run: npm ci
 
-      - name: Add NDK 26.1.10909125
-        run: echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;26.1.10909125"
+      - name: Add NDK 27.3.13750724
+        run: echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;27.3.13750724"
 
       - name: Build with Gradle
         run: ./gradlew assembleDevDebug
