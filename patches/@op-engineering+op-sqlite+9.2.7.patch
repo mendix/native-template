@@ -1,5 +1,5 @@
 diff --git a/node_modules/@op-engineering/op-sqlite/android/build.gradle b/node_modules/@op-engineering/op-sqlite/android/build.gradle
-index 4186aa3..242dd95 100644
+index 427aa8e..8cc5fab 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/build.gradle
 +++ b/node_modules/@op-engineering/op-sqlite/android/build.gradle
 @@ -1,5 +1,4 @@
@@ -39,7 +39,24 @@ index 4186aa3..242dd95 100644
  if(useSQLCipher) {
    println "[OP-SQLITE] using SQLCipher 🔒"
  } else if(useLibsql) {
-@@ -171,8 +156,8 @@ android {
+@@ -167,13 +152,25 @@ android {
+               "**/libfbjni.so",
+               "**/libreactnative.so",
+       ]
++
++      if (!useCRSQLite) {
++        excludes += [
++          "**/libcrsqlite.so"
++        ]
++      }
++
++      if (!useSqliteVec) {
++        excludes += [
++          "**/libsqlite_vec.so"
++        ]
++      }
+     }
+     
    }
    
    compileOptions {
@@ -50,6 +67,15 @@ index 4186aa3..242dd95 100644
    }
  
    externalNativeBuild {
+@@ -203,7 +200,7 @@ dependencies {
+   implementation 'com.facebook.react:react-native'
+   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+   if (useSQLCipher) {
+-    implementation('com.android.ndk.thirdparty:openssl:1.1.1q-beta-1')
++      implementation('io.github.ronickg:openssl:3.3.2-1')
+   }
+ }
+ 
 diff --git a/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp b/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
 index ed599ea..4813667 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
@@ -83,7 +109,7 @@ index ed599ea..4813667 100644
  }
 \ No newline at end of file
 diff --git a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
-index 7445a4c..a9dcf14 100644
+index 7445a4c..7e6db78 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
 +++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
 @@ -13,6 +13,8 @@ class OPSQLiteBridge {
@@ -146,10 +172,10 @@ index 6179cfc..7663a49 100644
      fun moveAssetsDatabase(args: ReadableMap, promise: Promise) {
          val filename = args.getString("filename")!!
 diff --git a/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.cpp b/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.cpp
-index c3663dd..a81af62 100644
+index c6bda2a..aefaefb 100644
 --- a/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.cpp
 +++ b/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.cpp
-@@ -946,6 +946,16 @@ void DBHostObject::set(jsi::Runtime &rt, const jsi::PropNameID &name,
+@@ -963,6 +963,16 @@ void DBHostObject::set(jsi::Runtime &rt, const jsi::PropNameID &name,
  
  void DBHostObject::invalidate() { invalidated = true; }
  
@@ -167,10 +193,10 @@ index c3663dd..a81af62 100644
  
  } // namespace opsqlite
 diff --git a/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.h b/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.h
-index dcb694c..8ec3f4b 100644
+index d11c212..175b546 100644
 --- a/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.h
 +++ b/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.h
-@@ -52,6 +52,7 @@ public:
+@@ -58,6 +58,7 @@ public:
    void set(jsi::Runtime &rt, const jsi::PropNameID &name,
             const jsi::Value &value);
    void invalidate();
@@ -179,7 +205,7 @@ index dcb694c..8ec3f4b 100644
  
  private:
 diff --git a/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp b/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
-index b471d3d..e06ec0c 100644
+index a4cd737..e88831d 100644
 --- a/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
 +++ b/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
 @@ -47,6 +47,13 @@ void clearState() {
