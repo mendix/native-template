@@ -10,11 +10,13 @@ import com.mendix.mendixnative.activity.MendixReactActivity;
 import com.mendix.mendixnative.config.AppUrl;
 import com.mendix.mendixnative.react.MendixApp;
 import com.mendix.mendixnative.react.MxConfiguration;
+import com.zoontek.rnbootsplash.RNBootSplash;
 
 
 public class MainActivity extends MendixReactActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        RNBootSplash.init(this, R.style.BootTheme);
         this.getLifecycle().addObserver(new MendixActivityObserver(this));
         boolean hasDeveloperSupport = ((MainApplication) getApplication()).getUseDeveloperSupport();
         mendixApp = new MendixApp(AppUrl.getUrlFromResource(this), MxConfiguration.WarningsFilter.none, hasDeveloperSupport, false);

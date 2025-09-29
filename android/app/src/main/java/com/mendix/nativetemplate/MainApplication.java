@@ -41,6 +41,7 @@ public class MainApplication extends MendixReactApplication {
 
             @Override
             public void hide(@NonNull Activity activity) {
+                RNBootSplash.hide(activity);
             }
         };
     }
