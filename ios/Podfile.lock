@@ -1678,7 +1678,7 @@ PODS:
     - RNNotifee/NotifeeCore (= 9.1.8)
   - RNNotifee/NotifeeCore (9.1.8):
     - React-Core
-  - RNPermissions (4.1.5):
+  - RNPermissions (5.4.2):
     - React-Core
   - RNReanimated (3.16.7):
     - DoubleConversion
@@ -1812,10 +1812,10 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - SDWebImage (5.21.1):
-    - SDWebImage/Core (= 5.21.1)
-  - SDWebImage/Core (5.21.1)
-  - SDWebImageAVIFCoder (0.11.0):
+  - SDWebImage (5.21.2):
+    - SDWebImage/Core (= 5.21.2)
+  - SDWebImage/Core (5.21.2)
+  - SDWebImageAVIFCoder (0.11.1):
     - libavif/core (>= 0.11.0)
     - SDWebImage (~> 5.10)
   - SDWebImageWebPCoder (0.14.6):
@@ -2195,13 +2195,13 @@ SPEC CHECKSUMS:
   RNGestureHandler: de78ee811b577ae76d679715e5e9298b23a8c278
   RNLocalize: 4f22418187ecd5ca693231093ff1d912d1b3c9bc
   RNNotifee: 4a6ee5c7deaf00e005050052d73ee6315dff7ec9
-  RNPermissions: 4da8c626e4ac9d71c1a199d500d52dd54da62e38
+  RNPermissions: 32d5d0e1c56f6321c59a2780bfeef20fc728cfc6
   RNReanimated: 10df3198b328f8a0677fdaaa2b449db53cdbff40
   RNScreens: e9bb7c3063237983e75d01bb45ce591cc4e7afc2
   RNSVG: 515a902fc18a375907eb4c3abec0b803fbfa37ef
   RNVectorIcons: 85ed086927e7548461d593e68b190c38a6606a05
-  SDWebImage: f29024626962457f3470184232766516dee8dfea
-  SDWebImageAVIFCoder: 00310d246aab3232ce77f1d8f0076f8c4b021d90
+  SDWebImage: 9f177d83116802728e122410fb25ad88f5c7608a
+  SDWebImageAVIFCoder: afe194a084e851f70228e4be35ef651df0fc5c57
   SDWebImageWebPCoder: e38c0a70396191361d60c092933e22c20d5b1380
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
