@@ -3,7 +3,7 @@
 
 static UIView *loadingView = nil;
 
-@implementation RNSplashScreen (StoryBoardSplash)
+@implementation RNBootSplash (StoryBoardSplash)
 
 + (void)showStoryBoard:(NSString *)name inRootView:(UIView *)rootView {
     if (!loadingView) {

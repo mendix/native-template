@@ -20,4 +20,9 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <!-- BootSplash theme. -->
+    <style name="BootTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
 </resources>
