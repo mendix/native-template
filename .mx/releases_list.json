@@ -1,5 +1,17 @@
 [
     {
+        "id": 252337887,
+        "tag_name": "v14.1.6",
+        "name": "Release 14.1.6",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We added support for Android devices that use a 16 KB memory page size, ensuring compatibility with the upcoming Android 16 KB page size requirement.",
+        "created_at": "2025-10-06T08:12:14Z",
+        "published_at": "2025-10-07T08:51:44Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.6",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.6"
+    },
+    {
         "id": 251705790,
         "tag_name": "v15.4.0",
         "name": "Release 15.4.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2022-12-27T11:53:45Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.15",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.15"
-    },
-    {
-        "id": 87296192,
-        "tag_name": "v5.1.21",
-        "name": "Release 5.1.21",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We changed the order of repositories in Android builds to fix an issue with jitpack.io",
-        "created_at": "2022-12-27T11:49:37Z",
-        "published_at": "2022-12-27T11:53:30Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.21",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.21"
     }
 ]
