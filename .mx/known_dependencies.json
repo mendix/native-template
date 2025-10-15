@@ -1,7 +1,7 @@
 {
-    "@react-native-firebase/app": "17.3.0",
-    "@react-native-firebase/messaging": "17.3.0",
-    "@react-native-firebase/crashlytics": "17.3.0",
+    "@react-native-firebase/app": "19.3.0",
+    "@react-native-firebase/messaging": "19.3.0",
+    "@react-native-firebase/crashlytics": "19.3.0",
     "@react-native-community/push-notification-ios": "1.10.1",
     "react-native-push-notification": "8.1.1",
     "react-native-maps": "0.31.1"
