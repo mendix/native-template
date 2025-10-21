@@ -1,5 +1,41 @@
 [
     {
+        "id": 252692529,
+        "tag_name": "v15.4.1",
+        "name": "Release 15.4.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We have migrated to `react-native-vision-camera` to version 4.7.1.",
+        "created_at": "2025-10-07T12:16:48Z",
+        "published_at": "2025-10-07T12:20:13Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v15.4.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v15.4.1"
+    },
+    {
+        "id": 252337887,
+        "tag_name": "v14.1.6",
+        "name": "Release 14.1.6",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We added support for Android devices that use a 16 KB memory page size, ensuring compatibility with the upcoming Android 16 KB page size requirement.",
+        "created_at": "2025-10-06T08:12:14Z",
+        "published_at": "2025-10-07T08:51:44Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.6",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.6"
+    },
+    {
+        "id": 251705790,
+        "tag_name": "v15.4.0",
+        "name": "Release 15.4.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We have migrated from react-native-push-notification to @notifee/react-native for better new architecture compatibility and enhanced push notification features\r\n\r\n- We have upgraded `react-native-permissions` to version 5.4.2\r\n\r\n- We have removed `react-native-schedule-exact-alarm-permission` dependency\r\n\r\n- We have added a USE_BIOMETRIC permission in Android.\r\n\r\n- We have migrated from react-native-fast-image to @d11/react-native-fast-image for new architecture compatibility.\r\n\r\n- We have upgraded react-native-reanimated to v3.16.7.",
+        "created_at": "2025-10-02T11:48:24Z",
+        "published_at": "2025-10-02T11:50:14Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v15.4.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v15.4.0"
+    },
+    {
         "id": 242209921,
         "tag_name": "v11.1.4",
         "name": "Release 11.1.4",
@@ -1162,41 +1198,5 @@
         "published_at": "2022-12-27T11:54:02Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.2.29",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.2.29"
-    },
-    {
-        "id": 87296180,
-        "tag_name": "v5.2.15",
-        "name": "Release 5.2.15",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We changed the order of repositories in Android builds to fix an issue with jitpack.io",
-        "created_at": "2022-12-27T11:49:25Z",
-        "published_at": "2022-12-27T11:53:45Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.15",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.15"
-    },
-    {
-        "id": 87296192,
-        "tag_name": "v5.1.21",
-        "name": "Release 5.1.21",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We changed the order of repositories in Android builds to fix an issue with jitpack.io",
-        "created_at": "2022-12-27T11:49:37Z",
-        "published_at": "2022-12-27T11:53:30Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.1.21",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.1.21"
-    },
-    {
-        "id": 82572893,
-        "tag_name": "v6.3.3",
-        "name": "Release 6.3.3",
-        "draft": false,
-        "prerelease": false,
-        "body": "## Fixes\r\n\r\n* We fixed an issue with push notifications not working correctly on Android 12 devices. (Tickets 167479, 167837, 168814)\r\n\r\n### Update Your Native Mobile Resources Module\r\n\r\nDue to a library update, your Native Template must be aligned with Native Mobile Resources or else your build will fail. Please make sure you are using the newest version of the Native Mobile Resources module from Marketplace (currently [version 3.13.0](https://marketplace.mendix.com/link/component/109513)).\r\n\r\nIf you already have a project in AppCenter, then you must add the following environment variable to ensure compatibility:\r\n\r\n1. Open your project in AppCenter and go to **Build** menu item.\r\n1. In **all branches**, click the wrench icon.\r\n1. In **Environment Variable**, add the following **Name** and **Value** (if this option is not enabled, enable it):\r\n    1. Name: **JAVA_HOME**.\r\n    1. Value: **$(JAVA_HOME_11_X64)**.\r\n\r\nIn the end, your variable should be set up like this:\r\n\r\n![env_var](https://user-images.githubusercontent.com/45102481/200879507-cdba57bd-6b99-44be-a838-e243fa324bdb.png)\r\n\r\n",
-        "created_at": "2022-11-10T15:26:32Z",
-        "published_at": "2022-11-11T06:44:09Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.3",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.3"
     }
 ]
