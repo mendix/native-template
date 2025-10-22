@@ -50,11 +50,11 @@
 	<key>NSFaceIDUsageDescription</key>
 	<string>Enabling Face ID allows you quick and secure access to your account.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>To use that feature the app needs access to your location.</string>
+	<string>This app requires access to your location to provide location-based features and services.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>To use that feature the app needs access to your location.</string>
+	<string>This app requires access to your location while using the app to provide location-based features and services.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>To use that feature the app needs access to your location.</string>
+	<string>This app requires access to your location to provide location-based features and services even when the app is in the background.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>To use that feature the app needs access to your microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
