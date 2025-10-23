@@ -7,11 +7,7 @@ const patchOperations = [
     {
         dependency: "react-native-geocoder",
         patchFile: "react-native-geocoder+0.5.0.patch"
-    },
-    // {
-    //     dependency: "@react-native-firebase/app",
-    //     patchFile: "@react-native-firebase+messaging+17.3.0.patch"
-    // }
+    }
 ];
 
 function hasDependency(name) {
