@@ -45,7 +45,7 @@
     "@react-native/metro-config": "0.77.3",
     "detox": "19.13.0",
     "jetifier": "^1.6.8",
-    "patch-package": "^8.0.0"
+    "patch-package": "^8.0.1"
   },
   "engines": {
     "node": ">=18"
