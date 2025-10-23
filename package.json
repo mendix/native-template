@@ -9,7 +9,7 @@
   "dependencies": {
     "@d11/react-native-fast-image": "8.11.1",
     "@gorhom/bottom-sheet": "^5.1.1",
-    "@mendix/native": "10.2.0",
+    "@mendix/native": "./mendix-native-10.2.2.tgz",
     "@notifee/react-native": "9.1.8",
     "@op-engineering/op-sqlite": "12.0.2",
     "@react-native-async-storage/async-storage": "2.0.0",
@@ -31,12 +31,12 @@
     "react-native-reanimated": "3.16.7",
     "react-native-safe-area-context": "5.2.0",
     "react-native-screens": "4.6.0",
-    "react-native-splash-screen": "3.2.0",
+    "react-native-bootsplash": "6.3.10",
     "react-native-svg": "15.11.1",
     "react-native-tab-view": "3.5.2",
     "react-native-vector-icons": "10.2.0",
     "react-native-video": "6.10.0",
-    "semver": "5.7.2"
+    "semver": "^7.6.0"
   },
   "devDependencies": {
     "@babel/runtime": "^7.20.0",
@@ -55,7 +55,7 @@
     "react-dom": "18.3.1",
     "react-native": "0.77.3",
     "unset-value": "2.0.1",
-    "semver": "5.7.2"
+    "semver": "^7.6.0"
   },
   "resolutions": {
     "react": "18.3.1",

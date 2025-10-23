@@ -1,0 +1,44 @@
+diff --git a/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplash.kt b/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplash.kt
+index d553256..1221a83 100644
+--- a/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplash.kt
++++ b/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplash.kt
+@@ -1,7 +1,8 @@
+ package com.zoontek.rnbootsplash
+ 
+ import android.app.Activity
+-
++import com.facebook.react.ReactApplication
++import com.facebook.react.bridge.ReactApplicationContext
+ import androidx.annotation.StyleRes
+ 
+ object RNBootSplash {
+@@ -10,4 +11,16 @@ object RNBootSplash {
+   fun init(activity: Activity, @StyleRes themeResId: Int) {
+     RNBootSplashModuleImpl.init(activity, themeResId)
+   }
++
++  @JvmStatic
++  fun hide(activity: Activity) {
++    val reactContext: ReactApplicationContext? = (activity.application as ReactApplication)
++      .reactNativeHost
++      .reactInstanceManager
++      .currentReactContext as? ReactApplicationContext
++
++    if (reactContext != null) {
++      RNBootSplashModuleImpl.hideAndClearPromiseQueue(reactContext,false)
++    }
++  }
+ }
+diff --git a/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplashModuleImpl.kt b/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplashModuleImpl.kt
+index 828e99d..3e37153 100644
+--- a/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplashModuleImpl.kt
++++ b/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplashModuleImpl.kt
+@@ -116,7 +116,7 @@ object RNBootSplashModuleImpl {
+     }
+   }
+ 
+-  private fun hideAndClearPromiseQueue(reactContext: ReactApplicationContext, fade: Boolean) {
++  fun hideAndClearPromiseQueue(reactContext: ReactApplicationContext, fade: Boolean) {
+     UiThreadUtil.runOnUiThread {
+       val activity = reactContext.currentActivity
+ 
