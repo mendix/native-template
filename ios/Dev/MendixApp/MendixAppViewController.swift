@@ -1,11 +1,12 @@
 import UIKit
+import MendixNative
 
 class MendixAppViewController: UIViewController, ReactNativeDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    ReactNative.instance.delegate = self
-    ReactNative.instance.start()
+    ReactNative.shared.delegate = self
+    ReactNative.shared.start()
   }
 
   override func viewDidAppear(_ animated: Bool) {
