@@ -17,7 +17,7 @@ public class MainActivity extends MendixReactActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         RNBootSplash.init(this, R.style.BootTheme);
-        this.getLifecycle().addObserver(new MendixActivityObserver(this));
+//        this.getLifecycle().addObserver(new MendixActivityObserver(this));
         boolean hasDeveloperSupport = ((MainApplication) getApplication()).getUseDeveloperSupport();
         mendixApp = new MendixApp(AppUrl.getUrlFromResource(this), MxConfiguration.WarningsFilter.none, hasDeveloperSupport, false);
         super.onCreate(savedInstanceState);
