@@ -22,7 +22,7 @@ public class MainApplication extends MendixReactApplication {
     @Override
     public List<ReactPackage> getPackages() {
         List<ReactPackage> packages = new PackageList(this).getPackages();
-//        packages.addAll(new MendixPackageList(this).getPackages());
+        packages.addAll(new MendixPackageList(this).getPackages());
 
         // Packages that cannot be autolinked yet can be added manually here, for example:
         // packages.add(new MyReactNativePackage());

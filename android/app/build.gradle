@@ -157,4 +157,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into "libs"
 }
 
+apply from: file("../../node_modules/mendix-native/android/mendix.gradle"); applyMendixGradle(project)
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
