@@ -36,6 +36,19 @@ buildscript {
     }
 }
 
+
+project.ext {
+    set('react-native', [
+            versions: [
+                // Override Firebase BOM version to avoid updating to RNFirebase 20.2.0+,
+                // which adds many new node_modules increasing the size significantly.
+                    firebase: [
+                            bom: "33.1.1"
+                    ],
+            ],
+    ])
+}
+
 allprojects {
     repositories {
         all { repo ->
