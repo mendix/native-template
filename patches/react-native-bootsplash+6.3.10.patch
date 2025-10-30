@@ -19,13 +19,10 @@ index d553256..1221a83 100644
 +
 +  @JvmStatic
 +  fun hide(activity: Activity) {
-+    val reactContext: ReactApplicationContext? = (activity.application as ReactApplication)
-+      .reactNativeHost
-+      .reactInstanceManager
-+      .currentReactContext as? ReactApplicationContext
-+
-+    if (reactContext != null) {
-+      RNBootSplashModuleImpl.hideAndClearPromiseQueue(reactContext,false)
++    (activity.application as? ReactApplication)?.let { application ->
++     (application.reactHost?.currentReactContext as? ReactApplicationContext)?.let {
++        RNBootSplashModuleImpl.hideAndClearPromiseQueue(it, false)
++      }
 +    }
 +  }
  }
