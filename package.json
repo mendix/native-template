@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "15.4.1",
+  "version": "15.4.2",
   "private": true,
   "scripts": {
     "postinstall": "node patches/apply-patches.js && jetify",
@@ -19,10 +19,11 @@
     "@react-native-community/cli-platform-ios": "16.0.2",
     "@react-native-community/datetimepicker": "8.2.0",
     "@react-native-picker/picker": "2.11.0",
-    "react-native-device-info": "14.0.4",
     "@react-navigation/native": "7.0.14",
     "react-native": "0.77.3",
     "react-native-blob-util": "0.21.2",
+    "react-native-device-info": "14.0.4",
+    "react-native-edge-to-edge": "1.7.0",
     "react-native-gesture-handler": "2.23.1",
     "react-native-image-picker": "7.2.3",
     "react-native-localize": "3.2.1",
