@@ -9,7 +9,7 @@
   "dependencies": {
     "@d11/react-native-fast-image": "8.11.1",
     "@gorhom/bottom-sheet": "^5.1.1",
-    "@mendix/native": "./mendix-native-10.3.1.tgz",
+    "@mendix/native": "./mendix-native-10.3.1-new.tgz",
     "@notifee/react-native": "9.1.8",
     "@op-engineering/op-sqlite": "15.0.7",
     "@react-native-async-storage/async-storage": "2.0.0",

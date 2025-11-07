@@ -69,7 +69,7 @@ index d36fd85..7513556 100644
    println "[OP-SQLITE] using sqlcipher."
  } else if(useLibsql) {
 diff --git a/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp b/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
-index 8feaf77..aef7ea0 100644
+index 8feaf77..261ec22 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
 +++ b/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
 @@ -19,8 +19,8 @@ struct OPSQLiteBridge : jni::JavaClass<OPSQLiteBridge> {
@@ -78,7 +78,7 @@ index 8feaf77..aef7ea0 100644
          {makeNativeMethod("installNativeJsi", OPSQLiteBridge::installNativeJsi),
 -         makeNativeMethod("clearStateNativeJsi",
 -                          OPSQLiteBridge::clearStateNativeJsi)});
-+         makeNativeMethod("clearStateNativeJsi", OPSQLiteBridge::clearStateNativeJsi)});
++         makeNativeMethod("clearStateNativeJsi", OPSQLiteBridge::clearStateNativeJsi),
 +    	 makeNativeMethod("deleteAllDBsJsi", OPSQLiteBridge::deleteAllDBsJsi)});
    }
  
@@ -206,7 +206,7 @@ index 91511ab..cc73dfe 100644
  
  } // namespace opsqlite
 diff --git a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
-index 375cc3e..bd5d04c 100644
+index 375cc3e..e6fce21 100644
 --- a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
 +++ b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
 @@ -1,4 +1,3 @@
