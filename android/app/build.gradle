@@ -105,6 +105,8 @@ android {
     packagingOptions {
         pickFirst "**/libc++_shared.so"
         pickFirst "**/libcrypto.so"
+        pickFirst "**/libjsi.so"
+        pickFirst "**/libreactnative.so"
     }
 }
 
