@@ -14,7 +14,7 @@
     "@op-engineering/op-sqlite": "15.0.7",
     "@react-native-async-storage/async-storage": "2.0.0",
     "@react-native-camera-roll/camera-roll": "7.4.0",
-    "@react-native-community/cli": "16.0.2",
+    "@react-native-community/cli": "20.0.2",
     "@react-native-community/cli-platform-android": "16.0.2",
     "@react-native-community/cli-platform-ios": "16.0.2",
     "@react-native-community/datetimepicker": "8.2.0",
