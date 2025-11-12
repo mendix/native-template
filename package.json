@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@d11/react-native-fast-image": "8.11.1",
-    "@gorhom/bottom-sheet": "^5.1.1",
+    "@gorhom/bottom-sheet": "5.1.1",
     "@mendix/native": "./mendix-native-10.2.1.tgz",
     "@op-engineering/op-sqlite": "15.0.7",
     "@react-native-async-storage/async-storage": "2.0.0",
