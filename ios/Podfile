@@ -53,7 +53,6 @@ def common_pods
   # RN pods end
 
   # Manually linked dependencies
-  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
   # Third party dependencies of dependencies
   pod 'IQKeyboardManager'
@@ -113,6 +112,9 @@ post_install do |installer|
       # Specify 'Swift Version: 5.0' for resolving archieve errors.
       if target.name == 'react-native-video'
           config.build_settings['SWIFT_VERSION'] = '5.0'
+      end
+      if target.name == 'VisionCamera'
+          config.build_settings['SWIFT_VERSION'] = '5.2'
       end
     end
   end

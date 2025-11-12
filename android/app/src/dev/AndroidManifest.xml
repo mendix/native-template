@@ -4,6 +4,7 @@
 
     <application
         android:name="com.mendix.nativetemplate.DevApplication"
+        android:label="@string/app_name"
         tools:replace="android:name">
         <activity
             android:name="com.mendix.nativetemplate.MainActivity"

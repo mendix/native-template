@@ -105,6 +105,8 @@ android {
     packagingOptions {
         pickFirst "**/libc++_shared.so"
         pickFirst "**/libcrypto.so"
+        pickFirst "**/libjsi.so"
+        pickFirst "**/libreactnative.so"
     }
 }
 
@@ -120,7 +122,6 @@ dependencies {
     implementation("com.facebook.react:hermes-android")
 
     implementation project(':react-native-localize')
-    implementation project(":react-native-splash-screen")
     implementation project(":mendixnative-release")
 
     // Explicit add okhttp

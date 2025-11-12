@@ -25,7 +25,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:8.1.4"
+        classpath "com.android.tools.build:gradle:8.8.2"
         classpath "com.facebook.react:react-native-gradle-plugin"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath 'org.jetbrains.kotlin:compose-compiler-gradle-plugin:2.0.21'
@@ -34,6 +34,22 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+}
+
+
+project.ext {
+    set('react-native', [
+            versions: [
+                // Override Firebase BOM version to avoid updating to react-native-firebase 20.2.0+,
+                // which adds many new node_modules increasing the size significantly.
+                // Affected dependencies include the entire react-native-firebase suite e.g.:
+                // @react-native-firebase/app, @react-native-firebase/analytics, @react-native-firebase/crashlytics, @react-native-firebase/messaging
+                // NOTE: If updating to react-native-firebase 20.2.0+ is done, this override should be removed.
+                    firebase: [
+                            bom: "33.1.1"
+                    ],
+            ],
+    ])
 }
 
 allprojects {
@@ -68,6 +84,9 @@ allprojects {
             url "https://maven.scijava.org/content/repositories/jcenter/"
         }
         maven { url "https://packages.rnd.mendix.com/jcenter" }
+        maven {
+            url "$rootDir/../node_modules/@notifee/react-native/android/libs"
+        }
     }
 }
 
