@@ -77,3 +77,4 @@ android/mendixnative-release/\.project
 android/mendixnative-release/\.settings/org\.eclipse\.buildship\.core\.prefs
 
 android/**/.cxx/
+android/.kotlin/
