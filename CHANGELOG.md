@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## Fixes
 
 - We have upgraded `@mendix/native` to version 9.0.1
+- We have enabled edge-to-edge display by default. If you encounter compatibility issues, you can disable it by running `npm run disable-edge-to-edge`
 
 ## [14.0.0] - 2025-04-01
 
