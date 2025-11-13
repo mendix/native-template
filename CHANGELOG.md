@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have enabled edge-to-edge display by default. If you encounter compatibility issues, you can disable it by running `npm run disable-edge-to-edge`
+
 - We have migrated from `react-native-splash-screen@3.2.0` to `react-native-bootsplash@^7.7.0` for better splash screen support and autolinking compatibility.
 
 - We added a new property to gradle.properties for scanning QR codes.
