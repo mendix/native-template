@@ -1,5 +1,17 @@
 [
     {
+        "id": 259940271,
+        "tag_name": "v15.4.3",
+        "name": "Release 15.4.3",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We updated the version of `@mendix/native` to `10.3.0` to fix the components.json errors.",
+        "created_at": "2025-11-05T14:53:16Z",
+        "published_at": "2025-11-05T14:55:28Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v15.4.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v15.4.3"
+    },
+    {
         "id": 257444967,
         "tag_name": "v15.4.2",
         "name": "Release 15.4.2",
@@ -1186,17 +1198,5 @@
         "published_at": "2023-01-31T11:42:34Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.5",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.5"
-    },
-    {
-        "id": 89699734,
-        "tag_name": "v5.2.16",
-        "name": "Release 5.2.16",
-        "draft": false,
-        "prerelease": false,
-        "body": "* Pinned AndroidX library versions to prevent compilation errors for Android builds.",
-        "created_at": "2023-01-20T13:46:20Z",
-        "published_at": "2023-01-20T14:13:28Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.16",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.16"
     }
 ]
