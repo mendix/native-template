@@ -8,14 +8,10 @@ class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
   var hasHandledLaunchAppWithOptions = false
   
   override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-    
-    setUpProvider()
-    super.application(application, didFinishLaunchingWithOptions: launchOptions)
-    clearKeychain()
+    setupApp(application: application, launchOptions: launchOptions)
     MendixAppDelegate.delegate = self
     UNUserNotificationCenter.current().delegate = self
     MendixAppDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
-    setupUI()
     
     IQKeyboardManager.shared().isEnabled = false
     
@@ -72,30 +68,8 @@ class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
     )
     
     ReactNative.shared.setup(mxApp, launchOptions: launchOptions as? [AnyHashable : Any])
-    
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-      ReactNative.shared.start()
-    }
+    ReactNative.shared.start()
     
     return handled
   }
-//
-//  - (void) userNotificationCenter:(UNUserNotificationCenter *)center
-//      didReceiveNotificationResponse:(UNNotificationResponse *)response
-//               withCompletionHandler:(void (^)(void))completionHandler {
-//    [MendixAppDelegate userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
-//  }
-//
-//  - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-//    [MendixAppDelegate application:application didReceiveLocalNotification:notification];
-//  }
-//
-//  - (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
-//  fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
-//    [MendixAppDelegate application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
-//  }
-//
-//  - (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-//    [MendixAppDelegate application:application didRegisterUserNotificationSettings:notificationSettings];
-//  }
 }

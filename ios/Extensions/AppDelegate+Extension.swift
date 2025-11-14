@@ -22,4 +22,11 @@ extension AppDelegate {
     }))
     window.rootViewController?.present(controller, animated: true, completion: nil)
   }
+  
+  func setupApp(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
+    setUpProvider()
+    super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    clearKeychain()
+    setupUI()
+  }
 }

@@ -8,14 +8,10 @@ class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
   
   override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
     
-    setUpProvider()
-    super.application(application, didFinishLaunchingWithOptions: launchOptions)
-    
-    clearKeychain()
+    setupApp(application: application, launchOptions: launchOptions)
     MendixAppDelegate.delegate = self
     UNUserNotificationCenter.current().delegate = self
     MendixAppDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
-    setupUI()
     
     changeRoot(to: UIViewController())
     
@@ -28,8 +24,8 @@ class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
     }
     
     if let bundleUrl = MendixAppDelegate.getJSBundleFile() {
-      let runtimeUrl = AppUrl.forRuntime((url).replacingOccurrences(of: "\\", with: ""))
       
+      let runtimeUrl = AppUrl.forRuntime((url).replacingOccurrences(of: "\\", with: ""))
       
       let mendixApp = MendixApp(
         identifier: nil,
@@ -66,24 +62,4 @@ class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
   func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
     MendixAppDelegate.userNotificationCenter(center, willPresentNotification: notification, withCompletionHandler: completionHandler)
   }
-  
-  
-//  - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-//    [MendixAppDelegate application:application didReceiveLocalNotification:notification];
-//  }
-//
-//  - (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
-//  fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
-//    [MendixAppDelegate application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
-//  }
-//
-//  - (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-//    [MendixAppDelegate application:application didRegisterUserNotificationSettings:notificationSettings];
-//  }
-//
-//  - (void) userNotificationCenter:(UNUserNotificationCenter *)center
-//      didReceiveNotificationResponse:(UNNotificationResponse *)response
-//               withCompletionHandler:(void (^)(void))completionHandler {
-//    [MendixAppDelegate userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
-//  }
 }
