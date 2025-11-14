@@ -6,7 +6,4 @@ rootProject.name = 'nativeTemplate'
 
 includeBuild('../node_modules/@react-native/gradle-plugin')
 
-include ':mendixnative-release'
-project(':mendixnative-release').projectDir = new File(rootProject.projectDir, '../node_modules/@mendix/native/androidlib')
-
 include ':app'

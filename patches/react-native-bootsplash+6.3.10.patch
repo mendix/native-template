@@ -1,5 +1,5 @@
 diff --git a/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplash.kt b/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplash.kt
-index d553256..1221a83 100644
+index d553256..f538e42 100644
 --- a/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplash.kt
 +++ b/node_modules/react-native-bootsplash/android/src/main/java/com/zoontek/rnbootsplash/RNBootSplash.kt
 @@ -1,7 +1,8 @@
@@ -12,20 +12,17 @@ index d553256..1221a83 100644
  import androidx.annotation.StyleRes
  
  object RNBootSplash {
-@@ -10,4 +11,16 @@ object RNBootSplash {
+@@ -10,4 +11,13 @@ object RNBootSplash {
    fun init(activity: Activity, @StyleRes themeResId: Int) {
      RNBootSplashModuleImpl.init(activity, themeResId)
    }
 +
 +  @JvmStatic
 +  fun hide(activity: Activity) {
-+    val reactContext: ReactApplicationContext? = (activity.application as ReactApplication)
-+      .reactNativeHost
-+      .reactInstanceManager
-+      .currentReactContext as? ReactApplicationContext
-+
-+    if (reactContext != null) {
-+      RNBootSplashModuleImpl.hideAndClearPromiseQueue(reactContext,false)
++    (activity.application as? ReactApplication)?.let { application ->
++      (application.reactHost?.currentReactContext as? ReactApplicationContext)?.let {
++        RNBootSplashModuleImpl.hideAndClearPromiseQueue(it, false)
++      }
 +    }
 +  }
  }
