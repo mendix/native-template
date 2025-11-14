@@ -37,6 +37,7 @@ local.properties
 # 
 **/Pods/
 ios/MendixAppDelegate.m
+ios/MendixAppDelegate.swift
 
 # node.js
 #

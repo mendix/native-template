@@ -77,72 +77,59 @@ def generate_mendix_delegate
     end
   end
 
-  File.open("MendixAppDelegate.m", "w") do |file|
+  File.open("MendixAppDelegate.swift", "w") do |file|
     mendix_app_delegate = mendix_app_delegate_template.sub("{{ imports }}", stringify(imports))
     hooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook)) }
-    returnHooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook).length > 0 ? stringify(hook) : "  return YES;") }
+    returnHooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook).length > 0 ? stringify(hook) : "  return true") }
     file << mendix_app_delegate
   end
 end
 
 def mendix_app_delegate_template
   %(// DO NOT EDIT BY HAND. THIS FILE IS AUTO-GENERATED
-#import <Foundation/Foundation.h>
-#import <MendixNative.h>
-#import "MendixAppDelegate.h"
+import Foundation
+import UserNotifications
+import MendixNative
 {{ imports }}
 
-@implementation MendixAppDelegate
-
-static UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable delegate;
-
-+ (void) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+class MendixAppDelegate: NSObject, MendixAppDelegateProtocol {
+  
+  static var delegate: (UIResponder & UIApplicationDelegate & UNUserNotificationCenterDelegate)?
+  
+  static func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
 {{ didFinishLaunchingWithOptions }}
-}
-
-+ (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-{{ didReceiveLocalNotification }}
-}
-
-+ (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
-fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
+  }
+  
+  static func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 {{ didReceiveRemoteNotification }}
-}
-
-+ (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+  }
+  
+  static func application(_ application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
 {{ didRegisterUserNotificationSettings }}
-}
-
-+ (BOOL) application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+  }
+  
+  static func application(_ application: UIApplication, openURL url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
 {{ boolean_openURLWithOptions }}
-}
-
-+ (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+  }
+  
+  static func application(_ application: UIApplication, openURL url: URL, sourceApplication: String?, annotation: Any) {
 {{ openURL }}
-}
-
-+ (void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+  }
+  
+  static func userNotificationCenter(_ center: UNUserNotificationCenter, willPresentNotification notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 {{ willPresentNotification }}
-}
-
-+ (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+  }
+  
+  static func userNotificationCenter(_ center: UNUserNotificationCenter, didReceiveNotificationResponse response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 {{ didReceiveNotificationResponse }}
-}
-
-+ (UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable) delegate {
-  return delegate;
-}
-
-+ (void) setDelegate:(UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nonnull)value {
-  delegate = value;
-}
-
-+ (NSURL *) getJSBundleFile {
+  }
+  
+  static func getJSBundleFile() -> URL? {
 {{ getJSBundleFile }}
-  return [ReactNative.instance getJSBundleFile];
+    return BundleHelper.getJSBundleFile()
+  }
 }
-
-@end\n)
+)
 end
 
 def stringify(array)

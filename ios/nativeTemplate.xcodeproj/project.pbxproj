@@ -29,6 +29,8 @@
 		2C887FDB24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */; };
 		572D87C4D9F46E7564D1FE09 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBB22F41E3AF5D95F9759402 /* PrivacyInfo.xcprivacy */; };
 		9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */; };
+		9E90E6022EC73A3300C0D76A /* MendixAppDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90E6012EC73A3300C0D76A /* MendixAppDelegateProtocol.swift */; };
+		9E90E6032EC73A3300C0D76A /* MendixAppDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90E6012EC73A3300C0D76A /* MendixAppDelegateProtocol.swift */; };
 		9E9B12F82EAB8BA500714B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9B12F62EAB8BA500714B41 /* AppDelegate.swift */; };
 		9E9B12FA2EAB8C2800714B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9B12F92EAB8C2800714B41 /* AppDelegate.swift */; };
 		9E9B13002EAB8D2600714B41 /* MendixAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9B12FF2EAB8D2600714B41 /* MendixAppDelegate.swift */; };
@@ -73,6 +75,7 @@
 		73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nativeTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEDF4024CB6865C31DBA5BB /* Pods-nativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		9A27E05F0AD54B417B79E303 /* Pods-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.debug.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.debug.xcconfig"; sourceTree = "<group>"; };
+		9E90E6012EC73A3300C0D76A /* MendixAppDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MendixAppDelegateProtocol.swift; sourceTree = "<group>"; };
 		9E9B12F62EAB8BA500714B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E9B12F92EAB8C2800714B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E9B12FF2EAB8D2600714B41 /* MendixAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MendixAppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 		13B07FAE1A68108700A75B9A /* NativeTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				9E90E6012EC73A3300C0D76A /* MendixAppDelegateProtocol.swift */,
 				9E9B12FB2EAB8C9300714B41 /* Extensions */,
 				1A0B83DA22E09B2500EA1E51 /* Bundle */,
 				EBC80A5F22DF41DD007E5F3D /* Config */,
@@ -646,6 +650,7 @@
 			files = (
 				9E9B12F82EAB8BA500714B41 /* AppDelegate.swift in Sources */,
 				9E9B13002EAB8D2600714B41 /* MendixAppDelegate.swift in Sources */,
+				9E90E6022EC73A3300C0D76A /* MendixAppDelegateProtocol.swift in Sources */,
 				9E9B13042EAB8EB700714B41 /* SplashScreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +667,7 @@
 				1A0B3ADE2397F36300388BF7 /* QRView.swift in Sources */,
 				1A0B3AE02397F38300388BF7 /* QRMaskView.swift in Sources */,
 				1A0B3A992397DA2300388BF7 /* LaunchAppViewController.swift in Sources */,
+				9E90E6032EC73A3300C0D76A /* MendixAppDelegateProtocol.swift in Sources */,
 				1A0B3ADC2397F1FF00388BF7 /* URLValidator.swift in Sources */,
 				1A0B3AD82397EB4000388BF7 /* RoundedButton.swift in Sources */,
 			);
