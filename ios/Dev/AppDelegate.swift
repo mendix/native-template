@@ -2,16 +2,15 @@ import Foundation
 import MendixNative
 
 @UIApplicationMain
-class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
+class AppDelegate: ReactAppProvider {
   
   var shouldOpenInLastApp = false
   var hasHandledLaunchAppWithOptions = false
   
   override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-    setupApp(application: application, launchOptions: launchOptions)
-    MendixAppDelegate.delegate = self
-    UNUserNotificationCenter.current().delegate = self
+    
     MendixAppDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
+    setupApp(application: application, launchOptions: launchOptions)
     
     IQKeyboardManager.shared().isEnabled = false
     
@@ -20,10 +19,6 @@ class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
     window.isUserInteractionEnabled = true
     
     return true
-  }
-  
-  func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-    MendixAppDelegate.userNotificationCenter(center, willPresentNotification: notification, withCompletionHandler: completionHandler)
   }
   
   func getWarningFilterValue() -> WarningsFilter {
