@@ -3,6 +3,7 @@
   "version": "15.4.4",
   "private": true,
   "scripts": {
+    "preinstall": "node scripts/delete-stale-files.js",
     "postinstall": "node patches/apply-patches.js && jetify",
     "configure": "native-mobile-toolkit configure --config-path='./config.json' --verbose"
   },
