@@ -37,12 +37,7 @@ def generate_mendix_delegate
   imports = []
   hooks = {
     didFinishLaunchingWithOptions: [],
-    didReceiveLocalNotification: [],
-    didReceiveRemoteNotification: [],
-    didRegisterUserNotificationSettings: [],
     openURL: [],
-    willPresentNotification: [],
-    didReceiveNotificationResponse: [],
     getJSBundleFile: [],
   }
 
@@ -77,72 +72,42 @@ def generate_mendix_delegate
     end
   end
 
-  File.open("MendixAppDelegate.m", "w") do |file|
+  File.open("MendixAppDelegate.swift", "w") do |file|
     mendix_app_delegate = mendix_app_delegate_template.sub("{{ imports }}", stringify(imports))
     hooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook)) }
-    returnHooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook).length > 0 ? stringify(hook) : "  return YES;") }
+    returnHooks.each { |name, hook| mendix_app_delegate.sub!("{{ #{name.to_s} }}", stringify(hook).length > 0 ? stringify(hook) : "    return true") }
     file << mendix_app_delegate
   end
 end
 
 def mendix_app_delegate_template
   %(// DO NOT EDIT BY HAND. THIS FILE IS AUTO-GENERATED
-#import <Foundation/Foundation.h>
-#import <MendixNative.h>
-#import "MendixAppDelegate.h"
+import Foundation
+import MendixNative
 {{ imports }}
 
-@implementation MendixAppDelegate
+/// Auto-generated implementation of MendixAppDelegate
+/// Generated based on enabled capabilities in capabilities.ios.json
+class MendixAppDelegate: NSObject {
+  
+  static func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+  {{ didFinishLaunchingWithOptions }}
+  }
 
-static UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable delegate;
-
-+ (void) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-{{ didFinishLaunchingWithOptions }}
+  static func application(_ application: UIApplication, openURL url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+  {{ boolean_openURLWithOptions }}
+  }
+  
+  static func application(_ application: UIApplication, openURL url: URL, sourceApplication: String?, annotation: Any) {
+  {{ openURL }}
+  }
+  
+  static func getJSBundleFile() -> URL? {
+  {{ getJSBundleFile }}
+    return BundleHelper.getJSBundleFile()
+  }
 }
-
-+ (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-{{ didReceiveLocalNotification }}
-}
-
-+ (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
-fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
-{{ didReceiveRemoteNotification }}
-}
-
-+ (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-{{ didRegisterUserNotificationSettings }}
-}
-
-+ (BOOL) application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-{{ boolean_openURLWithOptions }}
-}
-
-+ (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-{{ openURL }}
-}
-
-+ (void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
-{{ willPresentNotification }}
-}
-
-+ (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
-{{ didReceiveNotificationResponse }}
-}
-
-+ (UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable) delegate {
-  return delegate;
-}
-
-+ (void) setDelegate:(UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nonnull)value {
-  delegate = value;
-}
-
-+ (NSURL *) getJSBundleFile {
-{{ getJSBundleFile }}
-  return [ReactNative.instance getJSBundleFile];
-}
-
-@end\n)
+)
 end
 
 def stringify(array)

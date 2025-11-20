@@ -1,18 +1,15 @@
 import MendixNative
 
 @UIApplicationMain
-class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
+class AppDelegate: ReactAppProvider {
   
   var shouldOpenInLastApp = false
   var hasHandledLaunchAppWithOptions = false
   
   override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
     
-    setupApp(application: application, launchOptions: launchOptions)
-    MendixAppDelegate.delegate = self
-    UNUserNotificationCenter.current().delegate = self
     MendixAppDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
-    
+    setupApp(application: application, launchOptions: launchOptions)
     changeRoot(to: UIViewController())
     
     guard let url = Bundle.main.object(forInfoDictionaryKey: "Runtime url") as? String, !url.isEmpty else {
@@ -57,9 +54,5 @@ class AppDelegate: ReactAppProvider, UNUserNotificationCenterDelegate {
   
   func getWarningFilterValue() -> WarningsFilter {
     return .none
-  }
-  
-  func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-    MendixAppDelegate.userNotificationCenter(center, willPresentNotification: notification, withCompletionHandler: completionHandler)
   }
 }

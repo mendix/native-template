@@ -692,6 +692,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
@@ -772,6 +773,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
@@ -860,6 +862,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios",
@@ -916,6 +919,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios",
@@ -1029,6 +1033,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
@@ -1118,6 +1123,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios",

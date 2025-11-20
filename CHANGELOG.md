@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We have updated native template to support react native new architecture.
+
 - We have migrated from `react-native-splash-screen@3.2.0` to `react-native-bootsplash@^7.7.0` for better splash screen support and autolinking compatibility.
 
 - We added a new property to gradle.properties for scanning QR codes.

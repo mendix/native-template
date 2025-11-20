@@ -3,10 +3,10 @@
         "ios": {
             "AppDelegate": {
                 "imports": [
-                    "#import \"React/RCTLinkingManager.h\""
+                    "import React"
                 ],
                 "boolean_openURLWithOptions": [
-                    "return [RCTLinkingManager application:application openURL:url options:options];"
+                    "return RCTLinkingManager.application(application, open: url, options: options)"
                 ]
             }
         }
@@ -36,24 +36,6 @@
             "externalDependencies": [
                 "me.leolin:ShortcutBadger:1.1.22@aar"
             ]
-        },
-        "ios": {
-            "AppDelegate": {
-                "imports": [
-                    "#import <RNCPushNotificationIOS.h>"
-                ],
-                "didFinishLaunchingWithOptions": [
-                    "UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];",
-                    "center.delegate = MendixAppDelegate.delegate;"
-                ],
-                "willPresentNotification": [
-                    "completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);"
-                ],
-                "didReceiveNotificationResponse": [
-                    "[RNCPushNotificationIOS didReceiveNotificationResponse:response];",
-                    "completionHandler();"
-                ]
-            }
         }
     },
     "firebaseAndroid": {
@@ -72,10 +54,10 @@
         "ios": {
             "AppDelegate": {
                 "imports": [
-                    "#import <Firebase.h>"
+                    "import FirebaseCore"
                 ],
                 "didFinishLaunchingWithOptions": [
-                    "[FIRApp configure];"
+                    "FirebaseApp.configure()"
                 ]
             }
         }
@@ -85,10 +67,10 @@
         "ios": {
             "AppDelegate": {
                 "imports": [
-                    "#import <GoogleMaps/GoogleMaps.h>"
+                    "import GoogleMaps"
                 ],
                 "didFinishLaunchingWithOptions": [
-                    "[GMSServices provideAPIKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@\"GoogleMapsApiKey\"] ?: @\"\"];"
+                    "GMSServices.provideAPIKey(Bundle.main.object(forInfoDictionaryKey: \"GoogleMapsApiKey\") as? String ?? \"\")"
                 ]
             },
             "pods": {
