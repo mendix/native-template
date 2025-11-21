@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We added a new property to gradle.properties for scanning QR codes.
+
 ## Fixes
 
 - We have upgraded `@mendix/native` to version 9.0.1
