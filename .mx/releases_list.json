@@ -1,5 +1,17 @@
 [
     {
+        "id": 264310582,
+        "tag_name": "v14.1.8",
+        "name": "Release 14.1.8",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We have migrated to react-native-vision-camera to fix barcode scanner issues on Android.\r\n- We updated the react-native-firebase to v20.1.0 with BOM v33.1.1, adding support for 16KB page size alignment.\r\n",
+        "created_at": "2025-11-21T12:20:47Z",
+        "published_at": "2025-11-21T12:26:43Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.8",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.8"
+    },
+    {
         "id": 263995448,
         "tag_name": "v16.0.0",
         "name": "Release 16.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2023-05-16T09:42:04Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.17",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.17"
-    },
-    {
-        "id": 99362967,
-        "tag_name": "v7.0.1",
-        "name": "Native Template v7.0.1",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n- We fixed an issue with iOS builds throwing duplicate symbols during the build phase both in AppCenter and locally.\r\n- We fixed an issue affecting cookies in Android devices. (Tickets 178853, 178053)\r\n- We fixed an issue affecting the mailto schema in Android. (Ticket 180301)",
-        "created_at": "2023-04-13T08:22:55Z",
-        "published_at": "2023-04-13T09:05:29Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.1"
     }
 ]
