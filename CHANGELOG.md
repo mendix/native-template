@@ -4,13 +4,29 @@ All notable changes to this template will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [16.0.0] - 2025-11-20
 
 - We have updated native template to support react native new architecture.
 
+## [15.4.4] - 2025-11-10
+
+- We updated version of op-sqlite to 15.0.7
+- We updated version of @mendix/native to 10.3.1
 - We have migrated from `react-native-splash-screen@3.2.0` to `react-native-bootsplash@^7.7.0` for better splash screen support and autolinking compatibility.
 
+## [15.4.3] - 2025-11-05
+
+- We updated the version of @mendix/native to 10.3.0 to fix the components.json errors.
+
+## [15.4.2] - 2025-11-27
+
+- We have installed react-native-edge-to-edge to fix issues in android 15+
+
+## [15.4.1] - 2025-10-07
+
 - We added a new property to gradle.properties for scanning QR codes.
+
+## [15.4.0] - 2025-10-02
 
 - We have migrated from react-native-push-notification to @notifee/react-native for better new architecture compatibility and enhanced push notification features
 
