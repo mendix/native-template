@@ -36,24 +36,6 @@
             "externalDependencies": [
                 "me.leolin:ShortcutBadger:1.1.22@aar"
             ]
-        },
-        "ios": {
-            "AppDelegate": {
-                "imports": [
-                    "#import <RNCPushNotificationIOS.h>"
-                ],
-                "didFinishLaunchingWithOptions": [
-                    "UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];",
-                    "center.delegate = MendixAppDelegate.delegate;"
-                ],
-                "willPresentNotification": [
-                    "completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);"
-                ],
-                "didReceiveNotificationResponse": [
-                    "[RNCPushNotificationIOS didReceiveNotificationResponse:response];",
-                    "completionHandler();"
-                ]
-            }
         }
     },
     "firebaseAndroid": {
