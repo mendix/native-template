@@ -1,4 +1,5 @@
 import UIKit
+import MendixNative
 
 class LaunchAppViewController: UIViewController, QRViewDelegate {
     @IBOutlet weak var textField: UITextField!
@@ -18,9 +19,9 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
     func launchApp(_ url: String) {
         uiState = .idle
         qrView.stopScanning()
-        AppPreferences.setAppUrl(url)
-        AppPreferences.remoteDebugging(false)
-        AppPreferences.devMode(enableDevModeSwitch.isOn)
+        AppPreferences.appUrl = url
+        AppPreferences.remoteDebuggingEnabled = false
+        AppPreferences.devModeEnabled = enableDevModeSwitch.isOn
         self.performSegue(withIdentifier: "MendixApp", sender: nil)
     }
 
@@ -82,8 +83,8 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
         super.viewWillAppear(animated)
         uiState = .idle
         qrView.startScanning()
-        textField.text = AppPreferences.getAppUrl()
-        enableDevModeSwitch.setOn(AppPreferences.devModeEnabled(), animated: false)
+        textField.text = AppPreferences.safeAppUrl
+        enableDevModeSwitch.setOn(AppPreferences.devModeEnabled, animated: false)
         registerNotificationObservers()
     }
 
@@ -115,19 +116,25 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let devModeEnabled = AppPreferences.devModeEnabled()
         let url = AppUrl.forBundle(
-            AppPreferences.getAppUrl(),
-            port: AppPreferences.getRemoteDebuggingPackagerPort(),
-            isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled(),
-            isDevModeEnabled: devModeEnabled)
+            AppPreferences.safeAppUrl,
+            port: AppPreferences.remoteDebuggingPackagerPort,
+            isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled,
+            isDevModeEnabled: AppPreferences.devModeEnabled
+        )
         
-        let runtimeUrl: URL = AppUrl.forRuntime(AppPreferences.getAppUrl())!
-        
-        let mxApp = MendixApp.init(nil, bundleUrl: url!, runtimeUrl: runtimeUrl, warningsFilter: devModeEnabled ? WarningsFilter.partial : WarningsFilter.none, isDeveloperApp: true, clearDataAtLaunch: clearDataSwitch.isOn, reactLoading: UIStoryboard(name: "LaunchScreen", bundle: nil))
-        mxApp.splashScreenPresenter = SplashScreenPresenter()
-
-        ReactNative.instance.setup(mxApp)
+        let mxApp = MendixApp.init(
+            identifier: nil,
+            bundleUrl: url,
+            runtimeUrl: AppUrl.forRuntime(AppPreferences.safeAppUrl),
+            warningsFilter: AppPreferences.devModeEnabled ? WarningsFilter.partial : WarningsFilter.none,
+            isDeveloperApp: true,
+            clearDataAtLaunch: clearDataSwitch.isOn,
+            splashScreenPresenter: SplashScreenPresenter(),
+            reactLoading: UIStoryboard.launchScreen,
+            enableThreeFingerGestures: false
+        )
+        ReactNative.shared.setup(mxApp)
     }
 }
 

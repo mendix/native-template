@@ -1,0 +1,14 @@
+patches/@op-engineering+op-sqlite+12.0.2.patch
+mendix-native-10.2.2.tgz
+ios/AppDelegate.h
+ios/AppDelegate.m
+ios/MendixAppDelegate.h
+ios/MendixAppDelegate.m
+ios/main.m
+ios/RNSplashScreen+StoryBoardSplash.h
+ios/SplashScreenPresenter.h
+ios/SplashScreenPresenter.m
+ios/StoryBoardSplash.m
+ios/SwiftInterop.swift
+ios/Dev/AppDelegate.h
+ios/Dev/AppDelegate.m

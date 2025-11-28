@@ -37,6 +37,7 @@ local.properties
 # 
 **/Pods/
 ios/MendixAppDelegate.m
+ios/MendixAppDelegate.swift
 
 # node.js
 #
@@ -75,3 +76,6 @@ android/\.settings/org\.eclipse\.buildship\.core\.prefs
 android/mendixnative-release/\.project
 
 android/mendixnative-release/\.settings/org\.eclipse\.buildship\.core\.prefs
+
+android/**/.cxx/
+android/.kotlin/
