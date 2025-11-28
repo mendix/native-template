@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [14.1.0] - 2025-04-02
 
+### Changed
+
+- We have migrated from `react-native-push-notification` to `@notifee/react-native` for better new architecture compatibility and enhanced push notification features.
+
 ## Fixes
 
 - We have upgraded `@mendix/native` to version 9.0.1
