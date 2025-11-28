@@ -13,16 +13,16 @@
     "@op-engineering/op-sqlite": "15.0.7",
     "@react-native-async-storage/async-storage": "2.0.0",
     "@react-native-camera-roll/camera-roll": "7.4.0",
-    "@react-native-community/cli": "18.0.0",
-    "@react-native-community/cli-platform-android": "18.0.0",
-    "@react-native-community/cli-platform-ios": "18.0.0",
+    "@react-native-community/cli": "18.0.1",
+    "@react-native-community/cli-platform-android": "18.0.1",
+    "@react-native-community/cli-platform-ios": "18.0.1",
     "@react-native-community/datetimepicker": "8.2.0",
     "@react-native-picker/picker": "2.11.0",
     "@react-navigation/native": "7.0.14",
     "@notifee/react-native": "9.1.8",
     "react-native": "0.78.2",
     "react-native-device-info": "14.0.4",
-    "react-native-blob-util": "0.21.2",
+    "react-native-blob-util": "0.21.3",
     "react-native-edge-to-edge": "1.7.0",
     "react-native-gesture-handler": "2.25.0",
     "react-native-image-picker": "7.2.3",
@@ -44,9 +44,8 @@
     "@mendix/native-mobile-toolkit": "latest",
     "@react-native/babel-preset": "0.78.2",
     "@react-native/metro-config": "0.78.2",
-    "detox": "19.13.0",
     "jetifier": "^1.6.8",
-    "patch-package": "^8.0.0"
+    "patch-package": "^8.0.1"
   },
   "engines": {
     "node": ">=18"
