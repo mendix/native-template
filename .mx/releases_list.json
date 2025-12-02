@@ -1,5 +1,17 @@
 [
     {
+        "id": 266743725,
+        "tag_name": "v14.1.9",
+        "name": "Release 14.1.9",
+        "draft": true,
+        "prerelease": false,
+        "body": "- We updated @mendix/native to 9.2.0 to improve edge-to-edge. The change only takes effect in Studio Pro 10.24.13+.",
+        "created_at": "2025-12-02T13:54:41Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
         "id": 264310582,
         "tag_name": "v14.1.8",
         "name": "Release 14.1.8",
@@ -17,7 +29,7 @@
         "name": "Release 16.0.0",
         "draft": false,
         "prerelease": false,
-        "body": "- We have updated native template to support react native new architecture.\r\n- We have migrated few native dependencies to support react native new architecture.",
+        "body": "- We have updated native template to support react native new architecture.",
         "created_at": "2025-11-20T13:51:03Z",
         "published_at": "2025-11-20T13:54:25Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v16.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2023-05-24T11:52:18Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.18",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.18"
-    },
-    {
-        "id": 103124967,
-        "tag_name": "v5.2.17",
-        "name": "Release 5.2.17",
-        "draft": false,
-        "prerelease": false,
-        "body": "* Update AppCenter configurations (eb36c65)",
-        "created_at": "2023-05-16T09:40:23Z",
-        "published_at": "2023-05-16T09:42:04Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.17",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.17"
     }
 ]
