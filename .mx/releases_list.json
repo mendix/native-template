@@ -5,7 +5,7 @@
         "name": "Release 14.1.9",
         "draft": true,
         "prerelease": false,
-        "body": "* Merge pull request #1117 from mendix/moo/improve-edge-to-edge-solution (b283347)",
+        "body": "- We updated @mendix/native to 9.2.0 to improve edge-to-edge. The change only takes effect in Studio Pro 10.24.13+.",
         "created_at": "2025-12-02T13:54:41Z",
         "published_at": null,
         "tarball_url": null,
