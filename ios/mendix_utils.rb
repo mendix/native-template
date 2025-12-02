@@ -37,12 +37,7 @@ def generate_mendix_delegate
   imports = []
   hooks = {
     didFinishLaunchingWithOptions: [],
-    didReceiveLocalNotification: [],
-    didReceiveRemoteNotification: [],
-    didRegisterUserNotificationSettings: [],
     openURL: [],
-    willPresentNotification: [],
-    didReceiveNotificationResponse: [],
     getJSBundleFile: [],
   }
 
@@ -94,23 +89,8 @@ def mendix_app_delegate_template
 
 @implementation MendixAppDelegate
 
-static UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable delegate;
-
 + (void) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 {{ didFinishLaunchingWithOptions }}
-}
-
-+ (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-{{ didReceiveLocalNotification }}
-}
-
-+ (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
-fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
-{{ didReceiveRemoteNotification }}
-}
-
-+ (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-{{ didRegisterUserNotificationSettings }}
 }
 
 + (BOOL) application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
@@ -119,22 +99,6 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
 
 + (void) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 {{ openURL }}
-}
-
-+ (void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
-{{ willPresentNotification }}
-}
-
-+ (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
-{{ didReceiveNotificationResponse }}
-}
-
-+ (UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nullable) delegate {
-  return delegate;
-}
-
-+ (void) setDelegate:(UIResponder<UIApplicationDelegate, UNUserNotificationCenterDelegate> *_Nonnull)value {
-  delegate = value;
 }
 
 + (NSURL *) getJSBundleFile {
