@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [14.1.0] - 2025-04-02
 
+## [14.1.0] - 2025-11-30
+
+- We have improved the styling where edge-to-edge mode is enabled.
+
 ## Fixes
 
 - We have upgraded `@mendix/native` to version 9.0.1
