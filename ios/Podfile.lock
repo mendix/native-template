@@ -26,7 +26,7 @@ PODS:
   - libwebp/sharpyuv (1.5.0)
   - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
-  - MendixNative (0.1.3):
+  - MendixNative (0.1.4):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2490,7 +2490,7 @@ SPEC CHECKSUMS:
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
-  MendixNative: 36190d86a65cb57b351c6396bc1349a7823206b0
+  MendixNative: d0f0d8ac550d39d7476e464c1b3968314dd61aa9
   op-sqlite: 12554de3e1a0cb86cbad3cf1f0c50450f57d3855
   OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
