@@ -11,7 +11,6 @@
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [self clearKeychain];
-  MendixAppDelegate.delegate = self;
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
 
@@ -23,19 +22,6 @@
   [self.window setUserInteractionEnabled:YES];
   
   return YES;
-}
-
-- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-  [MendixAppDelegate application:application didReceiveLocalNotification:notification];
-}
-
-- (void) application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
-fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
-  [MendixAppDelegate application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
-}
-
-- (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-  [MendixAppDelegate application:application didRegisterUserNotificationSettings:notificationSettings];
 }
 
 - (BOOL) application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
@@ -80,18 +66,6 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
   if (@available(iOS 13.4, *)) {
     [UIDatePicker appearance].preferredDatePickerStyle = UIDatePickerStyleWheels;
   }
-}
-
-- (void) userNotificationCenter:(UNUserNotificationCenter *)center
-        willPresentNotification:(UNNotification *)notification
-          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
-  [MendixAppDelegate userNotificationCenter:center willPresentNotification:notification withCompletionHandler:completionHandler];
-}
-
-- (void) userNotificationCenter:(UNUserNotificationCenter *)center
-    didReceiveNotificationResponse:(UNNotificationResponse *)response
-             withCompletionHandler:(void (^)(void))completionHandler {
-  [MendixAppDelegate userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
 }
 
 - (void) clearKeychain {
