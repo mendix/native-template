@@ -7,7 +7,7 @@ class AppDelegate: ReactAppProvider {
   var shouldOpenInLastApp = false
   var hasHandledLaunchAppWithOptions = false
   
-  override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+  override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     
     MendixAppDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
     setupApp(application: application, launchOptions: launchOptions)
@@ -29,7 +29,7 @@ class AppDelegate: ReactAppProvider {
     #endif
   }
   
-  override func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+  override func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     
     let handled = MendixAppDelegate.application(app, openURL: url, options: options)
     
@@ -47,8 +47,8 @@ class AppDelegate: ReactAppProvider {
     )
     
     let launchOptions = NSMutableDictionary(dictionary: options)
-    launchOptions[UIApplicationLaunchOptionsKey.url] = url
-    launchOptions[UIApplicationOpenURLOptionsKey.annotation] = options[UIApplicationOpenURLOptionsKey.annotation]
+    launchOptions[UIApplication.LaunchOptionsKey.url] = url
+    launchOptions[UIApplication.OpenURLOptionsKey.annotation] = options[UIApplication.OpenURLOptionsKey.annotation]
     
     let mxApp = MendixApp.init(
         identifier: nil,

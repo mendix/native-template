@@ -713,11 +713,9 @@
 					"\"${PODS_ROOT}/GoogleMobileVision/Detector/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleMobileVision/FaceDetector/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleMobileVision/TextDetector/Frameworks\"",
-					"\"${SRCROOT}/../node_modules/@mendix/native/ios\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-async-storage/async-storage/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/netinfo/ios",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
@@ -749,7 +747,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/usr/lib/swift",
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
 					"$(PROJECT_DIR)",
 				);
 				MACH_O_TYPE = mh_execute;
@@ -760,10 +757,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/../node_modules/@mendix/native/ios";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -794,11 +791,9 @@
 					"\"${PODS_ROOT}/GoogleMobileVision/Detector/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleMobileVision/FaceDetector/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleMobileVision/TextDetector/Frameworks\"",
-					"\"${SRCROOT}/../node_modules/@mendix/native/ios\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-async-storage/async-storage/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/netinfo/ios",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
@@ -830,7 +825,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/usr/lib/swift",
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
 					"$(PROJECT_DIR)",
 				);
 				MACH_O_TYPE = mh_execute;
@@ -842,9 +836,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_INCLUDE_PATHS = "$(inherited) ${PROJECT_DIR} ${SRCROOT}/../node_modules/@mendix/native/ios";
+				SWIFT_INCLUDE_PATHS = "$(inherited) ${PROJECT_DIR}";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -857,7 +851,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -869,16 +863,10 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
-				);
 				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -887,7 +875,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/usr/lib/swift",
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
 				);
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0.0;
@@ -898,10 +885,10 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/../node_modules/@mendix/native/ios";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -913,7 +900,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -926,15 +913,9 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -944,7 +925,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/usr/lib/swift",
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
 				);
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0.0;
@@ -954,10 +934,10 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline";
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/../node_modules/@mendix/native/ios";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1054,11 +1034,9 @@
 					"\"${PODS_ROOT}/GoogleMobileVision/Detector/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleMobileVision/FaceDetector/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleMobileVision/TextDetector/Frameworks\"",
-					"\"${SRCROOT}/../node_modules/@mendix/native/ios\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-async-storage/async-storage/ios",
 					"$(SRCROOT)/../node_modules/@react-native-community/netinfo/ios",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
@@ -1090,7 +1068,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/usr/lib/swift",
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
 					"$(PROJECT_DIR)",
 				);
 				MACH_O_TYPE = mh_execute;
@@ -1102,9 +1079,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_INCLUDE_PATHS = "$(inherited) ${PROJECT_DIR} ${SRCROOT}/../node_modules/@mendix/native/ios";
+				SWIFT_INCLUDE_PATHS = "$(inherited) ${PROJECT_DIR}";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1117,7 +1094,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1130,15 +1107,9 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BC32QNM6AD;
 				ENABLE_BITCODE = "$(inherited)";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1148,7 +1119,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SDKROOT)/usr/lib/swift",
 					"$(inherited)",
-					"${SRCROOT}/../node_modules/@mendix/native/ios",
 				);
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0.0;
@@ -1158,10 +1128,10 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Native Template iOS Pipeline";
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_INCLUDE_PATHS = "$(inherited) ${SRCROOT}/../node_modules/@mendix/native/ios";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "nativeTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = ReleaseDevApp;
