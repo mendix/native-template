@@ -38,8 +38,12 @@ jobs:
           path: ios/Pods
           key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
 
+      - name: bundle install
+        run: bundle install
+        working-directory: ./ios
+
       - name: pod install
-        run: pod install
+        run: bundle exec pod install
         working-directory: ./ios
 
       - name: appcenter prebuilt script test
