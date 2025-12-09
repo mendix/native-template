@@ -6,7 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- We updated the version of mendix-native to v0.1.4 to fix iOS native file system issue.
+- We updated the version of mendix-native to v0.3.0 to fix iOS native file system issue.
+- We updated the native-template for compatibility with React v19 and React Native v0.78.2.
 
 ## [16.1.0] - 2025-11-30
 
