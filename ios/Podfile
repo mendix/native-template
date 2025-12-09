@@ -97,7 +97,7 @@ post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       # Specify 'Swift Version: 5.0' for resolving archieve errors.
-      if target.name == 'react-native-video'
+      if target.name == 'react-native-video' || target.name == 'MendixNative'
           config.build_settings['SWIFT_VERSION'] = '5.0'
       end
       if target.name == 'VisionCamera'
