@@ -28,6 +28,8 @@
 		2C887FDA24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */; };
 		2C887FDB24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */; };
 		572D87C4D9F46E7564D1FE09 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBB22F41E3AF5D95F9759402 /* PrivacyInfo.xcprivacy */; };
+		6E2A5EF72EE2F17800FB5359 /* Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2A5EF62EE2F17800FB5359 /* Info-dev.plist */; };
+		6E2A5EF82EE2F17800FB5359 /* Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E2A5EF62EE2F17800FB5359 /* Info-dev.plist */; };
 		9DF4091425A46A56E2A9A405 /* libPods-nativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */; };
 		9E9B12F82EAB8BA500714B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9B12F62EAB8BA500714B41 /* AppDelegate.swift */; };
 		9E9B12FA2EAB8C2800714B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9B12F92EAB8C2800714B41 /* AppDelegate.swift */; };
@@ -70,6 +72,7 @@
 		4D55DFFF6D52DC368FE13A23 /* Pods-nativeTemplate.releasedevapp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.releasedevapp.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.releasedevapp.xcconfig"; sourceTree = "<group>"; };
 		64F8A8A81DAAF68662AD5926 /* Pods-nativeTemplate.releasedevapp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.releasedevapp.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.releasedevapp.xcconfig"; sourceTree = "<group>"; };
 		6ABE4BDB54D431090249D8EC /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
+		6E2A5EF62EE2F17800FB5359 /* Info-dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-dev.plist"; path = "nativeTemplate/Info-dev.plist"; sourceTree = "<group>"; };
 		73F36AC2CCD37CCD4E7B1BB8 /* libPods-nativeTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nativeTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEDF4024CB6865C31DBA5BB /* Pods-nativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		9A27E05F0AD54B417B79E303 /* Pods-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.debug.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 				EBC80A5F22DF41DD007E5F3D /* Config */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				6E2A5EF62EE2F17800FB5359 /* Info-dev.plist */,
 				2C887FD924B88A0E0003DC53 /* LaunchScreen.storyboard */,
 				2C005A7823D5B1E200003E29 /* nativeTemplate.entitlements */,
 				9E9B12F62EAB8BA500714B41 /* AppDelegate.swift */,
@@ -361,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2A5EF82EE2F17800FB5359 /* Info-dev.plist in Resources */,
 				C5A009082BE291FE00F10EC1 /* PrivacyInfo.xcprivacy in Resources */,
 				2C887FDA24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */,
 				1A0B83DB22E09B2600EA1E51 /* Bundle in Resources */,
@@ -376,6 +381,7 @@
 			files = (
 				1A0B3AFD23992F8200388BF7 /* Images.xcassets in Resources */,
 				1A0B3AD32397E15800388BF7 /* MendixApp.storyboard in Resources */,
+				6E2A5EF72EE2F17800FB5359 /* Info-dev.plist in Resources */,
 				1A0B3AEF2399058B00388BF7 /* config.release.xcconfig in Resources */,
 				2C887FDB24B88A0E0003DC53 /* LaunchScreen.storyboard in Resources */,
 				1A0B3AD62397EA8500388BF7 /* glyphicons-halflings-regular.ttf in Resources */,
@@ -872,7 +878,7 @@
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 				);
-				INFOPLIST_FILE = NativeTemplate/Info.plist;
+				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -929,7 +935,7 @@
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 				);
-				INFOPLIST_FILE = NativeTemplate/Info.plist;
+				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1133,7 +1139,7 @@
 					"$(inherited)",
 					"${SRCROOT}/../node_modules/@mendix/native/ios/**",
 				);
-				INFOPLIST_FILE = NativeTemplate/Info.plist;
+				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
