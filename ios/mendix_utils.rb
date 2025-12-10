@@ -212,3 +212,22 @@ end
 def get_excluded_capabilities
     ["nativeOTA"]
 end
+
+def setupInfoDevPlist
+  source_plist = "nativeTemplate/Info.plist"
+  dest_plist = "nativeTemplate/Info-dev.plist"
+
+  # Read the source plist as text
+  content = File.read(source_plist)
+
+  # Replace <key>NSAllowsLocalNetworking</key><false/> with <true/>
+  content.gsub!(
+    /(<key>NSAllowsLocalNetworking<\/key>\s*)<false\/>/,
+    '\1<true/>'
+  )
+
+  # Write back the modified content
+  File.open(dest_plist, "w") do |file|
+    file << content
+  end
+end
