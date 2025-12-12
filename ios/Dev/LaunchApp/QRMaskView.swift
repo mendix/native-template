@@ -26,7 +26,7 @@ class QRMaskView: UIView {
         let path = UIBezierPath(roundedRect: userRect!, cornerRadius: 20)
         let multiplier = CGFloat(3)
         path.append(UIBezierPath(rect: CGRect(x: 0 - self.bounds.width, y: 0 - self.bounds.height, width: self.bounds.width * multiplier, height: self.bounds.height * multiplier)))
-        mask.fillRule = kCAFillRuleEvenOdd
+        mask.fillRule = .evenOdd
         mask.path = path.cgPath
         self.layer.mask = mask
     }

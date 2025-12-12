@@ -9,18 +9,24 @@ class MendixAppViewController: UIViewController, ReactNativeDelegate {
     ReactNative.shared.start()
   }
 
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return isAppeared ? .darkContent : .lightContent
+  }
+  
+  private var isAppeared = false {
+    didSet {
+      setNeedsStatusBarAppearanceUpdate()
+    }
+  }
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    if #available(iOS 13.0, *) {
-      UIApplication.shared.statusBarStyle = .darkContent
-    } else {
-      UIApplication.shared.statusBarStyle = .default
-    }
+    isAppeared = true
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    UIApplication.shared.statusBarStyle = .lightContent
+    isAppeared = false
   }
 
   func onAppClosed() {
