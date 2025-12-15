@@ -1,5 +1,29 @@
 [
     {
+        "id": 269119041,
+        "tag_name": "v17.0.0",
+        "name": "Release 17.0.0",
+        "draft": true,
+        "prerelease": false,
+        "body": "* We updated the native-template for compatibility with React v19 and React Native v0.78. This brings performance, stability improvements, and new features.\r\n* We updated the version of mendix-native to v0.3.0 to fix iOS native file system issue.",
+        "created_at": "2025-12-10T13:13:23Z",
+        "published_at": null,
+        "tarball_url": null,
+        "zipball_url": null
+    },
+    {
+        "id": 270439807,
+        "tag_name": "v14.1.10",
+        "name": "Release 14.1.10",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We changed NSAppTransportSecurity of the production version of the project to false. For dev testing, we added Info-dev.plist.",
+        "created_at": "2025-12-15T15:20:36Z",
+        "published_at": "2025-12-15T15:23:49Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.10",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.10"
+    },
+    {
         "id": 266743725,
         "tag_name": "v14.1.9",
         "name": "Release 14.1.9",
@@ -1174,29 +1198,5 @@
         "published_at": "2023-08-01T13:01:54Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.2-beta.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.2-beta.1"
-    },
-    {
-        "id": 105643954,
-        "tag_name": "v6.3.6",
-        "name": "Release 6.3.6",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n* We fixed an issue with cookie management in Native Apps (Ticket 178053).\r\n* We fixed an issue while compiling the native iOS app using Xcode 14+",
-        "created_at": "2023-06-01T08:42:42Z",
-        "published_at": "2023-06-01T08:44:53Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v6.3.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v6.3.6"
-    },
-    {
-        "id": 104095765,
-        "tag_name": "v5.2.18",
-        "name": "Release 5.2.18",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n* We fixed an issue while building apps with Remote/Local notifications enabled (Tickets 185505, 186171)",
-        "created_at": "2023-05-24T11:50:52Z",
-        "published_at": "2023-05-24T11:52:18Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.18",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.18"
     }
 ]
