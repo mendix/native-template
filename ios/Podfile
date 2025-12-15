@@ -23,6 +23,7 @@ platform :ios, deployment_target
 
 prepare_react_native_project!
 generate_mendix_delegate
+setupInfoDevPlist
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
