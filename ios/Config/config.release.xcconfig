@@ -1,2 +1,3 @@
 #include "Pods/Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.release.xcconfig"
+#include "Pods/Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate.releasedevapp.xcconfig"
 #include "config.xcconfig"

@@ -101,7 +101,7 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
 
         textField.layer.cornerRadius = 30
         if let placeHolderText = textField.placeholder {
-          textField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+          textField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         }
     }
 
@@ -163,22 +163,22 @@ extension LaunchAppViewController {
     }
 
     private func registerNotificationObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(deviceRotated), name: .UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceRotated), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
 
     private func unregisterNotificationObservers() {
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .UIDeviceOrientationDidChange, object: self)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
     }
 
     @objc func keyboardWillShow(_ notification: Notification) {
         keyboardShowTask?.cancel()
         keyboardShowTask = DispatchWorkItem {
-            if let keyboardRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect {
-                let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
+            if let keyboardRect = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+                let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
                 self.view.frame.size.height = UIScreen.main.bounds.height - keyboardRect.height
                 self.qrView.stopScanning()
                 self.qrView.layer.opacity = 0
@@ -191,7 +191,7 @@ extension LaunchAppViewController {
     }
 
     @objc func keyboardWillHide(_ notification: Notification) {
-        let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
+        let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
         view.frame.size.height = UIScreen.main.bounds.height
         self.qrView.startScanning()
         self.qrView.layer.opacity = 1

@@ -110,25 +110,6 @@ post_install do |installer|
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', "DEBUG=1"]
         end
       end
-      # Specify 'Swift Version: 5.0' for resolving archieve errors.
-      if target.name == 'react-native-video' || target.name == 'MendixNative'
-          config.build_settings['SWIFT_VERSION'] = '5.0'
-      end
-      if target.name == 'VisionCamera'
-          config.build_settings['SWIFT_VERSION'] = '5.2'
-      end
-    end
-  end
-
-  # Ensure deployment_target is set correctly for all projects
-  installer.generated_projects.each do |project|
-    project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
-      end
-    end
-    project.build_configurations.each do |bc|
-      bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
     end
   end
 end

@@ -6,7 +6,7 @@ class AppDelegate: ReactAppProvider {
   var shouldOpenInLastApp = false
   var hasHandledLaunchAppWithOptions = false
   
-  override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+  override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     
     MendixAppDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
     setupApp(application: application, launchOptions: launchOptions)
@@ -48,7 +48,7 @@ class AppDelegate: ReactAppProvider {
     return true
   }
   
-  override func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+  override func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     return MendixAppDelegate.application(app, openURL: url, options: options)
   }
   
