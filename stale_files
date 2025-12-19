@@ -1,4 +1,6 @@
 patches/@op-engineering+op-sqlite+12.0.2.patch
+patches/react-native+0.77.3.patch
+patches/react-native-screens+4.6.0.patch
 mendix-native-10.2.2.tgz
 ios/AppDelegate.h
 ios/AppDelegate.m
