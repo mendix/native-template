@@ -1,5 +1,17 @@
 [
     {
+        "id": 272658530,
+        "tag_name": "v17.0.1",
+        "name": "Release 17.0.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We changed NSAppTransportSecurity of the production version of the project to false. For dev testing, we added Info-dev.plist.",
+        "created_at": "2025-12-24T10:15:09Z",
+        "published_at": "2025-12-24T10:17:05Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v17.0.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v17.0.1"
+    },
+    {
         "id": 270439807,
         "tag_name": "v14.1.10",
         "name": "Release 14.1.10",
@@ -1186,17 +1198,5 @@
         "published_at": "2023-08-01T14:57:01Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.2"
-    },
-    {
-        "id": 114649389,
-        "tag_name": "v7.0.2-beta.1",
-        "name": "Release 7.0.2-beta.1",
-        "draft": false,
-        "prerelease": true,
-        "body": "### Fixes\r\n\r\n- We fixed an issue with QR code scanner not working on iOS version of the custom dev app",
-        "created_at": "2023-07-31T15:50:20Z",
-        "published_at": "2023-08-01T13:01:54Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.2-beta.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.2-beta.1"
     }
 ]
