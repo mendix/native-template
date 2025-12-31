@@ -67,4 +67,12 @@ class AppDelegate: ReactAppProvider {
     
     return handled
   }
+  
+  override func applicationWillTerminate(_ application: UIApplication) {
+    NativeCookieModule.persistSessionCookies()
+  }
+  
+  override func applicationDidEnterBackground(_ application: UIApplication) {
+    NativeCookieModule.persistSessionCookies()
+  }
 }

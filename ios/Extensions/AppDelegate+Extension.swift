@@ -26,6 +26,7 @@ extension AppDelegate {
   func setupApp(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
     setUpProvider()
     super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    NativeCookieModule.restoreSessionCookies()
     clearKeychain()
     setupUI()
   }
