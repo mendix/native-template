@@ -55,4 +55,12 @@ class AppDelegate: ReactAppProvider {
   func getWarningFilterValue() -> WarningsFilter {
     return .none
   }
+  
+  override func applicationWillTerminate(_ application: UIApplication) {
+    NativeCookieModule.persistSessionCookies()
+  }
+  
+  override func applicationDidEnterBackground(_ application: UIApplication) {
+    NativeCookieModule.persistSessionCookies()
+  }
 }
