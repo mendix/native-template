@@ -865,8 +865,8 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
 				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
