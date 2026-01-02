@@ -10,6 +10,7 @@
 @synthesize hasHandledLaunchAppWithOptions;
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [SessionCookieStore restore];
   [self clearKeychain];
   MendixAppDelegate.delegate = self;
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
@@ -37,6 +38,14 @@
   }
 
   return YES;
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+  [SessionCookieStore persist];
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+  [SessionCookieStore persist];
 }
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
