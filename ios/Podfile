@@ -34,6 +34,7 @@ end
 setup_permissions([
   'Camera',
   'PhotoLibrary',
+  'LocationWhenInUse',
 ])
 
 def common_pods
