@@ -8,7 +8,7 @@ class AppDelegate: ReactAppProvider {
   
   override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     
-    SessionCookieStore.restore()
+    SessionCookieStore.restore() // iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
     MendixAppDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
     setupApp(application: application, launchOptions: launchOptions)
     changeRoot(to: UIViewController())
@@ -58,10 +58,10 @@ class AppDelegate: ReactAppProvider {
   }
   
   override func applicationWillTerminate(_ application: UIApplication) {
-    SessionCookieStore.persist()
+    SessionCookieStore.persist() // iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
   }
   
   override func applicationDidEnterBackground(_ application: UIApplication) {
-    SessionCookieStore.persist()
+    SessionCookieStore.persist() // iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
   }
 }
