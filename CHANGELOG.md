@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We updated mendix-native to v0.3.1, enabling session cookie persistence and restoration on iOS.
+
+## [17.0.1] - 2025-12-24
+
+- We changed NSAppTransportSecurity of the production version of the project to false. For dev testing, we added Info-dev.plist.
+
+## [17.0.0] - 2025-12-22
+
 - We updated the native-template for compatibility with React v19 and React Native v0.78.2. This brings performance, stability improvements, and new features.
 - We updated the version of mendix-native to v0.3.0 to fix iOS native file system issue.
 
