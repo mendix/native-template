@@ -10,7 +10,7 @@
 @synthesize hasHandledLaunchAppWithOptions;
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [SessionCookieStore restore];
+  [SessionCookieStore restore]; //iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
   [self clearKeychain];
   MendixAppDelegate.delegate = self;
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
@@ -27,11 +27,11 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-  [SessionCookieStore persist];
+  [SessionCookieStore persist]; //iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-  [SessionCookieStore persist];
+  [SessionCookieStore persist]; //iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
 }
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
