@@ -1,5 +1,17 @@
 [
     {
+        "id": 275894662,
+        "tag_name": "v14.1.11",
+        "name": "Release 14.1.11",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We updated `@mendix/native to v9.2.2`, enabling session cookie persistence and restoration on iOS.",
+        "created_at": "2026-01-12T04:55:42Z",
+        "published_at": "2026-01-12T04:58:49Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.11",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.11"
+    },
+    {
         "id": 272658530,
         "tag_name": "v17.0.1",
         "name": "Release 17.0.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2023-08-17T15:06:27Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.3-beta.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.3-beta.1"
-    },
-    {
-        "id": 114668576,
-        "tag_name": "v7.0.2",
-        "name": "Release v7.0.2",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We fixed an issue with QR code scanner not working on iOS version of the custom dev app",
-        "created_at": "2023-08-01T14:53:24Z",
-        "published_at": "2023-08-01T14:57:01Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.2",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.2"
     }
 ]
