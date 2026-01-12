@@ -4,6 +4,10 @@ All notable changes to this template will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+- We removed leftover Detox references from the Android build files. This fixes an issue where generating Android APKs would fail due to Detox dependencies not being found.
+
 ## [17.0.2] - 2026-01-12
 
 - We updated mendix-native to v0.3.1, enabling session cookie persistence and restoration on iOS.
