@@ -4,9 +4,17 @@ All notable changes to this template will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [14.1.11] - 2026-01-12
 
 - We updated `@mendix/native` to v9.2.2, enabling session cookie persistence and restoration on iOS.
+
+## [14.1.10] - 2025-12-18
+
+- We changed `NSAppTransportSecurity` in **production** versions of projects to false. For **dev** testing, we added **Info-dev.plist**.
+
+## [14.1.9] - 2025-12-03
+
+- We improved the styling when edge-to-edge mode is enabled.
 
 ## [14.1.8] - 2025-11-21
 
