@@ -1,5 +1,17 @@
 [
     {
+        "id": 275895256,
+        "tag_name": "v17.0.2",
+        "name": "Release 17.0.2",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We updated `mendix-native` to v0.3.1, enabling session cookie persistence and restoration on iOS.",
+        "created_at": "2026-01-12T05:02:14Z",
+        "published_at": "2026-01-12T05:03:13Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v17.0.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v17.0.2"
+    },
+    {
         "id": 275894662,
         "tag_name": "v14.1.11",
         "name": "Release 14.1.11",
@@ -1186,17 +1198,5 @@
         "published_at": "2023-08-18T14:07:15Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.3",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.3"
-    },
-    {
-        "id": 117640839,
-        "tag_name": "v7.0.3-beta.1",
-        "name": "Release 7.0.3-beta.1",
-        "draft": false,
-        "prerelease": true,
-        "body": "### Fixed\r\n\r\n- We fixed distorted splash screen issue for android",
-        "created_at": "2023-08-17T15:02:16Z",
-        "published_at": "2023-08-17T15:06:27Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.3-beta.1",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.3-beta.1"
     }
 ]
