@@ -52,11 +52,10 @@ PODS:
     - RNCAsyncStorage
     - SSZipArchive
     - Yoga
-  - op-sqlite (15.0.7):
+  - op-sqlite (15.1.5):
     - DoubleConversion
     - glog
     - hermes-engine
-    - OpenSSL-Universal
     - RCT-Folly (= 2024.11.18.00)
     - RCTRequired
     - RCTTypeSafety
@@ -74,7 +73,6 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - OpenSSL-Universal (3.3.3001)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -2237,9 +2235,9 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - SDWebImage (5.21.2):
-    - SDWebImage/Core (= 5.21.2)
-  - SDWebImage/Core (5.21.2)
+  - SDWebImage (5.21.3):
+    - SDWebImage/Core (= 5.21.3)
+  - SDWebImage/Core (5.21.3)
   - SDWebImageAVIFCoder (0.11.1):
     - libavif/core (>= 0.11.0)
     - SDWebImage (~> 5.10)
@@ -2350,7 +2348,6 @@ SPEC REPOS:
     - libavif
     - libdav1d
     - libwebp
-    - OpenSSL-Universal
     - SDWebImage
     - SDWebImageAVIFCoder
     - SDWebImageWebPCoder
@@ -2549,8 +2546,7 @@ SPEC CHECKSUMS:
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
   MendixNative: 358ef00fc883a39da69680c6c2a09ecf85a0b887
-  op-sqlite: 12554de3e1a0cb86cbad3cf1f0c50450f57d3855
-  OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
+  op-sqlite: a8239b295e2fad068d587c16d6c41d1ffd98ede8
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: be794de7dc6ed8f9f7fbf525f86e7651b8b68746
   RCTRequired: a83787b092ec554c2eb6019ff3f5b8d125472b3b
@@ -2629,7 +2625,7 @@ SPEC CHECKSUMS:
   RNScreens: 0d4cb9afe052607ad0aa71f645a88bb7c7f2e64c
   RNSVG: 8ad5c94593e5e4a6e133e6934e2188e3c688d27a
   RNVectorIcons: bd818296a51dc2bb8c3bd97a3ca399df1afe216d
-  SDWebImage: 9f177d83116802728e122410fb25ad88f5c7608a
+  SDWebImage: 16309af6d214ba3f77a7c6f6fdda888cb313a50a
   SDWebImageAVIFCoder: afe194a084e851f70228e4be35ef651df0fc5c57
   SDWebImageWebPCoder: e38c0a70396191361d60c092933e22c20d5b1380
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
