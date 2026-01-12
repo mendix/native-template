@@ -205,17 +205,32 @@ index 91511ab..cc73dfe 100644
  
  } // namespace opsqlite
 diff --git a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
-index 32906a2..a19a06e 100644
+index 32906a2..4a1e452 100644
 --- a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
 +++ b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
-@@ -1,4 +1,3 @@
+@@ -1,12 +1,13 @@
 -require "json"
  require_relative "./generate_tokenizers_header_file"
  
  log_message = lambda do |message|
-@@ -34,11 +33,10 @@ end
+   puts "\e[34m#{message}\e[0m"
+ end
  
- app_package = JSON.parse(File.read(package_json_path))
++# NOTE: Disabled as redundant for now, re-enable if needed
+ # In the sample app the dir is not inside of node_modules
+-is_user_app = __dir__.include?("node_modules")
++# is_user_app = __dir__.include?("node_modules")
++is_user_app = false
+ package = JSON.parse(File.read(File.join(__dir__, "package.json")))
+ app_package = nil
+ package_json_path = nil
+@@ -32,13 +33,13 @@ else
+   package_json_path = File.join(__dir__, "example", "package.json")
+ end
+ 
+-app_package = JSON.parse(File.read(package_json_path))
++# NOTE: Disabled as redundant for now, re-enable if needed
++# app_package = JSON.parse(File.read(package_json_path))
  
 -op_sqlite_config = app_package["op-sqlite"]
  use_sqlcipher = false
@@ -227,7 +242,7 @@ index 32906a2..a19a06e 100644
  phone_version = false
  sqlite_flags = ""
  fts5 = false
-@@ -46,37 +44,6 @@ rtree = false
+@@ -46,37 +47,6 @@ rtree = false
  use_sqlite_vec = false
  tokenizers = []
  
