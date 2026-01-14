@@ -235,7 +235,7 @@ index 32906a2..4a1e452 100644
 -op_sqlite_config = app_package["op-sqlite"]
 -use_sqlcipher = false
 +use_sqlcipher = true
-use_crsqlite = false
+ use_crsqlite = false
  use_libsql = false
 -performance_mode = false
 +performance_mode = true
