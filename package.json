@@ -10,7 +10,7 @@
   "dependencies": {
     "@d11/react-native-fast-image": "8.11.1",
     "@gorhom/bottom-sheet": "5.1.1",
-    "mendix-native": "./mendix-native-0.3.2.tgz",
+    "mendix-native": "https://github.com/mendix/mendix-native/releases/download/v0.3.2/mendix-native-v0.3.2.tgz",
     "@op-engineering/op-sqlite": "15.1.5",
     "@react-native-async-storage/async-storage": "2.0.0",
     "@react-native-camera-roll/camera-roll": "7.4.0",
