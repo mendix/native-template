@@ -4,10 +4,9 @@ All notable changes to this template will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-- We added the `LocationWhenInUse` permission to the iOS configuration to support react-native-permissions.
-
 ## [Unreleased]
 
+- We added the `LocationWhenInUse` permission to the iOS configuration to support react-native-permissions.
 - We updated the native-template for compatibility with React v19 and React Native v0.78.2. This brings performance, stability improvements, and new features.
 - We updated the version of mendix-native to v0.3.0 to fix iOS native file system issue.
 
