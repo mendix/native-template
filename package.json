@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "17.0.1",
+  "version": "18.0.0",
   "private": true,
   "scripts": {
     "preinstall": "node scripts/delete-stale-files.js",
@@ -10,7 +10,7 @@
   "dependencies": {
     "@d11/react-native-fast-image": "8.11.1",
     "@gorhom/bottom-sheet": "5.1.1",
-    "mendix-native": "https://github.com/mendix/mendix-native/releases/download/v0.3.0/mendix-native-v0.3.0.tgz",
+    "mendix-native": "https://github.com/mendix/mendix-native/releases/download/v0.3.1/mendix-native-v0.3.1.tgz",
     "@op-engineering/op-sqlite": "15.0.7",
     "@react-native-async-storage/async-storage": "2.0.0",
     "@react-native-camera-roll/camera-roll": "7.4.0",
