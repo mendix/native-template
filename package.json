@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "14.1.10",
+  "version": "14.1.11",
   "private": true,
   "scripts": {
     "postinstall": "node patches/apply-patches.js && jetify",
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^5.1.1",
-    "@mendix/native": "9.2.0",
+    "@mendix/native": "9.2.2",
     "@op-engineering/op-sqlite": "9.2.7",
     "@react-native-async-storage/async-storage": "2.0.0",
     "@react-native-camera-roll/camera-roll": "7.4.0",
