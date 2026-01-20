@@ -18,7 +18,10 @@ runs:
     - name: Send Slack notification
       uses: slackapi/slack-github-action@485a9d42d3a73031f12ec201c457e2162c45d02d # v2
       with:
-        channel-id: ${{ inputs.channel-id }}
-        slack-message: ${{ inputs.message }}
-      env:
-        SLACK_BOT_TOKEN: ${{ inputs.bot-token }}
+        method: chat.postMessage
+        token: ${{ inputs.bot-token }}
+        payload: |
+          {
+            "channel": "${{ inputs.channel-id }}",
+            "text": "${{ inputs.message }}"
+          }
