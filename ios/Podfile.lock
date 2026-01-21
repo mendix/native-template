@@ -52,10 +52,11 @@ PODS:
     - RNCAsyncStorage
     - SSZipArchive
     - Yoga
-  - op-sqlite (15.1.5):
+  - op-sqlite (15.0.7):
     - DoubleConversion
     - glog
     - hermes-engine
+    - OpenSSL-Universal
     - RCT-Folly (= 2024.11.18.00)
     - RCTRequired
     - RCTTypeSafety
@@ -73,6 +74,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - OpenSSL-Universal (3.3.3001)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -2348,6 +2350,7 @@ SPEC REPOS:
     - libavif
     - libdav1d
     - libwebp
+    - OpenSSL-Universal
     - SDWebImage
     - SDWebImageAVIFCoder
     - SDWebImageWebPCoder
@@ -2546,7 +2549,8 @@ SPEC CHECKSUMS:
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
   MendixNative: 358ef00fc883a39da69680c6c2a09ecf85a0b887
-  op-sqlite: a8239b295e2fad068d587c16d6c41d1ffd98ede8
+  op-sqlite: 12554de3e1a0cb86cbad3cf1f0c50450f57d3855
+  OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: be794de7dc6ed8f9f7fbf525f86e7651b8b68746
   RCTRequired: a83787b092ec554c2eb6019ff3f5b8d125472b3b
