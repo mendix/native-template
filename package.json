@@ -1,6 +1,6 @@
 {
   "name": "native-template",
-  "version": "17.0.3",
+  "version": "17.0.4",
   "private": true,
   "scripts": {
     "preinstall": "node scripts/delete-stale-files.js",
