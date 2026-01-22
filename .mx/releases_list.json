@@ -1,5 +1,29 @@
 [
     {
+        "id": 279018012,
+        "tag_name": "v17.0.4",
+        "name": "Release 17.0.4",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We added the `LocationWhenInUse` permission to the iOS configuration to support react-native-permissions.",
+        "created_at": "2026-01-22T13:52:31Z",
+        "published_at": "2026-01-22T13:54:11Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v17.0.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v17.0.4"
+    },
+    {
+        "id": 279017810,
+        "tag_name": "v14.1.12",
+        "name": "Release 14.1.12",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We added the `LocationWhenInUse` permission to the iOS configuration to support react-native-permissions.",
+        "created_at": "2026-01-22T13:52:01Z",
+        "published_at": "2026-01-22T13:54:00Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.12",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.12"
+    },
+    {
         "id": 276997340,
         "tag_name": "v17.0.3",
         "name": "Release 17.0.3",
@@ -1174,29 +1198,5 @@
         "published_at": "2023-09-22T15:34:02Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.7",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.7"
-    },
-    {
-        "id": 121282553,
-        "tag_name": "v7.0.6",
-        "name": "Release 7.0.6",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Additions\r\n\r\n- We added a `com.google.android.gms.permission.AD_ID` permission to the Android manifest file. This permission governs access to the advertising ID, facilitating more effective targeting and personalization within the app's advertisement services.\r\n&nbsp;- Note that this permission is currently disabled with the `tools:node=\"remove\"` attribute.",
-        "created_at": "2023-09-15T10:37:47Z",
-        "published_at": "2023-09-15T10:45:07Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.6"
-    },
-    {
-        "id": 118388755,
-        "tag_name": "v7.0.5",
-        "name": "Release 7.0.5",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixed\r\n\r\n- We upgraded android SDK version to 33",
-        "created_at": "2023-08-23T11:28:09Z",
-        "published_at": "2023-08-23T11:28:33Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.5",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.5"
     }
 ]
