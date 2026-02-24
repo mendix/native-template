@@ -40,11 +40,10 @@ const DOCS_UPSTREAM_OWNER = "mendix";
 const DOCS_BRANCH_NAME = `update-native-template-release-notes-v${NATIVE_TEMPLATE_VERSION}`;
 
 const TARGET_FILE =
-  "content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-10-parent/nt-14-rn.md";
+  "content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-17-rn.md";
 // Other options:
 // - content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-15-rn.md
 // - content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-16-rn.md
-// - content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-17-rn.md
 
 const octokit = new Octokit({ auth: MENDIX_MOBILE_DOCS_PR_GITHUB_PAT });
 
