@@ -70,10 +70,15 @@ function injectUnreleasedToDoc(docPath, unreleasedContent) {
   const frontmatter = frontmatterMatch[0];
   const rest = doc.slice(frontmatter.length).trimStart();
 
-  const firstParagraphMatch = rest.match(/^(.*?\n)(\s*\n)/s);
-  if (!firstParagraphMatch) throw new Error("First paragraph not found!");
-  const firstParagraph = firstParagraphMatch[1];
-  const afterFirstParagraph = rest.slice(firstParagraph.length).trimStart();
+  const firstReleaseHeadingIndex = rest.search(/^##\s+\d+\.\d+\.\d+/m);
+  const beforeReleases =
+    firstReleaseHeadingIndex > 0
+      ? `${rest.slice(0, firstReleaseHeadingIndex).trimEnd()}\n\n`
+      : "";
+  const releaseSections =
+    firstReleaseHeadingIndex >= 0
+      ? rest.slice(firstReleaseHeadingIndex).trimStart()
+      : rest.trimStart();
 
   const date = new Date();
   const formattedDate = date.toLocaleDateString("en-US", {
@@ -83,7 +88,7 @@ function injectUnreleasedToDoc(docPath, unreleasedContent) {
   });
   const title = `## ${NATIVE_TEMPLATE_VERSION}\n\n**Release date: ${formattedDate}**`;
 
-  return `${frontmatter}\n\n${firstParagraph}\n${title}\n\n${unreleasedContent}\n\n${afterFirstParagraph}`;
+  return `${frontmatter}\n\n${beforeReleases}${title}\n\n${unreleasedContent}\n\n${releaseSections}`;
 }
 
 async function cloneDocsRepo() {
@@ -121,7 +126,7 @@ async function createPRUpdateDocsNTReleaseNotes(git) {
   await git.push("origin", DOCS_BRANCH_NAME, ["--force"]);
 
   const prBody = `
-Automated sync of the latest release notes for v${NATIVE_TEMPLATE_VERSION} from [make-it-native](https://github.com/mendix/make-it-native).
+Automated sync of the latest release notes for v${NATIVE_TEMPLATE_VERSION} from [native-template](https://github.com/mendix/native-template).
 
 ---
 
