@@ -6,8 +6,7 @@ Please provide a clear and concise description of what this pull request address
 
 To ensure this pull request meets the requirements for merging, please complete the checklist below:
 
-- [ ] **Release Note:** I have added a release note in the [Mendix Docs repository](https://github.com/mendix/docs) relevant to the changes introduced in this PR.
-  - **Link to release note:** [Provide the link here]
+- [ ] **Release Note:** As a part of the release process, an automated PR will be created for the [Mendix Docs repository](https://github.com/mendix/docs) relevant to the changes introduced in this PR. Post release, please ensure that the release note accurately reflects the changes and impacts of this PR.
 - [ ] **Breaking Changes:** This PR introduces breaking changes (e.g., changes that require updates to existing configurations, dependencies).
   - [ ] If yes, I have documented these breaking changes and provided guidance for users to adapt.
   - **Details about breaking changes:** [Provide details here, if applicable]
@@ -22,9 +21,7 @@ To ensure this pull request meets the requirements for merging, please complete 
 
 ## Important Notes
 
-- PRs **will not be merged** without a corresponding release note update in the Mendix Docs repository.
 - Make sure the release note accurately describes the changes and impacts introduced by this PR.
-- If documentation update is not required, add a comment with `skip-docs-check` to skip the docs check.
 
 Thank you for keeping our documentation up-to-date! 🚀
 
