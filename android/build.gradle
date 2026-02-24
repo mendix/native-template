@@ -71,19 +71,7 @@ allprojects {
             url "https://maven.fabric.io/public"
         }
         maven { url "https://www.jitpack.io" }
-        maven {
-            url "https://maven.scijava.org/content/repositories/public/"
-        }
-        maven {
-            url "https://maven.scijava.org/content/repositories/jitpack/"
-        }
-        maven {
-            url "https://maven.scijava.org/content/repositories/jcenter/"
-        }
         maven { url "https://packages.rnd.mendix.com/jcenter" }
-        maven {
-            url "$rootDir/../node_modules/@notifee/react-native/android/libs"
-        }
 
         // Build all modules with Android 16KB pages enabled
         plugins.withId('com.android.application') {
