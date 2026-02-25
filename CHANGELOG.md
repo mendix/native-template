@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
+
+## [14.1.13] - 2026-02-24
+
 - We fixed an iOS crash in encrypted storage by correcting native error handling, so Keychain failures no longer trigger an unrecognized selector abort.
 - We changed iOS Keychain item accessibility to After First Unlock for encrypted storage and persisted session cookies.
 - We added a required one-time Keychain migration to update existing stored items; for compatibility, this Native Template version still works with older Studio Pro 10.24.x, but migration support requires Studio Pro 10.24.16 or newer plus a new iOS app build and rollout. Without migration, the original Keychain accessibility issue can still occur, although improved error handling reduces crash impact.
@@ -13,7 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [14.1.12] - 2026-01-22
 
 - We added the `LocationWhenInUse` permission to the iOS configuration to support react-native-permissions.
-- 
+ 
 ## [14.1.11] - 2026-01-12
 
 - We updated `@mendix/native` to v9.2.2, enabling session cookie persistence and restoration on iOS.
