@@ -1,5 +1,17 @@
 [
     {
+        "id": 289881203,
+        "tag_name": "v14.1.13",
+        "name": "Release 14.1.13",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We fixed an iOS crash in encrypted storage by correcting native error handling, so Keychain failures no longer trigger an unrecognized selector abort.\r\n* We changed iOS Keychain item accessibility to After First Unlock for encrypted storage and persisted session cookies.\r\n* We added a required one-time Keychain migration to update existing stored items; for compatibility, this Native Template version still works with older Studio Pro 10.24.x, but migration support requires Studio Pro 10.24.16 or newer plus a new iOS app build and rollout. Without migration, the original Keychain accessibility issue can still occur, although improved error handling reduces crash impact.",
+        "created_at": "2026-02-24T13:47:43Z",
+        "published_at": "2026-02-24T14:16:02Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.13",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.13"
+    },
+    {
         "id": 279018012,
         "tag_name": "v17.0.4",
         "name": "Release 17.0.4",
@@ -1186,17 +1198,5 @@
         "published_at": "2023-09-25T12:03:29Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.8",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.8"
-    },
-    {
-        "id": 122226486,
-        "tag_name": "v7.0.7",
-        "name": "Release v7.0.7",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixes\r\n\r\n- We have updated clearKeychain method to clear only necessary data.",
-        "created_at": "2023-09-22T15:29:09Z",
-        "published_at": "2023-09-22T15:34:02Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.7",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.7"
     }
 ]
