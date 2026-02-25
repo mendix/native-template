@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
 
-## [14.1.13] - 2026-01-24
+## [14.1.13] - 2026-02-24
 
 - We fixed an iOS crash in encrypted storage by correcting native error handling, so Keychain failures no longer trigger an unrecognized selector abort.
 - We changed iOS Keychain item accessibility to After First Unlock for encrypted storage and persisted session cookies.
