@@ -28,7 +28,19 @@ jobs:
         with:
           node-version-file: .nvmrc
 
+      - name: Install docs release script dependencies
+        if: ${{ contains(fromJSON('["patch","minor","major"]'), github.event.inputs.version) }}
+        run: npm ci --prefix .github/scripts
+
+      - name: Create release notes PR in mendix/docs Github repository
+        if: ${{ contains(fromJSON('["patch","minor","major"]'), github.event.inputs.version) }}
+        env:
+          NATIVE_TEMPLATE_VERSION_BUMP_TYPE: ${{ github.event.inputs.version }}
+          MENDIX_MOBILE_DOCS_PR_GITHUB_PAT: ${{ secrets.MENDIX_MOBILE_DOCS_PR_GITHUB_PAT }}
+        run: node .github/scripts/release-native-template.mjs
+
       - name: Release a new version
+        if: success()
         env:
           GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_ADMIN_TOKEN }}
         run: |
