@@ -1,8 +1,8 @@
 diff --git a/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js b/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
-index b3dfd5c..1a418a7 100644
+index 9ef598d..2e12805 100644
 --- a/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
 +++ b/node_modules/react-native/Libraries/Components/TextInput/TextInputState.js
-@@ -48,12 +48,6 @@ function currentlyFocusedInput(): ?HostInstance {
+@@ -32,12 +32,6 @@ function currentlyFocusedInput(): ?HostInstance {
   * If no text field is focused it returns null
   */
  function currentlyFocusedField(): ?number {
@@ -12,26 +12,11 @@ index b3dfd5c..1a418a7 100644
 -    );
 -  }
 -
-   return findNodeHandle(currentlyFocusedInputRef);
+   return findNodeHandle<$FlowFixMe>(currentlyFocusedInputRef);
  }
  
-diff --git a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-index 62131f5..78372ec 100644
---- a/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-+++ b/node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.mm
-@@ -282,6 +282,10 @@ static NSUInteger RCTDeviceFreeMemory(void)
- 
- - (void)displayLayer:(CALayer *)layer
- {
-+  if (!_currentFrame) {
-+    _currentFrame = self.image;
-+  }
-+
-   if (_currentFrame) {
-     layer.contentsScale = self.animatedImageScale;
-     layer.contents = (__bridge id)_currentFrame.CGImage;
 diff --git a/node_modules/react-native/React/Base/RCTKeyCommands.m b/node_modules/react-native/React/Base/RCTKeyCommands.m
-index 1961de7..622d189 100644
+index 1e6e913..6eadc54 100644
 --- a/node_modules/react-native/React/Base/RCTKeyCommands.m
 +++ b/node_modules/react-native/React/Base/RCTKeyCommands.m
 @@ -18,11 +18,11 @@
@@ -102,10 +87,10 @@ index 6dea84f..bfcf7ae 100644
  @optional
  
 diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-index 39419d6..1c28e82 100644
+index 95dbf82..b1b5f9f 100644
 --- a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 +++ b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-@@ -220,12 +220,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
+@@ -221,12 +221,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
    dispatch_queue_t queue =
        [handler respondsToSelector:@selector(methodQueue)] ? [handler methodQueue] : dispatch_get_main_queue();
  
