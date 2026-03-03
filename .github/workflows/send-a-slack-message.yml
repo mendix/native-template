@@ -1,0 +1,34 @@
+name: Send a Slack Message
+
+on:
+  workflow_dispatch:
+
+jobs:
+  releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Send Slack Notification
+        if: success()
+        uses: ./.github/actions/slack-notification
+        with:
+          channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
+          bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
+          message: |
+            🚀 *New Native Template Version Released*
+
+            A new version of Native Template has been released with updated version compatibility information.
+
+            Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull
+          # message: |
+          #   🚀 *New Native Template Version Released*
+
+          #   A new version of Native Template has been released with updated version compatibility information.
+
+          #   Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull/${{ steps.pr.outputs.number }}
