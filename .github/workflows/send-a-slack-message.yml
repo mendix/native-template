@@ -26,10 +26,4 @@ jobs:
 
             A new version of Native Template has been released with updated version compatibility information.
 
-            Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull
-          # message: |
-          #   🚀 *New Native Template Version Released*
-
-          #   A new version of Native Template has been released with updated version compatibility information.
-
-          #   Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull/${{ steps.pr.outputs.number }}
+            Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull/${{ steps.pr.outputs.number }}
