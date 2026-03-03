@@ -58,6 +58,8 @@
 	<string>To use that feature the app needs access to your microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To use that feature the app needs access to your photo library.</string>
+	<key>RCTNewArchEnabled</key>
+	<true/>
 	<key>Runtime url</key>
 	<string>$(RUNTIME_URL)</string>
 	<key>TargetName</key>
