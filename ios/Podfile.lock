@@ -21,7 +21,7 @@ PODS:
   - libwebp/sharpyuv (1.5.0)
   - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
-  - MendixNative (0.4.2):
+  - MendixNative (0.4.4):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -2884,7 +2884,7 @@ SPEC CHECKSUMS:
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
-  MendixNative: f05c5a9b83f7dffca3ea5c9dc3ce0253d119b23d
+  MendixNative: 35add6550b0eda1a6ae475c8123960b75af94ed1
   op-sqlite: e9ef65bcf95a97863874cee87841425bb71c8396
   OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
   RCTDeprecation: a522c536d2c7be8f518dd834883cf6dce1d4f545
