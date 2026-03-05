@@ -17,7 +17,7 @@ class AppDelegate: ReactAppProvider {
     
     let controller = UIStoryboard.launchApp.instantiateInitialViewController() ?? UIViewController()
     changeRoot(to: controller)
-    window.isUserInteractionEnabled = true
+    window?.isUserInteractionEnabled = true
     
     return true
   }
@@ -30,7 +30,7 @@ class AppDelegate: ReactAppProvider {
     #endif
   }
   
-  override func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     
     let handled = MendixAppDelegate.application(app, openURL: url, options: options)
     
@@ -69,11 +69,11 @@ class AppDelegate: ReactAppProvider {
     return handled
   }
   
-  override func applicationWillTerminate(_ application: UIApplication) {
+  func applicationWillTerminate(_ application: UIApplication) {
     SessionCookieStore.persist() //iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
   }
   
-  override func applicationDidEnterBackground(_ application: UIApplication) {
+  func applicationDidEnterBackground(_ application: UIApplication) {
     SessionCookieStore.persist() //iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
   }
 }

@@ -1,5 +1,5 @@
 diff --git a/node_modules/@op-engineering/op-sqlite/android/build.gradle b/node_modules/@op-engineering/op-sqlite/android/build.gradle
-index d36fd85..7513556 100644
+index 08631df..3e61af5 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/build.gradle
 +++ b/node_modules/@op-engineering/op-sqlite/android/build.gradle
 @@ -1,5 +1,4 @@
@@ -33,7 +33,7 @@ index d36fd85..7513556 100644
 -  // Start from the root + 1 level up (to avoid detecting the op-sqlite/package.json) and traverse upwards to find the first package.json
 -  File currentDir = new File("$rootDir/../")
 -  packageJsonFile = null
--  
+-
 -  // Try to find package.json by traversing upwards
 -  while (currentDir != null) {
 -    File potential = new File(currentDir, "package.json")
@@ -54,14 +54,14 @@ index d36fd85..7513556 100644
 -
 -if(opsqliteConfig) {
 -  println "[OP-SQLITE] Detected op-sqlite config from package.json at: " + packageJsonFile.absolutePath
--  useSQLCipher = opsqliteConfig["sqlcipher"]
--  useCRSQLite = opsqliteConfig["crsqlite"]
--  useSqliteVec = opsqliteConfig["sqliteVec"]
+-  useSQLCipher = !!opsqliteConfig["sqlcipher"]
+-  useCRSQLite = !!opsqliteConfig["crsqlite"]
+-  useSqliteVec = !!opsqliteConfig["sqliteVec"]
 -  performanceMode = opsqliteConfig["performanceMode"]
 -  sqliteFlags = opsqliteConfig["sqliteFlags"] ? opsqliteConfig["sqliteFlags"] : ""
--  enableFTS5 = opsqliteConfig["fts5"]
--  useLibsql = opsqliteConfig["libsql"]
--  enableRtree = opsqliteConfig["rtree"]
+-  enableFTS5 = !!opsqliteConfig["fts5"]
+-  useLibsql = !!opsqliteConfig["libsql"]
+-  enableRtree = !!opsqliteConfig["rtree"]
 -  tokenizers = opsqliteConfig["tokenizers"] ? opsqliteConfig["tokenizers"] : []
 -}
 -
@@ -69,7 +69,7 @@ index d36fd85..7513556 100644
    println "[OP-SQLITE] using sqlcipher."
  } else if(useLibsql) {
 diff --git a/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp b/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
-index 8feaf77..261ec22 100644
+index 5912d7b..e53d71f 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
 +++ b/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
 @@ -19,8 +19,8 @@ struct OPSQLiteBridge : jni::JavaClass<OPSQLiteBridge> {
@@ -79,7 +79,7 @@ index 8feaf77..261ec22 100644
 -         makeNativeMethod("clearStateNativeJsi",
 -                          OPSQLiteBridge::clearStateNativeJsi)});
 +         makeNativeMethod("clearStateNativeJsi", OPSQLiteBridge::clearStateNativeJsi),
-+    	 makeNativeMethod("deleteAllDBsJsi", OPSQLiteBridge::deleteAllDBsJsi)});
++        makeNativeMethod("deleteAllDBsJsi", OPSQLiteBridge::deleteAllDBsJsi)});
    }
  
  private:
@@ -89,7 +89,7 @@ index 8feaf77..261ec22 100644
    }
 +
 +  static bool deleteAllDBsJsi(jni::alias_ref<jni::JObject> thiz) {
-+  	return opsqlite::deleteAllDbs();
++       return opsqlite::deleteAllDbs();
 +  }
  };
  
@@ -118,20 +118,20 @@ index 44f86df..9d9f710 100644
          val instance = OPSQLiteBridge()
      }
 diff --git a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
-index 688832f..9ea814b 100644
+index 8d341b7..3ce6179 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
 +++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
-@@ -13,7 +13,7 @@ import java.io.OutputStream
+@@ -12,7 +12,7 @@ import java.io.InputStream
+ import java.io.OutputStream
  import com.facebook.react.util.RNLog;
  
- //@ReactModule(name = OPSQLiteModule.NAME)
 -internal class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextBaseJavaModule(context) {
 +class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextBaseJavaModule(context) {
      override fun getName(): String {
          return NAME
      }
-@@ -56,6 +56,17 @@ internal class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextB
-         return true
+@@ -54,6 +54,17 @@ internal class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextB
+         throw Exception("Do not call getDylibPath on Android")
      }
  
 +    @ReactMethod(isBlockingSynchronousMethod = true)
@@ -149,38 +149,38 @@ index 688832f..9ea814b 100644
      fun moveAssetsDatabase(args: ReadableMap, promise: Promise) {
          val filename = args.getString("filename")!!
 diff --git a/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.cpp b/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.cpp
-index 85710ee..8cf10f2 100644
+index 9682941..9449dda 100644
 --- a/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.cpp
 +++ b/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.cpp
-@@ -889,6 +889,10 @@ void DBHostObject::invalidate() {
- #endif
+@@ -665,6 +665,10 @@ void DBHostObject::set(jsi::Runtime &_rt, const jsi::PropNameID &name,
+   throw std::runtime_error("You cannot write to this object!");
  }
  
 +void DBHostObject::drop() {
 +    opsqlite_remove(db, db_name, std::string(base_path));
 +}
 +
- DBHostObject::~DBHostObject() { invalidate(); }
- 
- } // namespace opsqlite
+ void DBHostObject::invalidate() {
+   if (invalidated) {
+     return;
 diff --git a/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.h b/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.h
-index cc174b7..ff36f74 100644
+index 002b8c9..f3a2e1f 100644
 --- a/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.h
 +++ b/node_modules/@op-engineering/op-sqlite/cpp/DBHostObject.h
-@@ -73,6 +73,7 @@ class JSI_EXPORT DBHostObject : public jsi::HostObject {
-     void on_commit();
-     void on_rollback();
-     void invalidate();
-+    void drop();
-     ~DBHostObject() override;
+@@ -68,6 +68,7 @@ public:
+   void on_commit();
+   void on_rollback();
+   void invalidate();
++  void drop();
+   ~DBHostObject() override;
  
-   private:
-diff --git a/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp b/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
-index 5e1c1de..dc21c65 100644
---- a/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
-+++ b/node_modules/@op-engineering/op-sqlite/cpp/bindings.cpp
-@@ -36,6 +36,13 @@ void invalidate() {
-     dbs.clear();
+ private:
+diff --git a/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.cpp b/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.cpp
+index e33579a..791fa70 100644
+--- a/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.cpp
++++ b/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.cpp
+@@ -42,6 +42,13 @@ void invalidate() {
+   dbs.clear();
  }
  
 +bool deleteAllDbs() {
@@ -191,12 +191,12 @@ index 5e1c1de..dc21c65 100644
 +}
 +
  void install(jsi::Runtime &rt,
-              const std::shared_ptr<react::CallInvoker> &invoker,
+              const std::shared_ptr<react::CallInvoker> &_invoker,
               const char *base_path, const char *crsqlite_path,
-diff --git a/node_modules/@op-engineering/op-sqlite/cpp/bindings.h b/node_modules/@op-engineering/op-sqlite/cpp/bindings.h
+diff --git a/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.hpp b/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.hpp
 index 91511ab..cc73dfe 100644
---- a/node_modules/@op-engineering/op-sqlite/cpp/bindings.h
-+++ b/node_modules/@op-engineering/op-sqlite/cpp/bindings.h
+--- a/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.hpp
++++ b/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.hpp
 @@ -14,6 +14,7 @@ void install(jsi::Runtime &rt,
               const char *base_path, const char *crsqlite_path,
               const char *sqlite_vec_path);
@@ -206,7 +206,7 @@ index 91511ab..cc73dfe 100644
  
  } // namespace opsqlite
 diff --git a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
-index 375cc3e..e6fce21 100644
+index e717811..b4a81c3 100644
 --- a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
 +++ b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
 @@ -1,4 +1,3 @@
@@ -214,9 +214,9 @@ index 375cc3e..e6fce21 100644
  require_relative "./generate_tokenizers_header_file"
  
  log_message = lambda do |message|
-@@ -39,11 +38,10 @@ else
-   app_package = JSON.parse(File.read(File.join(__dir__, "example", "package.json")))
- end
+@@ -38,11 +37,10 @@ end
+ 
+ app_package = JSON.parse(File.read(package_json_path))
  
 -op_sqlite_config = app_package["op-sqlite"]
 -use_sqlcipher = false
@@ -228,7 +228,7 @@ index 375cc3e..e6fce21 100644
  phone_version = false
  sqlite_flags = ""
  fts5 = false
-@@ -51,37 +49,6 @@ rtree = false
+@@ -50,37 +48,6 @@ rtree = false
  use_sqlite_vec = false
  tokenizers = []
  
@@ -247,19 +247,19 @@ index 375cc3e..e6fce21 100644
 -
 -if phone_version then
 -  if use_sqlcipher then
--    raise "SQLCipher is not supported with phone version"
+-    raise "SQLCipher is not supported with phone version. It cannot load extensions."
 -  end
 -
 -  if use_crsqlite then
--    raise "CRSQLite is not supported with phone version"
+-    raise "CRSQLite is not supported with phone version. It cannot load extensions."
 -  end
 -
 -  if rtree then
--    raise "RTree is not supported with phone version"
+-    raise "RTree is not supported with phone version. It cannot load extensions."
 -  end
 -
 -  if use_sqlite_vec then
--    raise "SQLite Vec is not supported with phone version"
+-    raise "SQLite Vec is not supported with phone version. It cannot load extensions."
 -  end
 -end
 -
