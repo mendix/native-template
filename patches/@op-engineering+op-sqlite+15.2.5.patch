@@ -95,7 +95,7 @@ index 5912d7b..e53d71f 100644
  
  JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *) {
 diff --git a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
-index 44f86df..9d9f710 100644
+index 44f86df..8c003db 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
 +++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
 @@ -12,6 +12,7 @@ class OPSQLiteBridge {
@@ -110,15 +110,15 @@ index 44f86df..9d9f710 100644
          clearStateNativeJsi()
      }
  
-+    fun deleteAllDBs() {
-+        deleteAllDBsJsi()
++    fun deleteAllDBs(): Boolean {
++        return deleteAllDBsJsi()
 +    }
 +
      companion object {
          val instance = OPSQLiteBridge()
      }
 diff --git a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
-index 8d341b7..3ce6179 100644
+index 8d341b7..33d3d7d 100644
 --- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
 +++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
 @@ -12,7 +12,7 @@ import java.io.InputStream
@@ -130,18 +130,19 @@ index 8d341b7..3ce6179 100644
      override fun getName(): String {
          return NAME
      }
-@@ -54,6 +54,17 @@ internal class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextB
+@@ -54,6 +54,18 @@ internal class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextB
          throw Exception("Do not call getDylibPath on Android")
      }
  
 +    @ReactMethod(isBlockingSynchronousMethod = true)
-+    fun closeAllConnections() {
++    fun closeAllConnections(): Boolean {
 +        OPSQLiteBridge.instance.invalidate()
++        return true
 +    }
 +
 +    @ReactMethod(isBlockingSynchronousMethod = true)
-+    fun deleteAllDBs() {
-+        OPSQLiteBridge.instance.deleteAllDBs();
++    fun deleteAllDBs(): Boolean {
++        return OPSQLiteBridge.instance.deleteAllDBs();
 +    }
 +
 +
