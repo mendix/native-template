@@ -4,7 +4,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "simple-git": "^3.32.2",
+    "simple-git": "^3.32.3",
     "@octokit/rest": "^22.0.1"
   }
 }
