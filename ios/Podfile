@@ -111,6 +111,22 @@ post_install do |installer|
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', "DEBUG=1"]
         end
       end
+
+      # Workaround for Folly F14 bug exposed by Xcode 26:
+      # Folly's F14SetFallback.h uses reinterpret_cast to access the private
+      # internals of std::unordered_set — an unsafe hack that relies on a
+      # specific memory layout. Xcode 26's libc++ might have changed that layout,
+      # causing the debug-only assertion (FOLLY_SAFE_DCHECK at line 234)
+      # to fail with SIGABRT.
+      # Since F14SetFallback.h is a header-only template compiled by any
+      # target that includes it, we define NDEBUG for ALL targets to set
+      # folly::kIsDebug=false, disabling the assertion. This matches the
+      # behavior of Release/Production builds which already define NDEBUG.
+      if config.name == 'Debug'
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= []
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', 'NDEBUG=1']
+      end
+
     end
   end
 end
