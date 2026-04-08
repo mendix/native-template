@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
 - We added a new dependency for `@shopify/flash-list` to support the migration from FlatList to FlashList.
+- Fix the iOS builds crashing when building with Xcode 26.
 
 ## [17.0.4] - 2026-01-22
 
