@@ -7,7 +7,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We added a new dependency for `@shopify/flash-list` to support the migration from FlatList to FlashList.
+- Fix the iOS builds crashing when building with Xcode 26.
+
+## [17.0.4] - 2026-01-22
+
 - We added the `LocationWhenInUse` permission to the iOS configuration to support react-native-permissions.
+
+## [17.0.3] - 2026-01-15
+
 - We removed leftover Detox references from the Android build files. This fixes an issue where generating Android APKs would fail due to Detox dependencies not being found.
 
 ## [17.0.2] - 2026-01-12
