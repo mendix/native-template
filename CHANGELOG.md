@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- We upgraded the core stack to React Native `0.83.2` and aligned related React dependencies.
+- We upgraded the core stack to React Native `0.83.4` and aligned related React dependencies.
 - We upgraded multiple React Native ecosystem dependencies for compatibility and stability (including CLI, navigation, animation, media, and platform modules).
 - We migrated from `react-native-vector-icons` to the scoped `@react-native-vector-icons/*` package set.
 - We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
