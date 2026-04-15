@@ -96,6 +96,18 @@ post_install do |installer|
     # :ccache_enabled => true
   )
 
+  installer.pods_project.targets.each do |target|     
+    if target.name == 'fmt'
+      target.build_configurations.each do |config|
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'FMT_USE_CONSTEXPR=0'
+        config.build_settings['OTHER_CPLUSPLUSFLAGS'] ||= ['$(inherited)']
+        config.build_settings['OTHER_CPLUSPLUSFLAGS'] << '-Wno-invalid-constexpr'
+        config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++23'
+      end
+    end
+  end
+
   installer.pods_project.build_configurations.each do |config|
     config.build_settings['OTHER_LDFLAGS'] ||= ['$(inherited)']
     if config.name == "Debug"
