@@ -47,7 +47,10 @@
                 "plugins": [
                     "com.google.gms.google-services"
                 ]
-            }
+            },
+            "externalDependencies": [
+                "com.google.firebase:firebase-analytics"
+            ]
         }
     },
     "firebaseIos": {
