@@ -90,6 +90,10 @@ function injectUnreleasedToDoc(docPath, unreleasedContent) {
   return `${frontmatter}\n\n${beforeReleases}${title}\n\n${unreleasedContent}\n\n${releaseSections}`;
 }
 
+// This file exists only in the fork (MendixMobile/docs) and not in upstream (mendix/docs).
+// Removing it in our branch ensures it doesn't appear in the cross-fork PR diff.
+const FORK_SYNC_FILE = ".github/workflows/sync.yml";
+
 async function cloneDocsRepo() {
   const git = simpleGit();
   const docsCloneDir = fs.mkdtempSync(
@@ -118,6 +122,10 @@ async function updateDocsNTReleaseNotes(unreleasedContent) {
 }
 
 async function createPRUpdateDocsNTReleaseNotes(git) {
+  // Remove the fork's sync.yml so it doesn't appear in the cross-fork PR diff.
+  if (fs.existsSync(FORK_SYNC_FILE)) {
+    await git.rm(FORK_SYNC_FILE);
+  }
   await git.add(TARGET_FILE);
   await git.commit(
     `docs: update mobile release notes for v${NATIVE_TEMPLATE_VERSION}`,
