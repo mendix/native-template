@@ -10,7 +10,7 @@
   "dependencies": {
     "@d11/react-native-fast-image": "8.13.0",
     "@gorhom/bottom-sheet": "5.2.8",
-    "mendix-native": "github:mendix/mendix-native#moo/MOO-2245-upgrade-rn-to083",
+    "mendix-native": "https://github.com/mendix/mendix-native/releases/download/v0.4.0/mendix-native-v0.4.0.tgz",
     "@op-engineering/op-sqlite": "15.2.5",
     "@shopify/flash-list": "2.2.2",
     "@react-native-async-storage/async-storage": "2.2.0",
