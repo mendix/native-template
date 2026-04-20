@@ -1,5 +1,9 @@
 import Foundation
 import MendixNative
+import React_RCTAppDelegate
+#if canImport(ReactAppDependencyProvider)
+import ReactAppDependencyProvider
+#endif
 
 extension AppDelegate {
   
@@ -20,11 +24,17 @@ extension AppDelegate {
     controller.addAction(.init(title: "Close", style: .default, handler: {_ in
       fatalError(message)
     }))
-    window.rootViewController?.present(controller, animated: true, completion: nil)
+    window?.rootViewController?.present(controller, animated: true, completion: nil)
   }
   
   func setupApp(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
+    #if canImport(ReactAppDependencyProvider)
+    let appDependencyProvider: any RCTDependencyProvider = RCTAppDependencyProvider()
+    setUpProvider(dependencyProvider: appDependencyProvider)
+    #else
     setUpProvider()
+    #endif
+
     super.application(application, didFinishLaunchingWithOptions: launchOptions)
     clearKeychain()
     setupUI()
