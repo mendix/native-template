@@ -6,8 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We upgraded the core stack to React Native `0.83.4` and aligned related React dependencies.
+- We upgraded multiple React Native ecosystem dependencies for compatibility and stability (including CLI, navigation, animation, media, and platform modules).
+- We migrated from `react-native-vector-icons` to the scoped `@react-native-vector-icons/*` package set.
 - We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
 - We added a new dependency for `@shopify/flash-list` to support the migration from FlatList to FlashList.
+- We upgraded `react-native-tab-view` from 3.5.2 to 4.3.0.
 - Fix the iOS builds crashing when building with Xcode 26.
 
 ## [17.0.4] - 2026-01-22
@@ -95,10 +99,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - We have updated React Navigation to V7
 - We have updated the following additional dependencies:
-    react-native-reanimated to 3.16.1
-    react-native-screens to 4.4.0
-    react-native-image-picker to 7.2.3
-    @react-native-community/netinfo to 11.4.1
+  react-native-reanimated to 3.16.1
+  react-native-screens to 4.4.0
+  react-native-image-picker to 7.2.3
+  @react-native-community/netinfo to 11.4.1
 - We're now using @gorhom/bottom-sheet for bottom sheet implementation
 - We have added the option to enable or disable cookie encryption for Android devices.
 

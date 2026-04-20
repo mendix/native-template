@@ -12,6 +12,10 @@ end
 # Explicitly enable new architecture
 ENV['RCT_NEW_ARCH_ENABLED'] = '1'
 
+# Build React Native from source so patch-package changes to native RN code are compiled.
+ENV['RCT_USE_PREBUILT_RNCORE'] = '0'
+ENV['RCT_USE_RN_DEP'] = '0'
+
 # Use it to require both react-native's and this package's scripts:
 node_require('react-native/scripts/react_native_pods.rb')
 node_require('react-native-permissions/scripts/setup.rb')
