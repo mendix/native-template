@@ -49,7 +49,7 @@ class AppDelegate: ReactAppProvider {
     return true
   }
   
-  override func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     return MendixAppDelegate.application(app, openURL: url, options: options)
   }
   
@@ -57,11 +57,11 @@ class AppDelegate: ReactAppProvider {
     return .none
   }
   
-  override func applicationWillTerminate(_ application: UIApplication) {
+  func applicationWillTerminate(_ application: UIApplication) {
     SessionCookieStore.persist() // iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
   }
   
-  override func applicationDidEnterBackground(_ application: UIApplication) {
+  func applicationDidEnterBackground(_ application: UIApplication) {
     SessionCookieStore.persist() // iOS does not persist session cookies across app restarts, this helps persisting session cookies to match behaviour with Android
   }
 }
