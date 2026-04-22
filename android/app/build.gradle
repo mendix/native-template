@@ -159,3 +159,9 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/mendix-native/android/mendix.gradle"); applyMendixGradle(project)
+
+afterEvaluate {
+    tasks.matching { it.name.contains("configureCMake") }.configureEach { task ->
+        task.dependsOn tasks.matching { it.name.contains("generateCodegenArtifactsFromSchema") }
+    }
+}
