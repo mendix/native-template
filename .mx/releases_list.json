@@ -1,5 +1,17 @@
 [
     {
+        "id": 312249230,
+        "tag_name": "v19.0.2",
+        "name": "Release 19.0.2",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We updated `mendix-native` to v0.4.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.",
+        "created_at": "2026-04-22T14:04:27Z",
+        "published_at": "2026-04-22T14:05:32Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v19.0.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v19.0.2"
+    },
+    {
         "id": 312205907,
         "tag_name": "v19.0.1",
         "name": "Release 19.0.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-03-15T16:01:07Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.10",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.10"
-    },
-    {
-        "id": 146752538,
-        "tag_name": "v5.2.19",
-        "name": "Release 5.2.19",
-        "draft": false,
-        "prerelease": false,
-        "body": "# Fixes\r\n- Use File.exist instead of deprecated .existS (deprecated since 2016)",
-        "created_at": "2024-03-15T10:33:40Z",
-        "published_at": "2024-03-15T10:36:15Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v5.2.19",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v5.2.19"
     }
 ]
