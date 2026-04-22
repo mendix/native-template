@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We fixed an iOS build issue introduced by the React Native `0.83.4` upgrade by removing the incorrect `override` keyword from AppDelegate application lifecycle methods.
+
+## [19.0.0] - 2026-04-20
+
 - We upgraded the core stack to React Native `0.83.4` and aligned related React dependencies.
 - We upgraded multiple React Native ecosystem dependencies for compatibility and stability (including CLI, navigation, animation, media, and platform modules).
 - We migrated from `react-native-vector-icons` to the scoped `@react-native-vector-icons/*` package set.
