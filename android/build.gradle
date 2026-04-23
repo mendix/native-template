@@ -13,6 +13,10 @@ buildscript {
         androidXBrowser = "1.3.0"
 
         ndkVersion = "27.3.13750724"
+
+        jacksonVersion = "2.17.3"
+        okhttpVersion = "4.12.0"
+        securityCryptoVersion = "1.1.0"
     }
     repositories {
         google()
