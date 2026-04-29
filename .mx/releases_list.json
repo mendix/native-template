@@ -1,5 +1,41 @@
 [
     {
+        "id": 315181288,
+        "tag_name": "v19.0.3",
+        "name": "Release 19.0.3",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We resolved an issue that version logs events are not getting recorded in firebase for Android\r\n* We fix an issue occurring when building apps in Xcode 26.4 or newer\r\n",
+        "created_at": "2026-04-29T12:42:13Z",
+        "published_at": "2026-04-29T12:44:39Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v19.0.3",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v19.0.3"
+    },
+    {
+        "id": 315188989,
+        "tag_name": "v17.2.0",
+        "name": "Release 17.2.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We resolved an issue that version logs events are not getting recorded in firebase for Android\r\n* We fix an issue occurring when building apps in Xcode 26.4 or newer",
+        "created_at": "2026-04-29T12:56:35Z",
+        "published_at": "2026-04-29T12:56:54Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v17.2.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v17.2.0"
+    },
+    {
+        "id": 315187779,
+        "tag_name": "v14.1.16",
+        "name": "Release 14.1.16",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We resolved an issue that version logs events are not getting recorded in firebase for Android\r\n* We fix an issue occurring when building apps in Xcode 26.4 or newer",
+        "created_at": "2026-04-29T12:54:07Z",
+        "published_at": "2026-04-29T12:55:09Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.16",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.16"
+    },
+    {
         "id": 312249230,
         "tag_name": "v19.0.2",
         "name": "Release 19.0.2",
@@ -1162,41 +1198,5 @@
         "published_at": "2024-04-24T15:09:47Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.5",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.5"
-    },
-    {
-        "id": 152401852,
-        "tag_name": "v8.1.0",
-        "name": "Release 8.1.0",
-        "draft": false,
-        "prerelease": false,
-        "body": "* We have resolved a build error related to Flipper in Xcode 15.3.\r\n* We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06.\r\n* We have upgraded @mendix/react-native-sqlite-storage to version 7.1.0 and @mendix/native to the latest compatible version",
-        "created_at": "2024-04-23T13:21:37Z",
-        "published_at": "2024-04-23T13:31:04Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.1.0",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.1.0"
-    },
-    {
-        "id": 149020939,
-        "tag_name": "v8.0.4",
-        "name": "Release 8.0.4",
-        "draft": false,
-        "prerelease": false,
-        "body": "*  We have removed `react-native-code-push` dependency. We recommend migrating to Mendix OTA instead.",
-        "created_at": "2024-03-29T13:21:18Z",
-        "published_at": "2024-03-29T13:23:55Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.4",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.4"
-    },
-    {
-        "id": 146807441,
-        "tag_name": "v7.0.10",
-        "name": "Release 7.0.10",
-        "draft": false,
-        "prerelease": false,
-        "body": "* Updated the Android manifest to support opening URLs with links to websites whose apps are installed on the device.",
-        "created_at": "2024-03-15T15:57:12Z",
-        "published_at": "2024-03-15T16:01:07Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.10",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.10"
     }
 ]
