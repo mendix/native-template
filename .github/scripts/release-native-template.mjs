@@ -7,7 +7,7 @@ import simpleGit from "simple-git";
 
 const required = [
   "MENDIX_MOBILE_DOCS_PR_GITHUB_PAT",
-  "NATIVE_TEMPLATE_VERSION_BUMP_TYPE",
+  "STUDIO_PRO_MAJOR",
 ];
 
 const missing = required.filter((k) => !process.env[k]);
@@ -20,15 +20,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const DOCS_CLONE_PREFIX = "mendix-docs-";
 
-const NATIVE_TEMPLATE_VERSION_BUMP_TYPE =
-  process.env.NATIVE_TEMPLATE_VERSION_BUMP_TYPE; // patch, minor, major
-
 const MENDIX_MOBILE_DOCS_PR_GITHUB_PAT =
   process.env.MENDIX_MOBILE_DOCS_PR_GITHUB_PAT;
 
-const NATIVE_TEMPLATE_VERSION = determineVersionFromBumpType(
-  NATIVE_TEMPLATE_VERSION_BUMP_TYPE,
-);
+const NATIVE_TEMPLATE_VERSION = readVersionFromPackageJson();
+const NATIVE_TEMPLATE_MAJOR = NATIVE_TEMPLATE_VERSION.split(".")[0];
+const STUDIO_PRO_MAJOR = process.env.STUDIO_PRO_MAJOR;
 
 const GIT_AUTHOR_NAME = "MendixMobile";
 const GIT_AUTHOR_EMAIL = "moo@mendix.com";
@@ -39,11 +36,8 @@ const DOCS_REPO_OWNER = "MendixMobile";
 const DOCS_UPSTREAM_OWNER = "mendix";
 const DOCS_BRANCH_NAME = `update-native-template-release-notes-v${NATIVE_TEMPLATE_VERSION}`;
 
-const TARGET_FILE =
-  "content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-17-rn.md";
-// Other options:
-// - content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-15-rn.md
-// - content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-16-rn.md
+const DOCS_PARENT_DIR = `content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-${STUDIO_PRO_MAJOR}-parent`;
+const TARGET_FILE = `${DOCS_PARENT_DIR}/nt-${NATIVE_TEMPLATE_MAJOR}-rn.md`;
 
 const octokit = new Octokit({ auth: MENDIX_MOBILE_DOCS_PR_GITHUB_PAT });
 
@@ -61,8 +55,31 @@ function extractUnreleasedChangelog() {
   return unreleasedContent;
 }
 
+function buildFrontmatter() {
+  return `---\ntitle: "Native Template ${NATIVE_TEMPLATE_MAJOR}"\nurl: /releasenotes/mobile/nt-${NATIVE_TEMPLATE_MAJOR}-rn/\nweight: 1\ndescription: "Native Template ${NATIVE_TEMPLATE_MAJOR}"\n---`;
+}
+
 // Docs
 function injectUnreleasedToDoc(docPath, unreleasedContent) {
+  if (!fs.existsSync(DOCS_PARENT_DIR)) {
+    throw new Error(
+      `Parent directory not found: ${DOCS_PARENT_DIR}\nA new Studio Pro parent folder requires manual setup in the docs repo.`,
+    );
+  }
+
+  const date = new Date();
+  const formattedDate = date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+  const releaseHeading = `## ${NATIVE_TEMPLATE_VERSION}\n\n**Release date: ${formattedDate}**`;
+
+  if (!fs.existsSync(docPath)) {
+    console.log(`${docPath} not found — creating new file for Native Template ${NATIVE_TEMPLATE_MAJOR}.`);
+    return `${buildFrontmatter()}\n\n${releaseHeading}\n\n${unreleasedContent}\n`;
+  }
+
   const doc = fs.readFileSync(docPath, "utf-8");
   const frontmatterMatch = doc.match(/^---[\s\S]*?---/);
   if (!frontmatterMatch) throw new Error("Frontmatter not found!");
@@ -79,15 +96,7 @@ function injectUnreleasedToDoc(docPath, unreleasedContent) {
       ? rest.slice(firstReleaseHeadingIndex).trimStart()
       : rest.trimStart();
 
-  const date = new Date();
-  const formattedDate = date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-  const title = `## ${NATIVE_TEMPLATE_VERSION}\n\n**Release date: ${formattedDate}**`;
-
-  return `${frontmatter}\n\n${beforeReleases}${title}\n\n${unreleasedContent}\n\n${releaseSections}`;
+  return `${frontmatter}\n\n${beforeReleases}${releaseHeading}\n\n${unreleasedContent}\n\n${releaseSections}`;
 }
 
 // This file exists only in the fork (MendixMobile/docs) and not in upstream (mendix/docs).
@@ -167,31 +176,12 @@ async function updateNTReleaseNotes(unreleasedContent) {
   }
 }
 
-function determineVersionFromBumpType(bumpType = "patch") {
+function readVersionFromPackageJson() {
   const packageJsonPath = path.resolve(
     path.join(__dirname, "..", "..", "package.json"),
   );
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
-  const currentVersion = packageJson.version;
-
-  const [major, minor, patch] = currentVersion.split(".").map(Number);
-  let newVersion;
-  switch (bumpType) {
-    case "major":
-      newVersion = `${major + 1}.0.0`;
-      break;
-    case "minor":
-      newVersion = `${major}.${minor + 1}.0`;
-      break;
-    case "patch":
-      newVersion = `${major}.${minor}.${patch + 1}`;
-      break;
-    default:
-      throw new Error(
-        `Invalid bump type for docs release notes: ${bumpType}. Expected one of: patch, minor, major.`,
-      );
-  }
-  return newVersion;
+  return packageJson.version;
 }
 
 (async () => {

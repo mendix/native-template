@@ -57,3 +57,5 @@ jobs:
             A new version of Native Template has been released with updated version compatibility information.
 
             Please review the PR for more details: ${{ github.server_url }}/${{ github.repository }}/pull/${{ steps.pr.outputs.number }}
+
+            📝 *Reminder:* Run the <${{ github.server_url }}/${{ github.repository }}/actions/workflows/publish-changelog-to-docs.yml|Publish Changelog to Mendix Docs> workflow to publish the release notes to the docs repo.
