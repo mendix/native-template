@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We updated vulnerable `okhttp`, `jackson`, and `security-crypto` dependencies.
+
+## [14.1.15] - 2026-04-22
+
 - We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
 
 ## [14.1.14] - 2026-02-25
