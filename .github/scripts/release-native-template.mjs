@@ -39,11 +39,9 @@ const DOCS_REPO_OWNER = "MendixMobile";
 const DOCS_UPSTREAM_OWNER = "mendix";
 const DOCS_BRANCH_NAME = `update-native-template-release-notes-v${NATIVE_TEMPLATE_VERSION}`;
 
-const TARGET_FILE =
-  "content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-17-rn.md";
-// Other options:
-// - content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-15-rn.md
-// - content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-16-rn.md
+// Extract major version from NATIVE_TEMPLATE_VERSION (e.g., "19.0.2" -> "19")
+const MAJOR_VERSION = NATIVE_TEMPLATE_VERSION.split(".")[0];
+const TARGET_FILE = `content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-11-parent/nt-${MAJOR_VERSION}-rn.md`;
 
 const octokit = new Octokit({ auth: MENDIX_MOBILE_DOCS_PR_GITHUB_PAT });
 
@@ -116,7 +114,27 @@ async function checkoutLocalBranch(git) {
   await git.checkoutLocalBranch(DOCS_BRANCH_NAME);
 }
 
+function ensureTargetFileExists() {
+  if (!fs.existsSync(TARGET_FILE)) {
+    const dirPath = path.dirname(TARGET_FILE);
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath, { recursive: true });
+    }
+
+    const initialContent = `---
+title: Native Template ${MAJOR_VERSION}
+url: /releasenotes/mobile/nt-${MAJOR_VERSION}-rn/
+weight: 10
+description: Native Template ${MAJOR_VERSION}
+---
+`;
+    
+  fs.writeFileSync(TARGET_FILE, initialContent, "utf-8");
+  }
+}
+
 async function updateDocsNTReleaseNotes(unreleasedContent) {
+  ensureTargetFileExists();
   const newDocContent = injectUnreleasedToDoc(TARGET_FILE, unreleasedContent);
   fs.writeFileSync(TARGET_FILE, newDocContent, "utf-8");
 }
