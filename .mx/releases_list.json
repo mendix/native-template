@@ -1,5 +1,17 @@
 [
     {
+        "id": 317000679,
+        "tag_name": "v14.1.17",
+        "name": "Release 14.1.17",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We updated vulnerable `okhttp`, `jackson`, and `security-crypto` dependencies.",
+        "created_at": "2026-05-04T05:03:43Z",
+        "published_at": "2026-05-04T05:05:25Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.17",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.17"
+    },
+    {
         "id": 315181288,
         "tag_name": "v19.0.3",
         "name": "Release 19.0.3",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-04-24T15:15:45Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.1.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.1.1"
-    },
-    {
-        "id": 152630831,
-        "tag_name": "v8.0.5",
-        "name": "Release 8.0.5",
-        "draft": false,
-        "prerelease": false,
-        "body": "* We have upgraded the @mendix/native dependency to the latest compatible version",
-        "created_at": "2024-04-24T15:08:58Z",
-        "published_at": "2024-04-24T15:09:47Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.5",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.5"
     }
 ]
