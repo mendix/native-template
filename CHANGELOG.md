@@ -6,7 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We fixed the CocoaPods installation issue that was caused by object version 70.
+
+## [19.0.4] - 2026-05-04
+
 - We updated vulnerable `okhttp`, `jackson`, and `security-crypto` dependencies.
+
+## [19.0.3] - 2026-04-29
+
+- We resolved an issue that version logs events are not getting recorded in firebase for Android
+- We fixed an issue occurring when building apps in Xcode 26.4 or newer
 
 ## [19.0.2] - 2026-04-22
 
