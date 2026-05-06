@@ -6,9 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We fixed the CocoaPods installation issue that was caused by object version 70.
+
+## [17.2.0] - 2026-04-29
+
+- We resolved an issue that version logs events are not getting recorded in firebase for Android.
+- We fix an issue occurring when building apps in Xcode 26.4 or newer
+
+## [17.1.0] - 2026-04-08
+
 - We added a new dependency for `@shopify/flash-list` to support the migration from FlatList to FlashList.
 - Fix the iOS builds crashing when building with Xcode 26.
-- We resolved an issue that version logs events are not getting recorded in firebase for Android.
 
 ## [17.0.4] - 2026-01-22
 
