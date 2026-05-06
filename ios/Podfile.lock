@@ -26,7 +26,7 @@ PODS:
   - libwebp/sharpyuv (1.5.0)
   - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
-  - MendixNative (0.4.0):
+  - MendixNative (0.4.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -3723,12 +3723,12 @@ SPEC CHECKSUMS:
   FBLazyVector: 82d1d7996af4c5850242966eb81e73f9a6dfab1e
   fmt: 530618a01105dae0fa3a2f27c81ae11fa8f67eac
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
-  hermes-engine: 8cd282a9f635f8fbef90a93e9ea941fde056f5fb
+  hermes-engine: 9c02cb4ceed0affdde2e4bd24687faac967d99a4
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
-  MendixNative: 6797c879017115950e255901676934a272fb8102
+  MendixNative: 91822aad01e73d9afe13953415824bd451b809d9
   op-sqlite: 64000c0da2357c4d73faf4d23ff34dd1ddb332d4
   OpenSSL-Universal: 6082b0bf950e5636fe0d78def171184e2b3899c2
   RCT-Folly: b29feb752b08042c62badaef7d453f3bb5e6ae23
