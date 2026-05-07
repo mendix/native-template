@@ -1921,6 +1921,7 @@ PODS:
     - React-jsinspectornetwork
     - React-oscompat
     - React-timing
+    - React-utils
     - SocketRocket
   - React-jsitooling (0.84.1):
     - boost

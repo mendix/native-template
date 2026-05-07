@@ -13,8 +13,8 @@ end
 ENV['RCT_NEW_ARCH_ENABLED'] = '1'
 
 # Build React Native from source so patch-package changes to native RN code are compiled.
-ENV['RCT_USE_PREBUILT_RNCORE'] = '0'
-ENV['RCT_USE_RN_DEP'] = '0'
+# ENV['RCT_USE_PREBUILT_RNCORE'] = '0'
+# ENV['RCT_USE_RN_DEP'] = '0'
 
 # The JS bundle is compiled compiled using a different version than the prebuilt Hermes engine embedded in the native binary, causing a runtime crash.
 ENV['RCT_HERMES_V1_ENABLED'] = '0'
@@ -102,18 +102,6 @@ post_install do |installer|
     :mac_catalyst_enabled => false,
     # :ccache_enabled => true
   )
-
-  installer.pods_project.targets.each do |target|     
-    if target.name == 'fmt'
-      target.build_configurations.each do |config|
-        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
-        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'FMT_USE_CONSTEXPR=0'
-        config.build_settings['OTHER_CPLUSPLUSFLAGS'] ||= ['$(inherited)']
-        config.build_settings['OTHER_CPLUSPLUSFLAGS'] << '-Wno-invalid-constexpr'
-        config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++23'
-      end
-    end
-  end
 
   installer.pods_project.build_configurations.each do |config|
     config.build_settings['OTHER_LDFLAGS'] ||= ['$(inherited)']
