@@ -22,7 +22,7 @@
     "@react-native-picker/picker": "2.11.4",
     "@react-navigation/native": "7.1.31",
     "@notifee/react-native": "9.1.8",
-    "react-native": "0.83.4",
+    "react-native": "0.83.5",
     "react-native-device-info": "15.0.2",
     "react-native-blob-util": "0.24.7",
     "react-native-edge-to-edge": "1.8.1",
@@ -47,8 +47,8 @@
   "devDependencies": {
     "@babel/runtime": "^7.28.4",
     "@mendix/native-mobile-toolkit": "latest",
-    "@react-native/babel-preset": "0.83.4",
-    "@react-native/metro-config": "0.83.4",
+    "@react-native/babel-preset": "0.83.5",
+    "@react-native/metro-config": "0.83.5",
     "jetifier": "^1.6.8",
     "patch-package": "^8.0.1"
   },
@@ -58,13 +58,13 @@
   "overrides": {
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-native": "0.83.4",
+    "react-native": "0.83.5",
     "unset-value": "2.0.1",
     "semver": "7.7.4"
   },
   "resolutions": {
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-native": "0.83.4"
+    "react-native": "0.83.5"
   }
 }
