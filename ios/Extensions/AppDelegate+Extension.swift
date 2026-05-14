@@ -1,9 +1,5 @@
 import Foundation
 import MendixNative
-import React_RCTAppDelegate
-#if canImport(ReactAppDependencyProvider)
-import ReactAppDependencyProvider
-#endif
 
 extension AppDelegate {
   
@@ -22,20 +18,14 @@ extension AppDelegate {
   func showUnrecoverableDialog(title: String, message: String) {
     let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
     controller.addAction(.init(title: "Close", style: .default, handler: {_ in
-      fatalError(message)
+      print(message)
+      exit(0)
     }))
     window?.rootViewController?.present(controller, animated: true, completion: nil)
   }
   
   func setupApp(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
-    #if canImport(ReactAppDependencyProvider)
-    let appDependencyProvider: any RCTDependencyProvider = RCTAppDependencyProvider()
-    setUpProvider(dependencyProvider: appDependencyProvider)
-    #else
     setUpProvider()
-    #endif
-
-    super.application(application, didFinishLaunchingWithOptions: launchOptions)
     clearKeychain()
     setupUI()
   }

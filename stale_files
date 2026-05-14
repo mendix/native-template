@@ -14,3 +14,4 @@ ios/StoryBoardSplash.m
 ios/SwiftInterop.swift
 ios/Dev/AppDelegate.h
 ios/Dev/AppDelegate.m
+ios/Dev/MendixApp/MendixReactWindowExtensions.swift

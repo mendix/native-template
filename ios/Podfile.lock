@@ -49,6 +49,7 @@ PODS:
     - React-renderercss
     - React-rendererdebug
     - React-utils
+    - ReactAppDependencyProvider
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
@@ -3728,12 +3729,12 @@ SPEC CHECKSUMS:
   FBLazyVector: baf9d0492aa305444465c798e972f87e6a60dc69
   fmt: 530618a01105dae0fa3a2f27c81ae11fa8f67eac
   glog: e56ede4028c4b7418e6b1195a36b1656bb35e225
-  hermes-engine: 054cdf1294d0852c33cd980e7fcd94b4274ed8b3
+  hermes-engine: 4148e3274555c07bacaf4f0e3707bbdfcac3a160
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
-  MendixNative: 91822aad01e73d9afe13953415824bd451b809d9
+  MendixNative: d2d164b7e500184fe8e8eedf101264f77cd43a0e
   op-sqlite: 64000c0da2357c4d73faf4d23ff34dd1ddb332d4
   OpenSSL-Universal: 9110d21982bb7e8b22a962b6db56a8aa805afde7
   RCT-Folly: 36c4f904fb6cd0219dcb76b94e9502d2a72fab0b
