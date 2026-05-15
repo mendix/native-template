@@ -5,9 +5,9 @@ PODS:
   - FBLazyVector (0.84.1)
   - fmt (12.1.0)
   - glog (0.3.5)
-  - hermes-engine (250829098.0.9):
-    - hermes-engine/Pre-built (= 250829098.0.9)
-  - hermes-engine/Pre-built (250829098.0.9)
+  - hermes-engine (0.15.1):
+    - hermes-engine/Pre-built (= 0.15.1)
+  - hermes-engine/Pre-built (0.15.1)
   - IQKeyboardManager (6.5.19)
   - libavif/core (0.11.1)
   - libavif/libdav1d (0.11.1):
@@ -3532,7 +3532,7 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   hermes-engine:
     :podspec: "../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
-    :tag: hermes-v250829098.0.9
+    :tag: hermes-v0.15.1
   MendixNative:
     :path: "../node_modules/mendix-native"
   op-sqlite:
@@ -3729,7 +3729,7 @@ SPEC CHECKSUMS:
   FBLazyVector: baf9d0492aa305444465c798e972f87e6a60dc69
   fmt: 530618a01105dae0fa3a2f27c81ae11fa8f67eac
   glog: e56ede4028c4b7418e6b1195a36b1656bb35e225
-  hermes-engine: 4148e3274555c07bacaf4f0e3707bbdfcac3a160
+  hermes-engine: 69685c8bd68491a4ff7f075256f5b2dfab04de21
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
@@ -3827,7 +3827,7 @@ SPEC CHECKSUMS:
   RNReanimated: b6ea6a2d1011d73f4db33c416ed39b9a0a3e9837
   RNScreens: 7f643ee0fd1407dc5085c7795460bd93da113b8f
   RNSVG: db85b4eb848b5978a77cdbf797738f4e3ed1bdbb
-  RNWorklets: 4d1b91f0b9da6c677f1b4311f9b587a5ac52d803
+  RNWorklets: c797347c9218739ffba1b65bbfa75412877615bf
   SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
   SDWebImageAVIFCoder: afe194a084e851f70228e4be35ef651df0fc5c57
   SDWebImageSVGCoder: 15a300a97ec1c8ac958f009c02220ac0402e936c
@@ -3836,6 +3836,6 @@ SPEC CHECKSUMS:
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
   Yoga: 447c8baf495b8d96457a46e6691a2c9952cbd07f
 
-PODFILE CHECKSUM: ac641a218166770d61ce6286d443e42497d1d22c
+PODFILE CHECKSUM: 007913bf46b5b3d85747fd4f0aea854dd063fbc2
 
 COCOAPODS: 1.16.2
