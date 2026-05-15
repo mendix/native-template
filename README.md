@@ -1,7 +1,7 @@
 # Native Template
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![React Native](https://img.shields.io/badge/react_native-0.75.4-blue.svg)
+![React Native](https://img.shields.io/badge/react_native-0.84.1-blue.svg)
 ![Node](https://img.shields.io/badge/node-v20-green.svg)
 
 ![Custom Dev App CI - Android](https://github.com/mendix/native-template/actions/workflows/android-build-custom-dev-app.yml/badge.svg?branch=master)

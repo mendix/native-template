@@ -8,4 +8,6 @@
     <string name="camera_permission_button">Continue</string>
     <string name="packager_connection_timeout">Please verify that your Mendix App is running.</string>
     <string name="qr_code_invalid">This is not a valid QR code.</string>
+    <string name="enable_dev_mode">Enable dev mode</string>
+    <string name="clear_data">Clear data</string>
 </resources>

@@ -87,10 +87,10 @@ index 6dea84f..bfcf7ae 100644
  @optional
  
 diff --git a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-index 95dbf82..b1b5f9f 100644
+index 1c17945..2650660 100644
 --- a/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
 +++ b/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm
-@@ -221,12 +221,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
+@@ -218,12 +218,12 @@ static void eraseRegistrationsWithToken(std::vector<Registration<Handler>> &regi
    dispatch_queue_t queue =
        [handler respondsToSelector:@selector(methodQueue)] ? [handler methodQueue] : dispatch_get_main_queue();
  
@@ -110,7 +110,7 @@ index 95dbf82..b1b5f9f 100644
        addRequestHandler:^(NSDictionary<NSString *, id> *request, RCTPackagerClientResponder *responder) {
          [handler handleRequest:request withResponder:responder];
 diff --git a/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec b/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec
-index 8852179..040c4f0 100644
+index 8df5864..0c00066 100644
 --- a/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec
 +++ b/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec
 @@ -25,7 +25,7 @@ Pod::Spec.new do |spec|

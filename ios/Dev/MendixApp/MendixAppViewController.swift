@@ -1,7 +1,7 @@
 import UIKit
 import MendixNative
 
-class MendixAppViewController: UIViewController, ReactNativeDelegate {
+class MendixAppViewController: UIViewController, ReactNativeDelegateInternal {
   override func viewDidLoad() {
     super.viewDidLoad()
 
