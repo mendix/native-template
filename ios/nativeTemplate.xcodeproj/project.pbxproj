@@ -18,7 +18,6 @@
 		1A0B3ADC2397F1FF00388BF7 /* URLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3ADB2397F1FF00388BF7 /* URLValidator.swift */; };
 		1A0B3ADE2397F36300388BF7 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3ADD2397F36300388BF7 /* QRView.swift */; };
 		1A0B3AE02397F38300388BF7 /* QRMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3ADF2397F38300388BF7 /* QRMaskView.swift */; };
-		1A0B3AE22397FBF600388BF7 /* MendixReactWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B3AE12397FBF600388BF7 /* MendixReactWindowExtensions.swift */; };
 		1A0B3AEA2398185600388BF7 /* config.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AE92398185600388BF7 /* config.debug.xcconfig */; };
 		1A0B3AEF2399058B00388BF7 /* config.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AEE2399058B00388BF7 /* config.release.xcconfig */; };
 		1A0B3AF12399095C00388BF7 /* config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A0B3AF02399095C00388BF7 /* config.xcconfig */; };
@@ -57,7 +56,6 @@
 		1A0B3ADB2397F1FF00388BF7 /* URLValidator.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = URLValidator.swift; sourceTree = "<group>"; };
 		1A0B3ADD2397F36300388BF7 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		1A0B3ADF2397F38300388BF7 /* QRMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMaskView.swift; sourceTree = "<group>"; };
-		1A0B3AE12397FBF600388BF7 /* MendixReactWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MendixReactWindowExtensions.swift; sourceTree = "<group>"; };
 		1A0B3AE92398185600388BF7 /* config.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.debug.xcconfig; sourceTree = "<group>"; };
 		1A0B3AEE2399058B00388BF7 /* config.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.release.xcconfig; sourceTree = "<group>"; };
 		1A0B3AF02399095C00388BF7 /* config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.xcconfig; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 			children = (
 				1A0B3AD22397E15800388BF7 /* MendixApp.storyboard */,
 				1A0B3AD42397E16900388BF7 /* MendixAppViewController.swift */,
-				1A0B3AE12397FBF600388BF7 /* MendixReactWindowExtensions.swift */,
 			);
 			path = MendixApp;
 			sourceTree = "<group>";
@@ -521,7 +518,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E9B12FA2EAB8C2800714B41 /* AppDelegate.swift in Sources */,
-				1A0B3AE22397FBF600388BF7 /* MendixReactWindowExtensions.swift in Sources */,
 				9E9B13012EAB8D2600714B41 /* MendixAppDelegate.swift in Sources */,
 				1A0B3AD52397E16900388BF7 /* MendixAppViewController.swift in Sources */,
 				9E9B13032EAB8EB700714B41 /* SplashScreenPresenter.swift in Sources */,
