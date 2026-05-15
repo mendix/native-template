@@ -16,9 +16,6 @@ ENV['RCT_NEW_ARCH_ENABLED'] = '1'
 ENV['RCT_USE_PREBUILT_RNCORE'] = '0'
 ENV['RCT_USE_RN_DEP'] = '0'
 
-# The JS bundle is compiled compiled using a different version than the prebuilt Hermes engine embedded in the native binary, causing a runtime crash.
-ENV['RCT_HERMES_V1_ENABLED'] = '0'
-
 # Use it to require both react-native's and this package's scripts:
 node_require('react-native/scripts/react_native_pods.rb')
 node_require('react-native-permissions/scripts/setup.rb')
