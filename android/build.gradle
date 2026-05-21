@@ -73,13 +73,8 @@ allprojects {
             url "https://maven.fabric.io/public"
         }
 
-        // Mendix ONLY for com.mendix artifacts
         maven {
             url "https://packages.rnd.mendix.com/jcenter"
-            content {
-                includeGroup "com.mendix"
-                includeGroupByRegex "com\\.mendix\\..*"
-            }
         }
 
         // Build all modules with Android 16KB pages enabled
@@ -134,9 +129,6 @@ afterEvaluate { project ->
         project.repositories {
             maven {
                 url "https://www.jitpack.io"
-                content {
-                    includeGroupByRegex "com\\.github\\..*"
-                }
             }
         }
     }
