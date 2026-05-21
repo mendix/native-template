@@ -19,14 +19,9 @@ buildscript {
         securityCryptoVersion = "1.1.0"
     }
     repositories {
+        maven { url "https://nexus.rnd.mendix.com/repository/repo1-proxy/" }
+        maven { url "https://packages.rnd.mendix.com/jcenter" }
         google()
-        mavenCentral()
-        maven {
-            url "https://maven.fabric.io/public"
-        }
-        maven {
-            url "https://packages.rnd.mendix.com/jcenter"
-        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle'
@@ -58,24 +53,13 @@ project.ext {
 
 allprojects {
     repositories {
-        all { repo ->
-            println repo.url.toString()
-            if (repo.url.toString().contains("jcenter.bintray.com") || repo.url.toString().contains("jitpack.io")) {
-                project.logger.warn "Repository ${repo.url} removed."
-                remove repo
-                google()
-                mavenCentral()
-            }
-        }
         maven {
             url "$rootDir/../node_modules/@notifee/react-native/android/libs"
         }
-        google()
-        maven {
-            url "https://maven.fabric.io/public"
-        }
-        maven { url "https://www.jitpack.io" }
+        maven { url "https://nexus.rnd.mendix.com/repository/repo1-proxy/" }
+        maven { url "https://nexus.rnd.mendix.com/repository/jitpack-proxy/" }
         maven { url "https://packages.rnd.mendix.com/jcenter" }
+        google()
 
         // Build all modules with Android 16KB pages enabled
         plugins.withId('com.android.application') {
