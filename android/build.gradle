@@ -58,24 +58,24 @@ project.ext {
 
 allprojects {
     repositories {
-        all { repo ->
-            println repo.url.toString()
-            if (repo.url.toString().contains("jcenter.bintray.com") || repo.url.toString().contains("jitpack.io")) {
-                project.logger.warn "Repository ${repo.url} removed."
-                remove repo
-                google()
-                mavenCentral()
-            }
-        }
+        google()
+        mavenCentral()
+
+        // Notifee local libs - ONLY for app.notifee
         maven {
             url "$rootDir/../node_modules/@notifee/react-native/android/libs"
+            content {
+                includeGroup "app.notifee"
+            }
         }
-        google()
+
         maven {
             url "https://maven.fabric.io/public"
         }
-        maven { url "https://www.jitpack.io" }
-        maven { url "https://packages.rnd.mendix.com/jcenter" }
+
+        maven {
+            url "https://packages.rnd.mendix.com/jcenter"
+        }
 
         // Build all modules with Android 16KB pages enabled
         plugins.withId('com.android.application') {
@@ -102,6 +102,37 @@ allprojects {
             }
         }
     }
+}
+
+// Clean up phase: remove auto-added repositories and re-add JitPack correctly
+afterEvaluate { project ->
+    def jitpackRemoved = false
+
+    project.repositories.removeAll { repo ->
+        def repoUrl = repo.url.toString()
+
+        // Remove deprecated JCenter
+        if (repoUrl.contains("jcenter.bintray.com")) {
+            return true
+        }
+
+        // Remove auto-added JitPack (re-added below)
+        if (repoUrl.contains("jitpack.io")) {
+            jitpackRemoved = true
+            return true
+        }
+
+        return false
+    }
+
+    if (jitpackRemoved) {
+        project.repositories {
+            maven {
+                url "https://www.jitpack.io"
+            }
+        }
+    }
+
 }
 
 apply plugin: "com.facebook.react.rootproject"
