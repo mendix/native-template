@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [19.1.0] - 2026-06-03
+
+- We updated the react-native to v0.84.1
+
 ## [19.0.5] - 2026-05-12
 
 - We fixed the CocoaPods installation issue that was caused by object version 70.
