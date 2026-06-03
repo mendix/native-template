@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We fixed an issue that could cause apps to restart repeatedly after an OTA update.
+
 ## [17.2.1] - 2026-05-12
 
 - We fixed the CocoaPods installation issue that was caused by object version 70.
@@ -105,10 +107,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - We have updated React Navigation to V7
 - We have updated the following additional dependencies:
-    react-native-reanimated to 3.16.1
-    react-native-screens to 4.4.0
-    react-native-image-picker to 7.2.3
-    @react-native-community/netinfo to 11.4.1
+  react-native-reanimated to 3.16.1
+  react-native-screens to 4.4.0
+  react-native-image-picker to 7.2.3
+  @react-native-community/netinfo to 11.4.1
 - We're now using @gorhom/bottom-sheet for bottom sheet implementation
 - We have added the option to enable or disable cookie encryption for Android devices.
 
