@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [14.1.18] - 2026-06-10
+
 - We removed the fallback scijava Maven repositories.
 
 ## [14.1.17] - 2026-05-04
