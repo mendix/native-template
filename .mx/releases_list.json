@@ -3,13 +3,13 @@
         "id": 337084543,
         "tag_name": "v14.1.18",
         "name": "Release 14.1.18",
-        "draft": true,
+        "draft": false,
         "prerelease": false,
-        "body": "* Merge pull request #1244 from mendix/14xx-update-changelog (68c51649)",
+        "body": "* We removed the fallback scijava Maven repositories.",
         "created_at": "2026-06-10T08:14:43Z",
-        "published_at": null,
-        "tarball_url": null,
-        "zipball_url": null
+        "published_at": "2026-06-10T08:18:52Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.18",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.18"
     },
     {
         "id": 333605082,
