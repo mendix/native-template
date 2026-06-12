@@ -129,9 +129,20 @@ post_install do |installer|
       # target that includes it, we define NDEBUG for ALL targets to set
       # folly::kIsDebug=false, disabling the assertion. This matches the
       # behavior of Release/Production builds which already define NDEBUG.
+      #
+      # However, NDEBUG also triggers flags.h to define REACT_NATIVE_PRODUCTION
+      # instead of REACT_NATIVE_DEBUG, which changes the layout of the Sealable
+      # base class (adds std::atomic<bool> in debug mode). The prebuilt RN
+      # binaries were compiled with REACT_NATIVE_DEBUG active (no NDEBUG), so
+      # their Props/ViewProps structs are larger. Third-party Fabric components
+      # (e.g. react-native-safe-area-context) compiled with NDEBUG=1 would see
+      # a smaller ViewProps, causing an ABI mismatch and EXC_BAD_ACCESS.
+      # Fix: explicitly define REACT_NATIVE_DEBUG=1 so flags.h skips its
+      # NDEBUG-based auto-detection, keeping the Sealable debug layout and
+      # matching the prebuilt ABI, while NDEBUG still silences Folly.
       if config.name == 'Debug'
         config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= []
-        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', 'NDEBUG=1']
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', 'NDEBUG=1', 'REACT_NATIVE_DEBUG=1']
       end
 
     end
