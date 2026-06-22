@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+
 ## [19.1.0] - 2026-06-03
 
 - We updated the react-native to v0.84.1
