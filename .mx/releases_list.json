@@ -12,6 +12,18 @@
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v19.1.1"
     },
     {
+        "id": 343444009,
+        "tag_name": "v17.4.0",
+        "name": "Release 17.4.0",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We fixed an issue that caused **iOS** apps to restart repeatedly after an OTA update.",
+        "created_at": "2026-06-23T11:04:58Z",
+        "published_at": "2026-06-23T11:05:32Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v17.4.0",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v17.4.0"
+    },
+    {
         "id": 337084543,
         "tag_name": "v14.1.18",
         "name": "Release 14.1.18",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-05-27T14:09:52Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.1",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.1"
-    },
-    {
-        "id": 157640853,
-        "tag_name": "v7.0.12",
-        "name": "Release 7.0.12",
-        "draft": false,
-        "prerelease": false,
-        "body": "* [MOO-1361] Add patch to push notifications and add rn-schedule-exact-alarm (9.24) (#791) (9301cc5)",
-        "created_at": "2024-05-27T14:12:29Z",
-        "published_at": "2024-05-27T14:13:41Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.12",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.12"
     }
 ]
