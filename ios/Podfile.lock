@@ -26,7 +26,7 @@ PODS:
   - libwebp/sharpyuv (1.5.0)
   - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
-  - MendixNative (0.5.0):
+  - MendixNative (0.5.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -3742,7 +3742,7 @@ SPEC CHECKSUMS:
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
-  MendixNative: 2499d1796c68bc9bfc3ebecc5bf91b0a28c13ef1
+  MendixNative: ccdf5357fa15ee34fcf7a680ea9f6b5d2595c0ff
   op-sqlite: 64000c0da2357c4d73faf4d23ff34dd1ddb332d4
   OpenSSL-Universal: 9110d21982bb7e8b22a962b6db56a8aa805afde7
   RCT-Folly: 36c4f904fb6cd0219dcb76b94e9502d2a72fab0b
