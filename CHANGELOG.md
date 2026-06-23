@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-- We fixed an issue that could cause apps to restart repeatedly after an OTA update.
+- We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
+
+## [17.3.0] - 2026-06-03
+
+- We fixed an issue that could cause apps to restart repeatedly after an OTA update on Android.
 
 ## [17.2.1] - 2026-05-12
 
