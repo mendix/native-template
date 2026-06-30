@@ -22,11 +22,6 @@ PODS:
   - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
   - MendixNative (0.5.1):
-    - boost
-    - DoubleConversion
-    - fast_float
-    - fmt
-    - glog
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -2872,8 +2867,8 @@ SPEC CHECKSUMS:
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
-  MendixNative: ccdf5357fa15ee34fcf7a680ea9f6b5d2595c0ff
-  op-sqlite: 64000c0da2357c4d73faf4d23ff34dd1ddb332d4
+  MendixNative: b0ea153b893ce40b90016f397e9a5acfe4444c33
+  op-sqlite: e9ef65bcf95a97863874cee87841425bb71c8396
   OpenSSL-Universal: 9110d21982bb7e8b22a962b6db56a8aa805afde7
   RCTDeprecation: af44b104091a34482596cd9bd7e8d90c4e9b4bd7
   RCTRequired: bb77b070f75f53398ce43c0aaaa58337cebe2bf6
@@ -2976,6 +2971,6 @@ SPEC CHECKSUMS:
   SwiftAudioEx: f6aa653770f3a0d3851edaf8d834a30aee4a7646
   Yoga: c0b3f2c7e8d3e327e450223a2414ca3fa296b9a2
 
-PODFILE CHECKSUM: da56a29b6bf5a16bb81cdc901a8a157b31dafb4b
+PODFILE CHECKSUM: 7a33012cce520784bb5b691549f5ed2af273b7e3
 
 COCOAPODS: 1.16.2
