@@ -60,7 +60,6 @@
       android:largeHeap="true"
       android:theme="@style/AppTheme"
       android:requestLegacyExternalStorage="true"
-      android:enableOnBackInvokedCallback="true"
       tools:ignore="GoogleAppIndexingWarning">
       <activity
         android:name="com.mendix.nativetemplate.MainActivity"
