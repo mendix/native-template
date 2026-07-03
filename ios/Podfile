@@ -12,9 +12,9 @@ end
 # Explicitly enable new architecture
 ENV['RCT_NEW_ARCH_ENABLED'] = '1'
 
-# Build React Native from source so patch-package changes to native RN code are compiled.
-ENV['RCT_USE_PREBUILT_RNCORE'] = '0'
-ENV['RCT_USE_RN_DEP'] = '0'
+# When '0' = Build React Native from source so patch-package changes to native RN code are compiled (if any exist).
+ENV['RCT_USE_PREBUILT_RNCORE'] = '1'
+ENV['RCT_USE_RN_DEP'] = '1'
 
 # The JS bundle is compiled compiled using a different version than the prebuilt Hermes engine embedded in the native binary, causing a runtime crash.
 ENV['RCT_HERMES_V1_ENABLED'] = '0'
@@ -103,18 +103,6 @@ post_install do |installer|
     # :ccache_enabled => true
   )
 
-  installer.pods_project.targets.each do |target|     
-    if target.name == 'fmt'
-      target.build_configurations.each do |config|
-        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
-        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'FMT_USE_CONSTEXPR=0'
-        config.build_settings['OTHER_CPLUSPLUSFLAGS'] ||= ['$(inherited)']
-        config.build_settings['OTHER_CPLUSPLUSFLAGS'] << '-Wno-invalid-constexpr'
-        config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++23'
-      end
-    end
-  end
-
   installer.pods_project.build_configurations.each do |config|
     config.build_settings['OTHER_LDFLAGS'] ||= ['$(inherited)']
     if config.name == "Debug"
@@ -124,10 +112,11 @@ post_install do |installer|
 
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      if target.name == "React"
-        if config.name == "ReleaseDevApp"
-          config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= []
-          config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', "DEBUG=1"]
+      if config.name == "ReleaseDevApp"
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= []
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', 'NDEBUG=1', 'REACT_NATIVE_DEBUG=1']
+        if target.name.start_with?("React") || target.name.start_with?("RCT")
+          config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['DEBUG=1']
         end
       end
 
@@ -141,9 +130,20 @@ post_install do |installer|
       # target that includes it, we define NDEBUG for ALL targets to set
       # folly::kIsDebug=false, disabling the assertion. This matches the
       # behavior of Release/Production builds which already define NDEBUG.
+      #
+      # However, NDEBUG also triggers flags.h to define REACT_NATIVE_PRODUCTION
+      # instead of REACT_NATIVE_DEBUG, which changes the layout of the Sealable
+      # base class (adds std::atomic<bool> in debug mode). The prebuilt RN
+      # binaries were compiled with REACT_NATIVE_DEBUG active (no NDEBUG), so
+      # their Props/ViewProps structs are larger. Third-party Fabric components
+      # (e.g. react-native-safe-area-context) compiled with NDEBUG=1 would see
+      # a smaller ViewProps, causing an ABI mismatch and EXC_BAD_ACCESS.
+      # Fix: explicitly define REACT_NATIVE_DEBUG=1 so flags.h skips its
+      # NDEBUG-based auto-detection, keeping the Sealable debug layout and
+      # matching the prebuilt ABI, while NDEBUG still silences Folly.
       if config.name == 'Debug'
         config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= []
-        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', 'NDEBUG=1']
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', 'NDEBUG=1', 'REACT_NATIVE_DEBUG=1']
       end
 
     end

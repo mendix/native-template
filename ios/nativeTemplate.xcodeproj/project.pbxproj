@@ -93,6 +93,8 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9E9B12FB2EAB8C9300714B41 /* Extensions */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -394,13 +396,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -415,13 +413,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,13 +452,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -501,13 +491,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-nativeTemplate/Pods-nativeTemplate-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -984,6 +970,10 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "nativeTemplate/Info-dev.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
