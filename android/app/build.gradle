@@ -55,6 +55,7 @@ apply plugin: 'org.jetbrains.kotlin.plugin.compose'
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
  */
 def enableProguardInReleaseBuilds = false
+def firebaseBomVersion = rootProject.ext['react-native']['versions']['firebase']['bom']
 
 android {
     ndkVersion rootProject.ndkVersion
@@ -110,6 +111,7 @@ android {
 
 dependencies {
     implementation "com.facebook.react:react-android"
+    implementation platform("com.google.firebase:firebase-bom:${firebaseBomVersion}")
 
     implementation "androidx.core:core-ktx:1.3.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
