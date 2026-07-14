@@ -21,6 +21,11 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Sync docs fork with upstream
+        run: gh repo sync MendixMobile/docs --branch development --force
+        env:
+          GH_TOKEN: ${{ secrets.MENDIX_MOBILE_DOCS_PR_GITHUB_PAT }}
+
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.inputs.branch }}
