@@ -9,6 +9,8 @@
             android:screenOrientation="portrait"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|fontScale"
             android:windowSoftInputMode="adjustResize"
+            android:taskAffinity=""
+            android:permission="${applicationId}.permission.LAUNCH_ACTIVITY"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -2,6 +2,10 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.mendix.nativetemplate">
 
+    <permission
+        android:name="${applicationId}.permission.LAUNCH_ACTIVITY"
+        android:protectionLevel="signature" />
+
     <!--    Remove the next line after update react-native-inappbrowser-->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:node="remove"
                      tools:ignore="QueryAllPackagesPermission"/>
@@ -67,6 +71,8 @@
         android:screenOrientation="portrait"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|fontScale"
         android:windowSoftInputMode="adjustPan"
+        android:taskAffinity=""
+        android:permission="${applicationId}.permission.LAUNCH_ACTIVITY"
         android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
