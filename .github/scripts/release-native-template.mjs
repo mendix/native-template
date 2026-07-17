@@ -34,7 +34,7 @@ const GIT_AUTHOR_EMAIL = "moo@mendix.com";
 const DOCS_REPO_NAME = "docs";
 const DOCS_REPO_OWNER = "MendixMobile";
 const DOCS_UPSTREAM_OWNER = "mendix";
-const DOCS_BRANCH_NAME = `update-native-template-release-notes-v${NATIVE_TEMPLATE_VERSION}`;
+const DOCS_BRANCH_NAME = `update-native-template-release-notes-vtest`;
 
 const DOCS_PARENT_DIR = `content/en/docs/releasenotes/mobile/native-template/nt-studio-pro-${STUDIO_PRO_MAJOR}-parent`;
 const TARGET_FILE = `${DOCS_PARENT_DIR}/nt-${NATIVE_TEMPLATE_MAJOR}-rn.md`;
