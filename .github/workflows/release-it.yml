@@ -55,7 +55,7 @@ jobs:
         if: ${{ contains(fromJSON('["patch","minor","major"]'), github.event.inputs.version) }}
         run: npm ci --prefix .github/scripts
 
-      - name: Create release notes PR in mendix/docs Github repository
+      - name: Create Changelog PR in native-template and release notes PR in mendix/docs
         if: ${{ contains(fromJSON('["patch","minor","major"]'), github.event.inputs.version) }}
         env:
           MENDIX_MOBILE_DOCS_PR_GITHUB_PAT: ${{ secrets.MENDIX_MOBILE_DOCS_PR_GITHUB_PAT }}
