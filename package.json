@@ -60,12 +60,14 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.84.1",
+    "hermes-compiler": "250829098.0.16",
     "unset-value": "2.0.1",
     "semver": "7.7.4"
   },
   "resolutions": {
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-native": "0.84.1"
+    "react-native": "0.84.1",
+    "hermes-compiler": "250829098.0.16"
   }
 }

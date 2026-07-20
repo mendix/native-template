@@ -1,5 +1,9 @@
 buildscript {
     ext {
+        hermesVersion = new groovy.json.JsonSlurper()
+            .parse(file("../package.json"))
+            .overrides["hermes-compiler"]
+
         buildToolsVersion = "36.0.0"
         minSdkVersion = 29
         compileSdkVersion = 36

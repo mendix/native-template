@@ -1,5 +1,23 @@
 source 'https://cdn.cocoapods.org/'
 
+# Sync hermes v1 version from package.json into react-native's SDK version files
+# so that iOS uses the same pinned version as the Android/npm resolution.
+require 'json'
+package_json = JSON.parse(File.read(File.join(__dir__, "../package.json")))
+hermes_v1_version = package_json.dig("overrides", "hermes-compiler")
+if hermes_v1_version
+  rn_sdk_path = File.join(__dir__, "../node_modules/react-native/sdks")
+  # Update version.properties (used by hermes-engine.podspec)
+  version_props_path = File.join(rn_sdk_path, "hermes-engine", "version.properties")
+  if File.exist?(version_props_path)
+    content = File.read(version_props_path)
+    File.write(version_props_path, content.gsub(/HERMES_V1_VERSION_NAME=.*/, "HERMES_V1_VERSION_NAME=#{hermes_v1_version}"))
+  end
+  # Update .hermesv1version (used as the CocoaPods cache-busting tag)
+  hermesv1_tag_path = File.join(rn_sdk_path, ".hermesv1version")
+  File.write(hermesv1_tag_path, "hermes-v#{hermes_v1_version}") if File.exist?(hermesv1_tag_path)
+end
+
 def node_require(script)
   # Resolve script with node to allow for hoisting
   require Pod::Executable.execute_command('node', ['-p',
