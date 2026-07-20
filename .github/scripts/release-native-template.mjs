@@ -31,10 +31,8 @@ const GIT_AUTHOR_NAME = "MendixMobile";
 const GIT_AUTHOR_EMAIL = "moo@mendix.com";
 
 // Native Template Repo Settings
-const NT_REPO_OWNER = process.env.GITHUB_REPOSITORY_OWNER || "mendix";
-const NT_REPO_NAME = process.env.GITHUB_REPOSITORY
-  ? process.env.GITHUB_REPOSITORY.split("/")[1]
-  : "native-template";
+const NT_REPO_OWNER = process.env.GITHUB_REPOSITORY_OWNER;
+const NT_REPO_NAME = process.env.GITHUB_REPOSITORY.split("/")[1];
 const NT_CHANGELOG_BRANCH_NAME = `update-changelog-v${NATIVE_TEMPLATE_VERSION}`;
 
 // Docs Repo Settings
@@ -87,6 +85,7 @@ function updateChangelog({ changelog, unreleasedContent, changelogPath }) {
   fs.writeFileSync(changelogPath, updatedChangelog, "utf-8");
 }
 
+// Raise a PR to update the CHANGELOG.md in the native-template repo
 async function createPRUpdateChangelog() {
   const git = simpleGit();
 
