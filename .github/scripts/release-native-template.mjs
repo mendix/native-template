@@ -100,7 +100,7 @@ async function createPRUpdateChangelog() {
 
   await git.add("CHANGELOG.md");
   await git.commit(`chore: update CHANGELOG for v${NATIVE_TEMPLATE_VERSION}`);
-  await git.push("origin", NT_CHANGELOG_BRANCH_NAME, ["--force-with-lease"]);
+  await git.push("origin", NT_CHANGELOG_BRANCH_NAME, ["--force"]);
 
   const prBody = `
 Automated update of CHANGELOG.md for v${NATIVE_TEMPLATE_VERSION}.
