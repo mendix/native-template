@@ -62,9 +62,8 @@ function buildFrontmatter() {
 // Docs
 function injectUnreleasedToDoc(docPath, unreleasedContent) {
   if (!fs.existsSync(DOCS_PARENT_DIR)) {
-    throw new Error(
-      `Parent directory not found: ${DOCS_PARENT_DIR}\nA new Studio Pro parent folder requires manual setup in the docs repo.`,
-    );
+    console.log(`Parent directory not found. Creating: ${DOCS_PARENT_DIR}`);
+    fs.mkdirSync(DOCS_PARENT_DIR, { recursive: true });
   }
 
   const date = new Date();
