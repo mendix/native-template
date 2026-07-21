@@ -30,7 +30,7 @@ jobs:
         run: npm ci
         
       - name: Make Hermes compiler executable (Linux)
-        run: chmod +x node_modules/react-native/node_modules/hermes-compiler/hermesc/linux64-bin/hermesc
+        run: chmod +x ./node_modules/react-native/node_modules/hermes-compiler/hermesc/linux64-bin/hermesc
 
       - name: Add NDK 27.3.13750724
         run: echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;27.3.13750724"
