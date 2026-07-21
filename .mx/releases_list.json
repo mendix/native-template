@@ -1,5 +1,17 @@
 [
     {
+        "id": 357193037,
+        "tag_name": "v14.1.19",
+        "name": "Release 14.1.19",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We fixed a build failure where `com.google.firebase:firebase-analytics` could not be resolved when Push Notifications or Crashlytics were enabled by properly including the Firebase BoM logic.",
+        "created_at": "2026-07-21T08:07:53Z",
+        "published_at": "2026-07-21T08:09:51Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v14.1.19",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v14.1.19"
+    },
+    {
         "id": 348572041,
         "tag_name": "v19.1.2",
         "name": "Release 19.1.2",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-06-03T09:47:19Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.2",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.2"
-    },
-    {
-        "id": 157850635,
-        "tag_name": "v8.0.8",
-        "name": "Release 8.0.8",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Fixed\r\n\r\n- We've added the support of scheduling local notifications on Android 14",
-        "created_at": "2024-05-28T18:13:19Z",
-        "published_at": "2024-05-28T18:15:04Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.8",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.8"
     }
 ]
