@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [17.4.0] - 2026-07-21
+
 - We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
 
 ## [17.3.0] - 2026-06-03
