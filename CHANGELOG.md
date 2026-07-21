@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [14.1.19] - 2026-07-21
+
 - We fixed a build failure where `com.google.firebase:firebase-analytics` could not be resolved when Push Notifications or Crashlytics were enabled by properly including the Firebase BoM logic.
 
 ## [14.1.18] - 2026-06-10
