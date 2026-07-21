@@ -1,0 +1,39 @@
+name: Publish Changelog to Mendix Docs
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to read the changelog and version from'
+        required: true
+        default: 'master'
+        type: string
+      studio_pro_version:
+        description: 'Studio Pro major version (determines the docs parent folder)'
+        required: true
+        default: 'Studio Pro 11.x'
+        type: choice
+        options:
+          - 'Studio Pro 10.x'
+          - 'Studio Pro 11.x'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install docs release script dependencies
+        run: npm ci --prefix .github/scripts
+
+      - name: Create release notes PR in mendix/docs Github repository
+        env:
+          MENDIX_MOBILE_DOCS_PR_GITHUB_PAT: ${{ secrets.MENDIX_MOBILE_DOCS_PR_GITHUB_PAT }}
+          STUDIO_PRO_MAJOR: ${{ github.event.inputs.studio_pro_version == 'Studio Pro 10.x' && '10' || '11' }}
+        run: node .github/scripts/release-native-template.mjs
