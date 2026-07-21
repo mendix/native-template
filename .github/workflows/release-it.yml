@@ -15,6 +15,14 @@ on:
           - preminor
           - premajor
           - prepatch
+      studio_pro_version:
+        description: 'Studio Pro major version (determines the docs parent folder for changelog publishing)'
+        required: true
+        default: 'Studio Pro 11.x'
+        type: choice
+        options:
+          - 'Studio Pro 10.x'
+          - 'Studio Pro 11.x'
 
 jobs:
   release:
@@ -37,4 +45,19 @@ jobs:
           git config --global user.name "github-action"
           release-it -VV --increment=${{ github.event.inputs.version }} --ci --github.release --github.draft --git.commitMessage="chore: release v\${version}"  --git.tagName="v\${version}"
 
-      
+      - name: Sync docs fork with upstream
+        if: ${{ contains(fromJSON('["patch","minor","major"]'), github.event.inputs.version) }}
+        run: gh repo sync MendixMobile/docs --branch development --force
+        env:
+          GH_TOKEN: ${{ secrets.MENDIX_MOBILE_DOCS_PR_GITHUB_PAT }}
+
+      - name: Install docs release script dependencies
+        if: ${{ contains(fromJSON('["patch","minor","major"]'), github.event.inputs.version) }}
+        run: npm ci --prefix .github/scripts
+
+      - name: Create Changelog PR in native-template and release notes PR in mendix/docs
+        if: ${{ contains(fromJSON('["patch","minor","major"]'), github.event.inputs.version) }}
+        env:
+          MENDIX_MOBILE_DOCS_PR_GITHUB_PAT: ${{ secrets.MENDIX_MOBILE_DOCS_PR_GITHUB_PAT }}
+          STUDIO_PRO_MAJOR: ${{ github.event.inputs.studio_pro_version == 'Studio Pro 10.x' && '10' || '11' }}
+        run: node .github/scripts/release-native-template.mjs
