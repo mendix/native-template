@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
+-   Replaced @notifee/react-native with react-native-notify-kit library.
 
 ## [19.1.0] - 2026-06-03
 
