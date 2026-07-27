@@ -3,8 +3,6 @@ apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
 apply plugin: 'org.jetbrains.kotlin.plugin.compose'
 
-import org.gradle.internal.os.OperatingSystem
-
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -49,20 +47,6 @@ import org.gradle.internal.os.OperatingSystem
     //
     //   The list of flags to pass to the Hermes compiler. By default is "-O", "-output-source-map"
     // hermesFlags = ["-O", "-output-source-map"]
-
-    def hermescDir = file("${rootDir}/../node_modules/react-native/node_modules/hermes-compiler/hermesc")
-    def os = OperatingSystem.current()
-
-    if (os.isMacOsX()) {
-        hermesCommand = "${hermescDir}/osx-bin/hermesc"
-    } else if (os.isLinux()) {
-        hermesCommand = "${hermescDir}/linux64-bin/hermesc"
-    } else if (os.isWindows()) {
-        hermesCommand = "${hermescDir}/win64-bin/hermesc.exe"
-    } else {
-        throw new GradleException("Unsupported OS for Hermes compiler: " + OperatingSystem.current())
-    }
-
     /* Autolinking */
     autolinkLibrariesWithApp()
 }
@@ -160,7 +144,6 @@ dependencies {
 
 configurations.all {
     resolutionStrategy {
-        force "com.facebook.hermes:hermes-android:${rootProject.ext.hermesVersion}"
         force "androidx.annotation:annotation:1.1.0"
         force(
             "com.google.android.gms:play-services-base:18.6.0",
