@@ -32,5 +32,5 @@ jobs:
       - name: Add NDK 27.3.13750724
         run: echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;27.3.13750724"
       - name: Build with Gradle
-        run: ./gradlew assembleDevDebug -x createBundleDevDebugJsAndAssets -x createBundleDevDebugOptimizedJsAndAssets
+        run: ./gradlew assembleDevDebug -PrnDebuggableVariants=devDebug,devDebugOptimized
         working-directory: ./android
