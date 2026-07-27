@@ -2,6 +2,6 @@
     "@react-native-firebase/app": "20.1.0",
     "@react-native-firebase/messaging": "20.1.0",
     "@react-native-firebase/crashlytics": "20.1.0",
-    "@notifee/react-native": "9.1.8",
+    "react-native-notify-kit": "10.4.7",
     "react-native-maps": "0.31.1"
 }
