@@ -55,6 +55,8 @@ jobs:
 
       - name: iOS Build Action
         uses: yukiarrr/ios-build-action@v1.12.0
+        env:
+          SKIP_BUNDLING: '1'
         with:
           project-path: ./ios/nativetemplate.xcodeproj
           p12-base64: ${{ secrets.IOS_DUMMY_P12 }}
