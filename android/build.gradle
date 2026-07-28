@@ -63,9 +63,7 @@ allprojects {
                 mavenCentral()
             }
         }
-        maven {
-            url "$rootDir/../node_modules/@notifee/react-native/android/libs"
-        }
+        
         google()
         maven {
             url "https://maven.fabric.io/public"
