@@ -77,6 +77,17 @@ allprojects {
         maven { url "https://packages.rnd.mendix.com/jcenter" }
     }
 
+    // android.hardware.fingerprint was removed from the SDK 37 android.jar.
+    // react-native-touch-id 4.4.1 still compiles against it, so pin that module to SDK 36.
+    if (project.name == 'react-native-touch-id') {
+        project.afterEvaluate {
+            if (project.extensions.findByName('android')) {
+                project.android.compileSdkVersion 36
+                project.android.buildToolsVersion '36.0.0'
+            }
+        }
+    }
+
     // Build all modules with Android 16KB pages enabled
     plugins.withId('com.android.application') {
         android {
