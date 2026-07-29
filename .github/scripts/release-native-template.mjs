@@ -93,7 +93,10 @@ async function createPRUpdateChangelog() {
   await git.addConfig("user.email", GIT_AUTHOR_EMAIL, ["--global"]);
 
   // Get the current branch name (the one selected in GitHub Actions UI)
-  const currentBranch = await git.revparse(["--abbrev-ref", "HEAD"]);
+  const currentBranch = process.env.GITHUB_REF_NAME;
+  if (!currentBranch) {
+    throw new Error("GITHUB_REF_NAME environment variable is not set");
+  }
 
   await git.checkoutLocalBranch(NT_CHANGELOG_BRANCH_NAME);
 
