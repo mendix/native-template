@@ -1,0 +1,15 @@
+name: Sync Docs Fork Daily
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight UTC
+  workflow_dispatch:      # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync MendixMobile/docs fork with upstream
+        run: gh repo sync MendixMobile/docs --branch development --force
+        env:
+          GH_TOKEN: ${{ secrets.MENDIX_MOBILE_DOCS_PR_GITHUB_PAT }}
