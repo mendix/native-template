@@ -1,9 +1,9 @@
 buildscript {
     ext {
-        buildToolsVersion = "37.0.0"
+        buildToolsVersion = "36.0.0"
         minSdkVersion = 24
-        compileSdkVersion = 37
-        targetSdkVersion = 37
+        compileSdkVersion = 36
+        targetSdkVersion = 36
         kotlinVersion = "1.9.24"
         excludeAppGlideModule = true
         androidx_lifecycle_version = "2.8.6"
@@ -75,17 +75,6 @@ allprojects {
         }
         maven { url "https://www.jitpack.io" }
         maven { url "https://packages.rnd.mendix.com/jcenter" }
-    }
-
-    // android.hardware.fingerprint was removed from the SDK 37 android.jar.
-    // react-native-touch-id 4.4.1 still compiles against it, so pin that module to SDK 36.
-    if (project.name == 'react-native-touch-id') {
-        project.afterEvaluate {
-            if (project.extensions.findByName('android')) {
-                project.android.compileSdkVersion 36
-                project.android.buildToolsVersion '36.0.0'
-            }
-        }
     }
 
     // Build all modules with Android 16KB pages enabled
