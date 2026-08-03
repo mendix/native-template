@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [20.0.0] - 2026-08-03
+
 - We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
 - Replaced @notifee/react-native with react-native-notify-kit library.
 - We addressed an issue on iOS, where a iOS-system dialogue would pop up during app startup, requesting a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
