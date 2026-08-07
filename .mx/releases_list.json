@@ -1,5 +1,17 @@
 [
     {
+        "id": 366764689,
+        "tag_name": "v17.4.1",
+        "name": "Release 17.4.1",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We upgraded Android SDK version to 36.",
+        "created_at": "2026-08-07T13:25:05Z",
+        "published_at": "2026-08-07T13:26:17Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v17.4.1",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v17.4.1"
+    },
+    {
         "id": 364071176,
         "tag_name": "v20.0.0",
         "name": "Release 20.0.0",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-06-24T15:18:24Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.10",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.10"
-    },
-    {
-        "id": 159338692,
-        "tag_name": "v8.2.3",
-        "name": "Release 8.2.3",
-        "draft": false,
-        "prerelease": false,
-        "body": "* We have upgraded the `@mendix/native` dependency to `3.1.5`",
-        "created_at": "2024-06-07T09:12:56Z",
-        "published_at": "2024-06-07T09:16:24Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.3",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.3"
     }
 ]
