@@ -21,6 +21,10 @@ public class MainActivity extends MendixReactActivity {
         boolean hasDeveloperSupport = ((MainApplication) getApplication()).getUseDeveloperSupport();
         mendixApp = new MendixApp(AppUrl.getUrlFromResource(this), MxConfiguration.WarningsFilter.none, hasDeveloperSupport, false);
         super.onCreate(savedInstanceState);
+        getWindow().getDecorView().setFilterTouchesWhenObscured(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            getWindow().setHideOverlayWindows(true);
+        }
 
         // Checks the current theme and apply the correct style (Backwards compatible)
         boolean isDarkMode;
