@@ -6,9 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
+
+## [19.1.3] - 2026-08-07
+
 - We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
 - Replaced @notifee/react-native with react-native-notify-kit library.
 - We addressed an issue on iOS, where a iOS-system dialogue would pop up during app startup, requesting a password. This was identified as part of Keychain read queries when a one-time keychain migration occurred.
+
+## [19.1.2] - 2026-07-03
+
+- Clean up of react-native patch, removing native-side patching to allow using prebuilt binaries on iOS.
+
+## [19.1.1] - 2026-06-23
+
+- We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
 
 ## [19.1.0] - 2026-06-03
 
