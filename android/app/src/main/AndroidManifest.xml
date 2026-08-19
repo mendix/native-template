@@ -7,7 +7,8 @@
                      tools:ignore="QueryAllPackagesPermission"/>
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" tools:node="remove" />
+    <uses-permission android:name="android.permission.HIDE_OVERLAY_WINDOWS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -68,6 +69,7 @@
         android:screenOrientation="portrait"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|fontScale"
         android:windowSoftInputMode="adjustPan"
+        android:taskAffinity=""
         android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
