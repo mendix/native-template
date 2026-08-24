@@ -6,7 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [17.4.2] - 2026-08-24
+
 - We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
+
+## [17.4.1] - 2026-08-07
+
+- We upgraded Android SDK version to 36.
 - We fixed an issue that could cause apps to restart repeatedly after an OTA update on iOS.
 - Replaced @notifee/react-native with react-native-notify-kit library.
 
