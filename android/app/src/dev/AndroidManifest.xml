@@ -17,6 +17,7 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|fontScale"
             android:launchMode="singleInstance"
             android:windowSoftInputMode="adjustPan"
-            android:exported="true"></activity>
+            android:taskAffinity=""
+            android:exported="false"></activity>
     </application>
 </manifest>

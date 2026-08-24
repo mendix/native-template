@@ -57,6 +57,10 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_dev);
+        getWindow().getDecorView().setFilterTouchesWhenObscured(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            getWindow().setHideOverlayWindows(true);
+        }
 
         appPreferences = new AppPreferences(this);
 

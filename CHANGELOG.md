@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We hardened the Android main screen against overlay and tapjacking attacks, and removed the unused `SYSTEM_ALERT_WINDOW` permission.
+
 ## [20.0.0] - 2026-08-03
 
 - We fixed an issue that could cause iOS apps to restart repeatedly after an OTA update.
