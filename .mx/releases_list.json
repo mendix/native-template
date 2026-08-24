@@ -1,5 +1,17 @@
 [
     {
+        "id": 375717639,
+        "tag_name": "v19.1.4",
+        "name": "Release 19.1.4",
+        "draft": false,
+        "prerelease": false,
+        "body": "- We fixed security issues on Android by hardening against overlay and tapjacking attacks and removing the unused SYSTEM_ALERT_WINDOW permission.",
+        "created_at": "2026-08-24T13:26:54Z",
+        "published_at": "2026-08-24T13:27:47Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v19.1.4",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v19.1.4"
+    },
+    {
         "id": 375714597,
         "tag_name": "v17.4.2",
         "name": "Release 17.4.2",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-07-12T13:33:15Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v9.0.0",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v9.0.0"
-    },
-    {
-        "id": 164126664,
-        "tag_name": "v8.2.5",
-        "name": "Release 8.2.5",
-        "draft": false,
-        "prerelease": false,
-        "body": "- We have updated the @mendix/native dependency to fix the encryption issue.\r\n",
-        "created_at": "2024-07-05T09:14:44Z",
-        "published_at": "2024-07-05T09:18:18Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.5",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.5"
     }
 ]
