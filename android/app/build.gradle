@@ -144,6 +144,9 @@ dependencies {
 
 configurations.all {
     resolutionStrategy {
+        // Force Hermes V0 version across all configurations to prevent random resolution due to gradle caching/timing issues.
+        force "com.facebook.hermes:hermes-android:0.15.1"
+        
         force "androidx.annotation:annotation:1.1.0"
         force(
             "com.google.android.gms:play-services-base:18.6.0",
