@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [19.1.5] - 2026-09-01
+
 - We addressed a random scenario where gradle would resolve to using the Hermes v1 compiler instead of the old hermes override in gradle.properties. This would throw issues with "...bytecode mismatch...".
 
 ## [19.1.4] - 2026-08-24
