@@ -1,5 +1,17 @@
 [
     {
+        "id": 380367966,
+        "tag_name": "v19.1.5",
+        "name": "Release 19.1.5",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We addressed a random scenario where gradle would resolve to using the Hermes v1 compiler instead of the old hermes override in gradle.properties. This would throw issues with \"...bytecode mismatch...\".",
+        "created_at": "2026-09-01T09:26:45Z",
+        "published_at": "2026-09-01T09:28:26Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v19.1.5",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v19.1.5"
+    },
+    {
         "id": 375719368,
         "tag_name": "v20.0.1",
         "name": "Release 20.0.1",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-08-02T13:18:42Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.14",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.14"
-    },
-    {
-        "id": 168242901,
-        "tag_name": "v7.0.15",
-        "name": "Release 7.0.15",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\n\r\n* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.",
-        "created_at": "2024-08-01T13:13:33Z",
-        "published_at": "2024-08-02T13:18:34Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.15",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.15"
     }
 ]
