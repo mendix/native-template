@@ -13,11 +13,9 @@ class SceneDelegate: ReactAppProvider {
     setUpProvider()
     changeRoot(to: UIViewController())
 
-    let launchOptions = connectionOptions.urlContexts.first.map { context in
-      let options = openURLOptions(from: context)
-      MendixAppDelegate.application(UIApplication.shared, openURL: context.url, options: options)
-      return reactLaunchOptions(url: context.url, options: options)
-    }
+    let launchOptions = connectionOptions.urlContexts.isEmpty
+      ? nil
+      : ReactAppProvider.launchOptions(from: connectionOptions)
 
     guard let url = Bundle.main.object(forInfoDictionaryKey: "Runtime url") as? String, !url.isEmpty else {
       showUnrecoverableDialog(
@@ -52,7 +50,7 @@ class SceneDelegate: ReactAppProvider {
     }
   }
 
-  @objc func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+  override func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
     guard let context = URLContexts.first else { return }
     MendixAppDelegate.application(
       UIApplication.shared,
@@ -81,16 +79,6 @@ class SceneDelegate: ReactAppProvider {
       options[.annotation] = annotation
     }
     return options
-  }
-
-  private func reactLaunchOptions(
-    url: URL,
-    options: [UIApplication.OpenURLOptionsKey: Any]
-  ) -> [AnyHashable: Any] {
-    var launchOptions: [AnyHashable: Any] = options
-    launchOptions[UIApplication.LaunchOptionsKey.url] = url
-    launchOptions[UIApplication.LaunchOptionsKey.annotation] = options[UIApplication.OpenURLOptionsKey.annotation] ?? []
-    return launchOptions
   }
 
   private func showUnrecoverableDialog(title: String, message: String) {

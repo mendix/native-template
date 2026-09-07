@@ -20,8 +20,8 @@ class SceneDelegate: ReactAppProvider {
     changeRoot(to: controller)
     window?.isUserInteractionEnabled = true
 
-    if let context = connectionOptions.urlContexts.first {
-      handle(url: context.url, options: openURLOptions(from: context))
+    if !connectionOptions.urlContexts.isEmpty {
+      launchMendixApp(with: ReactAppProvider.launchOptions(from: connectionOptions))
     }
   }
 
@@ -33,19 +33,16 @@ class SceneDelegate: ReactAppProvider {
     #endif
   }
 
-  @objc func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-    guard let context = URLContexts.first else { return }
-    handle(url: context.url, options: openURLOptions(from: context))
+  override func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+    handleURLContexts(URLContexts) { [weak self] launchOptions in
+      self?.launchMendixApp(with: launchOptions)
+    }
   }
 
-  private func handle(url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) {
-    let handled = MendixAppDelegate.application(UIApplication.shared, openURL: url, options: options)
-
+  private func launchMendixApp(with launchOptions: [AnyHashable: Any]) {
     let appUrl = AppPreferences.safeAppUrl
 
-    if (!handled || appUrl.isEmpty || ReactAppProvider.isReactAppActive()) {
-      return
-    }
+    guard !appUrl.isEmpty else { return }
 
     let bundleUrl = AppUrl.forBundle(
       appUrl,
@@ -53,10 +50,6 @@ class SceneDelegate: ReactAppProvider {
       isDebuggingRemotely: AppPreferences.remoteDebuggingEnabled,
       isDevModeEnabled: AppPreferences.devModeEnabled
     )
-
-    var launchOptions: [AnyHashable: Any] = options
-    launchOptions[UIApplication.LaunchOptionsKey.url] = url
-    launchOptions[UIApplication.LaunchOptionsKey.annotation] = options[UIApplication.OpenURLOptionsKey.annotation] ?? []
 
     let mxApp = MendixApp(
       identifier: nil,
@@ -85,14 +78,4 @@ class SceneDelegate: ReactAppProvider {
     return UIApplication.shared.connectedScenes.compactMap { $0.delegate as? SceneDelegate }.first
   }
 
-  private func openURLOptions(from context: UIOpenURLContext) -> [UIApplication.OpenURLOptionsKey: Any] {
-    var options: [UIApplication.OpenURLOptionsKey: Any] = [.openInPlace: context.options.openInPlace]
-    if let sourceApplication = context.options.sourceApplication {
-      options[.sourceApplication] = sourceApplication
-    }
-    if let annotation = context.options.annotation {
-      options[.annotation] = annotation
-    }
-    return options
-  }
 }
