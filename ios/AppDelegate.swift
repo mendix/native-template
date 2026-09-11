@@ -2,12 +2,7 @@ import UIKit
 import MendixNative
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-  @objc var window: UIWindow? {
-    get { SceneDelegate.delegateInstance()?.window }
-    set { SceneDelegate.delegateInstance()?.window = newValue }
-  }
+class AppDelegate: LegacyWindowAppDelegate {
 
   func application(
     _ application: UIApplication,
