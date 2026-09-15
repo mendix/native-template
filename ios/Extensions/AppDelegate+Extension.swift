@@ -14,19 +14,4 @@ extension AppDelegate {
   func setupUI() {
     UIDatePicker.appearance().preferredDatePickerStyle = .wheels
   }
-  
-  func showUnrecoverableDialog(title: String, message: String) {
-    let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    controller.addAction(.init(title: "Close", style: .default, handler: {_ in
-      print(message)
-      exit(0)
-    }))
-    window?.rootViewController?.present(controller, animated: true, completion: nil)
-  }
-  
-  func setupApp(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
-    setUpProvider()
-    clearKeychain()
-    setupUI()
-  }
 }
