@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We removed some unused Android Permissions coming in from Manifest mergers.
+
 ## [19.1.6] - 2026-09-16
 
 - We migrated iOS to the UIKit scene delegate lifecycle.
