@@ -1,5 +1,17 @@
 [
     {
+        "id": 394310155,
+        "tag_name": "v19.1.7",
+        "name": "Release 19.1.7",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We removed some unused Android Permissions coming in from Manifest mergers.",
+        "created_at": "2026-09-23T04:59:45Z",
+        "published_at": "2026-09-23T05:01:24Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v19.1.7",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v19.1.7"
+    },
+    {
         "id": 389821006,
         "tag_name": "v19.1.6",
         "name": "Release 19.1.6",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-08-29T11:41:05Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.16",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.16"
-    },
-    {
-        "id": 168249604,
-        "tag_name": "v8.2.6",
-        "name": "Release 8.2.6",
-        "draft": false,
-        "prerelease": false,
-        "body": "### Improvements\r\n\r\n* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.",
-        "created_at": "2024-08-01T13:41:13Z",
-        "published_at": "2024-08-02T13:18:49Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.2.6",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.2.6"
     }
 ]
