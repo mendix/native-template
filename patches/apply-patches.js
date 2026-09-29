@@ -7,6 +7,10 @@ const patchOperations = [
     {
         dependency: "react-native-geocoder",
         patchFile: "react-native-geocoder+0.5.0.patch"
+    },
+    {
+        dependency: "react-native-vision-camera",
+        patchFile: "react-native-vision-camera+4.7.3.patch"
     }
 ];
 
