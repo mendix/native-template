@@ -47,10 +47,8 @@ class AppDelegate: ReactAppProvider {
         isDevModeEnabled: AppPreferences.devModeEnabled
     )
     
-    let launchOptions = NSMutableDictionary(dictionary: options)
-    launchOptions[UIApplication.LaunchOptionsKey.url] = url
-    launchOptions[UIApplication.OpenURLOptionsKey.annotation] = options[UIApplication.OpenURLOptionsKey.annotation]
-    
+    let launchOptions = ReactAppProvider.launchOptions(from: url, options: options)
+
     let mxApp = MendixApp.init(
         identifier: nil,
         bundleUrl: bundleUrl,
@@ -63,7 +61,7 @@ class AppDelegate: ReactAppProvider {
         enableThreeFingerGestures: false
     )
     
-    ReactNative.shared.setup(mxApp, launchOptions: launchOptions as? [AnyHashable : Any])
+    ReactNative.shared.setup(mxApp, launchOptions: launchOptions)
     ReactNative.shared.start()
     
     return handled

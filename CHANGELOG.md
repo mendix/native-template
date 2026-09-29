@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.
 - We removed some unused Android Permissions coming in from Manifest mergers.
 
 ## [19.1.6] - 2026-09-16
