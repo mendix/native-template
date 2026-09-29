@@ -1,0 +1,37 @@
+diff --git a/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/core/CameraSession+Configuration.kt b/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/core/CameraSession+Configuration.kt
+index 1e9c0de..bbd8a91 100644
+--- a/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/core/CameraSession+Configuration.kt
++++ b/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/core/CameraSession+Configuration.kt
+@@ -2,6 +2,7 @@ package com.mrousavy.camera.core
+ 
+ import android.annotation.SuppressLint
+ import android.util.Log
++import android.util.Size
+ import androidx.annotation.OptIn
+ import androidx.camera.core.CameraSelector
+ import androidx.camera.core.CameraState
+@@ -13,6 +14,7 @@ import androidx.camera.core.MirrorMode
+ import androidx.camera.core.Preview
+ import androidx.camera.core.TorchState
+ import androidx.camera.core.resolutionselector.ResolutionSelector
++import androidx.camera.core.resolutionselector.ResolutionStrategy
+ import androidx.camera.extensions.ExtensionMode
+ import androidx.camera.lifecycle.ProcessCameraProvider
+ import androidx.camera.video.Recorder
+@@ -220,7 +222,15 @@ internal fun CameraSession.configureOutputs(configuration: CameraConfiguration)
+   val codeScannerConfig = configuration.codeScanner as? CameraConfiguration.Output.Enabled<CameraConfiguration.CodeScanner>
+   if (codeScannerConfig != null) {
+     Log.i(CameraSession.TAG, "Creating CodeScanner output...")
+-    val analyzer = ImageAnalysis.Builder().build()
++    // Request a higher analysis resolution than the CameraX default (640x480), so ML Kit can read
++    // barcodes on patterned backgrounds. Size is in sensor (landscape) orientation.
++    val analyzer = ImageAnalysis.Builder()
++      .setResolutionSelector(
++        ResolutionSelector.Builder()
++          .setResolutionStrategy(ResolutionStrategy(Size(1920, 1440), ResolutionStrategy.FALLBACK_RULE_CLOSEST_HIGHER_THEN_LOWER))
++          .build()
++      )
++      .build()
+     val pipeline = CodeScannerPipeline(codeScannerConfig.config, callback)
+     analyzer.setAnalyzer(CameraQueues.analyzerExecutor, pipeline)
+     codeScannerOutput = analyzer
