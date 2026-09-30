@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 
 - We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.
+- We patched react native vision camera library to fix the issue of barcodes not getting scanned correctly with patterned backgrounds on Android.
 
 ## [17.4.2] - 2026-08-24
 
