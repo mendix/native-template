@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We patched react native vision camera library to fix the issue of barcodes not getting scanned correctly with patterned backgrounds on Android.
+
 ## [19.1.7] - 2026-09-23
 
 - We removed some unused Android Permissions coming in from Manifest mergers.
