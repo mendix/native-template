@@ -44,13 +44,10 @@ buildscript {
 project.ext {
     set('react-native', [
             versions: [
-                // Override Firebase BOM version to avoid updating to react-native-firebase 20.2.0+,
-                // which adds many new node_modules increasing the size significantly.
-                // Affected dependencies include the entire react-native-firebase suite e.g.:
-                // @react-native-firebase/app, @react-native-firebase/analytics, @react-native-firebase/crashlytics, @react-native-firebase/messaging
-                // NOTE: If updating to react-native-firebase 20.2.0+ is done, this override should be removed.
+                // Firebase BOM used by react-native-firebase and android/app/build.gradle (firebaseBomVersion).
+                // Keep in sync with sdkVersions.android.firebase of the @react-native-firebase/app version in .mx/known_dependencies.json.
                     firebase: [
-                            bom: "33.1.1"
+                            bom: "33.12.0"
                     ],
             ],
     ])
