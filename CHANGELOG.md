@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We updated react-native-firebase (`@react-native-firebase/app`, `@react-native-firebase/messaging` and `@react-native-firebase/crashlytics`) from v20.1.0 to v21.14.0, which uses Firebase iOS SDK v11.11.0. This resolves a CocoaPods dependency conflict with react-native-vision-camera-barcode-scanner v5 (GoogleMLKit v9.0.0) on iOS.
+- We updated the Android Firebase BoM from v33.1.1 to v33.12.0 to match react-native-firebase v21.14.0.
+
 ## [19.1.7] - 2026-09-23
 
 - We removed some unused Android Permissions coming in from Manifest mergers.
