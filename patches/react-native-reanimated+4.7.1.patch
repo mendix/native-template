@@ -1,0 +1,15 @@
+diff --git a/node_modules/react-native-reanimated/Common/cpp/reanimated/CSS/core/transition/CSSPlatformTransitionProxy.cpp b/node_modules/react-native-reanimated/Common/cpp/reanimated/CSS/core/transition/CSSPlatformTransitionProxy.cpp
+index f6f71d8..d80c033 100644
+--- a/node_modules/react-native-reanimated/Common/cpp/reanimated/CSS/core/transition/CSSPlatformTransitionProxy.cpp
++++ b/node_modules/react-native-reanimated/Common/cpp/reanimated/CSS/core/transition/CSSPlatformTransitionProxy.cpp
+@@ -161,8 +161,10 @@ CSSTransitionConfig CSSPlatformTransitionProxy::processConfig(
+   }
+ 
+   // The parser pairs every value diff with settings, so all must have matched one.
++#ifndef NDEBUG
+   react_native_assert(
+       matchedValues == config.changedProperties.size() && "[Reanimated] CSS transition value diff without settings");
++#endif // NDEBUG
+ 
+   for (const auto &propertyName : config.removedProperties) {
+     if (routing.platform.erase(propertyName) > 0) {
