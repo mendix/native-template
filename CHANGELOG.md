@@ -8,8 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.
 - We removed some unused Android Permissions coming in from Manifest mergers.
+
+### Changes
+
 - We updated react-native-firebase (`@react-native-firebase/app`, `@react-native-firebase/messaging` and `@react-native-firebase/crashlytics`) from v20.1.0 to v21.14.0, which uses Firebase iOS SDK v11.11.0. This resolves a CocoaPods dependency conflict with react-native-vision-camera-barcode-scanner v5 (GoogleMLKit v9.0.0) on iOS.
 - We updated the Android Firebase BoM from v33.1.1 to v33.12.0 to match react-native-firebase v21.14.0.
+- We made this Native Template version the minimum required version for Barcode Scanner widget v4.6.0 or above (Native Mobile Resources version 12.6.0 or above) on iOS when push notifications are enabled. Older Native Template versions will fail to build in this setup.
 
 ## [19.1.6] - 2026-09-16
 
