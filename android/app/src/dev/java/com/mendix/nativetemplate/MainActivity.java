@@ -20,7 +20,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
 import androidx.core.util.Consumer;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.zxing.Result;
 import com.mendix.mendixnative.activity.MendixReactActivity;
@@ -57,6 +60,13 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_dev);
+        // Edge-to-edge: keep the content clear of the system bars and display cutout
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.root), (view, windowInsets) -> {
+            Insets bars = windowInsets.getInsets(
+                    WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+            view.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
         getWindow().getDecorView().setFilterTouchesWhenObscured(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             getWindow().setHideOverlayWindows(true);
