@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We fixed an issue on Android where the "Clear data" checkbox on the starting page of the Developer App was hidden behind the bottom navigation bar due to edge-to-edge.
+
 ## [19.1.7] - 2026-09-23
 
 - We removed some unused Android Permissions coming in from Manifest mergers.
