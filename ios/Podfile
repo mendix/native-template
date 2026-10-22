@@ -24,6 +24,7 @@ node_require('react-native/scripts/react_native_pods.rb')
 node_require('react-native-permissions/scripts/setup.rb')
 
 require_relative './mendix_utils'
+require_relative './mlkit_simulator_support'
 
 deployment_target = "15.5"
 platform :ios, deployment_target
@@ -155,4 +156,7 @@ post_install do |installer|
 
     end
   end
+
+  # ML Kit has no arm64 simulator slice; see mlkit_simulator_support.rb.
+  MLKitSimulatorSupport.apply(installer)
 end
