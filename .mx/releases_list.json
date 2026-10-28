@@ -1,5 +1,17 @@
 [
     {
+        "id": 426646367,
+        "tag_name": "v20.0.2",
+        "name": "Release 20.0.2",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.\r\n* We removed some unused Android Permissions coming in from Manifest mergers.\r\n* We excluded react-native-vision-camera-barcode-scanner from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from react-native-vision-camera.\r\n* This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.6.0 or above).\r\n* We fixed an issue on Android where the \"Clear data\" checkbox on the starting page of the Developer App was hidden behind the bottom navigation bar due to edge-to-edge.",
+        "created_at": "2026-10-28T12:34:33Z",
+        "published_at": "2026-10-28T12:41:10Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v20.0.2",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v20.0.2"
+    },
+    {
         "id": 426584262,
         "tag_name": "v19.1.8",
         "name": "Release 19.1.8",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-09-03T15:28:43Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v8.0.15",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v8.0.15"
-    },
-    {
-        "id": 173244164,
-        "tag_name": "v7.0.17",
-        "name": "Release 7.0.17",
-        "draft": false,
-        "prerelease": false,
-        "body": "* We have fixed OTA updates compatibility issues on iOS 18.",
-        "created_at": "2024-09-03T15:07:05Z",
-        "published_at": "2024-09-03T15:07:53Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.17",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.17"
     }
 ]
