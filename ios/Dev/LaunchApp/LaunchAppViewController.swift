@@ -108,9 +108,9 @@ class LaunchAppViewController: UIViewController, QRViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let appDelegate = (UIApplication.shared.delegate as! AppDelegate);
-        if (appDelegate.shouldOpenInLastApp) {
-            appDelegate.shouldOpenInLastApp = false;
+        guard let sceneDelegate = SceneDelegate.delegateInstance() else { return }
+        if (sceneDelegate.shouldOpenInLastApp) {
+            sceneDelegate.shouldOpenInLastApp = false
             self.performSegue(withIdentifier: "MendixApp", sender: nil)
         }
     }

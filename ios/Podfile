@@ -16,8 +16,8 @@ ENV['RCT_NEW_ARCH_ENABLED'] = '1'
 ENV['RCT_USE_PREBUILT_RNCORE'] = '1'
 ENV['RCT_USE_RN_DEP'] = '1'
 
-# The JS bundle is compiled compiled using a different version than the prebuilt Hermes engine embedded in the native binary, causing a runtime crash.
-ENV['RCT_HERMES_V1_ENABLED'] = '0'
+# React Native 0.88 always uses Hermes V1 (hermes-compiler 260318099.0.4, HBC bytecode version 99).
+# Bundles compiled by appdev/client must use the same hermes-compiler version, otherwise loading fails with a bytecode version mismatch.
 
 # Use it to require both react-native's and this package's scripts:
 node_require('react-native/scripts/react_native_pods.rb')
@@ -112,6 +112,12 @@ post_install do |installer|
 
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
+      minimum_ios_version = Gem::Version.new(deployment_target)
+      current_deployment_target = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+      if current_deployment_target && Gem::Version.new(current_deployment_target) < minimum_ios_version
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
+      end
+
       if config.name == "ReleaseDevApp"
         config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= []
         config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] |= ['$(inherited)', 'NDEBUG=1', 'REACT_NATIVE_DEBUG=1']
