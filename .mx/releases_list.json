@@ -1,5 +1,17 @@
 [
     {
+        "id": 426584262,
+        "tag_name": "v19.1.8",
+        "name": "Release 19.1.8",
+        "draft": false,
+        "prerelease": false,
+        "body": "* We excluded react-native-vision-camera-barcode-scanner from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from react-native-vision-camera.\r\n* This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.6.0 or above).\r\n* We fixed an issue on Android where the \"Clear data\" checkbox on the starting page of the Developer App was hidden behind the bottom navigation bar due to edge-to-edge.",
+        "created_at": "2026-10-28T11:29:02Z",
+        "published_at": "2026-10-28T11:33:28Z",
+        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v19.1.8",
+        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v19.1.8"
+    },
+    {
         "id": 394310155,
         "tag_name": "v19.1.7",
         "name": "Release 19.1.7",
@@ -1186,17 +1198,5 @@
         "published_at": "2024-09-03T15:07:53Z",
         "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.17",
         "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.17"
-    },
-    {
-        "id": 172541945,
-        "tag_name": "v7.0.16",
-        "name": "Release 7.0.16",
-        "draft": false,
-        "prerelease": false,
-        "body": "- We've resolved a build error related to Flipper on Xcode 15.3",
-        "created_at": "2024-08-29T11:39:13Z",
-        "published_at": "2024-08-29T11:41:05Z",
-        "tarball_url": "https://api.github.com/repos/mendix/native-template/tarball/v7.0.16",
-        "zipball_url": "https://api.github.com/repos/mendix/native-template/zipball/v7.0.16"
     }
 ]
