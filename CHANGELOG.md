@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [20.0.2] - 2026-10-28
+
 - We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.
 - We removed some unused Android Permissions coming in from Manifest mergers.
 - We excluded react-native-vision-camera-barcode-scanner from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from react-native-vision-camera.
