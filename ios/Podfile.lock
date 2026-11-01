@@ -1624,9 +1624,6 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-track-player (4.1.2):
-    - React-Core
-    - SwiftAudioEx (= 1.1.0)
   - react-native-vector-icons (12.3.0):
     - hermes-engine
     - RCTRequired
@@ -1650,7 +1647,7 @@ PODS:
     - ReactNativeDependencies
     - Yoga
   - react-native-vector-icons-material-icons (12.4.1)
-  - react-native-video (6.19.2):
+  - react-native-video (6.19.3):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1662,7 +1659,7 @@ PODS:
     - React-graphics
     - React-ImageManager
     - React-jsi
-    - react-native-video/Video (= 6.19.2)
+    - react-native-video/Video (= 6.19.3)
     - React-NativeModulesApple
     - React-RCTFabric
     - React-renderercss
@@ -1673,7 +1670,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-video/Fabric (6.19.2):
+  - react-native-video/Fabric (6.19.3):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1695,7 +1692,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-video/Video (6.19.2):
+  - react-native-video/Video (6.19.3):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -2581,7 +2578,6 @@ PODS:
     - libwebp (~> 1.0)
     - SDWebImage/Core (~> 5.17)
   - SSZipArchive (2.6.0)
-  - SwiftAudioEx (1.1.0)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -2632,7 +2628,6 @@ DEPENDENCIES:
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
-  - react-native-track-player (from `../node_modules/react-native-track-player`)
   - "react-native-vector-icons (from `../node_modules/@react-native-vector-icons/get-image`)"
   - "react-native-vector-icons-material-icons (from `../node_modules/@react-native-vector-icons/material-icons`)"
   - react-native-video (from `../node_modules/react-native-video`)
@@ -2699,7 +2694,6 @@ SPEC REPOS:
     - SDWebImageSVGCoder
     - SDWebImageWebPCoder
     - SSZipArchive
-    - SwiftAudioEx
 
 EXTERNAL SOURCES:
   FBLazyVector:
@@ -2793,8 +2787,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
-  react-native-track-player:
-    :path: "../node_modules/react-native-track-player"
   react-native-vector-icons:
     :path: "../node_modules/@react-native-vector-icons/get-image"
   react-native-vector-icons-material-icons:
@@ -2902,7 +2894,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBLazyVector: e97c19a5a442429d1988f182a1940fb08df514da
-  hermes-engine: 69685c8bd68491a4ff7f075256f5b2dfab04de21
+  hermes-engine: 9f047a8d62a87f7a7f334d038828120d6d9431a1
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
@@ -2918,7 +2910,7 @@ SPEC CHECKSUMS:
   React: 1ba7d364ade7d883a1ec055bfc3606f35fdee17b
   React-callinvoker: bc2a26f8d84fb01f003fc6de6c9337b64715f95b
   React-Core: 7840d3a80b43a95c5e80ef75146bd70925ebab0f
-  React-Core-prebuilt: 203358738dba539388b07a09a926858081125bc1
+  React-Core-prebuilt: c88cc160126836765ce57bfb83a666293a6483cb
   React-CoreModules: 2eb010400b63b89e53a324ffb3c112e4c7c3ce42
   React-cxxreact: a558e92199d26f145afa9e62c4233cf8e7950efe
   React-debug: 755200a6e7f5e6e0a40ff8d215493d43cce285fc
@@ -2951,10 +2943,9 @@ SPEC CHECKSUMS:
   react-native-image-picker: 168d6972e50ea848defe4ac4c222faa9bc52aea0
   react-native-pager-view: c8817c1d9f4643417e68f0b846c51214b2252eea
   react-native-safe-area-context: ae7587b95fb580d1800c5b0b2a7bd48c2868e67a
-  react-native-track-player: dd56f9948e03756a217c75e0a61aa04aab65b5a1
   react-native-vector-icons: 8215b0e62bf79d3be628cf658ec23777f9bec53c
   react-native-vector-icons-material-icons: 2fe75632937d07937bfe8ca953e1b5d06eef3a1d
-  react-native-video: 293a1dfb84d6b79b5bf9dd33925931008e225d5a
+  react-native-video: ac17a0ae5b2754ce40902d7d79e580a5179ec6ff
   React-NativeModulesApple: 5ba0903927f6b8d335a091700e9fda143980f819
   React-networking: 3a4b7f9ed2b2d1c0441beacb79674323a24bcca6
   React-oscompat: ff26abf0ae3e3fdbe47b44224571e3fc7226a573
@@ -2988,7 +2979,7 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: e96e93b493d8d86eeaee3e590ba0be53f6abe46f
   ReactCodegen: 797de5178718324c6eba3327b07f9a423fbd5787
   ReactCommon: 07572bf9e687c8a52fbe4a3641e9e3a1a477c78e
-  ReactNativeDependencies: 770e0777d2bd1891fd654bdbb3da9e9905a96394
+  ReactNativeDependencies: 56614108b8a5c298c8b79bdae05983455d80cd19
   RNBootSplash: 13b7612788960d0c5446e68489ac2509e506cfcd
   RNCAsyncStorage: 3a4f5e2777dae1688b781a487923a08569e27fe4
   RNCPicker: c8a3584b74133464ee926224463fcc54dfdaebca
@@ -3008,7 +2999,6 @@ SPEC CHECKSUMS:
   SDWebImageSVGCoder: 15a300a97ec1c8ac958f009c02220ac0402e936c
   SDWebImageWebPCoder: 0e06e365080397465cc73a7a9b472d8a3bd0f377
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
-  SwiftAudioEx: f6aa653770f3a0d3851edaf8d834a30aee4a7646
   Yoga: c0b3f2c7e8d3e327e450223a2414ca3fa296b9a2
 
 PODFILE CHECKSUM: 7a33012cce520784bb5b691549f5ed2af273b7e3
