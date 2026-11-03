@@ -1582,9 +1582,6 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-track-player (4.1.2):
-    - React-Core
-    - SwiftAudioEx (= 1.1.0)
   - react-native-vector-icons (13.0.1):
     - hermes-engine
     - RCTRequired
@@ -2598,7 +2595,6 @@ PODS:
   - SocketRocket (0.7.1):
     - ReactNativeDependencies
   - SSZipArchive (2.6.0)
-  - SwiftAudioEx (1.1.0)
   - Yoga (0.0.0):
     - React-Core-prebuilt
 
@@ -2659,7 +2655,6 @@ DEPENDENCIES:
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
-  - react-native-track-player (from `../node_modules/react-native-track-player`)
   - "react-native-vector-icons (from `../node_modules/@react-native-vector-icons/get-image`)"
   - "react-native-vector-icons-material-icons (from `../node_modules/@react-native-vector-icons/material-icons`)"
   - react-native-video (from `../node_modules/react-native-video`)
@@ -2730,7 +2725,6 @@ SPEC REPOS:
     - SDWebImageSVGCoder
     - SDWebImageWebPCoder
     - SSZipArchive
-    - SwiftAudioEx
 
 EXTERNAL SOURCES:
   boost:
@@ -2842,8 +2836,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
-  react-native-track-player:
-    :path: "../node_modules/react-native-track-player"
   react-native-vector-icons:
     :path: "../node_modules/@react-native-vector-icons/get-image"
   react-native-vector-icons-material-icons:
@@ -3017,7 +3009,6 @@ SPEC CHECKSUMS:
   react-native-image-picker: fa0c0c2e00200d79c8487e3b4d5794014ebccff6
   react-native-pager-view: 9474ba016fdcce9f11a168372728e87defb94a1c
   react-native-safe-area-context: 16d6b3596ac139875d38ad9ac1c816169ec5735a
-  react-native-track-player: dd56f9948e03756a217c75e0a61aa04aab65b5a1
   react-native-vector-icons: 13bdb36c614afa6cc4e3c36b42e0e8df989ff65f
   react-native-vector-icons-material-icons: 6d1d8ea28261609bbb975b1e9c51fe54eedfafe6
   react-native-video: 715a442e7b3345202e365ad5e69437ba9889bffa
@@ -3078,7 +3069,6 @@ SPEC CHECKSUMS:
   SDWebImageWebPCoder: 0e06e365080397465cc73a7a9b472d8a3bd0f377
   SocketRocket: 37aec555668fb852ec12e3c0de59a86ca58f0871
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
-  SwiftAudioEx: f6aa653770f3a0d3851edaf8d834a30aee4a7646
   Yoga: d1c536142c5ff8ec8cd856ab2a7c227a1d875c8e
 
 PODFILE CHECKSUM: 99239d0d53f862c6f1d56042467dd91e43e039ca
