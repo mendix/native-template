@@ -6,12 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We excluded react-native-vision-camera-barcode-scanner from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from react-native-vision-camera.
+- This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.7.0 or above).
+- We updated react-native-video from v6.19.2 to v6.19.3.
+- We removed the unused react-native-track-player library and its patch.
+
 ## [20.0.2] - 2026-10-28
 
 - We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.
 - We removed some unused Android Permissions coming in from Manifest mergers.
-- We excluded react-native-vision-camera-barcode-scanner from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from react-native-vision-camera.
-- This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.6.0 or above).
 - We fixed an issue on Android where the "Clear data" checkbox on the starting page of the Developer App was hidden behind the bottom navigation bar due to edge-to-edge.
 
 ## [19.1.6] - 2026-09-16
