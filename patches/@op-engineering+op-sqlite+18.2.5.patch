@@ -1,0 +1,325 @@
+diff --git a/node_modules/@op-engineering/op-sqlite/android/build.gradle b/node_modules/@op-engineering/op-sqlite/android/build.gradle
+index 3049da4..17f793c 100644
+--- a/node_modules/@op-engineering/op-sqlite/android/build.gradle
++++ b/node_modules/@op-engineering/op-sqlite/android/build.gradle
+@@ -52,10 +52,10 @@ def reactNativeArchitectures() {
+   return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
+ }
+ 
+-def useSQLCipher = false
++def useSQLCipher = true
+ def useLibsql = false
+ def useTurso = false
+-def performanceMode = false
++def performanceMode = true
+ def sqliteFlags = ""
+ def enableFTS5 = false
+ def useSqliteVec = false
+@@ -88,20 +88,6 @@ if (isUserApp) {
+ 
+ def packageJson = new JsonSlurper().parseText(packageJsonFile.text)
+ 
+-def opsqliteConfig = packageJson["op-sqlite"]
+-
+-if(opsqliteConfig) {
+-  println "[OP-SQLITE] Detected op-sqlite config from package.json at: " + packageJsonFile.absolutePath
+-  useSQLCipher = !!opsqliteConfig["sqlcipher"]
+-  useSqliteVec = !!opsqliteConfig["sqliteVec"]
+-  performanceMode = opsqliteConfig["performanceMode"]
+-  sqliteFlags = opsqliteConfig["sqliteFlags"] ? opsqliteConfig["sqliteFlags"] : ""
+-  enableFTS5 = !!opsqliteConfig["fts5"]
+-  useLibsql = !!opsqliteConfig["libsql"]
+-  useTurso = !!opsqliteConfig["turso"]
+-  enableRtree = !!opsqliteConfig["rtree"]
+-  tokenizers = opsqliteConfig["tokenizers"] ? opsqliteConfig["tokenizers"] : []
+-}
+ 
+ if(useLibsql && useTurso) {
+   throw new GradleException("[OP-SQLITE] Error: libsql and turso backends are mutually exclusive.")
+diff --git a/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp b/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
+index 3f800c4..6fd9c44 100644
+--- a/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
++++ b/node_modules/@op-engineering/op-sqlite/android/cpp-adapter.cpp
+@@ -22,7 +22,9 @@ struct OPSQLiteBridge : jni::JavaClass<OPSQLiteBridge> {
+     javaClassStatic()->registerNatives(
+         {makeNativeMethod("installNativeJsi", OPSQLiteBridge::installNativeJsi),
+          makeNativeMethod("clearStateNativeJsi",
+-                          OPSQLiteBridge::clearStateNativeJsi)});
++                          OPSQLiteBridge::clearStateNativeJsi),
++         makeNativeMethod("closeAllDBsJsi", OPSQLiteBridge::closeAllDBsJsi),
++         makeNativeMethod("deleteAllDBsJsi", OPSQLiteBridge::deleteAllDBsJsi)});
+   }
+ 
+ private:
+@@ -60,6 +62,14 @@ private:
+     opsqlite::invalidate(*handle);
+     delete handle;
+   }
++
++  static void closeAllDBsJsi(jni::alias_ref<jni::JObject> thiz) {
++    opsqlite::closeAllDbs();
++  }
++
++  static jboolean deleteAllDBsJsi(jni::alias_ref<jni::JObject> thiz) {
++    return opsqlite::deleteAllDbs();
++  }
+ };
+ 
+ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *) {
+diff --git a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
+index 115ae37..4ad749d 100644
+--- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
++++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteBridge.kt
+@@ -17,6 +17,8 @@ class OPSQLiteBridge {
+         docPath: String
+     ): Long
+     private external fun clearStateNativeJsi(handle: Long)
++    private external fun closeAllDBsJsi()
++    private external fun deleteAllDBsJsi(): Boolean
+ 
+     fun install(context: ReactContext): Long {
+         val jsContextPointer = context.javaScriptContextHolder!!.get()
+@@ -36,6 +38,14 @@ class OPSQLiteBridge {
+         clearStateNativeJsi(handle)
+     }
+ 
++    fun closeAllDBs() {
++        closeAllDBsJsi()
++    }
++
++    fun deleteAllDBs(): Boolean {
++        return deleteAllDBsJsi()
++    }
++
+     companion object {
+         val instance = OPSQLiteBridge()
+     }
+diff --git a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
+index 3cbb7ef..c8aff94 100644
+--- a/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
++++ b/node_modules/@op-engineering/op-sqlite/android/src/main/java/com/op/sqlite/OPSQLiteModule.kt
+@@ -12,7 +12,7 @@ import java.io.InputStream
+ import java.io.OutputStream
+ import com.facebook.react.util.RNLog;
+ 
+-internal class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextBaseJavaModule(context) {
++class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextBaseJavaModule(context) {
+     // Handle for THIS generation's liveness flag, returned by install() and
+     // handed back to invalidate(). OPSQLiteModule is recreated per bridge/
+     // generation by OPSQLitePackage, unlike the OPSQLiteBridge singleton it
+@@ -56,6 +56,17 @@ internal class OPSQLiteModule(context: ReactApplicationContext?) : ReactContextB
+         }
+     }
+ 
++    @ReactMethod(isBlockingSynchronousMethod = true)
++    fun closeAllConnections(): Boolean {
++        OPSQLiteBridge.instance.closeAllDBs()
++        return true
++    }
++
++    @ReactMethod(isBlockingSynchronousMethod = true)
++    fun deleteAllDBs(): Boolean {
++        return OPSQLiteBridge.instance.deleteAllDBs()
++    }
++
+     @ReactMethod(isBlockingSynchronousMethod = true)
+     fun getDylibPath(bundleId: String, name: String): Boolean {
+         throw Exception("Do not call getDylibPath on Android")
+diff --git a/node_modules/@op-engineering/op-sqlite/cpp/OPDatabase.cpp b/node_modules/@op-engineering/op-sqlite/cpp/OPDatabase.cpp
+index 23da58e..54f31b9 100644
+--- a/node_modules/@op-engineering/op-sqlite/cpp/OPDatabase.cpp
++++ b/node_modules/@op-engineering/op-sqlite/cpp/OPDatabase.cpp
+@@ -862,6 +862,32 @@ void OPDatabase::invalidate() {
+ #endif
+ }
+ 
++void OPDatabase::drop() {
++  if (delete_db_name.empty()) {
++    // Remote-only databases have no local file; closing is all we can do.
++    invalidate();
++    return;
++  }
++
++  invalidated = true;
++  // Same sequence as the JS delete() host function: abort running work, drain
++  // the thread pool, then close the handle and remove the file.
++#if !defined(OP_SQLITE_USE_LIBSQL) && !defined(OP_SQLITE_USE_TURSO)
++  if (db != nullptr) {
++    sqlite3_interrupt(db);
++  }
++#endif
++  thread_pool->wait_finished();
++  release_hooks();
++#ifdef OP_SQLITE_USE_LIBSQL
++  opsqlite_libsql_remove(db, delete_db_name, base_path);
++#else
++  auto *closing_db = db;
++  db = nullptr;
++  opsqlite_remove(closing_db, delete_db_name, base_path);
++#endif
++}
++
+ OPDatabase::~OPDatabase() { invalidate(); }
+ 
+ } // namespace opsqlite
+diff --git a/node_modules/@op-engineering/op-sqlite/cpp/OPDatabase.hpp b/node_modules/@op-engineering/op-sqlite/cpp/OPDatabase.hpp
+index 9e387a6..8b28332 100644
+--- a/node_modules/@op-engineering/op-sqlite/cpp/OPDatabase.hpp
++++ b/node_modules/@op-engineering/op-sqlite/cpp/OPDatabase.hpp
+@@ -77,6 +77,8 @@ public:
+   void on_commit();
+   void on_rollback();
+   void invalidate();
++  // Closes the database and deletes its file, like the JS delete() function.
++  void drop();
+   ~OPDatabase() override;
+ 
+ private:
+diff --git a/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.cpp b/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.cpp
+index 7b914f7..66b0aa4 100644
+--- a/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.cpp
++++ b/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.cpp
+@@ -10,8 +10,10 @@
+ #include "OPLogs.h"
+ #include "OPMacros.hpp"
+ #include "OPUtils.hpp"
++#include <algorithm>
+ #include <functional>
+ #include <iostream>
++#include <mutex>
+ #include <string>
+ #include <unordered_map>
+ #include <vector>
+@@ -26,6 +28,56 @@ std::string _sqlite_vec_path;
+ std::shared_ptr<react::CallInvoker> invoker;
+ std::shared_ptr<std::atomic<bool>> generation_alive;
+ 
++// Weak references to every database handed out by open(), so the platform glue
++// can close or delete all of them (e.g. when the host app clears its data).
++// Weak so the registry never extends a database's lifetime past its JS object.
++std::mutex dbs_mutex;
++std::vector<std::weak_ptr<OPDatabase>> dbs;
++
++static void register_db(const std::shared_ptr<OPDatabase> &db) {
++  std::lock_guard<std::mutex> lock(dbs_mutex);
++  dbs.erase(std::remove_if(dbs.begin(), dbs.end(),
++                           [](const std::weak_ptr<OPDatabase> &weak_db) {
++                             return weak_db.expired();
++                           }),
++            dbs.end());
++  dbs.push_back(db);
++}
++
++static std::vector<std::shared_ptr<OPDatabase>> live_dbs() {
++  std::lock_guard<std::mutex> lock(dbs_mutex);
++  std::vector<std::shared_ptr<OPDatabase>> result;
++  for (const auto &weak_db : dbs) {
++    if (auto db = weak_db.lock()) {
++      result.push_back(db);
++    }
++  }
++  dbs.clear();
++  for (const auto &db : result) {
++    dbs.push_back(db);
++  }
++  return result;
++}
++
++void closeAllDbs() {
++  for (const auto &db : live_dbs()) {
++    db->invalidate();
++  }
++}
++
++bool deleteAllDbs() {
++  bool all_deleted = true;
++  for (const auto &db : live_dbs()) {
++    try {
++      db->drop();
++    } catch (const std::exception &e) {
++      LOGE("[op-sqlite] deleteAllDbs failed for a database: %s", e.what());
++      all_deleted = false;
++    }
++  }
++  return all_deleted;
++}
++
+ // Each platform module calls its own invalidate() lifecycle hook when React
+ // Native tears down the JS context (CodePush/Hot Reload, or any other
+ // runtime teardown) -- OPSQLiteModule.invalidate() on Android, which reaches
+@@ -99,6 +151,7 @@ install(jsi::Runtime &rt, const std::shared_ptr<react::CallInvoker> &invoker,
+     std::shared_ptr<OPDatabase> db = std::make_shared<OPDatabase>(
+         rt, js_db, path, name, path, readOnly, failOnCreate, encryption_key);
+     js_db.setNativeState(rt, db);
++    register_db(db);
+     return js_db;
+   });
+ 
+@@ -154,6 +207,7 @@ install(jsi::Runtime &rt, const std::shared_ptr<react::CallInvoker> &invoker,
+ #endif
+ 
+     js_db.setNativeState(rt, db);
++    register_db(db);
+     return js_db;
+   });
+ 
+@@ -216,6 +270,7 @@ install(jsi::Runtime &rt, const std::shared_ptr<react::CallInvoker> &invoker,
+   #endif
+ 
+     js_db.setNativeState(rt, db);
++    register_db(db);
+     return js_db;
+   });
+ #endif
+diff --git a/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.hpp b/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.hpp
+index 8e81903..245c7bb 100644
+--- a/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.hpp
++++ b/node_modules/@op-engineering/op-sqlite/cpp/OPSqlite.hpp
+@@ -20,5 +20,10 @@ install(jsi::Runtime &rt, const std::shared_ptr<react::CallInvoker> &invoker,
+         const char *base_path, const char *sqlite_vec_path);
+ void invalidate(const std::shared_ptr<std::atomic<bool>> &generation_alive);
+ void expoUpdatesWorkaround(const char *base_path);
++// Close every database opened through open() that is still alive.
++void closeAllDbs();
++// Close and delete the file of every database opened through open() that is
++// still alive. Returns false if any of them could not be deleted.
++bool deleteAllDbs();
+ 
+ } // namespace opsqlite
+diff --git a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
+index 905d8e9..40b6cc4 100644
+--- a/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
++++ b/node_modules/@op-engineering/op-sqlite/op-sqlite.podspec
+@@ -38,11 +38,10 @@ end
+ 
+ app_package = JSON.parse(File.read(package_json_path))
+ 
+-op_sqlite_config = app_package["op-sqlite"]
+-use_sqlcipher = false
++use_sqlcipher = true
+ use_libsql = false
+ use_turso = false
+-performance_mode = false
++performance_mode = true
+ phone_version = false
+ sqlite_flags = ""
+ fts5 = false
+@@ -50,18 +49,6 @@ rtree = false
+ use_sqlite_vec = false
+ tokenizers = []
+ 
+-if(op_sqlite_config != nil)
+-  use_sqlcipher = op_sqlite_config["sqlcipher"] == true
+-  use_libsql = op_sqlite_config["libsql"] == true
+-  use_turso = op_sqlite_config["turso"] == true
+-  performance_mode = op_sqlite_config["performanceMode"] || false
+-  phone_version = op_sqlite_config["iosSqlite"] == true
+-  sqlite_flags = op_sqlite_config["sqliteFlags"] || ""
+-  fts5 = op_sqlite_config["fts5"] == true
+-  rtree = op_sqlite_config["rtree"] == true
+-  use_sqlite_vec = op_sqlite_config["sqliteVec"] == true
+-  tokenizers = op_sqlite_config["tokenizers"] || []
+-end
+ 
+ if phone_version then
+   if use_sqlcipher then
