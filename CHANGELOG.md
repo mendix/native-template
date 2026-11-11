@@ -14,6 +14,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - We removed some unused Android Permissions coming in from Manifest mergers.
 - We removed react-native-track-player, since the Play sound action of Native Mobile Resources now uses react-native-sound, which the action declares as its own native dependency. This also fixes a crash on Android when opening the Video Player widget, caused by react-native-track-player bringing in an older ExoPlayer version alongside the one used by react-native-video.
 
+## [20.0.2] - 2026-10-28
+
+- We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.
+- We removed some unused Android Permissions coming in from Manifest mergers.
+- We excluded react-native-vision-camera-barcode-scanner from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from react-native-vision-camera.
+- This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.6.0 or above).
+- We fixed an issue on Android where the "Clear data" checkbox on the starting page of the Developer App was hidden behind the bottom navigation bar due to edge-to-edge.
+
 ## [19.1.6] - 2026-09-16
 
 - We migrated iOS to the UIKit scene delegate lifecycle.
