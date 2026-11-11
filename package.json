@@ -50,6 +50,7 @@
     "@mendix/native-mobile-toolkit": "latest",
     "@react-native/babel-preset": "0.84.1",
     "@react-native/metro-config": "0.84.1",
+    "hermes-compiler": "0.15.1",
     "jetifier": "^1.6.8",
     "patch-package": "^8.0.1"
   },
@@ -61,11 +62,13 @@
     "react-dom": "19.2.3",
     "react-native": "0.84.1",
     "unset-value": "2.0.1",
-    "semver": "7.7.4"
+    "semver": "7.7.4",
+    "hermes-compiler": "0.15.1"
   },
   "resolutions": {
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-native": "0.84.1"
+    "react-native": "0.84.1",
+    "hermes-compiler": "0.15.1"
   }
 }
