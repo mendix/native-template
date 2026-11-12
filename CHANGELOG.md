@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - We fixed an issue on iOS where a deep link that cold started the app was not delivered to React Native, causing `Linking.getInitialURL()` to return `null`.
 - We removed some unused Android Permissions coming in from Manifest mergers.
 - We removed react-native-track-player, since the Play sound action of Native Mobile Resources now uses react-native-sound, which the action declares as its own native dependency. This also fixes a crash on Android when opening the Video Player widget, caused by react-native-track-player bringing in an older ExoPlayer version alongside the one used by react-native-video.
+- We fixed an issue on Android where the splash screen was stretched. The splash image now keeps its aspect ratio and is centered on all screen sizes.
 
 ## [20.0.2] - 2026-10-28
 
