@@ -6,6 +6,7 @@ patches/react-native-gesture-handler+2.30.0.patch
 patches/react-native+0.84.1.patch
 patches/react-native-screens+4.24.0.patch
 patches/@op-engineering+op-sqlite+15.2.5.patch
+patches/react-native-track-player+4.1.2.patch
 mendix-native-10.2.2.tgz
 ios/AppDelegate.h
 ios/AppDelegate.m
