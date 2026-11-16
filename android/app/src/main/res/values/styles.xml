@@ -6,6 +6,7 @@
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:editTextStyle">@style/MendixEditText</item>
+        <item name="android:textViewStyle">@style/MendixTextView</item>
     </style>
     <!-- Base dark application theme. -->
     <style name="AppTheme_Dark" parent="Theme.EdgeToEdge">
@@ -13,12 +14,17 @@
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:editTextStyle">@style/MendixEditText</item>
+        <item name="android:textViewStyle">@style/MendixTextView</item>
     </style>
 
 
     <style name="MendixEditText" parent="Widget.AppCompat.EditText">
         <item name="android:background">@android:color/transparent</item>
     </style>
+
+    <!-- Overridden in values-v35 to keep TextView line breaking in sync with React Native's text measurement.
+         Remove after upgrading to React Native 0.89+ (see values-v35/styles.xml). -->
+    <style name="MendixTextView" parent="android:Widget.Material.TextView" />
 
     <!-- BootSplash theme. -->
     <style name="BootTheme" parent="Theme.AppCompat.Light.NoActionBar">

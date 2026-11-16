@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+- We fixed an issue on Android 15 and above where the last word of some single-line texts, such as a button caption, could be cut off.
+
 ## [21.0.0] - 2026-11-12
 
 - We upgraded React Native to 0.88.0. On iOS the app now uses the scene-based lifecycle (`SceneDelegate`).
