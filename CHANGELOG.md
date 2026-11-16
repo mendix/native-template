@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.7.0 or above).
 - We updated react-native-video from v6.19.2 to v6.19.3.
 - We removed the unused react-native-track-player library and its patch.
+- We pinned the Hermes compiler (`hermes-compiler`) to 0.15.1 so it matches the Hermes V0 engine. Previously the Android build compiled the Developer App bundle with the Hermes V1 compiler, causing "Wrong bytecode version. Expected 96 but got 98" on launch.
 
 ## [19.1.8] - 2026-10-28
 
