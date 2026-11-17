@@ -1,0 +1,18 @@
+<resources>
+
+    <!--
+        Apps targeting API 35+ get useBoundsForWidth=true on every TextView, so line breaking uses glyph ink bounds.
+        React Native measures text by advance width and sizes the view to that, so text whose last glyph overhangs
+        (e.g. a bold "r") wraps onto a clipped second line. Break lines by advance width, like React Native's
+        measurement and like Android did before API 35.
+
+        Fixed in React Native 0.89+ (ReactTextView sets this itself): https://github.com/react/react-native/pull/58280
+        0.88 backport requested: https://github.com/react/react-native/pull/58280#issuecomment-6918811546
+        TODO: remove MendixTextView (this file and android:textViewStyle in values/styles.xml) after upgrading to
+        React Native 0.89+ or a 0.88.x release that includes the backport.
+    -->
+    <style name="MendixTextView" parent="android:Widget.Material.TextView">
+        <item name="android:useBoundsForWidth">false</item>
+    </style>
+
+</resources>
