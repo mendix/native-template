@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [21.0.1] - 2026-11-17
+
 - We fixed an issue on Android 15 and above where the last word of some single-line texts, such as a button caption, could be cut off.
 
 ## [21.0.0] - 2026-11-12
