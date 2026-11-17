@@ -41,7 +41,7 @@
     "@react-native-vector-icons/common": "13.0.3",
     "@react-native-vector-icons/get-image": "13.0.1",
     "@react-native-vector-icons/material-icons": "13.1.4",
-    "react-native-video": "6.19.2",
+    "react-native-video": "6.19.3",
     "semver": "7.7.4"
   },
   "devDependencies": {
