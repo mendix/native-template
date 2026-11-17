@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [21.0.0] - 2026-11-12
+
 - We upgraded React Native to 0.88.0. On iOS the app now uses the scene-based lifecycle (`SceneDelegate`).
 - The app now uses Hermes V1 (HBC bytecode version 99). JavaScript bundles compiled with Hermes 0.16.0 (bytecode version 96) can no longer be loaded and must be compiled with hermes-compiler 260318099.0.4.
 - We upgraded Android to Gradle 9.4.1, Kotlin 2.2.0, and compile SDK / build tools 37.
