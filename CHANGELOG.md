@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - We updated react-native-video from v6.19.2 to v6.19.3.
 - We removed the unused react-native-track-player library and its patch.
 - We pinned the Hermes compiler (`hermes-compiler`) to 0.15.1 so it matches the Hermes V0 engine. Previously the Android build compiled the Developer App bundle with the Hermes V1 compiler, causing "Wrong bytecode version. Expected 96 but got 98" on launch.
+- We fixed an issue on Android where the splash screen was stretched. The splash image now keeps its aspect ratio and is centered on all screen sizes.
 
 ## [19.1.8] - 2026-10-28
 
