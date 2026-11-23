@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [19.1.9] - 2026-11-23
+
 - We excluded react-native-vision-camera-barcode-scanner from iOS. The Barcode Scanner widget only uses it on Android; on iOS it uses Apple's built-in scanner from react-native-vision-camera.
 - This version of Native Template is required for the Barcode Scanner widget version 4.6.0 or above (Native Mobile Resources version 12.7.0 or above).
 - We updated react-native-video from v6.19.2 to v6.19.3.
